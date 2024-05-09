@@ -1,0 +1,68 @@
+{
+  "9c575f4f-06d3-d9f1-be8e-d81160319b98": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Usuarios de Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "9c575f4f-06d3-d9f1-be8e-d81160319b98"
+  },
+  "b98e2c49-ea9d-4d74-9ddd-b96c684783c8": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1685/1.0.1685.3700/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://partequipos2.sharepoint.com/sites/servicioposventa": {
+        "dataSources": {
+          "TEMPARIO DE MANTENIMIENTOS": {
+            "tableName": "48fe5577-206a-4614-97a6-9811485fe0b5"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TEMPARIO DE MANTENIMIENTOS"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "b98e2c49-ea9d-4d74-9ddd-b96c684783c8"
+  },
+  "e2afc14c-3103-4ccb-a909-38cc84737466": {
+    "appActions": [
+      "CalendarGetTables"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office\u00A0365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e2afc14c-3103-4ccb-a909-38cc84737466"
+  }
+}

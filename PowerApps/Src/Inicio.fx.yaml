@@ -1,0 +1,116 @@
+Inicio As screen:
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+
+    Image6 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =688
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='a3a270fe-0230-4f42-ad10-22fce65ce3eb'
+        ImagePosition: =ImagePosition.Fill
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =635
+        X: =19
+        Y: =60
+        ZIndex: =1
+
+    Image8 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =688
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =731
+        X: =635
+        Y: =60
+        ZIndex: =2
+
+    ButtonCanvas3 As Botón:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =80
+        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+        Text: ="Ingresar"
+        Width: =208
+        X: =573
+        Y: =571
+        ZIndex: =3
+
+    Label1_8 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(255, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =76
+        Size: =30
+        Text: ="Bienvenido a la App"
+        Width: =640
+        X: =357
+        Y: =254
+        ZIndex: =4
+
+    GroupBackground_7 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =6
+
+        BienvenidaFondo_2 As rectangle:
+            BorderColor: =RGBA(51, 51, 51, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =BienvenidaFondo_2.BorderColor
+            Height: =60
+            Width: =1366
+            ZIndex: =5
+
+        ImageLogo_2 As image:
+            BorderColor: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderColor: =ImageLogo_2.BorderColor
+            Height: =60
+            Image: =Logo
+            Width: =276
+            X: =1090
+            ZIndex: =6
+
+    Timer1 As timer:
+        AutoStart: =varTiempo
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =4000
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Visible: =false
+        Width: =280
+        X: =537
+        Y: =369
+        ZIndex: =7
+

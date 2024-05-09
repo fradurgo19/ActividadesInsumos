@@ -1,0 +1,574 @@
+"Review As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =Max(App.Height, App.DesignHeight)
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    OnVisible: |+
+        =Set(CurrentStep,"5");
+        
+    Orientation: =If(Review.Width < Review.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Review.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    ReviewCanvas As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Fill: =RGBA(249, 249, 249, 1)
+        Height: =768
+        Width: =1016
+        X: =350
+        ZIndex: =1
+
+        ReviewCard As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            Width: |
+                =1016
+            X: =0
+            Y: =
+            ZIndex: =1
+
+            ReviewTitle As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(155,155,155,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =ReviewTitle.BorderColor
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Lighter
+                Height: |
+                    =43
+                HoverBorderColor: =ReviewTitle.BorderColor
+                HoverColor: =ReviewTitle.Color
+                HoverFill: =ReviewTitle.Fill
+                PressedBorderColor: =ReviewTitle.BorderColor
+                PressedColor: =ReviewTitle.Color
+                PressedFill: =ReviewTitle.Fill
+                Size: =24
+                Text: ="Review your estimate"
+                Width: =500
+                Wrap: =false
+                X: =52
+                Y: =34
+                ZIndex: =1
+
+            Back4 As button:
+                BorderColor: =RGBA(0,32,69,1)
+                BorderThickness: =1
+                Color: =RGBA(0,32,69,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(255,255,255,1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                FocusedBorderThickness: =1
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                OnSelect: =Navigate(Attachments,ScreenTransition.None)
+                PressedBorderColor: =Back4.BorderColor
+                PressedColor: =Back4.Color
+                PressedFill: =Back4.Fill
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =10.5
+                Text: ="Back"
+                Width: =116
+                X: =ReviewTitle.X
+                Y: =
+                ZIndex: =2
+
+            Send As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0,32,69,1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                OnSelect: =Navigate(SendEmail,ScreenTransition.None)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =Send.BorderColor
+                PressedColor: =Send.Color
+                PressedFill: =Send.Fill
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =10.5
+                Text: ="Send"
+                Width: =116
+                X: =856
+                Y: =Back4.Y
+                ZIndex: =3
+
+            DetailCanvas As fluidGrid.fluidGridWithBlankCard:
+                BorderColor: =RGBA(228, 233, 237, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =561
+                Width: =918
+                X: =ReviewTitle.X
+                Y: =ReviewTitle.Y+ReviewTitle.Height+30
+                ZIndex: =4
+
+    Menu_4 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =768
+        Width: =350
+        ZIndex: =2
+
+        MenuCard_4 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height-100
+            Width: =350
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            logo_5 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderColor: =logo_5.BorderColor
+                FocusedBorderThickness: =4
+                Height: =37
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =Logo
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =154
+                X: =50
+                Y: =42
+                ZIndex: =1
+
+            MenuList_4 As gallery.galleryVertical:
+                '#CopilotOverlayLabel': ="Filtrada"
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Default: =SelectedMenu
+                DisabledBorderColor: =MenuList_4.BorderColor
+                DisabledFill: =MenuList_4.Fill
+                Height: =657-100
+                HoverBorderColor: =MenuList_4.BorderColor
+                HoverFill: =MenuList_4.Fill
+                Items: =MenuData
+                Layout: =Layout.Vertical
+                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(SendEmail,ScreenTransition.None)))
+                PressedBorderColor: =MenuList_4.BorderColor
+                PressedFill: =MenuList_4.Fill
+                ShowScrollbar: =false
+                TemplatePadding: =11
+                TemplateSize: =40
+                Width: =311+11
+                X: =39
+                Y: =logo_5.Y + logo_5.Height +32
+                ZIndex: =2
+
+                MenuName_4 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(0,32,69,1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderColor: =MenuName_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
+                    Height: =22
+                    HoverBorderColor: =MenuName_4.BorderColor
+                    HoverColor: =MenuName_4.Color
+                    HoverFill: =MenuName_4.Fill
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    PressedBorderColor: =MenuName_4.BorderColor
+                    PressedColor: =MenuName_4.Color
+                    PressedFill: =MenuName_4.Fill
+                    Size: =12
+                    Text: =ThisItem.Name
+                    Width: =230
+                    X: =39
+                    Y: =9
+                    ZIndex: =2
+
+                Bar_4 As rectangle:
+                    BorderColor: =RGBA(101, 128, 187, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(144,19,254,1)
+                    FocusedBorderColor: =Bar_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =40
+                    HoverFill: =RGBA(105, 121, 126, 1)
+                    OnSelect: =Select(Parent)
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    Visible: =ThisItem.Step=CurrentStep
+                    Width: =4
+                    X: =350-4-MenuList_4.X-11
+                    ZIndex: =3
+
+                Menu5_4 As icon.DockCheckProperties:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu5_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.DockCheckProperties
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu5"
+                    Width: =19
+                    Y: =10
+                    ZIndex: =4
+
+                Menu1_4 As icon.Calendar:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu1_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.AddToCalendar
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu1"
+                    Width: =19
+                    Y: =10
+                    ZIndex: =5
+
+                Menu2_4 As icon.DetailList:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu2_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.DetailList
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu2"
+                    Width: =19
+                    Y: =10
+                    ZIndex: =6
+
+                Menu3_4 As icon.AddDocument:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu3_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.AddDocument
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu3"
+                    Width: =19
+                    X: =
+                    Y: =10
+                    ZIndex: =7
+
+                Menu4_4 As icon.Attachment:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu4_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.PaperClip
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu4"
+                    Width: =19
+                    X: =
+                    Y: =10
+                    ZIndex: =8
+
+                Menu6_4 As icon.Mail:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu6_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Mail
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu6"
+                    Width: |
+                        =19
+                    Y: =10
+                    ZIndex: =9
+
+    Mask As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Fill: =RGBA(0, 0, 0, 0.85)
+        Height: =Parent.Height
+        Visible: =ShowDiscount
+        Width: =1366
+        ZIndex: =3
+
+        MaskCard As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Button4 As button:
+                BorderColor: =RGBA(228,233,237,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(255,255,255,1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =267
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                RadiusBottomLeft: =3
+                RadiusBottomRight: =3
+                RadiusTopLeft: =3
+                RadiusTopRight: =3
+                Size: =15
+                Text: ="Button"
+                Width: =315
+                X: =526
+                Y: =Mask.Height/2-Button4.Height/2
+                ZIndex: =1
+
+            Label4 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(0,32,69,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =Label4.BorderColor
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                HoverBorderColor: =Label4.BorderColor
+                HoverColor: =Label4.Color
+                HoverFill: =Label4.Fill
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =Label4.BorderColor
+                PressedColor: =Label4.Color
+                PressedFill: =Label4.Fill
+                Size: =13.5
+                Text: ="Apply discount"
+                Width: =180
+                X: =593
+                Y: =Button4.Y+30
+                ZIndex: =2
+
+            Dropdown1 As dropdown:
+                BorderColor: =RGBA(151, 151, 151, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(62, 96, 170, 0)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(144,19,254,1)
+                ChevronHoverBackground: =Dropdown1.ChevronBackground
+                ChevronHoverFill: =Dropdown1.ChevronFill
+                Color: =RGBA(74, 74, 74, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderColor: =Dropdown1.BorderColor
+                FocusedBorderThickness: =1
+                Font: =Font.'Segoe UI'
+                Height: =44
+                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(212, 212, 212, 1)
+                Items: =DiscountList
+                PaddingBottom: =5
+                PaddingLeft: |
+                    =20
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                SelectionFill: =RGBA(105, 121, 126, 1)
+                Size: =13.5
+                Width: =255
+                X: =556
+                Y: =Label4.Y+Label4.Height+26
+                ZIndex: =3
+
+            Label6 As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(0,32,69,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =Label6.BorderColor
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =19
+                HoverBorderColor: =Label6.BorderColor
+                HoverColor: =Label6.Color
+                HoverFill: =Label6.Fill
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =Label6.BorderColor
+                PressedColor: =Label6.Color
+                PressedFill: =Label6.Fill
+                Size: =10.5
+                Text: ="Total estimated cost"
+                Width: =200
+                X: =Button4.X+Button4.Width-Label6.Width-30
+                Y: =Dropdown1.Y+Dropdown1.Height+10
+                ZIndex: =4
+
+            Label7 As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(74,74,74,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =Label7.BorderColor
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =24
+                HoverBorderColor: =Label7.BorderColor
+                HoverColor: =Label7.Color
+                HoverFill: =Label7.Fill
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =Label7.BorderColor
+                PressedColor: =Label7.Color
+                PressedFill: =Label7.Fill
+                Size: =13.5
+                Text: =
+                Width: =200
+                X: =Label6.X
+                Y: =Label6.Y+Label6.Height
+                ZIndex: =5
+
+            Button5 As button:
+                BorderColor: =RGBA(144,19,254,1)
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(144,19,254,1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                OnSelect: |-
+                    =Set(SelectedDiscount, Dropdown1.SelectedText);
+                    Set(ShowDiscount, false);
+                    Set(ShowDiscountResult, true)
+                PressedBorderColor: =Button5.BorderColor
+                PressedColor: =Button5.Color
+                PressedFill: =Button5.Fill
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =10.5
+                Text: ="Apply"
+                Width: =116
+                X: =625
+                Y: =Label7.Y+Label7.Height+20
+                ZIndex: =6
+
