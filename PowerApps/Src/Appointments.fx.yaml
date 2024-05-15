@@ -349,11 +349,20 @@
                 HoverFill: =RGBA(212, 212, 212, 1)
                 InputTextPlaceholder: ="Buscar Modelo"
                 IsSearchable: =false
-                Items: |+
-                    =Sort(ForAll(Distinct(Filter(TempariosLocal,Marca.Value = ComboBox2_1.Selected.Results),Modelo0.Value),
-                    {Results: ThisRecord.Value}),Results)
-                    
-                    
+                Items: |-
+                    =Sort(
+                        ForAll(
+                            Distinct(
+                                Filter(
+                                    TempariosLocal,
+                                    Marca.Value = ComboBox2_1.Selected.Results
+                                ),
+                                Modelo0.Value
+                            ),
+                            {Results: ThisRecord.Value}
+                        ),
+                        Results
+                    )
                 NoSelectionText: ="Buscar Modelo"
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
