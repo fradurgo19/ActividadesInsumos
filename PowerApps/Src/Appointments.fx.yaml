@@ -368,7 +368,20 @@
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
                 SearchFields: =["Results"]
-                SearchItems: =[]
+                SearchItems: |-
+                    =Search(Sort(
+                        ForAll(
+                            Distinct(
+                                Filter(
+                                    TempariosLocal,
+                                    Marca.Value = ComboBox2_1.Selected.Results
+                                ),
+                                Modelo0.Value
+                            ),
+                            {Results: ThisRecord.Value}
+                        ),
+                        Results
+                    ),ComboBox2.SearchText,Results)
                 SelectionFill: =RGBA(105, 121, 126, 1)
                 SelectMultiple: =false
                 Size: =15
