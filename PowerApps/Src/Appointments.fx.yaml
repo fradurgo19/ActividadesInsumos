@@ -403,6 +403,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayFields: =["Results"]
                 Font: =Font.'Segoe UI'
+                Height: =68
                 HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
@@ -424,7 +425,7 @@
                         Results
                     )
                     
-                NoSelectionText: ="Buscar Frecuencia Unica/Multiple"
+                NoSelectionText: ="Buscar Frecuencia Unica 0 SubMultiplo"
                 OnChange: |-
                     =UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems})
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
