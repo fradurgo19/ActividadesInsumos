@@ -374,7 +374,7 @@
         HeadingFont: =Font.'Segoe UI'
         HeadingFontWeight: =FontWeight.Semibold
         HeadingSize: =13
-        Height: =541
+        Height: =202
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         InputFill: =RGBA(255, 255, 255, 1)
@@ -566,4 +566,16 @@
         X: =48
         Y: =468
         ZIndex: =10
+
+    Gallery1 As gallery.galleryHorizontal:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =176
+        Items: ='TEMPARIO DE MANTENIMIENTOS'
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowNavigation: =true
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(320, Self.Width - 60), Min(320, Self.Height - 60))
+        X: =381
+        Y: =441
+        ZIndex: =11
 
