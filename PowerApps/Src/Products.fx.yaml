@@ -381,7 +381,7 @@
         InvertedColor: =RGBA(255, 255, 255, 1)
         Items: |+
             =Filter(
-                'TEMPARIO DE MANTENIMIENTOS',
+                TempariosLocal,
                 Marca.Value = ComboBox2_1.Selected.Results &&
                 Modelo0.Value = ComboBox2.Selected.Results &&
                 If(
@@ -404,58 +404,58 @@
         Y: =160
         ZIndex: =6
 
-        Item_2 As customControl.dataColumn:
-            AutoWidth: =false
-            DisplayName: ="Item"
-            FieldName: ="Item"
+        ReferenciaDonalson_1 As customControl.dataColumn:
+            AutoWidth: =true
+            DisplayName: ="ReferenciaDonalson"
+            FieldName: ="ReferenciaDonalson"
             Height: =0
             IsHyperlink: =false
             Order: =0
             Required: =false
-            TitleProperty: ="Value"
-            Type: ="E"
-            VariantName: ="comboBoxViewCard"
-            Width: =181
+            TitleProperty: =""
+            Type: ="s"
+            VariantName: ="textualViewCard"
+            Width: =238
             X: =0
             Y: =0
             ZIndex: =1
 
-        Cantidad_1 As customControl.dataColumn:
-            AutoWidth: =false
-            DisplayName: ="Unidad de medida"
-            FieldName: ="Cantidad"
+        ReferenciaFleetguard_1 As customControl.dataColumn:
+            AutoWidth: =true
+            DisplayName: ="ReferenciaFleetguard"
+            FieldName: ="ReferenciaFleetguard"
             Height: =0
             IsHyperlink: =false
             Order: =1
             Required: =false
-            TitleProperty: ="Value"
-            Type: ="E"
-            VariantName: ="comboBoxViewCard"
-            Width: =86
+            TitleProperty: =""
+            Type: ="s"
+            VariantName: ="textualViewCard"
+            Width: =238
             X: =0
             Y: =0
             ZIndex: =2
 
-        Cantidad_x0028_Galones_x0029__1 As customControl.dataColumn:
-            AutoWidth: =false
-            DisplayName: ="Cantidad "
-            FieldName: ="Cantidad_x0028_Galones_x0029_"
+        ReferenciaGenuina_1 As customControl.dataColumn:
+            AutoWidth: =true
+            DisplayName: ="ReferenciaGenuina"
+            FieldName: ="ReferenciaGenuina"
             Height: =0
             IsHyperlink: =false
             Order: =2
             Required: =false
             TitleProperty: =""
-            Type: ="n"
+            Type: ="s"
             VariantName: ="textualViewCard"
-            Width: =108
+            Width: =238
             X: =0
             Y: =0
             ZIndex: =3
 
-        AceiteHomologado As customControl.dataColumn:
-            AutoWidth: =false
-            DisplayName: ="A. Homologado"
-            FieldName: ="AceiteHomologado"
+        ReferenciaStal_1 As customControl.dataColumn:
+            AutoWidth: =true
+            DisplayName: ="ReferenciaStal"
+            FieldName: ="ReferenciaStal"
             Height: =0
             IsHyperlink: =false
             Order: =3
@@ -463,74 +463,10 @@
             TitleProperty: =""
             Type: ="s"
             VariantName: ="textualViewCard"
-            Width: =141
+            Width: =238
             X: =0
             Y: =0
             ZIndex: =4
-
-        ReferenciaGenuina_1 As customControl.dataColumn:
-            AutoWidth: =false
-            DisplayName: ="Genuina"
-            FieldName: ="ReferenciaGenuina"
-            Height: =0
-            IsHyperlink: =true
-            Order: =4
-            Required: =false
-            TitleProperty: =""
-            Type: ="s"
-            VariantName: ="textualViewCard"
-            Width: =243
-            X: =603
-            Y: =0
-            ZIndex: =5
-
-        ReferenciaStal_1 As customControl.dataColumn:
-            AutoWidth: =false
-            DisplayName: ="Stall"
-            FieldName: ="ReferenciaStal"
-            Height: =0
-            IsHyperlink: =false
-            Order: =5
-            Required: =false
-            TitleProperty: =""
-            Type: ="s"
-            VariantName: ="textualViewCard"
-            Width: =136
-            X: =743
-            Y: =0
-            ZIndex: =6
-
-        ReferenciaFleetguard_1 As customControl.dataColumn:
-            AutoWidth: =false
-            DisplayName: ="Fleetguard"
-            FieldName: ="ReferenciaFleetguard"
-            Height: =0
-            IsHyperlink: =false
-            Order: =6
-            Required: =false
-            TitleProperty: =""
-            Type: ="s"
-            VariantName: ="textualViewCard"
-            Width: =123
-            X: =733
-            Y: =0
-            ZIndex: =7
-
-        ReferenciaDonalson_1 As customControl.dataColumn:
-            AutoWidth: =false
-            DisplayName: ="Donalson"
-            FieldName: ="ReferenciaDonalson"
-            Height: =0
-            IsHyperlink: =false
-            Order: =7
-            Required: =false
-            TitleProperty: =""
-            Type: ="s"
-            VariantName: ="textualViewCard"
-            Width: =121
-            X: =0
-            Y: =0
-            ZIndex: =8
 
     Label2_2 As label:
         Align: =Align.Center
