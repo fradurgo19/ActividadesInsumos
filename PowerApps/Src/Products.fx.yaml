@@ -410,7 +410,7 @@
             FieldName: ="ReferenciaDonalson"
             Height: =0
             IsHyperlink: =false
-            Order: =0
+            Order: =3
             Required: =false
             TitleProperty: =""
             Type: ="s"
@@ -426,7 +426,7 @@
             FieldName: ="ReferenciaFleetguard"
             Height: =0
             IsHyperlink: =false
-            Order: =1
+            Order: =4
             Required: =false
             TitleProperty: =""
             Type: ="s"
@@ -442,7 +442,7 @@
             FieldName: ="ReferenciaGenuina"
             Height: =0
             IsHyperlink: =false
-            Order: =2
+            Order: =1
             Required: =false
             TitleProperty: =""
             Type: ="s"
@@ -458,7 +458,7 @@
             FieldName: ="ReferenciaStal"
             Height: =0
             IsHyperlink: =false
-            Order: =3
+            Order: =5
             Required: =false
             TitleProperty: =""
             Type: ="s"
@@ -474,15 +474,31 @@
             FieldName: ="Cantidad_x0028_Galones_x0029_"
             Height: =0
             IsHyperlink: =false
-            Order: =4
+            Order: =0
             Required: =false
             TitleProperty: =""
             Type: ="n"
             VariantName: ="textualViewCard"
-            Width: =83
+            Width: =101
             X: =0
             Y: =0
             ZIndex: =5
+
+        AceiteHomologado As customControl.dataColumn:
+            AutoWidth: =false
+            DisplayName: ="A. Homologado"
+            FieldName: ="AceiteHomologado"
+            Height: =0
+            IsHyperlink: =false
+            Order: =2
+            Required: =false
+            TitleProperty: =""
+            Type: ="s"
+            VariantName: ="textualViewCard"
+            Width: =151
+            X: =0
+            Y: =0
+            ZIndex: =6
 
     Label2_2 As label:
         Align: =Align.Center
