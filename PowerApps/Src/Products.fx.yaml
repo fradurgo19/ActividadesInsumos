@@ -1,8 +1,13 @@
 "Products As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Height: =Max(App.Height, App.DesignHeight)
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |-
+    OnVisible: |
         =Set(CurrentStep,"3");
+        ClearCollect(
+            TempariosLocal,
+            'TEMPARIO DE MANTENIMIENTOS'
+        );
+        
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
@@ -413,7 +418,7 @@
             Width: =90
             X: =0
             Y: =0
-            ZIndex: =4
+            ZIndex: =1
 
         Modelo_1 As customControl.dataColumn:
             AutoWidth: =false
@@ -429,7 +434,7 @@
             Width: =98
             X: =0
             Y: =0
-            ZIndex: =5
+            ZIndex: =2
 
         Item_2 As customControl.dataColumn:
             AutoWidth: =false
@@ -445,7 +450,7 @@
             Width: =181
             X: =0
             Y: =0
-            ZIndex: =6
+            ZIndex: =3
 
         Cantidad_1 As customControl.dataColumn:
             AutoWidth: =false
@@ -461,7 +466,7 @@
             Width: =86
             X: =0
             Y: =0
-            ZIndex: =7
+            ZIndex: =4
 
         Cantidad_x0028_Galones_x0029__1 As customControl.dataColumn:
             AutoWidth: =false
@@ -477,7 +482,7 @@
             Width: =108
             X: =0
             Y: =0
-            ZIndex: =8
+            ZIndex: =5
 
         AceiteHomologado As customControl.dataColumn:
             AutoWidth: =false
@@ -493,7 +498,7 @@
             Width: =85
             X: =0
             Y: =0
-            ZIndex: =10
+            ZIndex: =6
 
         ReferenciaGenuina_1 As customControl.dataColumn:
             AutoWidth: =false
@@ -509,7 +514,7 @@
             Width: =186
             X: =0
             Y: =0
-            ZIndex: =11
+            ZIndex: =7
 
         ReferenciaStal_1 As customControl.dataColumn:
             AutoWidth: =true
@@ -525,7 +530,7 @@
             Width: =160
             X: =0
             Y: =0
-            ZIndex: =12
+            ZIndex: =8
 
         ReferenciaFleetguard_1 As customControl.dataColumn:
             AutoWidth: =true
@@ -541,7 +546,7 @@
             Width: =160
             X: =0
             Y: =0
-            ZIndex: =13
+            ZIndex: =9
 
         ReferenciaDonalson_1 As customControl.dataColumn:
             AutoWidth: =true
@@ -557,7 +562,7 @@
             Width: =160
             X: =0
             Y: =0
-            ZIndex: =14
+            ZIndex: =10
 
     Label2_2 As label:
         Align: =Align.Center
