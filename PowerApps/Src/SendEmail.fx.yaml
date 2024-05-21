@@ -102,23 +102,11 @@
                 Width: =1009
                 ZIndex: =17
 
-            DataTable1_4 As dataGrid:
+            Gallery2_3 As gallery.galleryVertical:
                 BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
                 Fill: =RGBA(255, 255, 255, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                HeadingColor: =RGBA(255, 255, 255, 1)
-                HeadingFill: =RGBA(105, 121, 126, 1)
-                HeadingFont: =Font.'Segoe UI'
-                HeadingFontWeight: =FontWeight.Normal
-                HeadingSize: =13
-                Height: =615
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(105, 121, 126, 1)
-                InputFill: =RGBA(255, 255, 255, 1)
-                InvertedColor: =RGBA(255, 255, 255, 1)
+                Height: =565
                 Items: |+
                     =Filter(
                         'TEMPARIO DE MANTENIMIENTOS',
@@ -132,114 +120,105 @@
                         Modelo.Value = "Procedimiento"
                     )
                     
-                    
-                LinkColor: =RGBA(0, 134, 208, 1)
-                PrimaryColor1: =RGBA(105, 121, 126, 1)
-                PrimaryColor2: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                PrimaryColor3: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-                SelectedColor: =RGBA(51, 51, 51, 1)
-                SelectedFill: =RGBA(105, 121, 126, .2)
-                Size: =13
-                Width: =984
-                X: =15
-                Y: =100
-                ZIndex: =18
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowNavigation: =true
+                TemplateSize: =54
+                Transition: =Transition.Push
+                Width: =994
+                X: =2
+                Y: =181
+                ZIndex: =19
 
-                Procedimiento_2 As customControl.dataColumn:
-                    AutoWidth: =true
-                    DisplayName: ="Procedimiento"
-                    FieldName: ="Procedimiento"
-                    Height: =0
-                    IsHyperlink: =false
-                    Order: =1
-                    Required: =false
-                    TitleProperty: =""
-                    Type: ="s"
-                    VariantName: ="textualViewCard"
-                    Width: =399
-                    X: =0
-                    Y: =0
+                Label10_22 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =54
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Frecuencia.Value
+                    Width: =168
+                    X: =3
                     ZIndex: =1
 
-                Marca_4 As customControl.dataColumn:
-                    AutoWidth: =false
-                    DisplayName: ="Marca"
-                    FieldName: ="Marca"
-                    Height: =0
-                    IsHyperlink: =false
-                    Order: =2
-                    Required: =false
-                    TitleProperty: ="Value"
-                    Type: ="E"
-                    VariantName: ="comboBoxViewCard"
-                    Width: =77
-                    X: =0
-                    Y: =0
-                    ZIndex: =2
-
-                Frecuencia_4 As customControl.dataColumn:
-                    AutoWidth: =false
-                    DisplayName: ="Horas"
-                    FieldName: ="Frecuencia"
-                    Height: =0
-                    IsHyperlink: =false
-                    Order: =0
-                    Required: =false
-                    TitleProperty: ="Value"
-                    Type: ="E"
-                    VariantName: ="comboBoxViewCard"
-                    Width: =90
-                    X: =0
-                    Y: =0
+                Label10_23 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =54
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Procedimiento
+                    Width: =397
+                    X: =183
                     ZIndex: =3
 
-                Linea_4 As customControl.dataColumn:
-                    AutoWidth: =false
-                    DisplayName: ="Linea"
-                    FieldName: ="Linea"
-                    Height: =0
-                    IsHyperlink: =false
-                    Order: =3
-                    Required: =false
-                    TitleProperty: ="Value"
-                    Type: ="E"
-                    VariantName: ="comboBoxViewCard"
-                    Width: =105
-                    X: =165
-                    Y: =0
+                Label10_24 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =54
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Marca.Value
+                    Width: =146
+                    X: =580
                     ZIndex: =4
 
-                Item_4 As customControl.dataColumn:
-                    AutoWidth: =false
-                    DisplayName: ="Procedimiento"
-                    FieldName: ="Item"
-                    Height: =0
-                    IsHyperlink: =false
-                    Order: =5
-                    Required: =false
-                    TitleProperty: ="Value"
-                    Type: ="E"
-                    VariantName: ="comboBoxViewCard"
-                    Width: =220
-                    X: =237
-                    Y: =0
-                    ZIndex: =5
+                Label10_19 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =54
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Linea.Value
+                    Width: =151
+                    X: =744
+                    ZIndex: =7
 
-                Modelo0_4 As customControl.dataColumn:
-                    AutoWidth: =false
-                    DisplayName: ="Modelo"
-                    FieldName: ="Modelo0"
-                    Height: =0
-                    IsHyperlink: =false
-                    Order: =4
-                    Required: =false
-                    TitleProperty: ="Value"
-                    Type: ="E"
-                    VariantName: ="comboBoxViewCard"
-                    Width: =81
-                    X: =249
-                    Y: =0
-                    ZIndex: =6
+                Label10_21 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =54
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Modelo.Value
+                    Width: =104
+                    X: =895
+                    ZIndex: =8
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -517,4 +496,111 @@
         PressedFill: =RGBA(0, 0, 0, 0)
         X: =1086
         ZIndex: =4
+
+    Group2_3 As group:
+        Height: =5
+        Width: =5
+        X: =7
+        Y: =20
+        ZIndex: =13
+
+        Rectangle1_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =42
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =993
+            X: =350
+            Y: =137
+            ZIndex: =5
+
+        Label11_16 As label:
+            Align: =Align.Center
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            Size: =13
+            Text: ="Insumo"
+            Width: =171
+            X: =350
+            Y: =137
+            ZIndex: =6
+
+        Label11_17 As label:
+            Align: =Align.Center
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            Size: =13
+            Text: ="Procedimiento"
+            Width: =398
+            X: =521
+            Y: =137
+            ZIndex: =7
+
+        Label11_18 As label:
+            Align: =Align.Center
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            Size: =13
+            Text: ="Marca"
+            Width: =148
+            X: =919
+            Y: =137
+            ZIndex: =8
+
+        Label11_19 As label:
+            Align: =Align.Center
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            Size: =13
+            Text: ="Linea"
+            Width: =162
+            X: =1068
+            Y: =137
+            ZIndex: =9
+
+        Label11_20 As label:
+            Align: =Align.Center
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            Size: =13
+            Text: ="Modelo"
+            Width: =114
+            X: =1229
+            Y: =137
+            ZIndex: =10
 
