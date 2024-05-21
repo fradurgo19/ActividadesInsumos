@@ -405,8 +405,8 @@
         ZIndex: =6
 
         ReferenciaDonalson_1 As customControl.dataColumn:
-            AutoWidth: =true
-            DisplayName: ="ReferenciaDonalson"
+            AutoWidth: =false
+            DisplayName: ="Donalson"
             FieldName: ="ReferenciaDonalson"
             Height: =0
             IsHyperlink: =false
@@ -415,14 +415,14 @@
             TitleProperty: =""
             Type: ="s"
             VariantName: ="textualViewCard"
-            Width: =238
+            Width: =103
             X: =0
             Y: =0
             ZIndex: =1
 
         ReferenciaFleetguard_1 As customControl.dataColumn:
-            AutoWidth: =true
-            DisplayName: ="ReferenciaFleetguard"
+            AutoWidth: =false
+            DisplayName: ="Fleetguard"
             FieldName: ="ReferenciaFleetguard"
             Height: =0
             IsHyperlink: =false
@@ -431,14 +431,14 @@
             TitleProperty: =""
             Type: ="s"
             VariantName: ="textualViewCard"
-            Width: =238
+            Width: =122
             X: =0
             Y: =0
             ZIndex: =2
 
         ReferenciaGenuina_1 As customControl.dataColumn:
-            AutoWidth: =true
-            DisplayName: ="ReferenciaGenuina"
+            AutoWidth: =false
+            DisplayName: ="Genuina"
             FieldName: ="ReferenciaGenuina"
             Height: =0
             IsHyperlink: =false
@@ -447,13 +447,13 @@
             TitleProperty: =""
             Type: ="s"
             VariantName: ="textualViewCard"
-            Width: =238
+            Width: =155
             X: =0
             Y: =0
             ZIndex: =3
 
         ReferenciaStal_1 As customControl.dataColumn:
-            AutoWidth: =true
+            AutoWidth: =false
             DisplayName: ="ReferenciaStal"
             FieldName: ="ReferenciaStal"
             Height: =0
@@ -463,10 +463,26 @@
             TitleProperty: =""
             Type: ="s"
             VariantName: ="textualViewCard"
-            Width: =238
+            Width: =128
             X: =0
             Y: =0
             ZIndex: =4
+
+        Cantidad_x0028_Galones_x0029__1 As customControl.dataColumn:
+            AutoWidth: =false
+            DisplayName: ="Cantidad"
+            FieldName: ="Cantidad_x0028_Galones_x0029_"
+            Height: =0
+            IsHyperlink: =false
+            Order: =4
+            Required: =false
+            TitleProperty: =""
+            Type: ="n"
+            VariantName: ="textualViewCard"
+            Width: =83
+            X: =0
+            Y: =0
+            ZIndex: =5
 
     Label2_2 As label:
         Align: =Align.Center
