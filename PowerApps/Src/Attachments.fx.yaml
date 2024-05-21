@@ -87,9 +87,9 @@
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true
-                TemplateSize: =108
+                TemplateSize: =254
                 Transition: =Transition.Push
-                Width: =1010
+                Width: =1005
                 X: =4
                 Y: =180
                 ZIndex: =4
@@ -104,13 +104,13 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =63
+                    Height: =115
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Item.Value
-                    Width: =168
-                    X: =3
-                    Y: =3
+                    Width: =176
+                    X: =5
+                    Y: =50
                     ZIndex: =1
 
                 Label10_8 As label:
@@ -123,12 +123,13 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =90
+                    Height: =118
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Frecuencia.Value
-                    Width: =91
-                    X: =239
+                    Width: =77
+                    X: =211
+                    Y: =50
                     ZIndex: =2
 
                 Label10_14 As label:
@@ -159,13 +160,13 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =101
+                    Height: =220
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Observaciones
-                    Width: =503
-                    X: =352
-                    Y: =3
+                    Width: =566
+                    X: =288
+                    Y: =20
                     ZIndex: =5
 
                 Label10_9 As label:
@@ -178,7 +179,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =90
+                    Height: =134
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Marca.Value
@@ -200,10 +201,11 @@
                     DisabledFill: =RGBA(166, 166, 166, 1)
                     Fill: =RGBA(105, 121, 126, 1)
                     FocusedBorderThickness: =4
-                    Height: =42
+                    Height: =45
                     HoverFill: =RGBA(105, 121, 126, 1)
                     PressedFill: =RGBA(105, 121, 126, 1)
-                    Width: =1009
+                    Width: =1005
+                    X: =4
                     Y: =135
                     ZIndex: =5
 
@@ -216,10 +218,11 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =45
                     Size: =13
                     Text: ="Insumo"
-                    Width: =205
+                    Width: =204
+                    X: =4
                     Y: =135
                     ZIndex: =6
 
@@ -232,11 +235,11 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =45
                     Size: =13
                     Text: ="Horas"
-                    Width: =130
-                    X: =205
+                    Width: =93
+                    X: =208
                     Y: =135
                     ZIndex: =7
 
@@ -249,11 +252,11 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =45
                     Size: =13
                     Text: ="Avisos Claves"
-                    Width: =527
-                    X: =335
+                    Width: =562
+                    X: =301
                     Y: =135
                     ZIndex: =8
 
@@ -266,11 +269,11 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =45
                     Size: =13
                     Text: ="Marca"
-                    Width: =147
-                    X: =862
+                    Width: =146
+                    X: =863
                     Y: =135
                     ZIndex: =12
 
