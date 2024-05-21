@@ -374,7 +374,7 @@
         HeadingFont: =Font.'Segoe UI'
         HeadingFontWeight: =FontWeight.Semibold
         HeadingSize: =13
-        Height: =281
+        Height: =240
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         InputFill: =RGBA(255, 255, 255, 1)
@@ -399,9 +399,9 @@
         SelectedColor: =RGBA(51, 51, 51, 1)
         SelectedFill: =RGBA(105, 121, 126, .2)
         Size: =13
-        Width: =960
-        X: =381
-        Y: =160
+        Width: =388
+        X: =951
+        Y: =487
         ZIndex: =6
 
         ReferenciaDonalson_1 As customControl.dataColumn:
@@ -567,16 +567,78 @@
         Y: =468
         ZIndex: =10
 
-    Gallery1 As gallery.galleryHorizontal:
+    Gallery2 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =282
-        Items: ='TEMPARIO DE MANTENIMIENTOS'
+        Height: =494
+        Items: |+
+            =Filter(
+                'TEMPARIO DE MANTENIMIENTOS',
+                Marca.Value = ComboBox2_1.Selected.Results &&
+                Modelo0.Value = ComboBox2.Selected.Results &&
+                If(
+                    IsBlank(ComboBox3.SelectedItems),
+                    true,
+                    Frecuencia.Value in SelectedFrequencies
+                ) &&
+                (Modelo.Value = "Fluido" || Modelo.Value = "Repuesto")
+            )
+            
+        Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        ShowNavigation: =true
-        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(320, Self.Width - 60), Min(320, Self.Height - 60))
-        Width: =960
-        X: =381
-        Y: =441
+        TemplateSize: =78
+        Width: =925
+        X: =387
+        Y: =160
         ZIndex: =11
+
+        Label10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Item.Value
+            X: =21
+            Y: =12
+            ZIndex: =1
+
+        Label10_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Cantidad.Value
+            Width: =81
+            X: =183
+            Y: =12
+            ZIndex: =2
+
+        Label10_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Cantidad_x0028_Galones_x0029_
+            Width: =61
+            X: =288
+            Y: =12
+            ZIndex: =3
 
