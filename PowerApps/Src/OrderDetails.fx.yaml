@@ -209,7 +209,7 @@
                 Live: =Live.Assertive
                 Size: =18
                 Text: |
-                    =Text(
+                    ="$" & Text(
                         Sum(
                             Filter(
                                 'TEMPARIO DE MANTENIMIENTOS',
@@ -220,9 +220,8 @@
                             ),
                             Tiempo
                         ) * 95000,
-                        "  ###,###"
+                        " #,###"
                     )
-                Underline: =true
                 Width: =209
                 X: =642
                 Y: =624
