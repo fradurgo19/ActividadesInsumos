@@ -40,20 +40,14 @@ Inicio As screen:
     ButtonCanvas3 As Botón:
         Align: =""
         BasePaletteColor: =RGBA(249, 83, 109, 1)
-        BorderColor: =""
-        BorderStyle: =""
-        DisabledBorderColor: =""
         DisplayMode: =DisplayMode.Edit
-        FocusedBorderColor: =""
         FontColor: =
         Height: =80
-        HoverBorderColor: =""
         Icon: =""
         IconRotation: =0
         IconStyle: ="Outline"
         Layout: ="Icon before"
         OnSelect: =Set(varCargar, true);Set(varTiempo, true)
-        PressedBorderColor: =""
         Text: ="INGRESAR"
         VerticalAlign: =""
         Width: =208
@@ -66,14 +60,15 @@ Inicio As screen:
         BorderColor: =App.Theme.Colors.Darker40
         Color: =RGBA(255, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 0, 0, 1)
         Font: =App.Theme.Font
         FontWeight: =FontWeight.Bold
         Height: =76
         Size: =30
         Text: ="Bienvenido a la App"
         Width: =640
-        X: =357
-        Y: =242
+        X: =363
+        Y: =60
         ZIndex: =4
 
     GroupBackground_7 As group:
