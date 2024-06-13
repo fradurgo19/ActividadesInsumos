@@ -291,8 +291,9 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Item.Value
-                    Width: =330
-                    X: =641
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =381
+                    X: =395
                     ZIndex: =1
 
                 Label10_10 As label:
@@ -305,10 +306,11 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =63
+                    Height: =55
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Frecuencia.Value
+                    VerticalAlign: =VerticalAlign.Top
                     Width: =81
                     X: =23
                     ZIndex: =2
@@ -326,6 +328,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Marca.Value
+                    VerticalAlign: =VerticalAlign.Top
                     Width: =124
                     X: =130
                     ZIndex: =5
@@ -340,12 +343,13 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =66
+                    Height: =55
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.Linea.Value
-                    Width: =204
-                    X: =254
+                    Text: =ThisItem.ReferenciaGenuina
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =161
+                    X: =812
                     ZIndex: =6
 
                 Label10_13 As label:
@@ -362,8 +366,9 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Modelo0.Value
+                    VerticalAlign: =VerticalAlign.Top
                     Width: =121
-                    X: =474
+                    X: =274
                     ZIndex: =7
 
     Menu_1 As fluidGrid.fluidGridWithBlankCard:
@@ -675,7 +680,7 @@
             Height: =42
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1005
+            Width: =1004
             X: =354
             Y: =145
             ZIndex: =8
@@ -692,8 +697,8 @@
             Height: =42
             Size: =13
             Text: ="Actividad"
-            Width: =381
-            X: =981
+            Width: =375
+            X: =754
             Y: =145
             ZIndex: =9
 
@@ -709,7 +714,7 @@
             Height: =42
             Size: =13
             Text: ="Horas"
-            Width: =129
+            Width: =127
             X: =357
             Y: =145
             ZIndex: =10
@@ -725,9 +730,9 @@
             FontWeight: =FontWeight.Semibold
             Height: =42
             Size: =13
-            Text: ="Linea"
-            Width: =221
-            X: =596
+            Text: ="Código SAMM"
+            Width: =229
+            X: =1129
             Y: =145
             ZIndex: =11
 
@@ -743,8 +748,8 @@
             Height: =42
             Size: =13
             Text: ="Modelo"
-            Width: =164
-            X: =817
+            Width: =162
+            X: =592
             Y: =145
             ZIndex: =12
 
@@ -760,8 +765,8 @@
             Height: =42
             Size: =13
             Text: ="Marca"
-            Width: =110
-            X: =486
+            Width: =108
+            X: =484
             Y: =145
             ZIndex: =13
 
