@@ -74,13 +74,13 @@
                     =Filter(
                         'TEMPARIO DE MANTENIMIENTOS',
                         Marca.Value = ComboBox2_1.Selected.Results &&
-                        Modelo0.Value = ComboBox2.Selected.Results &&
+                        'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
                         If(
                             IsBlank(ComboBox3.SelectedItems),
                             true,
-                            Frecuencia.Value in SelectedFrequencies
+                            'Frecuencia (horas)'.Value in SelectedFrequencies
                         ) &&
-                        Modelo.Value = "Observacion"
+                        'Tipo de item'.Value = "Observacion"
                     )
                     
                     
@@ -126,7 +126,7 @@
                     Height: =118
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.Frecuencia.Value
+                    Text: =ThisItem.'Frecuencia (horas)'.Value
                     Width: =77
                     X: =211
                     Y: =50
@@ -145,7 +145,7 @@
                     Height: =63
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.AceiteHomologado
+                    Text: =ThisItem.'Aceite Homologado'
                     Width: =109
                     X: =330
                     Y: =3
@@ -163,7 +163,7 @@
                     Height: =220
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.Observaciones
+                    Text: =ThisItem.'Avisos Claves'
                     Width: =566
                     X: =288
                     Y: =20

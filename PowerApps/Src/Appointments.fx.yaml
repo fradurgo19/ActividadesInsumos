@@ -358,7 +358,7 @@
                                     TempariosLocal,
                                     Marca.Value = ComboBox2_1.Selected.Results
                                 ),
-                                Modelo0.Value
+                                'Modelo (Modelo0)'.Value
                             ),
                             {Results: ThisRecord.Value}
                         ),
@@ -404,9 +404,9 @@
                                 Filter(
                                     TempariosLocal,
                                     Marca.Value = ComboBox2_1.Selected.Results &&
-                                    Modelo0.Value = ComboBox2.Selected.Results
+                                    'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results
                                 ),
-                                Frecuencia.Value
+                                'Frecuencia (horas)'.Value
                             ),
                             {Results: ThisRecord.Value}
                         ),
@@ -453,9 +453,9 @@
                                 Filter(
                                     TempariosLocal,
                                     Marca.Value = ComboBox2_1.Selected.Results &&
-                                    Modelo0.Value = ComboBox2.Selected.Results && 
-                                    Frecuencia.Value = ComboBox3.Selected.Results && 
-                                    Modelo.Value = ComboBox4.Selected.Results
+                                    'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results && 
+                                    'Frecuencia (horas)'.Value = ComboBox3.Selected.Results && 
+                                    'Tipo de item'.Value = ComboBox4.Selected.Results
                                 ),
                                 Item.Value
                             ),
@@ -654,10 +654,10 @@
                                 Filter(
                                     TempariosLocal,
                                     Marca.Value = ComboBox2_1.Selected.Results &&
-                                    Modelo0.Value = ComboBox2.Selected.Results &&
-                                    Frecuencia.Value = ComboBox3.Selected.Results
+                                    'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                                    'Frecuencia (horas)'.Value = ComboBox3.Selected.Results
                                 ),
-                                 Modelo.Value
+                                 'Tipo de item'.Value
                             ),
                             {Results: ThisRecord.Value}
                         ),
@@ -696,11 +696,11 @@
                         Filter(
                             TempariosLocal,
                             ComboBox2_1.Selected.Results = Marca.Value &&
-                            ComboBox2.Selected.Results = Modelo0.Value &&
-                            Frecuencia.Value in ComboBox3.SelectedItems && 
-                            ComboBox4.Selected.Results = Modelo.Value
+                            ComboBox2.Selected.Results = 'Modelo (Modelo0)'.Value &&
+                            'Frecuencia (horas)'.Value in ComboBox3.SelectedItems && 
+                            ComboBox4.Selected.Results = 'Tipo de item'.Value
                         ),
-                        Tiempo
+                        'Tiempo (horas)'
                     )
                     
                     
@@ -853,16 +853,16 @@
             =Filter(
                 'TEMPARIO DE MANTENIMIENTOS',
                 Marca.Value = ComboBox2_1.Selected.Results &&
-                Modelo0.Value = ComboBox2.Selected.Results &&
+                'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
                 If(
                     IsBlank(ComboBox3.SelectedItems),
                     true,
-                    Frecuencia.Value in SelectedFrequencies
+                    'Frecuencia (horas)'.Value in SelectedFrequencies
                 ) &&
                 If(
                     IsBlank(ComboBox4.SelectedItems),
                     true,
-                    Modelo.Value in SelectedTipos
+                    'Tipo de item'.Value in SelectedTipos
                 ) &&
                 If(
                     IsBlank(ComboBox5.SelectedItems),
@@ -872,7 +872,7 @@
                 If(
                     IsBlank(ComboBox4.Selected.Results) || IsBlank(ComboBox5.Selected.Results),
                     true,
-                    Modelo.Value = ComboBox4.Selected.Results &&
+                    'Tipo de item'.Value = ComboBox4.Selected.Results &&
                     Item.Value = ComboBox5.Selected.Results
                 )
             )

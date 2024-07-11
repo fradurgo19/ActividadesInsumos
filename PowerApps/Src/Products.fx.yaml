@@ -439,13 +439,13 @@
             =Filter(
                 'TEMPARIO DE MANTENIMIENTOS',
                 Marca.Value = ComboBox2_1.Selected.Results &&
-                Modelo0.Value = ComboBox2.Selected.Results &&
+                'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
                 If(
                     IsBlank(ComboBox3.SelectedItems),
                     true,
-                    Frecuencia.Value in SelectedFrequencies
+                    'Frecuencia (horas)'.Value in SelectedFrequencies
                 ) &&
-                (Modelo.Value = "Fluido" || Modelo.Value = "Repuesto")
+                ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
             )
             
         Layout: =Layout.Vertical
@@ -470,9 +470,9 @@
             FontWeight: =FontWeight.Bold
             Height: =63
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.Item.Value
-            Width: =168
+            Width: =138
             X: =3
             Y: =3
             ZIndex: =1
@@ -489,10 +489,10 @@
             FontWeight: =FontWeight.Bold
             Height: =63
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Cantidad.Value
-            Width: =81
-            X: =223
+            Size: =10
+            Text: =ThisItem.'Unidad de medida'.Value
+            Width: =72
+            X: =170
             ZIndex: =2
 
         Label10_2 As label:
@@ -507,11 +507,10 @@
             FontWeight: =FontWeight.Bold
             Height: =63
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Cantidad_x0028_Galones_x0029_
-            Width: =61
-            X: =183
-            Y: =3
+            Size: =10
+            Text: =ThisItem.'Cantidad '
+            Width: =37
+            X: =147
             ZIndex: =3
 
         Label10_3 As label:
@@ -526,11 +525,10 @@
             FontWeight: =FontWeight.Bold
             Height: =63
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.AceiteHomologado
-            Width: =109
-            X: =330
-            Y: =3
+            Size: =10
+            Text: =ThisItem.'Aceite Homologado'
+            Width: =97
+            X: =349
             ZIndex: =4
 
         Label10_4 As label:
@@ -544,11 +542,10 @@
             FontWeight: =FontWeight.Bold
             Height: =63
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.ReferenciaGenuina
-            Width: =168
-            X: =454
-            Y: =3
+            Size: =10
+            Text: =ThisItem.'Referencia Genuina'
+            Width: =106
+            X: =231
             ZIndex: =5
 
         Label10_5 As label:
@@ -563,10 +560,10 @@
             FontWeight: =FontWeight.Bold
             Height: =66
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.ReferenciaStal
+            Size: =10
+            Text: =ThisItem.'Referencia Stal'
             Width: =101
-            X: =622
+            X: =685
             ZIndex: =6
 
         Label10_6 As label:
@@ -581,10 +578,10 @@
             FontWeight: =FontWeight.Bold
             Height: =66
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.ReferenciaDonalson
-            Width: =121
-            X: =735
+            Size: =10
+            Text: =ThisItem.'Referencia Donalson'
+            Width: =87
+            X: =803
             ZIndex: =7
 
         Label10_7 As label:
@@ -599,11 +596,29 @@
             FontWeight: =FontWeight.Bold
             Height: =66
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.ReferenciaFleetguard
-            Width: =121
-            X: =877
+            Size: =10
+            Text: =ThisItem.'Referencia Fleetguard'
+            Width: =86
+            X: =912
             ZIndex: =8
+
+    Label11_21 As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Size: =12
+        Text: |
+            ="R. SAP DISPEL"
+        Width: =117
+        X: =808
+        Y: =117
+        ZIndex: =20
 
     Group2 As group:
         Height: =5
@@ -637,9 +652,9 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =42
-            Size: =13
+            Size: =12
             Text: ="Insumo"
-            Width: =174
+            Width: =132
             X: =350
             Y: =117
             ZIndex: =13
@@ -654,10 +669,10 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =42
-            Size: =13
+            Size: =12
             Text: ="Cantidad"
-            Width: =130
-            X: =524
+            Width: =83
+            X: =482
             Y: =117
             ZIndex: =14
 
@@ -671,10 +686,10 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =42
-            Size: =13
-            Text: ="A. Homologo"
-            Width: =151
-            X: =655
+            Size: =12
+            Text: ="R. SAP ENI"
+            Width: =117
+            X: =691
             Y: =117
             ZIndex: =15
 
@@ -688,10 +703,10 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =42
-            Size: =13
+            Size: =12
             Text: ="R. Genuina"
-            Width: =165
-            X: =806
+            Width: =126
+            X: =563
             Y: =117
             ZIndex: =16
 
@@ -706,9 +721,9 @@
             FontWeight: =FontWeight.Semibold
             Height: =42
             Size: =13
-            Text: ="R. Stall"
-            Width: =110
-            X: =971
+            Text: ="R.Stall"
+            Width: =97
+            X: =1047
             Y: =117
             ZIndex: =17
 
@@ -724,8 +739,8 @@
             Height: =42
             Size: =13
             Text: ="R.Donalson"
-            Width: =131
-            X: =1081
+            Width: =111
+            X: =1147
             Y: =117
             ZIndex: =18
 
@@ -741,8 +756,25 @@
             Height: =42
             Size: =13
             Text: ="R.Fleetguard"
-            Width: =147
-            X: =1212
+            Width: =100
+            X: =1258
             Y: =117
             ZIndex: =19
+
+    Label11_22 As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Size: =12
+        Text: ="R. SAP ORIGINAl"
+        Width: =122
+        X: =925
+        Y: =117
+        ZIndex: =21
 

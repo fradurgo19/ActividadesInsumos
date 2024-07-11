@@ -70,11 +70,11 @@
                         Filter(
                             'TEMPARIO DE MANTENIMIENTOS',
                             ComboBox2_1.Selected.Results = Marca.Value &&
-                            ComboBox2.Selected.Results = Modelo0.Value &&
-                            Frecuencia.Value in ComboBox3.SelectedItems && 
-                            ComboBox4_1.Selected.Results = Modelo.Value
+                            ComboBox2.Selected.Results = 'Modelo (Modelo0)'.Value &&
+                            'Frecuencia (horas)'.Value in ComboBox3.SelectedItems && 
+                            ComboBox4_1.Selected.Results = 'Tipo de item'.Value
                         ),
-                        Tiempo
+                        'Tiempo (horas)'
                     )
                 Underline: =true
                 Width: =149
@@ -110,10 +110,10 @@
                                 Filter(
                                     TempariosLocal,
                                     Marca.Value = ComboBox2_1.Selected.Results &&
-                                    Modelo0.Value = ComboBox2.Selected.Results &&
-                                    Frecuencia.Value = ComboBox3.Selected.Results
+                                    'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                                    'Frecuencia (horas)'.Value = ComboBox3.Selected.Results
                                 ),
-                                 Modelo.Value
+                                 'Tipo de item'.Value
                             ),
                             {Results: ThisRecord.Value}
                         ),
@@ -134,10 +134,10 @@
                                 Filter(
                                     TempariosLocal,
                                     Marca.Value = ComboBox2_1.Selected.Results &&
-                                    Modelo0.Value = ComboBox2.Selected.Results &&
-                                    Frecuencia.Value = ComboBox3.Selected.Results
+                                    'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                                    'Frecuencia (horas)'.Value = ComboBox3.Selected.Results
                                 ),
-                                 Modelo.Value
+                                 'Tipo de item'.Value
                             ),
                             {Results: ThisRecord.Value}
                         ),
@@ -214,11 +214,11 @@
                             Filter(
                                 'TEMPARIO DE MANTENIMIENTOS',
                                 ComboBox2_1.Selected.Results = Marca.Value &&
-                                ComboBox2.Selected.Results = Modelo0.Value &&
-                                Frecuencia.Value in ComboBox3.SelectedItems && 
-                                ComboBox4_1.Selected.Results = Modelo.Value
+                                ComboBox2.Selected.Results = 'Modelo (Modelo0)'.Value &&
+                                'Frecuencia (horas)'.Value in ComboBox3.SelectedItems && 
+                                ComboBox4_1.Selected.Results = 'Tipo de item'.Value
                             ),
-                            Tiempo
+                            'Tiempo (horas)'
                         ) * 95000,
                         " #,###"
                     )
@@ -257,13 +257,13 @@
                     =Filter(
                         'TEMPARIO DE MANTENIMIENTOS',
                         Marca.Value = ComboBox2_1.Selected.Results &&
-                        Modelo0.Value = ComboBox2.Selected.Results &&
+                        'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
                         If(
                             IsBlank(ComboBox3.SelectedItems),
                             true,
-                            Frecuencia.Value in SelectedFrequencies
+                            'Frecuencia (horas)'.Value in SelectedFrequencies
                         ) &&
-                        Modelo.Value = "Actividad"
+                        'Tipo de item'.Value = "Actividad"
                     )
                     
                     
@@ -309,7 +309,7 @@
                     Height: =55
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.Frecuencia.Value
+                    Text: =ThisItem.'Frecuencia (horas)'.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =81
                     X: =23
@@ -346,7 +346,7 @@
                     Height: =55
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.ReferenciaGenuina
+                    Text: =ThisItem.'Referencia Genuina'
                     VerticalAlign: =VerticalAlign.Top
                     Width: =161
                     X: =812
@@ -365,7 +365,7 @@
                     Height: =66
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.Modelo0.Value
+                    Text: =ThisItem.'Modelo (Modelo0)'.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =121
                     X: =274
