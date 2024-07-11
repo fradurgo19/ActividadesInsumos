@@ -1,4 +1,5 @@
 "Review As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    BackgroundImage: =
     Height: =Max(App.Height, App.DesignHeight)
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
@@ -23,6 +24,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =Parent.Height
+            Visible: =false
             Width: |
                 =1016
             X: =0
@@ -127,6 +129,17 @@
                 Y: =ReviewTitle.Y+ReviewTitle.Height+30
                 ZIndex: =4
 
+        DataCard6 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1016
+            X: =0
+            Y: =1
+            ZIndex: =2
+
     Menu_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
@@ -181,8 +194,8 @@
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =40
-                Width: =311+11
-                X: =39
+                Width: =321
+                X: =28
                 Y: =logo_5.Y + logo_5.Height +32
                 ZIndex: =2
 
