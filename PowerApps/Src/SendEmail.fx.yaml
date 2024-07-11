@@ -106,7 +106,7 @@
                 BorderThickness: =2
                 DelayItemLoading: =true
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =565
+                Height: =558
                 Items: |+
                     =Filter(
                         'TEMPARIO DE MANTENIMIENTOS',
@@ -127,12 +127,10 @@
                 Transition: =Transition.Push
                 Width: =989
                 X: =2
-                Y: =181
+                Y: =185
                 ZIndex: =19
 
                 Label10_22 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -144,13 +142,10 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Frecuencia (horas)'.Value
-                    Width: =168
-                    X: =3
+                    Width: =162
                     ZIndex: =1
 
                 Label10_23 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -162,13 +157,11 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Procedimiento
-                    Width: =397
-                    X: =183
+                    Width: =402
+                    X: =162
                     ZIndex: =3
 
                 Label10_24 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -180,13 +173,11 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Marca.Value
-                    Width: =146
-                    X: =580
+                    Width: =144
+                    X: =564
                     ZIndex: =4
 
                 Label10_19 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -198,13 +189,11 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Linea.Value
-                    Width: =151
-                    X: =744
+                    Width: =159
+                    X: =708
                     ZIndex: =7
 
                 Label10_21 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -216,8 +205,8 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Tipo de item'.Value
-                    Width: =104
-                    X: =895
+                    Width: =112
+                    X: =867
                     ZIndex: =8
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
