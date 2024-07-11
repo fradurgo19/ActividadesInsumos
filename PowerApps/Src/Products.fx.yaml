@@ -436,17 +436,22 @@
         Fill: =RGBA(255, 255, 255, 1)
         Height: =609
         Items: |+
-            =Filter(
-                'TEMPARIO DE MANTENIMIENTOS',
-                Marca.Value = ComboBox2_1.Selected.Results &&
-                'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
-                If(
-                    IsBlank(ComboBox3.SelectedItems),
-                    true,
-                    'Frecuencia (horas)'.Value in SelectedFrequencies
-                ) &&
-                ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
+            =Sort(
+                Filter(
+                    'TEMPARIO DE MANTENIMIENTOS',
+                    Marca.Value = ComboBox2_1.Selected.Results &&
+                    'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                    If(
+                        IsBlank(ComboBox3.SelectedItems),
+                        true,
+                        'Frecuencia (horas)'.Value in SelectedFrequencies
+                    ) &&
+                    ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
+                ),
+                'Tipo de item'.Value,
+                SortOrder.Ascending
             )
+            
             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
