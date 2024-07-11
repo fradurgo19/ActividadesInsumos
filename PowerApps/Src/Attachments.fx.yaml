@@ -69,7 +69,7 @@
                 BorderThickness: =2
                 DelayItemLoading: =true
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =557
+                Height: =527
                 Items: |+
                     =Filter(
                         'TEMPARIO DE MANTENIMIENTOS',
@@ -95,8 +95,6 @@
                 ZIndex: =4
 
                 Label10_12 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -104,18 +102,16 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =115
+                    Height: =251
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Item.Value
-                    Width: =176
+                    Width: =166
                     X: =5
-                    Y: =50
+                    Y: =3
                     ZIndex: =1
 
                 Label10_8 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -123,13 +119,13 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =118
+                    Height: =251
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Frecuencia (horas)'.Value
-                    Width: =77
-                    X: =211
-                    Y: =50
+                    Width: =101
+                    X: =171
+                    Y: =3
                     ZIndex: =2
 
                 Label10_14 As label:
@@ -152,7 +148,6 @@
                     ZIndex: =4
 
                 Label10_15 As label:
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -160,18 +155,16 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =220
+                    Height: =251
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Avisos Claves'
-                    Width: =566
-                    X: =288
-                    Y: =20
+                    Width: =581
+                    X: =272
+                    Y: =3
                     ZIndex: =5
 
                 Label10_9 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -179,12 +172,13 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =134
+                    Height: =251
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Marca.Value
-                    Width: =91
-                    X: =900
+                    Width: =138
+                    X: =853
+                    Y: =3
                     ZIndex: =6
 
             Group2_1 As group:
@@ -221,7 +215,7 @@
                     Height: =45
                     Size: =13
                     Text: ="Insumo"
-                    Width: =204
+                    Width: =181
                     X: =4
                     Y: =135
                     ZIndex: =6
@@ -239,7 +233,7 @@
                     Size: =13
                     Text: ="Horas"
                     Width: =93
-                    X: =208
+                    X: =185
                     Y: =135
                     ZIndex: =7
 
@@ -255,8 +249,8 @@
                     Height: =45
                     Size: =13
                     Text: ="Avisos Claves"
-                    Width: =562
-                    X: =301
+                    Width: =585
+                    X: =278
                     Y: =135
                     ZIndex: =8
 
