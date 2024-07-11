@@ -459,8 +459,6 @@
         ZIndex: =11
 
         Label10 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -468,18 +466,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =63
+            Height: =54
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.Item.Value
-            Width: =138
+            Width: =125
             X: =3
-            Y: =3
             ZIndex: =1
 
         Label10_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -487,17 +482,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =63
+            Height: =54
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Unidad de medida'.Value
-            Width: =72
+            Width: =61
             X: =170
             ZIndex: =2
 
         Label10_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -505,17 +498,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =63
+            Height: =54
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Cantidad '
-            Width: =37
-            X: =147
+            Width: =41
+            X: =128
             ZIndex: =3
 
         Label10_3 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -523,16 +514,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =63
+            Height: =54
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Aceite Homologado'
-            Width: =97
-            X: =349
+            Width: =122
+            X: =337
             ZIndex: =4
 
         Label10_4 As label:
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -540,7 +530,7 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =63
+            Height: =54
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Referencia Genuina'
@@ -549,8 +539,6 @@
             ZIndex: =5
 
         Label10_5 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -558,17 +546,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =66
+            Height: =54
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Referencia Stal'
-            Width: =101
-            X: =685
+            Width: =93
+            X: =696
             ZIndex: =6
 
         Label10_6 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -576,17 +562,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =66
+            Height: =54
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Referencia Donalson'
-            Width: =87
-            X: =803
+            Width: =111
+            X: =789
             ZIndex: =7
 
         Label10_7 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -594,17 +578,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =66
+            Height: =54
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Referencia Fleetguard'
-            Width: =86
-            X: =912
+            Width: =98
+            X: =900
             ZIndex: =8
 
         Label10_16 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -616,13 +598,11 @@
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'REF SAP DISPEL'
-            Width: =97
-            X: =474
+            Width: =112
+            X: =459
             ZIndex: =9
 
         Label10_18 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -634,8 +614,8 @@
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'REF SAP ORIGINAl'
-            Width: =97
-            X: =588
+            Width: =125
+            X: =571
             ZIndex: =10
 
     Label11_21 As label:
@@ -651,8 +631,8 @@
         Size: =12
         Text: |
             ="R. SAP DISPEL"
-        Width: =117
-        X: =808
+        Width: =112
+        X: =813
         Y: =117
         ZIndex: =20
 
@@ -707,7 +687,7 @@
             Height: =42
             Size: =12
             Text: ="Cantidad"
-            Width: =83
+            Width: =102
             X: =482
             Y: =117
             ZIndex: =14
@@ -724,7 +704,7 @@
             Height: =42
             Size: =12
             Text: ="R. SAP ENI"
-            Width: =117
+            Width: =122
             X: =691
             Y: =117
             ZIndex: =15
@@ -741,8 +721,8 @@
             Height: =42
             Size: =12
             Text: ="R. Genuina"
-            Width: =126
-            X: =563
+            Width: =107
+            X: =584
             Y: =117
             ZIndex: =16
 
@@ -758,7 +738,7 @@
             Height: =42
             Size: =13
             Text: ="R.Stall"
-            Width: =97
+            Width: =93
             X: =1047
             Y: =117
             ZIndex: =17
@@ -776,7 +756,7 @@
             Size: =13
             Text: ="R.Donalson"
             Width: =111
-            X: =1147
+            X: =1140
             Y: =117
             ZIndex: =18
 
@@ -792,8 +772,8 @@
             Height: =42
             Size: =13
             Text: ="R.Fleetguard"
-            Width: =100
-            X: =1258
+            Width: =108
+            X: =1251
             Y: =117
             ZIndex: =19
 
