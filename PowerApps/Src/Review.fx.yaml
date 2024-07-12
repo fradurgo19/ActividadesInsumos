@@ -164,27 +164,30 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =352
+            Height: =522
             Width: =1016
             X: =0
             Y: =2
             ZIndex: =3
 
             Label8 As label:
+                Align: =Align.Center
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =10
                 Font: =Font.'Segoe UI'
-                Size: =13
-                Text: ="Texto"
+                Size: =16
+                Text: |-
+                    =Text(TotalDesplazamiento, "[$-es-ES]$ #.###")
                 Width: =296
-                X: =332
-                Y: =255
+                X: =83
+                Y: =357
                 ZIndex: =1
 
             TextInput1 As text:
+                Align: =Align.Center
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
                 Default: =
@@ -205,13 +208,13 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =10
                 Width: =173
-                X: =72
-                Y: =48
+                X: =285
+                Y: =8
                 ZIndex: =2
 
             TextInput1_1 As text:
+                Align: =Align.Center
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
                 Default: =
@@ -232,10 +235,217 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =10
-                X: =628
-                Y: =48
+                Width: =173
+                X: =285
+                Y: =76
                 ZIndex: =3
+
+            Label8_1 As label:
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =10
+                Font: =Font.'Segoe UI'
+                Size: =16
+                Text: |-
+                    =Text(Valor1, "[$-es-ES]$ #.###")
+                Width: =296
+                X: =668
+                Y: =250
+                ZIndex: =4
+
+            Label8_2 As label:
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =10
+                Font: =Font.'Segoe UI'
+                Size: =16
+                Text: |-
+                    =Text(Valor2, "[$-es-ES]$ #.###")
+                Width: =296
+                X: =668
+                Y: =297
+                ZIndex: =5
+
+            Label9 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: ="Valor1"
+                X: =518
+                Y: =250
+                ZIndex: =6
+
+            Label9_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: |-
+                    ="Valor2
+                    "
+                X: =518
+                Y: =297
+                ZIndex: =7
+
+            Label9_2 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: ="TotalHoras"
+                X: =518
+                Y: =337
+                ZIndex: =8
+
+            Label8_3 As label:
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =10
+                Font: =Font.'Segoe UI'
+                Size: =16
+                Text: |-
+                    =Text(TotalHoras
+                    , "[$-es-ES]$ #.###")
+                Width: =296
+                X: =668
+                Y: =337
+                ZIndex: =9
+
+            Label9_3 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: ="Hospedaje"
+                X: =518
+                Y: =377
+                ZIndex: =10
+
+            Label8_4 As label:
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =10
+                Font: =Font.'Segoe UI'
+                Size: =16
+                Text: |-
+                    =Text(Hospedaje
+                    , "[$-es-ES]$ #.###")
+                Width: =296
+                X: =668
+                Y: =377
+                ZIndex: =11
+
+            Label9_4 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Size: =15
+                Text: ="Tiempo De Desplazamiento"
+                Width: =275
+                X: =10
+                Y: =8
+                ZIndex: =12
+
+            Label9_5 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Size: =15
+                Text: ="Kms Recorrido"
+                Width: =196
+                X: =44
+                Y: =76
+                ZIndex: =13
+
+            Label9_6 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: ="Alimentacion"
+                X: =518
+                Y: =417
+                ZIndex: =14
+
+            Label8_5 As label:
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =10
+                Font: =Font.'Segoe UI'
+                Size: =16
+                Text: |-
+                    =Text(Alimentacion
+                    , "[$-es-ES]$ #.###")
+                Width: =296
+                X: =668
+                Y: =417
+                ZIndex: =15
+
+            Label9_7 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =54
+                Size: =15
+                Text: ="Valor Total de Desplazamiento"
+                Width: =296
+                X: =83
+                Y: =303
+                ZIndex: =16
 
     Menu_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -720,12 +930,12 @@
             Set(TotalHoras, Value(TextInput1.Text) * 2 + 4);
             
             Set(Hospedaje, 
-                If(TotalHoras >= 9, 100000, 0)
+                If(TotalHoras >= 9, 100000,0)
             );
             
             Set(Alimentacion, 
                 If(TotalHoras >= 9, 80000 * 2, 
-                    If(TotalHoras > 6, 80000, 80000 / 2)
+                    If(TotalHoras > 6, 80000 / 2)
                 )
             );
             
@@ -744,7 +954,7 @@
         Size: =15
         Text: ="Calcular Desplazamiento"
         Width: =203
-        X: =747
-        Y: =231
+        X: =978
+        Y: =132
         ZIndex: =4
 
