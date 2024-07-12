@@ -185,8 +185,8 @@
                 Text: |-
                     =Text(TotalDesplazamiento, "[$-es-ES]$ #.###")
                 Width: =296
-                X: =372
-                Y: =403
+                X: =392
+                Y: =427
                 ZIndex: =1
 
             TextInput1 As text:
@@ -402,7 +402,7 @@
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Size: =15
-                Text: ="Kms Recorrido ( 1 Trayecto)"
+                Text: ="Kms Recorridos ( 1 Trayecto)"
                 Width: =439
                 Y: =76
                 ZIndex: =13
@@ -454,8 +454,8 @@
                 Size: =15
                 Text: ="Valor Total de Desplazamiento"
                 Width: =296
-                X: =372
-                Y: =349
+                X: =392
+                Y: =373
                 ZIndex: =16
 
     Menu_4 As fluidGrid.fluidGridWithBlankCard:
@@ -965,8 +965,8 @@
         Size: =15
         Text: ="Calcular Desplazamiento"
         Width: =203
-        X: =756
-        Y: =307
+        X: =783
+        Y: =306
         ZIndex: =4
 
     Icon1_7 As icon.Reload:
@@ -977,7 +977,7 @@
         Icon: =Icon.Reload
         OnSelect: =Reset(TextInput1);Reset(TextInput1_1)
         Width: =70
-        X: =1137
+        X: =1164
         Y: =138
         ZIndex: =5
 
