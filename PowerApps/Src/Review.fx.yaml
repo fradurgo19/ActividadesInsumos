@@ -160,12 +160,13 @@
                 ZIndex: =1
 
         DataCard8 As dataCard.blankCard:
-            BorderColor: =RGBA(225, 228, 229, 1)
+            BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
+            BorderThickness: =2
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =522
-            Width: =1016
+            Height: =635
+            Width: =1015
             X: =0
             Y: =2
             ZIndex: =3
@@ -186,7 +187,7 @@
                     =Text(TotalDesplazamiento, "[$-es-ES]$ #.###")
                 Width: =296
                 X: =392
-                Y: =427
+                Y: =445
                 ZIndex: =1
 
             TextInput1 As text:
@@ -214,7 +215,7 @@
                 RadiusTopRight: =0
                 Width: =168
                 X: =439
-                Y: =8
+                Y: =26
                 ZIndex: =2
 
             TextInput1_1 As text:
@@ -241,7 +242,7 @@
                 RadiusTopRight: =0
                 Width: =168
                 X: =439
-                Y: =76
+                Y: =94
                 ZIndex: =3
 
             Label8_1 As label:
@@ -389,7 +390,7 @@
                 Size: =15
                 Text: ="Tiempo De Desplazamiento Hrs ( 1 Trayecto)"
                 Width: =439
-                Y: =8
+                Y: =26
                 ZIndex: =12
 
             Label9_5 As label:
@@ -404,7 +405,7 @@
                 Size: =15
                 Text: ="Kms Recorridos ( 1 Trayecto)"
                 Width: =439
-                Y: =76
+                Y: =94
                 ZIndex: =13
 
             Label9_6 As label:
@@ -455,7 +456,7 @@
                 Text: ="Valor Total de Desplazamiento"
                 Width: =296
                 X: =392
-                Y: =373
+                Y: =391
                 ZIndex: =16
 
     Menu_4 As fluidGrid.fluidGridWithBlankCard:
@@ -966,7 +967,7 @@
         Text: ="Calcular Desplazamiento"
         Width: =203
         X: =783
-        Y: =306
+        Y: =315
         ZIndex: =4
 
     Icon1_7 As icon.Reload:
