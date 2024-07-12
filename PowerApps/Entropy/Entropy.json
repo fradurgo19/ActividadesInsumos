@@ -15,6 +15,7 @@
     "Bar_4": 46,
     "Bar_5": 10,
     "BienvenidaFondo_2": 70,
+    "BienvenidaFondo_3": 309,
     "BrowseCanvas": 242,
     "BrowseCard": 243,
     "Button1": 287,
@@ -70,6 +71,7 @@
     "Group2_2": 219,
     "Group2_3": 39,
     "GroupBackground_7": 77,
+    "GroupBackground_8": 316,
     "Host": 3,
     "icon1": 247,
     "Icon1_6": 104,
@@ -93,7 +95,9 @@
     "Image8": 72,
     "Image9": 210,
     "ImageLogo_2": 71,
+    "ImageLogo_3": 310,
     "Inicio": 69,
+    "Inicio_1": 308,
     "Item": 122,
     "Label1": 106,
     "Label1_1": 112,
@@ -287,7 +291,9 @@
     "TextInput1": 284,
     "TextInput1_1": 285,
     "Tiempo": 128,
-    "Timer1": 75
+    "Timer1": 75,
+    "Timer1_1": 314,
+    "Video2": 317
   },
   "DataTableCustomControlTemplateJsons": {
     "Cantidad": "{\"name\":\"dataColumn\",\"version\":\"1.1\",\"properties\":[{\"name\":\"AutoWidth\",\"hidden\":false,\"type\":\"boolean\",\"category\":\"data\",\"displayName\":\"Puede ampliarse\",\"direction\":\"inout\",\"useForProjection\":false,\"defaultValue\":\"true\"},{\"name\":\"DisplayName\",\"hidden\":false,\"type\":\"string\",\"category\":\"data\",\"displayName\":\"Texto\",\"direction\":\"inout\",\"useForProjection\":false,\"defaultValue\":\"\"},{\"name\":\"IsHyperlink\",\"hidden\":false,\"type\":\"boolean\",\"category\":\"data\",\"displayName\":\"Es un hipervínculo\",\"direction\":\"inout\",\"useForProjection\":false,\"defaultValue\":\"false\"},{\"name\":\"OnSelect\",\"hidden\":false,\"type\":\"boolean\",\"category\":\"behavior\",\"displayName\":\"Cuando se selecciona\",\"direction\":\"in\",\"useForProjection\":false,\"defaultValue\":\"false\"},{\"name\":\"Width\",\"hidden\":false},{\"name\":\"Height\",\"hidden\":true},{\"name\":\"X\",\"hidden\":true},{\"name\":\"Y\",\"hidden\":true},{\"name\":\"Type\",\"hidden\":true,\"type\":\"string\",\"category\":\"data\",\"displayName\":\"Tipo\",\"direction\":\"inout\",\"useForProjection\":false,\"defaultValue\":\"\"},{\"name\":\"FieldName\",\"hidden\":true,\"type\":\"string\",\"category\":\"data\",\"displayName\":\"Nombre de campo\",\"direction\":\"inout\",\"useForProjection\":true,\"defaultValue\":\"\"},{\"name\":\"Required\",\"hidden\":true,\"type\":\"boolean\",\"category\":\"data\",\"displayName\":\"Requerido\",\"direction\":\"inout\",\"useForProjection\":false,\"defaultValue\":\"false\"},{\"name\":\"TitleProperty\",\"hidden\":true,\"type\":\"string\",\"category\":\"data\",\"displayName\":\"Título\",\"direction\":\"inout\",\"useForProjection\":false,\"defaultValue\":\"\"},{\"name\":\"Order\",\"hidden\":true,\"type\":\"number\",\"category\":\"data\",\"displayName\":\"Ordenar\",\"direction\":\"inout\",\"useForProjection\":false,\"defaultValue\":\"-1\"},{\"name\":\"VariantName\",\"hidden\":true,\"type\":\"string\",\"category\":\"data\",\"displayName\":\"Nombre de la variante\",\"direction\":\"inout\",\"useForProjection\":false,\"defaultValue\":\"\"}],\"docVersion\":\"1.339\"}",
@@ -308,7 +314,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/12/2024 15:33:04",
+  "HeaderLastSavedDateTimeUTC": "07/12/2024 15:50:19",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "9c575f4f-06d3-d9f1-be8e-d81160319b98": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/shared-office365user-9e42227b-397b-4a6f-9054-8ba723d77e62\"",
@@ -422,6 +428,10 @@
     "GroupBackground_7": {
       "BienvenidaFondo_2": 0,
       "ImageLogo_2": 1
+    },
+    "GroupBackground_8": {
+      "BienvenidaFondo_3": 0,
+      "ImageLogo_3": 1
     }
   },
   "OrderPcfTemplate": {
@@ -441,7 +451,8 @@
     "label": 4,
     "rectangle": 3,
     "text": 8,
-    "timer": 9
+    "timer": 9,
+    "videoPlayback": 13
   },
   "OverridablePropertiesEntry": {
     "App": {},
@@ -457,6 +468,7 @@
     "Bar_4": {},
     "Bar_5": {},
     "BienvenidaFondo_2": {},
+    "BienvenidaFondo_3": {},
     "BrowseCanvas": {},
     "BrowseCard": {},
     "Button1": {},
@@ -512,6 +524,7 @@
     "Group2_2": {},
     "Group2_3": {},
     "GroupBackground_7": {},
+    "GroupBackground_8": {},
     "Host": {},
     "icon1": {},
     "Icon1_6": {},
@@ -535,7 +548,9 @@
     "Image8": {},
     "Image9": {},
     "ImageLogo_2": {},
+    "ImageLogo_3": {},
     "Inicio": {},
+    "Inicio_1": {},
     "Item": {},
     "Label1": {},
     "Label1_1": {},
@@ -729,7 +744,9 @@
     "TextInput1": {},
     "TextInput1_1": {},
     "Tiempo": {},
-    "Timer1": {}
+    "Timer1": {},
+    "Timer1_1": {},
+    "Video2": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {
@@ -762,6 +779,7 @@
     "Bar_4": 196,
     "Bar_5": 244,
     "BienvenidaFondo_2": 0,
+    "BienvenidaFondo_3": 0,
     "BrowseCanvas": 168,
     "BrowseCard": 169,
     "Button1": 238,
@@ -817,6 +835,7 @@
     "Group2_2": 94,
     "Group2_3": 269,
     "GroupBackground_7": 1,
+    "GroupBackground_8": 1,
     "Host": 0,
     "icon1": 173,
     "Icon1_6": 33,
@@ -840,7 +859,9 @@
     "Image8": 3,
     "Image9": 92,
     "ImageLogo_2": 2,
+    "ImageLogo_3": 2,
     "Inicio": 0,
+    "Inicio_1": 0,
     "Item": 51,
     "Label1": 35,
     "Label1_1": 41,
@@ -1034,7 +1055,9 @@
     "TextInput1": 223,
     "TextInput1_1": 225,
     "Tiempo": 57,
-    "Timer1": 6
+    "Timer1": 6,
+    "Timer1_1": 6,
+    "Video2": 0
   },
   "ResourcesJsonIndices": {
     "Image-22991_excavator_power shovel_vehicle_icon": 21,
@@ -1072,7 +1095,8 @@
     "Image-sketch": 10,
     "Image-tareas": 26,
     "Image-teleprompter": 25,
-    "Image-trabajar": 17
+    "Image-trabajar": 17,
+    "Video-SampleVideo": 36
   },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
@@ -1088,16 +1112,16 @@
       "fluidGrid": 18,
       "gallery": 11,
       "galleryTemplate": 11,
-      "group": 6,
+      "group": 7,
       "icon": 40,
-      "image": 23,
+      "image": 26,
       "inkControl": 1,
-      "label": 104,
-      "PowerApps_CoreControls_ButtonCanvas": 1,
-      "rectangle": 15,
-      "screen": 7,
+      "label": 105,
+      "PowerApps_CoreControls_ButtonCanvas": 2,
+      "rectangle": 16,
+      "screen": 8,
       "text": 2,
-      "timer": 1
+      "timer": 2
     },
     "DeserializationLoadTime": 13.8141699
   },

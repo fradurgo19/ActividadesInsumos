@@ -43,10 +43,11 @@ Inicio As screen:
         BorderStyle: =""
         DisplayMode: =DisplayMode.Edit
         FontColor: =
-        Height: =80
+        FontSize: =20
+        Height: =88
         Icon: =""
         IconRotation: =0
-        IconStyle: ="Outline"
+        IconStyle: ='ButtonCanvas.IconStyle'.Filled
         Layout: ="Icon before"
         OnSelect: =Set(varCargar, true);Set(varTiempo, true)
         Text: ="INGRESAR"
@@ -59,9 +60,11 @@ Inicio As screen:
     Label1_8 As label:
         Align: =Align.Center
         BorderColor: =App.Theme.Colors.Darker40
-        Color: =RGBA(255, 0, 0, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(101, 224, 144, 1)
+        FocusedBorderThickness: =100
         Font: =App.Theme.Font
         FontWeight: =FontWeight.Bold
         Height: =76

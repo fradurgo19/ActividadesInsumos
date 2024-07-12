@@ -186,7 +186,7 @@
                     =Text(TotalDesplazamiento, "[$-es-ES]$ #.###")
                 Width: =296
                 X: =372
-                Y: =304
+                Y: =403
                 ZIndex: =1
 
             TextInput1 As text:
@@ -455,7 +455,7 @@
                 Text: ="Valor Total de Desplazamiento"
                 Width: =296
                 X: =372
-                Y: =250
+                Y: =349
                 ZIndex: =16
 
     Menu_4 As fluidGrid.fluidGridWithBlankCard:
@@ -965,8 +965,8 @@
         Size: =15
         Text: ="Calcular Desplazamiento"
         Width: =203
-        X: =1086
-        Y: =123
+        X: =756
+        Y: =307
         ZIndex: =4
 
     Icon1_7 As icon.Reload:
@@ -977,7 +977,7 @@
         Icon: =Icon.Reload
         OnSelect: =Reset(TextInput1);Reset(TextInput1_1)
         Width: =70
-        X: =1152
-        Y: =233
+        X: =1137
+        Y: =138
         ZIndex: =5
 

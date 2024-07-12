@@ -717,8 +717,8 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =263
-            Width: =1005
+            Height: =278
+            Width: =1016
             X: =0
             Y: =2
             ZIndex: =3
@@ -738,7 +738,6 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =998
-                Y: =9
                 ZIndex: =1
 
     MaskConfirm As fluidGrid.fluidGridWithBlankCard:
@@ -1172,22 +1171,23 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =26
+        Height: =62
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnSelect: =
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =100
+        RadiusBottomRight: =100
+        RadiusTopLeft: =100
+        RadiusTopRight: =100
         Size: =15
-        Text: ="Link video Entrenamiento uso aplicación."
-        Width: =470
-        X: =348
-        Y: =390
+        Text: ="Video Entrenamiento uso aplicación."
+        Width: =270
+        X: =372
+        Y: =315
         ZIndex: =9
 
     Button2_1 As button:
@@ -1199,21 +1199,21 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =26
+        Height: =66
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =100
+        RadiusBottomRight: =100
+        RadiusTopLeft: =100
+        RadiusTopRight: =100
         Size: =15
         Text: ="Link video actualización Desplazamiento."
-        Width: =470
-        X: =348
-        Y: =436
+        Width: =270
+        X: =372
+        Y: =393
         ZIndex: =10
 
