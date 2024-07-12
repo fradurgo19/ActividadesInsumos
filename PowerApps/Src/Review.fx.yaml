@@ -160,7 +160,7 @@
                 ZIndex: =1
 
         DataCard8 As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderColor: =RGBA(225, 228, 229, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
@@ -173,17 +173,20 @@
             Label8 As label:
                 Align: =Align.Center
                 BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
+                Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
                 FocusedBorderThickness: =10
                 Font: =Font.'Segoe UI'
-                Size: =16
+                FontWeight: =FontWeight.Bold
+                Height: =73
+                Size: =20
                 Text: |-
                     =Text(TotalDesplazamiento, "[$-es-ES]$ #.###")
                 Width: =296
-                X: =83
-                Y: =357
+                X: =372
+                Y: =304
                 ZIndex: =1
 
             TextInput1 As text:
@@ -197,7 +200,8 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                HintText: ="Tiempo De desplazamiento Horas, redondear"
+                Height: =39
+                HintText: ="Hrs"
                 HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -208,8 +212,8 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Width: =173
-                X: =285
+                Width: =168
+                X: =439
                 Y: =8
                 ZIndex: =2
 
@@ -235,8 +239,8 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Width: =173
-                X: =285
+                Width: =168
+                X: =439
                 Y: =76
                 ZIndex: =3
 
@@ -250,6 +254,7 @@
                 Size: =16
                 Text: |-
                     =Text(Valor1, "[$-es-ES]$ #.###")
+                Visible: =false
                 Width: =296
                 X: =668
                 Y: =250
@@ -265,6 +270,7 @@
                 Size: =16
                 Text: |-
                     =Text(Valor2, "[$-es-ES]$ #.###")
+                Visible: =false
                 Width: =296
                 X: =668
                 Y: =297
@@ -281,6 +287,7 @@
                 Font: =Font.'Segoe UI'
                 Size: =13
                 Text: ="Valor1"
+                Visible: =false
                 X: =518
                 Y: =250
                 ZIndex: =6
@@ -298,6 +305,7 @@
                 Text: |-
                     ="Valor2
                     "
+                Visible: =false
                 X: =518
                 Y: =297
                 ZIndex: =7
@@ -313,6 +321,7 @@
                 Font: =Font.'Segoe UI'
                 Size: =13
                 Text: ="TotalHoras"
+                Visible: =false
                 X: =518
                 Y: =337
                 ZIndex: =8
@@ -328,6 +337,7 @@
                 Text: |-
                     =Text(TotalHoras
                     , "[$-es-ES]$ #.###")
+                Visible: =false
                 Width: =296
                 X: =668
                 Y: =337
@@ -344,6 +354,7 @@
                 Font: =Font.'Segoe UI'
                 Size: =13
                 Text: ="Hospedaje"
+                Visible: =false
                 X: =518
                 Y: =377
                 ZIndex: =10
@@ -359,42 +370,40 @@
                 Text: |-
                     =Text(Hospedaje
                     , "[$-es-ES]$ #.###")
+                Visible: =false
                 Width: =296
                 X: =668
                 Y: =377
                 ZIndex: =11
 
             Label9_4 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
                 BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
+                Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
+                Height: =39
                 Size: =15
-                Text: ="Tiempo De Desplazamiento"
-                Width: =275
-                X: =10
+                Text: ="Tiempo De Desplazamiento Hrs ( 1 Trayecto)"
+                Width: =439
                 Y: =8
                 ZIndex: =12
 
             Label9_5 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
                 BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
+                Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Size: =15
-                Text: ="Kms Recorrido"
-                Width: =196
-                X: =44
+                Text: ="Kms Recorrido ( 1 Trayecto)"
+                Width: =439
                 Y: =76
                 ZIndex: =13
 
@@ -409,6 +418,7 @@
                 Font: =Font.'Segoe UI'
                 Size: =13
                 Text: ="Alimentacion"
+                Visible: =false
                 X: =518
                 Y: =417
                 ZIndex: =14
@@ -424,6 +434,7 @@
                 Text: |-
                     =Text(Alimentacion
                     , "[$-es-ES]$ #.###")
+                Visible: =false
                 Width: =296
                 X: =668
                 Y: =417
@@ -443,8 +454,8 @@
                 Size: =15
                 Text: ="Valor Total de Desplazamiento"
                 Width: =296
-                X: =83
-                Y: =303
+                X: =372
+                Y: =250
                 ZIndex: =16
 
     Menu_4 As fluidGrid.fluidGridWithBlankCard:
@@ -915,10 +926,10 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(105, 121, 126, 1)
+        Fill: =RGBA(87, 235, 168, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
+        FontWeight: =FontWeight.Bold
         Height: =75
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -954,7 +965,19 @@
         Size: =15
         Text: ="Calcular Desplazamiento"
         Width: =203
-        X: =978
-        Y: =132
+        X: =1086
+        Y: =123
         ZIndex: =4
+
+    Icon1_7 As icon.Reload:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =60
+        Icon: =Icon.Reload
+        OnSelect: =Reset(TextInput1);Reset(TextInput1_1)
+        Width: =70
+        X: =1152
+        Y: =233
+        ZIndex: =5
 
