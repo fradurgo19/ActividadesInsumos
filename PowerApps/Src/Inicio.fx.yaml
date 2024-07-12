@@ -57,24 +57,6 @@ Inicio As screen:
         Y: =571
         ZIndex: =3
 
-    Label1_8 As label:
-        Align: =Align.Center
-        BorderColor: =App.Theme.Colors.Darker40
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(101, 224, 144, 1)
-        FocusedBorderThickness: =100
-        Font: =App.Theme.Font
-        FontWeight: =FontWeight.Bold
-        Height: =76
-        Size: =30
-        Text: ="Bienvenido a la App"
-        Width: =640
-        X: =363
-        Y: =60
-        ZIndex: =4
-
     GroupBackground_7 As group:
         Height: =5
         Width: =5
@@ -123,4 +105,22 @@ Inicio As screen:
         X: =537
         Y: =369
         ZIndex: =7
+
+    Label1_8 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(247, 114, 114, 1)
+        FocusedBorderThickness: =100
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        Size: =30
+        Text: ="Bienvenido a la App"
+        Width: =605
+        X: =22
+        Y: =8
+        ZIndex: =8
 
