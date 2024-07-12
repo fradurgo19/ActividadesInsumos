@@ -41,3 +41,23 @@ Inicio_2 As screen:
         Y: =48
         ZIndex: =8
 
+    Icon2_1 As icon.BackArrow:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(105, 121, 126, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =48
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Appointments,ScreenTransition.Fade )
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =57
+        X: =109
+        ZIndex: =9
+
