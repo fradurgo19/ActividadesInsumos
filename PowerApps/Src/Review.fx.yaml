@@ -459,6 +459,35 @@
                 Y: =391
                 ZIndex: =16
 
+            Button2_2 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(51, 59, 62, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =62
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                OnSelect: |-
+                    =Launch("https://www.google.com/maps?q=Colombia")
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                RadiusBottomLeft: =100
+                RadiusBottomRight: =100
+                RadiusTopLeft: =100
+                RadiusTopRight: =100
+                Size: =15
+                Text: ="Ir a Google Maps"
+                Width: =270
+                X: =21
+                Y: =297
+                ZIndex: =17
+
     Menu_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
