@@ -711,7 +711,27 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        OnSelect: =
+        OnSelect: |-
+            =// Calcular las variables basadas en las entradas del usuario
+            Set(Valor1, Value(TextInput1.Text) * 2 * 55000);
+            Set(Valor2, Value(TextInput1_1.Text) * 2 * 1400);
+            Set(TotalHoras, Value(TextInput1.Text) * 2 + 4);
+            
+            Set(Hospedaje, 
+                If(TotalHoras >= 9, 100000, 0)
+            );
+            
+            Set(Alimentacion, 
+                If(TotalHoras >= 9, 80000 * 2, 
+                    If(TotalHoras > 6, 80000, 80000 / 2)
+                )
+            );
+            
+            // Suma total de desplazamiento
+            Set(TotalDesplazamiento, Valor1 + Valor2 + Hospedaje + Alimentacion);
+            
+            // Mostrar el resultado en Label8 con formato
+            Label8.Text = Text(TotalDesplazamiento, "[$-es-ES]$ #,###")
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
