@@ -1175,7 +1175,7 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        OnSelect: =Navigate(
+        OnSelect: =Navigate(Inicio_1,ScreenTransition.CoverRight )
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1203,6 +1203,7 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnSelect: =Navigate(Inicio_2,ScreenTransition.UnCoverRight )
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1211,7 +1212,7 @@
         RadiusTopLeft: =100
         RadiusTopRight: =100
         Size: =15
-        Text: ="Link video actualización Desplazamiento."
+        Text: ="Video actualización Desplazamiento."
         Width: =270
         X: =372
         Y: =393
