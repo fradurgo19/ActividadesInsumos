@@ -28,7 +28,7 @@
             Width: |
                 =1016
             X: =0
-            Y: =
+            Y: =1
             ZIndex: =1
 
             ReviewTitle As label:
@@ -137,8 +137,244 @@
             Height: =100
             Width: =1016
             X: =0
-            Y: =1
+            Y: =0
             ZIndex: =2
+
+            Label2_5 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =100
+                Size: =25
+                Text: ="Desplazamiento"
+                Width: =1009
+                X: =3
+                ZIndex: =1
+
+        DataCard8 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =593
+            Width: =1016
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            Gallery2_4 As gallery.galleryVertical:
+                BorderThickness: =2
+                DelayItemLoading: =true
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =303
+                Items: |+
+                    =Filter(
+                        'TEMPARIO DE MANTENIMIENTOS',
+                        Marca.Value = ComboBox2_1.Selected.Results &&
+                        'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                        If(
+                            IsBlank(ComboBox3.SelectedItems),
+                            true,
+                            'Frecuencia (horas)'.Value in SelectedFrequencies
+                        ) &&
+                        'Tipo de item'.Value = "Observacion"
+                    )
+                    
+                    
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowNavigation: =true
+                TemplateSize: =254
+                Transition: =Transition.Push
+                Width: =1005
+                X: =11
+                Y: =117
+                ZIndex: =1
+
+                Label10_25 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =251
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Item.Value
+                    Width: =166
+                    X: =5
+                    Y: =3
+                    ZIndex: =1
+
+                Label10_26 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =251
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.'Frecuencia (horas)'.Value
+                    Width: =101
+                    X: =171
+                    Y: =3
+                    ZIndex: =2
+
+                Label10_28 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =63
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.'Aceite Homologado'
+                    Width: =109
+                    X: =330
+                    Y: =3
+                    ZIndex: =4
+
+                Label10_27 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =251
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.'Avisos Claves'
+                    Width: =581
+                    X: =272
+                    Y: =3
+                    ZIndex: =5
+
+                Label10_29 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =251
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Marca.Value
+                    Width: =138
+                    X: =853
+                    Y: =3
+                    ZIndex: =6
+
+            Group2_4 As group:
+                Height: =5
+                Width: =5
+                X: =7
+                Y: =-95
+                ZIndex: =7
+
+                Rectangle1_4 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(105, 121, 126, 1)
+                    FocusedBorderThickness: =4
+                    Height: =45
+                    HoverFill: =RGBA(105, 121, 126, 1)
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    Width: =1005
+                    X: =11
+                    Y: =40
+                    ZIndex: =2
+
+                Label11_23 As label:
+                    Align: =Align.Center
+                    BorderThickness: =2
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =45
+                    Size: =13
+                    Text: ="Insumo"
+                    Width: =181
+                    X: =11
+                    Y: =40
+                    ZIndex: =3
+
+                Label11_24 As label:
+                    Align: =Align.Center
+                    BorderThickness: =2
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =45
+                    Size: =13
+                    Text: ="Horas"
+                    Width: =93
+                    X: =192
+                    Y: =40
+                    ZIndex: =4
+
+                Label11_25 As label:
+                    Align: =Align.Center
+                    BorderThickness: =2
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =45
+                    Size: =13
+                    Text: ="Avisos Claves"
+                    Width: =585
+                    X: =285
+                    Y: =40
+                    ZIndex: =5
+
+                Label11_26 As label:
+                    Align: =Align.Center
+                    BorderThickness: =2
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =45
+                    Size: =13
+                    Text: ="Marca"
+                    Width: =146
+                    X: =870
+                    Y: =40
+                    ZIndex: =6
 
     Menu_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -380,6 +616,24 @@
                         =19
                     Y: =10
                     ZIndex: =9
+
+            Image16 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =140
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='icons8-mapa-64'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =156
+                X: =75
+                Y: =465
+                ZIndex: =3
 
     Mask As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
