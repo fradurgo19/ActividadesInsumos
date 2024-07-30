@@ -781,9 +781,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Icon to display in the button.",
+      "Description": "Icono que se mostrará en el botón.",
       "DescriptionResourceString": "ButtonCanvas_Icon_Desc",
-      "DisplayName": "Icon",
+      "DisplayName": "Icono",
       "DisplayNameResourceString": "ButtonCanvas_Icon",
       "EnumValues": [],
       "HelperUI": null,
@@ -809,35 +809,35 @@
     {
       "Category": "data",
       "DefaultValue": "Icon before",
-      "Description": "Layout of the button",
+      "Description": "Diseño del botón",
       "DescriptionResourceString": "ButtonCanvas_Layout_Desc",
-      "DisplayName": "Layout",
+      "DisplayName": "Diseño",
       "DisplayNameResourceString": "ButtonCanvas_Layout",
       "EnumValues": [
         {
-          "Description": "Icon before",
-          "DisplayName": "Icon before",
+          "Description": "Icono antes",
+          "DisplayName": "Icono antes",
           "IsDefaultValue": true,
           "Name": "IconBefore",
           "Value": "Icon before"
         },
         {
-          "Description": "Icon after",
-          "DisplayName": "Icon after",
+          "Description": "Icono después",
+          "DisplayName": "Icono después",
           "IsDefaultValue": false,
           "Name": "IconAfter",
           "Value": "Icon after"
         },
         {
-          "Description": "Text only",
-          "DisplayName": "Text only",
+          "Description": "Solo texto",
+          "DisplayName": "Solo texto",
           "IsDefaultValue": false,
           "Name": "TextOnly",
           "Value": "Text only"
         },
         {
-          "Description": "Icon only",
-          "DisplayName": "Icon only",
+          "Description": "Solo icono",
+          "DisplayName": "Solo icono",
           "IsDefaultValue": false,
           "Name": "IconOnly",
           "Value": "Icon only"
@@ -866,9 +866,9 @@
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Icon rotation in degrees",
+      "Description": "Rotación del icono en grados",
       "DescriptionResourceString": "ButtonCanvas_IconRotation_Desc",
-      "DisplayName": "Icon rotation",
+      "DisplayName": "Rotación del icono",
       "DisplayNameResourceString": "ButtonCanvas_IconRotation",
       "EnumValues": [],
       "HelperUI": null,
@@ -894,21 +894,21 @@
     {
       "Category": "data",
       "DefaultValue": "Outline",
-      "Description": "Whether the icon's style should be outline or filled.",
+      "Description": "Indica si el estilo del icono debe ser contorno o relleno.",
       "DescriptionResourceString": "ButtonCanvas_IconStyle_Desc",
-      "DisplayName": "Icon style",
+      "DisplayName": "Estilo del icono",
       "DisplayNameResourceString": "ButtonCanvas_IconStyle",
       "EnumValues": [
         {
-          "Description": "Outline",
-          "DisplayName": "Outline",
+          "Description": "Contorno",
+          "DisplayName": "Contorno",
           "IsDefaultValue": true,
           "Name": "Outline",
           "Value": "Outline"
         },
         {
-          "Description": "Filled",
-          "DisplayName": "Filled",
+          "Description": "Relleno",
+          "DisplayName": "Relleno",
           "IsDefaultValue": false,
           "Name": "Filled",
           "Value": "Filled"
@@ -1364,7 +1364,7 @@
       "DefaultValue": "",
       "Description": "Relleno que se aplicará en la parte superior del control.",
       "DescriptionResourceString": "PaddingTop_Description",
-      "DisplayName": "Relleno superior",
+      "DisplayName": "Superior",
       "DisplayNameResourceString": "PaddingTop",
       "EnumValues": [],
       "HelperUI": null,
@@ -1393,7 +1393,7 @@
       "DefaultValue": "",
       "Description": "Relleno que se aplicará a la derecha del control.",
       "DescriptionResourceString": "PaddingRight_Description",
-      "DisplayName": "Relleno derecho",
+      "DisplayName": "Derecho",
       "DisplayNameResourceString": "PaddingRight",
       "EnumValues": [],
       "HelperUI": null,
@@ -1422,7 +1422,7 @@
       "DefaultValue": "",
       "Description": "Relleno que se aplicará en la parte inferior del control.",
       "DescriptionResourceString": "PaddingBottom_Description",
-      "DisplayName": "Relleno inferior",
+      "DisplayName": "Inferior",
       "DisplayNameResourceString": "PaddingBottom",
       "EnumValues": [],
       "HelperUI": null,
@@ -1451,7 +1451,7 @@
       "DefaultValue": "",
       "Description": "Relleno que se aplicará a la izquierda del control.",
       "DescriptionResourceString": "PaddingLeft_Description",
-      "DisplayName": "Relleno izquierdo",
+      "DisplayName": "Izquierdo",
       "DisplayNameResourceString": "PaddingLeft",
       "EnumValues": [],
       "HelperUI": null,
@@ -2027,7 +2027,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 14,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"ButtonCanvas\":\"Botón\",\"ButtonCanvas_Desc\":\"Permitir que los usuarios hagan clic o pulsen en el botón para realizar una acción.\",\"ButtonCanvas_Appearance\":\"Tipo\",\"ButtonCanvas_Appearance_Desc\":\"Mostrar como uno de los tipos de botón.\",\"ButtonCanvas_Appearance_Secondary\":\"Secundaria\",\"ButtonCanvas_Appearance_Primary\":\"Principal\",\"ButtonCanvas_Appearance_Outline\":\"Contorno\",\"ButtonCanvas_Appearance_Subtle\":\"Tenue\",\"ButtonCanvas_Appearance_Transparent\":\"Transparente\",\"ButtonCanvas_Text\":\"Texto\",\"ButtonCanvas_Text_Desc\":\"Texto que se mostrará en el botón.\",\"ButtonCanvas_Icon\":\"Icon\",\"ButtonCanvas_Icon_Desc\":\"Icon to display in the button.\",\"ButtonCanvas_Layout\":\"Layout\",\"ButtonCanvas_Layout_Desc\":\"Layout of the button\",\"ButtonCanvas_Layout_IconBefore\":\"Icon before\",\"ButtonCanvas_Layout_IconAfter\":\"Icon after\",\"ButtonCanvas_Layout_TextOnly\":\"Text only\",\"ButtonCanvas_Layout_IconOnly\":\"Icon only\",\"ButtonCanvas_IconRotation\":\"Icon rotation\",\"ButtonCanvas_IconRotation_Desc\":\"Icon rotation in degrees\",\"ButtonCanvas_IconStyle\":\"Icon style\",\"ButtonCanvas_IconStyle_Desc\":\"Whether the icon's style should be outline or filled.\",\"ButtonCanvas_IconStyle_Outline\":\"Outline\",\"ButtonCanvas_IconStyle_Filled\":\"Filled\",\"ButtonCanvas_AcceptsFocus\":\"Acepta el foco\",\"ButtonCanvas_AcceptsFocus_Desc\":\"Indica si se puede acceder a este campo con la tecla Tab.\",\"ButtonCanvas_AccessibleLabel\":\"Etiqueta accesible\",\"ButtonCanvas_AccessibleLabel_Desc\":\"Etiqueta que leen en voz alta los lectores de pantalla.\",\"Base_Palette_Color\":\"Paleta de colores\",\"Base_Palette_Color_description\":\"Elija una paleta de colores que sea diferente del tema.\",\"Font_Size\":\"Tamaño de fuente\",\"Font_Size_description\":\"Establezca el tamaño de fuente para el texto mostrado.\",\"Font\":\"Fuente\",\"Font_description\":\"El nombre de la familia de fuentes en la que aparece el texto\",\"Font_Color\":\"Color de fuente\",\"Font_Color_description\":\"El color del texto del control\",\"Font_Weight\":\"Espesor de la fuente\",\"Font_Weight_description\":\"El grosor del texto de un control\",\"Italic\":\"Cursiva\",\"Underline\":\"Subrayado\",\"Strikethrough\":\"Tachado\",\"BorderStyle\":\"Estilo de los bordes\",\"BorderStyle_Description\":\"Estilo de los bordes alrededor del control\",\"BorderStyle_Dashed\":\"Con guiones\",\"BorderStyle_Dotted\":\"De puntos\",\"BorderStyle_None\":\"Ninguno\",\"BorderStyle_Solid\":\"Continuo\",\"BorderThickness\":\"Grosor de los bordes\",\"BorderThickness_Description\":\"Grosor o ancho de los bordes alrededor del control.\",\"BorderColor\":\"Color de los bordes\",\"BorderColor_Description\":\"Color de los bordes alrededor del control.\",\"BorderRadiusTopLeft\":\"Radio del borde superior izquierdo\",\"BorderRadiusTopLeft_Description\":\"Redondez de la esquina superior izquierda del control. Un valor de 0 es perfectamente cuadrado.\",\"BorderRadiusTopRight\":\"Radio del borde superior derecho\",\"BorderRadiusTopRight_Description\":\"Redondez de la esquina superior derecha del control. Un valor de 0 es perfectamente cuadrado.\",\"BorderRadiusBottomRight\":\"Radio del borde inferior derecho\",\"BorderRadiusBottomRight_Description\":\"Redondez de la esquina inferior derecha del control. Un valor de 0 es perfectamente cuadrado.\",\"BorderRadiusBottomLeft\":\"Radio del borde inferior izquierdo\",\"BorderRadiusBottomLeft_Description\":\"Redondez de la esquina inferior izquierda del control. Un valor de 0 es perfectamente cuadrado.\",\"PaddingTop\":\"Relleno superior\",\"PaddingTop_Description\":\"Relleno que se aplicará en la parte superior del control.\",\"PaddingBottom\":\"Relleno inferior\",\"PaddingBottom_Description\":\"Relleno que se aplicará en la parte inferior del control.\",\"PaddingLeft\":\"Relleno izquierdo\",\"PaddingLeft_Description\":\"Relleno que se aplicará a la izquierda del control.\",\"PaddingRight\":\"Relleno derecho\",\"PaddingRight_Description\":\"Relleno que se aplicará a la derecha del control.\",\"VerticalAlign\":\"Alineación vertical\",\"VerticalAlign_Desc\":\"Mostrar el texto utilizando la alineación vertical de texto seleccionada.\",\"VerticalAlign_Top\":\"Superior\",\"VerticalAlign_Middle\":\"Medio\",\"VerticalAlign_Bottom\":\"Inferior\",\"Align\":\"Alinear\",\"Align_Desc\":\"Mostrar el texto utilizando la alineación de texto seleccionada.\",\"Align_Start\":\"Inicio\",\"Align_End\":\"Final\",\"Align_Center\":\"Centro\",\"Align_Justify\":\"Justificar\",\"HoverBorderColor\":\"HoverBorderColor\",\"HoverBorderColor_Description\":\"Mostrar el borde cuando se mantiene el puntero con el color seleccionado.\",\"PressedBorderColor\":\"PressedBorderColor\",\"PressedBorderColor_Description\":\"Mostrar el borde para el estado presionado con el color seleccionado.\",\"DisabledBorderColor\":\"DisabledBorderColor\",\"DisabledBorderColor_Description\":\"Mostrar el borde para el estado deshabilitado con el color seleccionado.\",\"FocusedBorderColor\":\"FocusedBorderColor\",\"FocusedBorderColor_Description\":\"Mostrar el borde para el estado enfocado con el color seleccionado.\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"ButtonCanvas\":\"Botón\",\"ButtonCanvas_Desc\":\"Permitir que los usuarios hagan clic o pulsen en el botón para realizar una acción.\",\"ButtonCanvas_Appearance\":\"Tipo\",\"ButtonCanvas_Appearance_Desc\":\"Mostrar como uno de los tipos de botón.\",\"ButtonCanvas_Appearance_Secondary\":\"Secundaria\",\"ButtonCanvas_Appearance_Primary\":\"Principal\",\"ButtonCanvas_Appearance_Outline\":\"Contorno\",\"ButtonCanvas_Appearance_Subtle\":\"Tenue\",\"ButtonCanvas_Appearance_Transparent\":\"Transparente\",\"ButtonCanvas_Text\":\"Texto\",\"ButtonCanvas_Text_Desc\":\"Texto que se mostrará en el botón.\",\"ButtonCanvas_Icon\":\"Icono\",\"ButtonCanvas_Icon_Desc\":\"Icono que se mostrará en el botón.\",\"ButtonCanvas_Layout\":\"Diseño\",\"ButtonCanvas_Layout_Desc\":\"Diseño del botón\",\"ButtonCanvas_Layout_IconBefore\":\"Icono antes\",\"ButtonCanvas_Layout_IconAfter\":\"Icono después\",\"ButtonCanvas_Layout_TextOnly\":\"Solo texto\",\"ButtonCanvas_Layout_IconOnly\":\"Solo icono\",\"ButtonCanvas_IconRotation\":\"Rotación del icono\",\"ButtonCanvas_IconRotation_Desc\":\"Rotación del icono en grados\",\"ButtonCanvas_IconStyle\":\"Estilo del icono\",\"ButtonCanvas_IconStyle_Desc\":\"Indica si el estilo del icono debe ser contorno o relleno.\",\"ButtonCanvas_IconStyle_Outline\":\"Contorno\",\"ButtonCanvas_IconStyle_Filled\":\"Relleno\",\"ButtonCanvas_AcceptsFocus\":\"Acepta el foco\",\"ButtonCanvas_AcceptsFocus_Desc\":\"Indica si se puede acceder a este campo con la tecla Tab.\",\"ButtonCanvas_AccessibleLabel\":\"Etiqueta accesible\",\"ButtonCanvas_AccessibleLabel_Desc\":\"Etiqueta que leen en voz alta los lectores de pantalla.\",\"Base_Palette_Color\":\"Paleta de colores\",\"Base_Palette_Color_description\":\"Elija una paleta de colores que sea diferente del tema.\",\"Font_Size\":\"Tamaño de fuente\",\"Font_Size_description\":\"Establezca el tamaño de fuente para el texto mostrado.\",\"Font\":\"Fuente\",\"Font_description\":\"El nombre de la familia de fuentes en la que aparece el texto\",\"Font_Color\":\"Color de fuente\",\"Font_Color_description\":\"El color del texto del control\",\"Font_Weight\":\"Espesor de la fuente\",\"Font_Weight_description\":\"El grosor del texto de un control\",\"Italic\":\"Cursiva\",\"Underline\":\"Subrayado\",\"Strikethrough\":\"Tachado\",\"BorderStyle\":\"Estilo de los bordes\",\"BorderStyle_Description\":\"Estilo de los bordes alrededor del control\",\"BorderStyle_Dashed\":\"Con guiones\",\"BorderStyle_Dotted\":\"De puntos\",\"BorderStyle_None\":\"Ninguno\",\"BorderStyle_Solid\":\"Continuo\",\"BorderThickness\":\"Grosor de los bordes\",\"BorderThickness_Description\":\"Grosor o ancho de los bordes alrededor del control.\",\"BorderColor\":\"Color de los bordes\",\"BorderColor_Description\":\"Color de los bordes alrededor del control.\",\"BorderRadiusTopLeft\":\"Radio del borde superior izquierdo\",\"BorderRadiusTopLeft_Description\":\"Redondez de la esquina superior izquierda del control. Un valor de 0 es perfectamente cuadrado.\",\"BorderRadiusTopRight\":\"Radio del borde superior derecho\",\"BorderRadiusTopRight_Description\":\"Redondez de la esquina superior derecha del control. Un valor de 0 es perfectamente cuadrado.\",\"BorderRadiusBottomRight\":\"Radio del borde inferior derecho\",\"BorderRadiusBottomRight_Description\":\"Redondez de la esquina inferior derecha del control. Un valor de 0 es perfectamente cuadrado.\",\"BorderRadiusBottomLeft\":\"Radio del borde inferior izquierdo\",\"BorderRadiusBottomLeft_Description\":\"Redondez de la esquina inferior izquierda del control. Un valor de 0 es perfectamente cuadrado.\",\"PaddingTop\":\"Superior\",\"PaddingTop_Description\":\"Relleno que se aplicará en la parte superior del control.\",\"PaddingBottom\":\"Inferior\",\"PaddingBottom_Description\":\"Relleno que se aplicará en la parte inferior del control.\",\"PaddingLeft\":\"Izquierdo\",\"PaddingLeft_Description\":\"Relleno que se aplicará a la izquierda del control.\",\"PaddingRight\":\"Derecho\",\"PaddingRight_Description\":\"Relleno que se aplicará a la derecha del control.\",\"VerticalAlign\":\"Alineación vertical\",\"VerticalAlign_Desc\":\"Mostrar el texto utilizando la alineación vertical de texto seleccionada.\",\"VerticalAlign_Top\":\"Superior\",\"VerticalAlign_Middle\":\"Medio\",\"VerticalAlign_Bottom\":\"Inferior\",\"Align\":\"Alinear\",\"Align_Desc\":\"Mostrar el texto utilizando la alineación de texto seleccionada.\",\"Align_Start\":\"Inicio\",\"Align_End\":\"Final\",\"Align_Center\":\"Centro\",\"Align_Justify\":\"Justificar\",\"HoverBorderColor\":\"HoverBorderColor\",\"HoverBorderColor_Description\":\"Mostrar el borde cuando se mantiene el puntero con el color seleccionado.\",\"PressedBorderColor\":\"PressedBorderColor\",\"PressedBorderColor_Description\":\"Mostrar el borde para el estado presionado con el color seleccionado.\",\"DisabledBorderColor\":\"DisabledBorderColor\",\"DisabledBorderColor_Description\":\"Mostrar el borde para el estado deshabilitado con el color seleccionado.\",\"FocusedBorderColor\":\"FocusedBorderColor\",\"FocusedBorderColor_Description\":\"Mostrar el borde para el estado enfocado con el color seleccionado.\"}}}",
       "Type": 3
     },
     {

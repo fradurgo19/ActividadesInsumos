@@ -610,17 +610,7 @@
                 PressedFill: =RGBA(105, 121, 126, 1)
                 SearchFields: =["Results"]
                 SearchItems: |-
-                    =Search(Filter(
-                        ForAll(
-                            Distinct(
-                                TempariosLocal,
-                                Marca.Value
-                            ),
-                            {Results: ThisRecord.Value}
-                        ),
-                        Results
-                    )
-                    ,ComboBox2_1.SearchText,Results)
+                    =Search(Filter(ForAll(Distinct(TempariosLocal,Marca.Value),{Results:ThisRecord.Value}),Results),ComboBox2_1.SearchText,Results)
                 SelectionFill: =RGBA(105, 121, 126, 1)
                 SelectMultiple: =false
                 Size: =15

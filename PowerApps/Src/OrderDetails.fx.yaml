@@ -128,23 +128,7 @@
                 PressedFill: =RGBA(255, 255, 255, 1)
                 SearchFields: =["Results"]
                 SearchItems: |-
-                    =Search(Sort(
-                        ForAll(
-                            Distinct(
-                                Filter(
-                                    TempariosLocal,
-                                    Marca.Value = ComboBox2_1.Selected.Results &&
-                                    'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
-                                    'Frecuencia (horas)'.Value = ComboBox3.Selected.Results
-                                ),
-                                 'Tipo de item'.Value
-                            ),
-                            {Results: ThisRecord.Value}
-                        ),
-                        Results
-                    )
-                    
-                    ,ComboBox4_1.SearchText,Results)
+                    =Search(Sort(ForAll(Distinct(Filter(TempariosLocal,Marca.Value=ComboBox2_1.Selected.Results&&'Modelo (Modelo0)'.Value=ComboBox2.Selected.Results&&'Frecuencia (horas)'.Value=ComboBox3.Selected.Results),'Tipo de item'.Value),{Results:ThisRecord.Value}),Results),ComboBox4_1.SearchText,Results)
                 SelectionFill: =RGBA(0, 0, 0, 1)
                 Size: =13
                 Width: =289

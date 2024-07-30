@@ -1,4 +1,26 @@
 {
+  "801162c8-d783-471c-8578-e42462b4b7d4": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://partequipos2.sharepoint.com/sites/servicioposventa": {
+        "dataSources": {
+          "TEMPARIO DE MANTENIMIENTOS1": {
+            "tableName": "442ee2f1-7f8b-45f9-8da5-5d112136c5fd"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TEMPARIO DE MANTENIMIENTOS1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "801162c8-d783-471c-8578-e42462b4b7d4"
+  },
   "9c575f4f-06d3-d9f1-be8e-d81160319b98": {
     "appActions": [],
     "connectionRef": {
