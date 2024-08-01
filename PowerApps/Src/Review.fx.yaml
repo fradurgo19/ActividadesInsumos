@@ -1021,7 +1021,8 @@
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =60
         Icon: =Icon.Reload
-        OnSelect: =Reset(TextInput1);Reset(TextInput1_1)
+        OnSelect: |
+            =Reset(TextInput1);Reset(TextInput1_1)
         Width: =70
         X: =1164
         Y: =138
