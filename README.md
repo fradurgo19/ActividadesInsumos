@@ -1,14 +1,52 @@
-🚀 ¡Descubre nuestra nueva aplicación de Power Apps para la gestión del mantenimiento de maquinaria pesada! 🛠️💼
+# 🚀 ¡Descubre Nuestra Nueva Aplicación de Power Apps para la Gestión del Mantenimiento de Maquinaria Pesada! 🛠️💼
 
 Con nuestra aplicación, tendrás acceso instantáneo a precios, tiempos de actividades de mantenimiento, insumos como filtros y fluidos, procedimientos y observaciones para una amplia gama de marcas y modelos de maquinaria pesada. 😃
 
-✔️ Interfaz intuitiva y fácil de usar
-✔️ Información detallada y actualizada
-✔️ Planificación eficiente de actividades de mantenimiento
-✔️ Decisiones informadas para optimizar la gestión de equipos
-✔️ Demostración personalizada disponible
+## ✔️ Características Principales:
 
-¡No pierdas más tiempo buscando información dispersa! Simplifica la gestión de mantenimiento y maximiza la eficiencia de tus equipos con nuestra aplicación de Power Apps. ¡Contáctanos para una demostración personalizada hoy mismo! 📱💻
+- **Interfaz Intuitiva y Fácil de Usar**: Diseñada para que cualquier usuario pueda navegar y acceder a la información rápidamente.
+- **Información Detallada y Actualizada**: Mantén al día los datos esenciales de tus equipos para tomar decisiones informadas.
+- **Planificación Eficiente de Actividades de Mantenimiento**: Organiza y programa actividades de mantenimiento para maximizar la productividad.
+- **Decisiones Informadas para Optimizar la Gestión de Equipos**: Obtén la información necesaria para mejorar la gestión y el rendimiento de tus equipos.
+- **Demostración Personalizada Disponible**: ¿Interesado? Contáctanos para una demostración personalizada y conoce cómo nuestra aplicación puede transformar tu gestión.
+
+¡No pierdas más tiempo buscando información dispersa! Simplifica la gestión de mantenimiento y maximiza la eficiencia de tus equipos con nuestra aplicación de Power Apps. **¡Contáctanos para una demostración personalizada hoy mismo!** 📱💻
+
+---
+
+# Bienvenido al Gestor de Despachos
+
+Optimiza y simplifica la gestión de despachos desde los almacenes con nuestra aplicación de Power Apps dedicada. Diseñada para ofrecer un control total y transparente sobre cada envío, nuestra aplicación proporciona una solución integral que abarca desde la identificación de los involucrados hasta la documentación detallada del proceso.
+
+## 🚚 Registro Detallado
+
+Registra cada despacho con información completa sobre el remitente y el destinatario. Captura datos precisos sobre el estado actual de cada ítem despachado.
+
+<img src="PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141304.png" width="15%" />
+
+## 📸 Evidencia Visual
+
+Adjunta evidencia visual del estado de los productos mediante la captura de fotografías en tiempo real. Proporciona una visión instantánea y verificable del estado de los artículos despachados.
+
+<img src="PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141420.png" width="15%" />
+
+## ✍️ Firma Electrónica
+
+Facilita la confirmación y recepción del despacho mediante una firma electrónica. Garantiza la satisfacción del destinatario y registra la aceptación formal del envío.
+
+<img src="PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141420.png" width="15%" />
+
+## 📄 Generación de Documentos
+
+Genera documentos PDF detallados de cada despacho para su fácil almacenamiento y referencia. Simplifica la creación de informes y garantiza una documentación organizada.
+
+<img src="PowerApps/Assets/Images/Captura%20de%20pantalla%202024-08-23%20141325.png" width="15%" />
+
+## 🕒 Historial de Despachos
+
+Accede fácilmente al historial completo de despachos para una gestión efectiva y seguimiento detallado.
+
+---
 
 ### 👋 My Name is Frank Duran
 
