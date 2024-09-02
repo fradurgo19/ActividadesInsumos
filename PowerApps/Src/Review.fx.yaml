@@ -990,10 +990,11 @@
                 If(TotalHoras >= 9, 100000,0)
             );
             
+            // Calcular Alimentacion
             Set(Alimentacion, 
                 If(TotalHoras >= 9, 80000 * 2, 
-                    If(TotalHoras >= 1 && TotalHoras <= 4, 40000),     
-                    If(TotalHoras >= 5 && TotalHoras <= 8, 80000)
+                If(TotalHoras >= 5 && TotalHoras <= 8, 80000, 
+                If(TotalHoras >= 0 && TotalHoras <= 4, 40000, 0))
                 )
             );
             
