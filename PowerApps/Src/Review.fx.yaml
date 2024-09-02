@@ -992,7 +992,7 @@
             
             Set(Alimentacion, 
                 If(TotalHoras >= 9, 80000 * 2, 
-                    If(TotalHoras <= 6, 80000 / 2)
+                    If(TotalHoras <= 8, 80000 / 2)
                 )
             );
             
