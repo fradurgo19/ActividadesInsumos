@@ -84,8 +84,8 @@
                 PressedFill: =MenuList.Fill
                 ShowScrollbar: =false
                 TemplatePadding: =11
-                TemplateSize: =40
-                Width: =311+11
+                TemplateSize: =45
+                Width: =255
                 X: =39
                 Y: =logo.Y + logo.Height +32
                 ZIndex: =2
@@ -271,6 +271,29 @@
                         =19
                     Y: =10
                     ZIndex: =9
+
+                Menu7 As icon.Mail:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu7.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.ListScrollWatchlist
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu6"
+                    Width: |
+                        =19
+                    Y: =12
+                    ZIndex: =10
 
         DataCard1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
