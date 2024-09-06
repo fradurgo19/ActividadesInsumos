@@ -6,8 +6,7 @@
         ="Generate menu list";
         ClearCollect(MenuData,
         {Icon:"Menu1",  Name:"Equipos y Frecuencias", Step:"1"},{Icon:"Menu2",  Name:"Actividades", Step:"2"},{Icon:"Menu3", Name:"Consumibles", Step:"3"},
-        {Icon:"Menu4",  Name:"Observaciones", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},
-        {Icon:"Menu6", Name:"Procedimientos", Step:"6"});
+        {Icon:"Menu4",  Name:"Observaciones", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"Procedimientos", Step:"6"},{Icon:"Menu7", Name:"CPP", Step:"7"});
         "Set default values";
         Set(SelectedMenu,First(MenuData));
         Set(CurrentStep, "1");
@@ -718,6 +717,34 @@
                 Y: =228
                 ZIndex: =22
 
+            Button3 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(246, 88, 16, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =56
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                OnSelect: =Navigate(SendEmail_1,ScreenTransition.CoverRight )
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =15
+                Text: ="Catalogos de Partequipos"
+                Width: =176
+                X: =572
+                Y: =22
+                ZIndex: =23
+
         DataCard5 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -739,8 +766,8 @@
                 Height: =254
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Image: ='Captura de pantalla 2024-04-24 090742'
-                ImagePosition: =ImagePosition.Fill
+                Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
+                ImagePosition: =ImagePosition.Tile
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =998
@@ -1141,15 +1168,15 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =186
+        Height: =137
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: ='22991_excavator_power shovel_vehicle_icon'
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =218
-        X: =48
-        Y: =459
+        Width: =221
+        X: =44
+        Y: =508
         ZIndex: =7
 
     Image4 As image:

@@ -1,4 +1,4 @@
-"SendEmail As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"SendEmail_1 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Height: =Max(App.Height, App.DesignHeight)
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |
@@ -6,216 +6,17 @@
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
-    Orientation: =If(SendEmail.Width < SendEmail.Height, Layout.Vertical, Layout.Horizontal)
-    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= SendEmail.Width)
+    Orientation: =If(SendEmail_1.Width < SendEmail_1.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= SendEmail_1.Width)
     Width: =Max(App.Width, App.DesignWidth)
 
-    SendEmailCanvas As fluidGrid.fluidGridWithBlankCard:
-        BorderThickness: =0
-        Fill: =RGBA(249, 249, 249, 1)
-        Height: =768
-        Width: =1016
-        X: =350
-        ZIndex: =1
-
-        SendEmailCard As dataCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            BorderThickness: =0
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =Parent.Height
-            Width: =1016
-            X: =
-            Y: =
-            ZIndex: =1
-
-            Rectangle3 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledFill: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(228,233,237,1)
-                FocusedBorderColor: =Rectangle3.BorderColor
-                FocusedBorderThickness: =4
-                Height: =2
-                HoverFill: =RGBA(105, 121, 126, 1)
-                PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =430
-                X: =
-                Y: =
-                ZIndex: =7
-
-            Rectangle3_2 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledFill: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(228,233,237,1)
-                FocusedBorderColor: =Rectangle3_2.BorderColor
-                FocusedBorderThickness: =4
-                Height: =2
-                HoverFill: =RGBA(105, 121, 126, 1)
-                PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =410
-                X: =Rectangle3.X+Rectangle3.Width+74
-                Y: =
-                ZIndex: =8
-
-            icon2 As icon.Check:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(144,19,254,1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(220, 220, 220, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderColor: =icon2.BorderColor
-                FocusedBorderThickness: =4
-                Height: =15
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.Check
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                Visible: =
-                Width: =15
-                X: =
-                Y: =
-                ZIndex: =16
-
-            Label2_4 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =136
-                Size: =25
-                Text: ="Procedimientos"
-                Width: =1009
-                ZIndex: =17
-
-            Gallery2_3 As gallery.galleryVertical:
-                BorderThickness: =2
-                DelayItemLoading: =true
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =558
-                Items: |+
-                    =Filter(
-                        'TEMPARIO DE MANTENIMIENTOS',
-                        Marca.Value = ComboBox2_1.Selected.Results &&
-                        'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
-                        If(
-                            IsBlank(ComboBox3.SelectedItems),
-                            true,
-                            'Frecuencia (horas)'.Value in SelectedFrequencies
-                        ) &&
-                        'Tipo de item'.Value = "Procedimiento"
-                    )
-                    
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                ShowNavigation: =true
-                TemplateSize: =54
-                Transition: =Transition.Push
-                Width: =989
-                X: =2
-                Y: =185
-                ZIndex: =19
-
-                Label10_22 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =54
-                    OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =ThisItem.'Frecuencia (horas)'.Value
-                    Width: =162
-                    ZIndex: =1
-
-                Label10_23 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =54
-                    OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =ThisItem.Procedimiento
-                    Width: =402
-                    X: =162
-                    ZIndex: =3
-
-                Label10_24 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =54
-                    OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =ThisItem.Marca.Value
-                    Width: =144
-                    X: =564
-                    ZIndex: =4
-
-                Label10_19 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =54
-                    OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =ThisItem.Linea.Value
-                    Width: =159
-                    X: =708
-                    ZIndex: =7
-
-                Label10_21 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =54
-                    OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =ThisItem.'Tipo de item'.Value
-                    Width: =112
-                    X: =867
-                    ZIndex: =8
-
-    Menu_5 As fluidGrid.fluidGridWithBlankCard:
+    Menu_6 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
         Width: =350
-        ZIndex: =3
+        ZIndex: =1
 
-        MenuCard_5 As dataCard:
+        MenuCard_6 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
@@ -229,13 +30,13 @@
             Y: =0
             ZIndex: =1
 
-            logo_6 As image:
+            logo_7 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderColor: =logo_6.BorderColor
+                FocusedBorderColor: =logo_7.BorderColor
                 FocusedBorderThickness: =4
                 Height: =57
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -246,67 +47,37 @@
                 Width: =199
                 X: =50
                 Y: =42
-                ZIndex: =1
+                ZIndex: =2
 
-            MenuList_5 As gallery.galleryVertical:
+            MenuList_6 As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtrada"
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Default: =SelectedMenu
-                DisabledBorderColor: =MenuList_5.BorderColor
-                DisabledFill: =MenuList_5.Fill
+                DisabledBorderColor: =MenuList_6.BorderColor
+                DisabledFill: =MenuList_6.Fill
                 Height: =657-100
-                HoverBorderColor: =MenuList_5.BorderColor
-                HoverFill: =MenuList_5.Fill
+                HoverBorderColor: =MenuList_6.BorderColor
+                HoverFill: =MenuList_6.Fill
                 Items: =MenuData
                 Layout: =Layout.Vertical
-                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(SendEmail,ScreenTransition.None)))
-                PressedBorderColor: =MenuList_5.BorderColor
-                PressedFill: =MenuList_5.Fill
+                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(SendEmail,ScreenTransition.None),"7",Navigate(SendEmail_1,ScreenTransition.None)))
+                PressedBorderColor: =MenuList_6.BorderColor
+                PressedFill: =MenuList_6.Fill
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =40
                 Width: =311+11
                 X: =39
-                Y: =logo_6.Y + logo_6.Height +32
-                ZIndex: =2
+                Y: =logo_7.Y + logo_7.Height +32
+                ZIndex: =3
 
-                MenuName_5 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(0,32,69,1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderColor: =MenuName_5.BorderColor
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
-                    Height: =22
-                    HoverBorderColor: =MenuName_5.BorderColor
-                    HoverColor: =MenuName_5.Color
-                    HoverFill: =MenuName_5.Fill
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    PressedBorderColor: =MenuName_5.BorderColor
-                    PressedColor: =MenuName_5.Color
-                    PressedFill: =MenuName_5.Fill
-                    Size: =12
-                    Text: =ThisItem.Name
-                    Width: =230
-                    X: =39
-                    Y: =9
-                    ZIndex: =2
-
-                Bar_5 As rectangle:
+                Bar_6 As rectangle:
                     BorderColor: =RGBA(101, 128, 187, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DisabledFill: =RGBA(166, 166, 166, 1)
                     Fill: =RGBA(144,19,254,1)
-                    FocusedBorderColor: =Bar_5.BorderColor
+                    FocusedBorderColor: =Bar_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =40
                     HoverFill: =RGBA(105, 121, 126, 1)
@@ -314,16 +85,46 @@
                     PressedFill: =RGBA(105, 121, 126, 1)
                     Visible: =ThisItem.Step=CurrentStep
                     Width: =4
-                    X: =350-4-MenuList_5.X-11
-                    ZIndex: =3
+                    X: =350-4-MenuList_6.X-11
+                    ZIndex: =4
 
-                Menu5_5 As icon.DockCheckProperties:
+                MenuName_6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(0,32,69,1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderColor: =MenuName_6.BorderColor
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
+                    Height: =22
+                    HoverBorderColor: =MenuName_6.BorderColor
+                    HoverColor: =MenuName_6.Color
+                    HoverFill: =MenuName_6.Fill
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    PressedBorderColor: =MenuName_6.BorderColor
+                    PressedColor: =MenuName_6.Color
+                    PressedFill: =MenuName_6.Fill
+                    Size: =12
+                    Text: =ThisItem.Name
+                    Width: =230
+                    X: =39
+                    Y: =9
+                    ZIndex: =5
+
+                Menu5_6 As icon.DockCheckProperties:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu5_5.BorderColor
+                    FocusedBorderColor: =Menu5_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -337,15 +138,15 @@
                     Visible: =ThisItem.Icon="Menu5"
                     Width: =19
                     Y: =10
-                    ZIndex: =4
+                    ZIndex: =6
 
-                Menu1_5 As icon.Calendar:
+                Menu1_6 As icon.Calendar:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu1_5.BorderColor
+                    FocusedBorderColor: =Menu1_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -359,15 +160,15 @@
                     Visible: =ThisItem.Icon="Menu1"
                     Width: =19
                     Y: =10
-                    ZIndex: =5
+                    ZIndex: =7
 
-                Menu2_5 As icon.DetailList:
+                Menu2_6 As icon.DetailList:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu2_5.BorderColor
+                    FocusedBorderColor: =Menu2_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -381,15 +182,15 @@
                     Visible: =ThisItem.Icon="Menu2"
                     Width: =19
                     Y: =10
-                    ZIndex: =6
+                    ZIndex: =8
 
-                Menu3_5 As icon.AddDocument:
+                Menu3_6 As icon.AddDocument:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu3_5.BorderColor
+                    FocusedBorderColor: =Menu3_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -404,15 +205,15 @@
                     Width: =19
                     X: =
                     Y: =10
-                    ZIndex: =7
+                    ZIndex: =9
 
-                Menu4_5 As icon.Attachment:
+                Menu4_6 As icon.Attachment:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu4_5.BorderColor
+                    FocusedBorderColor: =Menu4_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -427,15 +228,15 @@
                     Width: =19
                     X: =
                     Y: =10
-                    ZIndex: =8
+                    ZIndex: =10
 
-                Menu6_5 As icon.Mail:
+                Menu6_6 As icon.Mail:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu6_5.BorderColor
+                    FocusedBorderColor: =Menu6_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -450,27 +251,119 @@
                     Width: |
                         =19
                     Y: =10
-                    ZIndex: =9
+                    ZIndex: =11
 
-            Image5 As image:
+            Image5_1 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =124
+                Height: =166
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: ='60170_content_tree_icon'
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =186
+                Width: =188
                 X: =50
-                Y: =518
-                ZIndex: =3
+                Y: =476
+                ZIndex: =12
 
-    Image14 As image:
+    SendEmailCanvas_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Fill: =RGBA(249, 249, 249, 1)
+        Height: =768
+        Width: =1016
+        X: =350
+        ZIndex: =2
+
+        SendEmailCard_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            Width: =1016
+            X: =
+            Y: =
+            ZIndex: =13
+
+            Rectangle3_1 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(228,233,237,1)
+                FocusedBorderColor: =Rectangle3_1.BorderColor
+                FocusedBorderThickness: =4
+                Height: =2
+                HoverFill: =RGBA(105, 121, 126, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =430
+                X: =
+                Y: =
+                ZIndex: =14
+
+            icon2_1 As icon.Check:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(144,19,254,1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderColor: =icon2_1.BorderColor
+                FocusedBorderThickness: =4
+                Height: =15
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Check
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =
+                Width: =15
+                X: =
+                Y: =
+                ZIndex: =15
+
+            Label2_6 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =136
+                Size: =25
+                Text: ="Catalogos"
+                Width: =1009
+                ZIndex: =16
+
+            Rectangle3_3 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(228,233,237,1)
+                FocusedBorderColor: =Rectangle3_3.BorderColor
+                FocusedBorderThickness: =4
+                Height: =2
+                HoverFill: =RGBA(105, 121, 126, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =410
+                X: =Rectangle3_1.X+Rectangle3_1.Width+74
+                Y: =
+                ZIndex: =17
+
+    Image14_1 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -484,16 +377,16 @@
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         X: =1086
-        ZIndex: =4
+        ZIndex: =3
 
-    Group2_3 As group:
+    Group2_4 As group:
         Height: =5
         Width: =5
         X: =7
         Y: =20
         ZIndex: =13
 
-        Rectangle1_3 As rectangle:
+        Rectangle1_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -506,9 +399,9 @@
             Width: =993
             X: =350
             Y: =137
-            ZIndex: =5
+            ZIndex: =4
 
-        Label11_16 As label:
+        Label11_23 As label:
             Align: =Align.Center
             BorderThickness: =2
             Color: =RGBA(255, 255, 255, 1)
@@ -523,9 +416,9 @@
             Width: =171
             X: =350
             Y: =137
-            ZIndex: =6
+            ZIndex: =5
 
-        Label11_17 As label:
+        Label11_24 As label:
             Align: =Align.Center
             BorderThickness: =2
             Color: =RGBA(255, 255, 255, 1)
@@ -540,9 +433,9 @@
             Width: =398
             X: =521
             Y: =137
-            ZIndex: =7
+            ZIndex: =6
 
-        Label11_18 As label:
+        Label11_25 As label:
             Align: =Align.Center
             BorderThickness: =2
             Color: =RGBA(255, 255, 255, 1)
@@ -557,9 +450,9 @@
             Width: =148
             X: =919
             Y: =137
-            ZIndex: =8
+            ZIndex: =7
 
-        Label11_19 As label:
+        Label11_26 As label:
             Align: =Align.Center
             BorderThickness: =2
             Color: =RGBA(255, 255, 255, 1)
@@ -574,9 +467,9 @@
             Width: =162
             X: =1068
             Y: =137
-            ZIndex: =9
+            ZIndex: =8
 
-        Label11_20 As label:
+        Label11_27 As label:
             Align: =Align.Center
             BorderThickness: =2
             Color: =RGBA(255, 255, 255, 1)
@@ -591,5 +484,5 @@
             Width: =114
             X: =1229
             Y: =137
-            ZIndex: =10
+            ZIndex: =9
 

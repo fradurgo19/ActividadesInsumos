@@ -1,28 +1,7 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: |-
-        =Set(MyCalendarID, LookUp(Office365.CalendarGetTables().value,DisplayName = "Calendar").Name);
-        Set(TotalEstimate,0);
-        ClearCollect(ProductList, 
-            {Title: "Product 1", ID: 1, ProductName: "Product 1", ProductPrice: 150, 
-            ProductDescription: "Product 1 Description", 
-            Image: "https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/esimatorpro/App%20Images/ProductImageSample.jpg"},
-        
-            {Title: "Product 2", ID: 2, ProductName: "Product 2", ProductPrice: 225, 
-            ProductDescription: "Product 2 Description", 
-            Image: "https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/esimatorpro/App%20Images/ProductImageSample.jpg"},
-        
-            {Title: "Product 3", ID: 3, ProductName: "Product 3", ProductPrice: 350, 
-            ProductDescription: "Product 3 Description", 
-            Image: "https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/esimatorpro/App%20Images/ProductImageSample.jpg"},
-        
-            {Title: "Product 4", ID: 4, ProductName: "Product 4", ProductPrice: 475, 
-            ProductDescription: "Product 4 Description", 
-            Image: "https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/esimatorpro/App%20Images/ProductImageSample.jpg"},
-        
-            {Title: "Product 5", ID: 5, ProductName: "Product 5", ProductPrice: 3250, 
-            ProductDescription: "Product 5 Description", 
-            Image: "https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/esimatorpro/App%20Images/ProductImageSample.jpg"})
+    OnStart: |
+        =
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
