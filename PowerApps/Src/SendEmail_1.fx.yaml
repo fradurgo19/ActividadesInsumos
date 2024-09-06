@@ -114,31 +114,9 @@
                     Size: =12
                     Text: =ThisItem.Name
                     Width: =230
-                    X: =70
+                    X: =40
                     Y: =10
                     ZIndex: =5
-
-                Menu6_6 As icon.DockCheckProperties:
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(220, 220, 220, 1)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu6_6.BorderColor
-                    FocusedBorderThickness: =4
-                    Height: =19
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.DockCheckProperties
-                    OnSelect: =Select(Parent)
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    Visible: =ThisItem.Icon="Menu5"
-                    Width: =19
-                    Y: =10
-                    ZIndex: =6
 
                 Menu1_6 As icon.Calendar:
                     BorderColor: =RGBA(166, 166, 166, 1)
@@ -152,7 +130,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.CameraAperture
+                    Icon: =Icon.Publish
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -246,11 +224,55 @@
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
-                    Visible: =ThisItem.Icon="Menu6"
+                    Visible: =ThisItem.Icon="Menu5"
                     Width: |
                         =19
                     Y: =12
                     ZIndex: =10
+
+                Menu6_6 As icon.DockCheckProperties:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu6_6.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.FilterFlat
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu6"
+                    Width: =19
+                    Y: =11
+                    ZIndex: =11
+
+                Menu6_7 As icon.Calendar:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu6_7.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Ribbon
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu7"
+                    Width: =19
+                    Y: =10
+                    ZIndex: =12
 
             Image5_1 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -377,6 +399,117 @@
         PressedFill: =RGBA(0, 0, 0, 0)
         X: =1086
         ZIndex: =3
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =438
+        Items: |
+            =Filter(
+               TuBibliotecaDeSharePoint, 
+               IsFolder = true  // Filtrar para mostrar solo carpetas
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =883
+        X: =414
+        Y: =179
+        ZIndex: =10
+
+        Image18 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =72
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =72
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title1 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.SampleHeading
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle1 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.SampleText
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =Title1.Y + Title1.Height
+            ZIndex: =3
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="Ver los detalles del elemento"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =Parent.TemplateHeight - Separator1.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
 
     Group2_4 As group:
         Height: =5
