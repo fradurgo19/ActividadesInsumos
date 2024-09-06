@@ -10,13 +10,13 @@
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= SendEmail_1.Width)
     Width: =Max(App.Width, App.DesignWidth)
 
-    Menu_7 As fluidGrid.fluidGridWithBlankCard:
+    Menu_6 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
         Width: =350
         ZIndex: =1
 
-        MenuCard_7 As dataCard:
+        MenuCard_6 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
@@ -49,20 +49,20 @@
                 Y: =42
                 ZIndex: =2
 
-            MenuList_7 As gallery.galleryVertical:
+            MenuList_6 As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtrada"
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Default: =SelectedMenu
-                DisabledBorderColor: =MenuList_7.BorderColor
-                DisabledFill: =MenuList_7.Fill
+                DisabledBorderColor: =MenuList_6.BorderColor
+                DisabledFill: =MenuList_6.Fill
                 Height: =657-100
-                HoverBorderColor: =MenuList_7.BorderColor
-                HoverFill: =MenuList_7.Fill
+                HoverBorderColor: =MenuList_6.BorderColor
+                HoverFill: =MenuList_6.Fill
                 Items: =MenuData
                 Layout: =Layout.Vertical
                 OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(SendEmail,ScreenTransition.None),"7",Navigate(SendEmail_1,ScreenTransition.None)))
-                PressedBorderColor: =MenuList_7.BorderColor
-                PressedFill: =MenuList_7.Fill
+                PressedBorderColor: =MenuList_6.BorderColor
+                PressedFill: =MenuList_6.Fill
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =40
@@ -85,7 +85,7 @@
                     PressedFill: =RGBA(105, 121, 126, 1)
                     Visible: =ThisItem.Step=CurrentStep
                     Width: =4
-                    X: =350-4-MenuList_7.X-11
+                    X: =350-4-MenuList_6.X-11
                     ZIndex: =4
 
                 MenuName_6 As label:
@@ -114,17 +114,17 @@
                     Size: =12
                     Text: =ThisItem.Name
                     Width: =230
-                    X: =39
-                    Y: =9
+                    X: =70
+                    Y: =10
                     ZIndex: =5
 
-                Menu6_7 As icon.DockCheckProperties:
+                Menu6_6 As icon.DockCheckProperties:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu6_7.BorderColor
+                    FocusedBorderColor: =Menu6_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -140,19 +140,19 @@
                     Y: =10
                     ZIndex: =6
 
-                Menu1_7 As icon.Calendar:
+                Menu1_6 As icon.Calendar:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu1_7.BorderColor
+                    FocusedBorderColor: =Menu1_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.AddToCalendar
+                    Icon: =Icon.CameraAperture
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -162,13 +162,13 @@
                     Y: =10
                     ZIndex: =7
 
-                Menu2_7 As icon.DetailList:
+                Menu2_6 As icon.DetailList:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu2_7.BorderColor
+                    FocusedBorderColor: =Menu2_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -184,13 +184,13 @@
                     Y: =10
                     ZIndex: =8
 
-                Menu3_7 As icon.AddDocument:
+                Menu3_6 As icon.AddDocument:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu3_7.BorderColor
+                    FocusedBorderColor: =Menu3_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -206,13 +206,13 @@
                     Y: =9
                     ZIndex: =9
 
-                Menu4_7 As icon.Attachment:
+                Menu4_6 As icon.Attachment:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu4_7.BorderColor
+                    FocusedBorderColor: =Menu4_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -229,13 +229,13 @@
                     Y: =10
                     ZIndex: =10
 
-                Menu5_7 As icon.Mail:
+                Menu5_6 As icon.Mail:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =Menu5_7.BorderColor
+                    FocusedBorderColor: =Menu5_6.BorderColor
                     FocusedBorderThickness: =4
                     Height: =19
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
