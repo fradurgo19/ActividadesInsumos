@@ -404,7 +404,7 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =522
-        Items: =Filter(DocumentosEntregaRecibidoAlmacen, EsCarpeta = false)
+        Items: =Filter(DocumentosEntregaRecibidoAlmacen, EsCarpeta = true)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
