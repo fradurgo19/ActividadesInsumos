@@ -5,7 +5,8 @@
         =Set(CurrentStep,"7");
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
-        UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
+        UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        Set(
     Orientation: =If(SendEmail_2.Width < SendEmail_2.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= SendEmail_2.Width)
     Width: =Max(App.Width, App.DesignWidth)
@@ -14,7 +15,7 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =522
-        Items: =Filter(Manuales, 'Ruta de acceso a la carpeta'= "Manuales/")
+        Items: =Filter(Manuales, hiddenFolderPath = "Manuales/")
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowNavigation: =true
