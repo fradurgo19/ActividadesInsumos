@@ -387,19 +387,19 @@
         Document: |-
             ="appres://datasources/Manuales/table/f49e66fb-5682-4c66-9f9d-0c8bdcacbadc/rows/719/reference/https:%2F%2Fbrazil-001.azure-apim.net%2Fapim%2Fsharepointonline%2F0fa5409fa60044578535a9abe68eea8b%2Fdatasets%2Fhttps%25253a%25252f%25252fpartequipos2.sharepoint.com%25252fsites%25252fservicioposventa%2FGetFileContentByPath%3Fpath=%252f" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa')
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =582
+        Height: =601
         HoverBorderColor: =Color.Aquamarine
         ShowControls: =true
         Tooltip: ="Presione el archivo y espere que cargue el archivo pdf."
         Width: =980
-        X: =361
-        Y: =169
+        X: =362
+        Y: =166
         ZIndex: =5
 
     Gallery5 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =67
+        Height: =83
         Items: =Split(Left(varPatch,Len(varPatch)-1),"/")
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =173
