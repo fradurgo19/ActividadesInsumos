@@ -11,103 +11,11 @@
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= SendEmail_2.Width)
     Width: =Max(App.Width, App.DesignWidth)
 
-    "Gallery4_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =189
-        Items: =Filter(Manuales, hiddenFolderPath = varPatch)
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
-        ShowNavigation: =true
-        TemplatePadding: =0
-        TemplateSize: =105
-        Transition: =Transition.Push
-        Width: =349
-        X: =361
-        Y: =140
-        ZIndex: =1
-
-        Rectangle2_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator1_1.Height
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =3
-
-        Separator1_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =4
-
-        Image24_3 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =75
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =72
-            X: =261
-            Y: =17
-            ZIndex: =8
-
-        Label16 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =41
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.'Nombre de archivo con extensión'
-            Width: =261
-            ZIndex: =9
-
-        Label16_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =38
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Nombre
-            Width: =164
-            X: =26
-            Y: =54
-            ZIndex: =10
-
     Menu_7 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
         Width: =350
-        ZIndex: =2
+        ZIndex: =1
 
         MenuCard_7 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -390,7 +298,7 @@
         Height: =768
         Width: =1016
         X: =350
-        ZIndex: =3
+        ZIndex: =2
 
         SendEmailCard_2 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -442,24 +350,6 @@
                 Y: =
                 ZIndex: =24
 
-            Label2_7 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =81
-                Size: =25
-                Text: ="CPP"
-                Width: =1009
-                ZIndex: =25
-
             Rectangle3_5 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -483,14 +373,28 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =90
+        Height: =83
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =tareas
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        X: =1086
-        ZIndex: =4
+        X: =1266
+        ZIndex: =3
+
+    PdfViewer1 As pdfViewer:
+        DisabledBorderColor: =Color.AliceBlue
+        Document: |-
+            ="appres://datasources/Manuales/table/f49e66fb-5682-4c66-9f9d-0c8bdcacbadc/rows/719/reference/https:%2F%2Fbrazil-001.azure-apim.net%2Fapim%2Fsharepointonline%2F0fa5409fa60044578535a9abe68eea8b%2Fdatasets%2Fhttps%25253a%25252f%25252fpartequipos2.sharepoint.com%25252fsites%25252fservicioposventa%2FGetFileContentByPath%3Fpath=%252f" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa')
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =582
+        HoverBorderColor: =Color.Aquamarine
+        ShowControls: =true
+        Tooltip: ="Presione el archivo y espere que cargue el archivo pdf."
+        Width: =980
+        X: =361
+        Y: =169
+        ZIndex: =5
 
     Gallery5 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -500,9 +404,8 @@
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =173
         Width: =991
-        X: =358
-        Y: =73
-        ZIndex: =11
+        X: =362
+        ZIndex: =6
 
         ButtonCanvas2 As Botón:
             DisplayMode: =DisplayMode.Edit
@@ -514,13 +417,79 @@
             Y: =10
             ZIndex: =1
 
-    PdfViewer1 As pdfViewer:
-        Document: |-
-            ="appres://datasources/Manuales/table/f49e66fb-5682-4c66-9f9d-0c8bdcacbadc/rows/719/reference/https:%2F%2Fbrazil-001.azure-apim.net%2Fapim%2Fsharepointonline%2F0fa5409fa60044578535a9abe68eea8b%2Fdatasets%2Fhttps%25253a%25252f%25252fpartequipos2.sharepoint.com%25252fsites%25252fservicioposventa%2FGetFileContentByPath%3Fpath=%252f" & EncodeUrl(Gallery4_1.Selected.'Ruta de acceso completa')
-        Height: =473
-        ShowControls: =true
-        Width: =988
-        X: =361
-        Y: =267
-        ZIndex: =12
+    "Gallery7 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =89
+        Items: =Filter(Manuales, hiddenFolderPath = varPatch)
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
+        ShowNavigation: |
+            =true
+        TemplatePadding: =0
+        TemplateSize: =254
+        Width: =974
+        X: =379
+        Y: =67
+        ZIndex: =7
+
+        Image27 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =62
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =76
+            Y: =5
+            ZIndex: =1
+
+        Title7 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =61
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Nombre
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =false
+            Width: =125
+            Y: =67
+            ZIndex: =2
+
+        Subtitle7 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =75
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =9
+            Text: =ThisItem.'Nombre de archivo con extensión'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =137
+            X: =88
+            Y: =5
+            ZIndex: =3
 
