@@ -6,7 +6,7 @@
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
-        Set(
+        Set(varPatch,"Manuales/")
     Orientation: =If(SendEmail_2.Width < SendEmail_2.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= SendEmail_2.Width)
     Width: =Max(App.Width, App.DesignWidth)
@@ -15,16 +15,17 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =522
-        Items: =Filter(Manuales, hiddenFolderPath = "Manuales/")
+        Items: =Filter(Manuales, hiddenFolderPath = varPatch)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
         ShowNavigation: =true
         TemplatePadding: =0
-        TemplateSize: =255
+        TemplateSize: =240
         Transition: =Transition.Push
-        Width: =520
-        X: =350
-        Y: =179
+        Width: =500
+        X: =363
+        Y: =246
         ZIndex: =1
 
         Rectangle5_1 As rectangle:
@@ -83,7 +84,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =46
+            Height: =38
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -144,7 +145,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =72
+            Height: =55
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
@@ -462,6 +463,15 @@
             Y: =
             ZIndex: =22
 
+            TextCanvas1 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =65
+                Text: =varPatch
+                Width: =248
+                X: =35
+                Y: =110
+                ZIndex: =18
+
             Rectangle3_4 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -549,6 +559,28 @@
         PressedFill: =RGBA(0, 0, 0, 0)
         X: =1086
         ZIndex: =4
+
+    Gallery5 As gallery.galleryHorizontal:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =67
+        Items: =Split(Left(varPatch,Len(varPatch)-1),"/")
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =173
+        Width: =991
+        X: =352
+        Y: =179
+        ZIndex: =11
+
+        ButtonCanvas2 As Botón:
+            DisplayMode: =DisplayMode.Edit
+            Height: =42
+            OnSelect: =Set(varPatch,Left(varPatch,Find(ThisItem.Value,varPatch)+Len(ThisItem.Value)))
+            Text: =ThisItem.Value
+            Width: =147
+            X: =5
+            Y: =10
+            ZIndex: =1
 
     Group2_5 As group:
         Height: =5
