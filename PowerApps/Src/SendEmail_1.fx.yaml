@@ -284,7 +284,7 @@
                 Height: =129
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Image: ='60170_content_tree_icon'
+                Image: ='icons8-libro-94'
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =188
@@ -404,13 +404,14 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =522
-        Items: =Filter(DocumentosEntregaRecibidoAlmacen, EsCarpeta = true)
+        Items: =Filter(DocumentosEntregaRecibidoAlmacen, EsCarpeta = false)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =209
-        X: =518
-        Y: =200
+        Width: =641
+        X: =350
+        Y: =179
         ZIndex: =10
 
         Rectangle5 As rectangle:
@@ -525,6 +526,162 @@
             Width: =4
             ZIndex: =7
 
+        Rectangle5_1 As rectangle:
+            BorderColor: =RGBA(9, 33, 98, 1)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =188
+            HoverFill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =179
+            X: =234
+            Y: =13
+            ZIndex: =8
+
+        Rectangle5_2 As rectangle:
+            BorderColor: =RGBA(9, 33, 98, 1)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =188
+            HoverFill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =179
+            X: =442
+            Y: =12
+            ZIndex: =9
+
+        Title4_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =47
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Nombre
+            VerticalAlign: =VerticalAlign.Top
+            Width: =179
+            X: =234
+            Y: =20
+            ZIndex: =10
+
+        Subtitle4_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'Nombre de archivo con extensión'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =179
+            X: =234
+            Y: =82
+            ZIndex: =11
+
+        Image24_1 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =72
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =72
+            X: =287
+            Y: =129
+            ZIndex: =12
+
+        Image24_2 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =72
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =72
+            X: =493
+            Y: =128
+            ZIndex: =13
+
+        Title4_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =47
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Nombre
+            VerticalAlign: =VerticalAlign.Top
+            Width: =179
+            X: =442
+            Y: =20
+            ZIndex: =14
+
+        Subtitle4_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'Nombre de archivo con extensión'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =179
+            X: =442
+            Y: =74
+            ZIndex: =15
+
     Group2_4 As group:
         Height: =5
         Width: =5
@@ -547,23 +704,6 @@
             Y: =137
             ZIndex: =4
 
-        Label11_23 As label:
-            Align: =Align.Center
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =42
-            Size: =13
-            Text: ="Insumo"
-            Width: =171
-            X: =350
-            Y: =137
-            ZIndex: =5
-
         Label11_24 As label:
             Align: =Align.Center
             BorderThickness: =2
@@ -574,61 +714,10 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =42
-            Size: =13
-            Text: ="Procedimiento"
-            Width: =398
-            X: =521
+            Size: =15
+            Text: ="Cátalogos"
+            Width: =993
+            X: =350
             Y: =137
             ZIndex: =6
-
-        Label11_25 As label:
-            Align: =Align.Center
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =42
-            Size: =13
-            Text: ="Marca"
-            Width: =148
-            X: =919
-            Y: =137
-            ZIndex: =7
-
-        Label11_26 As label:
-            Align: =Align.Center
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =42
-            Size: =13
-            Text: ="Linea"
-            Width: =162
-            X: =1068
-            Y: =137
-            ZIndex: =8
-
-        Label11_27 As label:
-            Align: =Align.Center
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =42
-            Size: =13
-            Text: ="Modelo"
-            Width: =114
-            X: =1229
-            Y: =137
-            ZIndex: =9
 
