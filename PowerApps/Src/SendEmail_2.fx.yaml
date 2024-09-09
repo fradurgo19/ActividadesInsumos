@@ -388,18 +388,18 @@
         Height: =67
         Items: =Split(Left(varPatch,Len(varPatch)-1),"/")
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =63
-        Width: =469
-        X: =480
+        TemplateSize: =168
+        Width: =977
+        X: =365
         ZIndex: =6
 
         ButtonCanvas2 As Botón:
             DisplayMode: =DisplayMode.Edit
-            FontSize: =8
+            FontSize: =12
             Height: =42
             OnSelect: =Set(varPatch,Left(varPatch,Find(ThisItem.Value,varPatch)+Len(ThisItem.Value)))
             Text: =ThisItem.Value
-            Width: =51
+            Width: =141
             X: =5
             Y: =10
             ZIndex: =1
@@ -416,10 +416,10 @@
         ShowNavigation: |
             =true
         TemplatePadding: =0
-        TemplateSize: =218
+        TemplateSize: =248
         Transition: =Transition.Push
-        Width: =862
-        X: =480
+        Width: =977
+        X: =365
         Y: =67
         ZIndex: =7
 
@@ -487,8 +487,8 @@
             DisplayMode: =DisplayMode.Edit
             FontSize: =8
             Height: =29
-            OnSelect: =
-            Text: ="Ir al link"
+            OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
+            Text: ="Ver Pdf"
             Width: =66
             X: =109
             Y: =44
