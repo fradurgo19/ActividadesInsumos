@@ -14,34 +14,19 @@
     "Gallery4_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =439
+        Height: =189
         Items: =Filter(Manuales, hiddenFolderPath = varPatch)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
         ShowNavigation: =true
         TemplatePadding: =0
-        TemplateSize: =252
+        TemplateSize: =105
         Transition: =Transition.Push
         Width: =349
         X: =361
-        Y: =238
+        Y: =140
         ZIndex: =1
-
-        Rectangle5_1 As rectangle:
-            BorderColor: =RGBA(9, 33, 98, 1)
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =213
-            HoverFill: =RGBA(105, 121, 126, 1)
-            OnSelect: =Select(Parent)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =261
-            X: =26
-            Y: =13
-            ZIndex: =2
 
         Rectangle2_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -60,23 +45,6 @@
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =4
-
-        NextArrow1_1 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Color: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =50
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =16
-            PaddingLeft: =16
-            PaddingRight: =16
-            PaddingTop: =16
-            Tooltip: ="Ver los detalles del elemento"
-            Width: =50
-            X: =299
-            Y: =82
-            ZIndex: =5
 
         Image24_3 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -97,8 +65,8 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
             Width: =72
-            X: =36
-            Y: =82
+            X: =261
+            Y: =17
             ZIndex: =8
 
         Label16 As label:
@@ -115,8 +83,6 @@
             Size: =13
             Text: =ThisItem.'Nombre de archivo con extensión'
             Width: =261
-            X: =26
-            Y: =13
             ZIndex: =9
 
         Label16_1 As label:
@@ -133,8 +99,8 @@
             Size: =13
             Text: =ThisItem.Nombre
             Width: =164
-            X: =123
-            Y: =103
+            X: =26
+            Y: =54
             ZIndex: =10
 
     Menu_7 As fluidGrid.fluidGridWithBlankCard:
@@ -408,15 +374,14 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =129
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: ='icons8-libro-94'
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =188
-                X: =50
-                Y: =512
+                Width: =166
+                X: =70
+                Y: =540
                 ZIndex: =21
 
     SendEmailCanvas_2 As fluidGrid.fluidGridWithBlankCard:
@@ -439,13 +404,21 @@
             Y: =
             ZIndex: =22
 
-            TextCanvas1 As Texto:
-                DisplayMode: =DisplayMode.Edit
-                Height: =43
-                Text: =varPatch
-                Width: =594
-                X: =0
-                Y: =122
+            Label17 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =176
+                Size: =13
+                Text: =Gallery4_1.Selected.BlobData
+                Width: =945
+                X: =15
+                Y: =273
                 ZIndex: =18
 
             Rectangle3_4 As rectangle:
@@ -544,8 +517,8 @@
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =173
         Width: =991
-        X: =350
-        Y: =161
+        X: =358
+        Y: =73
         ZIndex: =11
 
         ButtonCanvas2 As Botón:
@@ -559,48 +532,11 @@
             ZIndex: =1
 
     PdfViewer1 As pdfViewer:
-        Height: =486
-        Width: =606
-        X: =743
-        Y: =228
+        Document: =
+        Height: =238
+        ShowControls: =true
+        Width: =988
+        X: =361
+        Y: =505
         ZIndex: =12
-
-    Group2_5 As group:
-        Height: =5
-        Width: =5
-        X: =7
-        Y: =20
-        ZIndex: =13
-
-        Rectangle1_5 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(105, 121, 126, 1)
-            FocusedBorderThickness: =4
-            Height: =42
-            HoverFill: =RGBA(105, 121, 126, 1)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =993
-            X: =352
-            Y: =75
-            ZIndex: =5
-
-        Label11_25 As label:
-            Align: =Align.Center
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =42
-            Size: =15
-            Text: ="Manuales"
-            Width: =993
-            X: =352
-            Y: =75
-            ZIndex: =6
 
