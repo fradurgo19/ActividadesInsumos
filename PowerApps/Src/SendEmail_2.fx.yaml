@@ -14,7 +14,7 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =522
-        Items: =Filter(Manuales,EsCarpeta=false)
+        Items: =Manuales
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowNavigation: =true
@@ -25,29 +25,6 @@
         X: =350
         Y: =179
         ZIndex: =1
-
-        Image24_2 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =72
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =72
-            X: =287
-            Y: =129
-            ZIndex: =1
 
         Rectangle5_1 As rectangle:
             BorderColor: =RGBA(9, 33, 98, 1)
