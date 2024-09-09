@@ -363,7 +363,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =408
+            Height: =628
             Width: =1016
             X: =0
             Y: =1
@@ -411,8 +411,9 @@
                 SelectionFill: =RGBA(105, 121, 126, 1)
                 SelectMultiple: =false
                 Size: =15
-                X: =352
-                Y: =147
+                Width: =359
+                X: =150
+                Y: =163
                 ZIndex: =1
 
             ComboBox3 As combobox:
@@ -462,8 +463,8 @@
                 SelectionFill: =RGBA(105, 121, 126, 1)
                 Size: =15
                 Width: =359
-                X: =584
-                Y: =243
+                X: =150
+                Y: =268
                 ZIndex: =2
 
             ComboBox5 As combobox:
@@ -530,8 +531,8 @@
                 Text: ="Modelo"
                 Tooltip: ="Model"
                 Width: =127
-                X: =215
-                Y: =142
+                X: =7
+                Y: =163
                 ZIndex: =11
 
             Label1_1 As label:
@@ -547,8 +548,7 @@
                 FontWeight: =FontWeight.Bold
                 Size: =18
                 Text: ="Frecuencia"
-                X: =434
-                Y: =243
+                Y: =268
                 ZIndex: =12
 
             Label1_2 As label:
@@ -594,8 +594,8 @@
                 Icon: =Icon.Reload
                 OnSelect: =Reset(ComboBox2);Reset(ComboBox3);Reset(ComboBox4);Reset(ComboBox5);Reset(ComboBox2_1);Reset(ComboBox4_1)
                 Width: =70
-                X: =804
-                Y: =78
+                X: =941
+                Y: =2
                 ZIndex: =18
 
             ComboBox2_1 As combobox:
@@ -636,11 +636,13 @@
                 SelectionFill: =RGBA(105, 121, 126, 1)
                 SelectMultiple: =false
                 Size: =15
-                X: =118
+                Width: =364
+                X: =145
                 Y: =62
                 ZIndex: =19
 
             Label1_21 As label:
+                Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -653,7 +655,7 @@
                 Size: =18
                 Text: ="Marca"
                 Width: =112
-                X: =24
+                X: =19
                 Y: =62
                 ZIndex: =20
 
@@ -749,7 +751,7 @@
                 FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =56
+                Height: =52
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -761,40 +763,11 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =15
                 Text: ="Manuales de Partequipos"
-                Width: =176
-                X: =572
-                Y: =22
+                Width: =111
+                X: =900
+                Y: =555
                 ZIndex: =23
-
-        DataCard5 As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =121
-            Width: =1016
-            X: =0
-            Y: =2
-            ZIndex: =3
-
-            Image1 As image:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =254
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
-                ImagePosition: =ImagePosition.Tile
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =998
-                ZIndex: =1
 
     MaskConfirm As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -1240,9 +1213,9 @@
         RadiusTopLeft: =100
         RadiusTopRight: =100
         Text: ="Video Youtube Entrenamiento uso de aplicación."
-        Width: =270
+        Width: =263
         X: =357
-        Y: =459
+        Y: =663
         ZIndex: =9
 
     Button2_1 As button:
@@ -1269,7 +1242,7 @@
         Text: ="Video Youtube actualización cálculo de Desplazamiento."
         Width: =270
         X: =658
-        Y: =459
+        Y: =663
         ZIndex: =10
 
     Button2_3 As button:
@@ -1297,7 +1270,7 @@
         Text: ="Cuestionario"
         Width: =270
         X: =954
-        Y: =459
+        Y: =663
         ZIndex: =11
 
     Button2_4 As button:
@@ -1325,7 +1298,7 @@
         Text: ="Link Google Drive"
         Width: =270
         X: =350
-        Y: =410
+        Y: =614
         ZIndex: =12
 
     Button2_5 As button:
@@ -1353,6 +1326,6 @@
         Text: ="Link Google Drive"
         Width: =270
         X: =655
-        Y: =411
+        Y: =615
         ZIndex: =13
 
