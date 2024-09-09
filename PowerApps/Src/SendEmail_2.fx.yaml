@@ -366,44 +366,28 @@
                 Y: =
                 ZIndex: =26
 
-    Image14_2 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =83
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =tareas
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        X: =1266
-        ZIndex: =3
-
     PdfViewer1 As pdfViewer:
         DisabledBorderColor: =Color.AliceBlue
         Document: |-
             ="appres://datasources/Manuales/table/f49e66fb-5682-4c66-9f9d-0c8bdcacbadc/rows/719/reference/https:%2F%2Fbrazil-001.azure-apim.net%2Fapim%2Fsharepointonline%2F0fa5409fa60044578535a9abe68eea8b%2Fdatasets%2Fhttps%25253a%25252f%25252fpartequipos2.sharepoint.com%25252fsites%25252fservicioposventa%2FGetFileContentByPath%3Fpath=%252f" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa')
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =601
+        Height: =667
         HoverBorderColor: =Color.Aquamarine
         ShowControls: =true
         Tooltip: ="Presione el archivo y espere que cargue el archivo pdf."
         Width: =980
         X: =362
-        Y: =166
+        Y: =99
         ZIndex: =5
 
     Gallery5 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =83
+        Height: =67
         Items: =Split(Left(varPatch,Len(varPatch)-1),"/")
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =173
-        Width: =991
+        TemplateSize: =104
+        Width: =381
         X: =362
         ZIndex: =6
 
@@ -412,7 +396,7 @@
             Height: =42
             OnSelect: =Set(varPatch,Left(varPatch,Find(ThisItem.Value,varPatch)+Len(ThisItem.Value)))
             Text: =ThisItem.Value
-            Width: =147
+            Width: =91
             X: =5
             Y: =10
             ZIndex: =1
@@ -420,17 +404,16 @@
     "Gallery7 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =89
+        Height: =67
         Items: =Filter(Manuales, hiddenFolderPath = varPatch)
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
         ShowNavigation: |
             =true
         TemplatePadding: =0
-        TemplateSize: =254
-        Width: =974
-        X: =379
-        Y: =67
+        TemplateSize: =141
+        Width: =533
+        X: =809
         ZIndex: =7
 
         Image27 As image:
@@ -440,7 +423,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =62
+            Height: =43
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
@@ -452,7 +435,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =76
+            Width: =45
             Y: =5
             ZIndex: =1
 
@@ -477,19 +460,19 @@
         Subtitle7 As label:
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
+            Font: =Font.Lato
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =75
+            Height: =63
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Size: =9
+            Size: =8
             Text: =ThisItem.'Nombre de archivo con extensión'
             VerticalAlign: =VerticalAlign.Top
-            Width: =137
-            X: =88
-            Y: =5
+            Width: =83
+            X: =58
+            Y: =15
             ZIndex: =3
 
