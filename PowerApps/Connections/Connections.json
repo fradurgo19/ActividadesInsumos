@@ -1,4 +1,26 @@
 {
+  "843c10cc-c110-47d9-a24d-fa49c3541ba1": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://partequipos2.sharepoint.com/sites/servicioposventa": {
+        "dataSources": {
+          "Manuales": {
+            "tableName": "f49e66fb-5682-4c66-9f9d-0c8bdcacbadc"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Manuales"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "843c10cc-c110-47d9-a24d-fa49c3541ba1"
+  },
   "b98e2c49-ea9d-4d74-9ddd-b96c684783c8": {
     "appActions": [
       "providers/PowerPlatform.Governance/Operations/Read"
