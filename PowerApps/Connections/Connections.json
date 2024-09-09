@@ -1,5 +1,5 @@
 {
-  "801162c8-d783-471c-8578-e42462b4b7d4": {
+  "79aef15c-154f-4df7-8cfc-645f788cbcca": {
     "connectionRef": {
       "displayName": "SharePoint",
       "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
@@ -8,36 +8,18 @@
     "datasets": {
       "https://partequipos2.sharepoint.com/sites/servicioposventa": {
         "dataSources": {
-          "TEMPARIO DE MANTENIMIENTOS1": {
-            "tableName": "442ee2f1-7f8b-45f9-8da5-5d112136c5fd"
+          "DocumentosEntregaRecibidoAlmacen": {
+            "tableName": "56718b35-0110-454f-9272-2c6330bb4fd8"
           }
         }
       }
     },
     "dataSources": [
-      "TEMPARIO DE MANTENIMIENTOS1"
+      "DocumentosEntregaRecibidoAlmacen"
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "801162c8-d783-471c-8578-e42462b4b7d4"
-  },
-  "9c575f4f-06d3-d9f1-be8e-d81160319b98": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Usuarios de Office 365",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365users/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "Office365Users"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "9c575f4f-06d3-d9f1-be8e-d81160319b98"
+    "id": "79aef15c-154f-4df7-8cfc-645f788cbcca"
   },
   "b98e2c49-ea9d-4d74-9ddd-b96c684783c8": {
     "appActions": [
@@ -66,25 +48,5 @@
     "dependencies": {},
     "dependents": [],
     "id": "b98e2c49-ea9d-4d74-9ddd-b96c684783c8"
-  },
-  "e2afc14c-3103-4ccb-a909-38cc84737466": {
-    "appActions": [
-      "CalendarGetTables"
-    ],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Office\u00A0365 Outlook",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "Office365"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "e2afc14c-3103-4ccb-a909-38cc84737466"
   }
 }

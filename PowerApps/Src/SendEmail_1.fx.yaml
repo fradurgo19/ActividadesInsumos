@@ -404,11 +404,9 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =438
-        Items: |
-            =Filter(
-               TuBibliotecaDeSharePoint, 
-               IsFolder = true  // Filtrar para mostrar solo carpetas
-            )
+        Items: |-
+            =DocumentosEntregaRecibidoAlmacen
+               
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -428,6 +426,7 @@
             Height: =72
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -451,7 +450,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.SampleHeading
+            Text: =ThisItem.Nombre
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 173
             X: =103
@@ -470,7 +469,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.SampleText
+            Text: =ThisItem.'Vinculo al elemento'
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =Title1.X
@@ -480,6 +479,7 @@
         NextArrow1 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Color: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
