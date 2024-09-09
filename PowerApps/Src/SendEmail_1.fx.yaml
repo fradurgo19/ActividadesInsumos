@@ -400,23 +400,35 @@
         X: =1086
         ZIndex: =3
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =438
-        Items: |-
-            =DocumentosEntregaRecibidoAlmacen
-               
+        Height: =522
+        Items: =Filter(DocumentosEntregaRecibidoAlmacen, EsCarpeta = true)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =104
-        Width: =883
-        X: =414
-        Y: =179
+        TemplateSize: =209
+        X: =518
+        Y: =200
         ZIndex: =10
 
-        Image18 As image:
+        Rectangle5 As rectangle:
+            BorderColor: =RGBA(9, 33, 98, 1)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =188
+            HoverFill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =179
+            X: =26
+            Y: =13
+            ZIndex: =1
+
+        Image24 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -435,51 +447,53 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
             Width: =72
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =1
+            X: =77
+            Y: =128
+            ZIndex: =2
 
-        Title1 As label:
+        Title4 As label:
+            Align: =Align.Center
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Nombre
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 173
-            X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
-            ZIndex: =2
-
-        Subtitle1 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+            Height: =47
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.'Vinculo al elemento'
+            Text: =ThisItem.Nombre
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title1.Width
-            X: =Title1.X
-            Y: =Title1.Y + Title1.Height
+            Width: =179
+            X: =26
+            Y: =20
             ZIndex: =3
+
+        Subtitle4 As label:
+            Align: =Align.Center
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'Nombre de archivo con extensión'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =179
+            X: =26
+            Y: =74
+            ZIndex: =4
 
         NextArrow1 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Color: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
@@ -491,7 +505,7 @@
             Width: =50
             X: =Parent.TemplateWidth - Self.Width - 12
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
+            ZIndex: =5
 
         Separator1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -500,7 +514,7 @@
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
+            ZIndex: =6
 
         Rectangle2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -509,7 +523,7 @@
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
-            ZIndex: =6
+            ZIndex: =7
 
     Group2_4 As group:
         Height: =5
