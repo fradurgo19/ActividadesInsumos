@@ -416,7 +416,7 @@
         ShowNavigation: |
             =true
         TemplatePadding: =0
-        TemplateSize: =241
+        TemplateSize: =248
         Transition: =Transition.Push
         Width: =977
         X: =365
@@ -470,7 +470,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.Lato
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =24
+            Height: =37
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -479,7 +479,7 @@
             Size: =8
             Text: =ThisItem.'Nombre de archivo con extensión'
             VerticalAlign: =VerticalAlign.Top
-            Width: =191
+            Width: =126
             X: =27
             ZIndex: =3
 
@@ -487,12 +487,42 @@
             DisplayMode: =DisplayMode.Edit
             FontSize: =8
             Height: =29
-            OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
+            OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"));
             Text: ="Ver Pdf"
             Width: =66
-            X: =121
-            Y: =44
+            X: =171
+            Y: =8
             ZIndex: =4
+
+        Subtitle7_1 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =8
+            Text: =ThisItem.'Ruta de acceso completa'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =123
+            X: =113
+            Y: =37
+            ZIndex: =5
+
+        ButtonCanvas4_2 As Botón:
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =8
+            Height: =29
+            OnSelect: =Launch(ThisItem.'Ruta de acceso completa')
+            Text: ="Ver Pdf"
+            Width: =66
+            X: =23
+            Y: =8
+            ZIndex: =6
 
     Image14_2 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
