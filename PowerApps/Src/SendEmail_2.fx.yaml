@@ -483,17 +483,6 @@
             X: =27
             ZIndex: =3
 
-        ButtonCanvas4_1 As Botón:
-            DisplayMode: =DisplayMode.Edit
-            FontSize: =8
-            Height: =29
-            OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"));
-            Text: ="Ver Pdf"
-            Width: =66
-            X: =171
-            Y: =8
-            ZIndex: =4
-
         ButtonCanvas4_2 As Botón:
             DisplayMode: =DisplayMode.Edit
             FontSize: =8
@@ -502,8 +491,8 @@
                 =Launch("https://partequipos2.sharepoint.com/sites/servicioposventa/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
             Text: ="Download"
             Width: =66
-            X: =171
-            Y: =44
+            X: =174
+            Y: =8
             ZIndex: =6
 
     Image14_2 As image:
