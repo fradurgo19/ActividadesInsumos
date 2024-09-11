@@ -371,13 +371,13 @@
         Document: |-
             ="appres://datasources/Manuales/table/f49e66fb-5682-4c66-9f9d-0c8bdcacbadc/rows/719/reference/https:%2F%2Fbrazil-001.azure-apim.net%2Fapim%2Fsharepointonline%2F0fa5409fa60044578535a9abe68eea8b%2Fdatasets%2Fhttps%25253a%25252f%25252fpartequipos2.sharepoint.com%25252fsites%25252fservicioposventa%2FGetFileContentByPath%3Fpath=%252f" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa')
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =597
+        Height: =464
         HoverBorderColor: =Color.Aquamarine
         ShowControls: =true
         Tooltip: ="Presione el archivo y espere que cargue el archivo pdf."
         Width: =980
         X: =362
-        Y: =169
+        Y: =301
         ZIndex: =5
 
     Gallery5 As gallery.galleryHorizontal:
@@ -494,34 +494,16 @@
             Y: =8
             ZIndex: =4
 
-        Subtitle7_1 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.Lato
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =55
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =8
-            Text: =ThisItem.'Ruta de acceso completa'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =123
-            X: =113
-            Y: =37
-            ZIndex: =5
-
         ButtonCanvas4_2 As Botón:
             DisplayMode: =DisplayMode.Edit
             FontSize: =8
             Height: =29
-            OnSelect: =Launch(ThisItem.'Ruta de acceso completa')
+            OnSelect: |-
+                =Launch("https://partequipos2.sharepoint.com/sites/servicioposventa/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
             Text: ="Ver Pdf"
             Width: =66
-            X: =23
-            Y: =8
+            X: =171
+            Y: =44
             ZIndex: =6
 
     Image14_2 As image:
