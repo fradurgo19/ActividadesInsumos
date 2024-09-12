@@ -443,7 +443,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =103
+            Width: =60
             X: =22
             Y: =37
             ZIndex: =1
@@ -487,13 +487,13 @@
         ButtonCanvas4_2 As Botón:
             DisplayMode: =DisplayMode.Edit
             FontSize: =8
-            Height: =41
+            Height: =55
             OnSelect: |-
                 =Launch("https://partequipos2.sharepoint.com/sites/servicioposventa/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
             Text: ="Download"
-            Width: =90
-            X: =203
-            Y: =51
+            Width: =100
+            X: =178
+            Y: =37
             ZIndex: =6
 
     Image14_2 As image:
