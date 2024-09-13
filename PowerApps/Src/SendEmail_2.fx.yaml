@@ -389,6 +389,7 @@
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =RGBA(9, 33, 98, 1)
                 Height: =48
+                Size: =15
                 Text: ="Busquedad dentro de Carpeta especifica"
                 Width: =174
                 X: =73
@@ -425,20 +426,21 @@
         BorderThickness: =2
         DelayItemLoading: =true
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =401
-        Items: |
+        Height: =323
+        Items: |-
             =Filter(
                 Manuales,
                 (TextInputCanvas1.Value in Nombre || IsBlank(TextInputCanvas1.Value)) &&
                 hiddenFolderPath = varPatch
             )
         LoadingSpinner: =LoadingSpinner.Data
+        NavigationStep: =2
         OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
         ShowNavigation: |
             =true
         TemplatePadding: =0
         TemplateSize: =311
-        Transition: =Transition.Push
+        Transition: =Transition.Pop
         Width: =977
         X: =369
         Y: =245
@@ -451,10 +453,10 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =86
+            Height: =212
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Medium)
+            Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Large)
             ImagePosition: =ImagePosition.Fill
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -463,9 +465,9 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =96
-            X: =24
-            Y: =92
+            Width: =180
+            X: =17
+            Y: =78
             ZIndex: =1
 
         Title7 As label:
@@ -488,6 +490,7 @@
             ZIndex: =2
 
         Subtitle7 As label:
+            Align: =Align.Center
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.Lato
@@ -500,8 +503,7 @@
             PaddingTop: =0
             Size: =13
             Text: =ThisItem.'Nombre de archivo con extensión'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =203
+            Width: =306
             ZIndex: =3
 
         ButtonCanvas4_2 As Botón:
@@ -511,9 +513,10 @@
             OnSelect: |-
                 =Launch("https://partequipos2.sharepoint.com/sites/servicioposventa/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
             Text: ="Download"
+            Visible: =!ThisItem.EsCarpeta
             Width: =70
-            X: =232
-            Y: =152
+            X: =223
+            Y: =265
             ZIndex: =6
 
     Image14_2 As image:
