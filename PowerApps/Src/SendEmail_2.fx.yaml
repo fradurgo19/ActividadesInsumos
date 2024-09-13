@@ -534,3 +534,12 @@
         Y: =4
         ZIndex: =8
 
+    Arrow1 As arrow.backArrow:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(105, 121, 126, 1)
+        OnSelect: =Navigate(SendEmail_1,ScreenTransition.UnCoverRight )
+        X: =391
+        Y: =6
+        ZIndex: =9
+
