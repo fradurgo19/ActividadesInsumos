@@ -6,7 +6,7 @@
         ="Generate menu list";
         ClearCollect(MenuData,
         {Icon:"Menu1",  Name:"Equipos y Frecuencias", Step:"1"},{Icon:"Menu2",  Name:"Actividades", Step:"2"},{Icon:"Menu3", Name:"Consumibles", Step:"3"},
-        {Icon:"Menu4",  Name:"Observaciones", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"CPP", Step:"7"});
+        {Icon:"Menu4",  Name:"Observaciones", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"Manuales y CPP", Step:"7"});
         "Set default values";
         Set(SelectedMenu,First(MenuData));
         Set(CurrentStep, "1");
@@ -1155,8 +1155,8 @@
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =221
-        X: =44
-        Y: =508
+        X: =35
+        Y: =575
         ZIndex: =7
 
     Image4 As image:
