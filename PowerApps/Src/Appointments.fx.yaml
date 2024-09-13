@@ -6,7 +6,7 @@
         ="Generate menu list";
         ClearCollect(MenuData,
         {Icon:"Menu1",  Name:"Equipos y Frecuencias", Step:"1"},{Icon:"Menu2",  Name:"Actividades", Step:"2"},{Icon:"Menu3", Name:"Consumibles", Step:"3"},
-        {Icon:"Menu4",  Name:"Observaciones", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"Procedimientos", Step:"6"},{Icon:"Menu7", Name:"CPP", Step:"7"});
+        {Icon:"Menu4",  Name:"Observaciones", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"CPP", Step:"7"});
         "Set default values";
         Set(SelectedMenu,First(MenuData));
         Set(CurrentStep, "1");
@@ -319,7 +319,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =100
+            Height: =67
             Width: =1016
             X: =0
             Y: =0
@@ -336,34 +336,18 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =100
+                Height: =63
                 Size: =25
                 Text: ="Configurador"
-                Width: =999
+                Width: =1011
                 ZIndex: =1
-
-            Label12 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =43
-                Size: =15
-                Text: ="Aplicativo Cotizador de Mantenimiento"
-                Width: =495
-                ZIndex: =2
 
         DataCard3 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =628
+            Height: =686
             Width: =1016
             X: =0
             Y: =1
@@ -413,7 +397,7 @@
                 Size: =15
                 Width: =359
                 X: =150
-                Y: =163
+                Y: =193
                 ZIndex: =1
 
             ComboBox3 As combobox:
@@ -464,7 +448,7 @@
                 Size: =15
                 Width: =359
                 X: =150
-                Y: =268
+                Y: =298
                 ZIndex: =2
 
             ComboBox5 As combobox:
@@ -531,8 +515,8 @@
                 Text: ="Modelo"
                 Tooltip: ="Model"
                 Width: =127
-                X: =7
-                Y: =163
+                X: =19
+                Y: =193
                 ZIndex: =11
 
             Label1_1 As label:
@@ -548,7 +532,7 @@
                 FontWeight: =FontWeight.Bold
                 Size: =18
                 Text: ="Frecuencia"
-                Y: =268
+                Y: =298
                 ZIndex: =12
 
             Label1_2 As label:
@@ -565,7 +549,7 @@
                 Text: ="Tipo"
                 Visible: =false
                 X: =29
-                Y: =183
+                Y: =213
                 ZIndex: =13
 
             Label1_3 As label:
@@ -594,7 +578,7 @@
                 Icon: =Icon.Reload
                 OnSelect: =Reset(ComboBox2);Reset(ComboBox3);Reset(ComboBox4);Reset(ComboBox5);Reset(ComboBox2_1);Reset(ComboBox4_1)
                 Width: =70
-                X: =941
+                X: =40
                 Y: =2
                 ZIndex: =18
 
@@ -638,7 +622,7 @@
                 Size: =15
                 Width: =364
                 X: =145
-                Y: =62
+                Y: =92
                 ZIndex: =19
 
             Label1_21 As label:
@@ -656,7 +640,7 @@
                 Text: ="Marca"
                 Width: =112
                 X: =19
-                Y: =62
+                Y: =92
                 ZIndex: =20
 
             ComboBox4 As combobox:
@@ -765,8 +749,8 @@
                 RadiusTopRight: =0
                 Text: ="Manuales de Partequipos"
                 Width: =111
-                X: =900
-                Y: =555
+                X: =892
+                Y: =592
                 ZIndex: =23
 
     MaskConfirm As fluidGrid.fluidGridWithBlankCard:
@@ -1182,13 +1166,14 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =90
+        Height: =62
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =configuraciones
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        X: =1108
+        Width: =80
+        X: =1208
         ZIndex: =8
 
     Button2 As button:
