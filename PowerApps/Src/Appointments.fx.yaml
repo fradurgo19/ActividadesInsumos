@@ -6,7 +6,7 @@
         ="Generate menu list";
         ClearCollect(MenuData,
         {Icon:"Menu1",  Name:"Equipos y Frecuencias", Step:"1"},{Icon:"Menu2",  Name:"Actividades", Step:"2"},{Icon:"Menu3", Name:"Consumibles", Step:"3"},
-        {Icon:"Menu4",  Name:"Observaciones", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"Manuales y CPP", Step:"7"});
+        {Icon:"Menu4",  Name:"Observaciones y Procedimientos", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"Manuales y CPP", Step:"7"});
         "Set default values";
         Set(SelectedMenu,First(MenuData));
         Set(CurrentStep, "1");
@@ -965,22 +965,6 @@
             Y: =0
             ZIndex: =4
 
-        Cantidad_x0028_Galones_x0029_ As customControl.dataColumn:
-            AutoWidth: =true
-            DisplayName: ="Cantidad "
-            FieldName: ="Cantidad_x0028_Galones_x0029_"
-            Height: =0
-            IsHyperlink: =false
-            Order: =6
-            Required: =false
-            TitleProperty: =""
-            Type: ="s"
-            VariantName: ="textualViewCard"
-            Width: =160
-            X: =793
-            Y: =0
-            ZIndex: =5
-
         Frecuencia As customControl.dataColumn:
             AutoWidth: =true
             DisplayName: ="Frecuencia (horas)"
@@ -995,7 +979,7 @@
             Width: =240
             X: =0
             Y: =0
-            ZIndex: =6
+            ZIndex: =5
 
         ReferenciaStal As customControl.dataColumn:
             AutoWidth: =true
@@ -1011,7 +995,7 @@
             Width: =160
             X: =0
             Y: =0
-            ZIndex: =7
+            ZIndex: =6
 
         ReferenciaFleetguard As customControl.dataColumn:
             AutoWidth: =true
@@ -1027,7 +1011,7 @@
             Width: =160
             X: =0
             Y: =0
-            ZIndex: =8
+            ZIndex: =7
 
         ReferenciaDonalson As customControl.dataColumn:
             AutoWidth: =true
@@ -1043,7 +1027,7 @@
             Width: =160
             X: =0
             Y: =0
-            ZIndex: =9
+            ZIndex: =8
 
         Tiempo As customControl.dataColumn:
             AutoWidth: =false
@@ -1059,7 +1043,7 @@
             Width: =136
             X: =0
             Y: =0
-            ZIndex: =10
+            ZIndex: =9
 
         Procedimiento As customControl.dataColumn:
             AutoWidth: =true
@@ -1075,7 +1059,7 @@
             Width: =160
             X: =0
             Y: =0
-            ZIndex: =11
+            ZIndex: =10
 
         Modelo0 As customControl.dataColumn:
             AutoWidth: =false
@@ -1091,7 +1075,7 @@
             Width: =140
             X: =287
             Y: =0
-            ZIndex: =12
+            ZIndex: =11
 
         Cantidad As customControl.dataColumn:
             AutoWidth: =false
@@ -1106,6 +1090,22 @@
             VariantName: ="comboBoxViewCard"
             Width: =165
             X: =713
+            Y: =0
+            ZIndex: =12
+
+        Cantidad_x0028_Galones_x0029_ As customControl.dataColumn:
+            AutoWidth: =true
+            DisplayName: ="Cantidad "
+            FieldName: ="Cantidad_x0028_Galones_x0029_"
+            Height: =0
+            IsHyperlink: =false
+            Order: =6
+            Required: =false
+            TitleProperty: =""
+            Type: ="s"
+            VariantName: ="textualViewCard"
+            Width: =160
+            X: =793
             Y: =0
             ZIndex: =13
 
@@ -1148,15 +1148,15 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =137
+        Height: =97
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: ='22991_excavator_power shovel_vehicle_icon'
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =221
+        Width: =204
         X: =35
-        Y: =575
+        Y: =615
         ZIndex: =7
 
     Image4 As image:
