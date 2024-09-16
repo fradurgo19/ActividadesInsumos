@@ -44,7 +44,7 @@
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =100
-                Size: =25
+                Size: =20
                 Text: ="Actividades"
                 Width: =1010
                 Y: =8
@@ -608,6 +608,29 @@
                         =19
                     Y: =10
                     ZIndex: =10
+
+                Menu8_1 As icon.Mail:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu8_1.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Warning
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu8"
+                    Width: |
+                        =19
+                    Y: =10
+                    ZIndex: =11
 
     Image9 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
