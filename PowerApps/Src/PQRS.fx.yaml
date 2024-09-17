@@ -454,7 +454,7 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Width: =320
+                        Width: =190
                         X: =0
                         Y: =0
                         ZIndex: =1
@@ -467,13 +467,29 @@
                         BorderThickness: =2
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
-                        Items: =["Item 1", "Item 2", "Item 3"]
+                        Items: =["Petición", "Queja", "Reclamo", "Sugerencia", "Felicitación"]
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Width: =320
+                        Width: =190
                         X: =0
                         Y: =0
                         ZIndex: =2
+
+                    "ComboboxCanvas2_1 As 'Cuadro combinado'.pcfdataset":
+                        Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
+                        BasePaletteColor: =RGBA(189, 178, 176, 1)
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: =["En seguimiento", "Cerrada", "Solucionada"]
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Width: =190
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
 
                     "DatePickerCanvas2 As 'Selector de fecha'":
                         BasePaletteColor: =RGBA(189, 178, 176, 1)
@@ -484,10 +500,21 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Width: =320
+                        Width: =190
                         X: =0
                         Y: =0
-                        ZIndex: =3
+                        ZIndex: =4
+
+                    "DatePickerCanvas1 As 'Selector de fecha'":
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Width: =190
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
 
             Container4 As groupContainer.manualLayoutContainer:
                 BorderThickness: =2
@@ -696,7 +723,16 @@
                     BorderThickness: =2
                     DelayItemLoading: =true
                     Height: =447
-                    Items: ='PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'
+                    Items: |-
+                        =Sort(
+                            Filter(
+                                'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
+                               (TextInputCanvas5.Value in Correo || TextInputCanvas5.Value in Nombre || IsBlank(TextInputCanvas5.Value)) &&
+                                ('Tipo de Comunicación'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
+                            ),
+                            Modificado,
+                            SortOrder.Descending
+                        )
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
@@ -1240,4 +1276,18 @@
                         X: =0
                         Y: =0
                         ZIndex: =4
+
+    "ComboboxCanvas2_2 As 'Cuadro combinado'.pcfdataset":
+        Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
+        BasePaletteColor: =RGBA(189, 178, 176, 1)
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: =["Item 1", "Item 2", "Item 3"]
+        Width: =200
+        X: =210
+        Y: =10
+        ZIndex: =3
 

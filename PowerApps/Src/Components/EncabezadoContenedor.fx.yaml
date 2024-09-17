@@ -11,7 +11,8 @@ EncabezadoContenedor As CanvasComponent:
     Container6 As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
-        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
         PaddingLeft: =30
         PaddingRight: =30
@@ -20,11 +21,9 @@ EncabezadoContenedor As CanvasComponent:
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =Parent.Width
-        Y: =40
         ZIndex: =1
 
         Image1 As image:
-            AlignInContainer: =AlignInContainer.Stretch
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -41,6 +40,7 @@ EncabezadoContenedor As CanvasComponent:
             ZIndex: =1
 
         Container7 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             LayoutJustifyContent: =LayoutJustifyContent.End
             LayoutMinHeight: =0
