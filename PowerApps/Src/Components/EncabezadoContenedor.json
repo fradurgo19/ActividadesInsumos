@@ -990,11 +990,18 @@
                         }
                       },
                       {
-                        "ControlPropertyState": "AlignInContainer",
+                        "ControlPropertyState": {
+                          "AFDDataSourceName": "",
+                          "AutoRuleBindingEnabled": false,
+                          "AutoRuleBindingString": "",
+                          "InvariantPropertyName": "AlignInContainer",
+                          "IsLockable": false,
+                          "NameMapSourceSchema": "?"
+                        },
                         "PropertyName": "AlignInContainer",
                         "Rule": {
                           "Category": "Design",
-                          "InvariantScript": "AlignInContainer.SetByContainer",
+                          "InvariantScript": "AlignInContainer.Center",
                           "Property": "AlignInContainer",
                           "RuleProviderType": "Unknown"
                         }
@@ -1940,7 +1947,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638621848498267169",
+    "LastModifiedTimestamp": "638621881185381245",
     "Name": "EncabezadoContenedor",
     "Rules": [
       {
@@ -2030,7 +2037,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638621848498267169",
+  "LastModifiedTimestamp": "638621881185381245",
   "Name": "1f135cd22ace4f2d929d205827ff0c0d",
   "OverridableProperties": {},
   "Version": "1.0"

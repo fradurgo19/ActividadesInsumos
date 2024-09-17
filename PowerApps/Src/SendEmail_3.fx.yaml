@@ -411,9 +411,67 @@
                 Y: =67
                 ZIndex: =20
 
+                Container13 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =999
+                    ZIndex: =1
+
+                    "TextInputCanvas5 As 'Entrada de texto'":
+                        BasePaletteColor: =
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    "ComboboxCanvas2 As 'Cuadro combinado'.pcfdataset":
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: =["Item 1", "Item 2", "Item 3"]
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    "DatePickerCanvas2 As 'Selector de fecha'":
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
             Container4 As groupContainer.manualLayoutContainer:
+                BorderThickness: =2
                 DropShadow: =DropShadow.Light
-                Height: =483
+                Height: =55
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -422,14 +480,34 @@
                 Y: =138
                 ZIndex: =21
 
-            Container5 As groupContainer.manualLayoutContainer:
+                ButtonCanvas4 As Botón:
+                    Align: =Align.Center
+                    BasePaletteColor: =Color.LightSteelBlue
+                    BorderColor: =RGBA(9, 33, 98, 1)
+                    BorderRadiusBottomLeft: =10
+                    BorderRadiusBottomRight: =10
+                    BorderRadiusTopLeft: =10
+                    BorderRadiusTopRight: =10
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =2
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    Text: =
+                    Width: =Parent.Width
+                    X: =(Parent.Width - Self.Width)/2
+                    Y: =(Parent.Height - Self.Height)/2
+                    ZIndex: =1
+
+            Container16 As groupContainer.manualLayoutContainer:
+                BorderThickness: =2
                 DropShadow: =DropShadow.Light
-                Height: =147
+                Fill: =Color.White
+                Height: =543
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =1007
-                Y: =621
+                Y: =193
                 ZIndex: =22
 
