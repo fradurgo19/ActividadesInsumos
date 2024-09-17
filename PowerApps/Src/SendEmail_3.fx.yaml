@@ -1075,7 +1075,8 @@
                                 'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',  // Reemplaza con el nombre de tu lista en SharePoint
                                 LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', ID = Gallery6.Selected.ID),  // Encuentra el registro seleccionado en la galería
                                 {
-                                    Respuesta: ComboboxCanvas5.Selected // Actualiza el campo "Estado" con el valor seleccionado en el ComboBox
+                                    Respuesta: ComboboxCanvas5.Selected, // Actualiza el campo "Estado" con el valor seleccionado en el ComboBox
+                                    'Respuesta a Solicitud': TextInputCanvas6
                                 }
                             )
                         Text: ="Actualizar"
