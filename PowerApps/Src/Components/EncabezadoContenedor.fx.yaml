@@ -52,23 +52,33 @@ EncabezadoContenedor As CanvasComponent:
             RadiusTopRight: =4
             ZIndex: =2
 
-            TextCanvas4 As Texto:
-                Align: ='TextCanvas.Align'.Start
-                AlignInContainer: =AlignInContainer.Center
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                Width: =96
-                X: =0
-                Y: =0
+            Container8 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutMinHeight: =0
+                LayoutMinWidth: =20
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
                 ZIndex: =1
+
+                TextCanvas5 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    LayoutMinWidth: =96
+                    Width: =150
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
 
             TextCanvas3 As Texto:
                 AlignInContainer: =AlignInContainer.Stretch
                 DisplayMode: =DisplayMode.Edit
                 Height: =0
                 LayoutMinWidth: =96
+                PaddingLeft: =10
                 Size: =12
                 Text: =User().FullName
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
