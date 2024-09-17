@@ -680,7 +680,7 @@
                 BorderThickness: =2
                 DropShadow: =DropShadow.Light
                 Fill: =Color.White
-                Height: =501
+                Height: =447
                 RadiusBottomLeft: =10
                 RadiusBottomRight: =10
                 RadiusTopLeft: =10
@@ -694,7 +694,7 @@
                     BorderColor: =RGBA(139, 154, 159, 1)
                     BorderThickness: =2
                     DelayItemLoading: =true
-                    Height: =497
+                    Height: =447
                     Items: ='PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
@@ -927,8 +927,9 @@
 
                 Container21 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =Parent.Height
+                    Height: =73
                     LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -951,9 +952,10 @@
                         ZIndex: =1
 
                     "ComboboxCanvas5 As 'Cuadro combinado'.pcfdataset":
+                        BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
-                        Items: =["Item 1", "Item 2", "Item 3"]
+                        Items: =["En seguimiento", "Cerrada", "Solucionada"]
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         Width: =200
@@ -972,20 +974,6 @@
                         Y: =0
                         ZIndex: =3
 
-                    ButtonCanvas6 As Botón:
-                        BasePaletteColor: =RGBA(8, 222, 8, 1)
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =32
-                        Layout: ='ButtonCanvas.Layout'.IconBefore
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =96
-                        OnSelect: =SubmitForm(Form4)
-                        Text: ="Actualizar"
-                        Width: =100
-                        X: =0
-                        Y: =0
-                        ZIndex: =4
-
                     Form4 As form.PowerApps_CoreControls_Form:
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DataSource: ='PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'
@@ -999,10 +987,10 @@
                             =Notify("Error: No se pudo enviar la modificación. Intenta nuevamente.", NotificationType.Error)
                         OnSuccess: =Notify("Modificación enviada correctamente.", NotificationType.Success)
                         UseFluentV9Cards: =true
-                        Width: =Parent.Width
+                        Width: =Parent.Width * 25%
                         X: =456
                         Y: =320
-                        ZIndex: =5
+                        ZIndex: =4
 
                         "'Datos adjuntos_DataCard4' As typedDataCard.attachmentsEditCard":
                             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1012,10 +1000,10 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'{Attachments}')
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =148
+                            Height: =Parent.Height
                             Required: =false
                             Update: =DataCardValue52.Attachments
-                            Width: =400
+                            Width: =Parent.Width
                             X: =0
                             Y: =0
                             ZIndex: =4
@@ -1036,7 +1024,6 @@
                                 Text: =Parent.DisplayName
                                 Width: =142
                                 Wrap: =false
-                                X: =30
                                 Y: =10
                                 ZIndex: =1
 
@@ -1051,7 +1038,7 @@
                                 DisplayMode: =Parent.DisplayMode
                                 FocusedBorderThickness: =4
                                 Font: =Font.'Segoe UI'
-                                Height: =28
+                                Height: =63
                                 HoverColor: =RGBA(51, 51, 51, 1)
                                 HoverFill: =RGBA(212, 212, 212, 1)
                                 IsInDataCard: =true
@@ -1070,8 +1057,84 @@
                                 PressedFill: =RGBA(105, 121, 126, 1)
                                 Size: =9
                                 Tooltip: =Parent.DisplayName
-                                Width: =229
-                                X: =30
-                                Y: =DataCardKey52.Y + DataCardKey52.Height + 5
+                                Width: =Parent.Width
+                                Y: =10
                                 ZIndex: =2
+
+                    ButtonCanvas6 As Botón:
+                        BasePaletteColor: =RGBA(8, 222, 8, 1)
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Layout: ='ButtonCanvas.Layout'.IconBefore
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        OnSelect: =SubmitForm(Form4)
+                        Text: ="Actualizar"
+                        Width: =100
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
+
+            Container22 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =43
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =765
+                X: =224
+                Y: =650
+                ZIndex: =24
+
+                Container23 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(214, 221, 224, 1)
+                    Height: =Parent.Height
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =765
+                    ZIndex: =1
+
+                    TextCanvas13 As Texto:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Cambiar Estado"
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    TextCanvas13_1 As Texto:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Dar Respuesta"
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    TextCanvas13_2 As Texto:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Adjuntar Documentos"
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
 
