@@ -403,6 +403,19 @@
                     Width: =965
                     X: =21
 
+                ButtonCanvas7 As Botón:
+                    BasePaletteColor: =RGBA(141, 229, 250, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =9
+                    Height: =29
+                    OnSelect: |-
+                        =Launch("https://forms.office.com/Pages/ResponsePage.aspx?id=BSzLJoLIJkmJHSf6ewS1Fop05q9La99FiWSPodX8cI9UOFBUUTlNV1lRTEdUMkVQVU82SEM1Uk5HOC4u&origin=Invitation&channel=0")
+                    Text: ="Diligencie PQRS"
+                    Width: =85
+                    X: =706
+                    Y: =36
+                    ZIndex: =2
+
             Container3 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =71
@@ -932,4 +945,17 @@
                         X: =0
                         Y: =0
                         ZIndex: =3
+
+                    ButtonCanvas6 As Botón:
+                        BasePaletteColor: =RGBA(8, 222, 8, 1)
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Layout: ='ButtonCanvas.Layout'.IconBefore
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Actualizar"
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
 
