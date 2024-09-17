@@ -875,18 +875,42 @@
                             Y: =0
                             ZIndex: =8
 
-                        TextCanvas9_5 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            DisplayMode: =DisplayMode.Edit
-                            FillPortions: =1
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
+                        DataCardValue39 As attachments:
+                            BorderColor: =
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =Parent.DisplayMode
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =123
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsInDataCard: =true
+                            ItemColor: =RGBA(0, 0, 0, 1)
+                            ItemFill: =RGBA(105, 121, 126, 1)
+                            ItemHoverColor: =RGBA(51, 51, 51, 1)
+                            ItemHoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =ThisItem.'Datos adjuntos'
+                            ItemSpacing: =12
+                            LayoutMinHeight: =50
+                            NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                            OnAddFile: |
+                                =false
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(105, 121, 126, 1)
                             Size: =9
-                            Text: =ThisItem.Adjunto
-                            Width: =96
-                            X: =0
-                            Y: =0
+                            Tooltip: =
+                            Width: =120
+                            X: =595
+                            Y: =331
                             ZIndex: =9
 
             Container20 As groupContainer.manualLayoutContainer:
@@ -932,7 +956,7 @@
                         Items: =["Item 1", "Item 2", "Item 3"]
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Width: =100
+                        Width: =200
                         X: =0
                         Y: =0
                         ZIndex: =2
@@ -943,7 +967,7 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Width: =100
+                        Width: =200
                         X: =0
                         Y: =0
                         ZIndex: =3
@@ -955,9 +979,99 @@
                         Layout: ='ButtonCanvas.Layout'.IconBefore
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
+                        OnSelect: =SubmitForm(Form4)
                         Text: ="Actualizar"
                         Width: =100
                         X: =0
                         Y: =0
                         ZIndex: =4
+
+                    Form4 As form.PowerApps_CoreControls_Form:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        DataSource: ='PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        Item: =Gallery6.Selected
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =400
+                        NumberOfColumns: =1
+                        OnFailure: |-
+                            =Notify("Error: No se pudo enviar la modificación. Intenta nuevamente.", NotificationType.Error)
+                        OnSuccess: =Notify("Modificación enviada correctamente.", NotificationType.Success)
+                        UseFluentV9Cards: =true
+                        Width: =Parent.Width
+                        X: =456
+                        Y: =320
+                        ZIndex: =5
+
+                        "'Datos adjuntos_DataCard4' As typedDataCard.attachmentsEditCard":
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="{Attachments}"
+                            Default: =ThisItem.'Datos adjuntos'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'{Attachments}')
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =148
+                            Required: =false
+                            Update: =DataCardValue52.Attachments
+                            Width: =400
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                            DataCardKey52 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                PaddingLeft: =0
+                                Size: =9
+                                Text: =Parent.DisplayName
+                                Width: =142
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue52 As attachments:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                DisplayMode: =Parent.DisplayMode
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =28
+                                HoverColor: =RGBA(51, 51, 51, 1)
+                                HoverFill: =RGBA(212, 212, 212, 1)
+                                IsInDataCard: =true
+                                ItemColor: =RGBA(0, 0, 0, 1)
+                                ItemFill: =RGBA(105, 121, 126, 1)
+                                ItemHoverColor: =RGBA(51, 51, 51, 1)
+                                ItemHoverFill: =RGBA(212, 212, 212, 1)
+                                Items: =Parent.Default
+                                ItemSpacing: =12
+                                NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                                PaddingBottom: =5
+                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                PressedColor: =RGBA(255, 255, 255, 1)
+                                PressedFill: =RGBA(105, 121, 126, 1)
+                                Size: =9
+                                Tooltip: =Parent.DisplayName
+                                Width: =229
+                                X: =30
+                                Y: =DataCardKey52.Y + DataCardKey52.Height + 5
+                                ZIndex: =2
 
