@@ -412,7 +412,7 @@
                         =Launch("https://forms.office.com/Pages/ResponsePage.aspx?id=BSzLJoLIJkmJHSf6ewS1Fop05q9La99FiWSPodX8cI9UOFBUUTlNV1lRTEdUMkVQVU82SEM1Uk5HOC4u&origin=Invitation&channel=0")
                     Text: ="Diligencie PQRS"
                     Width: =85
-                    X: =706
+                    X: =696
                     Y: =36
                     ZIndex: =2
 
@@ -441,7 +441,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =994
+                    Width: =975
                     ZIndex: =1
 
                     "TextInputCanvas5 As 'Entrada de texto'":
@@ -540,7 +540,7 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
-                        PaddingLeft: =15
+                        PaddingLeft: =5
                         Size: =12
                         Text: ="Tipo"
                         Width: =96
@@ -556,9 +556,9 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
-                        PaddingLeft: =15
+                        PaddingLeft: =5
                         Size: =12
-                        Text: ="Solicita"
+                        Text: ="Estado"
                         Width: =96
                         X: =0
                         Y: =0
@@ -638,7 +638,8 @@
                         LayoutMinWidth: =96
                         PaddingLeft: =15
                         Size: =12
-                        Text: ="Estado"
+                        Text: |-
+                            ="Modificado:"
                         Width: =96
                         X: =0
                         Y: =0
@@ -699,7 +700,7 @@
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
-                    TemplateSize: =50
+                    TemplateSize: =78
                     Width: =Parent.Width
                     ZIndex: =1
 
@@ -759,7 +760,7 @@
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =9
-                            Text: =ThisItem.Correo
+                            Text: =ThisItem.Respuesta.Value
                             Width: =96
                             X: =0
                             Y: =0
@@ -851,7 +852,7 @@
                                 Height: =Parent.Height
                                 PaddingLeft: =10
                                 Size: =9
-                                Text: =ThisItem.'Respuesta a Solicitud'
+                                Text: =ThisItem.'Modificado por'.Email
                                 Width: =Parent.Width
                                 X: =0
                                 Y: =0
@@ -944,7 +945,7 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
-                        Text: ="Modifique su respuesta de ser necesario y adjunte evidencias"
+                        Text: ="Modifique su respuesta y de ser necesario adjunte evidencias"
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =200
                         X: =0
@@ -988,7 +989,7 @@
                             DataCardKey53 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =22
-                                Text: =Parent.DisplayName
+                                Text: ="Estado"
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =Parent.Width - 48
                                 Wrap: =false
@@ -1050,7 +1051,7 @@
                             DataCardKey54 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =22
-                                Text: =Parent.DisplayName
+                                Text: ="Respuesta"
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =Parent.Width - 48
                                 Wrap: =false
@@ -1101,10 +1102,10 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'{Attachments}')
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =Parent.Height
+                            Height: =65
                             Required: =false
                             Update: =DataCardValue52.Attachments
-                            Width: =243
+                            Width: =264
                             X: =2
                             Y: =0
                             ZIndex: =4
@@ -1156,10 +1157,9 @@
                                 PaddingTop: =5
                                 PressedColor: =RGBA(255, 255, 255, 1)
                                 PressedFill: =RGBA(105, 121, 126, 1)
-                                Size: =9
+                                Size: =8
                                 Tooltip: =Parent.DisplayName
                                 Width: =Parent.Width
-                                Y: =10
                                 ZIndex: =2
 
             Container22 As groupContainer.manualLayoutContainer:
@@ -1232,9 +1232,9 @@
                         Layout: ='ButtonCanvas.Layout'.IconBefore
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
-                        OnSelect: |+
-                            =SubmitForm(Form4)
-                            
+                        OnSelect: |
+                            =SubmitForm(Form4);
+                            Refresh('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)')
                         Text: ="Actualizar"
                         Width: =80
                         X: =0
