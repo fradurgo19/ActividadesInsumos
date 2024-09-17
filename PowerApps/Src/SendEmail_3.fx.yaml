@@ -390,15 +390,18 @@
             Container1 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =65
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Width: =1007
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Width: =975
+                X: =15
                 Y: =2
                 ZIndex: =19
 
                 EncabezadoContenedor_1 As EncabezadoContenedor:
+                    Width: =965
+                    X: =21
 
             Container3 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -493,22 +496,109 @@
                     BorderStyle: =BorderStyle.Solid
                     BorderThickness: =2
                     DisplayMode: =DisplayMode.Edit
-                    Height: =47
+                    Height: =48
                     Text: =
-                    Width: =959
-                    X: =9
+                    Width: =975
+                    X: =0
                     Y: =(Parent.Height - Self.Height)/2
                     ZIndex: =1
+
+                Container17 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    TextCanvas7 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =15
+                        Size: =12
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    TextCanvas7_1 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =15
+                        Size: =12
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    TextCanvas7_2 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =15
+                        Size: =12
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    TextCanvas7_3 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =15
+                        Size: =12
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                    TextCanvas7_4 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =15
+                        Size: =12
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
 
             Container16 As groupContainer.manualLayoutContainer:
                 BorderThickness: =2
                 DropShadow: =DropShadow.Light
                 Fill: =Color.White
                 Height: =543
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
                 Width: =975
                 X: =15
                 Y: =193
