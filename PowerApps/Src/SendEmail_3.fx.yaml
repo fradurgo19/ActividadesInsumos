@@ -734,14 +734,15 @@
                             RadiusTopRight: =4
                             ZIndex: =1
 
-                            "ComboboxCanvas3 As 'Cuadro combinado'.pcfdataset":
-                                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                            TextCanvas9_7 As Texto:
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
-                                FontSize: =9
                                 Height: =Parent.Height
-                                InputTextPlaceholder: ="Tipo"
-                                Items: =ThisItem.'Tipo de Comunicación'
-                                SelectMultiple: =true
+                                PaddingLeft: =10
+                                Size: =9
+                                Text: =ThisItem.'Tipo de Comunicación'.Value
                                 Width: =Parent.Width
                                 X: =0
                                 Y: =0
@@ -841,15 +842,16 @@
                             RadiusTopRight: =4
                             ZIndex: =7
 
-                            "ComboboxCanvas4 As 'Cuadro combinado'.pcfdataset":
-                                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                            TextCanvas9_8 As Texto:
                                 BorderColor: =RGBA(214, 221, 224, 1)
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
-                                FontSize: =9
+                                FontItalic: =true
                                 Height: =Parent.Height
-                                Items: =ThisItem.Respuesta
+                                PaddingLeft: =10
+                                Size: =9
+                                Text: =ThisItem.'Respuesta a Solicitud'
                                 Width: =Parent.Width
                                 X: =0
                                 Y: =0
@@ -930,7 +932,7 @@
                         Items: =["Item 1", "Item 2", "Item 3"]
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Width: =320
+                        Width: =100
                         X: =0
                         Y: =0
                         ZIndex: =2
@@ -941,7 +943,7 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Width: =320
+                        Width: =100
                         X: =0
                         Y: =0
                         ZIndex: =3
@@ -954,7 +956,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: ="Actualizar"
-                        Width: =96
+                        Width: =100
                         X: =0
                         Y: =0
                         ZIndex: =4
