@@ -975,6 +975,14 @@
                         "InvariantPropertyName": "Weight",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
+                      },
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "",
+                        "InvariantPropertyName": "Size",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
                       }
                     ],
                     "ControlUniqueId": "422",
@@ -1071,6 +1079,12 @@
                         "Category": "Data",
                         "InvariantScript": "'TextCanvas.Weight'.Semibold",
                         "Property": "Weight",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Data",
+                        "InvariantScript": "20",
+                        "Property": "Size",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -1947,7 +1961,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638621881185381245",
+    "LastModifiedTimestamp": "638621882386089570",
     "Name": "EncabezadoContenedor",
     "Rules": [
       {
@@ -2037,7 +2051,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638621881185381245",
+  "LastModifiedTimestamp": "638621882386089570",
   "Name": "1f135cd22ace4f2d929d205827ff0c0d",
   "OverridableProperties": {},
   "Version": "1.0"
