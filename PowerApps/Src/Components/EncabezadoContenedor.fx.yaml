@@ -66,9 +66,13 @@ EncabezadoContenedor As CanvasComponent:
 
                 TextCanvas5 As Texto:
                     DisplayMode: =DisplayMode.Edit
+                    Font: =Font.'Open Sans'
                     Height: =32
                     LayoutMinWidth: =96
-                    Width: =150
+                    Text: ="PQRS"
+                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =1
