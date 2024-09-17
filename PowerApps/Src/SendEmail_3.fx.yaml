@@ -1068,7 +1068,16 @@
                         Layout: ='ButtonCanvas.Layout'.IconBefore
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
-                        OnSelect: =SubmitForm(Form4)
+                        OnSelect: |
+                            =SubmitForm(Form4);
+                            
+                            Patch(
+                                'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',  // Reemplaza con el nombre de tu lista en SharePoint
+                                LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', ID = Gallery6.Selected.ID),  // Encuentra el registro seleccionado en la galería
+                                {
+                                    Respuesta: ComboboxCanvas5.Selected // Actualiza el campo "Estado" con el valor seleccionado en el ComboBox
+                                }
+                            )
                         Text: ="Actualizar"
                         Width: =100
                         X: =0
@@ -1082,7 +1091,7 @@
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =765
+                Width: =651
                 X: =224
                 Y: =650
                 ZIndex: =24
@@ -1096,7 +1105,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =765
+                    Width: =649
                     ZIndex: =1
 
                     TextCanvas13 As Texto:
