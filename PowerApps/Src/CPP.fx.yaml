@@ -1,0 +1,40 @@
+CPP As screen:
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+
+    Container24 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =76
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        Y: =4
+        ZIndex: =2
+
+        Arrow1_1 As arrow.backArrow:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Navigate(SendEmail_1,ScreenTransition.UnCoverRight )
+            X: =4
+            Y: =4
+            ZIndex: =1
+
+        Container25 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =74
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1287
+            X: =68
+            ZIndex: =2
+
+            EncabezadoContenedor_2 As EncabezadoContenedor:
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+                Width: =Parent.Width
+
