@@ -1,0 +1,103 @@
+EncabezadoContenedor As CanvasComponent:
+    Encabezado: =SampleImage
+    Encabezado1: =Logo
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =65
+    Width: =1007
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container6 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =30
+        PaddingRight: =30
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        Y: =40
+        ZIndex: =1
+
+        Image1 As image:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =EncabezadoContenedor.Encabezado1
+            LayoutMinHeight: =0
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =150
+            ZIndex: =1
+
+        Container7 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =0
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =2
+
+            TextCanvas4 As Texto:
+                Align: ='TextCanvas.Align'.Start
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            TextCanvas3 As Texto:
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                Height: =0
+                LayoutMinWidth: =96
+                Size: =12
+                Text: =User().FullName
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            Image18 As image:
+                AlignInContainer: =AlignInContainer.Stretch
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =Parent.Height * 100%
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =User().Image
+                LayoutMinHeight: =0
+                PaddingLeft: =10
+                PaddingRight: =10
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadiusBottomLeft: =50
+                RadiusBottomRight: =50
+                RadiusTopLeft: =50
+                RadiusTopRight: =50
+                Width: =Parent.Width * 20%
+                ZIndex: =3
+

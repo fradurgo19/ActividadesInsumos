@@ -371,18 +371,6 @@
                 Y: =
                 ZIndex: =16
 
-            Container3 As groupContainer.horizontalAutoLayoutContainer:
-                DropShadow: =DropShadow.Light
-                Height: =761
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Width: =1007
-                Y: =2
-                ZIndex: =18
-
             Rectangle3_7 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -398,4 +386,48 @@
                 X: =Rectangle3_6.X+Rectangle3_6.Width+74
                 Y: =
                 ZIndex: =18
+
+            Container1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =65
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1007
+                Y: =2
+                ZIndex: =19
+
+            Container3 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =71
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1007
+                Y: =67
+                ZIndex: =20
+
+            Container4 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =483
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1007
+                Y: =138
+                ZIndex: =21
+
+            Container5 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =147
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1007
+                Y: =621
+                ZIndex: =22
 
