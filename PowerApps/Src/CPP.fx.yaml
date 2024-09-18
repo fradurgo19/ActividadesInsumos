@@ -82,8 +82,8 @@ CPP As screen:
             "TextInputCanvas6 As 'Entrada de texto'":
                 AccessibleLabel: ="Buscar Por Ref. Sap o Por Nombre"
                 AlignInContainer: =AlignInContainer.Stretch
-                Appearance: ='TextInputCanvas.Appearance'.Outline
-                BasePaletteColor: =RGBA(189, 178, 176, 1)
+                Appearance: ='TextInputCanvas.Appearance'.FilledDarker
+                BasePaletteColor: =RGBA(8, 222, 8, 1)
                 DisplayMode: =DisplayMode.Edit
                 Font: =Font.'Lato Black'
                 FontColor: =RGBA(0, 0, 0, 1)
@@ -94,7 +94,7 @@ CPP As screen:
                 Mode: ='TextInputCanvas.Mode'.Multiline
                 Placeholder: ="Buscar Por Ref. Sap o por Nombre"
                 TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
-                Type: ='TextInputCanvas.Type'.Text
+                Type: ='TextInputCanvas.Type'.Search
                 Width: =Parent.Width
                 X: =0
                 Y: =0
