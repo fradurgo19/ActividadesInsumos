@@ -10,7 +10,7 @@ CPP As screen:
         
         // Definir modelos basados en la marca seleccionada
         ClearCollect(colModelos, 
-            { IdMarca: 1, Modelo: "2010X2" }, 
+            { IdMarca: 3, Modelo: "210x2" }, 
             { IdMarca: 1, Modelo: "2020Y" }, 
             { IdMarca: 2, Modelo: "H100" }, 
             { IdMarca: 2, Modelo: "H200" }, 
@@ -19,10 +19,10 @@ CPP As screen:
         
         // Definir partes basadas en el modelo seleccionado
         ClearCollect(colPartes, 
-            { IdModelo: "2010X2", Parte: "Motor" },
-            { IdModelo: "2010X2", Parte: "Transmisión" },
-            { IdModelo: "H100", Parte: "Motor" },
-            { IdModelo: "H200", Parte: "Frenos" }
+            { IdModelo: "210x2", Parte: "FILTRACIÓN" },
+            { IdModelo: "210x2", Parte: "HERRAMIENTA CORTE " },
+            { IdModelo: "210x2", Parte: "TREN RODAJE" },
+            { IdModelo: "210x2", Parte: "EMP CILINDROS" }
         )
 
     Container24 As groupContainer.manualLayoutContainer:
