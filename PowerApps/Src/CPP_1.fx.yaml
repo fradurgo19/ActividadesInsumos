@@ -184,26 +184,6 @@ CPP_1 As screen:
             Y: =137
             ZIndex: =13
 
-            ButtonCanvas5_1 As Botón:
-                DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                OnSelect: |-
-                    =// Guardar la información seleccionada en variables de contexto y navegar a otra pantalla
-                    Set(
-                        gblMarcaSeleccionada, ComboBoxMarca.Selected.Marca,
-                        gblModeloSeleccionado, ComboBoxModelo.Selected.Modelo,
-                        gblParteSeleccionada, ComboBoxParte.Selected.Parte
-                    );
-                    Navigate(DetalleScreen, ScreenTransition.Fade),
-                Text: |-
-                    ="Parte seleccionada: " & ComboboxParte_1.Selected.Parte
-                Width: =Parent.Width
-                X: =0
-                Y: =0
-                ZIndex: =14
-
     Container4_2 As groupContainer.manualLayoutContainer:
         BorderThickness: =2
         DropShadow: =DropShadow.Light
