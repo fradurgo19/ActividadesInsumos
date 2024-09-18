@@ -1,4 +1,5 @@
 CPP As screen:
+    ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
         =ClearCollect(UniqueMarcas, Distinct(TablaDataCpp, Marca));
@@ -378,6 +379,7 @@ CPP As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: =Gallery6_1.Selected.ImagenUrl
+                ImagePosition: =ImagePosition.Fill
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Parent.Width
