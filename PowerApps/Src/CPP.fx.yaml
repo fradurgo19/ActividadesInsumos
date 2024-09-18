@@ -1,5 +1,29 @@
 CPP As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    OnVisible: |
+        =// Definir marcas
+        ClearCollect(colMarcas, 
+            { Id: 1, Marca: "CASE" },
+            { Id: 2, Marca: "HITACHI" },
+            { Id: 3, Marca: "LINK-BELT" }
+        );
+        
+        // Definir modelos basados en la marca seleccionada
+        ClearCollect(colModelos, 
+            { IdMarca: 1, Modelo: "2010X2" }, 
+            { IdMarca: 1, Modelo: "2020Y" }, 
+            { IdMarca: 2, Modelo: "H100" }, 
+            { IdMarca: 2, Modelo: "H200" }, 
+            { IdMarca: 3, Modelo: "LB50" }
+        );
+        
+        // Definir partes basadas en el modelo seleccionado
+        ClearCollect(colPartes, 
+            { IdModelo: "2010X2", Parte: "Motor" },
+            { IdModelo: "2010X2", Parte: "Transmisión" },
+            { IdModelo: "H100", Parte: "Motor" },
+            { IdModelo: "H200", Parte: "Frenos" }
+        )
 
     Container24 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
