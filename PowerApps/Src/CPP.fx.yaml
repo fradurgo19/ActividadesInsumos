@@ -56,7 +56,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =334
+            Width: =416
             X: =118
             ZIndex: =3
 
@@ -79,10 +79,21 @@ CPP As screen:
                 ZIndex: =1
 
             "TextInputCanvas6 As 'Entrada de texto'":
+                AccessibleLabel: ="Buscar Por Ref. Sap o Por Nombre"
+                AlignInContainer: =AlignInContainer.Stretch
+                Appearance: ='TextInputCanvas.Appearance'.Outline
+                BasePaletteColor: =RGBA(189, 178, 176, 1)
                 DisplayMode: =DisplayMode.Edit
+                Font: =Font.'Lato Black'
+                FontColor: =RGBA(0, 0, 0, 1)
+                FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
+                Mode: ='TextInputCanvas.Mode'.Multiline
+                Placeholder: ="Buscar Por Ref. Sap o por Nombre"
+                TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
+                Type: ='TextInputCanvas.Type'.Text
                 Width: =Parent.Width
                 X: =0
                 Y: =0

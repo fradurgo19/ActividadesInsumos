@@ -10,6 +10,7 @@ EncabezadoContenedor As CanvasComponent:
 
     Container6 As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
@@ -20,7 +21,7 @@ EncabezadoContenedor As CanvasComponent:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =Parent.Width
+        Width: =1007
         ZIndex: =1
 
         Image1 As image:

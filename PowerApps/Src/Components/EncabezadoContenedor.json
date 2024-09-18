@@ -1673,7 +1673,14 @@
         "ControlPropertyState": [
           "BorderColor",
           "BorderStyle",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
@@ -1686,7 +1693,7 @@
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "500",
+            "AutoRuleBindingString": "",
             "InvariantPropertyName": "Width",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
@@ -1776,7 +1783,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 0)",
+            "InvariantScript": "RGBA(255, 255, 255, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -1800,9 +1807,9 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.Width",
+            "InvariantScript": "1007",
             "Property": "Width",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
@@ -1961,7 +1968,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638622882077559081",
+    "LastModifiedTimestamp": "638622908437175758",
     "Name": "EncabezadoContenedor",
     "Rules": [
       {
@@ -2051,7 +2058,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638622882077559081",
+  "LastModifiedTimestamp": "638622908437175758",
   "Name": "1f135cd22ace4f2d929d205827ff0c0d",
   "OverridableProperties": {},
   "Version": "1.0"
