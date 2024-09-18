@@ -88,6 +88,16 @@ CPP As screen:
                 Y: =0
                 ZIndex: =2
 
+        ButtonCanvas5 As Botón:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: =Reset(DropMarca)
+            Text: ="Reset"
+            Width: =96
+            X: =625
+            Y: =42
+            ZIndex: =4
+
     Container2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =677
@@ -368,6 +378,7 @@ CPP As screen:
                 Height: =Parent.Height
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =Gallery6_1.Selected.ImagenUrl
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Parent.Width
