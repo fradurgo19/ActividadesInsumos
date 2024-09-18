@@ -1,6 +1,8 @@
 CPP As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: =
+    OnVisible: |+
+        =ClearCollect(UniqueMarcas, Distinct(TablaDataCpp, Marca))
+        
 
     Container24 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -116,26 +118,24 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =332
+            Width: =454
             X: =4
             ZIndex: =1
 
             "ComboboxMarca As 'Cuadro combinado'.pcfdataset":
+                AccessibleLabel: =""
+                AlignInContainer: =AlignInContainer.Stretch
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
-                Items: =Distinct(DataCpp, Marca)
+                IsSearchable: =
+                Items: |-
+                    =Distinct(TablaDataCpp,Marca)
+                    
+                       
                 Width: =320
                 X: =0
                 Y: =0
                 ZIndex: =1
-
-                Value3 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                    FieldDisplayName: ="Value"
-                    FieldName: ="Value"
-                    FieldType: ="v"
-                    FieldVariantName: ="textualColumn"
-                    Order: =1
-                    ZIndex: =6
 
         Container9 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -145,14 +145,14 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =345
-            X: =336
+            Width: =193
+            X: =487
             ZIndex: =2
 
             "ComboboxModelo As 'Cuadro combinado'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
-                Items: =Filter(DataCpp, Marca = ComboboxMarca.SelectedItems).Modelo
+                Items: =TablaDataCpp
                 Width: =320
                 X: =0
                 Y: =0
@@ -174,14 +174,7 @@ CPP As screen:
             ButtonCanvas5 As Botón:
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
-                OnSelect: |-
-                    =// Guardar la información seleccionada en variables de contexto y navegar a otra pantalla
-                    Set(
-                        gblMarcaSeleccionada, ComboBoxMarca.Selected.Marca,
-                        gblModeloSeleccionado, ComboBoxModelo.Selected.Modelo,
-                        gblParteSeleccionada, ComboBoxParte.Selected.Parte
-                    );
-                    Navigate(CPP_1, ScreenTransition.Fade)
+                OnSelect: =
                 Text: =
                 Width: =Parent.Width
                 X: =0
@@ -203,9 +196,49 @@ CPP As screen:
             "ComboboxCanvas11 As 'Cuadro combinado'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
-                Items: =Filter(DataCpp, Modelo = ComboboxModelo.SelectedItems).Parte
+                Items: =
                 Width: =320
                 X: =0
                 Y: =0
                 ZIndex: =1
+
+        TextCanvas2 As Texto:
+            DisplayMode: =DisplayMode.Edit
+            Height: =54
+            Text: =CountRows(UniqueMarcas)
+            Width: =157
+            X: =510
+            Y: =137
+            ZIndex: =6
+
+        ComboBox1 As combobox:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(33, 33, 33, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DefaultSelectedItems: =
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayFields: =["Result"]
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            IsSearchable: =false
+            Items: =Distinct(TablaDataCpp, Marca )
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            SearchFields: =[""]
+            SearchItems: =[]
+            SelectionFill: =RGBA(105, 121, 126, 1)
+            Size: =13
+            X: =553
+            Y: =199
+            ZIndex: =7
 
