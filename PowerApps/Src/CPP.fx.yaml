@@ -224,13 +224,13 @@ CPP As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayFields: =["Result"]
+            DisplayFields: =[""]
             Font: =Font.'Segoe UI'
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             IsSearchable: =false
-            Items: =Distinct(TablaDataCpp, Marca )
+            Items: =Distinct(TablaDataCpp, Marca)
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
