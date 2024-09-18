@@ -214,6 +214,14 @@ CPP As screen:
                 Y: =0
                 ZIndex: =1
 
+                Value7 As PowerApps_CoreControls_DropdownCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Value"
+                    FieldName: ="Value"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =0
+
         Container28_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =106
@@ -226,16 +234,24 @@ CPP As screen:
             Y: =141
             ZIndex: =2
 
-            DropdownCanvas5_1 As Desplegable.pcfdataset:
+            DropModelo As Desplegable.pcfdataset:
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
-                Items: =["Item 1", "Item 2", "Item 3"]
+                Items: =Filter(TablaDataCpp, Marca = DropMarca.Selected.Value)
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
                 Width: =Parent.Width
                 X: =0
                 Y: =0
                 ZIndex: =1
+
+                Modelo2 As PowerApps_CoreControls_DropdownCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Modelo"
+                    FieldName: ="Modelo"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =0
 
         Container28_2 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -252,11 +268,19 @@ CPP As screen:
             DropParte As Desplegable.pcfdataset:
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
-                Items: =["Item 1", "Item 2", "Item 3"]
+                Items: =Filter(TablaDataCpp, Modelo = DropModelo.Selected.Parte)
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
                 Width: =Parent.Width
                 X: =0
                 Y: =0
                 ZIndex: =1
+
+                Parte2 As PowerApps_CoreControls_DropdownCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Parte"
+                    FieldName: ="Parte"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =0
 
