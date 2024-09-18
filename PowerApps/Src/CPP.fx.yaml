@@ -1,7 +1,13 @@
 CPP As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
-        =ClearCollect(UniqueMarcas, Distinct(TablaDataCpp, Marca))
+        =ClearCollect(UniqueMarcas, Distinct(TablaDataCpp, Marca));
+        Concurrent(
+          ClearCollect(colMarcas, Distinct(TablaDataCpp, Marca)),
+          ClearCollect(colModelos, Distinct(TablaDataCpp, Modelo)),
+          ClearCollect(colPartes, Distinct(TablaDataCpp, Parte))
+        )
+        
         
 
     Container24 As groupContainer.manualLayoutContainer:
@@ -110,54 +116,6 @@ CPP As screen:
         Y: =156
         ZIndex: =9
 
-        Container5 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =64
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =454
-            X: =4
-            ZIndex: =1
-
-            "ComboboxMarca As 'Cuadro combinado'.pcfdataset":
-                AccessibleLabel: =""
-                AlignInContainer: =AlignInContainer.Stretch
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                IsSearchable: =
-                Items: |-
-                    =Distinct(TablaDataCpp,Marca)
-                    
-                       
-                Width: =320
-                X: =0
-                Y: =0
-                ZIndex: =1
-
-        Container9 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =64
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =193
-            X: =487
-            ZIndex: =2
-
-            "ComboboxModelo As 'Cuadro combinado'.pcfdataset":
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Items: =TablaDataCpp
-                Width: =320
-                X: =0
-                Y: =0
-                ZIndex: =1
-
         Container11 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =102
@@ -177,27 +135,6 @@ CPP As screen:
                 OnSelect: =
                 Text: =
                 Width: =Parent.Width
-                X: =0
-                Y: =0
-                ZIndex: =1
-
-        Container12 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =64
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =431
-            X: =681
-            ZIndex: =5
-
-            "ComboboxCanvas11 As 'Cuadro combinado'.pcfdataset":
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Items: =
-                Width: =320
                 X: =0
                 Y: =0
                 ZIndex: =1
@@ -238,7 +175,88 @@ CPP As screen:
             SearchItems: =[]
             SelectionFill: =RGBA(105, 121, 126, 1)
             Size: =13
-            X: =553
-            Y: =199
+            X: =586
+            Y: =144
             ZIndex: =7
+
+    Container14 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =677
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =179
+        X: =1169
+        Y: =80
+        ZIndex: =10
+
+        Container28 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =101
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =179
+            Y: =40
+            ZIndex: =1
+
+            DropMarca As Desplegable.pcfdataset:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Items: =Distinct(TablaDataCpp, Marca)
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        Container28_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =106
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =179
+            Y: =141
+            ZIndex: =2
+
+            DropdownCanvas5_1 As Desplegable.pcfdataset:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Items: =["Item 1", "Item 2", "Item 3"]
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        Container28_2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =130
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =179
+            Y: =316
+            ZIndex: =3
+
+            DropParte As Desplegable.pcfdataset:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Items: =["Item 1", "Item 2", "Item 3"]
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
 
