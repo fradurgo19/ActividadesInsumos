@@ -47,165 +47,278 @@ CPP As screen:
                 LayoutMinWidth: =640
                 Width: =Parent.Width
 
-    Container4_1 As groupContainer.manualLayoutContainer:
-        BorderThickness: =2
-        DropShadow: =DropShadow.Light
-        Height: =62
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Width: =1113
-        X: =15
-        Y: =80
-        ZIndex: =8
-
-        ButtonCanvas4_1 As Botón:
-            Align: =Align.Center
-            BasePaletteColor: =RGBA(237, 17, 28, 1)
-            BorderColor: =RGBA(9, 33, 98, 1)
-            BorderRadiusBottomLeft: =5
-            BorderRadiusBottomRight: =5
-            BorderRadiusTopLeft: =5
-            BorderRadiusTopRight: =5
-            BorderStyle: =BorderStyle.Solid
-            BorderThickness: =2
-            DisplayMode: =DisplayMode.Edit
-            Height: =48
-            Text: =
-            Width: =1113
-            X: =0
-            Y: =(Parent.Height - Self.Height)/2
-            ZIndex: =1
-
-        Container17_1 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =Parent.Height
-            LayoutAlignItems: =LayoutAlignItems.Stretch
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =Parent.Width
-            ZIndex: =2
-
-            TextCanvas7_9 As Texto:
-                AutoHeight: =false
-                DisplayMode: =DisplayMode.Edit
-                FillPortions: =1
-                FontColor: =RGBA(255, 255, 255, 1)
-                Height: =Parent.Height
-                PaddingLeft: =5
-                Size: =12
-                Text: ="Manual de Partes"
-                Width: =Parent.Width
-                X: =0
-                Y: =0
-                ZIndex: =1
-
     Container2 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =601
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Width: =1113
-        X: =15
-        Y: =156
-        ZIndex: =9
-
-        Container11 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =102
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =332
-            X: =4
-            Y: =137
-            ZIndex: =4
-
-            ButtonCanvas5 As Botón:
-                DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                OnSelect: =
-                Text: =
-                Width: =Parent.Width
-                X: =0
-                Y: =0
-                ZIndex: =1
-
-        TextCanvas2 As Texto:
-            DisplayMode: =DisplayMode.Edit
-            Height: =54
-            Text: =CountRows(UniqueMarcas)
-            Width: =157
-            X: =510
-            Y: =137
-            ZIndex: =6
-
-        ComboBox1 As combobox:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DefaultSelectedItems: =
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayFields: =[""]
-            Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            IsSearchable: =false
-            Items: =Distinct(TablaDataCpp, Marca)
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            SearchFields: =[""]
-            SearchItems: =[]
-            SelectionFill: =RGBA(105, 121, 126, 1)
-            Size: =13
-            X: =586
-            Y: =144
-            ZIndex: =7
-
-    Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =677
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =179
-        X: =1169
+        Width: =1200
+        X: =15
         Y: =80
-        ZIndex: =10
+        ZIndex: =9
 
-        Container28 As groupContainer.horizontalAutoLayoutContainer:
+        Container29 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =101
+            Height: =52
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =179
-            Y: =40
+            Width: =1188
+            ZIndex: =1
+
+        Container30 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =615
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =812
+            X: =376
+            Y: =52
+            ZIndex: =2
+
+            Container16_1 As groupContainer.manualLayoutContainer:
+                BorderThickness: =2
+                DropShadow: =DropShadow.Light
+                Fill: =Color.White
+                Height: =447
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =975
+                X: =15
+                Y: =193
+                ZIndex: =1
+
+                "Gallery6_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    BorderColor: =RGBA(139, 154, 159, 1)
+                    BorderThickness: =2
+                    DelayItemLoading: =true
+                    Height: =599
+                    Items: |
+                        =Filter(
+                            TablaDataCpp,
+                            (IsBlank(DropMarca.Selected.Value) || Marca = DropMarca.Selected.Value) &&
+                            (IsBlank(DropModelo.Selected.Value) || Modelo = DropModelo.Selected.Value) &&
+                            (IsBlank(DropParte.Selected.Value) || Parte = DropParte.Selected.Value) &&
+                            (IsBlank(DropTipo.Selected.Value) || Tipo = DropTipo.Selected.Value)
+                        )
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowNavigation: =true
+                    TemplatePadding: =0
+                    TemplateSize: =78
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Separator4_1 As rectangle:
+                        BorderColor: =RGBA(214, 221, 224, 1)
+                        BorderThickness: =2
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.TemplateHeight - Self.Height
+                        ZIndex: =5
+
+                    Container18_1 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =Parent.TemplateHeight
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =6
+
+                        TextCanvas9_5 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.No
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas9_11 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.Nombre
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas9_12 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.RefFabricante
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas9_13 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.Equivalencia
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        TextCanvas9_14 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.Comentario
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+
+                        TextCanvas9_15 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontItalic: =true
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.Medida
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =8
+
+                        TextCanvas9_16 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontItalic: =true
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.Comentario
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =9
+
+        Container31 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =615
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =376
+            Y: =52
+            ZIndex: =3
+
+            Image21 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =Parent.Height
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =Parent.Width
+                ZIndex: =1
+
+    Container14 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(242, 78, 78, 0.55)
+        Height: =677
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =132
+        X: =1215
+        Y: =80
+        ZIndex: =10
+
+        Container28 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =64
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =132
+            Y: =94
             ZIndex: =1
 
             DropMarca As Desplegable.pcfdataset:
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
+                FontSize: =10
+                Height: =Parent.Height
                 Items: =Distinct(TablaDataCpp,Marca)
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
@@ -216,19 +329,20 @@ CPP As screen:
 
         Container28_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =106
+            Height: =55
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =179
-            Y: =141
+            Width: =132
+            Y: =201
             ZIndex: =2
 
             DropModelo As Desplegable.pcfdataset:
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
+                FontSize: =10
+                Height: =Parent.Height
                 Items: |
                     =Distinct(Filter(TablaDataCpp, Marca = DropMarca.Selected.Value),Modelo)
                 LayoutMinHeight: =32
@@ -240,19 +354,20 @@ CPP As screen:
 
         Container28_2 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =130
+            Height: =60
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =179
-            Y: =316
+            Width: =132
+            Y: =310
             ZIndex: =3
 
             DropParte As Desplegable.pcfdataset:
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
+                FontSize: =10
+                Height: =Parent.Height
                 Items: |
                     =Distinct(Filter(TablaDataCpp, Modelo = DropModelo.Selected.Value),Parte)
                 LayoutMinHeight: =32
@@ -261,4 +376,103 @@ CPP As screen:
                 X: =0
                 Y: =0
                 ZIndex: =1
+
+        Container28_3 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =60
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =132
+            Y: =403
+            ZIndex: =4
+
+            DropTipo As Desplegable.pcfdataset:
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =10
+                Height: =Parent.Height
+                Items: |
+                    =Distinct(Filter(TablaDataCpp, Parte = DropParte.Selected.Value),Tipo)
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        TextCanvas6 As Texto:
+            Align: ='TextCanvas.Align'.Center
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =RGBA(0, 0, 0, 1)
+            Height: =33
+            Size: =12
+            Text: ="Menu"
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =132
+            X: =0
+            Y: =3
+            ZIndex: =5
+
+        TextCanvas6_1 As Texto:
+            Align: ='TextCanvas.Align'.Center
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =RGBA(0, 0, 0, 1)
+            Height: =33
+            Size: =12
+            Text: ="Marca"
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =132
+            X: =0
+            Y: =61
+            ZIndex: =6
+
+        TextCanvas6_2 As Texto:
+            Align: ='TextCanvas.Align'.Center
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =RGBA(0, 0, 0, 1)
+            Height: =33
+            Size: =12
+            Text: ="Modelo"
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =132
+            X: =0
+            Y: =158
+            ZIndex: =7
+
+        TextCanvas6_3 As Texto:
+            Align: ='TextCanvas.Align'.Center
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =RGBA(0, 0, 0, 1)
+            Height: =33
+            Size: =12
+            Text: ="Parte"
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =132
+            X: =0
+            Y: =260
+            ZIndex: =8
+
+        TextCanvas6_4 As Texto:
+            Align: ='TextCanvas.Align'.Center
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =RGBA(0, 0, 0, 1)
+            Height: =33
+            Size: =12
+            Text: ="Tipo"
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =132
+            X: =0
+            Y: =370
+            ZIndex: =9
+
+        Icon1 As Icono:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Icon: ="AppsList"
+            Width: =32
+            X: =100
+            Y: =3
+            ZIndex: =10
 
