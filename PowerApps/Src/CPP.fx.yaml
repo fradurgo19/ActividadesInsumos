@@ -1,29 +1,6 @@
 CPP As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
-        =// Definir marcas
-        ClearCollect(colMarcas, 
-            { Id: 1, Marca: "CASE" },
-            { Id: 2, Marca: "HITACHI" },
-            { Id: 3, Marca: "LINK-BELT" }
-        );
-        
-        // Definir modelos basados en la marca seleccionada
-        ClearCollect(colModelos, 
-            { IdMarca: 3, Modelo: "210x2" }, 
-            { IdMarca: 1, Modelo: "2020Y" }, 
-            { IdMarca: 2, Modelo: "H100" }, 
-            { IdMarca: 2, Modelo: "H200" }, 
-            { IdMarca: 3, Modelo: "LB50" }
-        );
-        
-        // Definir partes basadas en el modelo seleccionado
-        ClearCollect(colPartes, 
-            { IdModelo: "210x2", Parte: "FILTRACIÓN" },
-            { IdModelo: "210x2", Parte: "HERRAMIENTA CORTE " },
-            { IdModelo: "210x2", Parte: "TREN RODAJE" },
-            { IdModelo: "210x2", Parte: "EMP CILINDROS" }
-        )
+    OnVisible: =
 
     Container24 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -144,27 +121,21 @@ CPP As screen:
             ZIndex: =1
 
             "ComboboxMarca As 'Cuadro combinado'.pcfdataset":
-                AccessibleLabel: =""
-                AlignInContainer: =AlignInContainer.Stretch
-                Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
                 DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                InputTextPlaceholder: ="Buscar Marca"
-                Items: =colMarcas
-                LayoutMinWidth: =320
-                OnChange: =
-                Width: =Parent.Width
+                Height: =32
+                Items: =Distinct(DataCpp, Marca)
+                Width: =320
                 X: =0
                 Y: =0
                 ZIndex: =1
 
-                Marca1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                    FieldDisplayName: ="Marca"
-                    FieldName: ="Marca"
-                    FieldType: ="s"
+                Value3 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Value"
+                    FieldName: ="Value"
+                    FieldType: ="v"
                     FieldVariantName: ="textualColumn"
                     Order: =1
-                    ZIndex: =4
+                    ZIndex: =6
 
         Container9 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -180,51 +151,12 @@ CPP As screen:
 
             "ComboboxModelo As 'Cuadro combinado'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                Items: =Filter(colModelos, IdMarca = ComboboxMarca.Selected.Id)
-                LayoutMinHeight: =32
-                LayoutMinWidth: =320
-                Width: =Parent.Width
+                Height: =32
+                Items: =Filter(DataCpp, Marca = ComboboxMarca.SelectedItems).Modelo
+                Width: =320
                 X: =0
                 Y: =0
                 ZIndex: =1
-
-                Modelo1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                    FieldDisplayName: ="Modelo"
-                    FieldName: ="Modelo"
-                    FieldType: ="s"
-                    FieldVariantName: ="textualColumn"
-                    Order: =1
-                    ZIndex: =5
-
-        Container10 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =64
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =432
-            X: =681
-            ZIndex: =3
-
-            "ComboboxParte As 'Cuadro combinado'.pcfdataset":
-                DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                Items: =Filter(colPartes, IdModelo = ComboboxModelo.Selected.Modelo)
-                Width: =Parent.Width
-                X: =0
-                Y: =0
-                ZIndex: =1
-
-                Parte1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                    FieldDisplayName: ="Parte"
-                    FieldName: ="Parte"
-                    FieldType: ="s"
-                    FieldVariantName: ="textualColumn"
-                    Order: =1
-                    ZIndex: =6
 
         Container11 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -242,8 +174,6 @@ CPP As screen:
             ButtonCanvas5 As Botón:
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
                 OnSelect: |-
                     =// Guardar la información seleccionada en variables de contexto y navegar a otra pantalla
                     Set(
@@ -252,9 +182,29 @@ CPP As screen:
                         gblParteSeleccionada, ComboBoxParte.Selected.Parte
                     );
                     Navigate(CPP_1, ScreenTransition.Fade)
-                Text: |-
-                    ="Parte seleccionada: " & ComboboxParte.Selected.Parte
+                Text: =
                 Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        Container12 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =64
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =431
+            X: =681
+            ZIndex: =5
+
+            "ComboboxCanvas11 As 'Cuadro combinado'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Items: =Filter(DataCpp, Modelo = ComboboxModelo.SelectedItems).Parte
+                Width: =320
                 X: =0
                 Y: =0
                 ZIndex: =1
