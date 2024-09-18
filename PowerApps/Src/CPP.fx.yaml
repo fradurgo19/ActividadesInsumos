@@ -88,47 +88,6 @@ CPP As screen:
                 Y: =0
                 ZIndex: =2
 
-        Container33_1 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =76
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =361
-            X: =478
-            ZIndex: =4
-
-            Icon4_1 As icon.Search:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(105, 121, 126, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(220, 220, 220, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =Parent.Height
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.Search
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =Parent.Width * 10%
-                ZIndex: =1
-
-            "ComboboxCanvas15 As 'Cuadro combinado'.pcfdataset":
-                DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                Items: =["Item 1", "Item 2", "Item 3"]
-                LayoutMinHeight: =32
-                LayoutMinWidth: =320
-                Width: =Parent.Width
-                X: =0
-                Y: =0
-                ZIndex: =2
-
     Container2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =677
@@ -140,17 +99,6 @@ CPP As screen:
         X: =15
         Y: =80
         ZIndex: =9
-
-        Container29 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =39
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =1188
-            ZIndex: =1
 
         Container30 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -189,6 +137,7 @@ CPP As screen:
                     Items: |
                         =Filter(
                             TablaDataCpp,
+                            (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || IsBlank(TextInputCanvas6.Value)) &&
                             (IsBlank(DropMarca.Selected.Value) || Marca = DropMarca.Selected.Value) &&
                             (IsBlank(DropModelo.Selected.Value) || Modelo = DropModelo.Selected.Value) &&
                             (IsBlank(DropParte.Selected.Value) || Parte = DropParte.Selected.Value) &&
@@ -230,13 +179,12 @@ CPP As screen:
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
-                            FillPortions: =1
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
                             Text: =ThisItem.No
-                            Width: =96
+                            Width: =40
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -247,13 +195,12 @@ CPP As screen:
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
-                            FillPortions: =1
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
                             Text: =ThisItem.Nombre
-                            Width: =96
+                            Width: =120
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -269,7 +216,7 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
-                            Text: =ThisItem.RefFabricante
+                            Text: =ThisItem.RefSAP
                             Width: =96
                             X: =0
                             Y: =0
@@ -286,7 +233,7 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
-                            Text: =ThisItem.Equivalencia
+                            Text: =ThisItem.RefFabricante
                             Width: =96
                             X: =0
                             Y: =0
@@ -303,7 +250,7 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
-                            Text: =ThisItem.Comentario
+                            Text: =ThisItem.Equivalencia
                             Width: =96
                             X: =0
                             Y: =0
@@ -321,7 +268,7 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
-                            Text: =ThisItem.Medida
+                            Text: =ThisItem.RefFleetguard
                             Width: =96
                             X: =0
                             Y: =0
@@ -339,11 +286,65 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
-                            Text: =ThisItem.Comentario
+                            Text: =ThisItem.Cantidad
                             Width: =96
                             X: =0
                             Y: =0
                             ZIndex: =9
+
+                        TextCanvas9_17 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontItalic: =true
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.Frecuencia
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =10
+
+                        TextCanvas9_18 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontItalic: =true
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.Medida
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =11
+
+                        TextCanvas9_19 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontItalic: =true
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.Comentario
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =12
 
         Container31 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -371,6 +372,181 @@ CPP As screen:
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Parent.Width
                 ZIndex: =1
+
+        Container5 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =52
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =812
+            X: =376
+            ZIndex: =4
+
+            Container17_1 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                TextCanvas7_9 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =12
+                    LayoutMinWidth: =32
+                    PaddingLeft: =5
+                    Size: =12
+                    Text: ="No"
+                    Width: =40
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                TextCanvas7_11 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =20
+                    PaddingLeft: =5
+                    Size: =12
+                    Text: ="Nombre"
+                    Width: =120
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                TextCanvas7_12 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =10
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="RefSap"
+                    Width: =80
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                TextCanvas7_13 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =20
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Fabricante"
+                    Width: =80
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
+
+                TextCanvas7_14 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Equivalente"
+                    Width: =80
+                    X: =0
+                    Y: =0
+                    ZIndex: =5
+
+                TextCanvas7_15 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Fleetguard"
+                    Width: =80
+                    X: =0
+                    Y: =0
+                    ZIndex: =6
+
+                TextCanvas7_16 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Cantidad"
+                    Width: =80
+                    X: =0
+                    Y: =0
+                    ZIndex: =7
+
+                TextCanvas7_17 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Frecuencia"
+                    Width: =90
+                    X: =0
+                    Y: =0
+                    ZIndex: =8
+
+                TextCanvas7_18 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Medida"
+                    Width: =96
+                    X: =0
+                    Y: =0
+                    ZIndex: =9
+
+                TextCanvas7_19 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Comentario"
+                    Width: =96
+                    X: =0
+                    Y: =0
+                    ZIndex: =10
 
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
