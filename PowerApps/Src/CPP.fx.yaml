@@ -88,16 +88,6 @@ CPP As screen:
                 Y: =0
                 ZIndex: =2
 
-        ButtonCanvas5 As Botón:
-            DisplayMode: =DisplayMode.Edit
-            Height: =32
-            OnSelect: =Reset(DropMarca)
-            Text: ="Reset"
-            Width: =96
-            X: =625
-            Y: =42
-            ZIndex: =4
-
     Container2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =677
@@ -581,7 +571,7 @@ CPP As screen:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =132
-            Y: =94
+            Y: =132
             ZIndex: =1
 
             DropMarca As Desplegable.pcfdataset:
@@ -609,7 +599,7 @@ CPP As screen:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =132
-            Y: =201
+            Y: =239
             ZIndex: =2
 
             DropModelo As Desplegable.pcfdataset:
@@ -637,7 +627,7 @@ CPP As screen:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =132
-            Y: =310
+            Y: =348
             ZIndex: =3
 
             DropParte As Desplegable.pcfdataset:
@@ -663,7 +653,7 @@ CPP As screen:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =132
-            Y: =403
+            Y: =441
             ZIndex: =4
 
             DropTipo As Desplegable.pcfdataset:
@@ -702,7 +692,7 @@ CPP As screen:
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =132
             X: =0
-            Y: =61
+            Y: =99
             ZIndex: =6
 
         TextCanvas6_2 As Texto:
@@ -715,7 +705,7 @@ CPP As screen:
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =132
             X: =0
-            Y: =158
+            Y: =196
             ZIndex: =7
 
         TextCanvas6_3 As Texto:
@@ -728,7 +718,7 @@ CPP As screen:
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =132
             X: =0
-            Y: =260
+            Y: =298
             ZIndex: =8
 
         TextCanvas6_4 As Texto:
@@ -741,7 +731,7 @@ CPP As screen:
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =132
             X: =0
-            Y: =370
+            Y: =408
             ZIndex: =9
 
         Icon1 As Icono:
@@ -752,4 +742,15 @@ CPP As screen:
             X: =100
             Y: =3
             ZIndex: =10
+
+        ButtonCanvas6 As Botón:
+            BasePaletteColor: =RGBA(249, 83, 109, 1)
+            DisplayMode: =DisplayMode.Edit
+            Height: =25
+            OnSelect: =Reset(DropMarca)
+            Text: ="Reset"
+            Width: =56
+            X: =0
+            Y: =55
+            ZIndex: =11
 
