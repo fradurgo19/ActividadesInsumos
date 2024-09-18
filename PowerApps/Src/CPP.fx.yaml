@@ -144,15 +144,27 @@ CPP As screen:
             ZIndex: =1
 
             "ComboboxCanvas3 As 'Cuadro combinado'.pcfdataset":
+                AccessibleLabel: =""
+                AlignInContainer: =AlignInContainer.Stretch
+                Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
+                InputTextPlaceholder: ="Buscar Marca"
                 Items: =colMarcas
-                LayoutMinHeight: =32
                 LayoutMinWidth: =320
+                OnChange: =
                 Width: =Parent.Width
                 X: =0
                 Y: =0
                 ZIndex: =1
+
+                Marca1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Marca"
+                    FieldName: ="Marca"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =4
 
         Container9 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -177,6 +189,14 @@ CPP As screen:
                 Y: =0
                 ZIndex: =1
 
+                Modelo1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Modelo"
+                    FieldName: ="Modelo"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =5
+
         Container10 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =64
@@ -197,4 +217,12 @@ CPP As screen:
                 X: =0
                 Y: =0
                 ZIndex: =1
+
+                Parte1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Parte"
+                    FieldName: ="Parte"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =6
 
