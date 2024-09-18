@@ -579,6 +579,32 @@ CPP As screen:
                     Y: =0
                     ZIndex: =10
 
+        Container10 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =52
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =376
+            ZIndex: =5
+
+            TextCanvas2 As Texto:
+                Align: ='TextCanvas.Align'.Center
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                PaddingTop: =
+                Text: ="Imagen"
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(214, 221, 224, 1)
