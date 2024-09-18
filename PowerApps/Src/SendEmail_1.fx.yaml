@@ -422,6 +422,7 @@
         ZIndex: =3
 
     ButtonCanvas1 As Botón:
+        BasePaletteColor: =RGBA(227, 106, 244, 1)
         DisplayMode: =DisplayMode.Edit
         Height: =62
         OnSelect: =Navigate(SendEmail_2,ScreenTransition.CoverRight )
@@ -432,12 +433,13 @@
         ZIndex: =4
 
     ButtonCanvas1_1 As Botón:
+        BasePaletteColor: =RGBA(8, 222, 8, 1)
         DisplayMode: =DisplayMode.Edit
         Height: =62
         OnSelect: =Navigate(CPP,ScreenTransition.CoverRight )
         Text: ="Conulta de Partes"
         Width: =157
-        X: =779
+        X: =664
         Y: =200
         ZIndex: =5
 

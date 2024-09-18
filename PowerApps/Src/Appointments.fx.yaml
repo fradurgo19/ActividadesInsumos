@@ -776,12 +776,16 @@
                 Y: =592
                 ZIndex: =23
 
-            Icon5 As Icono:
+            ButtonCanvas5 As Botón:
+                BasePaletteColor: =RGBA(225, 250, 2, 1)
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
-                Width: =32
-                X: =931
-                Y: =16
+                OnSelect: |-
+                    =Launch("https://teams.microsoft.com/l/channel/19%3Af661e47534c545eca9225e7a9db41b3a%40thread.tacv2/Aplicativo%20Mantenimiento%2C%20Manuales%20y%20CPP?groupId=31f2e519-640f-4cee-856f-e4ae247c0e5a")
+                Text: ="Soporte"
+                Width: =96
+                X: =840
+                Y: =30
                 ZIndex: =24
 
     MaskConfirm As fluidGrid.fluidGridWithBlankCard:
