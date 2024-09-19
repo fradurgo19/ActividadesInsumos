@@ -39,8 +39,8 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1024
-            X: =341
+            Width: =1009
+            X: =356
             ZIndex: =2
 
             EncabezadoContenedor_2 As EncabezadoContenedor:
@@ -58,7 +58,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =248
+            Width: =263
             X: =93
             ZIndex: =3
 
@@ -68,6 +68,7 @@ CPP As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(255, 255, 0, 1)
                 FocusedBorderThickness: =4
                 Height: =Parent.Height
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -90,9 +91,9 @@ CPP As screen:
                 FontColor: =RGBA(0, 0, 0, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
-                LayoutMinHeight: =32
                 LayoutMinWidth: =320
                 Mode: ='TextInputCanvas.Mode'.Multiline
+                OnChange: =
                 Placeholder: ="Buscar Por Ref. Sap o por Nombre"
                 TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
                 Type: ='TextInputCanvas.Type'.Search
@@ -100,6 +101,17 @@ CPP As screen:
                 X: =0
                 Y: =0
                 ZIndex: =2
+
+        ButtonCanvas6_2 As Botón:
+            BasePaletteColor: =RGBA(249, 83, 109, 1)
+            DisplayMode: =DisplayMode.Edit
+            Height: =22
+            OnSelect: =Reset(TextInputCanvas6)
+            Text: ="Reset"
+            Width: =56
+            X: =286
+            Y: =54
+            ZIndex: =4
 
     Container2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -808,7 +820,7 @@ CPP As screen:
             BasePaletteColor: =RGBA(249, 83, 109, 1)
             DisplayMode: =DisplayMode.Edit
             Height: =25
-            OnSelect: =Reset(DropMarca)
+            OnSelect: =Reset(DropMarca);
             Text: ="Reset"
             Width: =56
             X: =76
