@@ -69,7 +69,7 @@ Resumen As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =1113
+        Width: =1190
         X: =15
         Y: =92
         ZIndex: =2
@@ -82,7 +82,7 @@ Resumen As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1104
+            Width: =1179
             X: =4
             ZIndex: =4
 
@@ -94,7 +94,7 @@ Resumen As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1104
+            Width: =1179
             X: =4
             Y: =49
             ZIndex: =13
@@ -102,6 +102,7 @@ Resumen As screen:
             "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
+                Height: =Parent.Height
                 Items: |-
                     =Sort(
                         Distinct(colAllSelectedItems, {No: No , Nombre: Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, 
@@ -114,6 +115,7 @@ Resumen As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =104
+                Width: =Parent.Width
                 ZIndex: =1
 
                 Separator1 As rectangle:
@@ -133,7 +135,7 @@ Resumen As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =1104
+                    Width: =1179
                     ZIndex: =6
 
                     TextCanvas14 As Texto:
@@ -142,7 +144,7 @@ Resumen As screen:
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.No
-                        Width: =96
+                        Width: =40
                         X: =0
                         Y: =0
                         ZIndex: =1
@@ -196,8 +198,64 @@ Resumen As screen:
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
+                        Text: =ThisItem.Value.RefSAP
                         Width: =96
                         X: =0
                         Y: =0
                         ZIndex: =6
+
+                    TextCanvas20 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: =ThisItem.Value.RefFabricante
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =7
+
+                    TextCanvas21 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: =ThisItem.Value.Equivalencia
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =8
+
+                    TextCanvas22 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: =ThisItem.Value.RefFleetguard
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =9
+
+                    TextCanvas23 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: =ThisItem.Value.Cantidad
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =10
+
+                    TextCanvas24 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: =ThisItem.Value.Frecuencia
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =11
 
