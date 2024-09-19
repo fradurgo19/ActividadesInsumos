@@ -455,8 +455,8 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Placeholder: ="Buscar"
-                        Width: =190
+                        Placeholder: ="Buscar correo o Asunto"
+                        Width: =180
                         X: =0
                         Y: =0
                         ZIndex: =1
@@ -733,7 +733,7 @@
                         =Sort(
                             Filter(
                                 'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                               (TextInputCanvas5.Value in Correo || TextInputCanvas5.Value in Asunto || IsBlank(TextInputCanvas5.Value)) &&
+                               (TextInputCanvas5.Value in 'Correo Responsable' || TextInputCanvas5.Value in Asunto || IsBlank(TextInputCanvas5.Value)) &&
                                 ('Tipo de Comunicación'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                             ),
                             Modificado,
@@ -743,6 +743,7 @@
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
                     TemplateSize: =78
+                    Transition: =Transition.Pop
                     Width: =Parent.Width
                     ZIndex: =1
 
