@@ -104,8 +104,8 @@ Resumen As screen:
                 DelayItemLoading: =true
                 Items: |-
                     =Sort(
-                        Distinct(colAllSelectedItems, {No: No , Nombre: Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, field_8: field_8}),
-                        Value.field_0
+                        Distinct(colAllSelectedItems, {No: No , Nombre: Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP}),
+                        Value.No
                     )
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
@@ -124,9 +124,10 @@ Resumen As screen:
                     Y: =Parent.TemplateHeight - Self.Height
                     ZIndex: =5
 
-                Container35 As groupContainer.manualLayoutContainer:
+                Container36 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =104
+                    LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -134,19 +135,63 @@ Resumen As screen:
                     Width: =1104
                     ZIndex: =6
 
-                    TextCanvas10 As Texto:
+                    TextCanvas14 As Texto:
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
                         Width: =96
-                        X: =44
-                        Y: =12
+                        X: =0
+                        Y: =0
                         ZIndex: =1
 
-                    TextCanvas12 As Texto:
+                    TextCanvas15 As Texto:
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
                         Width: =96
-                        X: =140
-                        Y: =12
+                        X: =0
+                        Y: =0
                         ZIndex: =2
+
+                    TextCanvas16 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    TextCanvas17 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                    TextCanvas18 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
+
+                    TextCanvas19 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =6
 
