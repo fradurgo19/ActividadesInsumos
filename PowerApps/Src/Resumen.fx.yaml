@@ -44,8 +44,8 @@ Resumen As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1287
-            X: =68
+            Width: =1027
+            X: =328
             ZIndex: =2
 
             EncabezadoContenedor_3 As EncabezadoContenedor:
@@ -381,145 +381,184 @@ Resumen As screen:
                     ZIndex: =6
 
                     TextCanvas14 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.No
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =40
                         X: =0
                         Y: =0
                         ZIndex: =1
 
                     TextCanvas23 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Cantidad
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =40
                         X: =0
                         Y: =0
                         ZIndex: =2
 
                     TextCanvas15 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Size: =13
                         Text: =ThisItem.Value.Nombre
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =120
                         X: =0
                         Y: =0
                         ZIndex: =3
 
                     TextCanvas16 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Marca
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =70
                         X: =0
                         Y: =0
                         ZIndex: =4
 
                     TextCanvas17 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Modelo
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =70
                         X: =0
                         Y: =0
                         ZIndex: =5
 
                     TextCanvas18 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Parte
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =96
                         X: =0
                         Y: =0
                         ZIndex: =6
 
                     TextCanvas19 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.RefSAP
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =50
                         X: =0
                         Y: =0
                         ZIndex: =7
 
                     TextCanvas20 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.RefFabricante
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =70
                         X: =0
                         Y: =0
                         ZIndex: =8
 
                     TextCanvas21 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Equivalencia
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =80
                         X: =0
                         Y: =0
                         ZIndex: =9
 
                     TextCanvas22 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.RefFleetguard
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =80
                         X: =0
                         Y: =0
                         ZIndex: =10
 
                     TextCanvas24 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Frecuencia
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =80
                         X: =0
                         Y: =0
                         ZIndex: =11
 
                     TextCanvas24_1 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Medida
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =70
                         X: =0
                         Y: =0
                         ZIndex: =12
 
                     TextCanvas24_2 As Texto:
+                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Open Sans'
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Size: =13
                         Text: =ThisItem.Value.Comentario
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =160
                         X: =0
                         Y: =0
@@ -585,4 +624,16 @@ Resumen As screen:
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Width: =60
                         ZIndex: =16
+
+    ButtonCanvas9 As Botón:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =// Exportar el contenedor a PDF y abrirlo en una nueva pestaña
+            Launch(PDF(Gallery1))
+        Text: ="PDF"
+        Width: =96
+        X: =1232
+        Y: =136
+        ZIndex: =3
 
