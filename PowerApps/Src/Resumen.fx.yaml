@@ -70,19 +70,74 @@ Resumen As screen:
                 =Office365Outlook.SendEmailV2(
                     User().Email, 
                     "Marca: " & Gallery1.Selected.TextCanvas16.Text & "; Modelo: " & Gallery1.Selected.TextCanvas17.Text, 
-                    "", // Leave this empty for the email body or add a body if needed
+                    "<!DOCTYPE html>
+                <html>
+                <head>
+                    <style>
+                        .email-container {
+                            font-family: Arial, sans-serif;
+                            color: #333;
+                            text-align: center;
+                        }
+                        .header {
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: #004d99;
+                        }
+                        .message {
+                            margin: 20px 0;
+                            font-size: 16px;
+                        }
+                        .footer {
+                            margin-top: 30px;
+                            font-size: 14px;
+                            color: #555;
+                        }
+                        .gif-image {
+                            width: 150px;
+                            height: auto;
+                            margin: 20px 0;
+                        }
+                        .icon {
+                            width: 30px;
+                            height: 30px;
+                            vertical-align: middle;
+                        }
+                    </style>
+                </head>
+                <body>
+                
+                <div class='email-container'>
+                    <h1 class='header'>📄 ¡Revisa el documento adjunto!</h1>
+                    <p class='message'>
+                        <img src='https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif' alt='Revisar PDF' class='gif-image' /><br/>
+                        Por favor revise la consulta PDF adjunta en el presente correo.<br/><br/>
+                        <strong>Att:</strong> Power Apps <br/> 
+                        <strong>SERVICIO POSTVENTA PARTEQUIPOS</strong> 
+                    </p>
+                    <p class='footer'>
+                        <img src='https://upload.wikimedia.org/wikipedia/commons/8/82/Facebook_icon.svg' class='icon' alt='Facebook' /> 
+                        <img src='https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_icon.svg' class='icon' alt='Twitter' /> 
+                        <img src='https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png' class='icon' alt='Instagram' />
+                    </p>
+                </div>
+                
+                </body>
+                </html>", 
                     {
                         Attachments: [
                             {
                                 Name: "ConsultaCPP.pdf", 
-                                ContentBytes: PDF(Container11_1, {ExpandContainers: true})
+                                ContentBytes: PDF(Container2_1, {ExpandContainers: true})
                             }
-                        ]
+                        ],
+                        IsHtml: true
                     }
-                )
+                );
+                Notify("Documento enviado", NotificationType.Success, 3000)
             Text: ="Email"
             Width: =96
-            X: =81
+            X: =130
             Y: =42
             ZIndex: =4
 
@@ -394,6 +449,7 @@ Resumen As screen:
                     ZIndex: =5
 
                 Container36 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderThickness: =1
                     DropShadow: =DropShadow.Light
                     Height: =104
                     LayoutMode: =LayoutMode.Auto
