@@ -784,9 +784,29 @@
                     =Launch("https://teams.microsoft.com/l/channel/19%3Af661e47534c545eca9225e7a9db41b3a%40thread.tacv2/Aplicativo%20Mantenimiento%2C%20Manuales%20y%20CPP?groupId=31f2e519-640f-4cee-856f-e4ae247c0e5a")
                 Text: ="Soporte"
                 Width: =96
-                X: =840
-                Y: =30
+                X: =899
+                Y: =196
                 ZIndex: =24
+
+            TextCanvas8 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: |-
+                    ="Versión: " & App.StudioVersion
+                Width: =182
+                X: =827
+                Y: =30
+                ZIndex: =25
+
+            TextCanvas8_1 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: |-
+                    ="Última actualización: " & Text(LookUp('TEMPARIO DE MANTENIMIENTOS', ID = 11451).Creado)
+                Width: =257
+                X: =745
+                Y: =2
+                ZIndex: =26
 
     MaskConfirm As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -1140,7 +1160,7 @@
             Type: ="s"
             VariantName: ="textualViewCard"
             Width: =160
-            X: =793
+            X: =773
             Y: =0
             ZIndex: =13
 
@@ -1288,7 +1308,7 @@
         RadiusTopLeft: =100
         RadiusTopRight: =100
         Text: ="Cuestionario"
-        Width: =270
+        Width: =187
         X: =954
         Y: =663
         ZIndex: =11
@@ -1316,7 +1336,7 @@
         RadiusTopLeft: =100
         RadiusTopRight: =100
         Text: ="Link Google Drive"
-        Width: =270
+        Width: =187
         X: =350
         Y: =614
         ZIndex: =12
@@ -1344,7 +1364,7 @@
         RadiusTopLeft: =100
         RadiusTopRight: =100
         Text: ="Link Google Drive"
-        Width: =270
+        Width: =187
         X: =655
         Y: =615
         ZIndex: =13
