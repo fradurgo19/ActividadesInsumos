@@ -4283,6 +4283,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Resumen.Container24_1.ButtonCanvas9_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Resumen.Container24_1.ButtonCanvas9_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Resumen",
+                "type": "Resumen.Container24_1.ButtonCanvas9_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varCargar"
                 }
               ],
@@ -4444,6 +4474,66 @@
               },
               "properties": {
                 "member": "varResetCheckbox",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.pdfContrent"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.pdfContrent",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "pdfContrent",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varPDF"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varPDF",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varPDF",
                 "module": "App",
                 "type": "App"
               }

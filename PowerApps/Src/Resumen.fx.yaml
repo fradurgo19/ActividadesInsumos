@@ -63,6 +63,7 @@ Resumen As screen:
             ZIndex: =3
 
         ButtonCanvas9 As Botón:
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Icon: ="Mail"
@@ -137,9 +138,25 @@ Resumen As screen:
                 Notify("Documento enviado", NotificationType.Success, 3000)
             Text: ="Email"
             Width: =96
-            X: =130
+            X: =115
             Y: =42
             ZIndex: =4
+
+        ButtonCanvas9_1 As Botón:
+            BasePaletteColor: =RGBA(249, 83, 109, 1)
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Icon: ="DocumentPdf"
+            OnSelect: |
+                =Set(varPDF,true);
+                Set(pdfContrent,JSON(PDF(Container2_1, {ExpandContainers: true}),JSONFormat.IncludeBinaryData));
+                Notify("PDF Generado", NotificationType.Success, 3000);
+                Set(varPDF,false)
+            Text: ="PDF"
+            Width: =96
+            X: =226
+            Y: =44
+            ZIndex: =5
 
     Container2_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
