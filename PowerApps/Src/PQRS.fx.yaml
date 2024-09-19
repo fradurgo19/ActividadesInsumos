@@ -455,7 +455,7 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Placeholder: ="Buscar correo o Asunto"
+                        Placeholder: ="Buscar ID, Correo, Asunto"
                         Width: =180
                         X: =0
                         Y: =0
@@ -555,6 +555,7 @@
 
                 Container17 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
+                    Fill: =RGBA(39, 113, 194, 1)
                     Height: =Parent.Height
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutMode: =LayoutMode.Auto
@@ -564,6 +565,21 @@
                     RadiusTopRight: =4
                     Width: =Parent.Width
                     ZIndex: =2
+
+                    TextCanvas7_20 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =5
+                        Size: =12
+                        Text: ="ID"
+                        Width: =30
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
 
                     TextCanvas7 As Texto:
                         AutoHeight: =false
@@ -579,7 +595,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =1
+                        ZIndex: =2
 
                     TextCanvas7_1 As Texto:
                         AutoHeight: =false
@@ -595,7 +611,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =2
+                        ZIndex: =3
 
                     TextCanvas7_2 As Texto:
                         AutoHeight: =false
@@ -611,7 +627,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =3
+                        ZIndex: =4
 
                     TextCanvas7_3 As Texto:
                         AutoHeight: =false
@@ -627,7 +643,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =4
+                        ZIndex: =5
 
                     TextCanvas7_4 As Texto:
                         AutoHeight: =false
@@ -643,7 +659,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =5
+                        ZIndex: =6
 
                     TextCanvas7_5 As Texto:
                         AutoHeight: =false
@@ -659,7 +675,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =6
+                        ZIndex: =7
 
                     TextCanvas7_7 As Texto:
                         AutoHeight: =false
@@ -676,7 +692,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =7
+                        ZIndex: =8
 
                     TextCanvas7_8 As Texto:
                         AutoHeight: =false
@@ -692,7 +708,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =8
+                        ZIndex: =9
 
                     TextCanvas7_6 As Texto:
                         AutoHeight: =false
@@ -708,7 +724,7 @@
                         Width: =96
                         X: =0
                         Y: =0
-                        ZIndex: =9
+                        ZIndex: =10
 
             Container16 As groupContainer.manualLayoutContainer:
                 BorderThickness: =2
@@ -733,7 +749,7 @@
                         =Sort(
                             Filter(
                                 'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                               (TextInputCanvas5.Value in 'Correo Responsable' || TextInputCanvas5.Value in Asunto || IsBlank(TextInputCanvas5.Value)) &&
+                               (TextInputCanvas5.Value in 'Correo Responsable' || TextInputCanvas5.Value in Asunto || TextInputCanvas5.Value in ID || IsBlank(TextInputCanvas5.Value)) &&
                                 ('Tipo de Comunicación'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                             ),
                             Modificado,
@@ -791,6 +807,17 @@
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
+
+                            TextCanvas4 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =28
+                                Size: =11
+                                Text: =ThisItem.ID
+                                Width: =32
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
 
                         TextCanvas9 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -1033,7 +1060,8 @@
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =50
+                                FontSize: =15
+                                Height: =65
                                 Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Width: =Parent.Width - 48
@@ -1083,6 +1111,8 @@
                             "DataCardValue54 As 'Entrada de texto'":
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
+                                FontColor: =RGBA(0, 0, 0, 1)
+                                FontSize: =15
                                 Height: =92
                                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                                 Placeholder: ="Escriba Respuesta"
@@ -1162,7 +1192,7 @@
                                 DisplayMode: =Parent.DisplayMode
                                 FocusedBorderThickness: =4
                                 Font: =Font.'Segoe UI'
-                                Height: =63
+                                Height: =104
                                 HoverColor: =RGBA(51, 51, 51, 1)
                                 HoverFill: =RGBA(212, 212, 212, 1)
                                 IsInDataCard: =true
