@@ -14,8 +14,8 @@
         BorderThickness: =0
         Fill: =RGBA(249, 249, 249, 1)
         Height: =768
-        Width: =1016
-        X: =350
+        Width: =1071
+        X: =295
         ZIndex: =1
 
         SendEmailCard As dataCard:
@@ -25,7 +25,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height
-            Width: =1016
+            Width: =1071
             X: =
             Y: =
             ZIndex: =1
@@ -105,7 +105,7 @@
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
-        Width: =350
+        Width: =295
         ZIndex: =3
 
         MenuCard_5 As dataCard:
@@ -117,7 +117,7 @@
             Height: |
                 =Parent.Height-100
             Visible: =true
-            Width: =350
+            Width: =295
             X: =0
             Y: =0
             ZIndex: =1
@@ -130,13 +130,13 @@
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderColor: =logo_6.BorderColor
                 FocusedBorderThickness: =4
-                Height: =57
+                Height: =40
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: =Logo
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =199
+                Width: =155
                 X: =50
                 Y: =42
                 ZIndex: =1

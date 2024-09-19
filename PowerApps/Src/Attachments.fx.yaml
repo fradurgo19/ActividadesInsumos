@@ -14,9 +14,8 @@
         BorderThickness: =0
         Fill: =RGBA(255, 255, 255, 1)
         Height: =768
-        Width: =1014
-        X: |
-            =350
+        Width: =1069
+        X: =295
         ZIndex: =3
 
         DataCard4 As dataCard.blankCard:
@@ -25,7 +24,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
             Height: =728
-            Width: =1014
+            Width: =1069
             X: =0
             Y: =0
             ZIndex: =1
@@ -490,7 +489,7 @@
     Menu_3 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
-        Width: =350
+        Width: =295
         ZIndex: =4
 
         MenuCard_3 As dataCard:
@@ -500,7 +499,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =Parent.Height-100
-            Width: =350
+            Width: =295
             X: =0
             Y: =0
             ZIndex: =1
@@ -542,7 +541,7 @@
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =40
-                Width: =311+11
+                Width: =245
                 X: =39
                 Y: =logo_4.Y + logo_4.Height +32
                 ZIndex: =2
