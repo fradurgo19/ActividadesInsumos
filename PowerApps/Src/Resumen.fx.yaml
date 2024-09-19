@@ -65,13 +65,25 @@ Resumen As screen:
         ButtonCanvas9 As Botón:
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            OnSelect: |-
-                =// Exportar el contenedor a PDF y abrirlo en una nueva pestaña
-                Launch(PDF(Gallery1))
-            Text: ="PDF"
+            Icon: ="Mail"
+            OnSelect: |
+                =Office365Outlook.SendEmailV2(
+                    User().Email, 
+                    "Marca: " & Gallery1.Selected.TextCanvas16.Text & "; Modelo: " & Gallery1.Selected.TextCanvas17.Text, 
+                    "", // Leave this empty for the email body or add a body if needed
+                    {
+                        Attachments: [
+                            {
+                                Name: "ConsultaCPP.pdf", 
+                                ContentBytes: PDF(Container11_1, {ExpandContainers: true})
+                            }
+                        ]
+                    }
+                )
+            Text: ="Email"
             Width: =96
-            X: =40
-            Y: =27
+            X: =81
+            Y: =42
             ZIndex: =4
 
     Container2_1 As groupContainer.manualLayoutContainer:
