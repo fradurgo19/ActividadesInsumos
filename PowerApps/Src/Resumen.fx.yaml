@@ -62,6 +62,18 @@ Resumen As screen:
             Y: =4
             ZIndex: =3
 
+        ButtonCanvas9 As Botón:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: |-
+                =// Exportar el contenedor a PDF y abrirlo en una nueva pestaña
+                Launch(PDF(Gallery1))
+            Text: ="PDF"
+            Width: =96
+            X: =40
+            Y: =27
+            ZIndex: =4
+
     Container2_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =666
@@ -69,7 +81,7 @@ Resumen As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =1190
+        Width: =1337
         X: =15
         Y: =92
         ZIndex: =2
@@ -82,7 +94,7 @@ Resumen As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1179
+            Width: =1325
             X: =4
             ZIndex: =4
 
@@ -126,7 +138,7 @@ Resumen As screen:
                 LayoutMinWidth: =96
                 PaddingLeft: =3
                 Text: ="Nombre"
-                Width: =120
+                Width: =140
                 X: =0
                 Y: =0
                 ZIndex: =3
@@ -186,7 +198,7 @@ Resumen As screen:
                 LayoutMinWidth: =96
                 PaddingLeft: =3
                 Text: ="RefSAP"
-                Width: =50
+                Width: =90
                 X: =0
                 Y: =0
                 ZIndex: =7
@@ -201,7 +213,7 @@ Resumen As screen:
                 LayoutMinWidth: =96
                 PaddingLeft: =3
                 Text: ="Fabricante"
-                Width: =70
+                Width: =90
                 X: =0
                 Y: =0
                 ZIndex: =8
@@ -216,7 +228,7 @@ Resumen As screen:
                 LayoutMinWidth: =96
                 PaddingLeft: =3
                 Text: ="Equivalente"
-                Width: =80
+                Width: =90
                 X: =0
                 Y: =0
                 ZIndex: =9
@@ -231,7 +243,7 @@ Resumen As screen:
                 LayoutMinWidth: =96
                 PaddingLeft: =3
                 Text: ="Fleetguard"
-                Width: =80
+                Width: =90
                 X: =0
                 Y: =0
                 ZIndex: =10
@@ -246,7 +258,7 @@ Resumen As screen:
                 LayoutMinWidth: =96
                 PaddingLeft: =3
                 Text: ="Frecuencia"
-                Width: =80
+                Width: =90
                 X: =0
                 Y: =0
                 ZIndex: =11
@@ -276,7 +288,7 @@ Resumen As screen:
                 LayoutMinWidth: =96
                 PaddingLeft: =3
                 Text: ="Comentario"
-                Width: =140
+                Width: =170
                 X: =0
                 Y: =0
                 ZIndex: =13
@@ -334,7 +346,7 @@ Resumen As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1179
+            Width: =1325
             X: =4
             Y: =49
             ZIndex: =13
@@ -377,7 +389,7 @@ Resumen As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =1179
+                    Width: =1325
                     ZIndex: =6
 
                     TextCanvas14 As Texto:
@@ -418,7 +430,7 @@ Resumen As screen:
                         Size: =13
                         Text: =ThisItem.Value.Nombre
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =120
+                        Width: =140
                         X: =0
                         Y: =0
                         ZIndex: =3
@@ -474,7 +486,7 @@ Resumen As screen:
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.RefSAP
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =50
+                        Width: =90
                         X: =0
                         Y: =0
                         ZIndex: =7
@@ -488,7 +500,7 @@ Resumen As screen:
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.RefFabricante
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =70
+                        Width: =90
                         X: =0
                         Y: =0
                         ZIndex: =8
@@ -502,7 +514,7 @@ Resumen As screen:
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Equivalencia
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =80
+                        Width: =90
                         X: =0
                         Y: =0
                         ZIndex: =9
@@ -516,7 +528,7 @@ Resumen As screen:
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.RefFleetguard
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =80
+                        Width: =90
                         X: =0
                         Y: =0
                         ZIndex: =10
@@ -530,7 +542,7 @@ Resumen As screen:
                         LayoutMinWidth: =96
                         Text: =ThisItem.Value.Frecuencia
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =80
+                        Width: =90
                         X: =0
                         Y: =0
                         ZIndex: =11
@@ -559,7 +571,7 @@ Resumen As screen:
                         Size: =13
                         Text: =ThisItem.Value.Comentario
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =160
+                        Width: =170
                         X: =0
                         Y: =0
                         ZIndex: =13
@@ -583,7 +595,7 @@ Resumen As screen:
                         HoverFill: =App.Theme.Colors.Lighter70
                         OnSelect: =
                         Size: =11
-                        Width: =50
+                        Width: =70
                         X: =634
                         Y: =6
                         ZIndex: =14
@@ -624,16 +636,4 @@ Resumen As screen:
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Width: =60
                         ZIndex: =16
-
-    ButtonCanvas9 As Botón:
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        OnSelect: |-
-            =// Exportar el contenedor a PDF y abrirlo en una nueva pestaña
-            Launch(PDF(Gallery1))
-        Text: ="PDF"
-        Width: =96
-        X: =1232
-        Y: =136
-        ZIndex: =3
 
