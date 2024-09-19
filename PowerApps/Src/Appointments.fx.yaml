@@ -800,11 +800,11 @@
 
             TextCanvas8_1 As Texto:
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
+                Height: =28
                 Text: |-
-                    ="Última actualización: " & Text(LookUp('TEMPARIO DE MANTENIMIENTOS', ID = 11451).Creado)
-                Width: =257
-                X: =745
+                    ="Última actualización: " & Text(LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', ID = 3).Modificado)
+                Width: =304
+                X: =697
                 Y: =2
                 ZIndex: =26
 
