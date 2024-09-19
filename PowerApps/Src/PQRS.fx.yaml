@@ -714,7 +714,7 @@
                 BorderThickness: =2
                 DropShadow: =DropShadow.Light
                 Fill: =Color.White
-                Height: =447
+                Height: =417
                 RadiusBottomLeft: =10
                 RadiusBottomRight: =10
                 RadiusTopLeft: =10
@@ -728,7 +728,7 @@
                     BorderColor: =RGBA(139, 154, 159, 1)
                     BorderThickness: =2
                     DelayItemLoading: =true
-                    Height: =447
+                    Height: =415
                     Items: |-
                         =Sort(
                             Filter(
@@ -959,19 +959,19 @@
 
             Container20 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =73
+                Height: =112
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =975
                 X: =15
-                Y: =694
+                Y: =654
                 ZIndex: =23
 
                 Container21 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =73
+                    Height: =110
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMode: =LayoutMode.Auto
@@ -1029,27 +1029,16 @@
                             Y: =0
                             ZIndex: =1
 
-                            DataCardKey53 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =22
-                                Text: ="Estado"
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =Parent.Width - 48
-                                Wrap: =false
-                                X: =24
-                                Y: =10
-                                ZIndex: =1
-
                             "DataCardValue53 As 'Cuadro combinado'.pcfdataset":
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =32
+                                Height: =50
                                 Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Width: =Parent.Width - 48
                                 X: =24
-                                Y: =DataCardKey53.Y + DataCardKey53.Height + 4
+                                Y: =
                                 ZIndex: =2
 
                             ErrorMessage53 As Texto:
@@ -1071,7 +1060,7 @@
                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                 Width: =30
                                 X: =0
-                                Y: =DataCardKey53.Y
+                                Y: =
                                 ZIndex: =4
 
                         "'Respuesta a Solicitud_DataCard5' As typedDataCard.fluentV9TextualEditCard":
@@ -1082,37 +1071,27 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,RespuestaaSolicitud)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =112
                             MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, RespuestaaSolicitud)
                             Required: =false
                             Update: =DataCardValue54.Value
-                            Width: =243
+                            Width: =264
                             X: =1
                             Y: =0
                             ZIndex: =1
 
-                            DataCardKey54 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =22
-                                Text: ="Respuesta"
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =Parent.Width - 48
-                                Wrap: =false
-                                X: =24
-                                Y: =10
-                                ZIndex: =1
-
                             "DataCardValue54 As 'Entrada de texto'":
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =32
+                                Height: =92
                                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Placeholder: ="Escriba Respuesta"
                                 Required: =Parent.Required
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Value: =Parent.Default
-                                Width: =Parent.Width - 48
-                                X: =24
-                                Y: =DataCardKey54.Y + DataCardKey54.Height + 4
+                                Width: =229
+                                X: =10
+                                Y: =
                                 ZIndex: =2
 
                             ErrorMessage54 As Texto:
@@ -1134,7 +1113,7 @@
                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                 Width: =30
                                 X: =0
-                                Y: =DataCardKey54.Y
+                                Y: =
                                 ZIndex: =4
 
                         "'Datos adjuntos_DataCard4' As typedDataCard.attachmentsEditCard":
@@ -1214,7 +1193,7 @@
                 RadiusTopRight: =4
                 Width: =766
                 X: =224
-                Y: =650
+                Y: =610
                 ZIndex: =24
 
                 Container23 As groupContainer.horizontalAutoLayoutContainer:
@@ -1237,7 +1216,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Text: ="Cambiar Estado"
-                        Width: =220
+                        Width: =270
                         X: =0
                         Y: =0
                         ZIndex: =1
