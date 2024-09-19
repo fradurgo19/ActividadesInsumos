@@ -1,0 +1,243 @@
+Resumen As screen:
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    OnVisible: |
+        =// Definir marcas
+        ClearCollect(colMarcas, 
+            { Id: 1, Marca: "CASE" },
+            { Id: 2, Marca: "HITACHI" },
+            { Id: 3, Marca: "LINK-BELT" }
+        );
+        
+        // Definir modelos basados en la marca seleccionada
+        ClearCollect(colModelos, 
+            { IdMarca: 3, Modelo: "210x2" }, 
+            { IdMarca: 1, Modelo: "2020Y" }, 
+            { IdMarca: 2, Modelo: "H100" }, 
+            { IdMarca: 2, Modelo: "H200" }, 
+            { IdMarca: 3, Modelo: "LB50" }
+        );
+        
+        // Definir partes basadas en el modelo seleccionado
+        ClearCollect(colPartes, 
+            { IdModelo: "210x2", Parte: "FILTRACIÓN" },
+            { IdModelo: "210x2", Parte: "HERRAMIENTA CORTE " },
+            { IdModelo: "210x2", Parte: "TREN RODAJE" },
+            { IdModelo: "210x2", Parte: "EMP CILINDROS" }
+        )
+
+    Container24_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =76
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        Y: =4
+        ZIndex: =1
+
+        Container25_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =74
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1287
+            X: =68
+            ZIndex: =2
+
+            EncabezadoContenedor_3 As EncabezadoContenedor:
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+                Width: =Parent.Width
+
+        Arrow1_2 As arrow.backArrow:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Navigate(SendEmail_1,ScreenTransition.UnCoverRight )
+            X: =4
+            Y: =4
+            ZIndex: =3
+
+    Container2_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =601
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1113
+        X: =15
+        Y: =156
+        ZIndex: =2
+
+        Container5_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =64
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =332
+            X: =4
+            ZIndex: =4
+
+            "ComboboxMarca_1 As 'Cuadro combinado'.pcfdataset":
+                AccessibleLabel: =""
+                AlignInContainer: =AlignInContainer.Stretch
+                Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                InputTextPlaceholder: ="Buscar Marca"
+                Items: =colMarcas
+                LayoutMinWidth: =320
+                OnChange: =
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =5
+
+                Marca1_1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Marca"
+                    FieldName: ="Marca"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =6
+
+        Container9_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =64
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =345
+            X: =336
+            ZIndex: =7
+
+            "ComboboxModelo_1 As 'Cuadro combinado'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                Items: =Filter(colModelos, IdMarca = ComboboxMarca_1.Selected.Id)
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =8
+
+                Modelo1_1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Modelo"
+                    FieldName: ="Modelo"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =9
+
+        Container10_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =64
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =432
+            X: =681
+            ZIndex: =10
+
+            "ComboboxParte_1 As 'Cuadro combinado'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                Items: =Filter(colPartes, IdModelo = ComboboxModelo_1.Selected.Modelo)
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =11
+
+                Parte1_1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Parte"
+                    FieldName: ="Parte"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =12
+
+        Container11_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =102
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =332
+            X: =4
+            Y: =137
+            ZIndex: =13
+
+    Container4_2 As groupContainer.manualLayoutContainer:
+        BorderThickness: =2
+        DropShadow: =DropShadow.Light
+        Height: =62
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1113
+        X: =15
+        Y: =80
+        ZIndex: =3
+
+        ButtonCanvas4_3 As Botón:
+            Align: =Align.Center
+            BasePaletteColor: =RGBA(237, 17, 28, 1)
+            BorderColor: =RGBA(9, 33, 98, 1)
+            BorderRadiusBottomLeft: =5
+            BorderRadiusBottomRight: =5
+            BorderRadiusTopLeft: =5
+            BorderRadiusTopRight: =5
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =2
+            DisplayMode: =DisplayMode.Edit
+            Height: =48
+            Text: =
+            Width: =1113
+            X: =0
+            Y: =(Parent.Height - Self.Height)/2
+            ZIndex: =15
+
+        Container17_2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =16
+
+            TextCanvas7_10 As Texto:
+                AutoHeight: =false
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontColor: =RGBA(255, 255, 255, 1)
+                Height: =Parent.Height
+                PaddingLeft: =5
+                Size: =12
+                Text: ="Manual de Partes"
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =17
+
