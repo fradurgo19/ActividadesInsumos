@@ -21,8 +21,8 @@ Resumen As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =767
-            X: =586
+            Width: =1033
+            X: =319
             ZIndex: =2
 
             EncabezadoContenedor_3 As EncabezadoContenedor:
@@ -43,7 +43,7 @@ Resumen As screen:
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            Icon: ="Mail"
+            Icon: ="DocumentPdf"
             OnSelect: |
                 =Office365Outlook.SendEmailV2(
                     User().Email, 
@@ -115,8 +115,8 @@ Resumen As screen:
                 Notify("Documento enviado", NotificationType.Success, 3000)
             Text: ="Email"
             Width: =96
-            X: =490
-            Y: =0
+            X: =132
+            Y: =42
             ZIndex: =4
 
         ButtonCanvas9_1 As Botón:
@@ -130,6 +130,7 @@ Resumen As screen:
                 Notify("PDF Generado", NotificationType.Success, 3000);
                 Set(varPDF,false)
             Text: ="PDF"
+            Visible: =false
             Width: =96
             X: =490
             Y: =32
@@ -699,38 +700,6 @@ Resumen As screen:
                         Width: =60
                         ZIndex: =16
 
-    Container39 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =65
-        LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutJustifyContent: =LayoutJustifyContent.Center
-        LayoutMode: =LayoutMode.Auto
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =varPDFGen
-        Width: =145
-        X: =1206
-        Y: =4
-        ZIndex: =3
-
-        Image23 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =trabajar
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            ZIndex: =1
-
     Container35 As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =76
@@ -775,7 +744,7 @@ Resumen As screen:
             ItemHoverColor: =RGBA(51, 51, 51, 1)
             ItemHoverFill: =RGBA(212, 212, 212, 1)
             Items: |-
-                = [{Name:Gallery1.Selected.TextCanvas17.Text &"pdf",Value:Substitute(pdfContent,"""","")}]
+                = [{Name:Gallery1.Selected.TextCanvas17.Text &".pdf",Value:Substitute(pdfContent,"""","")}]
             ItemSpacing: =12
             NoAttachmentsColor: =RGBA(166, 166, 166, 1)
             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
