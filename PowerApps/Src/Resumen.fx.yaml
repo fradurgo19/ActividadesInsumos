@@ -148,7 +148,7 @@ Resumen As screen:
             Height: =32
             Icon: ="DocumentPdf"
             OnSelect: |
-                =Set(varPDF,true);
+                =Set(varPDFGen,true);
                 Set(pdfContrent,JSON(PDF(Container2_1, {ExpandContainers: true}),JSONFormat.IncludeBinaryData));
                 Notify("PDF Generado", NotificationType.Success, 3000);
                 Set(varPDF,false)
@@ -726,13 +726,15 @@ Resumen As screen:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height
-        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
+        Visible: =varPDFGen
         Width: =Parent.Width
         Y: =4
         ZIndex: =3
