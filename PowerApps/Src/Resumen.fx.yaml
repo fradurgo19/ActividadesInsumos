@@ -1,29 +1,6 @@
 Resumen As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
-        =// Definir marcas
-        ClearCollect(colMarcas, 
-            { Id: 1, Marca: "CASE" },
-            { Id: 2, Marca: "HITACHI" },
-            { Id: 3, Marca: "LINK-BELT" }
-        );
-        
-        // Definir modelos basados en la marca seleccionada
-        ClearCollect(colModelos, 
-            { IdMarca: 3, Modelo: "210x2" }, 
-            { IdMarca: 1, Modelo: "2020Y" }, 
-            { IdMarca: 2, Modelo: "H100" }, 
-            { IdMarca: 2, Modelo: "H200" }, 
-            { IdMarca: 3, Modelo: "LB50" }
-        );
-        
-        // Definir partes basadas en el modelo seleccionado
-        ClearCollect(colPartes, 
-            { IdModelo: "210x2", Parte: "FILTRACIÓN" },
-            { IdModelo: "210x2", Parte: "HERRAMIENTA CORTE " },
-            { IdModelo: "210x2", Parte: "TREN RODAJE" },
-            { IdModelo: "210x2", Parte: "EMP CILINDROS" }
-        )
+    OnVisible: =Set(pdfContent,Blank())
 
     Container24_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -44,8 +21,8 @@ Resumen As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1027
-            X: =328
+            Width: =767
+            X: =586
             ZIndex: =2
 
             EncabezadoContenedor_3 As EncabezadoContenedor:
@@ -138,8 +115,8 @@ Resumen As screen:
                 Notify("Documento enviado", NotificationType.Success, 3000)
             Text: ="Email"
             Width: =96
-            X: =115
-            Y: =42
+            X: =490
+            Y: =0
             ZIndex: =4
 
         ButtonCanvas9_1 As Botón:
@@ -149,18 +126,18 @@ Resumen As screen:
             Icon: ="DocumentPdf"
             OnSelect: |
                 =Set(varPDFGen,true);
-                Set(pdfContrent,JSON(PDF(Container2_1, {ExpandContainers: true}),JSONFormat.IncludeBinaryData));
+                Set(pdfContent,JSON(PDF(Container2_1, {ExpandContainers: true}),JSONFormat.IncludeBinaryData));
                 Notify("PDF Generado", NotificationType.Success, 3000);
                 Set(varPDF,false)
             Text: ="PDF"
             Width: =96
-            X: =226
-            Y: =44
+            X: =490
+            Y: =32
             ZIndex: =5
 
     Container2_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =666
+        Height: =638
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -725,7 +702,7 @@ Resumen As screen:
     Container39 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =Parent.Height
+        Height: =65
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -735,7 +712,8 @@ Resumen As screen:
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Visible: =varPDFGen
-        Width: =Parent.Width
+        Width: =145
+        X: =1206
         Y: =4
         ZIndex: =3
 
@@ -752,4 +730,60 @@ Resumen As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             ZIndex: =1
+
+    Container35 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =76
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =pdfContent<>Blank()
+        Width: =373
+        X: =96
+        Y: =4
+        ZIndex: =4
+
+        TextCanvas10 As Texto:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            LayoutMinHeight: =32
+            LayoutMinWidth: =96
+            Text: ="Descargar"
+            Width: =96
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        DataCardValue103 As attachments:
+            BorderColor: =
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =Parent.DisplayMode
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =Parent.Height *70%
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            ItemColor: =RGBA(0, 0, 0, 1)
+            ItemFill: =RGBA(105, 121, 126, 1)
+            ItemHoverColor: =RGBA(51, 51, 51, 1)
+            ItemHoverFill: =RGBA(212, 212, 212, 1)
+            Items: |-
+                = [{Name:Gallery1.Selected.TextCanvas17.Text &"pdf",Value:Substitute(pdfContent,"""","")}]
+            ItemSpacing: =12
+            NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+            PaddingRight: =5
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Size: =8
+            Tooltip: =
+            Width: =Parent.Width
+            ZIndex: =2
 
