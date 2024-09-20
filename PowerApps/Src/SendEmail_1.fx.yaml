@@ -307,23 +307,6 @@
                     Y: =12
                     ZIndex: =14
 
-            Image5_1 As image:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =52
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Image: ='icons8-libro-94'
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                X: =79
-                Y: =620
-                ZIndex: =12
-
     SendEmailCanvas_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Fill: =RGBA(249, 249, 249, 1)
@@ -433,14 +416,14 @@
         ZIndex: =3
 
     ButtonCanvas1 As Botón:
-        BasePaletteColor: =RGBA(227, 106, 244, 1)
+        BasePaletteColor: =RGBA(5, 102, 178, 1)
         DisplayMode: =DisplayMode.Edit
         Height: =62
         OnSelect: =Navigate(SendEmail_2,ScreenTransition.CoverRight )
         Text: ="Manuales"
         Width: =165
-        X: =437
-        Y: =200
+        X: =371
+        Y: =194
         ZIndex: =4
 
     ButtonCanvas1_1 As Botón:
