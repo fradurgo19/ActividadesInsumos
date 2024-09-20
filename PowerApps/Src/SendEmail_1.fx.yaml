@@ -416,7 +416,7 @@
         ZIndex: =3
 
     ButtonCanvas1 As Botón:
-        BasePaletteColor: =RGBA(5, 102, 178, 1)
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =62
         OnSelect: =Navigate(SendEmail_2,ScreenTransition.CoverRight )
@@ -427,7 +427,7 @@
         ZIndex: =4
 
     ButtonCanvas1_1 As Botón:
-        BasePaletteColor: =RGBA(8, 222, 8, 1)
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =62
         OnSelect: =Navigate(CPP,ScreenTransition.UnCoverRight)
