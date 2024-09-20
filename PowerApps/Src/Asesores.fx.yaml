@@ -1,11 +1,13 @@
 "Asesores As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Height: =Max(App.Height, App.DesignHeight)
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
+    OnVisible: |+
         =Set(CurrentStep,"9");
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
-        UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
+        UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        ClearCollect(colOportunidades, 'Seguimiento Clientes Equipos Telemetría')
+        
     Orientation: =If(Asesores.Width < Asesores.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Asesores.Width)
     Width: =Max(App.Width, App.DesignWidth)
@@ -493,19 +495,6 @@
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
-
-                            TextCanvas12_1 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =32
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                Text: |+
-                                    =GroupBy('Seguimiento Clientes Equipos Telemetría', "MesCreado", "MonthGroup")
-                                    
-                                Width: =96
-                                X: =0
-                                Y: =0
-                                ZIndex: =2
 
                 ButtonCanvas1_3 As Botón:
                     BasePaletteColor: =
