@@ -459,7 +459,7 @@
 
                 Container39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =425
+                    Height: =423
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMode: =LayoutMode.Auto
@@ -468,7 +468,7 @@
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =217
-                    Y: =57
+                    Y: =96
                     ZIndex: =2
 
                     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -550,4 +550,52 @@
                     X: =956
                     Y: =680
                     ZIndex: =3
+
+                Container40 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =349
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =732
+                    X: =323
+                    Y: =96
+                    ZIndex: =4
+
+                    "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        DelayItemLoading: =true
+                        Height: =200
+                        Items: =colOportunidades
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =0
+                        TemplateSize: =104
+                        X: =40
+                        Y: =40
+                        ZIndex: =1
+
+                        Separator2 As rectangle:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =8
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - Self.Height
+                            ZIndex: =5
+
+                        Container43 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            Height: =96
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =732
+                            ZIndex: =6
 
