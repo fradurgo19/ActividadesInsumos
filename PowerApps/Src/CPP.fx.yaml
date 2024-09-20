@@ -294,6 +294,38 @@ CPP As screen:
                             Y: =0
                             ZIndex: =2
 
+                        TextCanvas25 As Texto:
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =15
+                            Text: =ThisItem.Marca
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =50
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas26 As Texto:
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =15
+                            Text: =ThisItem.Modelo
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
                         TextCanvas9_12 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
                             BorderColor: =RGBA(214, 221, 224, 1)
@@ -302,14 +334,14 @@ CPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             LayoutMinWidth: =32
-                            PaddingLeft: =10
+                            PaddingLeft: =5
                             Size: =15
                             Text: =ThisItem.RefSAP
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =5
 
                         TextCanvas9_13 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -323,10 +355,10 @@ CPP As screen:
                             Size: =15
                             Text: =ThisItem.RefFabricante
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =75
                             X: =0
                             Y: =0
-                            ZIndex: =5
+                            ZIndex: =6
 
                         TextCanvas9_14 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -340,10 +372,10 @@ CPP As screen:
                             Size: =15
                             Text: =ThisItem.Equivalencia
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =80
                             X: =0
                             Y: =0
-                            ZIndex: =6
+                            ZIndex: =7
 
                         TextCanvas9_15 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -361,7 +393,7 @@ CPP As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =7
+                            ZIndex: =8
 
                         TextCanvas9_16 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -379,7 +411,7 @@ CPP As screen:
                             Width: =50
                             X: =0
                             Y: =0
-                            ZIndex: =8
+                            ZIndex: =9
 
                         TextCanvas9_17 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -398,7 +430,7 @@ CPP As screen:
                             Width: =96
                             X: =0
                             Y: =0
-                            ZIndex: =9
+                            ZIndex: =10
 
                         TextCanvas9_18 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -416,7 +448,7 @@ CPP As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =10
+                            ZIndex: =11
 
                         TextCanvas9_19 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -434,7 +466,7 @@ CPP As screen:
                             Width: =140
                             X: =0
                             Y: =0
-                            ZIndex: =11
+                            ZIndex: =12
 
                     Checkbox1 As checkbox:
                         BorderColor: =App.Theme.Colors.Darker40
@@ -551,7 +583,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Marca"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =60
+                    Width: =50
                     X: =0
                     Y: =0
                     ZIndex: =3
@@ -583,7 +615,7 @@ CPP As screen:
                     Size: =12
                     Text: ="RefSap"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
+                    Width: =70
                     X: =0
                     Y: =0
                     ZIndex: =5
@@ -599,7 +631,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Fabricante"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
+                    Width: =75
                     X: =0
                     Y: =0
                     ZIndex: =6
