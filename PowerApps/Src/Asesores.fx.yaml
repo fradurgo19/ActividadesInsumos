@@ -6,7 +6,32 @@
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
-        ClearCollect(colOportunidades, 'Seguimiento Clientes Equipos Telemetría')
+        ClearCollect(colOportunidades, 'Seguimiento Clientes Equipos Telemetría');
+        ClearCollect(
+            colItemsPorMes,
+            AddColumns(
+                GroupBy(
+                    'Seguimiento Clientes Equipos Telemetría',
+                    MesCreado,  // Columna por la que se agrupa
+                    Grupo       // Nombre de la columna para almacenar registros agrupados
+                ),
+                Cantidad,    // Nombre de la nueva columna
+                CountRows(Grupo) // Contar los registros en cada grupo
+            )
+        );
+        
+        Set(
+            totalItems,
+            CountRows('Seguimiento Clientes Equipos Telemetría')
+        )
+        
+        
+        
+        
+        
+        
+        
+        
         
     Orientation: =If(Asesores.Width < Asesores.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Asesores.Width)
@@ -434,7 +459,7 @@
 
                 Container39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =584
+                    Height: =425
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMode: =LayoutMode.Auto
@@ -451,7 +476,7 @@
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DelayItemLoading: =true
                         Height: =Parent.Height
-                        Items: ='Seguimiento Clientes Equipos Telemetría'
+                        Items: =Sort(colItemsPorMes, MesCreado, SortOrder.Descending)
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
                         LayoutMinWidth: =0
@@ -485,16 +510,34 @@
                             Width: =215
                             ZIndex: =6
 
+                            TextCanvas30 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: |+
+                                    =ThisItem.MesCreado
+                                    
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
                             TextCanvas12 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =32
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Text: =Text(Month(ThisItem.Creado), "[$-es-ES]")
+                                Text: |-
+                                    =If(
+                                        totalItems > 0,
+                                        Round((ThisItem.Cantidad / totalItems) * 100, 2) & "%",
+                                        "0%"
+                                    )
                                 Width: =96
                                 X: =0
                                 Y: =0
-                                ZIndex: =1
+                                ZIndex: =2
 
                 ButtonCanvas1_3 As Botón:
                     BasePaletteColor: =

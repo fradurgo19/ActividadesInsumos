@@ -409,6 +409,7 @@
                 Container12 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =60
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -418,6 +419,7 @@
                     ZIndex: =2
 
                     Arrow1 As arrow.backArrow:
+                        AlignInContainer: =AlignInContainer.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         Fill: =RGBA(105, 121, 126, 1)
