@@ -70,23 +70,6 @@
                 Y: =logo_9.Y + logo_9.Height +32
                 ZIndex: =3
 
-                Bar_8 As rectangle:
-                    BorderColor: =RGBA(101, 128, 187, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledFill: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(144,19,254,1)
-                    FocusedBorderColor: =Bar_8.BorderColor
-                    FocusedBorderThickness: =4
-                    Height: =40
-                    HoverFill: =RGBA(105, 121, 126, 1)
-                    OnSelect: =Select(Parent)
-                    PressedFill: =RGBA(105, 121, 126, 1)
-                    Visible: =ThisItem.Step=CurrentStep
-                    Width: =4
-                    X: =350-4-MenuList_8.X-11
-                    ZIndex: =4
-
                 Menu3_8 As icon.AddDocument:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
@@ -223,7 +206,7 @@
                     PressedFill: =MenuName_8.Fill
                     Size: =12
                     Text: =ThisItem.Name
-                    Width: =230
+                    Width: =181
                     X: =40
                     Y: =10
                     ZIndex: =10
@@ -294,6 +277,18 @@
                     Width: =19
                     Y: =9
                     ZIndex: =13
+
+                Menu9_8 As Icono:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =23
+                    Icon: ="People"
+                    IconColor: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    Visible: |
+                        =ThisItem.Icon="Menu9"
+                    Width: =19
+                    X: =0
+                    Y: =9
+                    ZIndex: =14
 
             Image5_3 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)

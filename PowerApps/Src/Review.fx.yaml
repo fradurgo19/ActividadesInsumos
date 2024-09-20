@@ -790,6 +790,18 @@
                     Y: =9
                     ZIndex: =11
 
+                Menu9_4 As Icono:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =23
+                    Icon: ="People"
+                    IconColor: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    Visible: |
+                        =ThisItem.Icon="Menu9"
+                    Width: =19
+                    X: =0
+                    Y: =10
+                    ZIndex: =12
+
             Image16 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None

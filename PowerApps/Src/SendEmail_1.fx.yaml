@@ -98,7 +98,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
-                    Height: =22
+                    Height: =20
                     HoverBorderColor: =MenuName_6.BorderColor
                     HoverColor: =MenuName_6.Color
                     HoverFill: =MenuName_6.Fill
@@ -112,7 +112,7 @@
                     PressedFill: =MenuName_6.Fill
                     Size: =12
                     Text: =ThisItem.Name
-                    Width: =230
+                    Width: =194
                     X: =40
                     Y: =10
                     ZIndex: =5
@@ -294,6 +294,18 @@
                     Width: =19
                     Y: =11
                     ZIndex: =13
+
+                Menu9_6 As Icono:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =23
+                    Icon: ="People"
+                    IconColor: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    Visible: |
+                        =ThisItem.Icon="Menu9"
+                    Width: =19
+                    X: =0
+                    Y: =12
+                    ZIndex: =14
 
             Image5_1 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)

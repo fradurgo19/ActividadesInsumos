@@ -72,23 +72,6 @@
                 Y: =logo_8.Y + logo_8.Height +32
                 ZIndex: =11
 
-                Bar_7 As rectangle:
-                    BorderColor: =RGBA(101, 128, 187, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledFill: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(144,19,254,1)
-                    FocusedBorderColor: =Bar_7.BorderColor
-                    FocusedBorderThickness: =4
-                    Height: =40
-                    HoverFill: =RGBA(105, 121, 126, 1)
-                    OnSelect: =Select(Parent)
-                    PressedFill: =RGBA(105, 121, 126, 1)
-                    Visible: =ThisItem.Step=CurrentStep
-                    Width: =4
-                    X: =350-4-MenuList_7.X-11
-                    ZIndex: =12
-
                 Menu3_7 As icon.AddDocument:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
@@ -211,7 +194,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
-                    Height: =22
+                    Height: =21
                     HoverBorderColor: =MenuName_7.BorderColor
                     HoverColor: =MenuName_7.Color
                     HoverFill: =MenuName_7.Fill
@@ -225,7 +208,7 @@
                     PressedFill: =MenuName_7.Fill
                     Size: =12
                     Text: =ThisItem.Name
-                    Width: =230
+                    Width: =181
                     X: =40
                     Y: =10
                     ZIndex: =18
@@ -296,6 +279,18 @@
                     Width: =19
                     Y: =9
                     ZIndex: =21
+
+                Menu9_7 As Icono:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =23
+                    Icon: ="People"
+                    IconColor: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    Visible: |
+                        =ThisItem.Icon="Menu9"
+                    Width: =19
+                    X: =0
+                    Y: =5
+                    ZIndex: =22
 
             Image5_2 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)
