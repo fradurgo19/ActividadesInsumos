@@ -5,7 +5,8 @@
         =Set(CurrentStep,"8");
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
-        UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
+        UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        Refresh('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)')
     Orientation: =If(PQRS.Width < PQRS.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= PQRS.Width)
     Width: =Max(App.Width, App.DesignWidth)

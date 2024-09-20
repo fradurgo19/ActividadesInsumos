@@ -1,14 +1,14 @@
 CPP As screen:
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
+    OnVisible: |-
         =ClearCollect(UniqueMarcas, Distinct(TablaDataCpp, Marca));
         Concurrent(
           ClearCollect(colMarcas, Distinct(TablaDataCpp, Marca)),
           ClearCollect(colModelos, Distinct(TablaDataCpp, Modelo)),
           ClearCollect(colPartes, Distinct(TablaDataCpp, Parte))
         );
-        Refresh('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)')
+        Refresh(TablaDataCpp)
 
     Container24 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
