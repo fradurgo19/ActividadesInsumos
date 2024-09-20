@@ -495,14 +495,14 @@
 
                 Container34 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =351
+                    Height: =Parent.Height
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =994
-                    X: =24
+                    Width: =Parent.Width
+                    X: =4
                     Y: =4
                     ZIndex: =1
 
@@ -511,24 +511,25 @@
                         BorderThickness: =2
                         DelayItemLoading: =true
                         Fill: =RGBA(255, 255, 255, 1)
-                        Height: =121
+                        FillPortions: =0
+                        Height: =Parent.Height
                         Items: |-
                             =Filter(
                                 Manuales,
                                 (TextInputCanvas1.Value in Nombre || IsBlank(TextInputCanvas1.Value)) &&
                                 hiddenFolderPath = varPatch
                             )
-                        LayoutMinHeight: =287
-                        LayoutMinWidth: =320
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =200
                         LoadingSpinner: =LoadingSpinner.Data
-                        NavigationStep: =2
                         OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
                         ShowNavigation: |
                             =true
                         TemplatePadding: =0
-                        TemplateSize: =311
+                        TemplateSize: =200
                         Transition: =Transition.Pop
-                        Width: =977
+                        Width: |
+                            =Parent.Width
                         X: =323
                         Y: =632
                         ZIndex: =1
@@ -540,7 +541,7 @@
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledFill: =RGBA(0, 0, 0, 0)
                             FocusedBorderThickness: =4
-                            Height: =212
+                            Height: =108
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Large)
@@ -552,9 +553,9 @@
                             RadiusBottomRight: =8
                             RadiusTopLeft: =8
                             RadiusTopRight: =8
-                            Width: =180
+                            Width: =102
                             X: =16
-                            Y: =88
+                            Y: =113
                             ZIndex: =1
 
                         Title7 As label:
@@ -590,20 +591,22 @@
                             PaddingTop: =0
                             Size: =13
                             Text: =ThisItem.'Nombre de archivo con extensión'
-                            Width: =306
+                            Width: =187
+                            X: =1
+                            Y: =12
                             ZIndex: =3
 
                         ButtonCanvas4_2 As Botón:
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =12
-                            Height: =25
+                            Height: =38
                             OnSelect: |-
                                 =Launch("https://partequipos2.sharepoint.com/sites/servicioposventa/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
                             Text: ="Download"
                             Visible: =!ThisItem.EsCarpeta
                             Width: =70
-                            X: =236
-                            Y: =258
+                            X: =118
+                            Y: =285
                             ZIndex: =6
 
     Container15 As groupContainer.manualLayoutContainer:
