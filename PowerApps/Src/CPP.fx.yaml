@@ -181,8 +181,7 @@ CPP As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =1200
-        X: =15
+        Width: =1263
         Y: =80
         ZIndex: =9
 
@@ -194,8 +193,8 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =812
-            X: =376
+            Width: =913
+            X: =335
             Y: =52
             ZIndex: =2
 
@@ -235,7 +234,7 @@ CPP As screen:
                     TemplatePadding: =0
                     TemplateSize: =104
                     Transition: =Transition.Push
-                    Width: =812
+                    Width: =911
                     ZIndex: =1
 
                     Separator4_1 As rectangle:
@@ -257,7 +256,7 @@ CPP As screen:
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =Parent.Width
+                        Width: =868
                         ZIndex: =6
 
                         TextCanvas9_5 As Texto:
@@ -466,7 +465,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =376
+            Width: =335
             Y: =52
             ZIndex: =3
 
@@ -495,8 +494,8 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =823
-            X: =376
+            Width: =913
+            X: =335
             ZIndex: =4
 
             Container17_1 As groupContainer.horizontalAutoLayoutContainer:
@@ -682,7 +681,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =376
+            Width: =335
             ZIndex: =5
 
             TextCanvas2 As Texto:
@@ -708,8 +707,8 @@ CPP As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =132
-        X: =1215
+        Width: =82
+        X: =1263
         Y: =80
         ZIndex: =10
 
@@ -721,7 +720,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =132
+            Width: =81
             Y: =132
             ZIndex: =1
 
@@ -750,7 +749,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =132
+            Width: =82
             Y: =239
             ZIndex: =2
 
@@ -778,7 +777,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =132
+            Width: =81
             Y: =348
             ZIndex: =3
 
@@ -804,7 +803,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =132
+            Width: =82
             Y: =441
             ZIndex: =4
 
@@ -825,11 +824,11 @@ CPP As screen:
             Align: ='TextCanvas.Align'.Center
             DisplayMode: =DisplayMode.Edit
             FontColor: =RGBA(0, 0, 0, 1)
-            Height: =33
+            Height: =32
             Size: =12
             Text: ="Menu"
             Weight: ='TextCanvas.Weight'.Semibold
-            Width: =132
+            Width: =100
             X: =0
             Y: =3
             ZIndex: =5
@@ -842,7 +841,7 @@ CPP As screen:
             Size: =12
             Text: ="Marca"
             Weight: ='TextCanvas.Weight'.Semibold
-            Width: =132
+            Width: =82
             X: =0
             Y: =99
             ZIndex: =6
@@ -851,11 +850,11 @@ CPP As screen:
             Align: ='TextCanvas.Align'.Center
             DisplayMode: =DisplayMode.Edit
             FontColor: =RGBA(0, 0, 0, 1)
-            Height: =33
+            Height: =43
             Size: =12
             Text: ="Modelo"
             Weight: ='TextCanvas.Weight'.Semibold
-            Width: =132
+            Width: =81
             X: =0
             Y: =196
             ZIndex: =7
@@ -864,11 +863,11 @@ CPP As screen:
             Align: ='TextCanvas.Align'.Center
             DisplayMode: =DisplayMode.Edit
             FontColor: =RGBA(0, 0, 0, 1)
-            Height: =33
+            Height: =39
             Size: =12
             Text: ="Categoria"
             Weight: ='TextCanvas.Weight'.Semibold
-            Width: =132
+            Width: =82
             X: =0
             Y: =298
             ZIndex: =8
@@ -881,7 +880,7 @@ CPP As screen:
             Size: =12
             Text: ="Tipo"
             Weight: ='TextCanvas.Weight'.Semibold
-            Width: =132
+            Width: =82
             X: =0
             Y: =408
             ZIndex: =9
@@ -890,8 +889,8 @@ CPP As screen:
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Icon: ="AppsList"
-            Width: =32
-            X: =100
+            Width: =42
+            X: =58
             Y: =3
             ZIndex: =10
 
@@ -902,7 +901,7 @@ CPP As screen:
             OnSelect: =Reset(DropMarca);
             Text: ="Reset"
             Width: =56
-            X: =76
+            X: =2
             Y: =55
             ZIndex: =11
 
