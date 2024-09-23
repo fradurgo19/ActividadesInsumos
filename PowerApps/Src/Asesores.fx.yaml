@@ -23,7 +23,8 @@
         Set(
             totalItems,
             CountRows('Seguimiento Clientes Equipos Telemetría')
-        )
+        );
+        
         
         
         
@@ -480,7 +481,7 @@
 
                 Container39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =288
+                    Height: =285
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMode: =LayoutMode.Auto
@@ -490,7 +491,7 @@
                     RadiusTopRight: =4
                     Width: =204
                     X: =13
-                    Y: =108
+                    Y: =155
                     ZIndex: =2
 
                     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -999,14 +1000,14 @@
                 Container45 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(166, 215, 153, 1)
-                    Height: =51
+                    Height: =47
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =203
                     X: =13
-                    Y: =57
+                    Y: =108
                     ZIndex: =6
 
                     Container46 As groupContainer.horizontalAutoLayoutContainer:
