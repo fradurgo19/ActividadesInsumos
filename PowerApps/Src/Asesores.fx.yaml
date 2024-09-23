@@ -458,27 +458,6 @@
                         Y: =500
                         ZIndex: =1
 
-                    Label2_9 As label:
-                        Align: =Align.Center
-                        AlignInContainer: =AlignInContainer.Stretch
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        Height: =41
-                        Size: =20
-                        Text: ="Oportunidades"
-                        Width: |
-                            =300
-                        Y: =500
-                        ZIndex: =2
-
                 Container39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =285
@@ -1143,4 +1122,24 @@
                             X: =0
                             Y: =0
                             ZIndex: =6
+
+                Label2_10 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =41
+                    Size: =20
+                    Text: ="Oportunidades"
+                    Width: =204
+                    X: =13
+                    Y: =66
+                    ZIndex: =8
 
