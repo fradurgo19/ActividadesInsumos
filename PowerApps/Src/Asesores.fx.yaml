@@ -457,6 +457,27 @@
                         Y: =500
                         ZIndex: =1
 
+                    Label2_9 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =41
+                        Size: =20
+                        Text: ="Oportunidades"
+                        Width: |
+                            =300
+                        Y: =500
+                        ZIndex: =2
+
                 Container39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =288
@@ -568,7 +589,15 @@
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DelayItemLoading: =true
                         Height: =100
-                        Items: =colOportunidades
+                        Items: |-
+                            =Filter(
+                                colOportunidades,
+                                (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in Title || IsBlank(TextInputCanvas2.Value)) &&
+                                (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
+                                ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
+                                ( 'Nombre del cliente'= ComboboxCanvas5_2.Selected.Value || IsBlank(ComboboxCanvas5_2.Selected.Value)) &&
+                                (MesCreado.Value = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value))
+                            )
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
                         LayoutMinWidth: =320
@@ -1029,6 +1058,7 @@
                     Container48 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
                         Height: =36
+                        LayoutJustifyContent: =LayoutJustifyContent.End
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -1037,6 +1067,18 @@
                         Width: =724
                         ZIndex: =1
 
+                        "TextInputCanvas2 As 'Entrada de texto'":
+                            AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Placeholder: ="Buscar Observación"
+                            Width: =170
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
                         "ComboboxCanvas5 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
@@ -1044,10 +1086,10 @@
                             Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Width: =150
+                            Width: =140
                             X: =0
                             Y: =0
-                            ZIndex: =1
+                            ZIndex: =2
 
                         "ComboboxCanvas5_1 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1056,10 +1098,10 @@
                             Items: =Distinct(colOportunidades,'ASESOR 2')
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Width: =150
+                            Width: =140
                             X: =0
                             Y: =0
-                            ZIndex: =2
+                            ZIndex: =3
 
                         "ComboboxCanvas5_2 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1068,10 +1110,10 @@
                             Items: =Distinct(colOportunidades,Title)
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Width: =150
+                            Width: =140
                             X: =0
                             Y: =0
-                            ZIndex: =3
+                            ZIndex: =4
 
                         "ComboboxCanvas5_3 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1080,8 +1122,8 @@
                             Items: =Distinct(colOportunidades,MesCreado)
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Width: =150
+                            Width: =120
                             X: =0
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =5
 

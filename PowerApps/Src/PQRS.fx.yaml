@@ -723,8 +723,7 @@
                         =Sort(
                             Filter(
                                 'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                               (TextInputCanvas5.Value in 'Correo Responsable' || TextInputCanvas5.Value in Asunto || TextInputCanvas5.Value in ID || IsBlank(TextInputCanvas5.Value)) &&
-                                ('Tipo de Comunicación'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
+                                (TextInputCanvas5.Value in 'Correo Responsable' || TextInputCanvas5.Value in Asunto || TextInputCanvas5.Value in ID || IsBlank(TextInputCanvas5.Value)) && ('Tipo de Comunicación'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                             ),
                             Modificado,
                             SortOrder.Descending
