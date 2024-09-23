@@ -473,7 +473,7 @@
 
                     Container53 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =401
+                        Height: =403
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -486,7 +486,7 @@
                         "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
-                            Items: ='Seguimiento Clientes Equipos Telemetría'
+                            Items: =colOportunAsesorMes
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
@@ -522,7 +522,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =
+                                    Text: =ThisItem.Asesor
                                     Width: =96
                                     X: =0
                                     Y: =0
