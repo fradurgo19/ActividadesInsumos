@@ -517,6 +517,17 @@
                                 Width: =910
                                 ZIndex: =6
 
+                                TextCanvas38_1 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.MesCreado
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
                                 TextCanvas38 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
@@ -526,5 +537,117 @@
                                     Width: =96
                                     X: =0
                                     Y: =0
-                                    ZIndex: =1
+                                    ZIndex: =2
+
+                                TextCanvas38_2 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Ganadas
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                                TextCanvas38_3 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Perdidas
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =4
+
+                                TextCanvas38_4 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Cotizaciones
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =5
+
+                                TextCanvas38_5 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Seguimientos
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =6
+
+                                TextCanvas40 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)*100 & "%"
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =7
+
+                Container55 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =48
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =910
+                    X: =40
+                    Y: =132
+                    ZIndex: =3
+
+                    Container56 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =48
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =900
+                        X: =4
+                        ZIndex: =1
+
+                        "ComboboxCanvas5_2 As 'Cuadro combinado'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar Asesor"
+                            Items: |
+                                =["dbeltran@partequipos.com", "gbuenahora@partequipos.com", "sarenas@partequipos.com", "afuentes@partequipos.com", 
+                                "drodriguez@partequipos.com", "floaiza@partequipos.com", "acuervo@partequipos.com", "rbermudez@partequipos.com", 
+                                "cleal@partequipos.com", "kosorio@partequipos.com", "dacosta@partequipos.com", "otobon@partequipos.com", 
+                                "bbernal@partequipos.com", "hvalencia@partequipos.com", "sarias@partequipos.com", "sballestas@partequipos.com", 
+                                "lorozco@partequipos.com", "Info@partequipos.com", "kjaimes@partequipos.com", "apenagos@partequipos.com", 
+                                "ebustos@partequipos.com", "jmarin@partequipos.com", "Csanmiguel@partequipos.com", "asantana@partequipos.com", 
+                                "control.interno@partequipos.com", "marevalo@partequipos.com", "planeador.serviciosbg@partequipos.com", 
+                                "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
+                                "fvasquez@partequipos.com", "dcubides@partequipos.com"]
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =140
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        "ComboboxCanvas5_4 As 'Cuadro combinado'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar Estado"
+                            Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =140
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
 
