@@ -10,6 +10,26 @@
         ClearCollect(colOportunidades, 'Seguimiento Clientes Equipos Telemetría');
         
         
+        ClearCollect(
+            colOportunAsesorMes,
+            AddColumns(
+                GroupBy(
+                    'Seguimiento Clientes Equipos Telemetría',
+                    MesCreado,
+                    OportunidadesPorAsesor
+                ),
+                Asesor,
+                CountIf(OportunidadesPorAsesor, 'ASESOR 2'.Value = ThisRecord.'ASESOR 2'.Value),
+                Ganadas,
+                CountIf(OportunidadesPorAsesor, Estado.Value = "Ganada"),
+                Perdidas,
+                CountIf(OportunidadesPorAsesor, Estado.Value = "Perdida"),
+                Seguimientos,
+                CountIf(OportunidadesPorAsesor, Estado.Value = "Seguimiento"),
+                Cotizaciones,
+                CountIf(OportunidadesPorAsesor, Estado.Value = "Cotización")
+            )
+        )
         
         
         
