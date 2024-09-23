@@ -590,14 +590,16 @@
                         DelayItemLoading: =true
                         Height: =100
                         Items: |
-                            =Filter(
-                                colOportunidades,
-                                (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in Title || IsBlank(TextInputCanvas2.Value)) &&
-                                (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
-                                ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) 
-                            
-                               
+                            =Sort(
+                                Filter(
+                                    colOportunidades,
+                                    (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in Title || IsBlank(TextInputCanvas2.Value)) &&
+                                    (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
+                                    ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
+                                    (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value))
+                                ),
+                                MesCreado, // Field representing the creation date
+                                SortOrder.Descending
                             )
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
@@ -1132,6 +1134,7 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            OnSelect: =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Reset(ComboboxCanvas5_3);Refresh('Seguimiento Clientes Equipos Telemetría')
                             Text: ="Reset"
                             Width: =96
                             X: =0
