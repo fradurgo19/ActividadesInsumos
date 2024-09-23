@@ -558,7 +558,7 @@
                                     Text: |-
                                         =Text(
                                             (ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
-                                            "[$-en-US]0"
+                                            "[$-en-US]0.0"
                                         ) & "%"
                                     Width: =96
                                     X: =0
@@ -584,7 +584,7 @@
                                     Text: |-
                                         =Text(
                                             (ThisItem.Perdidas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
-                                            "[$-en-US]0"
+                                            "[$-en-US]0.0"
                                         ) & "%"
                                     Width: =96
                                     X: =0
@@ -610,7 +610,7 @@
                                     Text: |-
                                         =Text(
                                             (ThisItem.Seguimientos / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
-                                            "[$-en-US]0"
+                                            "[$-en-US]0.0"
                                         ) & "%"
                                     Width: =96
                                     X: =0
