@@ -553,7 +553,7 @@
 
                 Container40 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =535
+                    Height: =475
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -561,7 +561,7 @@
                     RadiusTopRight: =4
                     Width: =732
                     X: =323
-                    Y: =96
+                    Y: =155
                     ZIndex: =4
 
                     "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -618,7 +618,7 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Marca
-                                Width: =96
+                                Width: =50
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
@@ -630,7 +630,7 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Modelo
-                                Width: =96
+                                Width: =50
                                 X: =0
                                 Y: =0
                                 ZIndex: =3
@@ -642,7 +642,7 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.'Fecha Primer Mtto'
-                                Width: =96
+                                Width: =60
                                 X: =0
                                 Y: =0
                                 ZIndex: =4
@@ -654,7 +654,7 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.'ASESOR 2'.Value
-                                Width: =96
+                                Width: =70
                                 X: =0
                                 Y: =0
                                 ZIndex: =5
@@ -666,26 +666,26 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Horometro
-                                Width: =96
+                                Width: =60
                                 X: =0
                                 Y: =0
                                 ZIndex: =6
 
                             TextCanvas33_1 As Texto:
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =32
+                                Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Estado.Value
-                                Width: =70
+                                Width: =60
                                 X: =0
                                 Y: =0
                                 ZIndex: =7
 
                             TextCanvas33_2 As Texto:
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =32
+                                Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =10
@@ -694,4 +694,28 @@
                                 X: =0
                                 Y: =0
                                 ZIndex: =8
+
+                            TextCanvas33_3 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Detalle.Value
+                                Width: =60
+                                X: =0
+                                Y: =0
+                                ZIndex: =9
+
+                            TextCanvas33_4 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Detalle.Value
+                                Width: =60
+                                X: =0
+                                Y: =0
+                                ZIndex: =10
 
