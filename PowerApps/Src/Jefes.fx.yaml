@@ -18,6 +18,8 @@
                     MesCreado,
                     OportunidadesPorAsesor
                 ),
+                Cliente,
+                CountIf(OportunidadesPorAsesor, 'Nombre del cliente' = ThisRecord.'Nombre del cliente'),
                 Asesor,
                 CountIf(OportunidadesPorAsesor, 'ASESOR 2'.Value = ThisRecord.'ASESOR 2'.Value),
                 Ganadas,
