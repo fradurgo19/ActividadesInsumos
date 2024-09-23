@@ -31,24 +31,30 @@
             )
         );
         
-        
-        
         ClearCollect(
             colOportunAsesor,
             AddColumns(
-                Distinct('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value),
-                OportunidadesPorAsesor1,
-                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.'ASESOR 2'.Value),
+                GroupBy(
+                    Seguimiento , 
+                    Asesor, // Agrupar por el correo del asesor
+                    OportunidadesPorAsesor
+                ),
+                TotalOportunidades, 
+                CountRows(OportunidadesPorAsesor), // Contar el total de oportunidades por asesor
                 Ganadas,
-                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.Value && Estado.Value = "Ganada"),
+                CountRows(Filter(OportunidadesPorAsesor, Estado.Value = "Ganada")), // Contar oportunidades ganadas
                 Perdidas,
-                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.Value && Estado.Value = "Perdida"),
+                CountRows(Filter(OportunidadesPorAsesor, Estado.Value = "Perdida")), // Contar oportunidades perdidas
                 Seguimientos,
-                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.Value && Estado.Value = "Seguimiento"),
+                CountRows(Filter(OportunidadesPorAsesor, Estado.Value = "Seguimiento")), // Contar oportunidades en seguimiento
                 Cotizaciones,
-                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.Value && Estado.Value = "Cotización")
+                CountRows(Filter(OportunidadesPorAsesor, Estado.Value = "Cotización")) // Contar oportunidades en cotización
             )
         )
+        
+        
+        
+        
         
     Orientation: =If(Jefes.Width < Jefes.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Jefes.Width)
@@ -857,17 +863,6 @@
                                     Y: =0
                                     ZIndex: =4
 
-                                TextCanvas38_12 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =ThisItem.Perdidas
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =5
-
                                 TextCanvas38_15 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
@@ -879,17 +874,6 @@
                                     Y: =0
                                     ZIndex: =6
 
-                                TextCanvas38_14 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =ThisItem.Seguimientos
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =7
-
                                 TextCanvas38_13 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
@@ -900,17 +884,6 @@
                                     X: =0
                                     Y: =0
                                     ZIndex: =8
-
-                                TextCanvas38_16 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =ThisItem.Cotizaciones
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =9
 
                                 TextCanvas38_17 As Texto:
                                     DisplayMode: =DisplayMode.Edit
