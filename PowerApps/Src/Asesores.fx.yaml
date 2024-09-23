@@ -1070,12 +1070,13 @@
 
                         "TextInputCanvas2 As 'Entrada de texto'":
                             AlignInContainer: =AlignInContainer.Stretch
+                            BasePaletteColor: =
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Placeholder: ="Buscar Observación"
-                            Width: =170
+                            Placeholder: ="Buscar Cliente o Observa"
+                            Width: =200
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -1124,4 +1125,16 @@
                             X: =0
                             Y: =0
                             ZIndex: =5
+
+                        ButtonCanvas11 As Botón:
+                            BasePaletteColor: =RGBA(249, 83, 109, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: ="Reset"
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
 
