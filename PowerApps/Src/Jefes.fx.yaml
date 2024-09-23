@@ -537,7 +537,7 @@
                                     Width: =96
                                     X: =0
                                     Y: =0
-                                    ZIndex: =3
+                                    ZIndex: =2
 
                                 TextCanvas38_2 As Texto:
                                     DisplayMode: =DisplayMode.Edit
@@ -545,6 +545,21 @@
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
                                     Text: =ThisItem.Ganadas
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                                TextCanvas40 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: |-
+                                        =Text(
+                                            (ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                            "[$-en-US]0"
+                                        ) & "%"
                                     Width: =96
                                     X: =0
                                     Y: =0
@@ -561,12 +576,16 @@
                                     Y: =0
                                     ZIndex: =5
 
-                                TextCanvas38_4 As Texto:
+                                TextCanvas38_6 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =ThisItem.Cotizaciones
+                                    Text: |-
+                                        =Text(
+                                            (ThisItem.Perdidas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                            "[$-en-US]0"
+                                        ) & "%"
                                     Width: =96
                                     X: =0
                                     Y: =0
@@ -583,16 +602,31 @@
                                     Y: =0
                                     ZIndex: =7
 
-                                TextCanvas40 As Texto:
+                                TextCanvas38_4 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)*100 & "%"
+                                    Text: |-
+                                        =Text(
+                                            (ThisItem.Seguimientos / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                            "[$-en-US]0"
+                                        ) & "%"
                                     Width: =96
                                     X: =0
                                     Y: =0
                                     ZIndex: =8
+
+                                TextCanvas38_7 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Cotizaciones
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =9
 
                 Container55 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
