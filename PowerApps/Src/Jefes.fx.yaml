@@ -633,7 +633,11 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =ThisItem.Cotizaciones
+                                    Text: |-
+                                        =Text(
+                                            (ThisItem.Cotizaciones / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                            "[$-en-US]0.0"
+                                        ) & "%"
                                     Width: =96
                                     X: =0
                                     Y: =0
