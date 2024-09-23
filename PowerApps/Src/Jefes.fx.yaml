@@ -851,7 +851,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =ThisItem.MesCreado
+                                    Text: =
                                     Width: =80
                                     X: =0
                                     Y: =0
@@ -862,7 +862,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =ThisItem.Ganado
+                                    Text: =
                                     Width: =70
                                     X: =0
                                     Y: =0
@@ -884,11 +884,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: |-
-                                        =Text(
-                                            (ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
-                                            "[$-en-US]0.0"
-                                        ) & "%"
+                                    Text: =
                                     Width: =70
                                     X: =0
                                     Y: =0
@@ -910,11 +906,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: |-
-                                        =Text(
-                                            (ThisItem.Perdidas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
-                                            "[$-en-US]0.0"
-                                        ) & "%"
+                                    Text: =
                                     Width: =70
                                     X: =0
                                     Y: =0
