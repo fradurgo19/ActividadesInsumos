@@ -459,7 +459,7 @@
 
                 Container39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =423
+                    Height: =288
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMode: =LayoutMode.Auto
@@ -468,7 +468,7 @@
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =217
-                    Y: =96
+                    Y: =108
                     ZIndex: =2
 
                     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -482,7 +482,7 @@
                         LayoutMinWidth: =0
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0
-                        TemplateSize: =104
+                        TemplateSize: =70
                         Width: =Parent.Width
                         X: =40
                         Y: =40
@@ -499,7 +499,7 @@
 
                         Container41 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.Light
-                            Height: =104
+                            Height: =70
                             LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                             LayoutMode: =LayoutMode.Auto
@@ -567,14 +567,14 @@
                     "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DelayItemLoading: =true
-                        Height: =200
+                        Height: =100
                         Items: =colOportunidades
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0
-                        TemplateSize: =104
+                        TemplateSize: =60
                         X: =40
                         Y: =40
                         ZIndex: =1
@@ -582,7 +582,7 @@
                         Separator2 As rectangle:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             Fill: =RGBA(255, 255, 255, 1)
-                            Height: =8
+                            Height: =3
                             OnSelect: =Select(Parent)
                             Width: =Parent.TemplateWidth
                             Y: =Parent.TemplateHeight - Self.Height
@@ -590,7 +590,7 @@
 
                         Container43 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.Light
-                            Height: =96
+                            Height: =55
                             LayoutMode: =LayoutMode.Auto
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -611,53 +611,41 @@
                                 Y: =0
                                 ZIndex: =1
 
-                            TextCanvas33 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =32
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                Size: =10
-                                Text: =ThisItem.Marca
-                                Width: =50
-                                X: =0
-                                Y: =0
-                                ZIndex: =2
-
-                            TextCanvas32 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =32
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                Size: =10
-                                Text: =ThisItem.Modelo
-                                Width: =50
-                                X: =0
-                                Y: =0
-                                ZIndex: =3
-
-                            TextCanvas34 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =32
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                Size: =10
-                                Text: =ThisItem.'Fecha Primer Mtto'
-                                Width: =60
-                                X: =0
-                                Y: =0
-                                ZIndex: =4
-
-                            TextCanvas34_1 As Texto:
+                            TextCanvas33_6 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =10
-                                Text: =ThisItem.'ASESOR 2'.Value
-                                Width: =70
+                                Text: =ThisItem.'Serie.'
+                                Width: =40
                                 X: =0
                                 Y: =0
-                                ZIndex: =5
+                                ZIndex: =2
+
+                            TextCanvas33 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Marca
+                                Width: =40
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                            TextCanvas32 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Modelo
+                                Width: =40
+                                X: =0
+                                Y: =0
+                                ZIndex: =4
 
                             TextCanvas34_2 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -666,10 +654,58 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Horometro
-                                Width: =60
+                                Width: =40
+                                X: =0
+                                Y: =0
+                                ZIndex: =5
+
+                            TextCanvas33_4 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.'Tipo Mtto'
+                                Width: =40
                                 X: =0
                                 Y: =0
                                 ZIndex: =6
+
+                            TextCanvas34 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.'Fecha Primer Mtto'
+                                Width: =40
+                                X: =0
+                                Y: =0
+                                ZIndex: =7
+
+                            TextCanvas34_1 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.'ASESOR 2'.Value
+                                Width: =60
+                                X: =0
+                                Y: =0
+                                ZIndex: =8
+
+                            TextCanvas33_5 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.'Tipo Oportunidad'.Value
+                                Width: =70
+                                X: =0
+                                Y: =0
+                                ZIndex: =9
 
                             TextCanvas33_1 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -678,10 +714,10 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Estado.Value
-                                Width: =60
+                                Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =7
+                                ZIndex: =10
 
                             TextCanvas33_2 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -690,10 +726,10 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Estado2.Value
-                                Width: =60
+                                Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =8
+                                ZIndex: =11
 
                             TextCanvas33_3 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -702,20 +738,352 @@
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Detalle.Value
-                                Width: =60
+                                Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =9
+                                ZIndex: =12
 
-                            TextCanvas33_4 As Texto:
+                            TextCanvas33_7 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =10
                                 Text: =ThisItem.Detalle.Value
-                                Width: =60
+                                Width: =70
                                 X: =0
                                 Y: =0
-                                ZIndex: =10
+                                ZIndex: =13
+
+                Container42 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(71, 158, 245, 1)
+                    Height: =45
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =733
+                    X: =323
+                    Y: =108
+                    ZIndex: =5
+
+                    Container44 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(235, 33, 33, 0)
+                        Height: =45
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =729
+                        ZIndex: =1
+
+                        TextCanvas35 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Cliente"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas35_1 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Serie"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =40
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas35_2 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Marca"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =40
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas35_3 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Modelo"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =40
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        TextCanvas35_4 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Horometro"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =40
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+
+                        TextCanvas35_5 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Tipo Mtto"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =40
+                            X: =0
+                            Y: =0
+                            ZIndex: =7
+
+                        TextCanvas35_6 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Fecha Mtto"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =40
+                            X: =0
+                            Y: =0
+                            ZIndex: =8
+
+                        TextCanvas35_7 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Asesor"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =9
+
+                        TextCanvas35_8 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Oportunidad"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =70
+                            X: =0
+                            Y: =0
+                            ZIndex: =10
+
+                        TextCanvas35_9 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Estado"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =50
+                            X: =0
+                            Y: =0
+                            ZIndex: =11
+
+                        TextCanvas35_10 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Tramite"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =50
+                            X: =0
+                            Y: =0
+                            ZIndex: =12
+
+                        TextCanvas35_11 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Detalle"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =50
+                            X: =0
+                            Y: =0
+                            ZIndex: =13
+
+                        TextCanvas35_12 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: ="Observación"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =70
+                            X: =0
+                            Y: =0
+                            ZIndex: =14
+
+                Container45 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(166, 215, 153, 1)
+                    Height: =51
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =217
+                    Y: =57
+                    ZIndex: =6
+
+                    Container46 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =51
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =217
+                        ZIndex: =1
+
+                        TextCanvas36 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =5
+                            Size: =12
+                            Text: ="Mes"
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        TextCanvas37 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =5
+                            Size: =12
+                            Text: ="Porcentaje del Total de Oportunidades"
+                            Width: =120
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                Container47 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =36
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =731
+                    X: =323
+                    Y: =71
+                    ZIndex: =7
+
+                    Container48 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =36
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =724
+                        ZIndex: =1
+
+                        "ComboboxCanvas1 As 'Cuadro combinado'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Items: =colOportunidades
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                            MesCreado1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                                FieldDisplayName: ="MesCreado"
+                                FieldName: ="MesCreado"
+                                FieldType: ="s"
+                                FieldVariantName: ="textualColumn"
+                                Order: =1
+                                ZIndex: =23
+
+                        "ComboboxCanvas3 As 'Cuadro combinado'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Items: =colOportunidades
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                            Estado1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                                FieldDisplayName: ="Estado"
+                                FieldName: ="Estado"
+                                FieldType: |-
+                                    ="![Value:s]"
+                                FieldVariantName: ="textualColumn"
+                                Order: =1
+                                ZIndex: =22
+
+                        "ComboboxCanvas4 As 'Cuadro combinado'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Items: =colOportunidades
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
 
