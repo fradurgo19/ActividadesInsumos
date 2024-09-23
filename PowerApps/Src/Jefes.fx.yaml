@@ -31,28 +31,6 @@
             )
         );
         
-        ClearCollect(
-            colOportunAsesor,
-            AddColumns(
-                GroupBy(
-                    'Seguimiento Clientes Equipos Telemetría',
-                    AUTHOR, // Agrupar por el correo del asesor
-                    OportunidadesPorAsesor
-                ),
-                TotalOportunidades, 
-                CountRows(OportunidadesPorAsesor), // Contar el total de oportunidades por asesor
-                Ganadas,
-                CountRows(Filter(OportunidadesPorAsesor, Estado.Value = "Ganada")), // Contar oportunidades ganadas
-                Perdidas,
-                CountRows(Filter(OportunidadesPorAsesor, Estado.Value = "Perdida")), // Contar oportunidades perdidas
-                Seguimientos,
-                CountRows(Filter(OportunidadesPorAsesor, Estado.Value = "Seguimiento")), // Contar oportunidades en seguimiento
-                Cotizaciones,
-                CountRows(Filter(OportunidadesPorAsesor, Estado.Value = "Cotización")) // Contar oportunidades en cotización
-            )
-        )
-        
-        
         
         
         
@@ -690,6 +668,18 @@
                         Width: =1029
                         ZIndex: =1
 
+                        "ComboboxCanvas5_4 As 'Cuadro combinado'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar Mes"
+                            Items: =Distinct(colOportunidades,MesCreado)
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =120
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
                         "ComboboxCanvas5_2 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
@@ -709,7 +699,7 @@
                             Width: =140
                             X: =0
                             Y: =0
-                            ZIndex: =1
+                            ZIndex: =2
 
                         TextCanvas43_2 As Texto:
                             Align: ='TextCanvas.Align'.Center
@@ -781,18 +771,6 @@
                             Y: =0
                             ZIndex: =8
 
-                        "ComboboxCanvas5_4 As 'Cuadro combinado'.pcfdataset":
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            InputTextPlaceholder: ="Buscar Mes"
-                            Items: =Distinct(colOportunidades,MesCreado)
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =320
-                            Width: =120
-                            X: =0
-                            Y: =0
-                            ZIndex: =9
-
                 Container52_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =192
@@ -820,7 +798,7 @@
                         "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
-                            Items: =Seguimiento Clientes Equipos Telemetría
+                            Items: ='Seguimiento Clientes Equipos Telemetría'
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
