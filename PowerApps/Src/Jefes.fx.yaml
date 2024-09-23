@@ -32,15 +32,23 @@
         );
         
         
+        
         ClearCollect(
-            colOportunAsesorMesFiltrado,
-            Filter(
-                colOportunAsesorMes,
-                Asesor = Value(ComboboxCanvas5_2.Selected.Value) || IsBlank(ComboboxCanvas5_2.Selected.Value)
+            colOportunAsesor,
+            AddColumns(
+                Distinct('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value),
+                OportunidadesPorAsesor1,
+                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.'ASESOR 2'.Value),
+                Ganadas,
+                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.Value && Estado.Value = "Ganada"),
+                Perdidas,
+                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.Value && Estado.Value = "Perdida"),
+                Seguimientos,
+                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.Value && Estado.Value = "Seguimiento"),
+                Cotizaciones,
+                CountIf('Seguimiento Clientes Equipos Telemetría', 'ASESOR 2'.Value = ThisRecord.Value && Estado.Value = "Cotización")
             )
         )
-        
-        
         
     Orientation: =If(Jefes.Width < Jefes.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Jefes.Width)
@@ -495,7 +503,7 @@
                         "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
-                            Items: =colOportunAsesorMesFiltrado
+                            Items: =colOportunAsesorMes
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
@@ -766,4 +774,16 @@
                             X: =0
                             Y: =0
                             ZIndex: =8
+
+                        "ComboboxCanvas5_4 As 'Cuadro combinado'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar Mes"
+                            Items: =Distinct(colOportunidades,MesCreado)
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =120
+                            X: =0
+                            Y: =0
+                            ZIndex: =9
 
