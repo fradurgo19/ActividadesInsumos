@@ -31,6 +31,7 @@
             )
         );
         
+        
         ClearCollect(
             colOportunAsesorMesFiltrado,
             Filter(
@@ -38,8 +39,6 @@
                 Asesor = Value(ComboboxCanvas5_2.Selected.Value) || IsBlank(ComboboxCanvas5_2.Selected.Value)
             )
         )
-        
-        
         
         
         
