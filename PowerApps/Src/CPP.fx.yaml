@@ -518,6 +518,7 @@ CPP As screen:
 
         Container5 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
+            Fill: =RGBA(71, 158, 245, 1)
             Height: =52
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
@@ -543,7 +544,7 @@ CPP As screen:
                 TextCanvas7_9 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =12
                     LayoutMinWidth: =32
@@ -559,7 +560,7 @@ CPP As screen:
                 TextCanvas7_11 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =20
@@ -575,7 +576,7 @@ CPP As screen:
                 TextCanvas7_21 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =10
@@ -591,7 +592,7 @@ CPP As screen:
                 TextCanvas7_22 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =10
@@ -607,7 +608,7 @@ CPP As screen:
                 TextCanvas7_12 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =10
@@ -623,7 +624,7 @@ CPP As screen:
                 TextCanvas7_13 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =20
@@ -639,7 +640,7 @@ CPP As screen:
                 TextCanvas7_14 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
@@ -655,7 +656,7 @@ CPP As screen:
                 TextCanvas7_15 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
@@ -671,7 +672,7 @@ CPP As screen:
                 TextCanvas7_16 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =50
                     LayoutMinWidth: =32
@@ -679,7 +680,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Q"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =40
+                    Width: =50
                     X: =0
                     Y: =0
                     ZIndex: =9
@@ -687,7 +688,7 @@ CPP As screen:
                 TextCanvas7_17 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
@@ -703,7 +704,7 @@ CPP As screen:
                 TextCanvas7_18 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
@@ -720,7 +721,7 @@ CPP As screen:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
                     FillPortions: =1
-                    FontColor: =RGBA(0, 0, 0, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
@@ -735,7 +736,7 @@ CPP As screen:
 
         Container10 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Fill: =RGBA(80, 173, 250, 0.16)
+            Fill: =RGBA(71, 158, 245, 1)
             Height: =52
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
@@ -749,6 +750,7 @@ CPP As screen:
                 Align: ='TextCanvas.Align'.Center
                 AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
+                FontColor: =RGBA(255, 255, 255, 1)
                 Height: =32
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
@@ -762,7 +764,7 @@ CPP As screen:
 
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Fill: =RGBA(80, 173, 250, 0.27)
+        Fill: =RGBA(71, 158, 245, 1)
         Height: =677
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -884,7 +886,7 @@ CPP As screen:
         TextCanvas6 As Texto:
             Align: ='TextCanvas.Align'.Center
             DisplayMode: =DisplayMode.Edit
-            FontColor: =RGBA(0, 0, 0, 1)
+            FontColor: =RGBA(255, 255, 255, 1)
             Height: =32
             Size: =12
             Text: ="Menu"
@@ -897,7 +899,7 @@ CPP As screen:
         TextCanvas6_1 As Texto:
             Align: ='TextCanvas.Align'.Center
             DisplayMode: =DisplayMode.Edit
-            FontColor: =RGBA(0, 0, 0, 1)
+            FontColor: =RGBA(255, 255, 255, 1)
             Height: =33
             Size: =12
             Text: ="Marca"
@@ -910,7 +912,7 @@ CPP As screen:
         TextCanvas6_2 As Texto:
             Align: ='TextCanvas.Align'.Center
             DisplayMode: =DisplayMode.Edit
-            FontColor: =RGBA(0, 0, 0, 1)
+            FontColor: =RGBA(255, 255, 255, 1)
             Height: =43
             Size: =12
             Text: ="Modelo"
@@ -923,7 +925,7 @@ CPP As screen:
         TextCanvas6_3 As Texto:
             Align: ='TextCanvas.Align'.Center
             DisplayMode: =DisplayMode.Edit
-            FontColor: =RGBA(0, 0, 0, 1)
+            FontColor: =RGBA(255, 255, 255, 1)
             Height: =34
             Size: =12
             Text: ="Categoría"
@@ -936,7 +938,7 @@ CPP As screen:
         TextCanvas6_4 As Texto:
             Align: ='TextCanvas.Align'.Center
             DisplayMode: =DisplayMode.Edit
-            FontColor: =RGBA(0, 0, 0, 1)
+            FontColor: =RGBA(255, 255, 255, 1)
             Height: =33
             Size: =12
             Text: ="Tipo"
