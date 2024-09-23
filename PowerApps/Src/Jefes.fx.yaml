@@ -31,6 +31,24 @@
             )
         );
         
+        Clear(colOpportunitiesPerAsesor);
+        
+        // Recorre todos los asesores y crea una colección con las oportunidades por asesor
+        ForAll(
+            Distinct('Seguimiento Clientes Equipos Telemetría', field_29),
+            Collect(
+                colOpportunitiesPerAsesor,
+                {
+                    Asesor: Value, // Result es el correo o nombre del asesor devuelto por Distinct
+                    TotalOpportunities: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value)),
+                    WonCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Ganada")),
+                    LostCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Perdida")),
+                    FollowUpCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Seguimiento")),
+                    QuotationCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Cotización"))
+                }
+            )
+        )
+        
         
         
         
@@ -798,7 +816,7 @@
                         "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
-                            Items: ='Seguimiento Clientes Equipos Telemetría'
+                            Items: =colOpportunitiesPerAsesor
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
@@ -873,4 +891,14 @@
                                     X: =0
                                     Y: =0
                                     ZIndex: =10
+
+                                TextCanvas44 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =11
 
