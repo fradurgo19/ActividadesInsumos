@@ -31,13 +31,14 @@
             )
         );
         
-        Clear(colOpportunitiesPerAsesor);
         
-        // Recorre todos los asesores y crea una colección con las oportunidades por asesor
-        ForAll(
-            Distinct('Seguimiento Clientes Equipos Telemetría', field_29),
-            Collect(
-                colOpportunitiesPerAsesor,
+        
+        
+        
+        ClearCollect(
+            colOpportunitiesPerAsesor,
+            ForAll(
+                Distinct('Seguimiento Clientes Equipos Telemetría', field_29),
                 {
                     Asesor: Value, // Result es el correo o nombre del asesor devuelto por Distinct
                     TotalOpportunities: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value)),
@@ -527,14 +528,15 @@
 
                             Container54 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.Light
-                                Height: =56
+                                Height: =44
                                 LayoutJustifyContent: =LayoutJustifyContent.End
                                 LayoutMode: =LayoutMode.Auto
                                 RadiusBottomLeft: =4
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
-                                Width: =1003
+                                Width: =734
+                                X: =268
                                 ZIndex: =6
 
                                 TextCanvas38_1 As Texto:
@@ -791,7 +793,7 @@
 
                 Container52_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =192
+                    Height: =193
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -803,7 +805,7 @@
 
                     Container53_1 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =62
+                        Height: =187
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -838,7 +840,7 @@
 
                             Container54_1 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.Light
-                                Height: =56
+                                Height: =60
                                 LayoutJustifyContent: =LayoutJustifyContent.End
                                 LayoutMode: =LayoutMode.Auto
                                 RadiusBottomLeft: =4
