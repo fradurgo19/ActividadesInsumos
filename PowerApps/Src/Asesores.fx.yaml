@@ -604,27 +604,32 @@
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                Size: =11
                                 Text: =ThisItem.'Nombre del cliente'
                                 Width: =96
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
-                            TextCanvas32 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =32
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                Width: =96
-                                X: =0
-                                Y: =0
-                                ZIndex: =2
-
                             TextCanvas33 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =32
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Marca
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                            TextCanvas32 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Modelo
                                 Width: =96
                                 X: =0
                                 Y: =0
@@ -635,8 +640,58 @@
                                 Height: =32
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.'Fecha Primer Mtto'
                                 Width: =96
                                 X: =0
                                 Y: =0
                                 ZIndex: =4
+
+                            TextCanvas34_1 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.'ASESOR 2'.Value
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =5
+
+                            TextCanvas34_2 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Horometro
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =6
+
+                            TextCanvas33_1 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Estado.Value
+                                Width: =70
+                                X: =0
+                                Y: =0
+                                ZIndex: =7
+
+                            TextCanvas33_2 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.Estado2.Value
+                                Width: =60
+                                X: =0
+                                Y: =0
+                                ZIndex: =8
 
