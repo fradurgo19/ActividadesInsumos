@@ -1037,53 +1037,51 @@
                         Width: =724
                         ZIndex: =1
 
-                        "ComboboxCanvas1 As 'Cuadro combinado'.pcfdataset":
+                        "ComboboxCanvas5 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
-                            Items: =colOportunidades
+                            InputTextPlaceholder: ="Buscar Estado"
+                            Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Width: =200
+                            Width: =150
                             X: =0
                             Y: =0
                             ZIndex: =1
 
-                            MesCreado1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                                FieldDisplayName: ="MesCreado"
-                                FieldName: ="MesCreado"
-                                FieldType: ="s"
-                                FieldVariantName: ="textualColumn"
-                                Order: =1
-                                ZIndex: =23
-
-                        "ComboboxCanvas3 As 'Cuadro combinado'.pcfdataset":
+                        "ComboboxCanvas5_1 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
-                            Items: =colOportunidades
+                            InputTextPlaceholder: ="Buscar Asesor"
+                            Items: =Distinct(colOportunidades,'ASESOR 2')
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Width: =200
+                            Width: =150
                             X: =0
                             Y: =0
                             ZIndex: =2
 
-                            Estado1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                                FieldDisplayName: ="Estado"
-                                FieldName: ="Estado"
-                                FieldType: |-
-                                    ="![Value:s]"
-                                FieldVariantName: ="textualColumn"
-                                Order: =1
-                                ZIndex: =22
-
-                        "ComboboxCanvas4 As 'Cuadro combinado'.pcfdataset":
+                        "ComboboxCanvas5_2 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
-                            Items: =colOportunidades
+                            InputTextPlaceholder: ="Buscar Cliente"
+                            Items: =Distinct(colOportunidades,Title)
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Width: =200
+                            Width: =150
                             X: =0
                             Y: =0
                             ZIndex: =3
+
+                        "ComboboxCanvas5_3 As 'Cuadro combinado'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar Mes"
+                            Items: =Distinct(colOportunidades,MesCreado)
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =150
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
 
