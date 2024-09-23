@@ -846,39 +846,6 @@
                                 Width: =640
                                 ZIndex: =6
 
-                                TextCanvas38_10 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =
-                                    Width: =80
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =1
-
-                                TextCanvas38_9 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =2
-
-                                TextCanvas38_11 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =ThisItem.Ganadas
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =3
-
                                 TextCanvas40_1 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
@@ -928,11 +895,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: |-
-                                        =Text(
-                                            (ThisItem.Seguimientos / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
-                                            "[$-en-US]0.0"
-                                        ) & "%"
+                                    Text: =
                                     Width: =70
                                     X: =0
                                     Y: =0
@@ -954,11 +917,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: |-
-                                        =Text(
-                                            (ThisItem.Cotizaciones / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
-                                            "[$-en-US]0.0"
-                                        ) & "%"
+                                    Text: =
                                     Width: =70
                                     X: =0
                                     Y: =0
