@@ -32,9 +32,6 @@
         );
         
         
-        
-        
-        
         ClearCollect(
             colOpportunitiesPerAsesor,
             ForAll(
@@ -48,7 +45,9 @@
                     QuotationCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Cotización"))
                 }
             )
-        )
+        );
+        
+        
         
         
         
@@ -850,49 +849,16 @@
                                 Width: =986
                                 ZIndex: =6
 
-                                TextCanvas40_1 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =4
-
-                                TextCanvas38_15 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =6
-
                                 TextCanvas38_13 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =
+                                    Text: =Text(ThisItem.TotalOpportunities, "0")
                                     Width: =70
                                     X: =0
                                     Y: =0
                                     ZIndex: =8
-
-                                TextCanvas38_17 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =10
 
                                 TextCanvas44 As Texto:
                                     DisplayMode: =DisplayMode.Edit
@@ -900,7 +866,7 @@
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
                                     Text: =ThisItem.Asesor.Value
-                                    Width: =96
+                                    Width: =200
                                     X: =0
                                     Y: =0
                                     ZIndex: =11
