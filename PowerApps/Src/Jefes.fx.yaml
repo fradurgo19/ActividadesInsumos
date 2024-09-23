@@ -35,8 +35,8 @@
             colOportunAsesor,
             AddColumns(
                 GroupBy(
-                    Seguimiento , 
-                    Asesor, // Agrupar por el correo del asesor
+                    'Seguimiento Clientes Equipos Telemetría',
+                    AUTHOR, // Agrupar por el correo del asesor
                     OportunidadesPorAsesor
                 ),
                 TotalOportunidades, 
@@ -820,7 +820,7 @@
                         "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
-                            Items: =colOportunidades
+                            Items: =Seguimiento Clientes Equipos Telemetría
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
