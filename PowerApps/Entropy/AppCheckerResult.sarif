@@ -214,126 +214,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 50,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Nombre"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 60,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 96,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Asesores.OnVisible"
                 }
               ],
@@ -367,7 +247,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -407,7 +287,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1007,7 +887,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1664,7 +1544,7 @@
                 },
                 "region": {
                   "charLength": 9,
-                  "charOffset": 338,
+                  "charOffset": 404,
                   "snippet": {
                     "text": "MesCreado"
                   }
@@ -1679,7 +1559,167 @@
           ],
           "message": {
             "arguments": [
-              "Sort"
+              "MesCreado"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 414,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "SendEmail",
+                "type": "SendEmail"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 50,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Nombre"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 60,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 96,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
             ],
             "id": "issue"
           },
@@ -2024,336 +2064,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container27.Container29.TextInputCanvas1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container27.Container29.TextInputCanvas1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container27.Container29.TextInputCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.ButtonCanvas4_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.ButtonCanvas4_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.ButtonCanvas4_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.Container15.Container26.Gallery5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.Container15.Container26.Gallery5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.ButtonCanvas2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.ButtonCanvas2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2.Container15.Container26.Gallery5.ButtonCanvas2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "SendEmail_1.Menu_6.MenuCard_6.MenuList_6.AccessibleLabel"
                 }
               ],
@@ -2444,19 +2154,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container65.Container66.ButtonCanvas13.AccessibleLabel"
+                  "fullyQualifiedName": "SendEmail_1.SendEmailCanvas_1.SendEmailCard_1.Container67.Container70.ButtonCanvas1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container65.Container66.ButtonCanvas13.AccessibleLabel",
+                  "fullyQualifiedName": "SendEmail_1.SendEmailCanvas_1.SendEmailCard_1.Container67.Container70.ButtonCanvas1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Asesores",
-                "type": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container65.Container66.ButtonCanvas13"
+                "module": "SendEmail_1",
+                "type": "SendEmail_1.SendEmailCanvas_1.SendEmailCard_1.Container67.Container70.ButtonCanvas1_1"
               }
             }
           ],
@@ -2528,6 +2238,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container65.Container66.ButtonCanvas13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container65.Container66.ButtonCanvas13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Asesores",
+                "type": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container65.Container66.ButtonCanvas13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2978,6 +2718,96 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ButtonCanvas12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ButtonCanvas12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Jefes",
+                "type": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ButtonCanvas12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Jefes",
+                "type": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Jefes",
+                "type": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5143,6 +4973,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SendEmail",
+                "type": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "SendEmail",
+                "type": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Inicio_1.Icon2.AccessibleLabel"
                 }
               ],
@@ -5293,19 +5183,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_5.AccessibleLabel"
+                  "fullyQualifiedName": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_5.AccessibleLabel",
+                  "fullyQualifiedName": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Jefes",
-                "type": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_5"
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7"
               }
             }
           ],
@@ -5323,109 +5213,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_6.AccessibleLabel"
+                  "fullyQualifiedName": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Jefes",
-                "type": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ComboboxCanvas5_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ButtonCanvas12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ButtonCanvas12.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Jefes",
-                "type": "Jefes.SendEmailCanvas_5.SendEmailCard_5.Container49.Container55_1.Container56_1.ButtonCanvas12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_1.SendEmailCanvas_1.SendEmailCard_1.Container67.Container70.ButtonCanvas1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_1.SendEmailCanvas_1.SendEmailCard_1.Container67.Container70.ButtonCanvas1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SendEmail_1",
-                "type": "SendEmail_1.SendEmailCanvas_1.SendEmailCard_1.Container67.Container70.ButtonCanvas1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3.TabIndex",
+                  "fullyQualifiedName": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SendEmail",
-                "type": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3"
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.Menu_7.MenuCard_7.MenuList_7"
               }
             }
           ],
@@ -5443,19 +5243,439 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3.AccessibleLabel"
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3.AccessibleLabel",
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container9.Container12.Arrow1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container27.Container29.TextInputCanvas1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container27.Container29.TextInputCanvas1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container27.Container29.TextInputCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.ButtonCanvas4_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.ButtonCanvas4_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.SendEmailCanvas_2.SendEmailCard_2.Container32.Container34.Gallery7.ButtonCanvas4_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.Container15.Container26.Gallery5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.Container15.Container26.Gallery5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.ButtonCanvas2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.Container15.Container26.Gallery5.ButtonCanvas2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2.Container15.Container26.Gallery5.ButtonCanvas2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container76.Container77.Gallery10.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container76.Container77.Gallery10.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "SendEmail",
-                "type": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container74.Container75.Gallery3"
+                "type": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container76.Container77.Gallery10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container76.Container77.Gallery10.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container76.Container77.Gallery10.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "SendEmail",
+                "type": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.Container76.Container77.Gallery10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Graficos.Container24_2.Arrow1_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Graficos.Container24_2.Arrow1_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Graficos",
+                "type": "Graficos.Container24_2.Arrow1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Graficos.Container24_2.Arrow1_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Graficos.Container24_2.Arrow1_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Graficos",
+                "type": "Graficos.Container24_2.Arrow1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Graficos.Container24_2.ButtonCanvas9_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Graficos.Container24_2.ButtonCanvas9_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Graficos",
+                "type": "Graficos.Container24_2.ButtonCanvas9_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.ButtonCanvas14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.ButtonCanvas14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SendEmail",
+                "type": "SendEmail.SendEmailCanvas.SendEmailCard.Container71.ButtonCanvas14"
               }
             }
           ],
@@ -6096,96 +6316,6 @@
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
           "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SelectedFrequencies"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SelectedFrequencies",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "SelectedFrequencies",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SelectedItemss"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SelectedItemss",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "SelectedItemss",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SendEmail_2.SelectedTipos"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SendEmail_2.SelectedTipos",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "SelectedTipos",
-                "module": "SendEmail_2",
-                "type": "SendEmail_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
         },
         {
           "locations": [
@@ -7056,6 +7186,96 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SelectedFrequencies"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SelectedFrequencies",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SelectedFrequencies",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SelectedItemss"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SelectedItemss",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SelectedItemss",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SendEmail_2.SelectedTipos"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SendEmail_2.SelectedTipos",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SelectedTipos",
+                "module": "SendEmail_2",
+                "type": "SendEmail_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
         }
       ],
       "tool": {
@@ -7083,10 +7303,10 @@
               }
             },
             {
-              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
               "messageStrings": {
                 "issue": {
-                  "text": "Delegation warning. The highlighted part of this formula might not work correctly with column \"{0}\" on large data sets."
+                  "text": "Delegation warning. The highlighted part of this formula might not work correctly on large data sets. The \"{0}\" operation is not supported by this connector."
                 }
               },
               "properties": {
@@ -7102,10 +7322,10 @@
               }
             },
             {
-              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
               "messageStrings": {
                 "issue": {
-                  "text": "Delegation warning. The highlighted part of this formula might not work correctly on large data sets. The \"{0}\" operation is not supported by this connector."
+                  "text": "Delegation warning. The highlighted part of this formula might not work correctly with column \"{0}\" on large data sets."
                 }
               },
               "properties": {

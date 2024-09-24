@@ -7,11 +7,19 @@
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
         
+        
         ClearCollect(
             colSerieUnicosPorMes,
             AddColumns(
                 GroupBy(
-                    Sort('Seguimiento Clientes Equipos Telemetría', MesCreado, SortOrder.Descending),
+                    Sort(
+                        Filter(
+                            'Seguimiento Clientes Equipos Telemetría',
+                            MesCreado = "September" // Filtra por el mes de septiembre
+                        ),
+                        MesCreado,
+                        SortOrder.Descending
+                    ),
                     field_4, // Nombre del campo de agrupación
                     GrupoDatos // Nombre del grupo (puedes cambiarlo a lo que prefieras)
                 ),
@@ -257,6 +265,8 @@
                     Container77 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
                         Height: =565
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -267,28 +277,171 @@
                         Y: =3
                         ZIndex: =1
 
-                        LineChart2 As lineChart:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(51, 51, 51, 1)
-                            DisabledBorderColor: =RGBA(21, 68, 18, 1)
-                            Font: =Font.'Segoe UI'
-                            HoverBorderColor: =RGBA(253, 207, 180, 1)
-                            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                        "Gallery10 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            DelayItemLoading: =true
                             Items: =colSerieUnicosPorMes
-                            LayoutMinHeight: =500
-                            NumberOfSeries: =9
-                            PressedBorderColor: =RGBA(215, 58, 60, 1)
-                            ShowValues: =true
-                            Size: =15
-                            Width: =800
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =287
+                            LayoutMinWidth: =320
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplatePadding: =0
+                            TemplateSize: =54
                             X: =40
-                            XLabelAngle: |
-                                =90
-                            Y: =70
-                            ZIndex: =3
+                            Y: =40
+                            ZIndex: =1
+
+                            Separator7 As rectangle:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =8
+                                OnSelect: =Select(Parent)
+                                Width: =Parent.TemplateWidth
+                                Y: =Parent.TemplateHeight - Self.Height
+                                ZIndex: =5
+
+                            Container79 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                Height: =54
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =659
+                                ZIndex: =6
+
+                                TextCanvas47_6 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Cliente
+                                    Width: =140
+                                    X: =51
+                                    Y: =1
+                                    ZIndex: =1
+
+                                TextCanvas47_7 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.field_4
+                                    Width: =100
+                                    X: =0
+                                    Y: =9
+                                    ZIndex: =2
+
+                                TextCanvas47_8 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Horometro
+                                    Width: =100
+                                    X: =91
+                                    Y: =0
+                                    ZIndex: =3
+
+                                TextCanvas47_9 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.Modelo
+                                    Width: =100
+                                    X: =171
+                                    Y: =9
+                                    ZIndex: =4
+
+                                TextCanvas47_10 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.PromedioHoras
+                                    Width: =100
+                                    X: =131
+                                    Y: =0
+                                    ZIndex: =5
+
+                                TextCanvas47_11 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: =ThisItem.MesCreado
+                                    Width: =100
+                                    X: =227
+                                    Y: =0
+                                    ZIndex: =6
+
+                ButtonCanvas14 As Botón:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    OnSelect: =Navigate(Graficos,ScreenTransition.Fade)
+                    Text: ="Graficos"
+                    Width: =96
+                    X: =942
+                    Y: =87
+                    ZIndex: =4
+
+                Container5_3 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =39
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =292
+                    X: =18
+                    Y: =87
+                    ZIndex: =5
+
+                    TextCanvas29_20 As Texto:
+                        BorderColor: =RGBA(214, 221, 224, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =3
+                        Text: ="LCC"
+                        Width: =140
+                        X: =0
+                        Y: =0
+                        ZIndex: =11
+
+                Container5_4 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =39
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =527
+                    X: =360
+                    Y: =87
+                    ZIndex: =6
+
+                    TextCanvas29_21 As Texto:
+                        BorderColor: =RGBA(214, 221, 224, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =3
+                        Text: ="Horometro y Promedio Horas"
+                        Width: =500
+                        X: =0
+                        Y: =0
+                        ZIndex: =11
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
