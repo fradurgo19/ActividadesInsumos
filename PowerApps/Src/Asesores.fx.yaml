@@ -424,40 +424,6 @@
                 Y: =2
                 ZIndex: =20
 
-                Container38 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    Height: =41
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMode: =LayoutMode.Auto
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                    Label2_7 As label:
-                        Align: =Align.Right
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        Height: =41
-                        Size: =20
-                        Text: ="Asesores"
-                        Width: |
-                            =300
-                        Y: =500
-                        ZIndex: =1
-
                 Container39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =285
@@ -468,7 +434,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =204
+                    Width: =222
                     X: =13
                     Y: =155
                     ZIndex: =2
@@ -509,7 +475,7 @@
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =215
+                            Width: =222
                             ZIndex: =6
 
                             TextCanvas30 As Texto:
@@ -526,6 +492,7 @@
                                 ZIndex: =1
 
                             TextCanvas12 As Texto:
+                                Align: ='TextCanvas.Align'.Start
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =32
                                 LayoutMinHeight: =32
@@ -536,10 +503,22 @@
                                         Round((ThisItem.Cantidad / totalItems) * 100, 2) & "%",
                                         "0%"
                                     )
-                                Width: =96
+                                Width: =50
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
+
+                            TextCanvas12_1 As Texto:
+                                Align: ='TextCanvas.Align'.Start
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: =ThisItem.Cantidad
+                                Width: =50
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
 
                 ButtonCanvas1_3 As Botón:
                     BasePaletteColor: =
@@ -802,9 +781,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Cliente"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =120
                             X: =0
                             Y: =0
@@ -816,9 +796,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Serie"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =40
                             X: =0
                             Y: =0
@@ -830,9 +811,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Marca"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =50
                             X: =0
                             Y: =0
@@ -844,9 +826,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Modelo"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =50
                             X: =0
                             Y: =0
@@ -858,9 +841,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Horometro"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =50
                             X: =0
                             Y: =0
@@ -872,9 +856,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Tipo Mtto"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =50
                             X: =0
                             Y: =0
@@ -886,9 +871,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Fecha Mtto"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =60
                             X: =0
                             Y: =0
@@ -900,9 +886,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Asesor"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =60
                             X: =0
                             Y: =0
@@ -914,9 +901,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Oportunidad"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =70
                             X: =0
                             Y: =0
@@ -928,9 +916,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Estado"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =55
                             X: =0
                             Y: =0
@@ -942,9 +931,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Tramite"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =50
                             X: =0
                             Y: =0
@@ -956,9 +946,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Detalle"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =50
                             X: =0
                             Y: =0
@@ -970,9 +961,10 @@
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =11
+                            PaddingLeft: =2
+                            Size: =12
                             Text: ="Observación"
-                            Weight: ='TextCanvas.Weight'.Semibold
+                            Weight: ='TextCanvas.Weight'.Regular
                             Width: =70
                             X: =0
                             Y: =0
@@ -981,25 +973,26 @@
                 Container45 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(166, 215, 153, 1)
-                    Height: =47
+                    Height: =45
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =203
+                    Width: =222
                     X: =13
                     Y: =108
                     ZIndex: =6
 
                     Container46 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =51
+                        Height: =36
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =217
+                        Width: =222
+                        Y: =6
                         ZIndex: =1
 
                         TextCanvas36 As Texto:
@@ -1693,4 +1686,30 @@
                     X: =181
                     Y: =673
                     ZIndex: =10
+
+                Container59 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =66
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =1053
+                    X: =3
+                    ZIndex: =11
+
+                    Container60 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =66
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1047
+                        ZIndex: =1
+
+                        EncabezadoContenedor_5 As EncabezadoContenedor:
+                            LayoutMinHeight: =640
+                            LayoutMinWidth: =640
 

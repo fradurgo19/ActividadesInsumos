@@ -25,7 +25,7 @@ CPP As screen:
             BorderColor: =RGBA(0, 0, 0, 0)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(105, 121, 126, 1)
-            OnSelect: =Navigate(SendEmail_1,ScreenTransition.UnCoverRight )
+            OnSelect: =Navigate(SendEmail_1,ScreenTransition.Fade )
             X: =4
             Y: =4
             ZIndex: =1
@@ -108,7 +108,7 @@ CPP As screen:
             OnSelect: =Reset(TextInputCanvas6)
             Text: ="Reset"
             Width: =56
-            X: =291
+            X: =117
             Y: =54
             ZIndex: =4
 
@@ -170,7 +170,7 @@ CPP As screen:
             OnSelect: =Navigate(Resumen,ScreenTransition.UnCoverRight )
             Text: ="Ir a Resumen"
             Width: =136
-            X: =541
+            X: =562
             Y: =36
             ZIndex: =7
 
