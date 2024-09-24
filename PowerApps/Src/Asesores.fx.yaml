@@ -1690,7 +1690,7 @@
                     Text: ="Actualizar"
                     Width: =96
                     X: =181
-                    Y: =673
+                    Y: =568
                     ZIndex: =10
 
                 Container59 As groupContainer.manualLayoutContainer:
@@ -1718,4 +1718,28 @@
                         EncabezadoContenedor_5 As EncabezadoContenedor:
                             LayoutMinHeight: =640
                             LayoutMinWidth: =640
+
+                Container65 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =122
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =150
+                    X: =126
+                    Y: =630
+                    ZIndex: =12
+
+                    Container66 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =29
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =150
+                        Y: =141
+                        ZIndex: =1
 
