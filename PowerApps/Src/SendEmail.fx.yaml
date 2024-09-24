@@ -18,8 +18,8 @@
                 PrimerRegistro, 
                 First(ThisRecord.GrupoDatos),
                 Modelo, First(ThisRecord.GrupoDatos).Modelo,
-                MesCreado, First(ThisRecord.GrupoDatos).Modelo,
-                Horometro, First(ThisRecord.GrupoDatos).MesCreado,
+                MesCreado, First(ThisRecord.GrupoDatos).MesCreado,
+                Horometro, First(ThisRecord.GrupoDatos).Horometro,
                 PromedioHoras, First(ThisRecord.GrupoDatos).Promedio_h,
                 Cliente, First(ThisRecord.GrupoDatos).'Nombre del cliente'
             )
@@ -220,7 +220,7 @@
                                 Height: =95
                                 Text: =ThisItem.Modelo
                                 Width: =79
-                                X: =353
+                                X: =436
                                 Y: =0
                                 ZIndex: =9
 
@@ -229,18 +229,9 @@
                                 Height: =95
                                 Text: =ThisItem.PromedioHoras
                                 Width: =79
-                                X: =298
+                                X: =334
                                 Y: =0
                                 ZIndex: =10
-
-                            TextCanvas47_5 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =95
-                                Text: =ThisItem.MesCreado
-                                Width: =79
-                                X: =414
-                                Y: =0
-                                ZIndex: =11
 
                 Container76 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
