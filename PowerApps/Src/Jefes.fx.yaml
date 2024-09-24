@@ -36,16 +36,25 @@
             colOpportunitiesPerAsesor,
             ForAll(
                 Distinct('Seguimiento Clientes Equipos Telemetría', field_29),
-                {
-                    Asesor: Value, // Result es el correo o nombre del asesor devuelto por Distinct
-                    TotalOpportunities: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value)),
-                    WonCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Ganada")),
-                    LostCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Perdida")),
-                    FollowUpCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Seguimiento")),
-                    QuotationCount: CountRows(Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Cotización"))
-                }
+                With(
+                    {
+                        OpportunitiesForAsesor: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value),
+                        WonOpportunities: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Ganada"),
+                        LostOpportunities: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Perdida"),
+                        FollowUpOpportunities: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Seguimiento"),
+                        QuotationOpportunities: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Cotización")
+                    },
+                    {
+                        Asesor: Value, // Result es el correo o nombre del asesor devuelto por Distinct
+                        TotalOpportunities: CountRows(OpportunitiesForAsesor),
+                        WonCount: CountRows(WonOpportunities),
+                        LostCount: CountRows(LostOpportunities),
+                        FollowUpCount: CountRows(FollowUpOpportunities),
+                        QuotationCount: CountRows(QuotationOpportunities)
+                    }
+                )
             )
-        );
+        )
         
         
         
@@ -485,8 +494,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =1006
-                    X: =40
+                    Width: =990
+                    X: =56
                     Y: =180
                     ZIndex: =2
 
@@ -498,7 +507,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =1003
+                        Width: =990
                         Y: =6
                         ZIndex: =1
 
@@ -508,7 +517,7 @@
                             Items: =colOportunAsesorMes
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
-                            LayoutMinWidth: =320
+                            LayoutMinWidth: =200
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplatePadding: =0
                             TemplateSize: =69
@@ -817,7 +826,7 @@
                         "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
-                            Items: =colOpportunitiesPerAsesor
+                            Items: ='Seguimiento Clientes Equipos Telemetría'
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
@@ -854,7 +863,11 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =
+                                    Text: |-
+                                        =Distinct(
+                                            Filter('Seguimiento Clientes Equipos Telemetría', !IsBlank('ASESOR 2'.Value)),
+                                            'ASESOR 2'.Value
+                                        )
                                     Width: =70
                                     X: =0
                                     Y: =0
@@ -865,7 +878,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =ThisItem.Asesor.Value
+                                    Text: =ThisItem.'ASESOR 2'.Value
                                     Width: =200
                                     X: =0
                                     Y: =0
