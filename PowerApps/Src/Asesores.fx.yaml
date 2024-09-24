@@ -526,6 +526,10 @@
                     Height: =62
                     OnSelect: =Navigate(Jefes,ScreenTransition.UnCoverRight)
                     Text: ="Jefes"
+                    Visible: |
+                        =User().Email = "analista.mantenimiento@partequipos.com" || 
+                        User().Email = "jestrada@partequipos.com" || 
+                        User().Email = "otrocorreo@partequipos.com"
                     Width: |
                         =100
                     X: =13
