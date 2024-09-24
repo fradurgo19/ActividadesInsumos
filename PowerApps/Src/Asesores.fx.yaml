@@ -555,7 +555,7 @@
 
                 Container40 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =470
+                    Height: =413
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -1147,19 +1147,19 @@
 
                 Container57 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =133
+                    Height: =154
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =777
                     X: =277
-                    Y: =625
+                    Y: =603
                     ZIndex: =9
 
                     Container58 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =133
+                        Height: =154
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -1463,8 +1463,9 @@
                                     DisplayMode: =Parent.DisplayMode
                                     FontSize: =11
                                     Height: =32
-                                    Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                    Mode: ='TextInputCanvas.Mode'.Multiline
                                     Required: =Parent.Required
+                                    TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Value: =Parent.Default
                                     Width: =Parent.Width - 48
@@ -1676,4 +1677,15 @@
                                     X: =0
                                     Y: =DataCardKey17.Y
                                     ZIndex: =4
+
+                ButtonCanvas13 As Botón:
+                    BasePaletteColor: =RGBA(156, 220, 79, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    OnSelect: =SubmitForm(Form1)
+                    Text: ="Actualizar"
+                    Width: =96
+                    X: =958
+                    Y: =569
+                    ZIndex: =10
 
