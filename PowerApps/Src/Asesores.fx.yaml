@@ -1147,19 +1147,19 @@
 
                 Container57 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =154
+                    Height: =174
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =777
                     X: =277
-                    Y: =603
+                    Y: =582
                     ZIndex: =9
 
                     Container58 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =154
+                        Height: =174
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -1215,6 +1215,7 @@
                                     DefaultSelectedItems: =[Parent.Default]
                                     DisplayMode: =Parent.DisplayMode
                                     Height: =32
+                                    InputTextPlaceholder: ="Buscar Asesor"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].field_29)
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
@@ -1400,6 +1401,7 @@
                                     DisplayMode: =Parent.DisplayMode
                                     FontSize: =14
                                     Height: =32
+                                    InputTextPlaceholder: ="Tipo Oportunidad"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].TipoCliente)
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
@@ -1437,7 +1439,7 @@
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
                                 Fill: =RGBA(0, 0, 0, 0)
-                                Height: =60
+                                Height: =98
                                 MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
                                 Required: =false
                                 Update: =DataCardValue13.Value
@@ -1462,14 +1464,14 @@
                                     AccessibleLabel: =Parent.DisplayName
                                     DisplayMode: =Parent.DisplayMode
                                     FontSize: =11
-                                    Height: =32
+                                    Height: =62
                                     Mode: ='TextInputCanvas.Mode'.Multiline
                                     Required: =Parent.Required
                                     TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Value: =Parent.Default
-                                    Width: =Parent.Width - 48
-                                    X: =24
+                                    Width: =185
+                                    X: =0
                                     Y: =DataCardKey13.Y + DataCardKey13.Height + 4
                                     ZIndex: =2
 
@@ -1527,6 +1529,7 @@
                                     DefaultSelectedItems: =[Parent.Default]
                                     DisplayMode: =Parent.DisplayMode
                                     Height: =32
+                                    InputTextPlaceholder: ="Buscar Estado"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Estado)
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
@@ -1588,6 +1591,7 @@
                                     DefaultSelectedItems: =[Parent.Default]
                                     DisplayMode: =Parent.DisplayMode
                                     Height: =32
+                                    InputTextPlaceholder: ="Busccar Detalle"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Detalle)
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
@@ -1649,6 +1653,7 @@
                                     DefaultSelectedItems: =[Parent.Default]
                                     DisplayMode: =Parent.DisplayMode
                                     Height: =32
+                                    InputTextPlaceholder: ="Buscar Tramite"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Estado2)
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
@@ -1681,11 +1686,11 @@
                 ButtonCanvas13 As Botón:
                     BasePaletteColor: =RGBA(156, 220, 79, 1)
                     DisplayMode: =DisplayMode.Edit
-                    Height: =32
+                    Height: =62
                     OnSelect: =SubmitForm(Form1)
                     Text: ="Actualizar"
                     Width: =96
-                    X: =958
-                    Y: =569
+                    X: =181
+                    Y: =673
                     ZIndex: =10
 
