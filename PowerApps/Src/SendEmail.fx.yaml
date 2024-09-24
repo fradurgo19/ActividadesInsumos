@@ -12,14 +12,14 @@
             AddColumns(
                 GroupBy(
                     Sort('Seguimiento Clientes Equipos Telemetría', MesCreado, SortOrder.Descending),
-                    "MesCreado", // Nombre del campo de agrupación
-                    "GrupoDatos" // Nombre del grupo (puedes cambiarlo a lo que prefieras)
+                    field_4, // Nombre del campo de agrupación
+                    GrupoDatos // Nombre del grupo (puedes cambiarlo a lo que prefieras)
                 ),
-                "PrimerRegistro", 
+                PrimerRegistro, 
                 First(ThisRecord.GrupoDatos),
-                "Horometro", First(ThisRecord.GrupoDatos).Horómetro,
-                "PromedioHoras", First(ThisRecord.GrupoDatos).Promedio_h,
-                "Cliente", First(ThisRecord.GrupoDatos).'Nombre del cliente'
+                Horometro, First(ThisRecord.GrupoDatos).Horometro,
+                PromedioHoras, First(ThisRecord.GrupoDatos).Promedio_h,
+                Cliente, First(ThisRecord.GrupoDatos).'Nombre del cliente'
             )
         )
         
@@ -513,7 +513,7 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =497
-        Items: =colUltimasOportunidades
+        Items: =colSerieUnicosPorMes
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
