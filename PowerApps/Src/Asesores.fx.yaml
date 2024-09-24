@@ -1185,7 +1185,7 @@
                                 DataField: ="field_29"
                                 Default: =ThisItem.'ASESOR 2'
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,field_29)
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,'ASESOR 2')
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =70
                                 Required: =false
@@ -1212,7 +1212,7 @@
                                     DisplayMode: =Parent.DisplayMode
                                     Height: =32
                                     InputTextPlaceholder: ="Buscar Asesor"
-                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].field_29)
+                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].'ASESOR 2')
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
                                     X: =24
@@ -1247,7 +1247,7 @@
                                 DataField: ="field_6"
                                 Default: =ThisItem.Horometro
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,field_6)
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Horometro)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =60
                                 Required: =false
@@ -1307,7 +1307,7 @@
                                 DataField: ="field_18"
                                 Default: =ThisItem.'Fecha Primer Mtto'
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,field_18)
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,'Fecha Primer Mtto')
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =60
                                 Required: =false
@@ -1369,7 +1369,7 @@
                                 DataField: ="TipoCliente"
                                 Default: =ThisItem.'Tipo Oportunidad'
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,TipoCliente)
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,'Tipo Oportunidad')
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =60
                                 Required: =false
@@ -1398,7 +1398,7 @@
                                     FontSize: =14
                                     Height: =32
                                     InputTextPlaceholder: ="Tipo Oportunidad"
-                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].TipoCliente)
+                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].'Tipo Oportunidad')
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
                                     X: =24

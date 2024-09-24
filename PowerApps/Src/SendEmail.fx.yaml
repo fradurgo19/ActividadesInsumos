@@ -1,11 +1,28 @@
 "SendEmail As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Height: =Max(App.Height, App.DesignHeight)
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
+    OnVisible: |+
         =Set(CurrentStep,"6");
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
-        UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
+        UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        
+        ClearCollect(
+            colSerieUnicosPorMes,
+            AddColumns(
+                GroupBy(
+                    Sort('Seguimiento Clientes Equipos Telemetría', MesCreado, SortOrder.Descending),
+                    "MesCreado", // Nombre del campo de agrupación
+                    "GrupoDatos" // Nombre del grupo (puedes cambiarlo a lo que prefieras)
+                ),
+                "PrimerRegistro", 
+                First(ThisRecord.GrupoDatos),
+                "Horometro", First(ThisRecord.GrupoDatos).Horómetro,
+                "PromedioHoras", First(ThisRecord.GrupoDatos).Promedio_h,
+                "Cliente", First(ThisRecord.GrupoDatos).'Nombre del cliente'
+            )
+        )
+        
     Orientation: =If(SendEmail.Width < SendEmail.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= SendEmail.Width)
     Width: =Max(App.Width, App.DesignWidth)
@@ -127,7 +144,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =468
+                    Width: =196
                     X: =18
                     Y: =126
                     ZIndex: =2
@@ -151,8 +168,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =566
-                    X: =499
+                    Width: =830
+                    X: =234
                     Y: =126
                     ZIndex: =3
 
@@ -164,59 +181,32 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =551
+                        Width: =815
                         X: =6
                         Y: =3
                         ZIndex: =1
 
-                        CompositeLineChart2 As group:
-                            Height: =5
-                            LayoutMinHeight: =5
-                            LayoutMinWidth: =5
-                            Width: =5
+                        LineChart2 As lineChart:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(21, 68, 18, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(253, 207, 180, 1)
+                            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                            Items: =colOportunidades
+                            LayoutMinHeight: =500
+                            PressedBorderColor: =RGBA(215, 58, 60, 1)
+                            ShowValues: =true
+                            Size: =15
+                            Width: =800
                             X: =40
-                            Y: =40
-                            ZIndex: =1
-
-                            LineChart2 As lineChart:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                BorderStyle: =BorderStyle.None
-                                BorderThickness: =2
-                                Color: =RGBA(51, 51, 51, 1)
-                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                Font: =Font.'Segoe UI'
-                                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                                ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                                Items: =LineChartSample
-                                NumberOfSeries: =200
-                                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                                Size: =15
-                                Width: =200
-                                X: =40
-                                XLabelAngle: =90
-                                Y: =70
-                                ZIndex: =3
-
-                            Legend2 As legend:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                BorderStyle: =BorderStyle.None
-                                BorderThickness: =2
-                                Color: =RGBA(51, 51, 51, 1)
-                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                DisabledColor: =RGBA(166, 166, 166, 1)
-                                DisabledFill: =RGBA(220, 220, 220, 1)
-                                Font: =Font.'Segoe UI'
-                                Height: =80
-                                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                                ItemColorSet: =LineChart2.ItemColorSet
-                                Items: =LineChart2.SeriesLabels
-                                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                                Width: =200
-                                X: =80
-                                Y: =480
-                                ZIndex: =4
+                            XLabelAngle: |
+                                =90
+                            Y: =70
+                            ZIndex: =3
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -518,4 +508,111 @@
                     X: =0
                     Y: =10
                     ZIndex: =12
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =497
+        Items: =colUltimasOportunidades
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =340
+        X: =339
+        Y: =117
+        ZIndex: =4
+
+        Image5 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =72
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =72
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title3 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.field_4
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle1 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.field_4
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =Title3.Y + Title3.Height
+            ZIndex: =3
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="Ver los detalles del elemento"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =Parent.TemplateHeight - Separator5.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
 
