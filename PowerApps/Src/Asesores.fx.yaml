@@ -427,7 +427,8 @@
                 Container38 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =53
-                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -438,8 +439,7 @@
                     ZIndex: =1
 
                     Label2_7 As label:
-                        Align: =Align.Center
-                        AlignInContainer: =AlignInContainer.Stretch
+                        Align: =Align.Right
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
