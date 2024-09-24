@@ -840,14 +840,14 @@
 
                 Container52_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =433
+                    Height: =545
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =743
-                    X: =18
-                    Y: =285
+                    Width: =507
+                    X: =32
+                    Y: =172
                     ZIndex: =4
 
                     Container53_1 As groupContainer.horizontalAutoLayoutContainer:
@@ -858,7 +858,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =742
+                        Width: =507
                         Y: =6
                         ZIndex: =1
 
@@ -872,7 +872,7 @@
                             LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplatePadding: =0
-                            TemplateSize: =60
+                            TemplateSize: =32
                             Width: =Parent.Width
                             X: =40
                             Y: =40
@@ -889,14 +889,14 @@
 
                             Container54_1 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.Light
-                                Height: =60
+                                Height: =32
                                 LayoutJustifyContent: =LayoutJustifyContent.End
                                 LayoutMode: =LayoutMode.Auto
                                 RadiusBottomLeft: =4
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
-                                Width: =742
+                                Width: =496
                                 ZIndex: =6
 
                                 TextCanvas44 As Texto:
@@ -904,12 +904,83 @@
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
+                                    LayoutMinWidth: =150
                                     Text: =ThisItem.Correo
-                                    Width: =100
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Width: =180
                                     X: =0
                                     Y: =0
                                     ZIndex: =1
+
+                                TextCanvas44_1 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =30
+                                    Text: =ThisItem.Asesor
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Width: =60
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                                TextCanvas44_2 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =30
+                                    Text: =ThisItem.Ganadas
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Width: =60
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                                TextCanvas44_3 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =30
+                                    Text: =ThisItem.Perdidas
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Width: =60
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =4
+
+                                TextCanvas44_4 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =30
+                                    Text: =ThisItem.Seguimientos
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Width: =60
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =5
+
+                                TextCanvas44_5 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =30
+                                    Text: =ThisItem.Cotizaciones
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Width: =60
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =6
 
                 Container55_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
@@ -966,4 +1037,125 @@
                             X: =0
                             Y: =0
                             ZIndex: =2
+
+                Container55_2 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =39
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =507
+                    X: =32
+                    Y: =133
+                    ZIndex: =6
+
+                    Container56_2 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =37
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =504
+                        ZIndex: =1
+
+                        TextCanvas43_6 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =10
+                            Text: ="Asesor"
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =180
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        TextCanvas43_3 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =10
+                            Text: ="Cantidad"
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =80
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas41_1 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(52, 152, 47, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =10
+                            Text: ="Ganadas"
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas42_1 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(240, 98, 15, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Size: =10
+                            Text: ="Perdidas"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas43_4 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 191, 0, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Size: =10
+                            Text: ="Seguimiento"
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        TextCanvas43_5 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(180, 214, 250, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Size: =10
+                            Text: ="Cotizado"
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
 
