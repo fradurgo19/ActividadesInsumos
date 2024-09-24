@@ -1195,14 +1195,14 @@
                                 Required: =false
                                 Update: =DataCardValue21.Selected
                                 Width: =192
-                                X: =9
-                                Y: =1
+                                X: =0
+                                Y: =0
                                 ZIndex: =1
 
                                 DataCardKey21 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =22
-                                    Text: =Parent.DisplayName
+                                    Text: ="Asesor"
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =Parent.Width - 48
                                     Wrap: =false
@@ -1256,7 +1256,7 @@
                                 Required: =false
                                 Update: =Value(DataCardValue4.Value)
                                 Width: =192
-                                X: =0
+                                X: =3
                                 Y: =0
                                 ZIndex: =2
 
@@ -1316,7 +1316,7 @@
                                 Required: =false
                                 Update: =DataCardValue7.SelectedDate
                                 Width: =192
-                                X: =3
+                                X: =6
                                 Y: =0
                                 ZIndex: =2
 
@@ -1378,7 +1378,7 @@
                                 Required: =false
                                 Update: =DataCardValue12.Selected
                                 Width: =192
-                                X: =6
+                                X: =9
                                 Y: =0
                                 ZIndex: =2
 
@@ -1443,7 +1443,7 @@
                                 Update: =DataCardValue13.Value
                                 Width: =192
                                 X: =9
-                                Y: =0
+                                Y: =1
                                 ZIndex: =2
 
                                 DataCardKey13 As Texto:
@@ -1635,7 +1635,7 @@
                                 DataCardKey17 As Texto:
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =22
-                                    Text: =Parent.DisplayName
+                                    Text: ="Tramite"
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =Parent.Width - 48
                                     Wrap: =false
