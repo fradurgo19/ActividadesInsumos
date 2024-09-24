@@ -122,14 +122,14 @@
 
                 Container74 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =614
+                    Height: =567
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =468
                     X: =18
-                    Y: =80
+                    Y: =126
                     ZIndex: =2
 
                     Container75 As groupContainer.horizontalAutoLayoutContainer:
@@ -146,19 +146,19 @@
 
                 Container76 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =614
+                    Height: =568
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =566
                     X: =499
-                    Y: =80
+                    Y: =126
                     ZIndex: =3
 
                     Container77 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =601
+                        Height: =565
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -166,8 +166,57 @@
                         RadiusTopRight: =4
                         Width: =551
                         X: =6
-                        Y: =6
+                        Y: =3
                         ZIndex: =1
+
+                        CompositeLineChart2 As group:
+                            Height: =5
+                            LayoutMinHeight: =5
+                            LayoutMinWidth: =5
+                            Width: =5
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                            LineChart2 As lineChart:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                Font: =Font.'Segoe UI'
+                                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                                Items: =LineChartSample
+                                NumberOfSeries: =200
+                                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                Size: =15
+                                Width: =200
+                                X: =40
+                                XLabelAngle: =90
+                                Y: =70
+                                ZIndex: =3
+
+                            Legend2 As legend:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(220, 220, 220, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =80
+                                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                ItemColorSet: =LineChart2.ItemColorSet
+                                Items: =LineChart2.SeriesLabels
+                                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                Width: =200
+                                X: =80
+                                Y: =480
+                                ZIndex: =4
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
