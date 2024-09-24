@@ -845,7 +845,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =1010
+                    Width: =743
                     X: =18
                     Y: =285
                     ZIndex: =4
@@ -858,13 +858,14 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =1010
+                        Width: =742
                         Y: =6
                         ZIndex: =1
 
                         "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
+                            Height: =Parent.Height
                             Items: =colOportunAsesorCorreo
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
@@ -872,6 +873,7 @@
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplatePadding: =0
                             TemplateSize: =60
+                            Width: =Parent.Width
                             X: =40
                             Y: =40
                             ZIndex: =1
@@ -894,21 +896,8 @@
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
-                                Width: =986
+                                Width: =742
                                 ZIndex: =6
-
-                                TextCanvas38_13 As Texto:
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Text: =ThisItem.Asesor
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =70
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =8
 
                                 TextCanvas44 As Texto:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -917,11 +906,10 @@
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
                                     Text: =ThisItem.Correo
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =200
+                                    Width: =100
                                     X: =0
                                     Y: =0
-                                    ZIndex: =11
+                                    ZIndex: =1
 
                 Container55_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
