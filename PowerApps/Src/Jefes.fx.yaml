@@ -31,30 +31,27 @@
             )
         );
         
-        
         ClearCollect(
-            colOpportunitiesPerAsesor,
-            ForAll(
-                Distinct('Seguimiento Clientes Equipos Telemetría', field_29),
-                With(
-                    {
-                        OpportunitiesForAsesor: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value),
-                        WonOpportunities: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Ganada"),
-                        LostOpportunities: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Perdida"),
-                        FollowUpOpportunities: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Seguimiento"),
-                        QuotationOpportunities: Filter('Seguimiento Clientes Equipos Telemetría', field_29.Value = field_29.Value && Estado.Value = "Cotización")
-                    },
-                    {
-                        Asesor: Value, // Result es el correo o nombre del asesor devuelto por Distinct
-                        TotalOpportunities: CountRows(OpportunitiesForAsesor),
-                        WonCount: CountRows(WonOpportunities),
-                        LostCount: CountRows(LostOpportunities),
-                        FollowUpCount: CountRows(FollowUpOpportunities),
-                        QuotationCount: CountRows(QuotationOpportunities)
-                    }
-                )
+            colOportunAsesorCorreo,
+            AddColumns(
+                GroupBy(
+                    'Seguimiento Clientes Equipos Telemetría',
+                    Correo,  // Agrupando por correo
+                    OportunidadesPorAsesorCorreo
+                ),
+                Asesor,
+                CountIf(OportunidadesPorAsesorCorreo, 'ASESOR 2'.Value = ThisRecord.'ASESOR 2'.Value),
+                Ganadas,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Ganada"),
+                Perdidas,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Perdida"),
+                Seguimientos,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Seguimiento"),
+                Cotizaciones,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Cotización")
             )
         )
+        
         
         
         
@@ -826,7 +823,7 @@
                         "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
-                            Items: ='Seguimiento Clientes Equipos Telemetría'
+                            Items: =colOportunAsesorCorreo
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
@@ -863,11 +860,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: |-
-                                        =Distinct(
-                                            Filter('Seguimiento Clientes Equipos Telemetría', !IsBlank('ASESOR 2'.Value)),
-                                            'ASESOR 2'.Value
-                                        )
+                                    Text: =ThisItem.Asesor
                                     Width: =70
                                     X: =0
                                     Y: =0
@@ -878,7 +871,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Text: =ThisItem.'ASESOR 2'.Value
+                                    Text: =ThisItem.Correo
                                     Width: =200
                                     X: =0
                                     Y: =0
