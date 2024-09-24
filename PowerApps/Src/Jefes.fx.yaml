@@ -37,7 +37,7 @@
                 GroupBy(
                     'Seguimiento Clientes Equipos Telemetría',
                     Correo,  // Agrupando por correo
-                    MesCreado,
+                    MesCreado, // Agrupando por Mes
                     OportunidadesPorAsesorCorreo
                 ),
                 Asesor,
