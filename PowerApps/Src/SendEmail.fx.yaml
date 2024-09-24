@@ -84,23 +84,90 @@
                 Y: =
                 ZIndex: =16
 
-            Label2_4 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =74
-                Size: =20
-                Text: ="LIFE CICLE COST"
-                Width: =1009
-                ZIndex: =17
+            Container71 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =756
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1066
+                ZIndex: =18
+
+                Container72 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =80
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =1066
+                    ZIndex: =1
+
+                    Container73 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =80
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =984
+                        X: =81
+                        ZIndex: =1
+
+                        EncabezadoContenedor_8 As EncabezadoContenedor:
+                            LayoutMinHeight: =640
+                            LayoutMinWidth: =640
+
+                Container74 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =614
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =468
+                    X: =18
+                    Y: =80
+                    ZIndex: =2
+
+                    Container75 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =603
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        Y: =3
+                        ZIndex: =1
+
+                Container76 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =614
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =566
+                    X: =499
+                    Y: =80
+                    ZIndex: =3
+
+                    Container77 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =601
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =551
+                        X: =6
+                        Y: =6
+                        ZIndex: =1
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -402,21 +469,4 @@
                     X: =0
                     Y: =10
                     ZIndex: =12
-
-    Image14 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =tareas
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =91
-        X: =1220
-        ZIndex: =4
 
