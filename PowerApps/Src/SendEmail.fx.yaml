@@ -17,7 +17,9 @@
                 ),
                 PrimerRegistro, 
                 First(ThisRecord.GrupoDatos),
-                Horometro, First(ThisRecord.GrupoDatos).Horometro,
+                Modelo, First(ThisRecord.GrupoDatos).Modelo,
+                MesCreado, First(ThisRecord.GrupoDatos).Modelo,
+                Horometro, First(ThisRecord.GrupoDatos).MesCreado,
                 PromedioHoras, First(ThisRecord.GrupoDatos).Promedio_h,
                 Cliente, First(ThisRecord.GrupoDatos).'Nombre del cliente'
             )
@@ -144,7 +146,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =196
+                    Width: =546
                     X: =18
                     Y: =126
                     ZIndex: =2
@@ -157,9 +159,88 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =Parent.Width
+                        Width: =543
                         Y: =3
                         ZIndex: =1
+
+                        "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            DelayItemLoading: =true
+                            Height: =497
+                            Items: =colSerieUnicosPorMes
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =287
+                            LayoutMinWidth: =320
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplatePadding: =0
+                            TemplateSize: =104
+                            Width: =232
+                            X: =339
+                            Y: =117
+                            ZIndex: =1
+
+                            Separator5 As rectangle:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =8
+                                OnSelect: =Select(Parent)
+                                Width: =Parent.TemplateWidth
+                                Y: =Parent.TemplateHeight - Self.Height
+                                ZIndex: =5
+
+                            TextCanvas47 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =95
+                                Text: =ThisItem.Cliente
+                                Width: =79
+                                X: =132
+                                Y: =1
+                                ZIndex: =6
+
+                            TextCanvas47_1 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =95
+                                Text: =ThisItem.field_4
+                                Width: =79
+                                X: =40
+                                Y: =9
+                                ZIndex: =7
+
+                            TextCanvas47_2 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =95
+                                Text: =ThisItem.Horometro
+                                Width: =79
+                                X: =232
+                                Y: =1
+                                ZIndex: =8
+
+                            TextCanvas47_3 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =95
+                                Text: =ThisItem.Modelo
+                                Width: =79
+                                X: =353
+                                Y: =0
+                                ZIndex: =9
+
+                            TextCanvas47_4 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =95
+                                Text: =ThisItem.PromedioHoras
+                                Width: =79
+                                X: =298
+                                Y: =0
+                                ZIndex: =10
+
+                            TextCanvas47_5 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =95
+                                Text: =ThisItem.MesCreado
+                                Width: =79
+                                X: =414
+                                Y: =0
+                                ZIndex: =11
 
                 Container76 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
@@ -168,8 +249,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =830
-                    X: =234
+                    Width: =340
+                    X: =723
                     Y: =126
                     ZIndex: =3
 
@@ -196,8 +277,9 @@
                             Font: =Font.'Segoe UI'
                             HoverBorderColor: =RGBA(253, 207, 180, 1)
                             ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                            Items: =colOportunidades
+                            Items: =colSerieUnicosPorMes
                             LayoutMinHeight: =500
+                            NumberOfSeries: =9
                             PressedBorderColor: =RGBA(215, 58, 60, 1)
                             ShowValues: =true
                             Size: =15
@@ -508,27 +590,4 @@
                     X: =0
                     Y: =10
                     ZIndex: =12
-
-    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =497
-        Items: =colSerieUnicosPorMes
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =104
-        Width: =162
-        X: =339
-        Y: =117
-        ZIndex: =4
-
-        Separator5 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
 
