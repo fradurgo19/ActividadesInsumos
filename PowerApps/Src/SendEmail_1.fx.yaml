@@ -365,24 +365,6 @@
                 Y: =
                 ZIndex: =15
 
-            Label2_6 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =52
-                Size: =20
-                Text: ="Manuales y Consulta de Partes"
-                Width: =1009
-                ZIndex: =16
-
             Rectangle3_3 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -399,41 +381,75 @@
                 Y: =
                 ZIndex: =17
 
-    Image14_1 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =68
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =tareas
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        X: =1218
-        ZIndex: =3
+            Container67 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =764
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1071
+                ZIndex: =18
 
-    ButtonCanvas1 As Botón:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        Height: =62
-        OnSelect: =Navigate(SendEmail_2,ScreenTransition.Fade )
-        Text: ="Manuales"
-        Width: =165
-        X: =371
-        Y: =194
-        ZIndex: =4
+                Container68 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =81
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =1062
+                    X: =3
+                    Y: =3
+                    ZIndex: =1
 
-    ButtonCanvas1_1 As Botón:
-        BasePaletteColor: =RGBA(141, 229, 250, 1)
-        DisplayMode: =DisplayMode.Edit
-        Height: =62
-        OnSelect: =Navigate(CPP,ScreenTransition.Fade)
-        Text: ="Conulta de Partes"
-        Width: =157
-        X: =664
-        Y: =200
-        ZIndex: =5
+                    Container69 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =Parent.Height
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =990
+                        X: =72
+                        ZIndex: =1
+
+                        EncabezadoContenedor_7 As EncabezadoContenedor:
+                            LayoutMinHeight: =640
+                            LayoutMinWidth: =640
+
+                Container70 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =680
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =1062
+                    X: =3
+                    Y: =84
+                    ZIndex: =2
+
+                    ButtonCanvas1 As Botón:
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =62
+                        OnSelect: =Navigate(SendEmail_2,ScreenTransition.Fade )
+                        Text: ="Manuales"
+                        Width: =165
+                        X: =44
+                        Y: =54
+                        ZIndex: =1
+
+                    ButtonCanvas1_1 As Botón:
+                        BasePaletteColor: =RGBA(141, 229, 250, 1)
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =62
+                        OnSelect: =Navigate(CPP,ScreenTransition.Fade)
+                        Text: ="Conulta de Partes"
+                        Width: =157
+                        X: =315
+                        Y: =54
+                        ZIndex: =2
 
