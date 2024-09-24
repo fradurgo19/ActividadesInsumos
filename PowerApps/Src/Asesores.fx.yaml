@@ -573,7 +573,7 @@
                         Items: |
                             =Sort(
                                 Filter(
-                                    colOportunidades,
+                                    'Seguimiento Clientes Equipos Telemetría',
                                     (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || IsBlank(TextInputCanvas2.Value)) &&
                                     (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                     ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
@@ -586,8 +586,10 @@
                         LayoutMinHeight: =0
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
+                        ShowNavigation: =true
                         TemplatePadding: =0
                         TemplateSize: =60
+                        Transition: =Transition.Push
                         X: =40
                         Y: =40
                         ZIndex: =1
@@ -1142,4 +1144,536 @@
                     X: =13
                     Y: =66
                     ZIndex: =8
+
+                Container57 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =133
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =777
+                    X: =277
+                    Y: =625
+                    ZIndex: =9
+
+                    Container58 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =133
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =777
+                        ZIndex: =1
+
+                        Form1 As form.PowerApps_CoreControls_Form:
+                            AcceptsFocus: =false
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            DataSource: ='Seguimiento Clientes Equipos Telemetría'
+                            Height: =Parent.Height
+                            Item: =Gallery8.Selected
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =0
+                            NumberOfColumns: =12
+                            UseFluentV9Cards: =true
+                            Width: =Parent.Width
+                            X: =588
+                            Y: =471
+                            ZIndex: =1
+
+                            "'ASESOR 2_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="field_29"
+                                Default: =ThisItem.'ASESOR 2'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,field_29)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =70
+                                Required: =false
+                                Update: =DataCardValue21.Selected
+                                Width: =192
+                                X: =9
+                                Y: =1
+                                ZIndex: =1
+
+                                DataCardKey21 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue21 As 'Cuadro combinado'.pcfdataset":
+                                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                    DefaultSelectedItems: =[Parent.Default]
+                                    DisplayMode: =Parent.DisplayMode
+                                    Height: =32
+                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].field_29)
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey21.Y + DataCardKey21.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage19 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue21.Y + DataCardValue21.Height
+                                    ZIndex: =3
+
+                                StarVisible19 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =20
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey21.Y
+                                    ZIndex: =4
+
+                            Horometro_DataCard1 As typedDataCard.fluentV9NumberEditCard:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="field_6"
+                                Default: =ThisItem.Horometro
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,field_6)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =60
+                                Required: =false
+                                Update: =Value(DataCardValue4.Value)
+                                Width: =192
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardKey4 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue4 As 'Entrada de texto'":
+                                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                    DisplayMode: =Parent.DisplayMode
+                                    Height: =32
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Value: =Parent.Default
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage4 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue4.Y + DataCardValue4.Height
+                                    ZIndex: =3
+
+                                StarVisible4 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey4.Y
+                                    ZIndex: =4
+
+                            "'Fecha Primer Mtto_DataCard1' As typedDataCard.fluentV9DateEditCard":
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="field_18"
+                                Default: =ThisItem.'Fecha Primer Mtto'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,field_18)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =60
+                                Required: =false
+                                Update: =DataCardValue7.SelectedDate
+                                Width: =192
+                                X: =3
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardKey7 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue7 As 'Selector de fecha'":
+                                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                    DisplayMode: =Parent.DisplayMode
+                                    EndDate: =Date(Year(Today())+100, 12, 31)
+                                    Height: =32
+                                    SelectedDate: =Parent.Default
+                                    StartDate: =Date(1900, 1, 1)
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey7.Y + DataCardKey7.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage7 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue7.Y + DataCardValue7.Height
+                                    ZIndex: =3
+
+                                StarVisible7 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey7.Y
+                                    ZIndex: =4
+
+                            "'Tipo Oportunidad_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="TipoCliente"
+                                Default: =ThisItem.'Tipo Oportunidad'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,TipoCliente)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =60
+                                Required: =false
+                                Update: =DataCardValue12.Selected
+                                Width: =192
+                                X: =6
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardKey12 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Size: =14
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue12 As 'Cuadro combinado'.pcfdataset":
+                                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                    DefaultSelectedItems: =[Parent.Default]
+                                    DisplayMode: =Parent.DisplayMode
+                                    FontSize: =14
+                                    Height: =32
+                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].TipoCliente)
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey12.Y + DataCardKey12.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage12 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue12.Y + DataCardValue12.Height
+                                    ZIndex: =3
+
+                                StarVisible12 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =20
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey12.Y
+                                    ZIndex: =4
+
+                            Observaciones_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="Observaciones"
+                                Default: =ThisItem.Observaciones
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =60
+                                MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
+                                Required: =false
+                                Update: =DataCardValue13.Value
+                                Width: =192
+                                X: =9
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardKey13 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Size: =14
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue13 As 'Entrada de texto'":
+                                    AccessibleLabel: =Parent.DisplayName
+                                    DisplayMode: =Parent.DisplayMode
+                                    FontSize: =11
+                                    Height: =32
+                                    Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                    Required: =Parent.Required
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Value: =Parent.Default
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey13.Y + DataCardKey13.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage13 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue13.Y + DataCardValue13.Height
+                                    ZIndex: =3
+
+                                StarVisible13 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey13.Y
+                                    ZIndex: =4
+
+                            Estado_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="Estado"
+                                Default: =ThisItem.Estado
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Estado)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =60
+                                Required: =false
+                                Update: =DataCardValue14.Selected
+                                Width: =192
+                                X: =0
+                                Y: =1
+                                ZIndex: =2
+
+                                DataCardKey14 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue14 As 'Cuadro combinado'.pcfdataset":
+                                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                    DefaultSelectedItems: =[Parent.Default]
+                                    DisplayMode: =Parent.DisplayMode
+                                    Height: =32
+                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Estado)
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey14.Y + DataCardKey14.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage14 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue14.Y + DataCardValue14.Height
+                                    ZIndex: =3
+
+                                StarVisible14 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =20
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey14.Y
+                                    ZIndex: =4
+
+                            Detalle_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="Detalle"
+                                Default: =ThisItem.Detalle
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Detalle)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =70
+                                Required: =false
+                                Update: =DataCardValue15.Selected
+                                Width: =192
+                                X: =3
+                                Y: =1
+                                ZIndex: =2
+
+                                DataCardKey15 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue15 As 'Cuadro combinado'.pcfdataset":
+                                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                    DefaultSelectedItems: =[Parent.Default]
+                                    DisplayMode: =Parent.DisplayMode
+                                    Height: =32
+                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Detalle)
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey15.Y + DataCardKey15.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage15 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue15.Y + DataCardValue15.Height
+                                    ZIndex: =3
+
+                                StarVisible15 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =20
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey15.Y
+                                    ZIndex: =4
+
+                            Estado2_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="Estado2"
+                                Default: =ThisItem.Estado2
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Estado2)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =70
+                                Required: =false
+                                Update: =DataCardValue17.Selected
+                                Width: =192
+                                X: =6
+                                Y: =1
+                                ZIndex: =2
+
+                                DataCardKey17 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue17 As 'Cuadro combinado'.pcfdataset":
+                                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                    DefaultSelectedItems: =[Parent.Default]
+                                    DisplayMode: =Parent.DisplayMode
+                                    Height: =32
+                                    Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Estado2)
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey17.Y + DataCardKey17.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage17 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue17.Y + DataCardValue17.Height
+                                    ZIndex: =3
+
+                                StarVisible17 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =20
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey17.Y
+                                    ZIndex: =4
 
