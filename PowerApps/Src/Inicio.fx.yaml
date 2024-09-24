@@ -1,126 +1,162 @@
 Inicio As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
 
-    Image6 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =688
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: ='a3a270fe-0230-4f42-ad10-22fce65ce3eb'
-        ImagePosition: =ImagePosition.Fill
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =635
-        X: =709
-        Y: =60
-        ZIndex: =1
+    Container61 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        ZIndex: =13
 
-    Image8 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =688
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =731
-        Y: =60
-        ZIndex: =2
-
-    ButtonCanvas3 As Botón:
-        Align: =""
-        BasePaletteColor: =RGBA(249, 83, 109, 1)
-        BorderStyle: =""
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        FontSize: =20
-        Height: =88
-        Icon: =""
-        IconRotation: =0
-        IconStyle: ='ButtonCanvas.IconStyle'.Filled
-        Layout: ="Icon before"
-        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
-        Text: ="INGRESAR"
-        VerticalAlign: =""
-        Width: =208
-        X: =573
-        Y: =571
-        ZIndex: =3
-
-    GroupBackground_7 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =6
-
-        BienvenidaFondo_2 As rectangle:
-            BorderColor: =RGBA(51, 51, 51, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =BienvenidaFondo_2.BorderColor
-            Height: =60
+        Container62 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =67
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =1366
-            ZIndex: =5
+            Y: =6
+            ZIndex: =1
 
-        ImageLogo_2 As image:
-            BorderColor: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            FocusedBorderColor: =ImageLogo_2.BorderColor
-            Height: =60
-            Image: =Logo
-            Width: =276
-            X: =1090
-            ZIndex: =6
+            Container63 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =67
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1354
+                X: =12
+                ZIndex: =1
 
-    Timer1 As timer:
-        AutoStart: =varTiempo
-        BorderColor: =App.Theme.Colors.Primary
-        DisabledBorderColor: =RGBA(244, 244, 244, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Duration: =6000
-        Fill: =App.Theme.Colors.Primary
-        Font: =App.Theme.Font
-        Height: =70
-        HoverBorderColor: =App.Theme.Colors.Darker10
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =App.Theme.Colors.Darker10
-        OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
-        PressedBorderColor: =App.Theme.Colors.Darker40
-        PressedColor: =Self.Color
-        PressedFill: =App.Theme.Colors.Darker40
-        Visible: =false
-        Width: =280
-        X: =537
-        Y: =369
-        ZIndex: =7
+                TextCanvas45 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =18
+                    Text: ="Mantenimiento, CPP, Manuales Y PQRS"
+                    Weight: ='TextCanvas.Weight'.Bold
+                    Width: |
+                        =300
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
 
-    Label1_8 As label:
-        Align: =Align.Center
-        BorderColor: =App.Theme.Colors.Darker40
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(122, 138, 143, 1)
-        FocusedBorderThickness: =30
-        Font: =App.Theme.Font
-        FontWeight: =FontWeight.Bold
-        Height: =52
-        Size: =30
-        Text: ="Bienvenido a la App"
-        Width: =687
-        X: =333
-        Y: =60
-        ZIndex: =8
+                EncabezadoContenedor_6 As EncabezadoContenedor:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    ZIndex: =2
+
+        Container64 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =681
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1366
+            Y: =73
+            ZIndex: =2
+
+            Image2 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =681
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =Cargar
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =varCargar
+                Width: =736
+                X: =629
+                ZIndex: =1
+
+            Image8 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =678
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =varCargar
+                Width: =646
+                X: =3
+                Y: =3
+                ZIndex: =2
+
+            ButtonCanvas3 As Botón:
+                Align: =""
+                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =20
+                Height: =93
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                Layout: ="Icon before"
+                OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                Text: ="INGRESAR"
+                VerticalAlign: =""
+                Width: =213
+                X: =566
+                Y: =587
+                ZIndex: =3
+
+            Timer1 As timer:
+                AutoStart: =varTiempo
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Duration: =5000
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                Height: =74
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Visible: =false
+                Width: =287
+                X: =529
+                Y: =364
+                ZIndex: =4
+
+            Label1_36 As label:
+                Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Bold
+                Height: =81
+                Size: =30
+                Text: ="Bienvenido a la App"
+                Width: =657
+                X: =344
+                Y: =22
+                ZIndex: =5
 
