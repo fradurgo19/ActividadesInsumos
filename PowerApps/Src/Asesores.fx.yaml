@@ -1427,72 +1427,6 @@
                                     Y: =DataCardKey12.Y
                                     ZIndex: =4
 
-                            Observaciones_DataCard1 As typedDataCard.fluentV9TextualEditCard:
-                                BorderColor: =RGBA(166, 166, 166, 1)
-                                BorderStyle: =BorderStyle.Solid
-                                DataField: ="Observaciones"
-                                Default: =ThisItem.Observaciones
-                                DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
-                                Fill: =RGBA(0, 0, 0, 0)
-                                Height: =98
-                                MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
-                                Required: =false
-                                Update: =DataCardValue13.Value
-                                Width: =192
-                                X: =9
-                                Y: =1
-                                ZIndex: =2
-
-                                DataCardKey13 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =22
-                                    Size: =14
-                                    Text: =Parent.DisplayName
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
-                                    Wrap: =false
-                                    X: =24
-                                    Y: =10
-                                    ZIndex: =1
-
-                                "DataCardValue13 As 'Entrada de texto'":
-                                    AccessibleLabel: =Parent.DisplayName
-                                    DisplayMode: =Parent.DisplayMode
-                                    FontSize: =11
-                                    Height: =62
-                                    Mode: ='TextInputCanvas.Mode'.Multiline
-                                    Required: =Parent.Required
-                                    TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
-                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Value: =Parent.Default
-                                    Width: =185
-                                    X: =0
-                                    Y: =DataCardKey13.Y + DataCardKey13.Height + 4
-                                    ZIndex: =2
-
-                                ErrorMessage13 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =30
-                                    Text: =Parent.Error
-                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                    Width: =Parent.Width - 48
-                                    Wrap: =true
-                                    X: =24
-                                    Y: =DataCardValue13.Y + DataCardValue13.Height
-                                    ZIndex: =3
-
-                                StarVisible13 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =30
-                                    Text: ="*"
-                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                    Width: =30
-                                    X: =0
-                                    Y: =DataCardKey13.Y
-                                    ZIndex: =4
-
                             Estado_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
                                 BorderColor: =RGBA(166, 166, 166, 1)
                                 BorderStyle: =BorderStyle.Solid
@@ -1677,6 +1611,72 @@
                                     Width: =30
                                     X: =0
                                     Y: =DataCardKey17.Y
+                                    ZIndex: =4
+
+                            Observaciones_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="Observaciones"
+                                Default: =ThisItem.Observaciones
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =98
+                                MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
+                                Required: =false
+                                Update: =DataCardValue13.Value
+                                Width: =192
+                                X: =9
+                                Y: =1
+                                ZIndex: =2
+
+                                DataCardKey13 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Size: =14
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue13 As 'Entrada de texto'":
+                                    AccessibleLabel: =Parent.DisplayName
+                                    DisplayMode: =Parent.DisplayMode
+                                    FontSize: =11
+                                    Height: =62
+                                    Mode: ='TextInputCanvas.Mode'.Multiline
+                                    Required: =Parent.Required
+                                    TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Value: =Parent.Default
+                                    Width: =185
+                                    X: =0
+                                    Y: =DataCardKey13.Y + DataCardKey13.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage13 As Texto:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue13.Y + DataCardValue13.Height
+                                    ZIndex: =3
+
+                                StarVisible13 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey13.Y
                                     ZIndex: =4
 
                 Container59 As groupContainer.manualLayoutContainer:
