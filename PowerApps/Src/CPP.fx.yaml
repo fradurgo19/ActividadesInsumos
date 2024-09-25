@@ -757,6 +757,17 @@ CPP As screen:
                         Y: =Parent.TemplateHeight - Self.Height
                         ZIndex: =5
 
+                    Container81 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =104
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =355
+                        ZIndex: =6
+
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(71, 158, 245, 1)
