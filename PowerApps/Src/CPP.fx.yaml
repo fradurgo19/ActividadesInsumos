@@ -154,7 +154,7 @@ CPP As screen:
                 
                 
                 
-            Text: ="Borrar Todo"
+            Text: ="Borrar Selección"
             Visible: =true
             Width: =41
             X: =459
@@ -193,7 +193,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =913
+            Width: =651
             X: =335
             Y: =52
             ZIndex: =2
@@ -257,7 +257,7 @@ CPP As screen:
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =911
+                        Width: =639
                         ZIndex: =6
 
                         TextCanvas9_5 As Texto:
@@ -342,58 +342,6 @@ CPP As screen:
                             X: =0
                             Y: =0
                             ZIndex: =5
-
-                        TextCanvas9_13 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =5
-                            Size: =15
-                            Text: =ThisItem.RefFabricante
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =75
-                            X: =0
-                            Y: =0
-                            ZIndex: =6
-
-                        TextCanvas9_14 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =15
-                            Text: =ThisItem.Equivalencia
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =80
-                            X: =0
-                            Y: =0
-                            ZIndex: =7
-
-                        TextCanvas9_15 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontItalic: =true
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =15
-                            Text: =ThisItem.RefFleetguard
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =80
-                            X: =0
-                            Y: =0
-                            ZIndex: =8
 
                         TextCanvas9_16 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -482,7 +430,6 @@ CPP As screen:
                         OnUncheck: =Remove(colAllSelectedItems, ThisItem);Set(varCheckboxChecked, false)
                         Size: =13
                         Text: =
-                        Visible: =false
                         Width: =39
                         ZIndex: =7
 
@@ -620,54 +567,6 @@ CPP As screen:
                     X: =0
                     Y: =0
                     ZIndex: =5
-
-                TextCanvas7_13 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =20
-                    PaddingLeft: =5
-                    Size: =12
-                    Text: ="Fabricante"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =75
-                    X: =0
-                    Y: =0
-                    ZIndex: =6
-
-                TextCanvas7_14 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =32
-                    PaddingLeft: =5
-                    Size: =12
-                    Text: ="Equivalente"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
-                    X: =0
-                    Y: =0
-                    ZIndex: =7
-
-                TextCanvas7_15 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =32
-                    PaddingLeft: =5
-                    Size: =12
-                    Text: ="Fleetguard"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
-                    X: =0
-                    Y: =0
-                    ZIndex: =8
 
                 TextCanvas7_16 As Texto:
                     AutoHeight: =false
