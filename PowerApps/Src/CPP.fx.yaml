@@ -112,55 +112,6 @@ CPP As screen:
             Y: =54
             ZIndex: =4
 
-        ButtonCanvas4_1 As Botón:
-            Appearance: ='ButtonCanvas.Appearance'.Primary
-            BasePaletteColor: =RGBA(8, 222, 8, 1)
-            DisplayMode: =DisplayMode.Edit
-            FontSize: =9
-            Height: =43
-            IconStyle: ='ButtonCanvas.IconStyle'.Outline
-            Layout: ='ButtonCanvas.Layout'.IconAfter
-            OnSelect: |+
-                =ForAll(
-                    Gallery6_1.AllItems, 
-                    Collect(colAllSelectedItems, ThisRecord)
-                );
-                UpdateContext({ varCheckboxChecked: !Checkbox1.Value })
-                
-            Text: ="Selec Todo"
-            Visible: =true
-            Width: =46
-            X: =396
-            Y: =31
-            ZIndex: =5
-
-        ButtonCanvas4_4 As Botón:
-            Appearance: ='ButtonCanvas.Appearance'.Primary
-            BasePaletteColor: =RGBA(249, 83, 109, 1)
-            DisplayMode: =DisplayMode.Edit
-            FontSize: =9
-            Height: =43
-            OnSelect: |+
-                =ForAll(
-                    Gallery6_1.AllItems,
-                    RemoveIf(colAllSelectedItems, No = ThisRecord.No)
-                );
-                
-                UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, false);
-                
-                
-                
-                
-                
-                
-                
-            Text: ="Borrar Selección"
-            Visible: =true
-            Width: =41
-            X: =459
-            Y: =31
-            ZIndex: =6
-
         ButtonCanvas8 As Botón:
             Appearance: ='ButtonCanvas.Appearance'.Primary
             BasePaletteColor: =RGBA(247, 236, 12, 1)
@@ -222,7 +173,7 @@ CPP As screen:
                     Items: |
                         =Filter(
                             TablaDataCpp,
-                            (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || IsBlank(TextInputCanvas6.Value)) &&
+                            (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&
                             (IsBlank(DropMarca.Selected.Value) || Marca = DropMarca.Selected.Value) &&
                             (IsBlank(DropModelo.Selected.Value) || Modelo = DropModelo.Selected.Value) &&
                             (IsBlank(DropParte.Selected.Value) || Parte = DropParte.Selected.Value) &&
@@ -488,21 +439,58 @@ CPP As screen:
                 Width: =Parent.Width
                 ZIndex: =1
 
-                TextCanvas7_9 As Texto:
-                    AutoHeight: =false
+                ButtonCanvas4_1 As Botón:
+                    Appearance: ='ButtonCanvas.Appearance'.Primary
+                    BasePaletteColor: =RGBA(8, 222, 8, 1)
                     DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =12
-                    LayoutMinWidth: =32
-                    PaddingLeft: =5
-                    Size: =12
-                    Text: ="No"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =40
-                    X: =0
-                    Y: =0
+                    FontSize: =9
+                    Height: =43
+                    IconStyle: ='ButtonCanvas.IconStyle'.Outline
+                    Layout: ='ButtonCanvas.Layout'.IconAfter
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    OnSelect: |+
+                        =ForAll(
+                            Gallery6_1.AllItems, 
+                            Collect(colAllSelectedItems, ThisRecord)
+                        );
+                        UpdateContext({ varCheckboxChecked: !Checkbox1.Value })
+                        
+                    Text: ="Selec Todo"
+                    Visible: =true
+                    Width: =46
+                    X: =396
+                    Y: =31
                     ZIndex: =1
+
+                ButtonCanvas4_4 As Botón:
+                    Appearance: ='ButtonCanvas.Appearance'.Primary
+                    BasePaletteColor: =RGBA(249, 83, 109, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =9
+                    Height: =43
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    OnSelect: |+
+                        =ForAll(
+                            Gallery6_1.AllItems,
+                            RemoveIf(colAllSelectedItems, No = ThisRecord.No)
+                        );
+                        
+                        UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, false);
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    Text: ="Borrar Selección"
+                    Visible: =true
+                    Width: =41
+                    X: =63
+                    Y: =31
+                    ZIndex: =2
 
                 TextCanvas7_11 As Texto:
                     AutoHeight: =false
@@ -518,7 +506,7 @@ CPP As screen:
                     Width: =140
                     X: =0
                     Y: =0
-                    ZIndex: =2
+                    ZIndex: =4
 
                 TextCanvas7_21 As Texto:
                     AutoHeight: =false
@@ -534,7 +522,7 @@ CPP As screen:
                     Width: =50
                     X: =0
                     Y: =0
-                    ZIndex: =3
+                    ZIndex: =5
 
                 TextCanvas7_22 As Texto:
                     AutoHeight: =false
@@ -550,7 +538,7 @@ CPP As screen:
                     Width: =60
                     X: =0
                     Y: =0
-                    ZIndex: =4
+                    ZIndex: =6
 
                 TextCanvas7_12 As Texto:
                     AutoHeight: =false
@@ -566,7 +554,7 @@ CPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =5
+                    ZIndex: =7
 
                 TextCanvas7_16 As Texto:
                     AutoHeight: =false
@@ -582,7 +570,7 @@ CPP As screen:
                     Width: =50
                     X: =0
                     Y: =0
-                    ZIndex: =9
+                    ZIndex: =8
 
                 TextCanvas7_17 As Texto:
                     AutoHeight: =false
@@ -598,7 +586,7 @@ CPP As screen:
                     Width: =75
                     X: =0
                     Y: =0
-                    ZIndex: =10
+                    ZIndex: =9
 
                 TextCanvas7_18 As Texto:
                     AutoHeight: =false
@@ -614,7 +602,7 @@ CPP As screen:
                     Width: =60
                     X: =0
                     Y: =0
-                    ZIndex: =11
+                    ZIndex: =10
 
                 TextCanvas7_19 As Texto:
                     AutoHeight: =false
@@ -631,7 +619,7 @@ CPP As screen:
                     Width: =96
                     X: =0
                     Y: =0
-                    ZIndex: =12
+                    ZIndex: =11
 
         Container10 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -866,4 +854,17 @@ CPP As screen:
             X: =51
             Y: =55
             ZIndex: =11
+
+        ButtonCanvas5_1 As Botón:
+            BasePaletteColor: =RGBA(225, 250, 2, 1)
+            DisplayMode: =DisplayMode.Edit
+            Height: =37
+            Icon: ="Warning"
+            OnSelect: |-
+                =Launch("https://teams.microsoft.com/l/channel/19%3Af661e47534c545eca9225e7a9db41b3a%40thread.tacv2/Aplicativo%20Mantenimiento%2C%20Manuales%20y%20CPP?groupId=31f2e519-640f-4cee-856f-e4ae247c0e5a")
+            Text: ="Soporte"
+            Width: =115
+            X: =0
+            Y: =605
+            ZIndex: =12
 
