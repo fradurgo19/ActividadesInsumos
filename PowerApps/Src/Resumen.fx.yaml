@@ -280,36 +280,6 @@ Resumen As screen:
                 Y: =0
                 ZIndex: =8
 
-            TextCanvas29_6 As Texto:
-                BorderColor: =RGBA(214, 221, 224, 1)
-                BorderStyle: =BorderStyle.Solid
-                BorderThickness: =1
-                DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                PaddingLeft: =3
-                Text: ="Equivalente"
-                Width: =90
-                X: =0
-                Y: =0
-                ZIndex: =9
-
-            TextCanvas29_7 As Texto:
-                BorderColor: =RGBA(214, 221, 224, 1)
-                BorderStyle: =BorderStyle.Solid
-                BorderThickness: =1
-                DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                PaddingLeft: =3
-                Text: ="Fleetguard"
-                Width: =90
-                X: =0
-                Y: =0
-                ZIndex: =10
-
             TextCanvas29_9 As Texto:
                 BorderColor: =RGBA(214, 221, 224, 1)
                 BorderStyle: =BorderStyle.Solid
@@ -420,7 +390,7 @@ Resumen As screen:
                 Items: |-
                     =Sort(
                         Distinct(colAllSelectedItems, {No: No , Nombre: Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, 
-                        RefFabricante: RefFabricante, Equivalencia: Equivalencia,RefFleetguard: RefFleetguard, Cantidad:Cantidad,Frecuencia:Frecuencia,Medida:Medida,Comentario:Comentario}),
+                        RefFabricante: RefFabricante, Cantidad:Cantidad,Frecuencia:Frecuencia,Medida:Medida,Comentario:Comentario}),
                         Value.No
                     )
                 Layout: =Layout.Vertical
@@ -555,46 +525,15 @@ Resumen As screen:
                         ZIndex: =7
 
                     TextCanvas20 As Texto:
-                        AlignInContainer: =AlignInContainer.Center
                         DisplayMode: =DisplayMode.Edit
                         Font: =Font.'Open Sans'
                         Height: =Parent.Height
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =96
                         Text: =ThisItem.Value.RefFabricante
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =90
                         X: =0
                         Y: =0
                         ZIndex: =8
-
-                    TextCanvas21 As Texto:
-                        AlignInContainer: =AlignInContainer.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Font: =Font.'Open Sans'
-                        Height: =Parent.Height
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =96
-                        Text: =ThisItem.Value.Equivalencia
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =90
-                        X: =0
-                        Y: =0
-                        ZIndex: =9
-
-                    TextCanvas22 As Texto:
-                        AlignInContainer: =AlignInContainer.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Font: =Font.'Open Sans'
-                        Height: =Parent.Height
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =96
-                        Text: =ThisItem.Value.RefFleetguard
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =90
-                        X: =0
-                        Y: =0
-                        ZIndex: =10
 
                     TextCanvas24 As Texto:
                         AlignInContainer: =AlignInContainer.Center
