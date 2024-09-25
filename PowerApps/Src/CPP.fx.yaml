@@ -125,6 +125,15 @@ CPP As screen:
             Y: =36
             ZIndex: =7
 
+        TextCanvas22 As Texto:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: =varSelectedItem.RefSAP
+            Width: =96
+            X: =433
+            Y: =13
+            ZIndex: =8
+
     Container2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =677
@@ -740,15 +749,9 @@ CPP As screen:
                 "Gallery13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     BorderColor: =RGBA(166, 166, 166, 1)
                     DelayItemLoading: =true
-                    Items: |
-                        =AddColumns(
-                            Filter(
-                                TablaDataCpp,
-                                RefSAP = varSelectedItem.RefSAP
-                            ),
-                            DatosEquivalentes,
-                            LookUp(TablaEquivalenciasCpp, RefSAP = varSelectedItem.RefSAP)
-                        )
+                    Items: |+
+                        =Filter(TablaDataCpp, RefSAP = varSelectedItem.RefSAP)
+                        
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -788,7 +791,7 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =12
-                            Text: =ThisItem.DatosEquivalentes.Marca
+                            Text: =ThisItem.Marca
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =80
                             X: =0
@@ -806,7 +809,7 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =12
-                            Text: =ThisItem.DatosEquivalentes.Equivalencia
+                            Text: =ThisItem.RefSAP
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =80
                             X: =0
@@ -824,7 +827,7 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =12
-                            Text: =ThisItem.DatosEquivalentes.RefFabricante
+                            Text: =ThisItem.RefFabricante
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =80
                             X: =0
