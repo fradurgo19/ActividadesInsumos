@@ -528,6 +528,8 @@ Resumen As screen:
                         DisplayMode: =DisplayMode.Edit
                         Font: =Font.'Open Sans'
                         Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
                         Text: =ThisItem.Value.RefFabricante
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =90
