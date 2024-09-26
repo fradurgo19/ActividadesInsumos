@@ -228,7 +228,13 @@ CPP As screen:
                         Font: =App.Theme.Font
                         Height: =37
                         HoverColor: =App.Theme.Colors.Darker30
-                        OnCheck: =Collect(colAllSelectedItems, ThisItem);Set(varCheckboxChecked, true)
+                        OnCheck: |
+                            =Collect(colAllSelectedItems, ThisItem);
+                            Collect(
+                                colEquivalenciasSeleccionadas,
+                                Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP)
+                            );
+                            Set(varCheckboxChecked, true)
                         OnSelect: =Select(Parent)
                         OnUncheck: =Remove(colAllSelectedItems, ThisItem);Set(varCheckboxChecked, false)
                         Size: =13
@@ -400,10 +406,15 @@ CPP As screen:
                     LayoutMinWidth: =96
                     OnSelect: |+
                         =ForAll(
-                            Gallery6_1.AllItems, 
-                            Collect(colAllSelectedItems, ThisRecord)
+                            Gallery6_1.AllItems,
+                            Collect(colAllSelectedItems, ThisRecord);
+                            Collect(
+                                colEquivalenciasSeleccionadas,
+                                Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
+                            )
                         );
                         UpdateContext({ varCheckboxChecked: !Checkbox1.Value })
+                        
                         
                     Text: ="Selec Todo"
                     Visible: =true
@@ -423,8 +434,10 @@ CPP As screen:
                     OnSelect: |+
                         =ForAll(
                             Gallery6_1.AllItems,
-                            RemoveIf(colAllSelectedItems, No = ThisRecord.No)
+                            RemoveIf(colAllSelectedItems, No = ThisRecord.No),
+                            RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisRecord.RefSAP)
                         );
+                        
                         
                         UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, false);
                         
@@ -693,10 +706,8 @@ CPP As screen:
                         =//AddColumns(Filter(ablaDataCpp; RefSAP = varSelectedItem.RefSAP);DatosEquivalentes; LookUp(TablaEquivalenciasCpp; RefSAP = RefSAP))
                         
                         
-                        Filter(
-                            TablaEquivalenciasCpp,
-                            RefSAP = Gallery6_1.Selected.RefSAP
-                        )
+                        colEquivalenciasSeleccionadas
+                        
                         
                         
                         

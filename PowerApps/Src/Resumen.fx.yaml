@@ -372,10 +372,16 @@ Resumen As screen:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: |-
+                Items: |
                     =Sort(
-                        Distinct(colAllSelectedItems, {No: No , Nombre: Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario}),
-                        Value.No
+                        Distinct(
+                            Union(
+                                colAllSelectedItems,
+                                colEquivalenciasSeleccionadas
+                            ),
+                            { Marca: Marca, Modelo: Modelo, Cantidad: Cantidad, Frecuencia: Frecuencia}
+                        ),
+                        Value.
                     )
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
