@@ -419,6 +419,15 @@
                             LayoutMinHeight: =640
                             LayoutMinWidth: =640
 
+                    Arrow1_4 As arrow.backArrow:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(105, 121, 126, 1)
+                        OnSelect: =Navigate(SendEmail_1,ScreenTransition.Fade )
+                        X: =11
+                        Y: =15
+                        ZIndex: =2
+
                 Container70 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =680
