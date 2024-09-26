@@ -156,7 +156,7 @@ CPP As screen:
             OnSelect: |+
                 =ForAll(
                     Gallery6_1.AllItems,
-                    Collect(colEquivalenciasSeleccionadas, Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP));
+                    Collect(colEquivalenciasSeleccionadas, LookUp(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP));
                     Collect(colAllSelectedItems, ThisRecord)
                 );
                 
@@ -437,7 +437,7 @@ CPP As screen:
                             Collect(colAllSelectedItems, ThisRecord);
                             Collect(
                                 colEquivalenciasSeleccionadas,
-                                Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
+                                LookUp(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
                             )
                         );
                         UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, true);
