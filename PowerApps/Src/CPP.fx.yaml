@@ -1,7 +1,7 @@
 CPP As screen:
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
+    OnVisible: |+
         =ClearCollect(UniqueMarcas, Distinct(TablaDataCpp, Marca));
         Concurrent(
           ClearCollect(colMarcas, Distinct(TablaDataCpp, Marca)),
@@ -17,7 +17,18 @@ CPP As screen:
                 DatosAdicionales,
                 LookUp(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
             )
+        );
+        ClearCollect(
+            colCombinedData,
+            AddColumns(
+                TablaDataCpp,
+                MarcaEquivalente,
+                LookUp(TablaEquivalenciasCpp, RefSAP = TablaDataCpp[@RefSAP]).Marca,
+                EquivalenciaNueva,
+                LookUp(TablaEquivalenciasCpp, RefSAP = TablaDataCpp[@RefSAP]).Equivalencia
+            )
         )
+        
 
     Container24 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
