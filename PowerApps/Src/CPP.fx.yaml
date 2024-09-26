@@ -232,13 +232,13 @@ CPP As screen:
                             =Collect(colAllSelectedItems, ThisItem);
                             Collect(
                                 colEquivalenciasSeleccionadas,
-                                LookUp(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP)
+                                Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP)
                             );
                             Set(varCheckboxChecked, true);
                             
                             
                         OnSelect: =Select(Parent)
-                        OnUncheck: =Remove(colAllSelectedItems, ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP)
+                        OnUncheck: =Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP)
                         Size: =13
                         Text: =
                         Width: =39
@@ -412,7 +412,7 @@ CPP As screen:
                             Collect(colAllSelectedItems, ThisRecord);
                             Collect(
                                 colEquivalenciasSeleccionadas,
-                                LookUp(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
+                                Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
                             )
                         );
                         UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, true);
