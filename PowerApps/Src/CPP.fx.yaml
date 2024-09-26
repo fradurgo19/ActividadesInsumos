@@ -413,7 +413,7 @@ CPP As screen:
                                 Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
                             )
                         );
-                        UpdateContext({ varCheckboxChecked: !Checkbox1.Value })
+                        UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, true)
                         
                         
                     Text: ="Selec Todo"
@@ -434,7 +434,7 @@ CPP As screen:
                     OnSelect: |+
                         =ForAll(
                             Gallery6_1.AllItems,
-                            RemoveIf(colAllSelectedItems, No = ThisRecord.No),
+                            RemoveIf(colAllSelectedItems, No = ThisRecord.No);
                             RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisRecord.RefSAP)
                         );
                         
