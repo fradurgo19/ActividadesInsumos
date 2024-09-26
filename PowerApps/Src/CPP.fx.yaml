@@ -682,16 +682,10 @@ CPP As screen:
                 "Gallery13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     BorderColor: =RGBA(166, 166, 166, 1)
                     DelayItemLoading: =true
-                    Items: |+
-                        =AddColumns(
-                            Filter(
-                                TablaDataCpp, 
-                                RefSAP = varSelectedItem.RefSAP
-                            ),
-                            DatosEquivalentes, 
-                            LookUp(TablaEquivalenciasCpp, RefSAP = RefSAP)
-                        )
+                    Items: |-
+                        =//AddColumns(Filter(ablaDataCpp; RefSAP = varSelectedItem.RefSAP);DatosEquivalentes; LookUp(TablaEquivalenciasCpp; RefSAP = RefSAP))
                         
+                        colCombinedData
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -731,9 +725,10 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
-                            Text: =ThisItem.DatosEquivalentes.Marca
+                            Text: =ThisItem.RefSAP
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =150
+                            Width: |
+                                =70
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -749,12 +744,30 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =15
-                            Text: =ThisItem.DatosEquivalentes.Equivalencia
+                            Text: =ThisItem.EquivalenciaNueva
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =200
+                            Width: =50
                             X: =0
                             Y: =0
                             ZIndex: =2
+
+                        TextCanvas9_22 As Texto:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FontItalic: =true
+                            Height: =32
+                            LayoutMinWidth: =32
+                            PaddingLeft: =10
+                            Size: =15
+                            Text: =ThisItem.MarcaEquivalente
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =50
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
 
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
