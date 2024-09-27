@@ -5,6 +5,7 @@ CPP As screen:
         =Refresh(TablaDataCpp);
         
         
+        
 
     Container24 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -121,34 +122,35 @@ CPP As screen:
             Y: =36
             ZIndex: =7
 
-        ButtonCanvas4_3 As Botón:
+        ButtonCanvas4_4 As Botón:
             Appearance: ='ButtonCanvas.Appearance'.Primary
-            BasePaletteColor: =RGBA(8, 222, 8, 1)
+            BasePaletteColor: =RGBA(249, 83, 109, 1)
             DisplayMode: =DisplayMode.Edit
             FontSize: =9
             Height: =43
-            IconStyle: ='ButtonCanvas.IconStyle'.Outline
-            Layout: ='ButtonCanvas.Layout'.IconAfter
-            OnSelect: |-
-                =Clear(colAllSelectedItems);
-                ForAll(
+            OnSelect: |
+                =ForAll(
                     Gallery6_1.AllItems,
-                    Collect(colAllSelectedItems, ThisRecord);
-                    Collect(
+                    RemoveIf(
+                        colAllSelectedItems,
+                        No = ThisRecord.No
+                    );
+                    RemoveIf(
                         colEquivalenciasSeleccionadas,
-                        Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
+                        RefSAP = ThisRecord.RefSAP
                     )
                 );
-                Set(varCheckboxChecked, true);
-                
-                
-                UpdateContext({ varCheckboxChecked: !Checkbox1.Value });
-            Text: ="Selec Todo"
+                Set(
+                    varResetCheckbox,
+                    false
+                );
+                UpdateContext({varCheckboxChecked: !Checkbox1.Value});
+            Text: ="Borrar Todo"
             Visible: =true
-            Width: =46
-            X: =431
-            Y: =0
-            ZIndex: =8
+            Width: =41
+            X: =434
+            Y: =33
+            ZIndex: =9
 
     Container2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -186,65 +188,6 @@ CPP As screen:
                 Width: =602
                 ZIndex: =1
 
-                ButtonCanvas4_1 As Botón:
-                    Appearance: ='ButtonCanvas.Appearance'.Primary
-                    BasePaletteColor: =RGBA(8, 222, 8, 1)
-                    DisplayMode: =DisplayMode.Edit
-                    FontSize: =9
-                    Height: =43
-                    IconStyle: ='ButtonCanvas.IconStyle'.Outline
-                    Layout: ='ButtonCanvas.Layout'.IconAfter
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    OnSelect: |-
-                        =ForAll(
-                            Gallery6_1.AllItems,
-                            Collect(colAllSelectedItems, ThisRecord);
-                            Collect(
-                                colEquivalenciasSeleccionadas,
-                                LookUp(TablaEquivalenciasCpp, ThisRecord.RefSAP = RefSAP)
-                            )
-                        );
-                        UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, true);
-                    Text: ="Selec Todo"
-                    Visible: =true
-                    Width: =46
-                    X: =396
-                    Y: =31
-                    ZIndex: =1
-
-                ButtonCanvas4_4 As Botón:
-                    Appearance: ='ButtonCanvas.Appearance'.Primary
-                    BasePaletteColor: =RGBA(249, 83, 109, 1)
-                    DisplayMode: =DisplayMode.Edit
-                    FontSize: =9
-                    Height: =43
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    OnSelect: |
-                        =ForAll(
-                            Gallery6_1.AllItems,
-                            RemoveIf(
-                                colAllSelectedItems,
-                                No = ThisRecord.No
-                            );
-                            RemoveIf(
-                                colEquivalenciasSeleccionadas,
-                                RefSAP = ThisRecord.RefSAP
-                            )
-                        );
-                        Set(
-                            varResetCheckbox,
-                            false
-                        );
-                        UpdateContext({varCheckboxChecked: !Checkbox1.Value});
-                    Text: ="Borrar Selección"
-                    Visible: =true
-                    Width: =41
-                    X: =63
-                    Y: =31
-                    ZIndex: =2
-
                 TextCanvas7_11 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
@@ -256,7 +199,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Nombre"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =50
+                    Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =4
@@ -773,7 +716,7 @@ CPP As screen:
                             Text: =ThisItem.Modelo
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =80
+                            Width: =50
                             X: =173
                             Y: =0
                             ZIndex: =3
@@ -819,7 +762,7 @@ CPP As screen:
                             Text: =ThisItem.Frecuencia
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =120
+                            Width: =40
                             X: =346
                             Y: =0
                             ZIndex: =6
@@ -851,10 +794,7 @@ CPP As screen:
                         HoverColor: =App.Theme.Colors.Darker30
                         OnCheck: |+
                             =Collect(colAllSelectedItems, ThisItem);
-                            Collect(
-                                colEquivalenciasSeleccionadas,
-                                Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP)
-                            );
+                            Collect(colEquivalenciasSeleccionadas,Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP));
                             Set(varCheckboxChecked, true);
                             
                             
