@@ -2,13 +2,7 @@ CPP As screen:
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
-        =ClearCollect(UniqueMarcas, Distinct(TablaDataCpp, Marca));
-        Concurrent(
-          ClearCollect(colMarcas, Distinct(TablaDataCpp, Marca)),
-          ClearCollect(colModelos, Distinct(TablaDataCpp, Modelo)),
-          ClearCollect(colPartes, Distinct(TablaDataCpp, Parte))
-        );
-        Refresh(TablaDataCpp);
+        =Refresh(TablaDataCpp);
         
         
 
@@ -136,22 +130,19 @@ CPP As screen:
             IconStyle: ='ButtonCanvas.IconStyle'.Outline
             Layout: ='ButtonCanvas.Layout'.IconAfter
             OnSelect: |-
-                =ForAll(
+                =Clear(colAllSelectedItems);
+                ForAll(
                     Gallery6_1.AllItems,
-                    With(
-                        {
-                            currentRecord: ThisRecord,
-                            matchingItems: Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
-                        },
-                        If(
-                            CountRows(matchingItems) > 0, // Verifica si hay coincidencias
-                            Collect(colAllSelectedItems, currentRecord), // Agrega el registro actual
-                            Collect(colEquivalenciasSeleccionadas, matchingItems) // Agrega todos los registros coincidentes
-                        )
+                    Collect(colAllSelectedItems, ThisRecord);
+                    Collect(
+                        colEquivalenciasSeleccionadas,
+                        Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
                     )
                 );
+                Set(varCheckboxChecked, true);
                 
-                UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, true);
+                
+                UpdateContext({ varCheckboxChecked: !Checkbox1.Value });
             Text: ="Selec Todo"
             Visible: =true
             Width: =46
@@ -211,7 +202,7 @@ CPP As screen:
                             Collect(colAllSelectedItems, ThisRecord);
                             Collect(
                                 colEquivalenciasSeleccionadas,
-                                Filter(TablaEquivalenciasCpp, ThisRecord.RefSAP = RefSAP)
+                                LookUp(TablaEquivalenciasCpp, ThisRecord.RefSAP = RefSAP)
                             )
                         );
                         UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, true);
@@ -230,22 +221,23 @@ CPP As screen:
                     Height: =43
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
-                    OnSelect: |+
+                    OnSelect: |
                         =ForAll(
                             Gallery6_1.AllItems,
-                            RemoveIf(colAllSelectedItems, No = ThisRecord.No);
-                            RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisRecord.RefSAP)
+                            RemoveIf(
+                                colAllSelectedItems,
+                                No = ThisRecord.No
+                            );
+                            RemoveIf(
+                                colEquivalenciasSeleccionadas,
+                                RefSAP = ThisRecord.RefSAP
+                            )
                         );
-                        
-                        
-                        UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, false);
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        Set(
+                            varResetCheckbox,
+                            false
+                        );
+                        UpdateContext({varCheckboxChecked: !Checkbox1.Value});
                     Text: ="Borrar Selección"
                     Visible: =true
                     Width: =41
