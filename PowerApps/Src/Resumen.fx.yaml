@@ -1,27 +1,37 @@
 Resumen As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |+
+    OnVisible: |
         =Set(pdfContent,Blank());
         ClearCollect(
             colUnificada,
             ForAll(
                 colAllSelectedItems As baseItem,
+                // Encontrar todas las equivalencias de la RefSAP en colEquivalenciasSeleccionadas
                 ForAll(
                     Filter(colEquivalenciasSeleccionadas, RefSAP = baseItem.RefSAP) As equivItem,
                     Collect(
                         colUnificada,
-                        Patch(
-                            baseItem,
-                            {
-                                Equivalencia: equivItem.Equivalencia,
-                                Marca: equivItem.Marca
-                            }
-                        )
+                        {
+                            RefSAP: baseItem.RefSAP,
+                            MarcaOriginal: baseItem.Marca,   // Marca de colAllSelectedItems
+                            MarcaEquivalente: equivItem.Marca, // Marca de colEquivalenciasSeleccionadas
+                            Equivalencia: equivItem.Equivalencia, // Equivalencia correspondiente
+                            Nombre: baseItem.Nombre,   // Otros campos de colAllSelectedItems
+                            Cantidad: baseItem.Cantidad,
+                            Frecuencia: baseItem.Frecuencia,
+                            Medida: baseItem.Medida,
+                            Comentario: baseItem.Comentario,
+                            Modelo: baseItem.Modelo,
+                            Parte: baseItem.Parte,
+                            Tipo: baseItem.Tipo,
+                            ImagenUrl: baseItem.ImagenUrl,
+                            Recomendación: baseItem.Recomendación,
+                            No: baseItem.No
+                        }
                     )
                 )
             )
         )
-        
 
     Container24_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -159,7 +169,7 @@ Resumen As screen:
 
     Container2_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =638
+        Height: =366
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -378,7 +388,7 @@ Resumen As screen:
 
         Container11_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =610
+            Height: =260
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
