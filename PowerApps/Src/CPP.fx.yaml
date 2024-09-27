@@ -179,7 +179,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =567
+            Width: =602
             ZIndex: =4
 
             Container17_1 As groupContainer.horizontalAutoLayoutContainer:
@@ -192,7 +192,7 @@ CPP As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =559
+                Width: =602
                 ZIndex: =1
 
                 ButtonCanvas4_1 As Botón:
@@ -389,8 +389,8 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =363
-            X: =567
+            Width: =280
+            X: =602
             Y: =52
             ZIndex: =7
 
@@ -402,7 +402,7 @@ CPP As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =363
+                Width: =280
                 ZIndex: =1
 
                 "Gallery13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -442,7 +442,7 @@ CPP As screen:
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =355
+                        Width: =278
                         ZIndex: =6
 
                         TextCanvas9_20 As Texto:
@@ -458,7 +458,7 @@ CPP As screen:
                             Size: =14
                             Text: =ThisItem.RefSAP
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =115
+                            Width: =90
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -476,7 +476,7 @@ CPP As screen:
                             Size: =14
                             Text: =ThisItem.Marca
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =115
+                            Width: =90
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -494,7 +494,7 @@ CPP As screen:
                             Size: =14
                             Text: =ThisItem.Equivalencia
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =115
+                            Width: =90
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -547,8 +547,8 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =346
-            X: =567
+            Width: =311
+            X: =602
             ZIndex: =9
 
             Container10_1 As groupContainer.horizontalAutoLayoutContainer:
@@ -560,7 +560,7 @@ CPP As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =346
+                Width: =311
                 ZIndex: =1
 
                 TextCanvas2_1 As Texto:
@@ -660,7 +660,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =567
+            Width: =602
             Y: =52
             ZIndex: =11
 
@@ -672,7 +672,7 @@ CPP As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =567
+                Width: =602
                 ZIndex: =1
 
                 "Gallery6_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -703,7 +703,7 @@ CPP As screen:
                     OnSelect: =Set(varSelectedItem, ThisItem)
                     ShowNavigation: =true
                     TemplatePadding: =0
-                    TemplateSize: =100
+                    TemplateSize: =80
                     Transition: =Transition.Push
                     Width: =Parent.Width
                     ZIndex: =2
@@ -720,150 +720,138 @@ CPP As screen:
 
                     Container87 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =100
+                        Height: =77
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =540
+                        Width: =Parent.Width
                         ZIndex: =18
 
                         TextCanvas25 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
                             DisplayMode: =DisplayMode.Edit
-                            Height: =100
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
+                            Height: |
+                                =80
+                            LayoutMinWidth: =80
+                            PaddingLeft: =15
+                            PaddingTop: =5
+                            Size: =12
                             Text: =ThisItem.Nombre
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =107
+                            Width: =100
+                            Wrap: =true
                             X: =0
                             Y: =0
                             ZIndex: =1
 
                         TextCanvas25_1 As Texto:
                             Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
                             DisplayMode: =DisplayMode.Edit
-                            Height: =100
+                            Height: =90
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            PaddingTop: =5
                             Text: =ThisItem.Marca
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =50
                             X: =107
                             Y: =0
                             ZIndex: =2
 
                         TextCanvas25_2 As Texto:
                             Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
                             DisplayMode: =DisplayMode.Edit
-                            Height: =100
+                            Height: =90
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            PaddingTop: =5
                             Text: =ThisItem.Modelo
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =50
                             X: =173
                             Y: =0
                             ZIndex: =3
 
                         TextCanvas25_3 As Texto:
                             Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
                             DisplayMode: =DisplayMode.Edit
-                            Height: =100
+                            Height: =90
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            PaddingTop: =5
                             Text: =ThisItem.RefSAP
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: |
+                                =40
                             X: =239
                             Y: =0
                             ZIndex: =4
 
-                        TextCanvas25_4 As Texto:
-                            Align: ='TextCanvas.Align'.Center
+                        TextCanvas25_5 As Texto:
+                            Align: ='TextCanvas.Align'.Start
                             DisplayMode: =DisplayMode.Edit
-                            Height: =100
+                            Height: =90
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Cantidad
+                            PaddingTop: =5
+                            Text: =ThisItem.Frecuencia
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =48
-                            X: =309
+                            Width: =40
+                            X: =346
                             Y: =0
                             ZIndex: =5
 
-                        TextCanvas25_5 As Texto:
+                        TextCanvas25_4 As Texto:
                             Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
                             DisplayMode: =DisplayMode.Edit
-                            Height: =100
+                            Height: =90
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Frecuencia
+                            PaddingTop: =5
+                            Text: =ThisItem.Cantidad
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
-                            X: =346
+                            Width: =20
+                            X: =309
                             Y: =0
                             ZIndex: =6
 
-                        TextCanvas25_6 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =100
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: =ThisItem.Medida
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
-                            X: =421
-                            Y: =0
-                            ZIndex: =7
-
                         TextCanvas25_7 As Texto:
-                            Align: ='TextCanvas.Align'.Center
+                            Align: ='TextCanvas.Align'.Start
                             DisplayMode: =DisplayMode.Edit
-                            Height: =100
+                            Height: =90
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            PaddingTop: =5
                             Text: =ThisItem.Comentario
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =50
                             X: =497
                             Y: =0
-                            ZIndex: =8
-
-                        TextCanvas25_8 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =67
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: =ThisItem.No
-                            Width: =70
-                            X: =0
-                            Y: =33
-                            ZIndex: =9
-
-                    CheckboxCanvas3 As Casilla:
-                        BasePaletteColor: =
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =32
-                        OnCheck: =false
-                        OnSelect: =Select(Parent)
-                        OnUncheck: =false
-                        Width: =160
-                        X: =18
-                        Y: =0
-                        ZIndex: =19
+                            ZIndex: =7
 
                     Checkbox1 As checkbox:
                         BorderColor: =App.Theme.Colors.Darker40
                         CheckboxBorderColor: =App.Theme.Colors.Primary
+                        CheckboxSize: =30
                         CheckmarkFill: =App.Theme.Colors.Primary
                         Color: =RGBA(0, 0, 0, 1)
                         Default: =varCheckboxChecked
                         Font: =App.Theme.Font
-                        Height: =39
+                        Height: =44
                         HoverColor: =App.Theme.Colors.Darker30
                         OnCheck: |+
                             =Collect(colAllSelectedItems, ThisItem);
@@ -880,7 +868,8 @@ CPP As screen:
                             Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP)
                         Size: =13
                         Text: =
-                        Width: =45
+                        Width: =37
+                        Y: =36
                         ZIndex: =20
 
     Container14 As groupContainer.manualLayoutContainer:
