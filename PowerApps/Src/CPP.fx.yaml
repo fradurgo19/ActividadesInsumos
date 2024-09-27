@@ -145,6 +145,38 @@ CPP As screen:
             Y: =36
             ZIndex: =7
 
+        ButtonCanvas4_3 As Botón:
+            Appearance: ='ButtonCanvas.Appearance'.Primary
+            BasePaletteColor: =RGBA(8, 222, 8, 1)
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =9
+            Height: =43
+            IconStyle: ='ButtonCanvas.IconStyle'.Outline
+            Layout: ='ButtonCanvas.Layout'.IconAfter
+            OnSelect: |-
+                =ForAll(
+                    Gallery6_1.AllItems,
+                    With(
+                        {
+                            currentRecord: ThisRecord,
+                            matchingItems: Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
+                        },
+                        If(
+                            CountRows(matchingItems) > 0, // Verifica si hay coincidencias
+                            Collect(colAllSelectedItems, currentRecord), // Agrega el registro actual
+                            Collect(colEquivalenciasSeleccionadas, matchingItems) // Agrega todos los registros coincidentes
+                        )
+                    )
+                );
+                
+                UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, true);
+            Text: ="Selec Todo"
+            Visible: =true
+            Width: =46
+            X: =431
+            Y: =0
+            ZIndex: =8
+
     Container2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =677
@@ -412,7 +444,7 @@ CPP As screen:
                             Collect(colAllSelectedItems, ThisRecord);
                             Collect(
                                 colEquivalenciasSeleccionadas,
-                                Filter(TablaEquivalenciasCpp, RefSAP = ThisRecord.RefSAP)
+                                LookUp(TablaEquivalenciasCpp, ThisRecord.RefSAP = RefSAP)
                             )
                         );
                         UpdateContext({ varCheckboxChecked: !Checkbox1.Value });Set(varResetCheckbox, true);
