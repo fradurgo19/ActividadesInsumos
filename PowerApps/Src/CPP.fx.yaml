@@ -682,197 +682,195 @@ CPP As screen:
             Y: =52
             ZIndex: =11
 
-        Container30 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =636
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =567
-            X: =40
-            Y: =40
-            ZIndex: =12
-
-            Container16_1 As groupContainer.manualLayoutContainer:
-                BorderThickness: =2
+            Container30 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Fill: =Color.White
-                Height: =447
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                RadiusBottomLeft: =10
-                RadiusBottomRight: =10
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
-                Width: =975
-                X: =15
-                Y: =193
+                Height: =636
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =567
                 ZIndex: =1
 
-                "Gallery6_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                    BorderColor: =RGBA(139, 154, 159, 1)
+                Container16_1 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
-                    DelayItemLoading: =true
-                    Height: =615
-                    Items: |+
-                        =Filter(
-                            TablaDataCpp,
-                            (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&
-                            
-                            (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
-                            
-                            (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
-                            
-                            (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
-                            
-                            (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
-                        
-                            (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0)
-                        )
-                        
-                    Layout: =Layout.Vertical
-                    LoadingSpinner: =LoadingSpinner.Data
-                    OnSelect: =Set(varSelectedItem, ThisItem)
-                    ShowNavigation: =true
-                    TemplatePadding: =0
-                    TemplateSize: =100
-                    Transition: =Transition.Push
-                    Width: =560
+                    DropShadow: =DropShadow.Light
+                    Fill: =Color.White
+                    Height: =447
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =975
+                    X: =15
+                    Y: =193
                     ZIndex: =1
 
-                    Separator4_1 As rectangle:
-                        BorderColor: =RGBA(214, 221, 224, 1)
+                    "Gallery6_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                        BorderColor: =RGBA(139, 154, 159, 1)
                         BorderThickness: =2
-                        Fill: =RGBA(255, 255, 255, 1)
-                        Height: =1
-                        OnSelect: =Select(Parent)
-                        Width: =Parent.TemplateWidth
-                        Y: =Parent.TemplateHeight - Self.Height
-                        ZIndex: =5
-
-                    Checkbox1 As checkbox:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        CheckboxBorderColor: =App.Theme.Colors.Primary
-                        CheckmarkFill: =App.Theme.Colors.Primary
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =varCheckboxChecked
-                        Font: =App.Theme.Font
-                        Height: =37
-                        HoverColor: =App.Theme.Colors.Darker30
-                        OnCheck: |+
-                            =Collect(colAllSelectedItems, ThisItem);
-                            Collect(
-                                colEquivalenciasSeleccionadas,
-                                Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP)
-                            );
-                            Set(varCheckboxChecked, true);
+                        DelayItemLoading: =true
+                        Height: =615
+                        Items: |+
+                            =Filter(
+                                TablaDataCpp,
+                                (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&
+                                
+                                (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
+                                
+                                (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
+                                
+                                (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
+                                
+                                (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
                             
+                                (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0)
+                            )
                             
-                        OnSelect: =Select(Parent)
-                        OnUncheck: =Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP)
-                        Size: =13
-                        Text: =
-                        Width: =39
-                        ZIndex: =7
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        OnSelect: =Set(varSelectedItem, ThisItem)
+                        ShowNavigation: =true
+                        TemplatePadding: =0
+                        TemplateSize: =100
+                        Transition: =Transition.Push
+                        Width: =560
+                        ZIndex: =1
 
-                    TextCanvas25 As Texto:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =100
-                        Text: =ThisItem.Nombre
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =97
-                        X: =39
-                        Y: =0
-                        ZIndex: =8
+                        Separator4_1 As rectangle:
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderThickness: =2
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - Self.Height
+                            ZIndex: =5
 
-                    TextCanvas25_1 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =100
-                        Text: =ThisItem.Marca
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =52
-                        X: =136
-                        Y: =0
-                        ZIndex: =9
+                        Checkbox1 As checkbox:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            CheckboxBorderColor: =App.Theme.Colors.Primary
+                            CheckmarkFill: =App.Theme.Colors.Primary
+                            Color: =RGBA(0, 0, 0, 1)
+                            Default: =varCheckboxChecked
+                            Font: =App.Theme.Font
+                            Height: =37
+                            HoverColor: =App.Theme.Colors.Darker30
+                            OnCheck: |+
+                                =Collect(colAllSelectedItems, ThisItem);
+                                Collect(
+                                    colEquivalenciasSeleccionadas,
+                                    Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP)
+                                );
+                                Set(varCheckboxChecked, true);
+                                
+                                
+                            OnSelect: =Select(Parent)
+                            OnUncheck: =Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP)
+                            Size: =13
+                            Text: =
+                            Width: =39
+                            ZIndex: =7
 
-                    TextCanvas25_2 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =100
-                        Text: =ThisItem.Modelo
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =52
-                        X: =188
-                        Y: =0
-                        ZIndex: =10
+                        TextCanvas25 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =100
+                            Text: =ThisItem.Nombre
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =97
+                            X: =39
+                            Y: =0
+                            ZIndex: =8
 
-                    TextCanvas25_3 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =100
-                        Text: =ThisItem.RefSAP
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =52
-                        X: =254
-                        Y: =0
-                        ZIndex: =11
+                        TextCanvas25_1 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =100
+                            Text: =ThisItem.Marca
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =52
+                            X: =136
+                            Y: =0
+                            ZIndex: =9
 
-                    TextCanvas25_4 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =100
-                        Text: =ThisItem.Cantidad
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =52
-                        X: =320
-                        Y: =0
-                        ZIndex: =12
+                        TextCanvas25_2 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =100
+                            Text: =ThisItem.Modelo
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =52
+                            X: =188
+                            Y: =0
+                            ZIndex: =10
 
-                    TextCanvas25_5 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =100
-                        Text: =ThisItem.Frecuencia
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =52
-                        X: =372
-                        Y: =0
-                        ZIndex: =13
+                        TextCanvas25_3 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =100
+                            Text: =ThisItem.RefSAP
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =52
+                            X: =254
+                            Y: =0
+                            ZIndex: =11
 
-                    TextCanvas25_6 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =100
-                        Text: =ThisItem.Medida
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =52
-                        X: =413
-                        Y: =0
-                        ZIndex: =14
+                        TextCanvas25_4 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =100
+                            Text: =ThisItem.Cantidad
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =52
+                            X: =320
+                            Y: =0
+                            ZIndex: =12
 
-                    TextCanvas25_7 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =100
-                        Text: =ThisItem.Comentario
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =80
-                        X: =479
-                        Y: =0
-                        ZIndex: =15
+                        TextCanvas25_5 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =100
+                            Text: =ThisItem.Frecuencia
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =52
+                            X: =372
+                            Y: =0
+                            ZIndex: =13
 
-                    TextCanvas25_8 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =67
-                        Text: =ThisItem.No
-                        Width: =39
-                        X: =0
-                        Y: =33
-                        ZIndex: =16
+                        TextCanvas25_6 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =100
+                            Text: =ThisItem.Medida
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =52
+                            X: =413
+                            Y: =0
+                            ZIndex: =14
+
+                        TextCanvas25_7 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =100
+                            Text: =ThisItem.Comentario
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =80
+                            X: =479
+                            Y: =0
+                            ZIndex: =15
+
+                        TextCanvas25_8 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =67
+                            Text: =ThisItem.No
+                            Width: =39
+                            X: =0
+                            Y: =33
+                            ZIndex: =16
 
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
