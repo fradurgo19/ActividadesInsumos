@@ -389,7 +389,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =280
+            Width: =328
             X: =602
             Y: =52
             ZIndex: =7
@@ -402,7 +402,7 @@ CPP As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =280
+                Width: =327
                 ZIndex: =1
 
                 "Gallery13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -422,7 +422,7 @@ CPP As screen:
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
-                    TemplateSize: =100
+                    TemplateSize: =80
                     ZIndex: =1
 
                     Separator8 As rectangle:
@@ -436,13 +436,13 @@ CPP As screen:
 
                     Container81 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =100
+                        Height: =81
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =278
+                        Width: =327
                         ZIndex: =6
 
                         TextCanvas9_20 As Texto:
@@ -457,8 +457,9 @@ CPP As screen:
                             PaddingLeft: =10
                             Size: =14
                             Text: =ThisItem.RefSAP
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -475,8 +476,9 @@ CPP As screen:
                             PaddingLeft: =10
                             Size: =14
                             Text: =ThisItem.Marca
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -493,8 +495,9 @@ CPP As screen:
                             PaddingLeft: =10
                             Size: =14
                             Text: =ThisItem.Equivalencia
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
+                            Width: =120
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -592,7 +595,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Marca"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =150
+                    Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =2
@@ -736,13 +739,14 @@ CPP As screen:
                             Height: |
                                 =80
                             LayoutMinWidth: =80
-                            PaddingLeft: =15
+                            PaddingLeft: =25
                             PaddingTop: =5
                             Size: =12
                             Text: =ThisItem.Nombre
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =100
+                            Width: |
+                                =120
                             Wrap: =true
                             X: =0
                             Y: =0
@@ -759,7 +763,7 @@ CPP As screen:
                             Text: =ThisItem.Marca
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =50
+                            Width: =80
                             X: =107
                             Y: =0
                             ZIndex: =2
@@ -775,7 +779,7 @@ CPP As screen:
                             Text: =ThisItem.Modelo
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =50
+                            Width: =80
                             X: =173
                             Y: =0
                             ZIndex: =3
@@ -797,21 +801,6 @@ CPP As screen:
                             Y: =0
                             ZIndex: =4
 
-                        TextCanvas25_5 As Texto:
-                            Align: ='TextCanvas.Align'.Start
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =90
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            PaddingTop: =5
-                            Text: =ThisItem.Frecuencia
-                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =40
-                            X: =346
-                            Y: =0
-                            ZIndex: =5
-
                         TextCanvas25_4 As Texto:
                             Align: ='TextCanvas.Align'.Center
                             AlignInContainer: =AlignInContainer.Stretch
@@ -823,8 +812,23 @@ CPP As screen:
                             Text: =ThisItem.Cantidad
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =20
+                            Width: =50
                             X: =309
+                            Y: =0
+                            ZIndex: =5
+
+                        TextCanvas25_5 As Texto:
+                            Align: ='TextCanvas.Align'.Start
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =90
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Text: =ThisItem.Frecuencia
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =120
+                            X: =346
                             Y: =0
                             ZIndex: =6
 
@@ -838,7 +842,7 @@ CPP As screen:
                             Text: =ThisItem.Comentario
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =50
+                            Width: =90
                             X: =497
                             Y: =0
                             ZIndex: =7
@@ -851,7 +855,7 @@ CPP As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Default: =varCheckboxChecked
                         Font: =App.Theme.Font
-                        Height: =44
+                        Height: =31
                         HoverColor: =App.Theme.Colors.Darker30
                         OnCheck: |+
                             =Collect(colAllSelectedItems, ThisItem);
@@ -868,8 +872,7 @@ CPP As screen:
                             Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP)
                         Size: =13
                         Text: =
-                        Width: =37
-                        Y: =36
+                        Width: =28
                         ZIndex: =20
 
     Container14 As groupContainer.manualLayoutContainer:
