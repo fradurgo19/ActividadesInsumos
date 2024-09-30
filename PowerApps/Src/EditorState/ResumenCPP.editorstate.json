@@ -2774,7 +2774,7 @@
       "StyleName": "defaultIconStyle",
       "Type": "ControlInfo"
     },
-    "Resumen": {
+    "ResumenCPP": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -2802,24 +2802,14 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Resumen",
+      "Name": "ResumenCPP",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "LoadingSpinner",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ImagePosition",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2829,17 +2819,27 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
+          "PropertyName": "ImagePosition",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "Size",
+          "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LoadingSpinner",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinnerColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Size",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2850,7 +2850,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnVisible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultScreenStyle",
@@ -8799,5 +8799,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Resumen"
+  "TopParentName": "ResumenCPP"
 }

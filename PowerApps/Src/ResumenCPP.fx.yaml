@@ -1,4 +1,4 @@
-Resumen As screen:
+ResumenCPP As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
         =Set(pdfContent,Blank());
@@ -114,8 +114,8 @@ Resumen As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =1033
-                X: =319
+                Width: =1113
+                X: =239
                 ZIndex: =2
 
                 EncabezadoContenedor_3 As EncabezadoContenedor:
@@ -199,7 +199,7 @@ Resumen As screen:
                             Attachments: [
                                 {
                                     Name: "ConsultaCPP.pdf", 
-                                    ContentBytes: PDF(Container2_1, {ExpandContainers: true})
+                                    ContentBytes: PDF(Container84, {ExpandContainers: true})
                                 }
                             ],
                             IsHtml: true
@@ -293,7 +293,7 @@ Resumen As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Nombre"
-                    Width: =140
+                    Width: =150
                     X: =0
                     Y: =0
                     ZIndex: =3
@@ -413,7 +413,7 @@ Resumen As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Comentario"
-                    Width: =100
+                    Width: =120
                     X: =0
                     Y: =0
                     ZIndex: =11
@@ -457,8 +457,8 @@ Resumen As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
-                    Text: ="Necesario"
-                    Width: =70
+                    Text: ="Solicita"
+                    Width: =60
                     X: =0
                     Y: =0
                     ZIndex: =14
@@ -473,7 +473,7 @@ Resumen As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Total"
-                    Width: =50
+                    Width: =40
                     X: =0
                     Y: =0
                     ZIndex: =15
@@ -759,7 +759,7 @@ Resumen As screen:
                             HoverFill: =App.Theme.Colors.Lighter70
                             OnSelect: =
                             Size: =11
-                            Width: =60
+                            Width: =40
                             X: =634
                             Y: =6
                             ZIndex: =14
@@ -776,7 +776,7 @@ Resumen As screen:
                             PaddingLeft: =20
                             PaddingTop: =
                             Text: =(ThisItem.Value.Cantidad) * Value(TextInput2.Text)
-                            Width: =50
+                            Width: =40
                             X: =0
                             Y: =0
                             ZIndex: =15
@@ -799,7 +799,7 @@ Resumen As screen:
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)
-                            Width: =50
+                            Width: =40
                             ZIndex: =16
 
                         TextCanvas19_4 As Texto:
