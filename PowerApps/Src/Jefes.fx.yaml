@@ -487,19 +487,19 @@
 
                 Container52 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =157
+                    Height: =150
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =427
-                    X: =601
-                    Y: =172
+                    Width: =503
+                    X: =556
+                    Y: =106
                     ZIndex: =2
 
                     Container53 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =142
+                        Height: =150
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutJustifyContent: =LayoutJustifyContent.Center
                         LayoutMode: =LayoutMode.Auto
@@ -507,7 +507,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =476
+                        Width: =501
                         ZIndex: =1
 
                         "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -553,7 +553,7 @@
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
-                                Width: =481
+                                Width: =501
                                 ZIndex: =6
 
                                 TextCanvas38_1 As Texto:
@@ -566,7 +566,7 @@
                                     Text: =ThisItem.MesCreado
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =80
+                                    Width: =60
                                     X: =0
                                     Y: =0
                                     ZIndex: =1
@@ -577,7 +577,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: =ThisItem.Asesor
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -593,7 +593,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: =ThisItem.Ganadas
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -609,7 +609,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: |-
                                         =Text(
                                             (ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
@@ -629,7 +629,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: =ThisItem.Perdidas
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -645,7 +645,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: |-
                                         =Text(
                                             (ThisItem.Perdidas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
@@ -665,7 +665,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: =ThisItem.Seguimientos
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -681,7 +681,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: |-
                                         =Text(
                                             (ThisItem.Seguimientos / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
@@ -701,7 +701,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: =ThisItem.Cotizaciones
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -717,7 +717,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =11
+                                    Size: =13
                                     Text: |-
                                         =Text(
                                             (ThisItem.Cotizaciones / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
@@ -725,32 +725,55 @@
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =40
+                                    Width: =50
                                     X: =0
                                     Y: =0
                                     ZIndex: =10
 
+                                TextCanvas38_9 As Texto:
+                                    Align: ='TextCanvas.Align'.End
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =RGBA(109, 49, 162, 1)
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Size: =13
+                                    Text: |+
+                                        =Text(
+                                            ((ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas) / 
+                                            (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos)) * 100,
+                                            "[$-en-US]0.0"
+                                        ) & "%"
+                                        
+                                        
+                                        
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                    Weight: ='TextCanvas.Weight'.Bold
+                                    Width: =60
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =11
+
                 Container55 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =39
+                    Height: =27
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =428
-                    X: =601
-                    Y: =133
+                    Width: =503
+                    X: =556
+                    Y: =79
                     ZIndex: =3
 
                     Container56 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =37
+                        Height: =25
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =477
                         ZIndex: =1
 
                         TextCanvas43_2 As Texto:
@@ -763,7 +786,7 @@
                             Size: =10
                             Text: ="Mes"
                             Weight: ='TextCanvas.Weight'.Bold
-                            Width: =60
+                            Width: =50
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -848,6 +871,22 @@
                             X: =0
                             Y: =0
                             ZIndex: =8
+
+                        TextCanvas43_8 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(109, 49, 162, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =10
+                            Text: ="Gestión"
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =9
 
                 Container52_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
