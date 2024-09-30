@@ -575,6 +575,18 @@
                             Width: =777
                             ZIndex: =6
 
+                            TextCanvas33_8 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =10
+                                Text: =ThisItem.ID
+                                Width: =25
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
                             TextCanvas31 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =Parent.Height
@@ -585,7 +597,7 @@
                                 Width: =120
                                 X: =0
                                 Y: =0
-                                ZIndex: =1
+                                ZIndex: =2
 
                             TextCanvas33_6 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -594,10 +606,10 @@
                                 LayoutMinWidth: =96
                                 Size: =12
                                 Text: =ThisItem.'Serie.'
-                                Width: =50
+                                Width: =40
                                 X: =0
                                 Y: =0
-                                ZIndex: =2
+                                ZIndex: =3
 
                             TextCanvas33 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -609,7 +621,7 @@
                                 Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =3
+                                ZIndex: =4
 
                             TextCanvas32 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -621,7 +633,7 @@
                                 Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =4
+                                ZIndex: =5
 
                             TextCanvas34_2 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -633,7 +645,7 @@
                                 Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =5
+                                ZIndex: =6
 
                             TextCanvas33_4 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -645,7 +657,7 @@
                                 Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =6
+                                ZIndex: =7
 
                             TextCanvas34 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -657,7 +669,7 @@
                                 Width: =60
                                 X: =0
                                 Y: =0
-                                ZIndex: =7
+                                ZIndex: =8
 
                             TextCanvas34_1 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -669,7 +681,7 @@
                                 Width: =60
                                 X: =0
                                 Y: =0
-                                ZIndex: =8
+                                ZIndex: =9
 
                             TextCanvas33_5 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -678,10 +690,10 @@
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.'Tipo Oportunidad'.Value
-                                Width: =70
+                                Width: =40
                                 X: =0
                                 Y: =0
-                                ZIndex: =9
+                                ZIndex: =10
 
                             TextCanvas33_1 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -693,7 +705,7 @@
                                 Width: =55
                                 X: =0
                                 Y: =0
-                                ZIndex: =10
+                                ZIndex: =11
 
                             TextCanvas33_2 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -705,7 +717,7 @@
                                 Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =11
+                                ZIndex: =12
 
                             TextCanvas33_3 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -717,7 +729,7 @@
                                 Width: =50
                                 X: =0
                                 Y: =0
-                                ZIndex: =12
+                                ZIndex: =13
 
                             TextCanvas33_7 As Texto:
                                 DisplayMode: =DisplayMode.Edit
@@ -729,7 +741,7 @@
                                 Width: =70
                                 X: =0
                                 Y: =0
-                                ZIndex: =13
+                                ZIndex: =14
 
                 Container42 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
@@ -767,7 +779,7 @@
                             Size: =12
                             Text: ="Cliente"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =120
+                            Width: =145
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -825,7 +837,7 @@
                             LayoutMinWidth: =96
                             PaddingLeft: =2
                             Size: =12
-                            Text: ="Horometro"
+                            Text: ="Horom"
                             Weight: ='TextCanvas.Weight'.Regular
                             Width: =50
                             X: =0
@@ -885,9 +897,9 @@
                             LayoutMinWidth: =96
                             PaddingLeft: =2
                             Size: =12
-                            Text: ="Oportunidad"
+                            Text: ="Tipo"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =70
+                            Width: =40
                             X: =0
                             Y: =0
                             ZIndex: =10
