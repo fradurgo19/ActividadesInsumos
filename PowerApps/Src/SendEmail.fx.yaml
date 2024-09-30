@@ -347,12 +347,13 @@
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                             Items: |
-                                =If(
-                                    IsBlank(varSelectedHorometro),
+                                =Filter(
                                     colSerieUnicosPorMes,
-                                    Filter(colSerieUnicosPorMes, Horometro = varSelectedHorometro)
+                                    (IsBlank(ComboboxCanvas5_2.Selected) || 
+                                     (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
+                                     (IsBlank(ComboboxCanvas5_4.Selected) || Asesor.Value = ComboboxCanvas5_4.Selected.Value)
                                 )
-                            ItemsGap: =30
+                            ItemsGap: =20
                             LayoutMinHeight: =0
                             OnSelect: =
                             PaddingLeft: =5
@@ -363,7 +364,7 @@
                             Size: =9
                             Width: =Parent.Width
                             X: =60
-                            XLabelAngle: =90
+                            XLabelAngle: =45
                             Y: =30
                             YLabelAngle: =45
                             ZIndex: =3
@@ -542,7 +543,7 @@
 
                         Container77 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.Light
-                            Height: =312
+                            Height: =272
                             LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                             LayoutMode: =LayoutMode.Auto
@@ -558,7 +559,16 @@
                             "Gallery10 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                                 BorderColor: =RGBA(166, 166, 166, 1)
                                 DelayItemLoading: =true
-                                Items: =Filter(colSerieUnicosPorMes, Horometro = ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro' || ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro' = Blank())
+                                Items: |+
+                                    =Filter(
+                                        colSerieUnicosPorMes,
+                                        (IsBlank(ComboboxCanvas5_2.Selected) || 
+                                         (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
+                                         (IsBlank(ComboboxCanvas5_4.Selected) || Asesor.Value = ComboboxCanvas5_4.Selected.Value) &&
+                                         (IsBlank(ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro') || ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro' = Horometro)
+                                    )
+                                    
+                                    
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =200
                                 LayoutMinWidth: =400
@@ -671,7 +681,70 @@
 
                 "ComboboxCanvas5_2 As 'Cuadro combinado'.pcfdataset":
                     DisplayMode: =DisplayMode.Edit
+                    Height: =46
+                    InputTextPlaceholder: ="Rango Horometro"
+                    Items: |
+                        =[
+                            {Value: "0-250", Min: 0, Max: 250},
+                            {Value: "250-500", Min: 250, Max: 500},
+                            {Value: "500-750", Min: 500, Max: 750},
+                            {Value: "750-1000", Min: 750, Max: 1000},
+                            {Value: "1000-1250", Min: 1000, Max: 1250},
+                            {Value: "1250-1500", Min: 1250, Max: 1500},
+                            {Value: "1500-2000", Min: 1500, Max: 2000},
+                            {Value: "2000-2500", Min: 2000, Max: 2500},
+                            {Value: "2500-3000", Min: 2500, Max: 3000},
+                            {Value: "3000-3500", Min: 3000, Max: 3500},
+                            {Value: "3500-4000", Min: 3500, Max: 4000},
+                            {Value: "4000-4500", Min: 4000, Max: 4500},
+                            {Value: "4500-5000", Min: 4500, Max: 5000},
+                            {Value: "5000-5500", Min: 5000, Max: 5500},
+                            {Value: "5500-6000", Min: 5500, Max: 6000},
+                            {Value: "6000-6500", Min: 6000, Max: 6500},
+                            {Value: "6500-7000", Min: 6500, Max: 7000},
+                            {Value: "7000-7500", Min: 7000, Max: 7500},
+                            {Value: "7500-8000", Min: 7500, Max: 8000},
+                            {Value: "8000-8500", Min: 8000, Max: 8500},
+                            {Value: "8500-9000", Min: 8500, Max: 9000},
+                            {Value: "9000-9500", Min: 9000, Max: 9500},
+                            {Value: "9500-10000", Min: 9500, Max: 10000},
+                            {Value: "10000-11000", Min: 10000, Max: 11000},
+                            {Value: "11000-12000", Min: 11000, Max: 12000},
+                            {Value: "12000-13000", Min: 12000, Max: 13000},
+                            {Value: "13000-14000", Min: 13000, Max: 14000},
+                            {Value: "14000-15000", Min: 14000, Max: 15000},
+                            {Value: "15000-16000", Min: 15000, Max: 16000},
+                            {Value: "16000-17000", Min: 16000, Max: 17000},
+                            {Value: "17000-18000", Min: 17000, Max: 18000},
+                            {Value: "18000-19000", Min: 18000, Max: 19000},
+                            {Value: "19000-20000", Min: 19000, Max: 20000},
+                            {Value: "20000-25000", Min: 20000, Max: 25000},
+                            {Value: "25000-30000", Min: 25000, Max: 30000},
+                            {Value: "30000-35000", Min: 30000, Max: 35000},
+                            {Value: "35000-40000", Min: 35000, Max: 40000},
+                            {Value: "40000-45000", Min: 40000, Max: 45000},
+                            {Value: "45000-50000", Min: 45000, Max: 50000},
+                            {Value: "50000-100000", Min: 50000, Max: 100000},
+                            {Value: "100000-200000", Min: 100000, Max: 200000},
+                            {Value: "200000-500000", Min: 200000, Max: 500000}
+                        ]
+                    Width: =170
+                    X: =730
+                    Y: =80
+                    ZIndex: =16
+
+                TextCanvas21 As Texto:
+                    DisplayMode: =DisplayMode.Edit
                     Height: =32
+                    Text: =varSelectedHorometro
+                    Width: =96
+                    X: =461
+                    Y: =0
+                    ZIndex: =18
+
+                "ComboboxCanvas5_4 As 'Cuadro combinado'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =46
                     InputTextPlaceholder: ="Buscar Asesor"
                     Items: |
                         =["dbeltran@partequipos.com", "gbuenahora@partequipos.com", "sarenas@partequipos.com", "afuentes@partequipos.com", 
@@ -684,17 +757,9 @@
                         "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                         "fvasquez@partequipos.com", "dcubides@partequipos.com"]
                     Width: =140
-                    X: =760
+                    X: =512
                     Y: =80
-                    ZIndex: =16
-
-                "TextInputCanvas4 As 'Entrada de texto'":
-                    DisplayMode: =DisplayMode.Edit
-                    Height: =32
-                    Width: =279
-                    X: =479
-                    Y: =80
-                    ZIndex: =17
+                    ZIndex: =19
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -996,4 +1061,14 @@
                     X: =0
                     Y: =10
                     ZIndex: =12
+
+    ButtonCanvas14 As Botón:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Reset(ComboboxCanvas5_2);Reset(ComboboxCanvas5_4)
+        Text: ="Reset"
+        Width: =96
+        X: =1245
+        Y: =87
+        ZIndex: =4
 
