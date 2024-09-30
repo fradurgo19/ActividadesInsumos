@@ -152,25 +152,25 @@
 
                 Container74 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =567
+                    Height: =590
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =316
+                    Width: =327
                     X: =18
-                    Y: =126
+                    Y: =149
                     ZIndex: =2
 
                     Container75 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =603
+                        Height: =609
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =301
+                        Width: =319
                         Y: =3
                         ZIndex: =1
 
@@ -183,8 +183,9 @@
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
+                            ShowNavigation: =true
                             TemplatePadding: =0
-                            TemplateSize: =104
+                            TemplateSize: =50
                             Width: =232
                             X: =339
                             Y: =117
@@ -193,83 +194,78 @@
                             Separator5 As rectangle:
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 Fill: =RGBA(255, 255, 255, 1)
-                                Height: =8
+                                Height: =0
                                 OnSelect: =Select(Parent)
                                 Width: =Parent.TemplateWidth
                                 Y: =Parent.TemplateHeight - Self.Height
                                 ZIndex: =5
 
                             TextCanvas47 As Texto:
+                                Align: ='TextCanvas.Align'.Center
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =95
-                                Size: =13
+                                Height: =50
+                                Size: =10
                                 Text: =ThisItem.Descripcion
-                                Width: =40
-                                X: =51
-                                Y: =1
+                                Width: =92
+                                X: =69
+                                Y: =0
                                 ZIndex: =6
 
-                            TextCanvas47_1 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =95
-                                Size: =13
-                                Text: =ThisItem.TipodeMaquina
-                                Width: =51
-                                X: =0
-                                Y: =9
-                                ZIndex: =7
-
                             TextCanvas47_2 As Texto:
+                                Align: ='TextCanvas.Align'.Center
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =95
+                                Height: =50
                                 Size: =13
                                 Text: =ThisItem.Horometro
-                                Width: =40
-                                X: =91
+                                Width: =46
+                                X: =161
                                 Y: =0
                                 ZIndex: =8
 
-                            TextCanvas47_3 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =95
-                                Size: =13
-                                Text: =ThisItem.Tarea
-                                Width: =40
-                                X: =171
-                                Y: =9
-                                ZIndex: =9
-
                             TextCanvas47_4 As Texto:
+                                Align: ='TextCanvas.Align'.Center
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =95
+                                Height: =50
                                 Size: =13
                                 Text: =ThisItem.Qty
-                                Width: =40
-                                X: =131
+                                Width: =21
+                                X: =221
                                 Y: =0
                                 ZIndex: =10
 
                             TextCanvas47_5 As Texto:
+                                Align: ='TextCanvas.Align'.Center
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =95
+                                Height: =50
                                 Size: =13
-                                Text: =ThisItem.Grupo
-                                Width: =71
-                                X: =227
+                                Text: =ThisItem.Ndeparte
+                                Width: =78
+                                X: =242
                                 Y: =0
                                 ZIndex: =11
 
+                            TextCanvas47_3 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =50
+                                Size: =13
+                                Text: =ThisItem.TipodeMaquina
+                                Width: =69
+                                X: =0
+                                Y: =0
+                                ZIndex: =12
+
                 Container5_3 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =39
+                    Fill: =RGBA(255, 191, 0, 1)
+                    Height: =23
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =292
+                    Width: =327
                     X: =18
-                    Y: =87
+                    Y: =126
                     ZIndex: =5
 
                     TextCanvas29_20 As Texto:
@@ -277,15 +273,48 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         PaddingLeft: =3
-                        Text: ="LCC"
-                        Width: =140
+                        Text: ="Tipo"
+                        Width: =80
                         X: =0
                         Y: =0
                         ZIndex: =11
+
+                    TextCanvas29_28 As Texto:
+                        BorderColor: =RGBA(214, 221, 224, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =3
+                        Text: ="Parte-Horometro"
+                        Width: =130
+                        X: =0
+                        Y: =0
+                        ZIndex: =12
+
+                    TextCanvas29_29 As Texto:
+                        BorderColor: =RGBA(214, 221, 224, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =3
+                        Text: ="Qty  No.Parte"
+                        Width: =120
+                        X: =0
+                        Y: =0
+                        ZIndex: =13
 
                 Container88 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
