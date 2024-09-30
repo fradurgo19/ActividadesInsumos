@@ -791,13 +791,40 @@ CPP As screen:
                         OnCheck: |+
                             =Collect(colAllSelectedItems, ThisItem);
                             Collect(colEquivalenciasSeleccionadas,Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP));
+                            // Limpia la colección concatenada si ya existe
+                            Clear(colConcatenada);
+                            ForAll(
+                                colEquivalenciasSeleccionadas,
+                                Collect(
+                                    colConcatenada,
+                                    {
+                                        RefSAP: ThisRecord.RefSAP,
+                                        No: ThisRecord.No,
+                                        MarcaEquivalencia: ThisRecord.Marca,
+                                        Equivalencia: ThisRecord.Equivalencia,
+                                        // Ahora busca en colAllSelectedItems usando RefSAP para añadir los campos que faltan
+                                        Marca: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Marca,
+                                        Nombre: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Nombre,
+                                        Cantidad: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Cantidad,
+                                        Frecuencia: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Frecuencia,
+                                        Medida: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Medida,
+                                        Comentario: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Comentario,
+                                        Modelo: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Modelo,
+                                        Parte: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Parte,
+                                        Tipo: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Tipo,
+                                        ImagenUrl: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).ImagenUrl,
+                                        Recomendación: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Recomendación
+                                    }
+                                )
+                            );
                             Set(varCheckboxChecked, true);
                             
                             
                         OnSelect: =Select(Parent)
                         OnUncheck: |-
-                            =Clear(colEquivalenciasSeleccionadas);
-                            Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP)
+                            =Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP);
+                            // Elimina de colConcatenada los registros que coincidan con el RefSAP de ThisItem
+                            RemoveIf(colConcatenada, RefSAP = ThisItem.RefSAP)
                         Size: =13
                         Text: =
                         Width: =28

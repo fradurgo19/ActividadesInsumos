@@ -2,30 +2,6 @@ ResumenCPP As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
         =Set(pdfContent,Blank());
-        ForAll(
-            colEquivalenciasSeleccionadas,
-            Collect(
-                colConcatenada,
-                {
-                    RefSAP: ThisRecord.RefSAP,
-                    No: ThisRecord.No,
-                    MarcaEquivalencia: ThisRecord.Marca,
-                    Equivalencia: ThisRecord.Equivalencia,
-                    // Ahora busca en colAllSelectedItems usando RefSAP para añadir los campos que faltan
-                    Marca: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Marca,
-                    Nombre: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Nombre,
-                    Cantidad: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Cantidad,
-                    Frecuencia: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Frecuencia,
-                    Medida: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Medida,
-                    Comentario: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Comentario,
-                    Modelo: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Modelo,
-                    Parte: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Parte,
-                    Tipo: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Tipo,
-                    ImagenUrl: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).ImagenUrl,
-                    Recomendación: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Recomendación
-                }
-            )
-        )
         
 
     Container84 As groupContainer.manualLayoutContainer:
