@@ -1,37 +1,32 @@
 Resumen As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
+    OnVisible: |+
         =Set(pdfContent,Blank());
-        ClearCollect(
-            colUnificada,
-            ForAll(
-                colAllSelectedItems As baseItem,
-                // Encontrar todas las equivalencias de la RefSAP en colEquivalenciasSeleccionadas
-                ForAll(
-                    Filter(colEquivalenciasSeleccionadas, RefSAP = baseItem.RefSAP) As equivItem,
-                    Collect(
-                        colUnificada,
-                        {
-                            RefSAP: baseItem.RefSAP,
-                            MarcaOriginal: baseItem.Marca,   // Marca de colAllSelectedItems
-                            MarcaEquivalente: equivItem.Marca, // Marca de colEquivalenciasSeleccionadas
-                            Equivalencia: equivItem.Equivalencia, // Equivalencia correspondiente
-                            Nombre: baseItem.Nombre,   // Otros campos de colAllSelectedItems
-                            Cantidad: baseItem.Cantidad,
-                            Frecuencia: baseItem.Frecuencia,
-                            Medida: baseItem.Medida,
-                            Comentario: baseItem.Comentario,
-                            Modelo: baseItem.Modelo,
-                            Parte: baseItem.Parte,
-                            Tipo: baseItem.Tipo,
-                            ImagenUrl: baseItem.ImagenUrl,
-                            Recomendación: baseItem.Recomendación,
-                            No: baseItem.No
-                        }
-                    )
-                )
+        ForAll(
+            colEquivalenciasSeleccionadas,
+            Collect(
+                colConcatenada,
+                {
+                    RefSAP: ThisRecord.RefSAP,
+                    No: ThisRecord.No,
+                    MarcaEquivalencia: ThisRecord.Marca,
+                    Equivalencia: ThisRecord.Equivalencia,
+                    // Ahora busca en colAllSelectedItems usando RefSAP para añadir los campos que faltan
+                    Marca: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Marca,
+                    Nombre: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Nombre,
+                    Cantidad: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Cantidad,
+                    Frecuencia: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Frecuencia,
+                    Medida: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Medida,
+                    Comentario: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Comentario,
+                    Modelo: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Modelo,
+                    Parte: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Parte,
+                    Tipo: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Tipo,
+                    ImagenUrl: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).ImagenUrl,
+                    Recomendación: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Recomendación
+                }
             )
         )
+        
 
     Container24_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
