@@ -178,13 +178,22 @@
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
                             Height: =497
-                            Items: |-
-                                =Filter(
-                                    TablaLCC,
-                                    (IsBlank(ComboboxCanvas5_2.Selected) || 
-                                     (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
-                                     (IsBlank(ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro') || ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro' = Horometro)
+                            Items: |+
+                                =If(
+                                    IsBlank(Gallery10.Selected), 
+                                    TablaLCC, // Muestra todos los datos si no hay selección en Gallery10
+                                    Filter(
+                                        TablaLCC,
+                                        (IsBlank(ComboboxCanvas5_2.Selected) || 
+                                         (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
+                                        (
+                                            IsBlank(ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro') || 
+                                            Abs(Horometro - Gallery10.Selected.Horometro) <= 300 // Valor cercano al seleccionado en Gallery10
+                                        )
+                                    )
                                 )
+                                
+                                
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
