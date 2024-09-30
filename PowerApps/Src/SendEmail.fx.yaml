@@ -177,6 +177,7 @@
                         "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
+                            Fill: =RGBA(255, 255, 255, 1)
                             Height: =497
                             Items: |+
                                 =If(
@@ -188,7 +189,7 @@
                                          (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
                                         (
                                             IsBlank(ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro') || 
-                                            Abs(Horometro - Gallery10.Selected.Horometro) <= 300 // Valor cercano al seleccionado en Gallery10
+                                            Abs(Horometro - Gallery10.Selected.Horometro) <= 1000 // Valor cercano al seleccionado en Gallery10
                                         )
                                     )
                                 )
@@ -349,13 +350,14 @@
                     Container5_5 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
                         Fill: =RGBA(255, 191, 0, 1)
-                        Height: =39
+                        Height: =24
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
                         Width: =695
+                        Y: =14
                         ZIndex: =1
 
                         TextCanvas28_2 As Texto:
@@ -1121,7 +1123,9 @@
         BasePaletteColor: =RGBA(249, 83, 109, 1)
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        OnSelect: =Reset(ComboboxCanvas5_2);Reset(ComboboxCanvas5_4);
+        OnSelect: |
+            =Reset(ComboboxCanvas5_2);Reset(ComboboxCanvas5_4);Reset(Gallery10);
+            Reset(Gallery3);
         Text: ="Reset"
         Width: =96
         X: =1245
