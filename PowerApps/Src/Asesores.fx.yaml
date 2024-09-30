@@ -458,10 +458,10 @@
                         Items: =Sort(colItemsPorMes, Cantidad, SortOrder.Descending)
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
-                        LayoutMinWidth: =150
+                        LayoutMinWidth: =140
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0
-                        TemplateSize: =30
+                        TemplateSize: =35
                         Width: =Parent.Width
                         X: =40
                         Y: =40
@@ -478,7 +478,7 @@
 
                         Container41 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.Light
-                            Height: =50
+                            Height: =35
                             LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                             LayoutMode: =LayoutMode.Auto
@@ -491,7 +491,7 @@
 
                             TextCanvas30 As Texto:
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =32
+                                Height: =20
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Text: |+
