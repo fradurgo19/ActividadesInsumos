@@ -455,7 +455,7 @@
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DelayItemLoading: =true
                         Height: =Parent.Height
-                        Items: =Sort(colItemsPorMes, MesCreado, SortOrder.Descending)
+                        Items: =Sort(colItemsPorMes, Cantidad, SortOrder.Descending)
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
                         LayoutMinWidth: =150
@@ -1650,4 +1650,149 @@
                     X: =904
                     Y: =474
                     ZIndex: =14
+
+    Container90 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =446
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =226
+        X: =312
+        Y: =306
+        ZIndex: =3
+
+        Container39_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =396
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =219
+            Y: =40
+            ZIndex: =1
+
+            "Gallery4_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                Height: =Parent.Height
+                Items: =Sort(colItemsPorAsesor, Cantidad, SortOrder.Descending)
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =0
+                LayoutMinWidth: =150
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =30
+                Width: =Parent.Width
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+                Separator3_1 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =8
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =5
+
+                Container41_1 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =30
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =219
+                    ZIndex: =6
+
+                    TextCanvas30_1 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(0, 0, 0, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =12
+                        Text: |+
+                            =ThisItem.Correo
+                            
+                        Width: =180
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    TextCanvas12_2 As Texto:
+                        Align: ='TextCanvas.Align'.Start
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(0, 0, 0, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: =ThisItem.Cantidad
+                        Width: =40
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+        Container45_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(166, 215, 153, 1)
+            Height: =40
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =226
+            ZIndex: =2
+
+            Container46_1 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =31
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =224
+                Y: =6
+                ZIndex: =1
+
+                TextCanvas36_1 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingLeft: =5
+                    Size: =12
+                    Text: ="Asesor"
+                    Width: =140
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                TextCanvas37_1 As Texto:
+                    Align: ='TextCanvas.Align'.End
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingLeft: =5
+                    Size: =12
+                    Text: ="Cantidad"
+                    Width: =70
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
 
