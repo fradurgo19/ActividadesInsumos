@@ -138,7 +138,11 @@ CPP As screen:
                     RemoveIf(
                         colEquivalenciasSeleccionadas,
                         RefSAP = ThisRecord.RefSAP
-                    )
+                    );
+                    RemoveIf(
+                        colConcatenada,
+                        RefSAP = ThisRecord.RefSAP
+                    );
                 );
                 Set(
                     varResetCheckbox,
