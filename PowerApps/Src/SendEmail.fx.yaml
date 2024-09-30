@@ -178,7 +178,12 @@
                             BorderColor: =RGBA(166, 166, 166, 1)
                             DelayItemLoading: =true
                             Height: =497
-                            Items: =TablaLCC
+                            Items: |-
+                                =Filter(
+                                    TablaLCC,
+                                    (IsBlank(ComboboxCanvas5_2.Selected) || 
+                                     (IsBlank(ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro') || ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro' = Horometro)
+                                ))
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
@@ -278,6 +283,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         PaddingLeft: =3
+                        Size: =14
                         Text: ="Tipo"
                         Width: =80
                         X: =0
@@ -294,6 +300,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         PaddingLeft: =3
+                        Size: =14
                         Text: ="Parte-Horometro"
                         Width: =130
                         X: =0
@@ -310,6 +317,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         PaddingLeft: =3
+                        Size: =14
                         Text: ="Qty  No.Parte"
                         Width: =120
                         X: =0
@@ -351,6 +359,7 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =3
+                            Size: =16
                             Text: ="Horas Actuales"
                             Width: =Parent.Width
                             X: =0
@@ -440,6 +449,7 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =3
+                            Size: =16
                             Text: ="Cliente , Horometro, Promedio Horas y Contacto."
                             Width: =Parent.Width
                             X: =0
@@ -620,7 +630,7 @@
                                 Separator7 As rectangle:
                                     BorderColor: =RGBA(0, 0, 0, 0)
                                     Fill: =RGBA(255, 255, 255, 1)
-                                    Height: =8
+                                    Height: =0
                                     OnSelect: =Select(Parent)
                                     Width: =Parent.TemplateWidth
                                     Y: =Parent.TemplateHeight - Self.Height
