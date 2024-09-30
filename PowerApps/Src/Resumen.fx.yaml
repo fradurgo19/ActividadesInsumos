@@ -164,7 +164,7 @@ Resumen As screen:
 
     Container2_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =366
+        Height: =654
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -383,7 +383,7 @@ Resumen As screen:
 
         Container11_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =260
+            Height: =601
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
@@ -400,7 +400,7 @@ Resumen As screen:
                 Height: =Parent.Height
                 Items: |+
                     =Sort(
-                        Distinct(colAllSelectedItems, {No: No , Nombre: Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario}),
+                        Distinct(colConcatenada, {No: No , Nombre: Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario}),
                         Value.No
                     )
                     
