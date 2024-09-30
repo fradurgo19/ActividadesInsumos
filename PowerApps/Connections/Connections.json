@@ -36,6 +36,13 @@
       "id": "/providers/microsoft.powerapps/apis/shared_excel"
     },
     "datasets": {
+      "b!FyoOvVlOD0u_bKJxVUY9XPb--74zvKxHrsHHZfGKnaQ0SLpXpNtIS4OwZWRdE26X.016T42KCA4KQQIX4VX6VGJTAOJRIW5PKNU": {
+        "dataSources": {
+          "TablaLCC": {
+            "tableName": "TablaLCC"
+          }
+        }
+      },
       "b!FyoOvVlOD0u_bKJxVUY9XPb--74zvKxHrsHHZfGKnaQ0SLpXpNtIS4OwZWRdE26X.016T42KCBFBLBA72BG4BEK4VNRGK7JAGUK": {
         "dataSources": {
           "TablaEquivalenciasCpp": {
@@ -53,7 +60,8 @@
     },
     "dataSources": [
       "TablaDataCpp",
-      "TablaEquivalenciasCpp"
+      "TablaEquivalenciasCpp",
+      "TablaLCC"
     ],
     "dependencies": {
       "fileSource": "d72154ae-dfa8-497f-97e1-3ed208bd878f"
