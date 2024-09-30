@@ -27,7 +27,18 @@
         
         
         
-        
+        ClearCollect(
+            colItemsPorAsesor,
+            AddColumns(
+                GroupBy(
+                    'Seguimiento Clientes Equipos Telemetría',
+                    Correo,  // Columna por la que se agrupa
+                    Grupo       // Nombre de la columna para almacenar registros agrupados
+                ),
+                Cantidad,    // Nombre de la nueva columna
+                CountRows(Grupo) // Contar los registros en cada grupo
+            )
+        );
         
         
         
@@ -88,7 +99,7 @@
                 HoverFill: =MenuList_9.Fill
                 Items: =MenuData
                 Layout: =Layout.Vertical
-                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(SendEmail,ScreenTransition.None),"7",Navigate(SendEmail_1,ScreenTransition.None),"8",Navigate(PQRS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None)))
+                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(PQRS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None)))
                 PressedBorderColor: =MenuList_9.BorderColor
                 PressedFill: =MenuList_9.Fill
                 ShowScrollbar: =false
@@ -426,7 +437,7 @@
 
                 Container39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =285
+                    Height: =138
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMode: =LayoutMode.Auto
@@ -434,7 +445,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =222
+                    Width: =143
                     X: =13
                     Y: =155
                     ZIndex: =2
@@ -447,10 +458,10 @@
                         Items: =Sort(colItemsPorMes, MesCreado, SortOrder.Descending)
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
-                        LayoutMinWidth: =0
+                        LayoutMinWidth: =150
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0
-                        TemplateSize: =70
+                        TemplateSize: =30
                         Width: =Parent.Width
                         X: =40
                         Y: =40
@@ -467,7 +478,7 @@
 
                         Container41 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.Light
-                            Height: =70
+                            Height: =50
                             LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                             LayoutMode: =LayoutMode.Auto
@@ -475,7 +486,7 @@
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =222
+                            Width: =137
                             ZIndex: =6
 
                             TextCanvas30 As Texto:
@@ -491,23 +502,6 @@
                                 Y: =0
                                 ZIndex: =1
 
-                            TextCanvas12 As Texto:
-                                Align: ='TextCanvas.Align'.Start
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =32
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                Text: |-
-                                    =If(
-                                        totalItems > 0,
-                                        Round((ThisItem.Cantidad / totalItems) * 100, 2) & "%",
-                                        "0%"
-                                    )
-                                Width: =50
-                                X: =0
-                                Y: =0
-                                ZIndex: =2
-
                             TextCanvas12_1 As Texto:
                                 Align: ='TextCanvas.Align'.Start
                                 DisplayMode: =DisplayMode.Edit
@@ -520,24 +514,9 @@
                                 Y: =0
                                 ZIndex: =3
 
-                ButtonCanvas1_3 As Botón:
-                    BasePaletteColor: =
-                    DisplayMode: =DisplayMode.Edit
-                    Height: =80
-                    OnSelect: =Navigate(Jefes,ScreenTransition.UnCoverRight)
-                    Text: ="Jefes"
-                    Visible: |
-                        =User().Email = "analista.mantenimiento@partequipos.com" || 
-                        User().Email = "jestrada@partequipos.com" || 
-                        User().Email = "cceballos@partequipos.com"
-                    Width: =140
-                    X: =28
-                    Y: =471
-                    ZIndex: =3
-
                 Container40 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =413
+                    Height: =319
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -981,20 +960,20 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =222
+                    Width: =143
                     X: =13
                     Y: =108
                     ZIndex: =6
 
                     Container46 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =36
+                        Height: =39
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =222
+                        Width: =126
                         Y: =6
                         ZIndex: =1
 
@@ -1007,12 +986,13 @@
                             PaddingLeft: =5
                             Size: =12
                             Text: ="Mes"
-                            Width: =96
+                            Width: =50
                             X: =0
                             Y: =0
                             ZIndex: =1
 
                         TextCanvas37 As Texto:
+                            Align: ='TextCanvas.Align'.End
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =Parent.Height
@@ -1020,8 +1000,8 @@
                             LayoutMinWidth: =96
                             PaddingLeft: =5
                             Size: =12
-                            Text: ="Porcentaje del Total de Oportunidades"
-                            Width: =120
+                            Text: ="Cantidad"
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -1143,19 +1123,19 @@
 
                 Container57 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =174
+                    Height: =246
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =777
                     X: =277
-                    Y: =582
+                    Y: =509
                     ZIndex: =9
 
                     Container58 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =174
+                        Height: =246
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -1172,7 +1152,6 @@
                             Item: =Gallery8.Selected
                             LayoutMinHeight: =0
                             LayoutMinWidth: =0
-                            NumberOfColumns: =12
                             UseFluentV9Cards: =true
                             Width: =Parent.Width
                             X: =588
@@ -1190,7 +1169,7 @@
                                 Height: =70
                                 Required: =false
                                 Update: =DataCardValue21.Selected
-                                Width: =192
+                                Width: =259
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
@@ -1252,8 +1231,8 @@
                                 Height: =60
                                 Required: =false
                                 Update: =Value(DataCardValue4.Value)
-                                Width: =192
-                                X: =3
+                                Width: =259
+                                X: =1
                                 Y: =0
                                 ZIndex: =2
 
@@ -1301,68 +1280,6 @@
                                     Y: =DataCardKey4.Y
                                     ZIndex: =4
 
-                            "'Fecha Primer Mtto_DataCard1' As typedDataCard.fluentV9DateEditCard":
-                                BorderColor: =RGBA(166, 166, 166, 1)
-                                BorderStyle: =BorderStyle.Solid
-                                DataField: ="field_18"
-                                Default: =ThisItem.'Fecha Primer Mtto'
-                                DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,'Fecha Primer Mtto')
-                                Fill: =RGBA(0, 0, 0, 0)
-                                Height: =60
-                                Required: =false
-                                Update: =DataCardValue7.SelectedDate
-                                Width: =192
-                                X: =6
-                                Y: =0
-                                ZIndex: =2
-
-                                DataCardKey7 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =22
-                                    Text: =Parent.DisplayName
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
-                                    Wrap: =false
-                                    X: =24
-                                    Y: =10
-                                    ZIndex: =1
-
-                                "DataCardValue7 As 'Selector de fecha'":
-                                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                    DisplayMode: =Parent.DisplayMode
-                                    EndDate: =Date(Year(Today())+100, 12, 31)
-                                    Height: =32
-                                    SelectedDate: =Parent.Default
-                                    StartDate: =Date(1900, 1, 1)
-                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey7.Y + DataCardKey7.Height + 4
-                                    ZIndex: =2
-
-                                ErrorMessage7 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =30
-                                    Text: =Parent.Error
-                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                    Width: =Parent.Width - 48
-                                    Wrap: =true
-                                    X: =24
-                                    Y: =DataCardValue7.Y + DataCardValue7.Height
-                                    ZIndex: =3
-
-                                StarVisible7 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =30
-                                    Text: ="*"
-                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                    Width: =30
-                                    X: =0
-                                    Y: =DataCardKey7.Y
-                                    ZIndex: =4
-
                             "'Tipo Oportunidad_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
                                 BorderColor: =RGBA(166, 166, 166, 1)
                                 BorderStyle: =BorderStyle.Solid
@@ -1374,8 +1291,8 @@
                                 Height: =60
                                 Required: =false
                                 Update: =DataCardValue12.Selected
-                                Width: =192
-                                X: =9
+                                Width: =259
+                                X: =2
                                 Y: =0
                                 ZIndex: =2
 
@@ -1438,7 +1355,7 @@
                                 Height: =60
                                 Required: =false
                                 Update: =DataCardValue14.Selected
-                                Width: =192
+                                Width: =259
                                 X: =0
                                 Y: =1
                                 ZIndex: =2
@@ -1500,8 +1417,8 @@
                                 Height: =70
                                 Required: =false
                                 Update: =DataCardValue15.Selected
-                                Width: =192
-                                X: =3
+                                Width: =259
+                                X: =1
                                 Y: =1
                                 ZIndex: =2
 
@@ -1562,8 +1479,8 @@
                                 Height: =70
                                 Required: =false
                                 Update: =DataCardValue17.Selected
-                                Width: =192
-                                X: =6
+                                Width: =259
+                                X: =2
                                 Y: =1
                                 ZIndex: =2
 
@@ -1625,9 +1542,9 @@
                                 MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
                                 Required: =false
                                 Update: =DataCardValue13.Value
-                                Width: =192
-                                X: =9
-                                Y: =1
+                                Width: =777
+                                X: =0
+                                Y: =2
                                 ZIndex: =2
 
                                 DataCardKey13 As Texto:
@@ -1645,14 +1562,14 @@
                                 "DataCardValue13 As 'Entrada de texto'":
                                     AccessibleLabel: =Parent.DisplayName
                                     DisplayMode: =Parent.DisplayMode
-                                    FontSize: =11
+                                    FontSize: =14
                                     Height: =62
                                     Mode: ='TextInputCanvas.Mode'.Multiline
                                     Required: =Parent.Required
                                     TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Value: =Parent.Default
-                                    Width: =185
+                                    Width: =774
                                     X: =0
                                     Y: =DataCardKey13.Y + DataCardKey13.Height + 4
                                     ZIndex: =2
@@ -1705,59 +1622,32 @@
                             LayoutMinHeight: =640
                             LayoutMinWidth: =640
 
-                Container65 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    Height: =170
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
+                ButtonCanvas1_4 As Botón:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =39
+                    OnSelect: =Navigate(Jefes,ScreenTransition.UnCoverRight)
+                    Text: ="Jefes"
+                    Visible: |
+                        =User().Email = "analista.mantenimiento@partequipos.com" || 
+                        User().Email = "jestrada@partequipos.com" || 
+                        User().Email = "cceballos@partequipos.com"
+                    Width: =80
+                    X: =643
+                    Y: =13
+                    ZIndex: =13
+
+                ButtonCanvas13 As Botón:
+                    BasePaletteColor: =RGBA(156, 220, 79, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =35
+                    Icon: ="Send"
+                    OnSelect: |-
+                        =SubmitForm(Form1);
+                        Notify("Actualización Enviada", NotificationType.Success, 3000)
+                    Text: ="Actualizar"
                     Width: =150
-                    X: =126
-                    Y: =582
-                    ZIndex: =12
-
-                    Container66 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.Light
-                        Height: =170
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMode: =LayoutMode.Auto
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
-                        Width: =150
-                        ZIndex: =1
-
-                        TextCanvas46 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            AlignInContainer: =AlignInContainer.Center
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =80
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: ="Gestione oportunidad cambie esatdos o ingrese las observaciones"
-                            Width: |+
-                                =150
-                                
-                                
-                            X: =0
-                            Y: =0
-                            ZIndex: =1
-
-                        ButtonCanvas13 As Botón:
-                            BasePaletteColor: =RGBA(156, 220, 79, 1)
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =62
-                            Icon: ="Send"
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            OnSelect: |-
-                                =SubmitForm(Form1);
-                                Notify("Actualización Enviada", NotificationType.Success, 3000)
-                            Text: ="Actualizar"
-                            Width: =150
-                            X: =181
-                            Y: =568
-                            ZIndex: =2
+                    X: =904
+                    Y: =474
+                    ZIndex: =14
 
