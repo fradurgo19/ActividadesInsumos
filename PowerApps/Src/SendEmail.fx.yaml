@@ -31,6 +31,7 @@
                 PromedioHoras, First(ThisRecord.GrupoDatos).Promedio_h,
                 Email, First(ThisRecord.GrupoDatos).email,
                 Telefono, First(ThisRecord.GrupoDatos).Telefono,
+                Asesor, First(ThisRecord.GrupoDatos).'ASESOR 2',
                 Cliente, First(ThisRecord.GrupoDatos).'Nombre del cliente'
             )
         )
@@ -282,14 +283,14 @@
 
                 Container88 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =246
+                    Height: =264
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =679
+                    Width: =695
                     X: =357
-                    Y: =495
+                    Y: =476
                     ZIndex: =13
 
                     Container5_5 As groupContainer.horizontalAutoLayoutContainer:
@@ -301,7 +302,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =675
+                        Width: =695
                         ZIndex: =1
 
                         TextCanvas28_2 As Texto:
@@ -323,13 +324,13 @@
 
                     Container80 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =207
+                        Height: =223
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =675
+                        Width: =695
                         Y: =39
                         ZIndex: =2
 
@@ -346,7 +347,7 @@
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                             Items: =colSerieUnicosPorMes
-                            ItemsGap: =5
+                            ItemsGap: =30
                             LayoutMinHeight: =0
                             OnSelect: =
                             PaddingLeft: =5
@@ -354,7 +355,7 @@
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             SeriesAxisMax: =11360
                             SeriesAxisMin: =0
-                            Size: =15
+                            Size: =9
                             Width: =Parent.Width
                             X: =60
                             XLabelAngle: =90
@@ -364,20 +365,20 @@
 
                 Container89 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =349
+                    Height: =376
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =679
+                    Width: =709
                     X: =357
-                    Y: =114
+                    Y: =87
                     ZIndex: =14
 
                     Container5_4 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
                         Fill: =RGBA(255, 191, 0, 1)
-                        Height: =19
+                        Height: =28
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -398,7 +399,7 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =3
-                            Text: ="Horometro y Promedio Horas Cliente y Serie"
+                            Text: ="Cliente , Horometro, Promedio Horas y Contacto."
                             Width: =Parent.Width
                             X: =0
                             Y: =0
@@ -407,7 +408,7 @@
                     Container5_6 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
                         Fill: =RGBA(255, 255, 255, 1)
-                        Height: =19
+                        Height: =32
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -419,7 +420,7 @@
                         ZIndex: =2
 
                         TextCanvas29_22 As Texto:
-                            Align: ='TextCanvas.Align'.Center
+                            Align: ='TextCanvas.Align'.Start
                             BorderColor: =RGBA(214, 221, 224, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
@@ -430,13 +431,13 @@
                             LayoutMinWidth: =96
                             PaddingLeft: =3
                             Text: ="Cliente"
-                            Width: =150
+                            Width: =130
                             X: =0
                             Y: =0
                             ZIndex: =11
 
                         TextCanvas29_23 As Texto:
-                            Align: ='TextCanvas.Align'.Center
+                            Align: ='TextCanvas.Align'.Start
                             BorderColor: =RGBA(214, 221, 224, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
@@ -453,7 +454,7 @@
                             ZIndex: =12
 
                         TextCanvas29_24 As Texto:
-                            Align: ='TextCanvas.Align'.Center
+                            Align: ='TextCanvas.Align'.Start
                             BorderColor: =RGBA(214, 221, 224, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
@@ -470,7 +471,7 @@
                             ZIndex: =13
 
                         TextCanvas29_25 As Texto:
-                            Align: ='TextCanvas.Align'.Center
+                            Align: ='TextCanvas.Align'.Start
                             BorderColor: =RGBA(214, 221, 224, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
@@ -487,7 +488,8 @@
                             ZIndex: =14
 
                         TextCanvas29_26 As Texto:
-                            Align: ='TextCanvas.Align'.Center
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Start
                             BorderColor: =RGBA(214, 221, 224, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
@@ -498,6 +500,7 @@
                             LayoutMinWidth: =96
                             PaddingLeft: =3
                             Text: ="Promedio Horas"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                             Width: =120
                             X: =0
                             Y: =0
@@ -514,27 +517,27 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =3
-                            Text: ="Mes"
-                            Width: =120
+                            Text: ="Contacto"
+                            Width: =180
                             X: =0
                             Y: =0
                             ZIndex: =16
 
                     Container76 As groupContainer.manualLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =174
+                        Height: =315
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =668
+                        Width: =706
                         X: =3
-                        Y: =47
+                        Y: =60
                         ZIndex: =3
 
                         Container77 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.Light
-                            Height: =221
+                            Height: =312
                             LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                             LayoutMode: =LayoutMode.Auto
@@ -542,8 +545,9 @@
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =669
+                            Width: =695
                             X: =6
+                            Y: =3
                             ZIndex: =1
 
                             "Gallery10 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -573,13 +577,13 @@
 
                                 Container79 As groupContainer.horizontalAutoLayoutContainer:
                                     DropShadow: =DropShadow.Light
-                                    Height: =54
+                                    Height: =46
                                     LayoutMode: =LayoutMode.Auto
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
                                     RadiusTopLeft: =4
                                     RadiusTopRight: =4
-                                    Width: =640
+                                    Width: =695
                                     ZIndex: =6
 
                                     TextCanvas47_6 As Texto:
@@ -588,7 +592,7 @@
                                         LayoutMinHeight: =32
                                         LayoutMinWidth: =96
                                         Text: =ThisItem.Cliente
-                                        Width: =150
+                                        Width: =130
                                         X: =51
                                         Y: =1
                                         ZIndex: =1
@@ -621,7 +625,7 @@
                                         LayoutMinHeight: =32
                                         LayoutMinWidth: =96
                                         Text: =ThisItem.Modelo
-                                        Width: =80
+                                        Width: =70
                                         X: =171
                                         Y: =9
                                         ZIndex: =4
@@ -632,7 +636,7 @@
                                         LayoutMinHeight: =32
                                         LayoutMinWidth: =96
                                         Text: =ThisItem.PromedioHoras
-                                        Width: =105
+                                        Width: =90
                                         X: =131
                                         Y: =0
                                         ZIndex: =5
@@ -642,11 +646,22 @@
                                         Height: =Parent.Height
                                         LayoutMinHeight: =32
                                         LayoutMinWidth: =96
-                                        Text: =ThisItem.MesCreado
+                                        Text: =ThisItem.Email
                                         Width: =105
                                         X: =131
                                         Y: =0
                                         ZIndex: =6
+
+                                    TextCanvas47_12 As Texto:
+                                        DisplayMode: =DisplayMode.Edit
+                                        Height: =Parent.Height
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =96
+                                        Text: =ThisItem.Telefono
+                                        Width: =105
+                                        X: =131
+                                        Y: =0
+                                        ZIndex: =7
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
