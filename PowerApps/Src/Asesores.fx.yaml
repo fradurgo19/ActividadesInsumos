@@ -1678,6 +1678,33 @@
                     Y: =474
                     ZIndex: =14
 
+                ButtonCanvas15 As Botón:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    OnSelect: |-
+                        =UpdateContext({pop1:false,pop2:false,pop3:false,pop4:true})
+                    Text: ="Gráfica"
+                    Width: =96
+                    X: =168
+                    Y: =121
+                    ZIndex: =15
+
+    Rectangle2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =639
+        HoverFill: =RGBA(105, 121, 126, 1)
+        PressedFill: =RGBA(105, 121, 126, 1)
+        Visible: =pop4
+        Width: =785
+        X: =564
+        Y: =112
+        ZIndex: =3
+
     Container90 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =446
@@ -1688,7 +1715,7 @@
         Width: =252
         X: =312
         Y: =306
-        ZIndex: =3
+        ZIndex: =4
 
         Container39_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -1822,4 +1849,52 @@
                     X: =0
                     Y: =0
                     ZIndex: =2
+
+    Icon5 As icon.CancelBadge:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(105, 121, 126, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =37
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.CancelBadge
+        OnSelect: |-
+            =UpdateContext({pop1:false,pop2:false,pop3:false,pop4:false})
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =pop4
+        Width: =49
+        X: =1300
+        Y: =112
+        ZIndex: =5
+
+    ColumnChart4 As barChart:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        Height: =618
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+        Items: |-
+            =Filter(
+                colOportunAsesorCorreo,
+                (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
+                (IsBlank(ComboboxCanvas5_1.Selected) || Correo = ComboboxCanvas5_1.Selected.Value)
+            )
+        NumberOfSeries: =2
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Size: =15
+        Visible: =pop4
+        Width: =785
+        X: =564
+        Y: =149
+        ZIndex: =6
 
