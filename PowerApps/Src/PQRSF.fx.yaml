@@ -973,7 +973,7 @@
 
             Container20 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =271
+                Height: =273
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -1127,36 +1127,26 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,AreasResponsables)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =53
                             Required: =false
                             Update: =DataCardValue6.Selected
-                            Width: =322
+                            Width: =341
                             X: =1
                             Y: =1
                             ZIndex: =1
-
-                            DataCardKey6 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =22
-                                Text: =Parent.DisplayName
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =Parent.Width - 48
-                                Wrap: =false
-                                X: =24
-                                Y: =10
-                                ZIndex: =1
 
                             "DataCardValue6 As 'Cuadro combinado'.pcfdataset":
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =32
+                                Height: =50
+                                InputTextPlaceholder: ="Áreas Responsables"
                                 Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].AreasResponsables)
                                 SelectMultiple: =true
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Width: =Parent.Width - 48
                                 X: =24
-                                Y: =DataCardKey6.Y + DataCardKey6.Height + 4
+                                Y: =
                                 ZIndex: =2
 
                             ErrorMessage6 As Texto:
@@ -1178,7 +1168,7 @@
                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                 Width: =30
                                 X: =0
-                                Y: =DataCardKey6.Y
+                                Y: =
                                 ZIndex: =4
 
                         Respuesta_DataCard5 As typedDataCard.fluentV9ComboBoxEditCard:
@@ -1189,7 +1179,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Respuesta)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =27
+                            Height: =57
                             Required: =false
                             Update: =DataCardValue53.Selected
                             Width: =341
@@ -1377,7 +1367,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =975
+                    Width: =1020
                     ZIndex: =1
 
                     TextCanvas13_1 As Texto:
@@ -1387,8 +1377,9 @@
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
-                        Text: ="Respuesta, Conclusión y áreas encargadas."
-                        Width: =300
+                        Size: =16
+                        Text: ="Respuesta, Conclusión y áreas responsables."
+                        Width: =350
                         X: =0
                         Y: =0
                         ZIndex: =1
