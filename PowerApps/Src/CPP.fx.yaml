@@ -881,7 +881,7 @@ CPP As screen:
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(TablaDataCpp,Marca),DropMarca1.SearchText,Value)
+                SearchItems: =[]
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 Size: =9
                 Width: =115
@@ -924,7 +924,7 @@ CPP As screen:
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(Filter(TablaDataCpp,Marca in DropMarca1.Selected.Value),Modelo),DropModelo1.SearchText,Value)
+                SearchItems: =[]
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 Size: =9
                 Width: =115
@@ -966,7 +966,7 @@ CPP As screen:
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(Filter(TablaDataCpp,Modelo in DropModelo1.Selected.Value),Parte),DropParte1.SearchText,Value)
+                SearchItems: =[]
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 Size: =9
                 Width: =115
@@ -1009,7 +1009,7 @@ CPP As screen:
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(Filter(TablaDataCpp,Parte in DropParte1.Selected.Value),Tipo),DropTipo1.SearchText,Value)
+                SearchItems: =[]
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 Size: =9
                 Width: =115
@@ -1163,7 +1163,7 @@ CPP As screen:
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(Filter(TablaDataCpp,Tipo in DropTipo1.Selected.Value),Frecuencia),DropFrecuencia1.SearchText,Value)
+                SearchItems: =[]
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 Size: =9
                 Width: =115
