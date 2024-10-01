@@ -1119,6 +1119,68 @@
                                 Y: =
                                 ZIndex: =4
 
+                        AreasResponsables_DataCard3 As typedDataCard.fluentV9ComboBoxEditCard:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="AreasResponsables"
+                            Default: =
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,AreasResponsables)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            Required: =false
+                            Update: =DataCardValue6.Selected
+                            Width: =322
+                            X: =1
+                            Y: =1
+                            ZIndex: =1
+
+                            DataCardKey6 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue6 As 'Cuadro combinado'.pcfdataset":
+                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                DefaultSelectedItems: =[Parent.Default]
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =32
+                                Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].AreasResponsables)
+                                SelectMultiple: =true
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Width: =Parent.Width - 48
+                                X: =24
+                                Y: =DataCardKey6.Y + DataCardKey6.Height + 4
+                                ZIndex: =2
+
+                            ErrorMessage6 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue6.Y + DataCardValue6.Height
+                                ZIndex: =3
+
+                            StarVisible6 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =20
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey6.Y
+                                ZIndex: =4
+
                         Respuesta_DataCard5 As typedDataCard.fluentV9ComboBoxEditCard:
                             BorderColor: =RGBA(166, 166, 166, 1)
                             BorderStyle: =BorderStyle.Solid
@@ -1140,7 +1202,7 @@
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
                                 FontSize: =15
-                                Height: =40
+                                Height: =57
                                 Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Width: =Parent.Width - 48
@@ -1237,7 +1299,7 @@
                             Required: =false
                             Update: =DataCardValue52.Attachments
                             Width: =341
-                            X: =1
+                            X: =2
                             Y: =1
                             ZIndex: =4
 
