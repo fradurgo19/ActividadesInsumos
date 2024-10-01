@@ -487,7 +487,7 @@
 
                 Container52 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =150
+                    Height: =109
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -499,7 +499,7 @@
 
                     Container53 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =150
+                        Height: =107
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutJustifyContent: =LayoutJustifyContent.Center
                         LayoutMode: =LayoutMode.Auto
@@ -530,23 +530,14 @@
                             LayoutMinWidth: =0
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplatePadding: =0
-                            TemplateSize: =30
+                            TemplateSize: =20
                             Transition: =Transition.Pop
                             Width: =Parent.Width
                             ZIndex: =1
 
-                            Separator6 As rectangle:
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                Fill: =RGBA(255, 255, 255, 1)
-                                Height: =8
-                                OnSelect: =Select(Parent)
-                                Width: =Parent.TemplateWidth
-                                Y: =Parent.TemplateHeight - Self.Height
-                                ZIndex: =5
-
                             Container54 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.Light
-                                Height: =32
+                                Height: =20
                                 LayoutAlignItems: =LayoutAlignItems.Center
                                 LayoutMode: =LayoutMode.Auto
                                 RadiusBottomLeft: =4
@@ -574,10 +565,10 @@
                                 TextCanvas38 As Texto:
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: =ThisItem.Asesor
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -590,10 +581,10 @@
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(52, 152, 47, 1)
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: =ThisItem.Ganadas
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -606,10 +597,10 @@
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(52, 152, 47, 1)
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: |-
                                         =Text(
                                             (ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
@@ -626,10 +617,10 @@
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(240, 98, 15, 1)
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: =ThisItem.Perdidas
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -642,10 +633,10 @@
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(240, 98, 15, 1)
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: |-
                                         =Text(
                                             (ThisItem.Perdidas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
@@ -662,10 +653,10 @@
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(255, 191, 0, 1)
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: =ThisItem.Seguimientos
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -676,12 +667,13 @@
 
                                 TextCanvas38_4 As Texto:
                                     Align: ='TextCanvas.Align'.Start
+                                    AlignInContainer: =AlignInContainer.Center
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(255, 191, 0, 1)
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: |-
                                         =Text(
                                             (ThisItem.Seguimientos / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
@@ -689,7 +681,7 @@
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =40
+                                    Width: =50
                                     X: =0
                                     Y: =0
                                     ZIndex: =8
@@ -701,7 +693,7 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: =ThisItem.Cotizaciones
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -714,10 +706,10 @@
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(180, 214, 250, 1)
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: |-
                                         =Text(
                                             (ThisItem.Cotizaciones / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
@@ -734,10 +726,10 @@
                                     Align: ='TextCanvas.Align'.End
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(109, 49, 162, 1)
-                                    Height: =32
+                                    Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
-                                    Size: =13
+                                    Size: =12
                                     Text: |+
                                         =Text(
                                             ((ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas) / 
@@ -890,7 +882,7 @@
 
                 Container52_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =545
+                    Height: =216
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -902,7 +894,7 @@
 
                     Container53_1 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =Parent.Height
+                        Height: =205
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -928,9 +920,10 @@
                                     SortOrder.Descending
                                 )
                             Layout: =Layout.Vertical
-                            LayoutMinHeight: =287
+                            LayoutMinHeight: =200
                             LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
+                            ShowNavigation: =true
                             TemplatePadding: =0
                             TemplateSize: =32
                             Width: =Parent.Width
@@ -949,7 +942,7 @@
 
                             Container54_1 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.Light
-                                Height: =32
+                                Height: =24
                                 LayoutMode: =LayoutMode.Auto
                                 RadiusBottomLeft: =4
                                 RadiusBottomRight: =4
@@ -1310,4 +1303,47 @@
                             X: =0
                             Y: =0
                             ZIndex: =8
+
+                ColumnChart1 As barChart:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    Font: =Font.'Segoe UI'
+                    Height: =361
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: |-
+                        =Filter(
+                            colOportunAsesorCorreo,
+                             (IsBlank(ComboboxCanvas5_6.Selected) || Correo = ComboboxCanvas5_6.Selected.Value)
+                        )
+                    ItemsGap: =1
+                    NumberOfSeries: =4
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    Size: =14
+                    Width: =1008
+                    X: =27
+                    XLabelAngle: =90
+                    Y: =398
+                    ZIndex: =9
+
+                PieChart1 As pieChart:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    Font: =Font.'Segoe UI'
+                    Height: =195
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =colOportunAsesorMes
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    Size: =15
+                    Width: =489
+                    X: =569
+                    Y: =215
+                    ZIndex: =12
 
