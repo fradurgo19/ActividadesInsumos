@@ -736,8 +736,12 @@
                                     Size: =12
                                     Text: |+
                                         =Text(
-                                            ((ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas) / 
-                                            (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos)) * 100,
+                                            If(
+                                                (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos) > 0,
+                                                ((ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas) / 
+                                                (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos)) * 100,
+                                                0
+                                            ),
                                             "[$-en-US]0.0"
                                         ) & "%"
                                         
@@ -1080,10 +1084,14 @@
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =30
                                     Size: =16
-                                    Text: |-
+                                    Text: |
                                         =Text(
-                                            ((ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas) / 
-                                            (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos)) * 100,
+                                            If(
+                                                (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos) > 0,
+                                                ((ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas) / 
+                                                (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos)) * 100,
+                                                0
+                                            ),
                                             "[$-en-US]0.0"
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
@@ -1324,7 +1332,7 @@
                     DisabledBorderColor: =RGBA(214, 221, 224, 1)
                     Explode: =1
                     Font: =Font.'Segoe UI'
-                    Height: =173
+                    Height: =143
                     HoverBorderColor: =RGBA(255, 255, 0, 1)
                     ItemBorderThickness: =3
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
@@ -1334,9 +1342,9 @@
                         
                     PressedBorderColor: =RGBA(40, 134, 222, 1)
                     Size: =15
-                    Width: =502
-                    X: =556
-                    Y: =215
+                    Width: =412
+                    X: =601
+                    Y: =231
                     ZIndex: =12
 
     CompositeColumnChart1 As group:
