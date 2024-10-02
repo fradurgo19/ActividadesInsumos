@@ -1259,68 +1259,6 @@
                                 Y: =DataCardKey19.Y
                                 ZIndex: =4
 
-                        AreasResponsables_DataCard1 As typedDataCard.fluentV9ComboBoxMultiSelectEditCard:
-                            BorderColor: =RGBA(166, 166, 166, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="AreasResponsables"
-                            Default: =ThisItem.AreasResponsables
-                            DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,AreasResponsables)
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
-                            Required: =false
-                            Update: =DataCardValue20.SelectedItems
-                            Width: =256
-                            X: =0
-                            Y: =1
-                            ZIndex: =4
-
-                            DataCardKey20 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =22
-                                Text: =Parent.DisplayName
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =Parent.Width - 48
-                                Wrap: =false
-                                X: =24
-                                Y: =10
-                                ZIndex: =1
-
-                            "DataCardValue20 As 'Cuadro combinado'.pcfdataset":
-                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                DefaultSelectedItems: =[Parent.Default]
-                                DisplayMode: =Parent.DisplayMode
-                                Height: =32
-                                Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].AreasResponsables)
-                                SelectMultiple: =true
-                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                Width: =Parent.Width - 48
-                                X: =24
-                                Y: =DataCardKey20.Y + DataCardKey20.Height + 4
-                                ZIndex: =2
-
-                            ErrorMessage21 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =30
-                                Text: =Parent.Error
-                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =Parent.Width - 48
-                                Wrap: =true
-                                X: =24
-                                Y: =DataCardValue20.Y + DataCardValue20.Height
-                                ZIndex: =3
-
-                            StarVisible21 As Texto:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =20
-                                Text: ="*"
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                X: =0
-                                Y: =DataCardKey20.Y
-                                ZIndex: =4
-
                         "'Datos adjuntos_DataCard1' As typedDataCard.attachmentsEditCard":
                             BorderColor: =RGBA(166, 166, 166, 1)
                             BorderStyle: =BorderStyle.Solid
@@ -1333,7 +1271,7 @@
                             Required: =false
                             Update: =DataCardValue22.Attachments
                             Width: =256
-                            X: =1
+                            X: =0
                             Y: =1
                             ZIndex: =4
 
