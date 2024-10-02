@@ -477,7 +477,15 @@
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DelayItemLoading: =true
                         Height: =Parent.Height
-                        Items: =Sort(colItemsPorMes, Cantidad, SortOrder.Descending)
+                        Items: |
+                            =Sort(
+                                Filter(
+                                    colItemsPorMes,
+                                    (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value))
+                                ),
+                                Cantidad, // Field representing the creation date
+                                SortOrder.Descending
+                            )
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
                         LayoutMinWidth: =140
@@ -1763,8 +1771,15 @@
                 DelayItemLoading: =true
                 Height: =Parent.Height
                 Items: |+
-                    =Sort(colItemsPorAsesor, Cantidad, SortOrder.Descending)
+                    =Sort(
+                        Filter(
+                            colItemsPorAsesor,
+                            (Correo = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value))
                     
+                        ),
+                        Cantidad, // Field representing the creation date
+                        SortOrder.Descending
+                    )
                     
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =0
