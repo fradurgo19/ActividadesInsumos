@@ -561,7 +561,8 @@
                                     (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || IsBlank(TextInputCanvas2.Value)) &&
                                     (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                     ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                    (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value))
+                                    (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
+                                    (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo)
                                 ),
                                 MesCreado, // Field representing the creation date
                                 SortOrder.Descending
@@ -1760,7 +1761,10 @@
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: =Sort(colItemsPorAsesor, Cantidad, SortOrder.Descending)
+                Items: |+
+                    =Sort(colItemsPorAsesor, Cantidad, SortOrder.Descending)
+                    
+                    
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =0
                 LayoutMinWidth: =150

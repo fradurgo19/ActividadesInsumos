@@ -928,6 +928,11 @@
                             LayoutMinHeight: =200
                             LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
+                            OnSelect: |
+                                =UpdateContext({
+                                    SelectedCorreo: ThisItem.Correo,
+                                    SelectedMes: ThisItem.MesCreado
+                                })
                             ShowNavigation: =true
                             TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                             TemplatePadding: =0
@@ -1359,6 +1364,7 @@
                 )
             ItemsGap: =5
             NumberOfSeries: =5
+            OnSelect: =
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             Size: =15
             Width: =1038

@@ -294,6 +294,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container40.Gallery8.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container40.Gallery8.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 519,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Asesores",
+                "type": "Asesores.SendEmailCanvas_4.SendEmailCard_4.Container37.Container40.Gallery8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Appointments.DataTable1.Items"
                 }
               ],
@@ -6905,6 +6945,36 @@
                 "member": "pop3",
                 "module": "Asesores",
                 "type": "Asesores"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Jefes.SelectedCorreo"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Jefes.SelectedCorreo",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SelectedCorreo",
+                "module": "Jefes",
+                "type": "Jefes"
               }
             }
           ],

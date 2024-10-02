@@ -481,6 +481,14 @@
           "InvariantPropertyName": "ItemsGap",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -499,7 +507,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"MesCreado\",\"Series1\":\"Asesor\",\"Series2\":\"Ganadas\",\"Series3\":\"Perdidas\",\"Series4\":\"Seguimientos\",\"Series5\":\"Cotizaciones\",\"Series6\":\"Seguimientos\",\"Series7\":\"Seguimientos\",\"Series8\":\"Seguimientos\",\"Series9\":\"Seguimientos\"}",
+          "NameMap": "{\"Labels\":\"Correo\",\"Series1\":\"Asesor\",\"Series2\":\"Ganadas\",\"Series3\":\"Perdidas\",\"Series4\":\"Seguimientos\",\"Series5\":\"Cotizaciones\",\"Series6\":\"Seguimientos\",\"Series7\":\"Seguimientos\",\"Series8\":\"Seguimientos\",\"Series9\":\"Seguimientos\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
@@ -597,6 +605,11 @@
           "Category": "Design",
           "PropertyName": "ItemsGap",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultBarChartStyle",
@@ -4173,6 +4186,14 @@
           "InvariantPropertyName": "TemplateFill",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -4192,6 +4213,11 @@
         {
           "Category": "Design",
           "PropertyName": "TemplateFill",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
           "RuleProviderType": "User"
         }
       ],
