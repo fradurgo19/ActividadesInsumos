@@ -452,22 +452,24 @@ CPP As screen:
 
             Container31 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =615
+                Height: =631
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =335
+                Width: =299
                 ZIndex: =1
 
                 Image21 As image:
+                    AlignInContainer: =AlignInContainer.Stretch
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledFill: =RGBA(0, 0, 0, 0)
                     Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =1
                     FocusedBorderThickness: =4
                     Height: =Parent.Height
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
