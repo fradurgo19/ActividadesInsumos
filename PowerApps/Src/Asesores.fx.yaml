@@ -570,6 +570,7 @@
                                     (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                     ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
                                     (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
+                                    (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&
                                     (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) &&
                                     (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) 
                                 ),
@@ -1088,7 +1089,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =724
+                        Width: =775
                         ZIndex: =1
 
                         "TextInputCanvas2 As 'Entrada de texto'":
@@ -1099,7 +1100,7 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Placeholder: ="Buscar Cliente o Observa"
-                            Width: =200
+                            Width: =150
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -1111,7 +1112,7 @@
                             Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
-                            Width: =140
+                            Width: =130
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -1147,6 +1148,19 @@
                             Width: =120
                             X: =0
                             Y: =0
+                            ZIndex: =4
+
+                        "ComboboxCanvas5_7 As 'Cuadro combinado'.pcfdataset":
+                            BasePaletteColor: =
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar Año"
+                            Items: =Distinct(colOportunidades,Año)
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =120
+                            X: =40
+                            Y: =4
                             ZIndex: =5
 
                         ButtonCanvas11 As Botón:
@@ -1155,7 +1169,7 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            OnSelect: =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Reset(ComboboxCanvas5_3);Refresh('Seguimiento Clientes Equipos Telemetría')
+                            OnSelect: =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Reset(ComboboxCanvas5_3);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(ComboboxCanvas5_7)
                             Text: ="Reset"
                             Width: =96
                             X: =0
