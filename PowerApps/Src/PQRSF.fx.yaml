@@ -1014,6 +1014,61 @@
                         Y: =320
                         ZIndex: =4
 
+                        "'Respuesta a Solicitud_DataCard5' As typedDataCard.fluentV9TextualEditCard":
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="RespuestaaSolicitud"
+                            Default: =ThisItem.'Respuesta a Solicitud'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,RespuestaaSolicitud)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =145
+                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, RespuestaaSolicitud)
+                            Required: =false
+                            Update: =DataCardValue54.Value
+                            Width: =341
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                            "DataCardValue54 As 'Entrada de texto'":
+                                AccessibleLabel: =Parent.DisplayName
+                                DisplayMode: =Parent.DisplayMode
+                                FontColor: =RGBA(0, 0, 0, 1)
+                                FontSize: =15
+                                Height: =135
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Placeholder: ="Escriba Respuesta"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =Parent.Default
+                                Width: =332
+                                X: =0
+                                Y: =
+                                ZIndex: =2
+
+                            ErrorMessage54 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue54.Y + DataCardValue54.Height
+                                ZIndex: =3
+
+                            StarVisible54 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =
+                                ZIndex: =4
+
                         Conclusión_DataCard1 As typedDataCard.fluentV9TextualEditCard:
                             BorderColor: =RGBA(166, 166, 166, 1)
                             BorderStyle: =BorderStyle.Solid
@@ -1120,58 +1175,6 @@
                                 Y: =
                                 ZIndex: =4
 
-                        AreasResponsables_DataCard3 As typedDataCard.fluentV9ComboBoxEditCard:
-                            BorderColor: =RGBA(166, 166, 166, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="AreasResponsables"
-                            Default: =
-                            DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,AreasResponsables)
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =53
-                            Required: =false
-                            Update: =DataCardValue6.Selected
-                            Width: =341
-                            X: =1
-                            Y: =1
-                            ZIndex: =1
-
-                            "DataCardValue6 As 'Cuadro combinado'.pcfdataset":
-                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                DefaultSelectedItems: =[Parent.Default]
-                                DisplayMode: =Parent.DisplayMode
-                                Height: =50
-                                InputTextPlaceholder: ="Áreas Responsables"
-                                Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].AreasResponsables)
-                                SelectMultiple: =true
-                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                Width: =Parent.Width - 48
-                                X: =24
-                                Y: =
-                                ZIndex: =2
-
-                            ErrorMessage6 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =30
-                                Text: =Parent.Error
-                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =Parent.Width - 48
-                                Wrap: =true
-                                X: =24
-                                Y: =DataCardValue6.Y + DataCardValue6.Height
-                                ZIndex: =3
-
-                            StarVisible6 As Texto:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =20
-                                Text: ="*"
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                X: =0
-                                Y: =
-                                ZIndex: =4
-
                         Respuesta_DataCard5 As typedDataCard.fluentV9ComboBoxEditCard:
                             BorderColor: =RGBA(166, 166, 166, 1)
                             BorderStyle: =BorderStyle.Solid
@@ -1223,40 +1226,37 @@
                                 Y: =
                                 ZIndex: =4
 
-                        "'Respuesta a Solicitud_DataCard5' As typedDataCard.fluentV9TextualEditCard":
+                        AreasResponsables_DataCard3 As typedDataCard.fluentV9ComboBoxEditCard:
                             BorderColor: =RGBA(166, 166, 166, 1)
                             BorderStyle: =BorderStyle.Solid
-                            DataField: ="RespuestaaSolicitud"
-                            Default: =ThisItem.'Respuesta a Solicitud'
+                            DataField: ="AreasResponsables"
+                            Default: =
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,RespuestaaSolicitud)
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,AreasResponsables)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =145
-                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, RespuestaaSolicitud)
+                            Height: =53
                             Required: =false
-                            Update: =DataCardValue54.Value
+                            Update: =DataCardValue6.Selected
                             Width: =341
-                            X: =0
-                            Y: =0
+                            X: =1
+                            Y: =1
                             ZIndex: =1
 
-                            "DataCardValue54 As 'Entrada de texto'":
-                                AccessibleLabel: =Parent.DisplayName
+                            "DataCardValue6 As 'Cuadro combinado'.pcfdataset":
+                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
-                                FontColor: =RGBA(0, 0, 0, 1)
-                                FontSize: =15
-                                Height: =135
-                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                                Placeholder: ="Escriba Respuesta"
-                                Required: =Parent.Required
+                                Height: =50
+                                InputTextPlaceholder: ="Áreas Responsables"
+                                Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].AreasResponsables)
+                                SelectMultiple: =true
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                Value: =Parent.Default
-                                Width: =332
-                                X: =0
+                                Width: =Parent.Width - 48
+                                X: =24
                                 Y: =
                                 ZIndex: =2
 
-                            ErrorMessage54 As Texto:
+                            ErrorMessage6 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =30
                                 Text: =Parent.Error
@@ -1264,13 +1264,13 @@
                                 Width: =Parent.Width - 48
                                 Wrap: =true
                                 X: =24
-                                Y: =DataCardValue54.Y + DataCardValue54.Height
+                                Y: =DataCardValue6.Y + DataCardValue6.Height
                                 ZIndex: =3
 
-                            StarVisible54 As Texto:
+                            StarVisible6 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =30
+                                Height: =20
                                 Text: ="*"
                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                 Width: =30

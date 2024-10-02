@@ -203,7 +203,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Nombre"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =150
+                    Width: =120
                     X: =0
                     Y: =0
                     ZIndex: =4
@@ -747,12 +747,12 @@ CPP As screen:
                             Text: =ThisItem.Cantidad
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =50
+                            Width: =30
                             X: =309
                             Y: =0
                             ZIndex: =5
 
-                        TextCanvas25_5 As Texto:
+                        TextCanvas25_6 As Texto:
                             Align: ='TextCanvas.Align'.Start
                             DisplayMode: =DisplayMode.Edit
                             Height: =90
@@ -767,6 +767,21 @@ CPP As screen:
                             Y: =0
                             ZIndex: =6
 
+                        TextCanvas25_5 As Texto:
+                            Align: ='TextCanvas.Align'.Start
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =90
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Text: =ThisItem.Medida
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =30
+                            X: =346
+                            Y: =0
+                            ZIndex: =7
+
                         TextCanvas25_7 As Texto:
                             Align: ='TextCanvas.Align'.Start
                             DisplayMode: =DisplayMode.Edit
@@ -780,7 +795,7 @@ CPP As screen:
                             Width: =120
                             X: =497
                             Y: =0
-                            ZIndex: =7
+                            ZIndex: =8
 
                     Checkbox1 As checkbox:
                         BorderColor: =App.Theme.Colors.Darker40
@@ -835,12 +850,13 @@ CPP As screen:
                         ZIndex: =20
 
                     TextCanvas12 As Texto:
+                        Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
                         Text: =ThisItem.No
                         Width: =28
                         X: =0
-                        Y: =40
+                        Y: =39
                         ZIndex: =21
 
     Container14 As groupContainer.manualLayoutContainer:
