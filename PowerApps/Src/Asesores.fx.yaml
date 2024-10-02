@@ -482,6 +482,7 @@
                         LayoutMinHeight: =0
                         LayoutMinWidth: =140
                         LoadingSpinner: =LoadingSpinner.Data
+                        TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                         TemplatePadding: =0
                         TemplateSize: =35
                         Width: =Parent.Width
@@ -570,6 +571,7 @@
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         ShowNavigation: =true
+                        TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                         TemplatePadding: =0
                         TemplateSize: =60
                         Transition: =Transition.Push
@@ -1763,6 +1765,7 @@
                 LayoutMinHeight: =0
                 LayoutMinWidth: =150
                 LoadingSpinner: =LoadingSpinner.Data
+                TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                 TemplatePadding: =0
                 TemplateSize: =30
                 Width: =Parent.Width

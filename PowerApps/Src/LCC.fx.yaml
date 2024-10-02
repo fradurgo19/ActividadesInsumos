@@ -200,6 +200,7 @@
                             LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowNavigation: =true
+                            TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                             TemplatePadding: =0
                             TemplateSize: =50
                             Width: =232
@@ -632,6 +633,7 @@
                                 LoadingSpinner: =LoadingSpinner.Data
                                 OnSelect: =Set(varSelectedHorometro, ThisItem.Horometro)
                                 ShowNavigation: =true
+                                TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                                 TemplatePadding: =0
                                 TemplateSize: =54
                                 Transition: =Transition.Push

@@ -529,6 +529,11 @@
                             LayoutMinHeight: =0
                             LayoutMinWidth: =0
                             LoadingSpinner: =LoadingSpinner.Data
+                            OnSelect: |-
+                                =UpdateContext({
+                                    SelectedMes: ThisItem.MesCreado
+                                })
+                            TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                             TemplatePadding: =0
                             TemplateSize: =20
                             Transition: =Transition.Pop
@@ -924,6 +929,7 @@
                             LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowNavigation: =true
+                            TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                             TemplatePadding: =0
                             TemplateSize: =32
                             Transition: =Transition.Push
@@ -1305,36 +1311,6 @@
                             Y: =0
                             ZIndex: =8
 
-                ColumnChart1 As barChart:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    Font: =Font.'Segoe UI'
-                    GridStyle: =GridStyle.All
-                    Height: =361
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    ItemColorSet: =[RGBA(0, 0, 0, 1),RGBA(49,130,93, 1), RGBA(255,0,0,1), RGBA(246,199,144,1), RGBA(0,0,255,1), RGBA(255,255,255,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                    Items: |-
-                        =Filter(
-                            colOportunAsesorCorreo,
-                            (MesCreado = ComboboxCanvas5_5.Selected.Value || IsBlank(ComboboxCanvas5_5.Selected.Value)) &&
-                            (IsBlank(ComboboxCanvas5_6.Selected) || Correo = ComboboxCanvas5_6.Selected.Value)
-                        )
-                    ItemsGap: =1
-                    MinimumBarWidth: =30
-                    NumberOfSeries: =5
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    SeriesAxisMax: =35
-                    SeriesAxisMin: =0
-                    Size: =11
-                    Width: =1031
-                    X: =4
-                    XLabelAngle: =10
-                    Y: =398
-                    ZIndex: =9
-
                 PieChart1 As pieChart:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -1343,7 +1319,7 @@
                     DisabledBorderColor: =RGBA(214, 221, 224, 1)
                     Explode: =1
                     Font: =Font.'Segoe UI'
-                    Height: =195
+                    Height: =173
                     HoverBorderColor: =RGBA(255, 255, 0, 1)
                     ItemBorderThickness: =3
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
@@ -1357,4 +1333,55 @@
                     X: =556
                     Y: =215
                     ZIndex: =12
+
+    CompositeColumnChart1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =3
+
+        ColumnChart1 As barChart:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            Height: =349
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =[RGBA(0, 0, 0, 1),RGBA(49,130,93, 1), RGBA(255,0,0,1), RGBA(246,199,144,1), RGBA(0,0,255,1), RGBA(255,255,255,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: |-
+                =Filter(
+                    colOportunAsesorCorreo,
+                    (MesCreado = ComboboxCanvas5_5.Selected.Value || IsBlank(ComboboxCanvas5_5.Selected.Value)) &&
+                    (IsBlank(ComboboxCanvas5_6.Selected) || Correo = ComboboxCanvas5_6.Selected.Value)
+                )
+            ItemsGap: =5
+            NumberOfSeries: =5
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =15
+            Width: =1038
+            X: =306
+            Y: =395
+            ZIndex: =5
+
+        Legend1 As legend:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(220, 220, 220, 1)
+            Font: =Font.'Segoe UI'
+            Height: =26
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =ColumnChart1.ItemColorSet
+            Items: =ColumnChart1.SeriesLabels
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Width: =963
+            X: =295
+            Y: =395
+            ZIndex: =6
 

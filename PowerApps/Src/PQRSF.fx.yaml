@@ -744,6 +744,7 @@
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowNavigation: =true
+                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
                     TemplateSize: =62
                     Transition: =Transition.Pop

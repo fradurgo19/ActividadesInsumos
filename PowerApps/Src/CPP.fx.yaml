@@ -356,7 +356,7 @@ CPP As screen:
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateFill: =If(ThisItem.IsSelected, Color.LightYellow, Color.White)
+                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
                     TemplateSize: =80
                     ZIndex: =1
@@ -642,7 +642,7 @@ CPP As screen:
                     LoadingSpinner: =LoadingSpinner.Data
                     OnSelect: =Set(varSelectedItem, ThisItem)
                     ShowNavigation: =true
-                    TemplateFill: =If(ThisItem.IsSelected, Color.LightYellow, Color.White)
+                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
                     TemplateSize: =80
                     Transition: =Transition.Push
