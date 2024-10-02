@@ -773,7 +773,7 @@ ResumenCPP As screen:
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Trash
                             LayoutMinHeight: =40
-                            OnSelect: =RemoveIf(colAllSelectedItems, No = ThisItem.Value.No)
+                            OnSelect: =RemoveIf(colConcatenada, No = ThisItem.Value.No)
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)

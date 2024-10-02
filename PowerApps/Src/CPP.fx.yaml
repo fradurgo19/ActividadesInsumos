@@ -356,7 +356,7 @@ CPP As screen:
                         
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
-                    LayoutMinWidth: =320
+                    LayoutMinWidth: =250
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
@@ -866,14 +866,13 @@ CPP As screen:
         Container65 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =636
+            Height: =688
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Visible: =HoverImage21
-            Width: =845
-            Y: =52
+            Width: =856
             ZIndex: =7
 
             Image21_1 As image:
@@ -884,7 +883,7 @@ CPP As screen:
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 Fill: =RGBA(255, 255, 255, 1)
                 FocusedBorderThickness: =4
-                Height: =Parent.Height
+                Height: =688
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: =Gallery6_1.Selected.ImagenUrl
@@ -898,12 +897,12 @@ CPP As screen:
             Icon6 As icon.CancelBadge:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Color: =RGBA(255, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(255, 0, 0, 1)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
                 Height: =49
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverBorderColor: =RGBA(255, 191, 0, 1)
                 HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.CancelBadge
