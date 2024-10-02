@@ -834,6 +834,15 @@ CPP As screen:
                         Width: =28
                         ZIndex: =20
 
+                    TextCanvas12 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Text: =ThisItem.No
+                        Width: =28
+                        X: =0
+                        Y: =40
+                        ZIndex: =21
+
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(71, 158, 245, 1)
