@@ -562,7 +562,8 @@
                                     (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                     ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
                                     (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
-                                    (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo)
+                                    (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) &&
+                                    (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado)
                                 ),
                                 MesCreado, // Field representing the creation date
                                 SortOrder.Descending
