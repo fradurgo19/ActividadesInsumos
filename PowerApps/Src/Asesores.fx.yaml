@@ -40,6 +40,28 @@
             )
         );
         
+        ClearCollect(
+            colOportunAsesorCorreo,
+            AddColumns(
+                GroupBy(
+                    'Seguimiento Clientes Equipos Telemetría',
+                    Correo,  // Agrupando por correo
+                    MesCreado, // Agrupando por Mes
+                    OportunidadesPorAsesorCorreo
+                ),
+                Asesor,
+                CountIf(OportunidadesPorAsesorCorreo, 'ASESOR 2'.Value = ThisRecord.'ASESOR 2'.Value),
+                Ganadas,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Ganada"),
+                Perdidas,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Perdida"),
+                Seguimientos,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Seguimiento"),
+                Cotizaciones,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Cotización")
+            )
+        )
+        
         
         
         

@@ -623,7 +623,7 @@ CPP As screen:
                     Items: |+
                         =Filter(
                             TablaDataCpp,
-                            (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&
+                            (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&
                             
                             (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
                             
