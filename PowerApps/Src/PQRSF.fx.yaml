@@ -1422,7 +1422,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         OnSelect: |
-                            =SubmitForm(Form2);
+                            =SubmitForm([@Form2]);
                             Notify("Actualización Enviada", NotificationType.Success, 3000);
                             Refresh('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)')
                         Text: ="Actualizar"
