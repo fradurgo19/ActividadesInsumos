@@ -503,8 +503,8 @@ ResumenCPP As screen:
                     Height: =Parent.Height
                     Items: |+
                         =Sort(
-                            Distinct(colConcatenada, {No: No , Nombre: Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario,Tipo:Tipo,Recomendación:Recomendación,MarcaEquivalencia:MarcaEquivalencia,Equivalencia:Equivalencia}),
-                            Value.No
+                            Distinct(colConcatenada, {No: No , Nombre:Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario,Tipo:Tipo,Recomendación:Recomendación,MarcaEquivalencia:MarcaEquivalencia,Equivalencia:Equivalencia}),
+                            Value.Cantidad
                         )
                         
                         

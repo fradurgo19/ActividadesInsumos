@@ -816,30 +816,40 @@ CPP As screen:
                             Collect(colEquivalenciasSeleccionadas,Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP));
                             // Limpia la colección concatenada si ya existe
                             Clear(colConcatenada);
+                            
                             ForAll(
                                 colEquivalenciasSeleccionadas,
-                                Collect(
-                                    colConcatenada,
+                                // Guarda el registro correspondiente en una variable temporal
+                                With(
                                     {
-                                        RefSAP: ThisRecord.RefSAP,
-                                        No: ThisRecord.No,
-                                        MarcaEquivalencia: ThisRecord.Marca,
-                                        Equivalencia: ThisRecord.Equivalencia,
-                                        // Ahora busca en colAllSelectedItems usando RefSAP para añadir los campos que faltan
-                                        Marca: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Marca,
-                                        Nombre: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Nombre,
-                                        Cantidad: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Cantidad,
-                                        Frecuencia: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Frecuencia,
-                                        Medida: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Medida,
-                                        Comentario: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Comentario,
-                                        Modelo: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Modelo,
-                                        Parte: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Parte,
-                                        Tipo: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Tipo,
-                                        ImagenUrl: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).ImagenUrl,
-                                        Recomendación: LookUp(colAllSelectedItems, RefSAP = ThisRecord.RefSAP).Recomendación
-                                    }
+                                        selectedItem: LookUp(colAllSelectedItems, RefSAP = colEquivalenciasSeleccionadas[@RefSAP])
+                                    },
+                                    Collect(
+                                        colConcatenada,
+                                        {
+                                            RefSAP: colEquivalenciasSeleccionadas[@RefSAP],
+                                            No: colEquivalenciasSeleccionadas[@No],
+                                            MarcaEquivalencia: colEquivalenciasSeleccionadas[@Marca],
+                                            Equivalencia: colEquivalenciasSeleccionadas[@Equivalencia],
+                                            // Utiliza la variable temporal para acceder a los valores de colAllSelectedItems
+                                            Marca: selectedItem.Marca,
+                                            Nombre: selectedItem.Nombre,
+                                            Cantidad: selectedItem.Cantidad,
+                                            Frecuencia: selectedItem.Frecuencia,
+                                            Medida: selectedItem.Medida,
+                                            Comentario: selectedItem.Comentario,
+                                            Modelo: selectedItem.Modelo,
+                                            Parte: selectedItem.Parte,
+                                            Tipo: selectedItem.Tipo,
+                                            ImagenUrl: selectedItem.ImagenUrl,
+                                            Recomendación: selectedItem.Recomendación
+                                        }
+                                    )
                                 )
                             );
+                            
+                            
+                            
                             Set(varCheckboxChecked, true);
                             
                             

@@ -1020,10 +1020,10 @@
                             DataField: ="RespuestaaSolicitud"
                             Default: =ThisItem.'Respuesta a Solicitud'
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,RespuestaaSolicitud)
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'Respuesta a Solicitud')
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =145
-                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, RespuestaaSolicitud)
+                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, 'Respuesta a Solicitud')
                             Required: =false
                             Update: =DataCardValue54.Value
                             Width: =341
@@ -1075,10 +1075,10 @@
                             DataField: ="Conclusi_x00f3_n"
                             Default: =ThisItem.Conclusión
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Conclusi_x00f3_n)
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Conclusión)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =113
-                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, Conclusi_x00f3_n)
+                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, Conclusión)
                             Required: =false
                             Update: =DataCardValue1.Value
                             Width: =341
@@ -1128,10 +1128,10 @@
                             DataField: ="Plandeaccion"
                             Default: =ThisItem.'Plan de accion'
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Plandeaccion)
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'Plan de accion')
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =70
-                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, Plandeaccion)
+                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, 'Plan de accion')
                             Required: =false
                             Update: =DataCardValue2.Value
                             Width: =341
@@ -1284,7 +1284,7 @@
                             DataField: ="{Attachments}"
                             Default: =ThisItem.'Datos adjuntos'
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'{Attachments}')
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'Datos adjuntos')
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =65
                             Required: =false
