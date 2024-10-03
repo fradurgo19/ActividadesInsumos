@@ -221,7 +221,7 @@
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =50
                                 Size: =10
-                                Text: =ThisItem.Descripcion
+                                Text: =ThisItem.Tarea
                                 Width: =92
                                 X: =69
                                 Y: =0
@@ -917,10 +917,20 @@
                     Height: =32
                     InputTextPlaceholder: ="Buscar Tipo de Maquina"
                     Items: =["Minicargador","Excavadora","Cargador Frontal","Retroexcavadora","Miniexcavadora","Cargador de Orugas","Compactador","Cargador"]
-                    Width: =197
+                    Width: =209
                     X: =18
                     Y: =94
                     ZIndex: =21
+
+                "ComboboxCanvas5_10 As 'Cuadro combinado'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =33
+                    InputTextPlaceholder: ="Buscar Tipo de Maquina"
+                    Items: =["Minicargador","Excavadora","Cargador Frontal","Retroexcavadora","Miniexcavadora","Cargador de Orugas","Compactador","Cargador"]
+                    Width: =118
+                    X: =227
+                    Y: =93
+                    ZIndex: =22
 
             TextCanvas13 As Texto:
                 DisplayMode: =DisplayMode.Edit
