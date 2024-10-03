@@ -188,7 +188,7 @@
                                     (IsBlank(varSelectedHorometro) || Abs(Horometro - varSelectedHorometro) <= 1000) &&
                                     (IsBlank(ComboboxCanvas5_9.Selected) || TipodeMaquina = ComboboxCanvas5_9.Selected.Value) &&
                                     (IsBlank(ComboboxCanvas5_10.Selected) || Descripcion = ComboboxCanvas5_10.Selected.Value) &&
-                                    (IsBlank(varSelectedtipo) || Abs(TipodeMaquina - varSelectedtipo))
+                                    (IsBlank(varSelectedtipo) || (TipodeMaquina = varSelectedtipo))
                                 )
                                 
                                 
@@ -643,7 +643,7 @@
                                         (IsBlank(ComboboxCanvas5_9.Selected) || TipoDeMaquina = ComboboxCanvas5_9.Selected.Value) &&
                                         (IsBlank(ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro') || ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro' = Horometro) &&
                                         (IsBlank(varSelectedHorometroG3) || Abs(Horometro - varSelectedHorometroG3) <= 1000) &&
-                                        (IsBlank(varSelectedtipoG3) || Abs(TipoDeMaquina - varSelectedtipoG3))
+                                        (IsBlank(varSelectedtipoG3) || TipoDeMaquina = varSelectedtipoG3)
                                     )
                                     
                                 Layout: =Layout.Vertical
