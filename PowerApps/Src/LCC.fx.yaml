@@ -185,7 +185,8 @@
                                     TablaLCC,
                                     (IsBlank(ComboboxCanvas5_2.Selected) || 
                                     (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
-                                    (IsBlank(varSelectedHorometro) || Abs(Horometro - varSelectedHorometro) <= 1000) // Usar la variable en lugar de Gallery10.Selected
+                                    (IsBlank(varSelectedHorometro) || Abs(Horometro - varSelectedHorometro) <= 1000) &&
+                                    (IsBlank(varSelectedtipo) || Abs(TipodeMaquina - varSelectedtipo))
                                 )
                                 
                                 
@@ -195,7 +196,7 @@
                             LayoutMinWidth: =320
                             LoadingSpinner: =LoadingSpinner.Data
                             OnSelect: |
-                                =Set(varSelectedHorometroG3, Gallery3.Selected.Horometro)
+                                =Set(varSelectedHorometroG3, Gallery3.Selected.Horometro);Set(varSelectedtipoG3, Gallery3.Selected.TipodeMaquina)
                             ShowNavigation: =true
                             TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                             TemplatePadding: =0
@@ -627,14 +628,15 @@
                                         (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
                                         (IsBlank(ComboboxCanvas5_4.Selected) || Asesor.Value = ComboboxCanvas5_4.Selected.Value) &&
                                         (IsBlank(ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro') || ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro' = Horometro) &&
-                                        (IsBlank(varSelectedHorometroG3) || Abs(Horometro - varSelectedHorometroG3) <= 1000) // Usar la variable en lugar de Gallery3.Selected
+                                        (IsBlank(varSelectedHorometroG3) || Abs(Horometro - varSelectedHorometroG3) <= 1000) &&
+                                        (IsBlank(varSelectedtipoG3) || Abs(TipoDeMaquina - varSelectedtipoG3))
                                     )
                                     
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =200
                                 LayoutMinWidth: =400
                                 LoadingSpinner: =LoadingSpinner.Data
-                                OnSelect: =Set(varSelectedHorometro, Gallery10.Selected.Horometro)
+                                OnSelect: =Set(varSelectedHorometro, Gallery10.Selected.Horometro);Set(varSelectedtipo, Gallery10.Selected.TipoDeMaquina)
                                 ShowNavigation: =true
                                 TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                                 TemplatePadding: =0
