@@ -642,8 +642,7 @@
                                         (IsBlank(ComboboxCanvas5_4.Selected) || Asesor.Value = ComboboxCanvas5_4.Selected.Value) &&
                                         (IsBlank(ComboboxCanvas5_9.Selected) || TipoDeMaquina = ComboboxCanvas5_9.Selected.Value) &&
                                         (IsBlank(ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro') || ColumnChart2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1BHorometro' = Horometro) &&
-                                        (IsBlank(varSelectedHorometroG3) || Abs(Horometro - varSelectedHorometroG3) <= 1000) &&
-                                        (IsBlank(varSelectedtipoG3) || TipoDeMaquina = varSelectedtipoG3)
+                                        (IsBlank(varSelectedHorometroG3) || Abs(Horometro - varSelectedHorometroG3) <= 1000)
                                     )
                                     
                                 Layout: =Layout.Vertical
@@ -928,7 +927,7 @@
                     DisplayMode: =DisplayMode.Edit
                     Height: =32
                     InputTextPlaceholder: ="Buscar Tipo de Maquina"
-                    Items: =["Minicargador","Excavadora","Cargador Frontal","Retroexcavadora","Miniexcavadora","Cargador de Orugas","Compactador","Cargador"]
+                    Items: =Distinct(colSerieUnicosPorMes, TipoDeMaquina)
                     Width: =209
                     X: =18
                     Y: =94
@@ -995,15 +994,6 @@
                     X: =227
                     Y: =93
                     ZIndex: =22
-
-            TextCanvas13 As Texto:
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Text: =Text(varSelectedHorometro)
-                Width: =96
-                X: =453
-                Y: =27
-                ZIndex: =19
 
     Menu_5 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
