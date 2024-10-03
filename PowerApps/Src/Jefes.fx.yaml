@@ -119,7 +119,7 @@
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =40
-                Width: =256
+                Width: =244
                 X: =39
                 Y: =logo_11.Y + logo_11.Height +32
                 ZIndex: =3
@@ -391,8 +391,7 @@
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =1055
-                X: =6
+                Width: =1061
                 Y: =2
                 ZIndex: =20
 
@@ -1310,7 +1309,7 @@
         ZIndex: =3
 
         ColumnChart1 As barChart:
-            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderColor: =RGBA(214, 221, 224, 1)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1332,14 +1331,14 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             SeriesAxisMin: =0
             Size: =15
-            Width: =1003
-            X: =340
+            Width: =999
+            X: =343
             XLabelAngle: =10
             Y: =389
             ZIndex: =5
 
         Legend1 As legend:
-            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderColor: =RGBA(214, 221, 224, 1)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1352,8 +1351,8 @@
             ItemColorSet: =ColumnChart1.ItemColorSet
             Items: =ColumnChart1.SeriesLabels
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            Width: =931
-            X: =340
+            Width: =941
+            X: =343
             Y: =702
             ZIndex: =6
 
