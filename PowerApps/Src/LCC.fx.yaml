@@ -187,6 +187,7 @@
                                     (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
                                     (IsBlank(varSelectedHorometro) || Abs(Horometro - varSelectedHorometro) <= 1000) &&
                                     (IsBlank(ComboboxCanvas5_9.Selected) || TipodeMaquina = ComboboxCanvas5_9.Selected.Value) &&
+                                    (IsBlank(ComboboxCanvas5_10.Selected) || Descripcion = ComboboxCanvas5_10.Selected.Value) &&
                                     (IsBlank(varSelectedtipo) || Abs(TipodeMaquina - varSelectedtipo))
                                 )
                                 
@@ -258,6 +259,17 @@
                                 X: =0
                                 Y: =0
                                 ZIndex: =12
+
+                            TextCanvas47_5 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =65
+                                Size: =10
+                                Text: =ThisItem.Descripcion
+                                Width: =78
+                                X: =242
+                                Y: =0
+                                ZIndex: =13
 
                 Container5_3 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
@@ -926,7 +938,59 @@
                     DisplayMode: =DisplayMode.Edit
                     Height: =33
                     InputTextPlaceholder: ="Buscar Tipo de Maquina"
-                    Items: =["Minicargador","Excavadora","Cargador Frontal","Retroexcavadora","Miniexcavadora","Cargador de Orugas","Compactador","Cargador"]
+                    Items: |-
+                        =["COMPRESSOR",
+                        "CONDENSER",
+                        "EVAPORATOR",
+                        "MOTOR",
+                        "CYL.;ARM",
+                        "KIT;SEAL CYL ARM",
+                        "KIT;SEAL",
+                        "CYL.;BOOM",
+                        "KIT;SEAL CYL.;BOOM",
+                        "CYL;BOOM",
+                        "KIT;SEAL",
+                        "CYL;BOOM",
+                        "CYL.;BUCKET",
+                        "KIT;SEAL CYL.;BUCKET",
+                        "PIN",
+                        "JOINT;CENTER",
+                        "KIT;SEAL",
+                        "JOINT;CENTER",
+                        "CONTROLLER",
+                        "UNIT;CONTROL",
+                        "HARNESS;WIRE",
+                        "GENERATOR ASM",
+                        "BELT",
+                        "HARNESS; ENG",
+                        "HARNESS;INJECT",
+                        "ENGINE",
+                        "ASSY;HOSE",
+                        "METAL",
+                        "VALVE SEAL",
+                        "NOZZLE ASM; INJ",
+                        "VALVE; EGR",
+                        "TURBOCHARGER AS",
+                        "PACKING,JOINT B",
+                        "PUMP ASM; WATER",
+                        "IDLER",
+                        "VALVE;CONTROL",
+                        "VALVE;RELIEF",
+                        "PUMP-DEVICE",
+                        "REGULATOR;PUMP",
+                        "PUMP;GEAR",
+                        "COUPLING;PLASTIC",
+                        "PUMP-DEVICE",
+                        "VALVE;SOLENOID",
+                        "JOINT;UNIVERSAL",
+                        "RADIATOR",
+                        "SWING;CIRCLE",
+                        "SWING-DEVICE",
+                        "TRACK-LINK-ASSY",
+                        "TRAVEL-DEVICE",
+                        "SPROCKET",
+                        "GEAR;PLANETARY",
+                        ]
                     Width: =118
                     X: =227
                     Y: =93
@@ -1248,7 +1312,7 @@
         Height: =32
         OnSelect: |-
             =Reset(ComboboxCanvas5_2);Reset(ComboboxCanvas5_4);Reset(ComboboxCanvas5_9);Reset(Gallery10);
-            Reset(Gallery3);
+            Reset(Gallery3);Reset(ComboboxCanvas5_10);
             Set(varSelectedHorometro, Blank()); // Restablecer selección de Gallery10
             Set(varSelectedHorometroG3, Blank());// Restablecer selección de Gallery3
         Text: ="Reset"
