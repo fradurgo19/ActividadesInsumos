@@ -769,7 +769,7 @@
 
                 "ComboboxCanvas5_2 As 'Cuadro combinado'.pcfdataset":
                     DisplayMode: =DisplayMode.Edit
-                    Height: =46
+                    Height: =33
                     InputTextPlaceholder: ="Rango Horometro"
                     Items: |
                         =[
@@ -888,12 +888,12 @@
                         ]
                     Width: =170
                     X: =730
-                    Y: =80
+                    Y: =93
                     ZIndex: =16
 
                 "ComboboxCanvas5_4 As 'Cuadro combinado'.pcfdataset":
                     DisplayMode: =DisplayMode.Edit
-                    Height: =46
+                    Height: =33
                     InputTextPlaceholder: ="Buscar Asesor"
                     Items: |
                         =["dbeltran@partequipos.com", "gbuenahora@partequipos.com", "sarenas@partequipos.com", "afuentes@partequipos.com", 
@@ -906,9 +906,19 @@
                         "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                         "fvasquez@partequipos.com", "dcubides@partequipos.com"]
                     Width: =140
-                    X: =512
-                    Y: =80
+                    X: =590
+                    Y: =93
                     ZIndex: =19
+
+                "ComboboxCanvas5_9 As 'Cuadro combinado'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    InputTextPlaceholder: ="Buscar Tipo de Maquina"
+                    Items: =["Minicargador","Excavadora","Cargador Frontal","Retroexcavadora","Miniexcavadora","Cargador de Orugas","Compactador","Cargador"]
+                    Width: =197
+                    X: =18
+                    Y: =94
+                    ZIndex: =21
 
             TextCanvas13 As Texto:
                 DisplayMode: =DisplayMode.Edit
@@ -1232,6 +1242,6 @@
         Text: ="Reset"
         Width: =96
         X: =1245
-        Y: =87
+        Y: =96
         ZIndex: =4
 
