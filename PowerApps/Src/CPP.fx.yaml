@@ -176,7 +176,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =602
+            Width: =817
             ZIndex: =1
 
             Container17_1 As groupContainer.horizontalAutoLayoutContainer:
@@ -189,7 +189,7 @@ CPP As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =602
+                Width: =817
                 ZIndex: =1
 
                 TextCanvas7_11 As Texto:
@@ -203,7 +203,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Nombre"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =150
+                    Width: =120
                     X: =0
                     Y: =0
                     ZIndex: =4
@@ -251,7 +251,7 @@ CPP As screen:
                     Size: =12
                     Text: ="RefSap"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =70
+                    Width: =80
                     X: =0
                     Y: =0
                     ZIndex: =7
@@ -283,9 +283,9 @@ CPP As screen:
                     LayoutMinWidth: =32
                     PaddingLeft: =15
                     Size: =12
-                    Text: ="Frecu"
+                    Text: ="Frecuen"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =50
+                    Width: =70
                     X: =0
                     Y: =0
                     ZIndex: =9
@@ -309,7 +309,6 @@ CPP As screen:
                 TextCanvas7_19 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
-                    FillPortions: =1
                     FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
                     LayoutMinHeight: =32
@@ -323,6 +322,38 @@ CPP As screen:
                     Y: =0
                     ZIndex: =11
 
+                TextCanvas7_23 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Adjuntos"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =12
+
+                TextCanvas7_24 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: ="Recomendación"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =120
+                    X: =0
+                    Y: =0
+                    ZIndex: =13
+
         Container38 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =636
@@ -331,7 +362,7 @@ CPP As screen:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =254
-            X: =602
+            X: =817
             Y: =52
             ZIndex: =2
 
@@ -442,25 +473,25 @@ CPP As screen:
 
         Container82 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =636
+            Height: =169
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =373
-            X: =856
+            Width: =159
+            X: =1071
             Y: =52
             ZIndex: =3
 
             Container31 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =631
+                Height: =169
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =371
+                Width: =159
                 ZIndex: =1
 
                 Image21 As image:
@@ -491,19 +522,19 @@ CPP As screen:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =254
-            X: =602
+            X: =817
             ZIndex: =4
 
             Container10_1 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(71, 158, 245, 1)
-                Height: =52
+                Height: =49
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =252
+                Width: =254
                 ZIndex: =1
 
                 TextCanvas2_1 As Texto:
@@ -564,20 +595,20 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =374
-            X: =856
+            Width: =155
+            X: =1072
             ZIndex: =5
 
             Container10 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(71, 158, 245, 1)
-                Height: =50
+                Height: =52
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =371
+                Width: =155
                 ZIndex: =1
 
                 TextCanvas2 As Texto:
@@ -603,7 +634,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =602
+            Width: =817
             Y: =52
             ZIndex: =6
 
@@ -615,7 +646,7 @@ CPP As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =602
+                Width: =817
                 ZIndex: =1
 
                 "Gallery6_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -735,8 +766,7 @@ CPP As screen:
                             Text: =ThisItem.RefSAP
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: |
-                                =40
+                            Width: =70
                             X: =239
                             Y: =0
                             ZIndex: =4
@@ -757,7 +787,7 @@ CPP As screen:
                             ZIndex: =5
 
                         TextCanvas25_6 As Texto:
-                            Align: ='TextCanvas.Align'.Start
+                            Align: ='TextCanvas.Align'.Center
                             DisplayMode: =DisplayMode.Edit
                             Height: =90
                             LayoutMinHeight: =32
@@ -766,13 +796,13 @@ CPP As screen:
                             Text: =ThisItem.Frecuencia
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =40
+                            Width: =70
                             X: =346
                             Y: =0
                             ZIndex: =6
 
                         TextCanvas25_5 As Texto:
-                            Align: ='TextCanvas.Align'.Start
+                            Align: ='TextCanvas.Align'.Center
                             DisplayMode: =DisplayMode.Edit
                             Height: =90
                             LayoutMinHeight: =32
@@ -781,7 +811,7 @@ CPP As screen:
                             Text: =ThisItem.Medida
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =30
+                            Width: =60
                             X: =346
                             Y: =0
                             ZIndex: =7
@@ -796,10 +826,40 @@ CPP As screen:
                             Text: =ThisItem.Comentario
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =120
+                            Width: =100
                             X: =497
                             Y: =0
                             ZIndex: =8
+
+                        TextCanvas25_8 As Texto:
+                            Align: ='TextCanvas.Align'.Start
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =90
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Text: =ThisItem.Adjuntos
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =100
+                            X: =497
+                            Y: =0
+                            ZIndex: =9
+
+                        TextCanvas25_9 As Texto:
+                            Align: ='TextCanvas.Align'.Start
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =90
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Text: =ThisItem.Recomendación
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =120
+                            X: =497
+                            Y: =0
+                            ZIndex: =10
 
                     Checkbox1 As checkbox:
                         BorderColor: =App.Theme.Colors.Darker40
