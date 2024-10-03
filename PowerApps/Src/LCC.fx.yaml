@@ -522,23 +522,6 @@
                             Y: =0
                             ZIndex: =3
 
-                        TextCanvas29_24 As Texto:
-                            Align: ='TextCanvas.Align'.Start
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontColor: =RGBA(0, 0, 0, 1)
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            PaddingLeft: =3
-                            Text: ="Horom"
-                            Width: =60
-                            X: =0
-                            Y: =0
-                            ZIndex: =4
-
                         TextCanvas29_25 As Texto:
                             Align: ='TextCanvas.Align'.Start
                             BorderColor: =RGBA(214, 221, 224, 1)
@@ -551,6 +534,23 @@
                             LayoutMinWidth: =96
                             PaddingLeft: =3
                             Text: ="Modelo"
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas29_24 As Texto:
+                            Align: ='TextCanvas.Align'.Start
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(0, 0, 0, 1)
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =3
+                            Text: ="Horom"
                             Width: =60
                             X: =0
                             Y: =0
@@ -706,19 +706,6 @@
                                         Y: =0
                                         ZIndex: =3
 
-                                    TextCanvas47_8 As Texto:
-                                        Align: ='TextCanvas.Align'.Center
-                                        DisplayMode: =DisplayMode.Edit
-                                        Height: =Parent.Height
-                                        LayoutMinHeight: =32
-                                        LayoutMinWidth: =96
-                                        Size: =12
-                                        Text: =ThisItem.Horometro
-                                        Width: =60
-                                        X: =91
-                                        Y: =0
-                                        ZIndex: =4
-
                                     TextCanvas47_9 As Texto:
                                         Align: ='TextCanvas.Align'.Center
                                         DisplayMode: =DisplayMode.Edit
@@ -730,6 +717,19 @@
                                         Width: =60
                                         X: =171
                                         Y: =9
+                                        ZIndex: =4
+
+                                    TextCanvas47_8 As Texto:
+                                        Align: ='TextCanvas.Align'.Center
+                                        DisplayMode: =DisplayMode.Edit
+                                        Height: =Parent.Height
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =96
+                                        Size: =12
+                                        Text: =ThisItem.Horometro
+                                        Width: =60
+                                        X: =91
+                                        Y: =0
                                         ZIndex: =5
 
                                     TextCanvas47_10 As Texto:
