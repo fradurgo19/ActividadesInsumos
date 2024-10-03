@@ -1026,7 +1026,6 @@
                     ZIndex: =1
 
                     Form2 As form.PowerApps_CoreControls_Form:
-                        AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DataSource: ='PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'
                         Item: =Gallery6.Selected
@@ -1071,7 +1070,7 @@
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
                                 Height: =74
-                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Mode: ='TextInputCanvas.Mode'.Multiline
                                 Required: =Parent.Required
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Value: =Parent.Default
@@ -1172,7 +1171,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Conclusi_x00f3_n)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =94
                             MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, Conclusi_x00f3_n)
                             Required: =false
                             Update: =DataCardValue18.Value
@@ -1196,7 +1195,7 @@
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
                                 Height: =78
-                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Mode: ='TextInputCanvas.Mode'.Multiline
                                 Required: =Parent.Required
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Value: =Parent.Default
@@ -1384,7 +1383,7 @@
 
                     ButtonCanvas6_1 As Botón:
                         Appearance: ='ButtonCanvas.Appearance'.Primary
-                        BasePaletteColor: =RGBA(158, 250, 0, 1)
+                        BasePaletteColor: =RGBA(249, 83, 109, 1)
                         DisplayMode: =DisplayMode.Edit
                         Height: =Parent.Height
                         Layout: ='ButtonCanvas.Layout'.IconBefore
