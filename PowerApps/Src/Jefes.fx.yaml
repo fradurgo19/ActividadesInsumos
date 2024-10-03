@@ -119,7 +119,7 @@
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =40
-                Width: =311+11
+                Width: =256
                 X: =39
                 Y: =logo_11.Y + logo_11.Height +32
                 ZIndex: =3
@@ -384,60 +384,6 @@
             Y: =
             ZIndex: =15
 
-            Rectangle3_10 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledFill: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(228,233,237,1)
-                FocusedBorderColor: =Rectangle3_10.BorderColor
-                FocusedBorderThickness: =4
-                Height: =2
-                HoverFill: =RGBA(105, 121, 126, 1)
-                PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =430
-                X: =
-                Y: =
-                ZIndex: =16
-
-            icon2_5 As icon.Check:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(144,19,254,1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(220, 220, 220, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderColor: =icon2_5.BorderColor
-                FocusedBorderThickness: =4
-                Height: =15
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.Check
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                Visible: =
-                Width: =15
-                X: =
-                Y: =
-                ZIndex: =17
-
-            Rectangle3_11 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                DisabledFill: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(228,233,237,1)
-                FocusedBorderColor: =Rectangle3_11.BorderColor
-                FocusedBorderThickness: =4
-                Height: =2
-                HoverFill: =RGBA(105, 121, 126, 1)
-                PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =410
-                X: =Rectangle3_10.X+Rectangle3_10.Width+74
-                Y: =
-                ZIndex: =19
-
             Container49 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =765
@@ -445,7 +391,8 @@
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =1062
+                Width: =1055
+                X: =6
                 Y: =2
                 ZIndex: =20
 
@@ -492,7 +439,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =503
+                    Width: =481
                     X: =556
                     Y: =106
                     ZIndex: =2
@@ -548,7 +495,7 @@
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
-                                Width: =501
+                                Width: =482
                                 ZIndex: =6
 
                                 TextCanvas38_1 As Texto:
@@ -693,7 +640,7 @@
                                 TextCanvas38_7 As Texto:
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(180, 214, 250, 1)
+                                    FontColor: =RGBA(40, 134, 222, 1)
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
@@ -709,7 +656,7 @@
                                 TextCanvas38_8 As Texto:
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(180, 214, 250, 1)
+                                    FontColor: =RGBA(40, 134, 222, 1)
                                     Height: =20
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
@@ -721,13 +668,13 @@
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =50
+                                    Width: =40
                                     X: =0
                                     Y: =0
                                     ZIndex: =10
 
                                 TextCanvas38_9 As Texto:
-                                    Align: ='TextCanvas.Align'.End
+                                    Align: ='TextCanvas.Align'.Center
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(109, 49, 162, 1)
                                     Height: =20
@@ -761,7 +708,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =503
+                    Width: =481
                     X: =556
                     Y: =79
                     ZIndex: =3
@@ -860,7 +807,7 @@
                             Align: ='TextCanvas.Align'.Center
                             AlignInContainer: =AlignInContainer.Stretch
                             DisplayMode: =DisplayMode.Edit
-                            FontColor: =RGBA(180, 214, 250, 1)
+                            FontColor: =RGBA(71, 158, 245, 1)
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
@@ -895,8 +842,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =535
-                    X: =4
+                    Width: =501
+                    X: =38
                     Y: =172
                     ZIndex: =4
 
@@ -959,13 +906,13 @@
 
                             Container54_1 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.Light
-                                Height: =24
+                                Height: =32
                                 LayoutMode: =LayoutMode.Auto
                                 RadiusBottomLeft: =4
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
-                                Width: =535
+                                Width: =498
                                 ZIndex: =6
 
                                 TextCanvas44_6 As Texto:
@@ -978,6 +925,7 @@
                                     Size: =12
                                     Text: =ThisItem.MesCreado
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =50
                                     X: =0
                                     Y: =0
@@ -992,6 +940,7 @@
                                     Size: =13
                                     Text: =ThisItem.Correo
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =120
                                     X: =0
                                     Y: =0
@@ -1007,6 +956,7 @@
                                     Size: =16
                                     Text: =ThisItem.Asesor
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =50
                                     X: =0
                                     Y: =0
@@ -1023,6 +973,7 @@
                                     Size: =16
                                     Text: =ThisItem.Ganadas
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =60
                                     X: =0
                                     Y: =0
@@ -1039,6 +990,7 @@
                                     Size: =16
                                     Text: =ThisItem.Perdidas
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =60
                                     X: =0
                                     Y: =0
@@ -1055,6 +1007,7 @@
                                     Size: =16
                                     Text: =ThisItem.Seguimientos
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =60
                                     X: =0
                                     Y: =0
@@ -1064,20 +1017,21 @@
                                     Align: ='TextCanvas.Align'.Center
                                     AlignInContainer: =AlignInContainer.Stretch
                                     DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(180, 214, 250, 1)
+                                    FontColor: =RGBA(40, 134, 222, 1)
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =30
                                     Size: =16
                                     Text: =ThisItem.Cotizaciones
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =60
                                     X: =0
                                     Y: =0
                                     ZIndex: =7
 
                                 TextCanvas44_7 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
+                                    Align: ='TextCanvas.Align'.Start
                                     AlignInContainer: =AlignInContainer.Stretch
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =RGBA(109, 49, 162, 1)
@@ -1096,6 +1050,7 @@
                                             "[$-en-US]0.0"
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                    Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =60
                                     X: =0
                                     Y: =0
@@ -1109,7 +1064,7 @@
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =364
-                    X: =32
+                    X: =175
                     Y: =79
                     ZIndex: =5
 
@@ -1179,20 +1134,19 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =535
-                    X: =4
+                    X: =38
                     Y: =133
                     ZIndex: =6
 
                     Container56_2 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =35
+                        Height: =36
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =532
+                        Width: =497
                         ZIndex: =1
 
                         TextCanvas43_7 As Texto:
@@ -1220,7 +1174,7 @@
                             Size: =10
                             Text: ="Asesor"
                             Weight: ='TextCanvas.Weight'.Bold
-                            Width: =100
+                            Width: =80
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -1295,7 +1249,7 @@
                             Align: ='TextCanvas.Align'.Center
                             AlignInContainer: =AlignInContainer.Stretch
                             DisplayMode: =DisplayMode.Edit
-                            FontColor: =RGBA(180, 214, 250, 1)
+                            FontColor: =RGBA(40, 134, 222, 1)
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
@@ -1363,7 +1317,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             Font: =Font.'Segoe UI'
             GridStyle: =GridStyle.All
-            Height: =342
+            Height: =360
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =[RGBA(0, 0, 0, 1),RGBA(49,130,93, 1), RGBA(255,0,0,1), RGBA(246,199,144,1), RGBA(0,0,255,1), RGBA(255,255,255,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
             Items: |-
@@ -1378,10 +1332,10 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             SeriesAxisMin: =0
             Size: =15
-            Width: =1038
-            X: =306
+            Width: =1003
+            X: =340
             XLabelAngle: =10
-            Y: =408
+            Y: =389
             ZIndex: =5
 
         Legend1 As legend:
@@ -1393,13 +1347,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(220, 220, 220, 1)
             Font: =Font.'Segoe UI'
-            Height: =26
+            Height: =27
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =ColumnChart1.ItemColorSet
             Items: =ColumnChart1.SeriesLabels
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            Width: =963
-            X: =306
-            Y: =705
+            Width: =931
+            X: =340
+            Y: =702
             ZIndex: =6
 

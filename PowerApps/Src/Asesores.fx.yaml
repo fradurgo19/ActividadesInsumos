@@ -1169,7 +1169,8 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            OnSelect: =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Reset(ComboboxCanvas5_3);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(ComboboxCanvas5_7)
+                            OnSelect: |
+                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Reset(ComboboxCanvas5_3);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery4);Reset(Gallery8);
                             Text: ="Reset"
                             Width: =96
                             X: =0
