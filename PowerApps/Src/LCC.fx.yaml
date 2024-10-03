@@ -701,7 +701,7 @@
                                         LayoutMinWidth: =96
                                         Size: =12
                                         Text: =ThisItem.TipoDeMaquina
-                                        Width: =75
+                                        Width: =70
                                         X: =91
                                         Y: =0
                                         ZIndex: =3
@@ -740,7 +740,7 @@
                                         LayoutMinWidth: =96
                                         Size: =12
                                         Text: =ThisItem.PromedioHoras
-                                        Width: =60
+                                        Width: =50
                                         X: =131
                                         Y: =0
                                         ZIndex: =6
@@ -1237,7 +1237,7 @@
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnSelect: |-
-            =Reset(ComboboxCanvas5_2);Reset(ComboboxCanvas5_4);Reset(Gallery10);
+            =Reset(ComboboxCanvas5_2);Reset(ComboboxCanvas5_4);Reset(ComboboxCanvas5_9);Reset(Gallery10);
             Reset(Gallery3);
             Set(varSelectedHorometro, Blank()); // Restablecer selección de Gallery10
             Set(varSelectedHorometroG3, Blank());// Restablecer selección de Gallery3
