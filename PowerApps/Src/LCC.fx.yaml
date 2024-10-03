@@ -35,7 +35,9 @@
                 Asesor, First(ThisRecord.GrupoDatos).'ASESOR 2',
                 Cliente, First(ThisRecord.GrupoDatos).'Nombre del cliente'
             )
-        )
+        );
+        
+        Set(varSelectedItem, Blank()) // Restablece la variable de selección
         
     Orientation: =If(LCC.Width < LCC.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= LCC.Width)
