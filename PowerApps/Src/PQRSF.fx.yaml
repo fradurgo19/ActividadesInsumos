@@ -1383,7 +1383,7 @@
 
                     ButtonCanvas6_1 As Botón:
                         Appearance: ='ButtonCanvas.Appearance'.Primary
-                        BasePaletteColor: =RGBA(249, 83, 109, 1)
+                        BasePaletteColor: =RGBA(8, 222, 8, 1)
                         DisplayMode: =DisplayMode.Edit
                         Height: =Parent.Height
                         Layout: ='ButtonCanvas.Layout'.IconBefore
@@ -1394,7 +1394,7 @@
                             Notify("Actualización Enviada", NotificationType.Success, 3000);
                             Refresh('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)')
                         Text: ="Actualizar"
-                        Width: =200
+                        Width: =300
                         X: =0
                         Y: =0
                         ZIndex: =4
