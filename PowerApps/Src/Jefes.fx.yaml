@@ -1329,14 +1329,13 @@
         ZIndex: =3
 
         ColumnChart1 As barChart:
-            BorderColor: =RGBA(214, 221, 224, 1)
             BorderStyle: =BorderStyle.None
-            BorderThickness: =2
+            BorderThickness: =1
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             Font: =Font.'Segoe UI'
             GridStyle: =GridStyle.All
-            Height: =360
+            Height: =342
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =[RGBA(0, 0, 0, 1),RGBA(49,130,93, 1), RGBA(255,0,0,1), RGBA(246,199,144,1), RGBA(0,0,255,1), RGBA(255,255,255,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
             Items: |-
@@ -1354,7 +1353,7 @@
             Width: =999
             X: =343
             XLabelAngle: =10
-            Y: =389
+            Y: =407
             ZIndex: =5
 
         Legend1 As legend:
