@@ -54,7 +54,7 @@
         SendEmailCard As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
-            BorderThickness: =0
+            BorderThickness: =1
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height
@@ -118,6 +118,7 @@
                 ZIndex: =16
 
             Container71 As groupContainer.manualLayoutContainer:
+                BorderThickness: =1
                 DropShadow: =DropShadow.Light
                 Height: =756
                 RadiusBottomLeft: =4

@@ -302,7 +302,7 @@
         SendEmailCard_3 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
-            BorderThickness: =0
+            BorderThickness: =1
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height
@@ -762,7 +762,7 @@
                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
                     TemplateSize: =62
-                    Transition: =Transition.Pop
+                    Transition: =Transition.Push
                     Width: =Parent.Width
                     ZIndex: =1
 

@@ -16,7 +16,7 @@
     Width: =
 
     ProductsList As fluidGrid.fluidGridWithBlankCard:
-        BorderThickness: =0
+        BorderThickness: =1
         Fill: =RGBA(255, 255, 255, 1)
         Height: =768
         Width: =1071
@@ -26,7 +26,7 @@
         ProductsCard As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
-            BorderThickness: =0
+            BorderThickness: =1
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =Parent.Height
