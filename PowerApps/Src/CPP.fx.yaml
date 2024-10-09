@@ -3,7 +3,7 @@ CPP As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
         =Refresh(TablaDataCpp);
-        
+        ClearCollect(colTablaDataCpp,TablaDataCpp);ClearCollect(colTablaEquivalenciasCpp,TablaEquivalenciasCpp)
         
         
 
