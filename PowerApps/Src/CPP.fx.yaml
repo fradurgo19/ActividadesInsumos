@@ -130,7 +130,7 @@ CPP As screen:
             Height: =43
             OnSelect: |
                 =ForAll(
-                    Gallery6_1.AllItems,
+                    'Filter(     TablaDataCpp;     (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&          (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems; Marca = Value) > 0) &&          (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems; Modelo = Value) > 0) &&          (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems; Parte = Value) > 0) &&          (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems; Tipo = Value) > 0) &&      (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems; Frecuencia = Value) > 0) )'.AllItems,
                     RemoveIf(
                         colAllSelectedItems,
                         No = ThisRecord.No
@@ -203,7 +203,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Nombre"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =120
+                    Width: =150
                     X: =0
                     Y: =0
                     ZIndex: =4
@@ -219,7 +219,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Marca"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =70
+                    Width: =80
                     X: =0
                     Y: =0
                     ZIndex: =5
@@ -251,7 +251,7 @@ CPP As screen:
                     Size: =12
                     Text: ="RefSap"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
+                    Width: =90
                     X: =0
                     Y: =0
                     ZIndex: =7
@@ -269,7 +269,7 @@ CPP As screen:
                     Text: ="Q"
                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =25
+                    Width: =40
                     X: =0
                     Y: =0
                     ZIndex: =8
@@ -283,9 +283,9 @@ CPP As screen:
                     LayoutMinWidth: =32
                     PaddingLeft: =15
                     Size: =12
-                    Text: ="Frecuen"
+                    Text: ="Frecuencia"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =70
+                    Width: =90
                     X: =0
                     Y: =0
                     ZIndex: =9
@@ -301,7 +301,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Medida"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =60
+                    Width: =80
                     X: =0
                     Y: =0
                     ZIndex: =10
@@ -337,22 +337,6 @@ CPP As screen:
                     X: =0
                     Y: =0
                     ZIndex: =12
-
-                TextCanvas7_24 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =32
-                    PaddingLeft: =15
-                    Size: =12
-                    Text: ="Recomendación"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =120
-                    X: =0
-                    Y: =0
-                    ZIndex: =13
 
         Container38 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -507,7 +491,7 @@ CPP As screen:
                     Height: =If(HoverImage21, 500, 500) // Cambia el tamaño a 300 cuando el cursor esté sobre la imagen
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Image: =Gallery6_1.Selected.ImagenUrl
+                    Image: ='Filter(     TablaDataCpp;     (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&          (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems; Marca = Value) > 0) &&          (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems; Modelo = Value) > 0) &&          (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems; Parte = Value) > 0) &&          (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems; Tipo = Value) > 0) &&      (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems; Frecuencia = Value) > 0) )'.Selected.ImagenUrl
                     OnSelect: =Set(HoverImage21, true);
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -649,7 +633,7 @@ CPP As screen:
                 Width: =817
                 ZIndex: =1
 
-                "Gallery6_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                "'Filter(     TablaDataCpp;     (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&          (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems; Marca = Value) > 0) &&          (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems; Modelo = Value) > 0) &&          (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems; Parte = Value) > 0) &&          (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems; Tipo = Value) > 0) &&      (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems; Frecuencia = Value) > 0) )' As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     BorderColor: =
                     BorderThickness: =2
                     DelayItemLoading: =true
@@ -826,7 +810,7 @@ CPP As screen:
                             Text: =ThisItem.Comentario
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =100
+                            Width: =130
                             X: =497
                             Y: =0
                             ZIndex: =8
@@ -845,21 +829,6 @@ CPP As screen:
                             X: =497
                             Y: =0
                             ZIndex: =9
-
-                        TextCanvas25_9 As Texto:
-                            Align: ='TextCanvas.Align'.Start
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =90
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            PaddingTop: =5
-                            Text: =ThisItem.Recomendación
-                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =120
-                            X: =497
-                            Y: =0
-                            ZIndex: =10
 
                     Checkbox1 As checkbox:
                         BorderColor: =App.Theme.Colors.Darker40
@@ -956,7 +925,7 @@ CPP As screen:
                 Height: =688
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Image: =Gallery6_1.Selected.ImagenUrl
+                Image: ='Filter(     TablaDataCpp;     (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&          (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems; Marca = Value) > 0) &&          (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems; Modelo = Value) > 0) &&          (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems; Parte = Value) > 0) &&          (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems; Tipo = Value) > 0) &&      (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems; Frecuencia = Value) > 0) )'.Selected.ImagenUrl
                 OnSelect: =Set(HoverImage21, true);Set(HoverImage21, false)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -984,6 +953,105 @@ CPP As screen:
                 Width: =52
                 X: =1177
                 ZIndex: =2
+
+        Container66 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =218
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =158
+            X: =1072
+            Y: =296
+            ZIndex: =8
+
+            Container91 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =158
+                Y: =5
+                ZIndex: =1
+
+                "Gallery11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    DelayItemLoading: =true
+                    Items: |
+                        =Filter(
+                            TablaDataCpp,
+                            (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&
+                            
+                            (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
+                            
+                            (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
+                            
+                            (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
+                            
+                            (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
+                        
+                            (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0)
+                        )
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =120
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =100
+                    ZIndex: =1
+
+                    TextCanvas11 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =89
+                        Text: =ThisItem.Recomendación
+                        Width: =158
+                        X: =0
+                        Y: =5
+                        ZIndex: =1
+
+        Container83_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =50
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =155
+            X: =1072
+            Y: =235
+            ZIndex: =9
+
+            Container10_2 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(71, 158, 245, 1)
+                Height: =49
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =152
+                ZIndex: =1
+
+                TextCanvas2_4 As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    AlignInContainer: =AlignInContainer.Center
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingTop: =
+                    Size: =12
+                    Text: ="Recomendación"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =150
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
 
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
