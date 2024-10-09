@@ -554,9 +554,14 @@
                                     Size: =12
                                     Text: |+
                                         =Text(
-                                            (ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                            If(
+                                                (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones) > 0,
+                                                (ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                                0
+                                            ),
                                             "[$-en-US]0.0"
                                         ) & "%"
+                                        
                                         
                                         
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
@@ -590,9 +595,13 @@
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
                                     Size: =12
-                                    Text: |-
+                                    Text: |
                                         =Text(
-                                            (ThisItem.Perdidas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                            If(
+                                                (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones) > 0,
+                                                (ThisItem.Perdidas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                                0
+                                            ),
                                             "[$-en-US]0.0"
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
@@ -627,9 +636,13 @@
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
                                     Size: =12
-                                    Text: |-
+                                    Text: |
                                         =Text(
-                                            (ThisItem.Seguimientos / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                            If(
+                                                (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones) > 0,
+                                                (ThisItem.Seguimientos / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                                0
+                                            ),
                                             "[$-en-US]0.0"
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
@@ -663,9 +676,13 @@
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
                                     Size: =12
-                                    Text: |-
+                                    Text: |
                                         =Text(
-                                            (ThisItem.Cotizaciones / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                            If(
+                                                (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones) > 0,
+                                                (ThisItem.Cotizaciones / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
+                                                0
+                                            ),
                                             "[$-en-US]0.0"
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
