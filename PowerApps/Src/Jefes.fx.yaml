@@ -552,11 +552,13 @@
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
                                     Size: =12
-                                    Text: |-
+                                    Text: |+
                                         =Text(
                                             (ThisItem.Ganadas / (ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos + ThisItem.Cotizaciones)) * 100,
                                             "[$-en-US]0.0"
                                         ) & "%"
+                                        
+                                        
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =40
@@ -1025,7 +1027,7 @@
                                     Text: =ThisItem.Cotizaciones
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =60
+                                    Width: =40
                                     X: =0
                                     Y: =0
                                     ZIndex: =7
@@ -1051,7 +1053,7 @@
                                         ) & "%"
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =60
+                                    Width: =50
                                     X: =0
                                     Y: =0
                                     ZIndex: =8
