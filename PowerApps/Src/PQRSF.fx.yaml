@@ -451,6 +451,7 @@
                         Items: =["Petición", "Queja", "Reclamo", "Sugerencia", "Felicitación"]
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
+                        Required: =false
                         Width: =190
                         X: =0
                         Y: =0
@@ -468,6 +469,7 @@
                         Items: =["En seguimiento", "Cerrada", "Solucionada"]
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
+                        Required: =false
                         Width: =190
                         X: =0
                         Y: =0
@@ -1135,6 +1137,7 @@
                                 DisplayMode: =Parent.DisplayMode
                                 Height: =62
                                 Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
+                                Required: =false
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Width: =Parent.Width - 48
                                 X: =24

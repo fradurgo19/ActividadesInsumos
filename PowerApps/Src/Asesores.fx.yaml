@@ -1112,6 +1112,7 @@
                             Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
+                            Required: =false
                             Width: =130
                             X: =0
                             Y: =0
@@ -1133,6 +1134,7 @@
                                 "fvasquez@partequipos.com", "dcubides@partequipos.com"]
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
+                            Required: =false
                             Width: =140
                             X: =0
                             Y: =0
@@ -1145,6 +1147,7 @@
                             Items: =Distinct(colOportunidades,MesCreado)
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
+                            Required: =false
                             Width: =120
                             X: =0
                             Y: =0
@@ -1158,6 +1161,7 @@
                             Items: =Distinct(colOportunidades,Año)
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
+                            Required: =false
                             Width: =120
                             X: =40
                             Y: =4
@@ -1268,6 +1272,7 @@
                                     Height: =32
                                     InputTextPlaceholder: ="Buscar Asesor"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].'ASESOR 2')
+                                    Required: =false
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
                                     X: =24
@@ -1392,6 +1397,7 @@
                                     Height: =32
                                     InputTextPlaceholder: ="Tipo Oportunidad"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].'Tipo Oportunidad')
+                                    Required: =false
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
                                     X: =24
@@ -1454,6 +1460,7 @@
                                     Height: =32
                                     InputTextPlaceholder: ="Buscar Estado"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Estado)
+                                    Required: =false
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
                                     X: =24
@@ -1516,6 +1523,7 @@
                                     Height: =32
                                     InputTextPlaceholder: ="Busccar Detalle"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Detalle)
+                                    Required: =false
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
                                     X: =24
@@ -1578,6 +1586,7 @@
                                     Height: =32
                                     InputTextPlaceholder: ="Buscar Tramite"
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Estado2)
+                                    Required: =false
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Width: =Parent.Width - 48
                                     X: =24

@@ -693,7 +693,8 @@
           "InvariantPropertyName": "InputTextPlaceholder",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Required"
       ],
       "DynamicProperties": [
         {
@@ -756,6 +757,11 @@
           "Category": "Data",
           "PropertyName": "InputTextPlaceholder",
           "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Required",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -830,7 +836,8 @@
           "InvariantPropertyName": "IsSearchable",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Required"
       ],
       "DynamicProperties": [
         {
@@ -897,6 +904,11 @@
         {
           "Category": "Data",
           "PropertyName": "IsSearchable",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Required",
           "RuleProviderType": "Unknown"
         },
         {
