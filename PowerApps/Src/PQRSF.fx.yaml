@@ -1029,13 +1029,14 @@
                                 ZIndex: =1
 
             Container20 As groupContainer.manualLayoutContainer:
+                BorderThickness: =1
                 DropShadow: =DropShadow.Light
                 Height: =273
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =1024
+                Width: =1043
                 X: =15
                 Y: =495
                 ZIndex: =23
@@ -1098,7 +1099,7 @@
                             "DataCardValue23 As 'Entrada de texto'":
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =74
+                                Height: =148
                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                 Required: =Parent.Required
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
@@ -1162,7 +1163,7 @@
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =62
+                                Height: =92
                                 Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
                                 Required: =false
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
@@ -1224,7 +1225,7 @@
                             "DataCardValue18 As 'Entrada de texto'":
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =78
+                                Height: =157
                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                 Required: =Parent.Required
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
@@ -1304,6 +1305,7 @@
                                 DisplayMode: =Parent.DisplayMode
                                 FocusedBorderThickness: =4
                                 Font: =Font.'Segoe UI'
+                                Height: =169
                                 HoverColor: =RGBA(51, 51, 51, 1)
                                 HoverFill: =RGBA(212, 212, 212, 1)
                                 IsInDataCard: =true
