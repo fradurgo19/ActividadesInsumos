@@ -689,7 +689,7 @@
                         PaddingLeft: =15
                         Size: =14
                         Text: ="Respuesta"
-                        Width: =96
+                        Width: =110
                         X: =0
                         Y: =0
                         ZIndex: =9
@@ -1042,7 +1042,7 @@
 
                 Container21 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =271
+                    Height: =226
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMode: =LayoutMode.Auto
@@ -1054,13 +1054,14 @@
                     ZIndex: =1
 
                     Form2 As form.PowerApps_CoreControls_Form:
+                        AcceptsFocus: =true
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DataSource: ='PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'
+                        FillPortions: =2
                         Item: =Gallery6.Selected
                         LayoutMinHeight: =0
                         LayoutMinWidth: =0
                         NumberOfColumns: =4
-                        SnapToColumns: =false
                         UseFluentV9Cards: =true
                         X: =40
                         Y: =40
@@ -1074,11 +1075,11 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,RespuestaaSolicitud)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =110
+                            Height: =118
                             MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, RespuestaaSolicitud)
                             Required: =false
                             Update: =DataCardValue23.Value
-                            Width: =255
+                            Width: =256
                             X: =1
                             Y: =0
                             ZIndex: =1
@@ -1137,10 +1138,10 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Respuesta)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =124
+                            Height: =103
                             Required: =false
                             Update: =DataCardValue11.Selected
-                            Width: =255
+                            Width: =256
                             WidthFit: =true
                             X: =0
                             Y: =0
@@ -1200,11 +1201,11 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Conclusi_x00f3_n)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =94
+                            Height: =114
                             MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, Conclusi_x00f3_n)
                             Required: =false
                             Update: =DataCardValue18.Value
-                            Width: =255
+                            Width: =256
                             X: =2
                             Y: =0
                             ZIndex: =4
@@ -1263,10 +1264,10 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'{Attachments}')
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =206
+                            Height: =173
                             Required: =false
                             Update: =DataCardValue22.Attachments
-                            Width: =255
+                            Width: =256
                             X: =3
                             Y: =0
                             ZIndex: =4
