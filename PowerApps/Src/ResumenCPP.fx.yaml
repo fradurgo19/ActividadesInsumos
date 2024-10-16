@@ -516,6 +516,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =0
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowNavigation: =true
+                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
                     TemplateSize: =75
                     Transition: =Transition.Push
