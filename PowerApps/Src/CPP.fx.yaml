@@ -704,7 +704,7 @@ CPP As screen:
                     ShowNavigation: =true
                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
-                    TemplateSize: =80
+                    TemplateSize: =90
                     Transition: =Transition.Push
                     Width: =Parent.Width
                     ZIndex: =2
@@ -848,6 +848,7 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
+                            Size: =12
                             Text: =ThisItem.Comentario
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -922,7 +923,7 @@ CPP As screen:
                             
                             Set(varCheckboxChecked, true);
                             
-                            ForAll(GaleriaCPP.AllItems, Collect(colSeleccionados, ThisItem.Recomendación))
+                            
                             
                             
                             
@@ -975,8 +976,9 @@ CPP As screen:
                 "Gallery11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     BorderColor: =RGBA(166, 166, 166, 1)
                     DelayItemLoading: =true
-                    Items: |
-                        =colSeleccionados
+                    Items: |+
+                        =Filter(TablaDataCpp, No = varSelectedItem.No)
+                        
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =0
                     LayoutMinWidth: =120
@@ -987,8 +989,11 @@ CPP As screen:
 
                     TextCanvas11 As Texto:
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(0, 0, 0, 1)
                         Height: =89
-                        Text: =ThisItem.Value
+                        Text: |
+                            =First(Filter(TablaDataCpp, No = varSelectedItem.No)).Recomendación
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =158
                         X: =0
                         Y: =5
