@@ -229,7 +229,7 @@ ResumenCPP As screen:
                 X: =4
                 ZIndex: =4
 
-                TextCanvas28 As Texto:
+                TextCanvas29_4 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
                     BorderStyle: =BorderStyle.Solid
                     BorderThickness: =1
@@ -238,8 +238,8 @@ ResumenCPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
-                    Text: ="No"
-                    Width: =40
+                    Text: ="RefSAP"
+                    Width: =90
                     X: =0
                     Y: =0
                     ZIndex: =1
@@ -274,6 +274,21 @@ ResumenCPP As screen:
                     Y: =0
                     ZIndex: =3
 
+                TextCanvas28 As Texto:
+                    BorderColor: =RGBA(214, 221, 224, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =1
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingLeft: =3
+                    Text: ="No"
+                    Width: =40
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
+
                 TextCanvas29_1 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
                     BorderStyle: =BorderStyle.Solid
@@ -287,7 +302,7 @@ ResumenCPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =4
+                    ZIndex: =5
 
                 TextCanvas29_2 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -302,7 +317,7 @@ ResumenCPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =5
+                    ZIndex: =6
 
                 TextCanvas29_3 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -317,7 +332,7 @@ ResumenCPP As screen:
                     Width: =96
                     X: =0
                     Y: =0
-                    ZIndex: =6
+                    ZIndex: =7
 
                 TextCanvas29_5 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -329,21 +344,6 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Tipo"
-                    Width: =90
-                    X: =0
-                    Y: =0
-                    ZIndex: =7
-
-                TextCanvas29_4 As Texto:
-                    BorderColor: =RGBA(214, 221, 224, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    BorderThickness: =1
-                    DisplayMode: =DisplayMode.Edit
-                    Height: =Parent.Height
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    PaddingLeft: =3
-                    Text: ="RefSAP"
                     Width: =90
                     X: =0
                     Y: =0
@@ -546,15 +546,15 @@ ResumenCPP As screen:
                         Width: =1325
                         ZIndex: =6
 
-                        TextCanvas14 As Texto:
+                        TextCanvas19 As Texto:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Value.No
+                            Text: =ThisItem.Value.RefSAP
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =40
+                            Width: =90
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -586,6 +586,19 @@ ResumenCPP As screen:
                             Y: =0
                             ZIndex: =3
 
+                        TextCanvas14 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Open Sans'
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: =ThisItem.Value.No
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =40
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
                         TextCanvas16 As Texto:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
@@ -597,7 +610,7 @@ ResumenCPP As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =5
 
                         TextCanvas17 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -610,7 +623,7 @@ ResumenCPP As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =5
+                            ZIndex: =6
 
                         TextCanvas18 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -623,7 +636,7 @@ ResumenCPP As screen:
                             Width: =96
                             X: =0
                             Y: =0
-                            ZIndex: =6
+                            ZIndex: =7
 
                         TextCanvas19_1 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -632,19 +645,6 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Text: =ThisItem.Value.Tipo
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
-                            X: =0
-                            Y: =0
-                            ZIndex: =7
-
-                        TextCanvas19 As Texto:
-                            DisplayMode: =DisplayMode.Edit
-                            Font: =Font.'Open Sans'
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: =ThisItem.Value.RefSAP
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =90
                             X: =0
