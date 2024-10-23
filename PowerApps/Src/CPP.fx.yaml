@@ -54,8 +54,8 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =254
-            X: =93
+            Width: =283
+            X: =117
             ZIndex: =3
 
             Icon4 As icon.Search:
@@ -78,7 +78,7 @@ CPP As screen:
                 ZIndex: =1
 
             "TextInputCanvas6 As 'Entrada de texto'":
-                AccessibleLabel: ="Buscar Por Ref. Sap o Por Nombre"
+                AccessibleLabel: ="Buscar por Modelo, Marca, Nombre o Ref ."
                 AlignInContainer: =AlignInContainer.Stretch
                 Appearance: ='TextInputCanvas.Appearance'.FilledDarker
                 BasePaletteColor: =RGBA(8, 222, 8, 1)
@@ -90,7 +90,7 @@ CPP As screen:
                 LayoutMinWidth: =320
                 Mode: ='TextInputCanvas.Mode'.Multiline
                 OnChange: =
-                Placeholder: ="Buscar Por Ref. Sap o por Nombre"
+                Placeholder: ="Buscar por Modelo, Marca, Nombre o Ref "
                 TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
                 Type: ='TextInputCanvas.Type'.Search
                 Width: =Parent.Width
