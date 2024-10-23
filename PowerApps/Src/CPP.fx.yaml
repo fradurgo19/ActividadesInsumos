@@ -684,19 +684,25 @@ CPP As screen:
                     Fill: =RGBA(255, 255, 255, 1)
                     Height: =Parent.Height
                     Items: |+
-                        =Filter(
-                            TablaDataCpp,
-                            (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&
-                            
-                            (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
-                            
-                            (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
-                            
-                            (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
-                            
-                            (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
-                        
-                            (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0)
+                        =If(
+                            IsBlank(TextInputCanvas6.Value) &&
+                            IsBlank(DropMarca1.SelectedItems) &&
+                            IsBlank(DropModelo1.SelectedItems) &&
+                            IsBlank(DropParte1.SelectedItems) &&
+                            IsBlank(DropTipo1.SelectedItems) &&
+                            IsBlank(DropFrecuencia1.SelectedItems),
+                            [ // Tabla ficticia con la estructura de datos pero vacía
+                                {Nombre: "", Marca: "", Modelo: "", RefSAP: "", Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo:"", ImagenUrl:"", Recomendación:""} 
+                            ],
+                            Filter(
+                                TablaDataCpp,
+                                (TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo || IsBlank(TextInputCanvas6.Value)) &&
+                                (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
+                                (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
+                                (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
+                                (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
+                                (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0)
+                            )
                         )
                         
                     Layout: =Layout.Vertical
