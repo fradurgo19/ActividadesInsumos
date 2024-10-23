@@ -233,54 +233,6 @@ CPP As screen:
                 Width: =817
                 ZIndex: =1
 
-                TextCanvas7_11 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =20
-                    PaddingLeft: =5
-                    Size: =12
-                    Text: ="Nombre"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =150
-                    X: =0
-                    Y: =0
-                    ZIndex: =4
-
-                TextCanvas7_21 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =10
-                    PaddingLeft: =5
-                    Size: =12
-                    Text: ="Marca"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =90
-                    X: =0
-                    Y: =0
-                    ZIndex: =5
-
-                TextCanvas7_22 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =10
-                    PaddingLeft: =5
-                    Size: =12
-                    Text: ="Modelo"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =90
-                    X: =0
-                    Y: =0
-                    ZIndex: =6
-
                 TextCanvas7_12 As Texto:
                     AutoHeight: =false
                     DisplayMode: =DisplayMode.Edit
@@ -306,7 +258,7 @@ CPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =7
+                    ZIndex: =1
 
                 TextCanvas7_16 As Texto:
                     Align: ='TextCanvas.Align'.Start
@@ -324,7 +276,55 @@ CPP As screen:
                     Width: =40
                     X: =0
                     Y: =0
-                    ZIndex: =8
+                    ZIndex: =2
+
+                TextCanvas7_11 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =20
+                    PaddingLeft: =5
+                    Size: =12
+                    Text: ="Nombre"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =150
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                TextCanvas7_21 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =10
+                    PaddingLeft: =5
+                    Size: =12
+                    Text: ="Marca"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =90
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
+
+                TextCanvas7_22 As Texto:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =10
+                    PaddingLeft: =5
+                    Size: =12
+                    Text: ="Modelo"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =90
+                    X: =0
+                    Y: =0
+                    ZIndex: =5
 
                 TextCanvas7_17 As Texto:
                     AutoHeight: =false
@@ -340,7 +340,7 @@ CPP As screen:
                     Width: =90
                     X: =0
                     Y: =0
-                    ZIndex: =9
+                    ZIndex: =6
 
                 TextCanvas7_18 As Texto:
                     AutoHeight: =false
@@ -356,7 +356,7 @@ CPP As screen:
                     Width: =80
                     X: =0
                     Y: =0
-                    ZIndex: =10
+                    ZIndex: =7
 
                 TextCanvas7_19 As Texto:
                     AutoHeight: =false
@@ -372,7 +372,7 @@ CPP As screen:
                     Width: =96
                     X: =0
                     Y: =0
-                    ZIndex: =11
+                    ZIndex: =8
 
                 TextCanvas7_23 As Texto:
                     AutoHeight: =false
@@ -388,7 +388,7 @@ CPP As screen:
                     Width: =100
                     X: =0
                     Y: =0
-                    ZIndex: =12
+                    ZIndex: =9
 
         Container38 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -735,58 +735,6 @@ CPP As screen:
                         Width: =Parent.Width
                         ZIndex: =18
 
-                        TextCanvas25 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            DisplayMode: =DisplayMode.Edit
-                            Height: |
-                                =80
-                            LayoutMinWidth: =80
-                            PaddingLeft: =25
-                            PaddingTop: =5
-                            Size: =12
-                            Text: =ThisItem.Nombre
-                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: |
-                                =120
-                            Wrap: =true
-                            X: =0
-                            Y: =0
-                            ZIndex: =1
-
-                        TextCanvas25_1 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =90
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            PaddingTop: =5
-                            Size: =13
-                            Text: =ThisItem.Marca
-                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
-                            Wrap: =true
-                            X: =107
-                            Y: =0
-                            ZIndex: =2
-
-                        TextCanvas25_2 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =90
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            PaddingTop: =5
-                            Size: =13
-                            Text: =ThisItem.Modelo
-                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
-                            X: =173
-                            Y: =0
-                            ZIndex: =3
-
                         TextCanvas25_3 As Texto:
                             Align: ='TextCanvas.Align'.Center
                             DisplayMode: =DisplayMode.Edit
@@ -806,7 +754,7 @@ CPP As screen:
                             Width: =100
                             X: =239
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =1
 
                         TextCanvas25_4 As Texto:
                             Align: ='TextCanvas.Align'.End
@@ -820,6 +768,58 @@ CPP As screen:
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =40
                             X: =309
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas25 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: |
+                                =80
+                            LayoutMinWidth: =80
+                            PaddingLeft: =25
+                            PaddingTop: =5
+                            Size: =12
+                            Text: =ThisItem.Nombre
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: |
+                                =120
+                            Wrap: =true
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas25_1 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =90
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Size: =13
+                            Text: =ThisItem.Marca
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =70
+                            Wrap: =true
+                            X: =107
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas25_2 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =90
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingTop: =5
+                            Size: =13
+                            Text: =ThisItem.Modelo
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =90
+                            X: =173
                             Y: =0
                             ZIndex: =5
 
@@ -952,6 +952,8 @@ CPP As screen:
                         Size: =13
                         Text: =
                         Width: =28
+                        X: =778
+                        Y: =23
                         ZIndex: =20
 
                     TextCanvas12 As Texto:
