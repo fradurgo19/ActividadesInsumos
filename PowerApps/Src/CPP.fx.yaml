@@ -255,7 +255,7 @@ CPP As screen:
                             true
                         )
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =70
+                    Width: =90
                     X: =0
                     Y: =0
                     ZIndex: =1
@@ -273,7 +273,7 @@ CPP As screen:
                     Text: ="Q"
                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =40
+                    Width: =80
                     X: =0
                     Y: =0
                     ZIndex: =2
@@ -289,7 +289,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Nombre"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =150
+                    Width: =120
                     X: =0
                     Y: =0
                     ZIndex: =3
@@ -757,7 +757,7 @@ CPP As screen:
                             ZIndex: =1
 
                         TextCanvas25_4 As Texto:
-                            Align: ='TextCanvas.Align'.End
+                            Align: ='TextCanvas.Align'.Center
                             DisplayMode: =DisplayMode.Edit
                             Height: =90
                             LayoutMinHeight: =32
@@ -783,8 +783,7 @@ CPP As screen:
                             Text: =ThisItem.Nombre
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: |
-                                =120
+                            Width: =120
                             Wrap: =true
                             X: =0
                             Y: =0
@@ -952,18 +951,19 @@ CPP As screen:
                         Size: =13
                         Text: =
                         Width: =28
-                        X: =778
+                        X: =775
                         Y: =23
                         ZIndex: =20
 
                     TextCanvas12 As Texto:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
+                        FontItalic: =true
                         Height: =32
                         Text: =ThisItem.No
                         Width: =28
-                        X: =0
-                        Y: =39
+                        X: =20
+                        Y: =45
                         ZIndex: =21
 
         Container66 As groupContainer.manualLayoutContainer:
