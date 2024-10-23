@@ -260,7 +260,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Marca"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
+                    Width: =90
                     X: =0
                     Y: =0
                     ZIndex: =5
@@ -276,7 +276,7 @@ CPP As screen:
                     Size: =12
                     Text: ="Modelo"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =60
+                    Width: =90
                     X: =0
                     Y: =0
                     ZIndex: =6
@@ -291,8 +291,19 @@ CPP As screen:
                     PaddingLeft: =15
                     Size: =12
                     Text: ="RefSap"
+                    Visible: |
+                        =If(
+                            CountRows(
+                                Filter(
+                                    GaleriaCPP.AllItems,
+                                    StartsWith(Nombre, "FILTRO")
+                                )
+                            ) > 0,
+                            false,
+                            true
+                        )
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =90
+                    Width: =70
                     X: =0
                     Y: =0
                     ZIndex: =7
@@ -533,7 +544,7 @@ CPP As screen:
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Image: =GaleriaCPP.Selected.ImagenUrl
-                    OnSelect: =Set(HoverImage21, true);
+                    OnSelect: =Set(HoverImage21, true)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =If(HoverImage21, 300, 150) // Cambia el tamaño a 300 cuando el cursor esté sobre la imagen
@@ -758,10 +769,12 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
+                            Size: =13
                             Text: =ThisItem.Marca
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =80
+                            Width: =70
+                            Wrap: =true
                             X: =107
                             Y: =0
                             ZIndex: =2
@@ -773,10 +786,11 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
+                            Size: =13
                             Text: =ThisItem.Modelo
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =50
+                            Width: =90
                             X: =173
                             Y: =0
                             ZIndex: =3
@@ -790,14 +804,20 @@ CPP As screen:
                             PaddingTop: =5
                             Text: =ThisItem.RefSAP
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            Visible: |-
+                                =If(
+                                    StartsWith(ThisItem.Nombre, "FILTRO"),
+                                    false,
+                                    true
+                                )
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =100
                             X: =239
                             Y: =0
                             ZIndex: =4
 
                         TextCanvas25_4 As Texto:
-                            Align: ='TextCanvas.Align'.Center
+                            Align: ='TextCanvas.Align'.End
                             DisplayMode: =DisplayMode.Edit
                             Height: =90
                             LayoutMinHeight: =32
@@ -806,7 +826,7 @@ CPP As screen:
                             Text: =ThisItem.Cantidad
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =30
+                            Width: =40
                             X: =309
                             Y: =0
                             ZIndex: =5
@@ -821,7 +841,7 @@ CPP As screen:
                             Text: =ThisItem.Frecuencia
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =90
                             X: =346
                             Y: =0
                             ZIndex: =6
@@ -833,10 +853,11 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
+                            Size: =12
                             Text: =ThisItem.Medida
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =60
+                            Width: =80
                             X: =346
                             Y: =0
                             ZIndex: =7
@@ -852,7 +873,7 @@ CPP As screen:
                             Text: =ThisItem.Comentario
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =130
+                            Width: =100
                             X: =497
                             Y: =0
                             ZIndex: =8

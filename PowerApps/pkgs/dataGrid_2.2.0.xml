@@ -170,9 +170,9 @@
     <appMagic:propertyDependency input="Items" output="Selected" />
   </appMagic:propertyDependencies>
   <appMagic:requirementsMetadata>
-    <appMagic:disallowedConditions>
-      <appMagic:previewFlag name="DataTableV2Control" />
-    </appMagic:disallowedConditions>
+    <appMagic:requiredConditions>
+      <appMagic:previewFlag name="EnableLegacyDataTable" />
+    </appMagic:requiredConditions>
   </appMagic:requirementsMetadata>
   <appMagic:insertMetadata>
     <appMagic:category name="Layout" priority="90" />
