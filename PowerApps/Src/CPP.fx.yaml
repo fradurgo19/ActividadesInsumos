@@ -450,7 +450,7 @@ CPP As screen:
                         Width: =253
                         ZIndex: =6
 
-                        TextCanvas9_20 As Texto:
+                        TextCanvas9_21 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
                             BorderColor: =RGBA(214, 221, 224, 1)
                             BorderStyle: =BorderStyle.Solid
@@ -461,13 +461,13 @@ CPP As screen:
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =14
-                            Text: =ThisItem.RefSAP
+                            Text: =ThisItem.Equivalencia
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =80
+                            Width: =120
                             X: =0
                             Y: =0
-                            ZIndex: =1
+                            ZIndex: =2
 
                         TextCanvas9_22 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -483,26 +483,7 @@ CPP As screen:
                             Text: =ThisItem.Marca
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =82
-                            X: =0
-                            Y: =0
-                            ZIndex: =2
-
-                        TextCanvas9_21 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontItalic: =true
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =14
-                            Text: =ThisItem.Equivalencia
-                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
+                            Width: =120
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -584,28 +565,22 @@ CPP As screen:
                     PaddingTop: =
                     Size: =12
                     Text: ="RefSAP"
+                    Visible: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    GaleriaCPP.AllItems,
+                                    StartsWith(Nombre, "FILTRO")
+                                )
+                            ) > 0,
+                            false,
+                            true
+                        )
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =80
                     X: =0
                     Y: =0
                     ZIndex: =1
-
-                TextCanvas2_2 As Texto:
-                    Align: ='TextCanvas.Align'.Center
-                    AlignInContainer: =AlignInContainer.Center
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    PaddingTop: =
-                    Size: =12
-                    Text: ="Marca"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
-                    X: =0
-                    Y: =0
-                    ZIndex: =2
 
                 TextCanvas2_3 As Texto:
                     Align: ='TextCanvas.Align'.Center
@@ -619,7 +594,24 @@ CPP As screen:
                     Size: =12
                     Text: ="Equivalente"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
+                    Width: =120
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                TextCanvas2_2 As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    AlignInContainer: =AlignInContainer.Center
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingTop: =
+                    Size: =12
+                    Text: ="Marca"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =120
                     X: =0
                     Y: =0
                     ZIndex: =3
