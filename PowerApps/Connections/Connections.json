@@ -26,8 +26,44 @@
       "Seguimiento Clientes Equipos Telemetría"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "a6f106ef-6900-4c3e-bb70-fa7f3a054838"
+    ],
     "id": "843c10cc-c110-47d9-a24d-fa49c3541ba1"
+  },
+  "a6f106ef-6900-4c3e-bb70-fa7f3a054838": {
+    "connectionRef": {
+      "displayName": "Flujos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1719/1.0.1719.3955/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "ExportExcel"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "f7c74483-c425-4ece-bc73-b8c585e61d37"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "ExportExcel"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "f7c74483-c425-4ece-bc73-b8c585e61d37"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ExportExcel"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "843c10cc-c110-47d9-a24d-fa49c3541ba1"
+    },
+    "dependents": [],
+    "id": "a6f106ef-6900-4c3e-bb70-fa7f3a054838"
   },
   "b235294e-621e-4896-ba41-d9a4779af503": {
     "connectionRef": {
