@@ -577,7 +577,7 @@ CPP As screen:
                             true
                         )
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =80
+                    Width: =120
                     X: =0
                     Y: =0
                     ZIndex: =1
@@ -598,23 +598,6 @@ CPP As screen:
                     X: =0
                     Y: =0
                     ZIndex: =2
-
-                TextCanvas2_2 As Texto:
-                    Align: ='TextCanvas.Align'.Center
-                    AlignInContainer: =AlignInContainer.Center
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    PaddingTop: =
-                    Size: =12
-                    Text: ="Marca"
-                    Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =120
-                    X: =0
-                    Y: =0
-                    ZIndex: =3
 
         Container85 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
