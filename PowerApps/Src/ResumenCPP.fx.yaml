@@ -210,12 +210,12 @@ ResumenCPP As screen:
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Icon: ="DocumentBulletList"
-                OnSelect: |
+                OnSelect: |+
                     =Clear(colgalrecord);
                     ForAll(Gallery1.AllItems As GalItems,
                         Collect(colgalrecord,
                             {
-                                RefSAP: GalItems.TextCanvas19.Text,           
+                                RefSAP:  GalItems.TextCanvas19.Text,           
                                 Q: GalItems.TextCanvas23.Text,
                                 Nombre: GalItems.TextCanvas15.Text,
                                 No: GalItems.TextCanvas14.Text,
@@ -245,6 +245,8 @@ ResumenCPP As screen:
                     Launch(dowloadurl);
                     
                     Notify("Documento enviado", NotificationType.Success, 3000)
+                    
+                    
                 Text: ="CSV"
                 Width: =96
                 X: =132
