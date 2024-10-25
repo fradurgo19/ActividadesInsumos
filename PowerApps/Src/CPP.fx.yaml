@@ -9,7 +9,7 @@ CPP As screen:
 
     Container24 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =76
+        Height: =59
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -23,13 +23,14 @@ CPP As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(105, 121, 126, 1)
             OnSelect: =Navigate('CPP y Manuales',ScreenTransition.Fade )
+            Width: =47
             X: =4
             Y: =4
             ZIndex: =1
 
         Container25 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =74
+            Height: =61
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
@@ -48,13 +49,13 @@ CPP As screen:
         Container33 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(152, 242, 17, 1)
-            Height: =54
+            Height: =40
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =208
+            Width: =227
             X: =117
             ZIndex: =3
 
@@ -85,6 +86,7 @@ CPP As screen:
                 DisplayMode: =DisplayMode.Edit
                 Font: =Font.'Lato Black'
                 FontColor: =RGBA(0, 0, 0, 1)
+                FontSize: =12
                 FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
                 LayoutMinWidth: =320
@@ -93,7 +95,8 @@ CPP As screen:
                 Placeholder: ="Buscar por Modelo, Marca, Nombre o Ref "
                 TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
                 Type: ='TextInputCanvas.Type'.Search
-                Width: =Parent.Width
+                Width: |
+                    =200
                 X: =0
                 Y: =0
                 ZIndex: =2
@@ -105,8 +108,8 @@ CPP As screen:
             OnSelect: =Reset(TextInputCanvas6); Reset(DropMarca1_1);Reset(DropModelo1_1)
             Text: ="Reset"
             Width: =56
-            X: =117
-            Y: =54
+            X: =122
+            Y: =39
             ZIndex: =4
 
         ButtonCanvas8 As Botón:
@@ -118,8 +121,8 @@ CPP As screen:
             OnSelect: =Navigate(ResumenCPP,ScreenTransition.UnCoverRight )
             Text: ="Ir a Resumen"
             Width: =136
-            X: =432
-            Y: =30
+            X: =430
+            Y: =7
             ZIndex: =7
 
         ButtonCanvas4_4 As Botón:
@@ -127,7 +130,7 @@ CPP As screen:
             BasePaletteColor: =RGBA(249, 83, 109, 1)
             DisplayMode: =DisplayMode.Edit
             FontSize: =9
-            Height: =43
+            Height: =36
             OnSelect: |
                 =ForAll(
                     GaleriaCPP.AllItems,
@@ -151,9 +154,9 @@ CPP As screen:
                 UpdateContext({varCheckboxChecked: !Checkbox1.Value});
             Text: ="Borrar Todo"
             Visible: =true
-            Width: =41
-            X: =365
-            Y: =25
+            Width: =36
+            X: =367
+            Y: =5
             ZIndex: =9
 
     Container2 As groupContainer.manualLayoutContainer:
@@ -223,7 +226,7 @@ CPP As screen:
             Container17_1 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(171, 181, 184, 1)
-                Height: =Parent.Height
+                Height: =52
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
