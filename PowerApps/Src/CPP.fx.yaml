@@ -696,17 +696,8 @@ CPP As screen:
                     PaddingTop: =
                     Size: =14
                     Text: ="Equivalencia"
-                    Visible: |-
-                        =If(
-                            CountRows(
-                                Filter(
-                                    GaleriaCPP.AllItems,
-                                    StartsWith(Nombre, "FILTRO")
-                                )
-                            ) > 0,
-                            false,
-                            true
-                        )
+                    Visible: |
+                        =true
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =120
                     X: =0
