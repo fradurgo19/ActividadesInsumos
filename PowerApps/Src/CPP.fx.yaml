@@ -291,7 +291,7 @@ CPP As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =40
+                    Width: =50
                     ZIndex: =2
 
                     TextCanvas7_16 As Texto:
@@ -305,7 +305,7 @@ CPP As screen:
                         Text: ="Q"
                         VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =40
+                        Width: =50
                         X: =0
                         Y: =0
                         ZIndex: =1
@@ -461,7 +461,7 @@ CPP As screen:
                         AutoHeight: =false
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
+                        Height: =46
                         PaddingLeft: =15
                         Size: =14
                         Text: ="Medida"
@@ -486,7 +486,7 @@ CPP As screen:
                         AutoHeight: =false
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
+                        Height: =51
                         PaddingLeft: =15
                         Size: =14
                         Text: ="Comentario"
@@ -511,7 +511,7 @@ CPP As screen:
                         AutoHeight: =false
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
+                        Height: =49
                         PaddingLeft: =15
                         Size: =14
                         Text: ="Adjuntos"
@@ -846,7 +846,6 @@ CPP As screen:
                         DropShadow: =DropShadow.Light
                         Height: =76
                         LayoutAlignItems: =LayoutAlignItems.Stretch
-                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -856,6 +855,7 @@ CPP As screen:
                         ZIndex: =18
 
                         Container97 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
                             LayoutMinWidth: =100
@@ -893,6 +893,7 @@ CPP As screen:
                                 ZIndex: =1
 
                         Container97_2 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
                             LayoutMinWidth: =100
@@ -900,7 +901,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =40
+                            Width: =50
                             ZIndex: =2
 
                             TextCanvas25_4 As Texto:
@@ -912,14 +913,16 @@ CPP As screen:
                                 Text: =ThisItem.Cantidad
                                 VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =40
+                                Width: =50
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
                         Container97_3 As groupContainer.manualLayoutContainer:
-                            DropShadow: =DropShadow.Light
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Semibold
                             FillPortions: =0
+                            LayoutMinHeight: =0
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -945,6 +948,7 @@ CPP As screen:
                                 ZIndex: =1
 
                         Container97_5 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
                             LayoutMinWidth: =100
@@ -952,7 +956,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =70
+                            Width: =90
                             ZIndex: =4
 
                             TextCanvas25_1 As Texto:
@@ -964,13 +968,14 @@ CPP As screen:
                                 Text: =ThisItem.Marca
                                 VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =70
+                                Width: =90
                                 Wrap: =true
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
                         Container97_4 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
                             LayoutMinWidth: =100
@@ -978,7 +983,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =70
+                            Width: =90
                             ZIndex: =5
 
                             TextCanvas25_2 As Texto:
@@ -990,12 +995,13 @@ CPP As screen:
                                 Text: =ThisItem.Modelo
                                 VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =70
+                                Width: =90
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
                         Container97_1 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
                             LayoutMinWidth: =100
@@ -1003,7 +1009,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =70
+                            Width: =90
                             ZIndex: =6
 
                             TextCanvas25_6 As Texto:
@@ -1015,12 +1021,13 @@ CPP As screen:
                                 Text: =ThisItem.Frecuencia
                                 VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =70
+                                Width: =90
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
                         Container97_6 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
                             LayoutMinWidth: =100
@@ -1046,6 +1053,7 @@ CPP As screen:
                                 ZIndex: =1
 
                         Container97_7 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
                             LayoutMinWidth: =100
@@ -1053,7 +1061,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =90
+                            Width: =95
                             ZIndex: =8
 
                             TextCanvas25_7 As Texto:
@@ -1065,12 +1073,13 @@ CPP As screen:
                                 Text: =ThisItem.Comentario
                                 VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =90
+                                Width: =95
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
                         Container97_8 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
                             LayoutMinWidth: =100
