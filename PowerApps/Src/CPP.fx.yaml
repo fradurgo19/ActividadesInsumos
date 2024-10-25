@@ -35,8 +35,8 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =646
-            X: =718
+            Width: =770
+            X: =593
             ZIndex: =2
 
             EncabezadoContenedor_2 As EncabezadoContenedor:
@@ -118,8 +118,8 @@ CPP As screen:
             OnSelect: =Navigate(ResumenCPP,ScreenTransition.UnCoverRight )
             Text: ="Ir a Resumen"
             Width: =136
-            X: =562
-            Y: =36
+            X: =432
+            Y: =30
             ZIndex: =7
 
         ButtonCanvas4_4 As Botón:
@@ -152,8 +152,8 @@ CPP As screen:
             Text: ="Borrar Todo"
             Visible: =true
             Width: =41
-            X: =434
-            Y: =33
+            X: =365
+            Y: =25
             ZIndex: =9
 
     Container2 As groupContainer.manualLayoutContainer:
@@ -495,7 +495,7 @@ CPP As screen:
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
-                            Size: =11
+                            Size: =12
                             Text: =ThisItem.Equivalencia
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -514,7 +514,7 @@ CPP As screen:
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
-                            Size: =11
+                            Size: =12
                             Text: =ThisItem.Marca
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -714,9 +714,12 @@ CPP As screen:
                                 (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
                                 (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
                                 (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
-                                (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0)
+                                (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0) &&
+                                (IsBlank(DropMarca1_1.Selected.Value) || Marca = DropMarca1_1.Selected.Value) &&
+                                (IsBlank(DropModelo1_1.Selected.Value) || Modelo = DropModelo1_1.Selected.Value)
                             )
                         )
+                        
                         
                         
                         
