@@ -244,6 +244,17 @@ CPP As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
+                    Visible: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    GaleriaCPP.AllItems,
+                                    StartsWith(Nombre, "FILTRO")
+                                )
+                            ) > 0,
+                            false,
+                            true
+                        )
                     Width: =100
                     ZIndex: =1
 
@@ -361,8 +372,9 @@ CPP As screen:
                         PressedFill: =RGBA(255, 255, 255, 1)
                         SearchFields: =["Value"]
                         SearchItems: =Search(Distinct(TablaDataCpp,Marca),DropMarca1_1.SearchText,Value)
-                        SelectionFill: =RGBA(71, 158, 245, 1)
+                        SelectionFill: =RGBA(171, 181, 184, 1)
                         SelectMultiple: =false
+                        Size: =10
                         Width: =90
                         ZIndex: =1
 
@@ -401,10 +413,10 @@ CPP As screen:
                         OnChange: =
                         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(40, 134, 222, 1)
+                        PressedFill: =RGBA(171, 181, 184, 1)
                         SearchFields: =["Value"]
                         SearchItems: =Search(Distinct(Filter(TablaDataCpp,Marca in DropMarca1_1.Selected.Value),Modelo),DropModelo1_1.SearchText,Value)
-                        SelectionFill: =RGBA(71, 158, 245, 1)
+                        SelectionFill: =RGBA(171, 181, 184, 1)
                         SelectMultiple: =false
                         Width: =90
                         ZIndex: =1
@@ -467,7 +479,7 @@ CPP As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =90
+                    Width: =95
                     ZIndex: =8
 
                     TextCanvas7_19 As Texto:
@@ -479,7 +491,7 @@ CPP As screen:
                         Size: =14
                         Text: ="Comentario"
                         Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =90
+                        Width: =95
                         X: =0
                         Y: =0
                         ZIndex: =1
@@ -851,6 +863,12 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
+                            Visible: |-
+                                =If(
+                                    StartsWith(ThisItem.Nombre, "FILTRO"),
+                                    false,
+                                    true
+                                )
                             Width: =100
                             ZIndex: =1
 
