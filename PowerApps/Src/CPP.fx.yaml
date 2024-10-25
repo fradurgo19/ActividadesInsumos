@@ -729,7 +729,7 @@ CPP As screen:
                     ShowNavigation: =true
                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
-                    TemplateSize: =92
+                    TemplateSize: =85
                     Transition: =Transition.Push
                     Width: =Parent.Width
                     ZIndex: =2
@@ -746,7 +746,7 @@ CPP As screen:
 
                     Container87 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =77
+                        Height: =76
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMode: =LayoutMode.Auto
@@ -853,7 +853,7 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
-                            Size: =12
+                            Size: =10
                             Text: =ThisItem.Frecuencia
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -885,11 +885,11 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
-                            Size: =9
+                            Size: =10
                             Text: =ThisItem.Comentario
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =100
+                            Width: =110
                             X: =497
                             Y: =0
                             ZIndex: =8
