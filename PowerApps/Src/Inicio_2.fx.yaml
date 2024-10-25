@@ -1,63 +1,94 @@
 Inicio_2 As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
 
-    GroupBackground_9 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =6
+    Container94 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =762
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1364
+        ZIndex: =10
 
-        BienvenidaFondo_4 As rectangle:
-            BorderColor: =RGBA(51, 51, 51, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =BienvenidaFondo_4.BorderColor
-            Height: =60
-            Width: =1366
-            ZIndex: =5
+        Container95 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =57
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1364
+            Y: =5
+            ZIndex: =1
 
-        ImageLogo_4 As image:
-            BorderColor: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            FocusedBorderColor: =ImageLogo_4.BorderColor
-            Height: =60
-            Image: =Logo
-            Width: =276
-            X: =1090
-            ZIndex: =6
+            Icon2_1 As icon.BackArrow:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =48
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.BackArrow
+                OnSelect: =Navigate(Appointments,ScreenTransition.Fade )
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =57
+                X: =45
+                ZIndex: =3
 
-    Video2_1 As videoPlayback:
-        AutoStart: =true
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Fill: =RGBA(105, 121, 126, 1)
-        Height: =696
-        Media: |-
-            ="https://youtu.be/wKTg9hNkLuA"
-        Width: =1314
-        X: =30
-        Y: =48
-        ZIndex: =8
+            GroupBackground_9 As group:
+                Height: =5
+                Width: =5
+                X: =-472
+                Y: =40
+                ZIndex: =3
 
-    Icon2_1 As icon.BackArrow:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(105, 121, 126, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =48
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.BackArrow
-        OnSelect: =Navigate(Appointments,ScreenTransition.Fade )
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =57
-        X: =109
-        ZIndex: =9
+                BienvenidaFondo_4 As rectangle:
+                    BorderColor: =RGBA(51, 51, 51, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderColor: =BienvenidaFondo_4.BorderColor
+                    Height: =57
+                    Width: =1006
+                    X: =321
+                    ZIndex: =1
+
+                ImageLogo_4 As image:
+                    BorderColor: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    FocusedBorderColor: =ImageLogo_4.BorderColor
+                    Height: =57
+                    Image: =Logo
+                    Width: =204
+                    X: =1155
+                    ZIndex: =2
+
+        Container96 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =700
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1364
+            Y: =62
+            ZIndex: =2
+
+            Video2_1 As videoPlayback:
+                AutoStart: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Fill: =RGBA(105, 121, 126, 1)
+                Height: =697
+                Media: |-
+                    ="https://youtu.be/wKTg9hNkLuA"
+                Width: =1364
+                ZIndex: =1
 
