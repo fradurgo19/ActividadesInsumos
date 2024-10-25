@@ -54,7 +54,7 @@ CPP As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =283
+            Width: =208
             X: =117
             ZIndex: =3
 
@@ -102,7 +102,7 @@ CPP As screen:
             BasePaletteColor: =RGBA(249, 83, 109, 1)
             DisplayMode: =DisplayMode.Edit
             Height: =22
-            OnSelect: =Reset(TextInputCanvas6); Reset(DropMarca1_1)
+            OnSelect: =Reset(TextInputCanvas6); Reset(DropMarca1_1);Reset(DropModelo1_1)
             Text: ="Reset"
             Width: =56
             X: =117
@@ -182,7 +182,7 @@ CPP As screen:
 
             Container10_2 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Fill: =RGBA(71, 158, 245, 1)
+                Fill: =RGBA(171, 181, 184, 1)
                 Height: =49
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
@@ -222,7 +222,7 @@ CPP As screen:
 
             Container17_1 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Fill: =RGBA(80, 173, 250, 0.25)
+                Fill: =RGBA(171, 181, 184, 1)
                 Height: =Parent.Height
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutMode: =LayoutMode.Auto
@@ -296,51 +296,70 @@ CPP As screen:
 
                 DropMarca1_1 As combobox:
                     BorderColor: =RGBA(166, 166, 166, 1)
-                    ChevronBackground: =RGBA(71, 158, 245, 1)
-                    ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                    ChevronBackground: =RGBA(171, 181, 184, 1)
+                    ChevronDisabledBackground: =RGBA(171, 181, 184, 1)
                     ChevronDisabledFill: =RGBA(214, 221, 224, 1)
-                    ChevronHoverBackground: =RGBA(40, 134, 222, 1)
+                    ChevronHoverBackground: =RGBA(171, 181, 184, 1)
                     ChevronHoverFill: =RGBA(255, 255, 255, 1)
                     Color: =RGBA(255, 255, 255, 1)
-                    DisabledBorderColor: =RGBA(71, 158, 245, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(71, 158, 245, 1)
+                    DisabledBorderColor: =RGBA(171, 181, 184, 1)
+                    DisabledColor: =RGBA(255, 255, 255, 1)
+                    DisabledFill: =RGBA(171, 181, 184, 1)
                     DisplayFields: =["Value"]
-                    Fill: =RGBA(71, 158, 245, 1)
+                    Fill: =RGBA(171, 181, 184, 1)
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =RGBA(255, 255, 255, 1)
+                    HoverBorderColor: =Color.White
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =RGBA(171, 181, 184, 1)
                     InputTextPlaceholder: ="Marca"
                     Items: =Distinct(TablaDataCpp,Marca)
+                    LayoutMinHeight: =32
                     OnChange: =
                     PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     PressedColor: =RGBA(0, 0, 0, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     SearchFields: =["Value"]
                     SearchItems: =Search(Distinct(TablaDataCpp,Marca),DropMarca1_1.SearchText,Value)
-                    SelectionFill: =RGBA(215, 58, 60, 1)
+                    SelectionFill: =RGBA(71, 158, 245, 1)
                     SelectMultiple: =false
                     Size: =9
                     Width: =90
                     Y: =95
-                    ZIndex: =5
+                    ZIndex: =4
 
-                TextCanvas7_22 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =32
+                DropModelo1_1 As combobox:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    ChevronBackground: =RGBA(171, 181, 184, 1)
+                    ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                    ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                    ChevronHoverBackground: =RGBA(171, 181, 184, 1)
+                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(171, 181, 184, 1)
+                    DisabledColor: =RGBA(255, 255, 255, 1)
+                    DisabledFill: =RGBA(171, 181, 184, 1)
+                    DisplayFields: =["Value"]
+                    Fill: =RGBA(171, 181, 184, 1)
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =Color.White
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =RGBA(171, 181, 184, 1)
+                    InputTextPlaceholder: ="Modelo"
+                    Items: |
+                        =Distinct(Filter(TablaDataCpp, Marca in DropMarca1_1.Selected.Value),Modelo)
                     LayoutMinHeight: =32
-                    LayoutMinWidth: =10
-                    PaddingLeft: =5
-                    Size: =12
-                    Text: ="Modelo"
-                    Weight: ='TextCanvas.Weight'.Semibold
+                    OnChange: =
+                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(40, 134, 222, 1)
+                    SearchFields: =["Value"]
+                    SearchItems: =Search(Distinct(Filter(TablaDataCpp,Marca in DropMarca1_1.Selected.Value),Modelo),DropModelo1_1.SearchText,Value)
+                    SelectionFill: =RGBA(71, 158, 245, 1)
+                    SelectMultiple: =false
+                    Size: =9
                     Width: =90
-                    X: =0
-                    Y: =0
-                    ZIndex: =6
+                    Y: =292
+                    ZIndex: =5
 
                 TextCanvas7_17 As Texto:
                     AutoHeight: =false
@@ -560,7 +579,7 @@ CPP As screen:
 
             Container10_1 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Fill: =RGBA(71, 158, 245, 1)
+                Fill: =RGBA(171, 181, 184, 1)
                 Height: =49
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
@@ -628,7 +647,7 @@ CPP As screen:
 
             Container10 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Fill: =RGBA(71, 158, 245, 1)
+                Fill: =RGBA(171, 181, 184, 1)
                 Height: =52
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
@@ -783,7 +802,7 @@ CPP As screen:
                             LayoutMinWidth: =80
                             PaddingLeft: =25
                             PaddingTop: =5
-                            Size: =11
+                            Size: =12
                             Text: =ThisItem.Nombre
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -800,7 +819,7 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
-                            Size: =10
+                            Size: =12
                             Text: =ThisItem.Marca
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -817,7 +836,7 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
-                            Size: =10
+                            Size: =12
                             Text: =ThisItem.Modelo
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -833,7 +852,7 @@ CPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingTop: =5
-                            Size: =10
+                            Size: =12
                             Text: =ThisItem.Frecuencia
                             VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -956,20 +975,20 @@ CPP As screen:
                         Size: =13
                         Text: =
                         Width: =28
-                        X: =773
-                        Y: =46
+                        X: =4
+                        Y: =23
                         ZIndex: =20
 
                     TextCanvas12 As Texto:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         FontItalic: =true
-                        Height: =23
+                        Height: =12
                         Size: =8
                         Text: =ThisItem.No
-                        Width: =20
+                        Width: =34
                         X: =12
-                        Y: =54
+                        Y: =64
                         ZIndex: =21
 
         Container66 As groupContainer.manualLayoutContainer:
@@ -1076,7 +1095,7 @@ CPP As screen:
 
     Container14 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Fill: =RGBA(71, 158, 245, 1)
+        Fill: =RGBA(171, 181, 184, 1)
         Height: =688
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
