@@ -317,7 +317,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Nombre"
-                    Width: =150
+                    Width: =160
                     X: =0
                     Y: =0
                     ZIndex: =3
@@ -332,6 +332,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="No"
+                    Visible: =false
                     Width: =40
                     X: =0
                     Y: =0
@@ -628,7 +629,7 @@ ResumenCPP As screen:
                             Size: =13
                             Text: =ThisItem.Value.Nombre
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =140
+                            Width: =150
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -639,7 +640,9 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =9
                             Text: =ThisItem.Value.No
+                            Visible: =false
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =40
                             X: =0
@@ -652,6 +655,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =10
                             Text: =ThisItem.Value.Marca
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =70
@@ -665,6 +669,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =10
                             Text: =ThisItem.Value.Modelo
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =70
@@ -678,6 +683,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =10
                             Text: =ThisItem.Value.Parte
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =96
@@ -691,6 +697,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =10
                             Text: =ThisItem.Value.Tipo
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =90
@@ -704,6 +711,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =12
                             Text: =ThisItem.Value.Frecuencia
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =60
