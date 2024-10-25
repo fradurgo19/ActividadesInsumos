@@ -241,7 +241,7 @@ CPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =10
                     PaddingLeft: =15
-                    Size: =12
+                    Size: =14
                     Text: ="RefSap"
                     Visible: |
                         =If(
@@ -269,7 +269,7 @@ CPP As screen:
                     LayoutMinHeight: =50
                     LayoutMinWidth: =32
                     PaddingLeft: =15
-                    Size: =12
+                    Size: =14
                     Text: ="Q"
                     VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                     Weight: ='TextCanvas.Weight'.Semibold
@@ -286,7 +286,7 @@ CPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =20
                     PaddingLeft: =5
-                    Size: =12
+                    Size: =14
                     Text: ="Nombre"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =120
@@ -322,7 +322,6 @@ CPP As screen:
                     SearchItems: =Search(Distinct(TablaDataCpp,Marca),DropMarca1_1.SearchText,Value)
                     SelectionFill: =RGBA(71, 158, 245, 1)
                     SelectMultiple: =false
-                    Size: =9
                     Width: =90
                     Y: =95
                     ZIndex: =4
@@ -356,7 +355,6 @@ CPP As screen:
                     SearchItems: =Search(Distinct(Filter(TablaDataCpp,Marca in DropMarca1_1.Selected.Value),Modelo),DropModelo1_1.SearchText,Value)
                     SelectionFill: =RGBA(71, 158, 245, 1)
                     SelectMultiple: =false
-                    Size: =9
                     Width: =90
                     Y: =292
                     ZIndex: =5
@@ -369,7 +367,7 @@ CPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
                     PaddingLeft: =15
-                    Size: =12
+                    Size: =14
                     Text: ="Frecuencia"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =90
@@ -385,7 +383,7 @@ CPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
                     PaddingLeft: =15
-                    Size: =12
+                    Size: =14
                     Text: ="Medida"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =80
@@ -401,7 +399,7 @@ CPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
                     PaddingLeft: =15
-                    Size: =12
+                    Size: =14
                     Text: ="Comentario"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =96
@@ -417,7 +415,7 @@ CPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =32
                     PaddingLeft: =15
-                    Size: =12
+                    Size: =14
                     Text: ="Adjuntos"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =100
@@ -598,7 +596,7 @@ CPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingTop: =
-                    Size: =12
+                    Size: =14
                     Text: ="Equivalencia"
                     Visible: |-
                         =If(
@@ -626,7 +624,7 @@ CPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingTop: =
-                    Size: =12
+                    Size: =14
                     Text: ="Marca"
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =120
