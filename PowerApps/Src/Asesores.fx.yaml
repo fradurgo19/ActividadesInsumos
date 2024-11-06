@@ -1251,7 +1251,7 @@
                                 Update: =DataCardValue21.Selected
                                 Width: =259
                                 X: =0
-                                Y: =0
+                                Y: =1
                                 ZIndex: =1
 
                                 DataCardKey21 As Texto:
@@ -1314,7 +1314,7 @@
                                 Update: =Value(DataCardValue4.Value)
                                 Width: =259
                                 X: =1
-                                Y: =0
+                                Y: =1
                                 ZIndex: =2
 
                                 DataCardKey4 As Texto:
@@ -1374,7 +1374,7 @@
                                 Update: =DataCardValue12.Selected
                                 Width: =259
                                 X: =2
-                                Y: =0
+                                Y: =1
                                 ZIndex: =2
 
                                 DataCardKey12 As Texto:
@@ -1438,8 +1438,8 @@
                                 Required: =false
                                 Update: =DataCardValue14.Selected
                                 Width: =259
-                                X: =0
-                                Y: =1
+                                X: =1
+                                Y: =0
                                 ZIndex: =2
 
                                 DataCardKey14 As Texto:
@@ -1501,8 +1501,8 @@
                                 Required: =false
                                 Update: =DataCardValue15.Selected
                                 Width: =259
-                                X: =1
-                                Y: =1
+                                X: =2
+                                Y: =0
                                 ZIndex: =2
 
                                 DataCardKey15 As Texto:
@@ -1564,8 +1564,8 @@
                                 Required: =false
                                 Update: =DataCardValue17.Selected
                                 Width: =259
-                                X: =2
-                                Y: =1
+                                X: =0
+                                Y: =0
                                 ZIndex: =2
 
                                 DataCardKey17 As Texto:
@@ -1651,7 +1651,8 @@
                                     Height: =62
                                     Mode: ='TextInputCanvas.Mode'.Multiline
                                     Required: =Parent.Required
-                                    TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
+                                    TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+                                    Type: ='TextInputCanvas.Type'.Text
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Value: =Parent.Default
                                     Width: =774
