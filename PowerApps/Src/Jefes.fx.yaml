@@ -856,7 +856,7 @@
 
                 Container52_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =216
+                    Height: =576
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -1308,7 +1308,7 @@
                     DisabledBorderColor: =RGBA(214, 221, 224, 1)
                     Explode: =1
                     Font: =Font.'Segoe UI'
-                    Height: =176
+                    Height: =185
                     HoverBorderColor: =RGBA(255, 255, 0, 1)
                     ItemBorderThickness: =3
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
@@ -1318,9 +1318,9 @@
                         
                     PressedBorderColor: =RGBA(40, 134, 222, 1)
                     Size: =15
-                    Width: =412
+                    Width: =436
                     X: =601
-                    Y: =231
+                    Y: =240
                     ZIndex: =12
 
     CompositeColumnChart1 As group:
@@ -1337,7 +1337,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             Font: =Font.'Segoe UI'
             GridStyle: =GridStyle.All
-            Height: =342
+            Height: =214
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =[RGBA(0, 0, 0, 1),RGBA(49,130,93, 1), RGBA(255,0,0,1), RGBA(246,199,144,1), RGBA(0,0,255,1), RGBA(255,255,255,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
             Items: |-
@@ -1352,10 +1352,10 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             SeriesAxisMin: =0
             Size: =16
-            Width: =1016
-            X: =325
+            Width: =411
+            X: =928
             XLabelAngle: =10
-            Y: =407
+            Y: =536
             ZIndex: =5
 
         Legend1 As legend:
@@ -1367,13 +1367,13 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(220, 220, 220, 1)
             Font: =Font.'Segoe UI'
-            Height: =27
+            Height: =17
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =ColumnChart1.ItemColorSet
             Items: =ColumnChart1.SeriesLabels
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            Width: =957
-            X: =325
-            Y: =702
+            Width: =387
+            X: =928
+            Y: =721
             ZIndex: =6
 
