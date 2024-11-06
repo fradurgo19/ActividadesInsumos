@@ -1623,7 +1623,7 @@
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
                                 Fill: =RGBA(0, 0, 0, 0)
-                                Height: =98
+                                Height: =61
                                 MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
                                 Required: =false
                                 Update: =DataCardValue13.Value
@@ -1650,37 +1650,16 @@
                                     FontSize: =14
                                     Height: =62
                                     Mode: ='TextInputCanvas.Mode'.Multiline
+                                    Placeholder: ="Escriba aqui las observaciones"
                                     Required: =Parent.Required
                                     TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
                                     Type: ='TextInputCanvas.Type'.Text
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Value: =Parent.Default
-                                    Width: =774
-                                    X: =0
+                                    Width: =729
+                                    X: =24
                                     Y: =DataCardKey13.Y + DataCardKey13.Height + 4
                                     ZIndex: =2
-
-                                ErrorMessage13 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =30
-                                    Text: =Parent.Error
-                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                    Width: =Parent.Width - 48
-                                    Wrap: =true
-                                    X: =24
-                                    Y: =DataCardValue13.Y + DataCardValue13.Height
-                                    ZIndex: =3
-
-                                StarVisible13 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =30
-                                    Text: ="*"
-                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                    Width: =30
-                                    X: =0
-                                    Y: =DataCardKey13.Y
-                                    ZIndex: =4
 
                 Container59 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
