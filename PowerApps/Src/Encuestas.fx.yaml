@@ -338,7 +338,7 @@ Encuestas As screen:
                             PaddingLeft: =15
                             Size: =14
                             Text: ="Diligencia"
-                            Width: =110
+                            Width: =200
                             X: =0
                             Y: =0
                             ZIndex: =4
@@ -352,7 +352,7 @@ Encuestas As screen:
                             LayoutMinWidth: =60
                             PaddingLeft: =15
                             Size: =14
-                            Text: ="Asunto"
+                            Text: ="OTT"
                             Width: =100
                             X: =0
                             Y: =0
@@ -367,8 +367,8 @@ Encuestas As screen:
                             LayoutMinWidth: =96
                             PaddingLeft: =15
                             Size: =14
-                            Text: ="Descripción"
-                            Width: =120
+                            Text: ="Cliente"
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =6
@@ -462,10 +462,44 @@ Encuestas As screen:
                                 PaddingLeft: =10
                                 Size: =11
                                 Text: =ThisItem.'Correo Responsable'
-                                Width: =110
+                                Width: =200
                                 X: =0
                                 Y: =0
                                 ZIndex: =8
+
+                            TextCanvas9_19 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.OT
+                                Width: =100
+                                X: =0
+                                Y: =0
+                                ZIndex: =9
+
+                            TextCanvas9_28 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.Cliente
+                                Width: =100
+                                X: =0
+                                Y: =0
+                                ZIndex: =10
 
                 Container4_2 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
@@ -634,7 +668,7 @@ Encuestas As screen:
                         ShowNavigation: =true
                         TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                         TemplatePadding: =0
-                        TemplateSize: =62
+                        TemplateSize: =52
                         Transition: =Transition.Push
                         Width: =Parent.Width
                         ZIndex: =1
