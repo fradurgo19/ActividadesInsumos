@@ -601,7 +601,7 @@
                         PaddingLeft: =5
                         Size: =14
                         Text: ="Fecha"
-                        Width: =90
+                        Width: =75
                         X: =0
                         Y: =0
                         ZIndex: =3
@@ -820,7 +820,7 @@
                                 Height: =Parent.Height
                                 PaddingLeft: =10
                                 Size: =9
-                                Text: =ThisItem.'¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value
+                                Text: =ThisItem.Servicio.Value
                                 Width: =61
                                 X: =0
                                 Y: =0
@@ -833,7 +833,7 @@
                                 Size: =11
                                 Text: =ThisItem.ID
                                 Width: =32
-                                X: =0
+                                X: =29
                                 Y: =0
                                 ZIndex: =2
 
@@ -844,7 +844,7 @@
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =Parent.Height
                                 PaddingLeft: =10
-                                Size: =11
+                                Size: =9
                                 Text: =ThisItem.Creado
                                 Width: =80
                                 Wrap: =true
@@ -1090,6 +1090,7 @@
                             DataCardKey23 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =22
+                                Size: =12
                                 Text: =Parent.DisplayName
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =Parent.Width - 48
@@ -1153,6 +1154,7 @@
                             DataCardKey11 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =20
+                                Size: =12
                                 Text: ="Estado"
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =85
@@ -1165,7 +1167,7 @@
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =92
+                                Height: =70
                                 Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
                                 Required: =false
                                 TriggerOutput: ="Keypress"
@@ -1217,6 +1219,7 @@
                             DataCardKey18 As Texto:
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =22
+                                Size: =12
                                 Text: =Parent.DisplayName
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =Parent.Width - 48
@@ -1289,7 +1292,7 @@
                                 FontWeight: =FontWeight.Semibold
                                 Height: =34
                                 PaddingLeft: =0
-                                Size: =13
+                                Size: =12
                                 Text: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 Wrap: =false
@@ -1325,6 +1328,7 @@
                                 PaddingTop: =5
                                 PressedColor: =RGBA(255, 255, 255, 1)
                                 PressedFill: =RGBA(105, 121, 126, 1)
+                                Size: =12
                                 Tooltip: =Parent.DisplayName
                                 Width: =Parent.Width - 60
                                 X: =30
