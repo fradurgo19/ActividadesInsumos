@@ -276,8 +276,8 @@ Encuestas As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =572
-                    X: =765
+                    Width: =683
+                    X: =653
                     Y: =126
                     ZIndex: =21
 
@@ -292,9 +292,9 @@ Encuestas As screen:
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =2
                         DisplayMode: =DisplayMode.Edit
-                        Height: =48
+                        Height: =36
                         Text: =
-                        Width: =975
+                        Width: =683
                         X: =0
                         Y: =(Parent.Height - Self.Height)/2
                         ZIndex: =1
@@ -309,38 +309,8 @@ Encuestas As screen:
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =572
+                        Width: =683
                         ZIndex: =2
-
-                        TextCanvas7_21 As Texto:
-                            AutoHeight: =false
-                            DisplayMode: =DisplayMode.Edit
-                            FontColor: =RGBA(255, 255, 255, 1)
-                            Height: =32
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            PaddingLeft: =5
-                            Size: =14
-                            Text: ="ID"
-                            Width: =30
-                            X: =0
-                            Y: =0
-                            ZIndex: =1
-
-                        TextCanvas7_13 As Texto:
-                            AutoHeight: =false
-                            DisplayMode: =DisplayMode.Edit
-                            FontColor: =RGBA(255, 255, 255, 1)
-                            Height: =32
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =40
-                            PaddingLeft: =5
-                            Size: =14
-                            Text: ="Tipo"
-                            Width: =35
-                            X: =0
-                            Y: =0
-                            ZIndex: =2
 
                         TextCanvas7_14 As Texto:
                             AutoHeight: =false
@@ -352,7 +322,7 @@ Encuestas As screen:
                             PaddingLeft: =5
                             Size: =14
                             Text: ="Fecha"
-                            Width: =90
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -366,8 +336,8 @@ Encuestas As screen:
                             LayoutMinWidth: =96
                             PaddingLeft: =15
                             Size: =14
-                            Text: ="Correo Solicita"
-                            Width: =150
+                            Text: ="Diligencia"
+                            Width: =110
                             X: =0
                             Y: =0
                             ZIndex: =4
@@ -406,13 +376,13 @@ Encuestas As screen:
                     BorderThickness: =2
                     DropShadow: =DropShadow.Light
                     Fill: =Color.White
-                    Height: =527
+                    Height: =511
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
                     RadiusTopLeft: =10
                     RadiusTopRight: =10
-                    Width: =572
-                    X: =765
+                    Width: =684
+                    X: =653
                     Y: =170
                     ZIndex: =22
 
@@ -420,7 +390,7 @@ Encuestas As screen:
                         BorderColor: =RGBA(139, 154, 159, 1)
                         BorderThickness: =2
                         DelayItemLoading: =true
-                        Height: =518
+                        Height: =511
                         Items: |-
                             =Sort(
                                 Filter(
@@ -462,57 +432,6 @@ Encuestas As screen:
                             Width: =Parent.Width
                             ZIndex: =6
 
-                            Container19_2 As groupContainer.manualLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                FillPortions: =0
-                                LayoutMinHeight: =50
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
-                                Width: =145
-                                ZIndex: =1
-
-                                TextCanvas9_11 As Texto:
-                                    BorderColor: =RGBA(214, 221, 224, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    BorderThickness: =1
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =Parent.Height
-                                    PaddingLeft: =10
-                                    Size: =9
-                                    Text: =ThisItem.'¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value
-                                    Width: =61
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =1
-
-                                TextCanvas4_1 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =28
-                                    Size: =11
-                                    Text: =ThisItem.ID
-                                    Width: =32
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =2
-
-                                TextCanvas9_12 As Texto:
-                                    BorderColor: =RGBA(214, 221, 224, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    BorderThickness: =1
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =Parent.Height
-                                    PaddingLeft: =10
-                                    Size: =11
-                                    Text: =ThisItem.Creado
-                                    Width: =80
-                                    Wrap: =true
-                                    X: =61
-                                    Y: =0
-                                    ZIndex: =3
-
                             TextCanvas9_17 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -524,7 +443,7 @@ Encuestas As screen:
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =ThisItem.'Respuesta a Solicitud'
+                                Text: =ThisItem.Creado
                                 Width: =100
                                 X: =0
                                 Y: =0
@@ -541,75 +460,11 @@ Encuestas As screen:
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =ThisItem.Conclusión
-                                Width: =100
+                                Text: =ThisItem.'Correo Responsable'
+                                Width: =110
                                 X: =0
                                 Y: =0
                                 ZIndex: =8
-
-                            DataCardValue39_1 As attachments:
-                                BorderColor: =
-                                BorderStyle: =BorderStyle.None
-                                BorderThickness: =2
-                                Color: =RGBA(51, 51, 51, 1)
-                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                DisabledColor: =RGBA(166, 166, 166, 1)
-                                DisabledFill: =RGBA(244, 244, 244, 1)
-                                DisplayMode: =Parent.DisplayMode
-                                FocusedBorderThickness: =4
-                                Font: =Font.'Segoe UI'
-                                Height: =123
-                                HoverColor: =RGBA(51, 51, 51, 1)
-                                HoverFill: =RGBA(212, 212, 212, 1)
-                                IsInDataCard: =true
-                                ItemColor: =RGBA(0, 0, 0, 1)
-                                ItemFill: =RGBA(105, 121, 126, 1)
-                                ItemHoverColor: =RGBA(51, 51, 51, 1)
-                                ItemHoverFill: =RGBA(212, 212, 212, 1)
-                                Items: =ThisItem.'Datos adjuntos'
-                                ItemSpacing: =12
-                                LayoutMinHeight: =50
-                                NoAttachmentsColor: =RGBA(166, 166, 166, 1)
-                                OnAddFile: |
-                                    =false
-                                PaddingBottom: =5
-                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                PaddingRight: =5
-                                PaddingTop: =5
-                                PressedColor: =RGBA(255, 255, 255, 1)
-                                PressedFill: =RGBA(105, 121, 126, 1)
-                                Size: =9
-                                Tooltip: =
-                                Width: =120
-                                X: =595
-                                Y: =331
-                                ZIndex: =9
-
-                            Container19_3 As groupContainer.manualLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                FillPortions: =0
-                                LayoutMinHeight: =50
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
-                                Width: =80
-                                ZIndex: =10
-
-                                TextCanvas9_19 As Texto:
-                                    BorderColor: =RGBA(214, 221, 224, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    BorderThickness: =1
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontItalic: =true
-                                    Height: =Parent.Height
-                                    PaddingLeft: =10
-                                    Size: =9
-                                    Text: =ThisItem.'Modificado por'.Email
-                                    Width: =67
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =1
 
                 Container4_2 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
@@ -644,7 +499,7 @@ Encuestas As screen:
 
                     Container17_3 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Fill: =RGBA(71, 158, 245, 1)
+                        Fill: =RGBA(45, 128, 40, 1)
                         Height: =44
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutMode: =LayoutMode.Auto
@@ -749,7 +604,7 @@ Encuestas As screen:
                     BorderThickness: =2
                     DropShadow: =DropShadow.Light
                     Fill: =Color.White
-                    Height: =440
+                    Height: =511
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
                     RadiusTopLeft: =10
@@ -763,7 +618,7 @@ Encuestas As screen:
                         BorderColor: =RGBA(139, 154, 159, 1)
                         BorderThickness: =2
                         DelayItemLoading: =true
-                        Height: =440
+                        Height: =506
                         Items: |-
                             =Sort(
                                 Filter(
