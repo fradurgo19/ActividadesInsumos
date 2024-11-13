@@ -452,6 +452,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         Width: =190
                         X: =0
                         Y: =0
@@ -470,6 +471,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         Width: =190
                         X: =0
                         Y: =0
@@ -762,7 +764,7 @@
                         =Sort(
                             Filter(
                                 'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                (TextInputCanvas5.Value in 'Correo Responsable' || TextInputCanvas5.Value in Asunto || TextInputCanvas5.Value in ID || IsBlank(TextInputCanvas5.Value)) && ('Tipo de Comunicación'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
+                                (TextInputCanvas5.Value in 'Correo Responsable' || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || IsBlank(TextInputCanvas5.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                             ),
                             Modificado,
                             SortOrder.Descending
@@ -818,7 +820,7 @@
                                 Height: =Parent.Height
                                 PaddingLeft: =10
                                 Size: =9
-                                Text: =ThisItem.'Tipo de Comunicación'.Value
+                                Text: =ThisItem.'¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value
                                 Width: =61
                                 X: =0
                                 Y: =0
@@ -860,7 +862,7 @@
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =11
-                            Text: =ThisItem.Correo
+                            Text: =ThisItem.Servicio.Value
                             Width: =100
                             X: =0
                             Y: =0
@@ -876,7 +878,7 @@
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =11
-                            Text: =ThisItem.Asunto
+                            Text: =ThisItem.Cliente
                             Width: =100
                             X: =0
                             Y: =0
@@ -892,7 +894,7 @@
                             LayoutMinWidth: =32
                             PaddingLeft: =10
                             Size: =11
-                            Text: =ThisItem.Descripcion
+                            Text: =ThisItem.OT
                             Width: =120
                             X: =0
                             Y: =0
@@ -1074,10 +1076,10 @@
                             DataField: ="RespuestaaSolicitud"
                             Default: =ThisItem.'Respuesta a Solicitud'
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,RespuestaaSolicitud)
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'Respuesta a Solicitud')
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =118
-                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, RespuestaaSolicitud)
+                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, 'Respuesta a Solicitud')
                             Required: =false
                             Update: =DataCardValue23.Value
                             Width: =256
@@ -1166,6 +1168,7 @@
                                 Height: =92
                                 Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
                                 Required: =false
+                                TriggerOutput: ="Keypress"
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Width: =Parent.Width - 48
                                 X: =24
@@ -1200,10 +1203,10 @@
                             DataField: ="Conclusi_x00f3_n"
                             Default: =ThisItem.Conclusión
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Conclusi_x00f3_n)
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Conclusión)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =114
-                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, Conclusi_x00f3_n)
+                            MaxLength: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'], DataSourceInfo.MaxLength, Conclusión)
                             Required: =false
                             Update: =DataCardValue18.Value
                             Width: =256
@@ -1263,7 +1266,7 @@
                             DataField: ="{Attachments}"
                             Default: =ThisItem.'Datos adjuntos'
                             DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'{Attachments}')
+                            DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,'Datos adjuntos')
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =173
                             Required: =false

@@ -903,6 +903,7 @@
                             {Value: "300000-500000", Min: 300000, Max: 500000}
                         ]
                     Required: =false
+                    TriggerOutput: ="Keypress"
                     Width: =170
                     X: =730
                     Y: =93
@@ -923,6 +924,7 @@
                         "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                         "fvasquez@partequipos.com", "dcubides@partequipos.com"]
                     Required: =false
+                    TriggerOutput: ="Keypress"
                     Width: =250
                     X: =408
                     Y: =93
@@ -934,6 +936,7 @@
                     InputTextPlaceholder: ="Buscar Tipo de Maquina"
                     Items: =Distinct(colSerieUnicosPorMes, TipoDeMaquina)
                     Required: =false
+                    TriggerOutput: ="Keypress"
                     Width: =209
                     X: =18
                     Y: =94
@@ -997,6 +1000,7 @@
                         "GEAR;PLANETARY",
                         ]
                     Required: =false
+                    TriggerOutput: ="Keypress"
                     Width: =130
                     X: =227
                     Y: =93
