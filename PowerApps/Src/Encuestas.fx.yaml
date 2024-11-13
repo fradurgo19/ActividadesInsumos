@@ -84,8 +84,8 @@ Encuestas As screen:
                 BorderThickness: =1
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =Parent.Height
-                Width: =1350
+                Height: =689
+                Width: =1351
                 X: =0
                 Y: =0
                 ZIndex: =14
@@ -158,7 +158,7 @@ Encuestas As screen:
 
                     Container13_1 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =71
+                        Height: =54
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutMode: =LayoutMode.Auto
                         PaddingBottom: =10
@@ -170,6 +170,7 @@ Encuestas As screen:
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
                         Width: =1313
+                        Y: =15
                         ZIndex: =1
 
                         "TextInputCanvas5_1 As 'Entrada de texto'":
@@ -277,7 +278,7 @@ Encuestas As screen:
                     RadiusTopRight: =4
                     Width: =572
                     X: =765
-                    Y: =82
+                    Y: =126
                     ZIndex: =21
 
                     ButtonCanvas4_1 As Botón:
@@ -405,21 +406,21 @@ Encuestas As screen:
                     BorderThickness: =2
                     DropShadow: =DropShadow.Light
                     Fill: =Color.White
-                    Height: =571
+                    Height: =527
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
                     RadiusTopLeft: =10
                     RadiusTopRight: =10
                     Width: =572
                     X: =765
-                    Y: =126
+                    Y: =170
                     ZIndex: =22
 
                     "Gallery6_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                         BorderColor: =RGBA(139, 154, 159, 1)
                         BorderThickness: =2
                         DelayItemLoading: =true
-                        Height: =562
+                        Height: =518
                         Items: |-
                             =Sort(
                                 Filter(
@@ -620,7 +621,7 @@ Encuestas As screen:
                     RadiusTopRight: =4
                     Width: =597
                     X: =15
-                    Y: =82
+                    Y: =126
                     ZIndex: =23
 
                     ButtonCanvas4_3 As Botón:
@@ -664,7 +665,7 @@ Encuestas As screen:
                             PaddingLeft: =5
                             Size: =14
                             Text: ="OTT"
-                            Width: =60
+                            Width: =50
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -679,7 +680,7 @@ Encuestas As screen:
                             PaddingLeft: =5
                             Size: =14
                             Text: ="Cliente"
-                            Width: =50
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -694,7 +695,7 @@ Encuestas As screen:
                             PaddingLeft: =5
                             Size: =14
                             Text: ="Tipo de Servicio"
-                            Width: =110
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -709,7 +710,7 @@ Encuestas As screen:
                             PaddingLeft: =15
                             Size: =14
                             Text: ="Fecha de Servicio"
-                            Width: =150
+                            Width: =110
                             X: =0
                             Y: =0
                             ZIndex: =4
@@ -748,26 +749,26 @@ Encuestas As screen:
                     BorderThickness: =2
                     DropShadow: =DropShadow.Light
                     Fill: =Color.White
-                    Height: =485
+                    Height: =440
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
                     RadiusTopLeft: =10
                     RadiusTopRight: =10
                     Width: =597
                     X: =15
-                    Y: =126
+                    Y: =170
                     ZIndex: =24
 
                     "Gallery6_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                         BorderColor: =RGBA(139, 154, 159, 1)
                         BorderThickness: =2
                         DelayItemLoading: =true
-                        Height: =562
+                        Height: =440
                         Items: |-
                             =Sort(
                                 Filter(
-                                    'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                    (TextInputCanvas5_1.Value in 'Correo Responsable' || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                    'Oportunidades de encuestas',
+                                    (TextInputCanvas5_1.Value in Email || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) && (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
                                 ),
                                 Modificado,
                                 SortOrder.Descending
@@ -815,8 +816,8 @@ Encuestas As screen:
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =ThisItem.'Respuesta a Solicitud'
-                                Width: =100
+                                Text: =ThisItem.OTT
+                                Width: =50
                                 X: =0
                                 Y: =0
                                 ZIndex: =7
@@ -832,73 +833,77 @@ Encuestas As screen:
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =ThisItem.Conclusión
+                                Text: =ThisItem.Cliente
                                 Width: =100
                                 X: =0
                                 Y: =0
                                 ZIndex: =8
 
-                            DataCardValue39_2 As attachments:
-                                BorderColor: =
-                                BorderStyle: =BorderStyle.None
-                                BorderThickness: =2
-                                Color: =RGBA(51, 51, 51, 1)
-                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                DisabledColor: =RGBA(166, 166, 166, 1)
-                                DisabledFill: =RGBA(244, 244, 244, 1)
-                                DisplayMode: =Parent.DisplayMode
-                                FocusedBorderThickness: =4
-                                Font: =Font.'Segoe UI'
-                                Height: =123
-                                HoverColor: =RGBA(51, 51, 51, 1)
-                                HoverFill: =RGBA(212, 212, 212, 1)
-                                IsInDataCard: =true
-                                ItemColor: =RGBA(0, 0, 0, 1)
-                                ItemFill: =RGBA(105, 121, 126, 1)
-                                ItemHoverColor: =RGBA(51, 51, 51, 1)
-                                ItemHoverFill: =RGBA(212, 212, 212, 1)
-                                Items: =ThisItem.'Datos adjuntos'
-                                ItemSpacing: =12
-                                LayoutMinHeight: =50
-                                NoAttachmentsColor: =RGBA(166, 166, 166, 1)
-                                OnAddFile: |
-                                    =false
-                                PaddingBottom: =5
-                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                PaddingRight: =5
-                                PaddingTop: =5
-                                PressedColor: =RGBA(255, 255, 255, 1)
-                                PressedFill: =RGBA(105, 121, 126, 1)
-                                Size: =9
-                                Tooltip: =
-                                Width: =120
-                                X: =595
-                                Y: =331
+                            TextCanvas9_24 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.TipodeServicio
+                                Width: =100
+                                X: =0
+                                Y: =0
                                 ZIndex: =9
 
-                            Container19_5 As groupContainer.manualLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                FillPortions: =0
-                                LayoutMinHeight: =50
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
-                                Width: =80
+                            TextCanvas9_25 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.FechadeServicio
+                                Width: =110
+                                X: =0
+                                Y: =0
                                 ZIndex: =10
 
-                                TextCanvas9_24 As Texto:
-                                    BorderColor: =RGBA(214, 221, 224, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    BorderThickness: =1
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontItalic: =true
-                                    Height: =Parent.Height
-                                    PaddingLeft: =10
-                                    Size: =9
-                                    Text: =ThisItem.'Modificado por'.Email
-                                    Width: =67
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =1
+                            TextCanvas9_26 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.Telefonodecontacto
+                                Width: =100
+                                X: =0
+                                Y: =0
+                                ZIndex: =11
+
+                            TextCanvas9_27 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.Email
+                                Width: =120
+                                X: =0
+                                Y: =0
+                                ZIndex: =12
 
