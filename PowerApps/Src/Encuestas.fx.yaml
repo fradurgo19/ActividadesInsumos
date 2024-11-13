@@ -391,7 +391,7 @@ Encuestas As screen:
                         BorderColor: =RGBA(139, 154, 159, 1)
                         BorderThickness: =2
                         DelayItemLoading: =true
-                        Height: =511
+                        Height: =539
                         Items: |-
                             =Sort(
                                 Filter(
@@ -406,7 +406,7 @@ Encuestas As screen:
                         ShowNavigation: =true
                         TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                         TemplatePadding: =0
-                        TemplateSize: =62
+                        TemplateSize: =52
                         Transition: =Transition.Push
                         Width: =Parent.Width
                         ZIndex: =1
