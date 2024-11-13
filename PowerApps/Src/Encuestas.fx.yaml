@@ -1,0 +1,955 @@
+Encuestas As screen:
+    ImagePosition: =ImagePosition.Stretch
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    OnVisible: |+
+        =Refresh(TablaDataCpp);
+        ClearCollect(colTablaDataCpp,TablaDataCpp);ClearCollect(colTablaEquivalenciasCpp,TablaEquivalenciasCpp)
+        
+        
+
+    Container24_2 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =59
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        Y: =4
+        ZIndex: =1
+
+        ButtonCanvas7_1 As Botón:
+            BasePaletteColor: =RGBA(141, 229, 250, 1)
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =9
+            Height: =47
+            OnSelect: |-
+                =Launch("https://forms.office.com/Pages/ResponsePage.aspx?id=BSzLJoLIJkmJHSf6ewS1Fop05q9La99FiWSPodX8cI9UOFBUUTlNV1lRTEdUMkVQVU82SEM1Uk5HOC4u&origin=Invitation&channel=0")
+            Text: ="Diligencie Encuesta"
+            Width: =110
+            X: =1221
+            Y: =5
+            ZIndex: =3
+
+        Container25_2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =59
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1188
+            X: =175
+            ZIndex: =5
+
+            EncabezadoContenedor_10 As EncabezadoContenedor:
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+                Width: =Parent.Width
+                ZIndex: =2
+
+        Arrow1_5 As arrow.backArrow:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Navigate('CPP y Manuales',ScreenTransition.Fade )
+            Width: =47
+            X: =4
+            Y: =4
+            ZIndex: =6
+
+    Container2_2 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =705
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1365
+        Y: =63
+        ZIndex: =3
+
+        SendEmailCanvas_6 As fluidGrid.fluidGridWithBlankCard:
+            BorderThickness: =0
+            Fill: =RGBA(249, 249, 249, 1)
+            Height: =705
+            Width: =1351
+            X: =10
+            ZIndex: =1
+
+            SendEmailCard_6 As dataCard:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.Solid
+                BorderThickness: =1
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =Parent.Height
+                Width: =1350
+                X: =0
+                Y: =0
+                ZIndex: =14
+
+                Rectangle3_10 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(228,233,237,1)
+                    FocusedBorderColor: =Rectangle3_10.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =2
+                    HoverFill: =RGBA(105, 121, 126, 1)
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    Width: =430
+                    X: =
+                    Y: =
+                    ZIndex: =15
+
+                icon2_5 As icon.Check:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(144,19,254,1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =icon2_5.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =15
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Check
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =
+                    Width: =15
+                    X: =
+                    Y: =
+                    ZIndex: =16
+
+                Rectangle3_11 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(228,233,237,1)
+                    FocusedBorderColor: =Rectangle3_11.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =2
+                    HoverFill: =RGBA(105, 121, 126, 1)
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    Width: =410
+                    X: =Rectangle3_10.X+Rectangle3_10.Width+74
+                    Y: =
+                    ZIndex: =18
+
+                Container3_1 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =80
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =1322
+                    X: =15
+                    Y: =2
+                    ZIndex: =20
+
+                    Container13_1 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =71
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1313
+                        ZIndex: =1
+
+                        "TextInputCanvas5_1 As 'Entrada de texto'":
+                            AccessibleLabel: ="Buscar por correo"
+                            Appearance: ='TextInputCanvas.Appearance'.FilledDarker
+                            BasePaletteColor: =RGBA(189, 178, 176, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Placeholder: ="Buscar ID, Correo, Asunto"
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        "ComboboxCanvas2_2 As 'Cuadro combinado'.pcfdataset":
+                            Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
+                            BasePaletteColor: =RGBA(189, 178, 176, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar por Tipo"
+                            Items: =["Petición", "Queja", "Reclamo", "Sugerencia", "Felicitación"]
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Required: =false
+                            TriggerOutput: ="Keypress"
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        "ComboboxCanvas2_3 As 'Cuadro combinado'.pcfdataset":
+                            Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
+                            BasePaletteColor: =RGBA(189, 178, 176, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar por Estado"
+                            Items: =["En seguimiento", "Cerrada", "Solucionada"]
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Required: =false
+                            TriggerOutput: ="Keypress"
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        "DatePickerCanvas2_1 As 'Selector de fecha'":
+                            BasePaletteColor: =RGBA(189, 178, 176, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Placeholder: ="Filtrar por Fecha Inicio"
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        "DatePickerCanvas1_1 As 'Selector de fecha'":
+                            BasePaletteColor: =
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Placeholder: ="Filtrar por Fecha Fin"
+                            Width: =200
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        ButtonCanvas10_1 As Botón:
+                            BasePaletteColor: =RGBA(249, 83, 109, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            OnSelect: =Reset(TextInputCanvas5_1);Reset(ComboboxCanvas2_2);Reset(ComboboxCanvas2_3);Reset(DatePickerCanvas2_1);Reset(DatePickerCanvas1_1)
+                            Text: ="Reset"
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+
+                Container4_1 As groupContainer.manualLayoutContainer:
+                    BorderThickness: =2
+                    DropShadow: =DropShadow.Light
+                    Height: =44
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =572
+                    X: =765
+                    Y: =82
+                    ZIndex: =21
+
+                    ButtonCanvas4_1 As Botón:
+                        Align: =Align.Center
+                        BasePaletteColor: =Color.LightGray
+                        BorderColor: =RGBA(9, 33, 98, 1)
+                        BorderRadiusBottomLeft: =5
+                        BorderRadiusBottomRight: =5
+                        BorderRadiusTopLeft: =5
+                        BorderRadiusTopRight: =5
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =2
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =48
+                        Text: =
+                        Width: =975
+                        X: =0
+                        Y: =(Parent.Height - Self.Height)/2
+                        ZIndex: =1
+
+                    Container17_2 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =44
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =572
+                        ZIndex: =2
+
+                        TextCanvas7_21 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =5
+                            Size: =14
+                            Text: ="ID"
+                            Width: =30
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        TextCanvas7_13 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =40
+                            PaddingLeft: =5
+                            Size: =14
+                            Text: ="Tipo"
+                            Width: =35
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas7_14 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =40
+                            PaddingLeft: =5
+                            Size: =14
+                            Text: ="Fecha"
+                            Width: =90
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas7_15 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =15
+                            Size: =14
+                            Text: ="Correo Solicita"
+                            Width: =150
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas7_22 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =60
+                            PaddingLeft: =15
+                            Size: =14
+                            Text: ="Asunto"
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        TextCanvas7_24 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =15
+                            Size: =14
+                            Text: ="Descripción"
+                            Width: =120
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+
+                Container16_1 As groupContainer.manualLayoutContainer:
+                    BorderThickness: =2
+                    DropShadow: =DropShadow.Light
+                    Fill: =Color.White
+                    Height: =571
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =572
+                    X: =765
+                    Y: =126
+                    ZIndex: =22
+
+                    "Gallery6_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                        BorderColor: =RGBA(139, 154, 159, 1)
+                        BorderThickness: =2
+                        DelayItemLoading: =true
+                        Height: =562
+                        Items: |-
+                            =Sort(
+                                Filter(
+                                    'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
+                                    (TextInputCanvas5_1.Value in 'Correo Responsable' || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                ),
+                                Modificado,
+                                SortOrder.Descending
+                            )
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        ShowNavigation: =true
+                        TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                        TemplatePadding: =0
+                        TemplateSize: =62
+                        Transition: =Transition.Push
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Separator4_2 As rectangle:
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderThickness: =2
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - Self.Height
+                            ZIndex: =5
+
+                        Container18_1 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            Height: =Parent.TemplateHeight
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width
+                            ZIndex: =6
+
+                            Container19_2 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                FillPortions: =0
+                                LayoutMinHeight: =50
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =145
+                                ZIndex: =1
+
+                                TextCanvas9_11 As Texto:
+                                    BorderColor: =RGBA(214, 221, 224, 1)
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =1
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    PaddingLeft: =10
+                                    Size: =9
+                                    Text: =ThisItem.'¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value
+                                    Width: =61
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                                TextCanvas4_1 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =28
+                                    Size: =11
+                                    Text: =ThisItem.ID
+                                    Width: =32
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                                TextCanvas9_12 As Texto:
+                                    BorderColor: =RGBA(214, 221, 224, 1)
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =1
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    PaddingLeft: =10
+                                    Size: =11
+                                    Text: =ThisItem.Creado
+                                    Width: =80
+                                    Wrap: =true
+                                    X: =61
+                                    Y: =0
+                                    ZIndex: =3
+
+                            TextCanvas9_17 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.'Respuesta a Solicitud'
+                                Width: =100
+                                X: =0
+                                Y: =0
+                                ZIndex: =7
+
+                            TextCanvas9_18 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.Conclusión
+                                Width: =100
+                                X: =0
+                                Y: =0
+                                ZIndex: =8
+
+                            DataCardValue39_1 As attachments:
+                                BorderColor: =
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                DisplayMode: =Parent.DisplayMode
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =123
+                                HoverColor: =RGBA(51, 51, 51, 1)
+                                HoverFill: =RGBA(212, 212, 212, 1)
+                                IsInDataCard: =true
+                                ItemColor: =RGBA(0, 0, 0, 1)
+                                ItemFill: =RGBA(105, 121, 126, 1)
+                                ItemHoverColor: =RGBA(51, 51, 51, 1)
+                                ItemHoverFill: =RGBA(212, 212, 212, 1)
+                                Items: =ThisItem.'Datos adjuntos'
+                                ItemSpacing: =12
+                                LayoutMinHeight: =50
+                                NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                                OnAddFile: |
+                                    =false
+                                PaddingBottom: =5
+                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                PressedColor: =RGBA(255, 255, 255, 1)
+                                PressedFill: =RGBA(105, 121, 126, 1)
+                                Size: =9
+                                Tooltip: =
+                                Width: =120
+                                X: =595
+                                Y: =331
+                                ZIndex: =9
+
+                            Container19_3 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                FillPortions: =0
+                                LayoutMinHeight: =50
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =80
+                                ZIndex: =10
+
+                                TextCanvas9_19 As Texto:
+                                    BorderColor: =RGBA(214, 221, 224, 1)
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =1
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontItalic: =true
+                                    Height: =Parent.Height
+                                    PaddingLeft: =10
+                                    Size: =9
+                                    Text: =ThisItem.'Modificado por'.Email
+                                    Width: =67
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                Container4_2 As groupContainer.manualLayoutContainer:
+                    BorderThickness: =2
+                    DropShadow: =DropShadow.Light
+                    Height: =44
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =597
+                    X: =15
+                    Y: =82
+                    ZIndex: =23
+
+                    ButtonCanvas4_3 As Botón:
+                        Align: =Align.Center
+                        BasePaletteColor: =Color.LightGray
+                        BorderColor: =RGBA(9, 33, 98, 1)
+                        BorderRadiusBottomLeft: =5
+                        BorderRadiusBottomRight: =5
+                        BorderRadiusTopLeft: =5
+                        BorderRadiusTopRight: =5
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =2
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =44
+                        Text: =
+                        Width: =572
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container17_3 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =44
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =597
+                        ZIndex: =2
+
+                        TextCanvas7_25 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =5
+                            Size: =14
+                            Text: ="ID"
+                            Width: =30
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        TextCanvas7_26 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =40
+                            PaddingLeft: =5
+                            Size: =14
+                            Text: ="Tipo"
+                            Width: =35
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas7_27 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =40
+                            PaddingLeft: =5
+                            Size: =14
+                            Text: ="Fecha"
+                            Width: =90
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas7_28 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =15
+                            Size: =14
+                            Text: ="Correo Solicita"
+                            Width: =150
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas7_29 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =60
+                            PaddingLeft: =15
+                            Size: =14
+                            Text: ="Asunto"
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        TextCanvas7_30 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =15
+                            Size: =14
+                            Text: ="Descripción"
+                            Width: =120
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+
+                Container16_2 As groupContainer.manualLayoutContainer:
+                    BorderThickness: =2
+                    DropShadow: =DropShadow.Light
+                    Fill: =Color.White
+                    Height: =485
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =597
+                    X: =15
+                    Y: =126
+                    ZIndex: =24
+
+                    "Gallery6_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                        BorderColor: =RGBA(139, 154, 159, 1)
+                        BorderThickness: =2
+                        DelayItemLoading: =true
+                        Height: =562
+                        Items: |-
+                            =Sort(
+                                Filter(
+                                    'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
+                                    (TextInputCanvas5_1.Value in 'Correo Responsable' || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                ),
+                                Modificado,
+                                SortOrder.Descending
+                            )
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        ShowNavigation: =true
+                        TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                        TemplatePadding: =0
+                        TemplateSize: =62
+                        Transition: =Transition.Push
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Separator4_3 As rectangle:
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderThickness: =2
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =Parent.TemplateHeight - Self.Height
+                            ZIndex: =5
+
+                        Container18_2 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            Height: =Parent.TemplateHeight
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width
+                            ZIndex: =6
+
+                            Container19_4 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                FillPortions: =0
+                                LayoutMinHeight: =50
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =145
+                                ZIndex: =1
+
+                                TextCanvas9_13 As Texto:
+                                    BorderColor: =RGBA(214, 221, 224, 1)
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =1
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    PaddingLeft: =10
+                                    Size: =9
+                                    Text: =ThisItem.'¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value
+                                    Width: =61
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                                TextCanvas4_2 As Texto:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =28
+                                    Size: =11
+                                    Text: =ThisItem.ID
+                                    Width: =32
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                                TextCanvas9_14 As Texto:
+                                    BorderColor: =RGBA(214, 221, 224, 1)
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =1
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    PaddingLeft: =10
+                                    Size: =11
+                                    Text: =ThisItem.Creado
+                                    Width: =80
+                                    Wrap: =true
+                                    X: =61
+                                    Y: =0
+                                    ZIndex: =3
+
+                            TextCanvas9_20 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.'Respuesta a Solicitud'
+                                Width: =100
+                                X: =0
+                                Y: =0
+                                ZIndex: =7
+
+                            TextCanvas9_23 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.Conclusión
+                                Width: =100
+                                X: =0
+                                Y: =0
+                                ZIndex: =8
+
+                            DataCardValue39_2 As attachments:
+                                BorderColor: =
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                DisplayMode: =Parent.DisplayMode
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =123
+                                HoverColor: =RGBA(51, 51, 51, 1)
+                                HoverFill: =RGBA(212, 212, 212, 1)
+                                IsInDataCard: =true
+                                ItemColor: =RGBA(0, 0, 0, 1)
+                                ItemFill: =RGBA(105, 121, 126, 1)
+                                ItemHoverColor: =RGBA(51, 51, 51, 1)
+                                ItemHoverFill: =RGBA(212, 212, 212, 1)
+                                Items: =ThisItem.'Datos adjuntos'
+                                ItemSpacing: =12
+                                LayoutMinHeight: =50
+                                NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                                OnAddFile: |
+                                    =false
+                                PaddingBottom: =5
+                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                PressedColor: =RGBA(255, 255, 255, 1)
+                                PressedFill: =RGBA(105, 121, 126, 1)
+                                Size: =9
+                                Tooltip: =
+                                Width: =120
+                                X: =595
+                                Y: =331
+                                ZIndex: =9
+
+                            Container19_5 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                FillPortions: =0
+                                LayoutMinHeight: =50
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =80
+                                ZIndex: =10
+
+                                TextCanvas9_24 As Texto:
+                                    BorderColor: =RGBA(214, 221, 224, 1)
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =1
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontItalic: =true
+                                    Height: =Parent.Height
+                                    PaddingLeft: =10
+                                    Size: =9
+                                    Text: =ThisItem.'Modificado por'.Email
+                                    Width: =67
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+

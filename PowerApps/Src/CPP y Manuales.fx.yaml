@@ -459,7 +459,18 @@
                         OnSelect: =Navigate(CPP,ScreenTransition.Fade)
                         Text: ="Consulta de Partes"
                         Width: =157
-                        X: =315
+                        X: =320
                         Y: =54
                         ZIndex: =2
+
+                    ButtonCanvas1_2 As Botón:
+                        BasePaletteColor: =RGBA(227, 106, 244, 1)
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =62
+                        OnSelect: =Navigate(Encuestas,ScreenTransition.Fade)
+                        Text: ="Encuestas"
+                        Width: =157
+                        X: =573
+                        Y: =54
+                        ZIndex: =3
 
