@@ -663,8 +663,8 @@ Encuestas As screen:
                             LayoutMinWidth: =96
                             PaddingLeft: =5
                             Size: =14
-                            Text: ="ID"
-                            Width: =30
+                            Text: ="OTT"
+                            Width: =60
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -678,8 +678,8 @@ Encuestas As screen:
                             LayoutMinWidth: =40
                             PaddingLeft: =5
                             Size: =14
-                            Text: ="Tipo"
-                            Width: =35
+                            Text: ="Cliente"
+                            Width: =50
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -693,8 +693,8 @@ Encuestas As screen:
                             LayoutMinWidth: =40
                             PaddingLeft: =5
                             Size: =14
-                            Text: ="Fecha"
-                            Width: =90
+                            Text: ="Tipo de Servicio"
+                            Width: =110
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -708,7 +708,7 @@ Encuestas As screen:
                             LayoutMinWidth: =96
                             PaddingLeft: =15
                             Size: =14
-                            Text: ="Correo Solicita"
+                            Text: ="Fecha de Servicio"
                             Width: =150
                             X: =0
                             Y: =0
@@ -723,7 +723,7 @@ Encuestas As screen:
                             LayoutMinWidth: =60
                             PaddingLeft: =15
                             Size: =14
-                            Text: ="Asunto"
+                            Text: ="Telefono"
                             Width: =100
                             X: =0
                             Y: =0
@@ -738,7 +738,7 @@ Encuestas As screen:
                             LayoutMinWidth: =96
                             PaddingLeft: =15
                             Size: =14
-                            Text: ="Descripción"
+                            Text: ="Email"
                             Width: =120
                             X: =0
                             Y: =0
@@ -803,57 +803,6 @@ Encuestas As screen:
                             RadiusTopRight: =4
                             Width: =Parent.Width
                             ZIndex: =6
-
-                            Container19_4 As groupContainer.manualLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                FillPortions: =0
-                                LayoutMinHeight: =50
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
-                                Width: =145
-                                ZIndex: =1
-
-                                TextCanvas9_13 As Texto:
-                                    BorderColor: =RGBA(214, 221, 224, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    BorderThickness: =1
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =Parent.Height
-                                    PaddingLeft: =10
-                                    Size: =9
-                                    Text: =ThisItem.'¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value
-                                    Width: =61
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =1
-
-                                TextCanvas4_2 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =28
-                                    Size: =11
-                                    Text: =ThisItem.ID
-                                    Width: =32
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =2
-
-                                TextCanvas9_14 As Texto:
-                                    BorderColor: =RGBA(214, 221, 224, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    BorderThickness: =1
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =Parent.Height
-                                    PaddingLeft: =10
-                                    Size: =11
-                                    Text: =ThisItem.Creado
-                                    Width: =80
-                                    Wrap: =true
-                                    X: =61
-                                    Y: =0
-                                    ZIndex: =3
 
                             TextCanvas9_20 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
