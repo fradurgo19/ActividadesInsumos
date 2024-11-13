@@ -396,7 +396,7 @@ Encuestas As screen:
                             =Sort(
                                 Filter(
                                     'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                    (TextInputCanvas5_1.Value in 'Correo Responsable' || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                    (TextInputCanvas5_1.Value in Diligencia || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
                                 ),
                                 Modificado,
                                 SortOrder.Descending
@@ -461,7 +461,7 @@ Encuestas As screen:
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =ThisItem.'Correo Responsable'
+                                Text: =ThisItem.Diligencia
                                 Width: =200
                                 X: =0
                                 Y: =0
@@ -478,7 +478,7 @@ Encuestas As screen:
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =ThisItem.OT
+                                Text: =ThisItem.OTT
                                 Width: =100
                                 X: =0
                                 Y: =0
