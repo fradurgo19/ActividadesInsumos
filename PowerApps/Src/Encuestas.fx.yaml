@@ -879,7 +879,6 @@ Encuestas As screen:
                             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                             Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Semibold
-                            Height: =33
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -891,15 +890,15 @@ Encuestas As screen:
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
-                            Size: =10
+                            Size: =9
                             Text: |-
                                 =If(
                                     !IsBlank(LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', OTT = ThisItem.OTT)),
                                     "Ejecutado",
                                     "No ejecutado"
                                 )
-                            Width: =56
-                            X: =543
+                            Width: =73
+                            X: =531
                             Y: =6
                             ZIndex: =7
 
