@@ -701,7 +701,7 @@ Encuestas As screen:
                         BorderThickness: =2
                         DelayItemLoading: =true
                         Height: =538
-                        Items: |
+                        Items: |-
                             =Sort(
                                 Filter(
                                     'Oportunidades de encuestas',
@@ -709,7 +709,7 @@ Encuestas As screen:
                                     (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
                                     (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
                                     (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
-                                    (Creado >= DateAdd(Today(), -45. ))
+                                    (DateDiff(Creado, Today()) <= 45)
                                 ),
                                 Modificado,
                                 SortOrder.Descending
@@ -865,22 +865,41 @@ Encuestas As screen:
                                 Y: =0
                                 ZIndex: =7
 
-                        ButtonCanvas16 As Botón:
-                            DisplayMode: =DisplayMode.Edit
-                            FontSize: =10
-                            Height: =41
+                        Button6 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: |
+                                =If(
+                                    !IsBlank(LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', OTT = ThisItem.OTT)),
+                                    Color.LimeGreen,  
+                                    Color.OrangeRed   
+                                )
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =33
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                             OnSelect: =Select(Parent)
-                            Text: |+
+                            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =10
+                            Text: |-
                                 =If(
                                     !IsBlank(LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', OTT = ThisItem.OTT)),
                                     "Ejecutado",
                                     "No ejecutado"
                                 )
-                                
-                                
-                                
-                            Width: =52
-                            X: =552
-                            Y: =5
+                            Width: =56
+                            X: =543
+                            Y: =6
                             ZIndex: =7
 
