@@ -199,7 +199,7 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             InputTextPlaceholder: ="Buscar por Tipo"
-                            Items: =["Petición", "Queja", "Reclamo", "Sugerencia", "Felicitación"]
+                            Items: =["Mantenimiento Correctivo", "Mantenimiento Preventivo", "Diagnóstico", "Garantía"]
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Required: =false
@@ -373,6 +373,21 @@ Encuestas As screen:
                             Y: =0
                             ZIndex: =6
 
+                        TextCanvas7_32 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =15
+                            Size: =14
+                            Text: ="Correo"
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =7
+
                 Container16_1 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
                     DropShadow: =DropShadow.Light
@@ -501,6 +516,23 @@ Encuestas As screen:
                                 Y: =0
                                 ZIndex: =10
 
+                            TextCanvas9_30 As Texto:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                DisplayMode: =DisplayMode.Edit
+                                FontItalic: =true
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =11
+                                Text: =ThisItem.CorreoDiligencia
+                                Width: =100
+                                X: =0
+                                Y: =0
+                                ZIndex: =11
+
                 Container4_2 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
                     DropShadow: =DropShadow.Light
@@ -509,7 +541,7 @@ Encuestas As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =597
+                    Width: =617
                     X: =15
                     Y: =100
                     ZIndex: =23
@@ -542,7 +574,7 @@ Encuestas As screen:
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =597
+                        Width: =615
                         ZIndex: =2
 
                         TextCanvas7_25 As Texto:
@@ -570,7 +602,7 @@ Encuestas As screen:
                             PaddingLeft: =5
                             Size: =14
                             Text: ="Cliente"
-                            Width: =100
+                            Width: =60
                             X: =0
                             Y: =0
                             ZIndex: =2
@@ -599,8 +631,8 @@ Encuestas As screen:
                             LayoutMinWidth: =96
                             PaddingLeft: =15
                             Size: =14
-                            Text: ="Fecha de Servicio"
-                            Width: =90
+                            Text: ="Fecha"
+                            Width: =80
                             X: =0
                             Y: =0
                             ZIndex: =4
@@ -659,7 +691,7 @@ Encuestas As screen:
                     RadiusBottomRight: =10
                     RadiusTopLeft: =10
                     RadiusTopRight: =10
-                    Width: =597
+                    Width: =617
                     X: =15
                     Y: =142
                     ZIndex: =24
@@ -669,11 +701,15 @@ Encuestas As screen:
                         BorderThickness: =2
                         DelayItemLoading: =true
                         Height: =538
-                        Items: |-
+                        Items: |
                             =Sort(
                                 Filter(
                                     'Oportunidades de encuestas',
-                                    (TextInputCanvas5_1.Value in Email || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) && (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                    (TextInputCanvas5_1.Value in Email || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) &&
+                                    (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
+                                    (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
+                                    (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
+                                    (Creado >= DateAdd(Today(), -45. ))
                                 ),
                                 Modificado,
                                 SortOrder.Descending
@@ -685,7 +721,7 @@ Encuestas As screen:
                         TemplatePadding: =0
                         TemplateSize: =52
                         Transition: =Transition.Push
-                        Width: =Parent.Width
+                        Width: =617
                         ZIndex: =1
 
                         Separator4_3 As rectangle:
@@ -739,7 +775,7 @@ Encuestas As screen:
                                 PaddingLeft: =10
                                 Size: =11
                                 Text: =ThisItem.Cliente
-                                Width: =100
+                                Width: =60
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
@@ -754,9 +790,9 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =11
+                                Size: =9
                                 Text: =ThisItem.TipodeServicio
-                                Width: =70
+                                Width: =80
                                 X: =0
                                 Y: =0
                                 ZIndex: =3
@@ -773,7 +809,7 @@ Encuestas As screen:
                                 PaddingLeft: =10
                                 Size: =11
                                 Text: =ThisItem.FechadeServicio
-                                Width: =90
+                                Width: =70
                                 X: =0
                                 Y: =0
                                 ZIndex: =4
@@ -788,7 +824,7 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =11
+                                Size: =10
                                 Text: =ThisItem.Sede
                                 Width: =100
                                 X: =0
@@ -805,7 +841,7 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =11
+                                Size: =10
                                 Text: =ThisItem.Telefonodecontacto
                                 Width: =90
                                 X: =0
@@ -822,10 +858,29 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =11
+                                Size: =10
                                 Text: =ThisItem.Email
                                 Width: =70
                                 X: =0
                                 Y: =0
                                 ZIndex: =7
+
+                        ButtonCanvas16 As Botón:
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =10
+                            Height: =41
+                            OnSelect: =Select(Parent)
+                            Text: |+
+                                =If(
+                                    !IsBlank(LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', OTT = ThisItem.OTT)),
+                                    "Ejecutado",
+                                    "No ejecutado"
+                                )
+                                
+                                
+                                
+                            Width: =52
+                            X: =552
+                            Y: =5
+                            ZIndex: =7
 
