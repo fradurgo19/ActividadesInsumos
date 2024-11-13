@@ -388,6 +388,18 @@ Encuestas As screen:
                             Y: =0
                             ZIndex: =7
 
+                        ButtonCanvas18 As Botón:
+                            BasePaletteColor: =RGBA(12, 190, 235, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: ="Cantidad " & CountRows(Gallery6_1.AllItems)
+                            Width: =70
+                            X: =0
+                            Y: =0
+                            ZIndex: =8
+
                 Container16_1 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
                     DropShadow: =DropShadow.Light
@@ -681,6 +693,18 @@ Encuestas As screen:
                             X: =0
                             Y: =0
                             ZIndex: =7
+
+                        ButtonCanvas17 As Botón:
+                            BasePaletteColor: =RGBA(82, 205, 242, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: ="Cantidad " & CountRows(Gallery6_2.AllItems)
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =8
 
                 Container16_2 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
