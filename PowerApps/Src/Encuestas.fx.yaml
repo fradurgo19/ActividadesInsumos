@@ -914,15 +914,15 @@ Encuestas As screen:
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
-                            Size: =9
+                            Size: =8
                             Text: |-
                                 =If(
                                     !IsBlank(LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', OTT = ThisItem.OTT)),
                                     "Ejecutado",
                                     "No ejecutado"
                                 )
-                            Width: =73
-                            X: =531
+                            Width: =65
+                            X: =547
                             Y: =6
                             ZIndex: =7
 
