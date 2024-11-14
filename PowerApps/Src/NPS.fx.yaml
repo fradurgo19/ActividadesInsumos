@@ -1,4 +1,4 @@
-"PQRSF As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"NPS As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Height: =Max(App.Height, App.DesignHeight)
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |
@@ -7,8 +7,8 @@
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
         Refresh('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)')
-    Orientation: =If(PQRSF.Width < PQRSF.Height, Layout.Vertical, Layout.Horizontal)
-    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= PQRSF.Width)
+    Orientation: =If(NPS.Width < NPS.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= NPS.Width)
     Width: =Max(App.Width, App.DesignWidth)
 
     Menu_8 As fluidGrid.fluidGridWithBlankCard:
@@ -60,7 +60,7 @@
                 HoverFill: =MenuList_8.Fill
                 Items: =MenuData
                 Layout: =Layout.Vertical
-                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP, Encuestas y Manuales',ScreenTransition.None),"8",Navigate(PQRSF,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None)))
+                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP, Encuestas y Manuales',ScreenTransition.None),"8",Navigate(NPS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None)))
                 PressedBorderColor: =MenuList_8.BorderColor
                 PressedFill: =MenuList_8.Fill
                 ShowScrollbar: =false
@@ -206,7 +206,7 @@
                     PressedFill: =MenuName_8.Fill
                     Size: =12
                     Text: =ThisItem.Name
-                    Width: =181
+                    Width: =193
                     X: =40
                     Y: =7
                     ZIndex: =10
