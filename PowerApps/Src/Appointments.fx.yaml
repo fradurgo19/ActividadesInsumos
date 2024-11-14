@@ -79,7 +79,7 @@
                 HoverFill: =MenuList.Fill
                 Items: =MenuData
                 Layout: =Layout.Vertical
-                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(PQRSF,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None)))
+                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP, Encuestas y Manuales',ScreenTransition.None),"8",Navigate(PQRSF,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None)))
                 PressedBorderColor: =MenuList.BorderColor
                 PressedFill: =MenuList.Fill
                 ShowScrollbar: =false
@@ -774,7 +774,7 @@
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-                OnSelect: =Navigate('CPP y Manuales',ScreenTransition.CoverRight )
+                OnSelect: =Navigate('CPP, Encuestas y Manuales',ScreenTransition.CoverRight )
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)

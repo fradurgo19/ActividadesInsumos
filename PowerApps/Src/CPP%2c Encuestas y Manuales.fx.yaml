@@ -1,4 +1,4 @@
-"'CPP y Manuales' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"'CPP, Encuestas y Manuales' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Height: =Max(App.Height, App.DesignHeight)
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |
@@ -6,8 +6,8 @@
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
-    Orientation: =If('CPP y Manuales'.Width < 'CPP y Manuales'.Height, Layout.Vertical, Layout.Horizontal)
-    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= 'CPP y Manuales'.Width)
+    Orientation: =If('CPP, Encuestas y Manuales'.Width < 'CPP, Encuestas y Manuales'.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= 'CPP, Encuestas y Manuales'.Width)
     Width: =Max(App.Width, App.DesignWidth)
 
     Menu_6 As fluidGrid.fluidGridWithBlankCard:
@@ -59,7 +59,7 @@
                 HoverFill: =MenuList_6.Fill
                 Items: =MenuData
                 Layout: =Layout.Vertical
-                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(PQRSF,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None)))
+                OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP, Encuestas y Manuales',ScreenTransition.None),"8",Navigate(PQRSF,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None)))
                 PressedBorderColor: =MenuList_6.BorderColor
                 PressedFill: =MenuList_6.Fill
                 ShowScrollbar: =false
@@ -98,7 +98,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
-                    Height: =20
+                    Height: =30
                     HoverBorderColor: =MenuName_6.BorderColor
                     HoverColor: =MenuName_6.Color
                     HoverFill: =MenuName_6.Fill
@@ -114,7 +114,6 @@
                     Text: =ThisItem.Name
                     Width: =194
                     X: =40
-                    Y: =10
                     ZIndex: =5
 
                 Menu1_6 As icon.Calendar:
@@ -424,7 +423,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         Fill: =RGBA(105, 121, 126, 1)
-                        OnSelect: =Navigate('CPP y Manuales',ScreenTransition.Fade )
+                        OnSelect: =Navigate('CPP, Encuestas y Manuales',ScreenTransition.Fade )
                         X: =11
                         Y: =15
                         ZIndex: =2
