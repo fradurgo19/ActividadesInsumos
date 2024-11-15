@@ -146,7 +146,7 @@ Encuestas As screen:
 
                 Container3_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =80
+                    Height: =45
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -158,7 +158,7 @@ Encuestas As screen:
 
                     Container13_1 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =54
+                        Height: =43
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutMode: =LayoutMode.Auto
                         PaddingBottom: =10
@@ -170,7 +170,6 @@ Encuestas As screen:
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
                         Width: =1313
-                        Y: =15
                         ZIndex: =1
 
                         "TextInputCanvas5_1 As 'Entrada de texto'":
@@ -925,4 +924,34 @@ Encuestas As screen:
                             X: =547
                             Y: =6
                             ZIndex: =7
+
+                TextCanvas7_37 As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(45, 128, 40, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =34
+                    PaddingLeft: =5
+                    Size: =14
+                    Text: ="SERVICIOS"
+                    Width: =109
+                    X: =230
+                    Y: =60
+                    ZIndex: =25
+
+                TextCanvas7_38 As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(71, 158, 245, 1)
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =33
+                    PaddingLeft: =5
+                    Size: =14
+                    Text: ="ENCUENTAS REALIZADAS"
+                    Width: =173
+                    X: =914
+                    Y: =61
+                    ZIndex: =26
 
