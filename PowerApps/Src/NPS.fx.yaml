@@ -297,7 +297,8 @@
         Visible: |-
             =User().Email = "analista.mantenimiento@partequipos.com" || 
             User().Email = "jestrada@partequipos.com" || 
-            User().Email = "coordinador.sgi@partequipos.com"
+            User().Email = "coordinador.sgi@partequipos.com" ||
+            User().Email = "jestrada@partequipos.com"  
         Width: =1071
         X: =295
         ZIndex: =2
@@ -384,18 +385,16 @@
                     Width: =1022
                     X: =21
 
-                ButtonCanvas7 As Botón:
-                    BasePaletteColor: =RGBA(141, 229, 250, 1)
+                ButtonCanvas1_2 As Botón:
+                    BasePaletteColor: =RGBA(227, 106, 244, 1)
                     DisplayMode: =DisplayMode.Edit
-                    FontSize: =9
-                    Height: =47
-                    OnSelect: |-
-                        =Launch("https://forms.office.com/Pages/ResponsePage.aspx?id=BSzLJoLIJkmJHSf6ewS1Fop05q9La99FiWSPodX8cI9UOFBUUTlNV1lRTEdUMkVQVU82SEM1Uk5HOC4u&origin=Invitation&channel=0")
-                    Text: ="Diligencie PQRSF"
-                    Width: =110
-                    X: =624
-                    Y: =9
-                    ZIndex: =2
+                    Height: =41
+                    OnSelect: =Navigate(Encuestas,ScreenTransition.Fade)
+                    Text: ="Encuestas"
+                    Width: =147
+                    X: =431
+                    Y: =15
+                    ZIndex: =3
 
             Container3 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -1583,17 +1582,4 @@
                         X: =0
                         Y: =0
                         ZIndex: =4
-
-    TextCanvas7_10 As Texto:
-        AutoHeight: =false
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =RGBA(255, 255, 255, 1)
-        Height: =32
-        PaddingLeft: =15
-        Size: =11
-        Text: ="Conclusión"
-        Width: =70
-        X: =775
-        Y: =20
-        ZIndex: =3
 

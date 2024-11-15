@@ -6,7 +6,7 @@
         ="Generate menu list";
         ClearCollect(MenuData,
         {Icon:"Menu1",  Name:"Equipos y Frecuencias", Step:"1"},{Icon:"Menu2",  Name:"Actividades", Step:"2"},{Icon:"Menu3", Name:"Consumibles", Step:"3"},
-        {Icon:"Menu4",  Name:"Claves y Procedimientos", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"Manuales, Encuestas y CPP", Step:"7"},{Icon:"Menu8", Name:"NPS", Step:"8"},{Icon:"Menu9", Name:"Asesores", Step:"9"});
+        {Icon:"Menu4",  Name:"Claves y Procedimientos", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"Manuales y CPP", Step:"7"},{Icon:"Menu8", Name:"NPS", Step:"8"},{Icon:"Menu9", Name:"Asesores", Step:"9"});
         "Set default values";
         Set(SelectedMenu,First(MenuData));
         Set(CurrentStep, "1");

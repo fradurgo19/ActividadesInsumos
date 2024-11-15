@@ -18,19 +18,6 @@ Encuestas As screen:
         Y: =4
         ZIndex: =1
 
-        ButtonCanvas7_1 As Botón:
-            BasePaletteColor: =RGBA(141, 229, 250, 1)
-            DisplayMode: =DisplayMode.Edit
-            FontSize: =9
-            Height: =47
-            OnSelect: |-
-                =Launch("https://forms.office.com/Pages/ResponsePage.aspx?id=BSzLJoLIJkmJHSf6ewS1Fop05q9La99FiWSPodX8cI9UOFBUUTlNV1lRTEdUMkVQVU82SEM1Uk5HOC4u&origin=Invitation&channel=0")
-            Text: ="Diligencie Encuesta"
-            Width: =110
-            X: =1221
-            Y: =5
-            ZIndex: =3
-
         Container25_2 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =59
@@ -39,7 +26,7 @@ Encuestas As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1188
+            Width: =1015
             X: =175
             ZIndex: =5
 
@@ -58,6 +45,21 @@ Encuestas As screen:
             X: =4
             Y: =4
             ZIndex: =6
+
+        ButtonCanvas7_1 As Botón:
+            Align: =Align.Justify
+            BasePaletteColor: =RGBA(141, 229, 250, 1)
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =9
+            Height: =47
+            Layout: ='ButtonCanvas.Layout'.IconBefore
+            OnSelect: |-
+                =Launch("https://forms.office.com/Pages/ResponsePage.aspx?id=BSzLJoLIJkmJHSf6ewS1Fop05q9La99FiWSPodX8cI9UOFBUUTlNV1lRTEdUMkVQVU82SEM1Uk5HOC4u&origin=Invitation&channel=0")
+            Text: ="Diligencie Encuesta"
+            Width: =110
+            X: =1208
+            Y: =7
+            ZIndex: =7
 
     Container2_2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -89,60 +91,6 @@ Encuestas As screen:
                 X: =0
                 Y: =0
                 ZIndex: =14
-
-                Rectangle3_10 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledFill: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(228,233,237,1)
-                    FocusedBorderColor: =Rectangle3_10.BorderColor
-                    FocusedBorderThickness: =4
-                    Height: =2
-                    HoverFill: =RGBA(105, 121, 126, 1)
-                    PressedFill: =RGBA(105, 121, 126, 1)
-                    Width: =430
-                    X: =
-                    Y: =
-                    ZIndex: =15
-
-                icon2_5 As icon.Check:
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    Color: =RGBA(144,19,254,1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(220, 220, 220, 1)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =icon2_5.BorderColor
-                    FocusedBorderThickness: =4
-                    Height: =15
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.Check
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    Visible: =
-                    Width: =15
-                    X: =
-                    Y: =
-                    ZIndex: =16
-
-                Rectangle3_11 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledFill: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(228,233,237,1)
-                    FocusedBorderColor: =Rectangle3_11.BorderColor
-                    FocusedBorderThickness: =4
-                    Height: =2
-                    HoverFill: =RGBA(105, 121, 126, 1)
-                    PressedFill: =RGBA(105, 121, 126, 1)
-                    Width: =410
-                    X: =Rectangle3_10.X+Rectangle3_10.Width+74
-                    Y: =
-                    ZIndex: =18
 
                 Container3_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
