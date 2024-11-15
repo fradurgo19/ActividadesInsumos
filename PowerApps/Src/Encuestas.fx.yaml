@@ -693,9 +693,9 @@ Encuestas As screen:
                                     'Oportunidades de encuestas',
                                     (TextInputCanvas5_1.Value in Email || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) &&
                                     (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
-                                    (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
-                                    (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
-                                    (DateDiff(Creado, Today()) <= 45)
+                                    (FechadeServicio >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
+                                    (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
+                                    (DateDiff(FechadeServicio, Today()) <= 45)
                                 ),
                                 Modificado,
                                 SortOrder.Descending
