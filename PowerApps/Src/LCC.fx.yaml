@@ -640,6 +640,7 @@
                                 Items: |+
                                     =Filter(
                                         colSerieUnicosPorMes,
+                                         !IsBlank(Horometro) && // 
                                         (IsBlank(ComboboxCanvas5_2.Selected) || 
                                         (Horometro >= ComboboxCanvas5_2.Selected.Min && Horometro <= ComboboxCanvas5_2.Selected.Max)) &&
                                         (IsBlank(ComboboxCanvas5_4.Selected) || Asesor.Value = ComboboxCanvas5_4.Selected.Value) &&
