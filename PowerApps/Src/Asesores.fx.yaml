@@ -1737,7 +1737,7 @@
 
                 Container52_2 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =197
+                    Height: =289
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -1749,13 +1749,13 @@
 
                     Container53_2 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =563
+                        Height: =281
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =501
+                        Width: =258
                         Y: =6
                         ZIndex: =1
 
@@ -1769,7 +1769,7 @@
                                         colOportunAsesorCorreo,
                                         (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
                                         (Correo = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                        (IsBlank(Gallery9.Selected.MesCreado) || Gallery9.Selected.MesCreado = MesCreado) 
+                                        (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) 
                                 
                                         
                                     ),
@@ -1778,7 +1778,7 @@
                                 )
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =200
-                            LayoutMinWidth: =320
+                            LayoutMinWidth: =120
                             LoadingSpinner: =LoadingSpinner.Data
                             OnSelect: |
                                 =UpdateContext({
@@ -1812,7 +1812,7 @@
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
-                                Width: =1
+                                Width: =250
                                 ZIndex: =6
 
                                 TextCanvas44_8 As Texto:
@@ -1822,11 +1822,11 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =30
-                                    Size: =12
+                                    Size: =10
                                     Text: =ThisItem.MesCreado
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =50
+                                    Width: =70
                                     X: =0
                                     Y: =0
                                     ZIndex: =1
@@ -1837,11 +1837,11 @@
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =150
-                                    Size: =11
+                                    Size: =10
                                     Text: =ThisItem.Correo
                                     VerticalAlign: ='TextCanvas.VerticalAlign'.Top
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =120
+                                    Width: =140
                                     X: =0
                                     Y: =0
                                     ZIndex: =2
@@ -1862,100 +1862,6 @@
                                     Y: =0
                                     ZIndex: =3
 
-                                TextCanvas44_11 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(52, 152, 47, 1)
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =30
-                                    Size: =16
-                                    Text: =ThisItem.Ganadas
-                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =60
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =4
-
-                                TextCanvas44_12 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(240, 98, 15, 1)
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =30
-                                    Size: =16
-                                    Text: =ThisItem.Perdidas
-                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =60
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =5
-
-                                TextCanvas44_13 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(255, 191, 0, 1)
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =30
-                                    Size: =16
-                                    Text: =ThisItem.Seguimientos
-                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =60
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =6
-
-                                TextCanvas44_14 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(40, 134, 222, 1)
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =30
-                                    Size: =16
-                                    Text: =ThisItem.Cotizaciones
-                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =40
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =7
-
-                                TextCanvas44_15 As Texto:
-                                    Align: ='TextCanvas.Align'.Start
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(109, 49, 162, 1)
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =30
-                                    Size: =16
-                                    Text: |
-                                        =Text(
-                                            If(
-                                                (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos) > 0,
-                                                ((ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas) / 
-                                                (ThisItem.Cotizaciones + ThisItem.Ganadas + ThisItem.Perdidas + ThisItem.Seguimientos)) * 100,
-                                                0
-                                            ),
-                                            "[$-en-US]0.0"
-                                        ) & "%"
-                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =50
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =8
-
     Rectangle2 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -1974,14 +1880,14 @@
 
     Container90 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =217
+        Height: =131
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =252
         X: =312
-        Y: =536
+        Y: =620
         ZIndex: =4
 
         Container39_1 As groupContainer.horizontalAutoLayoutContainer:
