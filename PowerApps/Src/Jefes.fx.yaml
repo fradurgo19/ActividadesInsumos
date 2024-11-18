@@ -16,6 +16,7 @@
                 GroupBy(
                     'Seguimiento Clientes Equipos Telemetría',
                     MesCreado,
+                    Año,
                     OportunidadesPorAsesor
                 ),
                 Asesor,
@@ -38,6 +39,7 @@
                     'Seguimiento Clientes Equipos Telemetría',
                     Correo,  // Agrupando por correo
                     MesCreado, // Agrupando por Mes
+                    Año, // Agrupando por año (se agrega esta línea)
                     OportunidadesPorAsesorCorreo
                 ),
                 Asesor,
@@ -465,7 +467,8 @@
                                 =Sort(
                                     Filter(
                                         colOportunAsesorMes,
-                                        (MesCreado = ComboboxCanvas5_5.Selected.Value || IsBlank(ComboboxCanvas5_5.Selected.Value))
+                                        (MesCreado = ComboboxCanvas5_5.Selected.Value || IsBlank(ComboboxCanvas5_5.Selected.Value)) &&
+                                        (A_x00f1_o = ComboboxCanvas5_8.Selected.Value || IsBlank(ComboboxCanvas5_8.Selected.Value))
                                         
                                     ),
                                     MesCreado, // Field representing the creation date
@@ -887,6 +890,7 @@
                                     Filter(
                                         colOportunAsesorCorreo,
                                         (MesCreado = ComboboxCanvas5_5.Selected.Value || IsBlank(ComboboxCanvas5_5.Selected.Value)) &&
+                                        (A_x00f1_o = ComboboxCanvas5_8.Selected.Value || IsBlank(ComboboxCanvas5_8.Selected.Value)) &&
                                         (Correo = ComboboxCanvas5_6.Selected.Value || IsBlank(ComboboxCanvas5_6.Selected.Value)) &&
                                         (IsBlank(Gallery9.Selected.MesCreado) || Gallery9.Selected.MesCreado = MesCreado) 
                                 
@@ -1077,13 +1081,13 @@
 
                 Container55_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =39
+                    Height: =43
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =364
-                    X: =175
+                    Width: =479
+                    X: =60
                     Y: =79
                     ZIndex: =5
 
@@ -1095,8 +1099,23 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =364
+                        Width: =476
                         ZIndex: =1
+
+                        "ComboboxCanvas5_8 As 'Cuadro combinado'.pcfdataset":
+                            BasePaletteColor: =
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            InputTextPlaceholder: ="Buscar Año"
+                            Items: =Distinct(colOportunidades,Año)
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Required: =false
+                            TriggerOutput: ="Keypress"
+                            Width: =120
+                            X: =40
+                            Y: =4
+                            ZIndex: =1
 
                         "ComboboxCanvas5_5 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1110,7 +1129,7 @@
                             Width: =120
                             X: =0
                             Y: =0
-                            ZIndex: =1
+                            ZIndex: =2
 
                         "ComboboxCanvas5_6 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1134,7 +1153,7 @@
                             Width: =140
                             X: =0
                             Y: =0
-                            ZIndex: =2
+                            ZIndex: =3
 
                         ButtonCanvas12 As Botón:
                             BasePaletteColor: =RGBA(249, 83, 109, 1)
@@ -1142,12 +1161,12 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            OnSelect: =Reset(ComboboxCanvas5_5);Reset(ComboboxCanvas5_6)
+                            OnSelect: =Reset(ComboboxCanvas5_5);Reset(ComboboxCanvas5_6);Reset(ComboboxCanvas5_8)
                             Text: ="Reset"
                             Width: =96
                             X: =0
                             Y: =0
-                            ZIndex: =3
+                            ZIndex: =4
 
                 Container55_2 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
@@ -1321,7 +1340,7 @@
                     PressedBorderColor: =RGBA(40, 134, 222, 1)
                     Size: =15
                     Width: =436
-                    X: =601
-                    Y: =464
+                    X: =588
+                    Y: =496
                     ZIndex: =12
 
