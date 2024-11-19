@@ -6,7 +6,7 @@
         ="Generate menu list";
         ClearCollect(MenuData,
         {Icon:"Menu1",  Name:"Equipos y Frecuencias", Step:"1"},{Icon:"Menu2",  Name:"Actividades", Step:"2"},{Icon:"Menu3", Name:"Consumibles", Step:"3"},
-        {Icon:"Menu4",  Name:"Claves y Procedimientos", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"CPP y Manuales", Step:"7"},{Icon:"Menu8", Name:"NPS", Step:"8"},{Icon:"Menu9", Name:"Asesores", Step:"9"});
+        {Icon:"Menu4",  Name:"Claves y Procedimientos", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"CPP y Manuales", Step:"7"},{Icon:"Menu8", Name:"NPS", Step:"8"},{Icon:"Menu9", Name:"Asesores", Step:"9"},{Icon:"Menu10", Name:"Proyector Mttos", Step:"10"});
         "Set default values";
         Set(SelectedMenu,First(MenuData));
         Set(CurrentStep, "1");
@@ -85,7 +85,7 @@
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =45
-                Width: =255
+                Width: =266
                 X: =39
                 Y: =logo.Y + logo.Height +32
                 ZIndex: =2
@@ -133,8 +133,8 @@
                     OnSelect: =Select(Parent)
                     PressedFill: =RGBA(105, 121, 126, 1)
                     Visible: =ThisItem.Step=CurrentStep
-                    Width: =4
-                    X: =350-4-MenuList.X-11
+                    Width: =5
+                    X: =227
                     ZIndex: =3
 
                 Menu5 As icon.DockCheckProperties:
@@ -329,6 +329,29 @@
                     X: =0
                     Y: =8
                     ZIndex: =12
+
+                Menu10 As icon.Mail:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu10.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Printing3D
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu10"
+                    Width: |
+                        =19
+                    Y: =10
+                    ZIndex: =13
 
         DataCard1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)

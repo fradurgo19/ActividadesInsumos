@@ -121,7 +121,7 @@
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =40
-                Width: =244
+                Width: =256
                 X: =39
                 Y: =logo_11.Y + logo_11.Height +32
                 ZIndex: =3
@@ -151,8 +151,8 @@
                     OnSelect: =Select(Parent)
                     PressedFill: =RGBA(105, 121, 126, 1)
                     Visible: =ThisItem.Step=CurrentStep
-                    Width: =4
-                    X: =350-4-MenuList_10.X-11
+                    Width: =5
+                    X: =224
                     ZIndex: =5
 
                 Menu8_7 As icon.Mail:

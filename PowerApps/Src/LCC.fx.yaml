@@ -1063,7 +1063,7 @@
                 ShowScrollbar: =false
                 TemplatePadding: =11
                 TemplateSize: =40
-                Width: =244
+                Width: =274
                 X: =21
                 Y: =logo_6.Y + logo_6.Height +32
                 ZIndex: =2
@@ -1111,8 +1111,8 @@
                     OnSelect: =Select(Parent)
                     PressedFill: =RGBA(105, 121, 126, 1)
                     Visible: =ThisItem.Step=CurrentStep
-                    Width: =4
-                    X: =350-4-MenuList_5.X-11
+                    Width: =5
+                    X: =241
                     ZIndex: =3
 
                 Menu5_5 As icon.DockCheckProperties:
@@ -1307,6 +1307,29 @@
                     X: =0
                     Y: =10
                     ZIndex: =12
+
+                Menu10_5 As icon.Mail:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu10_5.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Printing3D
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu10"
+                    Width: |
+                        =19
+                    Y: =10
+                    ZIndex: =13
 
     ButtonCanvas14 As Botón:
         BasePaletteColor: =RGBA(249, 83, 109, 1)

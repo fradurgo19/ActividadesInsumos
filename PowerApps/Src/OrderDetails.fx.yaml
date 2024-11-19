@@ -47,7 +47,7 @@
                 Size: =20
                 Text: ="Actividades"
                 Width: =1010
-                Y: =8
+                Y: =26
                 ZIndex: =22
 
             Label3_1 As label:
@@ -357,7 +357,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =Parent.Height-100
-            Width: =350
+            Width: =295
             X: =0
             Y: =0
             ZIndex: =1
@@ -429,7 +429,7 @@
                     PressedFill: =MenuName_1.Fill
                     Size: =12
                     Text: =ThisItem.Name
-                    Width: =230
+                    Width: =188
                     X: =39
                     Y: =9
                     ZIndex: =2
@@ -447,8 +447,8 @@
                     OnSelect: =Select(Parent)
                     PressedFill: =RGBA(105, 121, 126, 1)
                     Visible: =ThisItem.Step=CurrentStep
-                    Width: =4
-                    X: =350-4-MenuList_1.X-11
+                    Width: =5
+                    X: =224
                     ZIndex: =3
 
                 Menu5_1 As icon.DockCheckProperties:
@@ -644,6 +644,29 @@
                     Y: =6
                     ZIndex: =12
 
+                Menu10_1 As icon.Mail:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu10_1.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Printing3D
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu10"
+                    Width: |
+                        =19
+                    Y: =9
+                    ZIndex: =13
+
     Image9 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -657,7 +680,8 @@
         Image: ='administracion-de-tareas'
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        X: =1113
+        X: =1107
+        Y: =24
         ZIndex: =5
 
     Image10 As image:

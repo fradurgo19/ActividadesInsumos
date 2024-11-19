@@ -573,7 +573,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
-                    Height: =22
+                    Height: =24
                     HoverBorderColor: =MenuName_4.BorderColor
                     HoverColor: =MenuName_4.Color
                     HoverFill: =MenuName_4.Fill
@@ -587,7 +587,7 @@
                     PressedFill: =MenuName_4.Fill
                     Size: =12
                     Text: =ThisItem.Name
-                    Width: =230
+                    Width: =205
                     X: =39
                     Y: =9
                     ZIndex: =2
@@ -605,8 +605,8 @@
                     OnSelect: =Select(Parent)
                     PressedFill: =RGBA(105, 121, 126, 1)
                     Visible: =ThisItem.Step=CurrentStep
-                    Width: =4
-                    X: =350-4-MenuList_4.X-11
+                    Width: =5
+                    X: =239
                     ZIndex: =3
 
                 Menu5_4 As icon.DockCheckProperties:
@@ -801,6 +801,29 @@
                     X: =0
                     Y: =10
                     ZIndex: =12
+
+                Menu10_4 As icon.Mail:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderColor: =Menu10_4.BorderColor
+                    FocusedBorderThickness: =4
+                    Height: =19
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Printing3D
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =ThisItem.Icon="Menu10"
+                    Width: |
+                        =19
+                    Y: =9
+                    ZIndex: =13
 
     Mask As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
