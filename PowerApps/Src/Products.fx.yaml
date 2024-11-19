@@ -503,7 +503,7 @@
         ShowNavigation: =true
         TemplateSize: =62
         Transition: =Transition.Push
-        Width: =1021
+        Width: =1010
         X: =318
         Y: =159
         ZIndex: =11
@@ -520,7 +520,7 @@
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.Item.Value
-            Width: =125
+            Width: =100
             X: =3
             ZIndex: =1
 
@@ -536,8 +536,8 @@
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Unidad de medida'.Value
-            Width: =61
-            X: =170
+            Width: =54
+            X: =145
             ZIndex: =2
 
         Label10_2 As label:
@@ -553,7 +553,7 @@
             Size: =10
             Text: =ThisItem.'Cantidad '
             Width: =42
-            X: =128
+            X: =103
             ZIndex: =3
 
         Label10_3 As label:
@@ -569,7 +569,7 @@
             Size: =10
             Text: =ThisItem.'Aceite Homologado'
             Width: =122
-            X: =337
+            X: =305
             ZIndex: =4
 
         Label10_4 As label:
@@ -585,7 +585,7 @@
             Size: =10
             Text: =ThisItem.'Referencia Genuina'
             Width: =106
-            X: =231
+            X: =199
             ZIndex: =5
 
         Label10_5 As label:
@@ -601,7 +601,7 @@
             Size: =10
             Text: =ThisItem.'Referencia Stal'
             Width: =93
-            X: =696
+            X: =664
             ZIndex: =6
 
         Label10_6 As label:
@@ -617,7 +617,7 @@
             Size: =10
             Text: =ThisItem.'Referencia Donalson'
             Width: =111
-            X: =789
+            X: =757
             ZIndex: =7
 
         Label10_7 As label:
@@ -633,7 +633,7 @@
             Size: =10
             Text: =ThisItem.'Referencia Fleetguard'
             Width: =98
-            X: =900
+            X: =868
             ZIndex: =8
 
         Label10_16 As label:
@@ -649,7 +649,7 @@
             Size: =10
             Text: =ThisItem.'REF SAP DISPEL'
             Width: =112
-            X: =459
+            X: =427
             ZIndex: =9
 
         Label10_18 As label:
@@ -665,7 +665,7 @@
             Size: =10
             Text: =ThisItem.'REF SAP ORIGINAl'
             Width: =125
-            X: =571
+            X: =539
             ZIndex: =10
 
     Label11_21 As label:
@@ -682,7 +682,7 @@
         Text: |
             ="R. SAP DISPEL"
         Width: =112
-        X: =785
+        X: =749
         Y: =117
         ZIndex: =20
 
@@ -703,7 +703,7 @@
             Height: =42
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1021
+            Width: =1010
             X: =318
             Y: =117
             ZIndex: =12
@@ -720,7 +720,7 @@
             Height: =42
             Size: =12
             Text: ="Insumo"
-            Width: =136
+            Width: =99
             X: =320
             Y: =117
             ZIndex: =13
@@ -737,8 +737,8 @@
             Height: =42
             Size: =12
             Text: ="Cantidad"
-            Width: =104
-            X: =454
+            Width: =103
+            X: =419
             Y: =117
             ZIndex: =14
 
@@ -754,8 +754,8 @@
             Height: =42
             Size: =12
             Text: ="R. SAP ENI"
-            Width: =112
-            X: =669
+            Width: =123
+            X: =626
             Y: =117
             ZIndex: =15
 
@@ -771,8 +771,8 @@
             Height: =42
             Size: =12
             Text: ="R. Genuina"
-            Width: =109
-            X: =559
+            Width: =102
+            X: =522
             Y: =117
             ZIndex: =16
 
@@ -786,10 +786,10 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =42
-            Size: =13
+            Size: =12
             Text: ="R.Stall"
-            Width: =96
-            X: =1019
+            Width: =95
+            X: =986
             Y: =117
             ZIndex: =17
 
@@ -803,10 +803,10 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =42
-            Size: =13
+            Size: =12
             Text: ="R.Donaldson"
-            Width: =114
-            X: =1115
+            Width: =106
+            X: =1081
             Y: =117
             ZIndex: =18
 
@@ -820,10 +820,10 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =42
-            Size: =13
+            Size: =12
             Text: ="R.Fleetguard"
-            Width: =110
-            X: =1229
+            Width: =103
+            X: =1188
             Y: =117
             ZIndex: =19
 
@@ -839,8 +839,8 @@
         Height: =42
         Size: =12
         Text: ="R. SAP ORIGINAl"
-        Width: =122
-        X: =897
+        Width: =125
+        X: =861
         Y: =117
         ZIndex: =21
 
