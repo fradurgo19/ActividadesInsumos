@@ -1,0 +1,88 @@
+ProyectorMttos As screen:
+    ImagePosition: =ImagePosition.Stretch
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    OnVisible: |
+        =UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
+        UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
+        UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        ClearCollect(
+            ColeccionFiltradaFluidoRepuesto,
+            Sort(
+                Filter(
+                    'TEMPARIO DE MANTENIMIENTOS',
+                    Marca.Value = ComboBox2_1.Selected.Results && 'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results && ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
+                ),
+                'Tipo de item'.Value,
+                SortOrder.Ascending
+            )
+        );
+        
+        ClearCollect(
+            ColeccionFiltradaActividades,
+            Filter(
+                'TEMPARIO DE MANTENIMIENTOS',
+                Marca.Value = ComboBox2_1.Selected.Results &&
+                'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                'Tipo de item'.Value = "Actividad"
+            )
+        );
+        
+        ClearCollect(
+            ColeccionConsumiblesConCalculos,
+            AddColumns(
+                ColeccionActivColeccionFiltradaFluidoRepuestoidades,
+                DuracionHora,  * 1,
+                DescripcionExtendi, "Actividad: " & 'Descripción'.Value 
+            )
+        )
+
+    Container24_3 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =59
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        Y: =4
+        ZIndex: =1
+
+        Container25_3 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =59
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1042
+            X: =320
+            ZIndex: =5
+
+            EncabezadoContenedor_12 As EncabezadoContenedor:
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+                Width: =Parent.Width
+                ZIndex: =2
+
+        Arrow1_7 As arrow.backArrow:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Navigate('Proyector Mttos',ScreenTransition.Fade )
+            Width: =47
+            X: =4
+            Y: =4
+            ZIndex: =6
+
+    Container2_3 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =705
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        Y: =63
+        ZIndex: =3
+
