@@ -1,7 +1,7 @@
 ProyectorMttos As screen:
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
+    OnVisible: |+
         =UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
@@ -27,14 +27,7 @@ ProyectorMttos As screen:
             )
         );
         
-        ClearCollect(
-            ColeccionConsumiblesConCalculos,
-            AddColumns(
-                ColeccionActivColeccionFiltradaFluidoRepuestoidades,
-                DuracionHora,  * 1,
-                DescripcionExtendi, "Actividad: " & 'Descripción'.Value 
-            )
-        )
+        
 
     Container24_3 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
