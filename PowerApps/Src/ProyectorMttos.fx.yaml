@@ -264,8 +264,8 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =432
-            X: =875
+            Width: =445
+            X: =18
             Y: =130
             ZIndex: =3
 
@@ -370,7 +370,7 @@ ProyectorMttos As screen:
                     Text: |
                         =(Label10_24.Text) * Value(Label10_30.Text)
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =59
+                    Width: =44
                     X: =353
                     ZIndex: =9
 
@@ -505,8 +505,8 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =128
-            X: =1178
+            Width: =57
+            X: =395
             Y: =614
             ZIndex: =5
 
@@ -517,8 +517,7 @@ ProyectorMttos As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =65
-                X: =55
+                Width: =54
                 ZIndex: =1
 
                 TextCanvas26 As Texto:
@@ -529,9 +528,9 @@ ProyectorMttos As screen:
                     FontUnderline: =true
                     Height: =40
                     Text: =RoundUp(Sum(Gallery2_3.AllItems, Value(Label10_31.Text)), 0)
-                    Width: =65
+                    Width: =54
                     X: =0
-                    Y: =0
+                    Y: =5
                     ZIndex: =1
 
         Container104_1 As groupContainer.manualLayoutContainer:
@@ -567,6 +566,7 @@ ProyectorMttos As screen:
                     ZIndex: =1
 
             "TextInputCanvas7_1 As 'Entrada de texto'":
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(166, 215, 153, 1)
                 Height: =26
@@ -610,6 +610,7 @@ ProyectorMttos As screen:
                     ZIndex: =1
 
             "TextInputCanvas7_2 As 'Entrada de texto'":
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(166, 215, 153, 1)
                 Height: =26
@@ -619,4 +620,308 @@ ProyectorMttos As screen:
                 X: =208
                 Y: =0
                 ZIndex: =2
+
+        ButtonCanvas7 As Botón:
+            BasePaletteColor: =RGBA(156, 220, 79, 1)
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Icon: ="Money"
+            OnSelect: |-
+                =// Calcular las variables basadas en las entradas del usuario
+                Set(Valor1, Value(TextInputCanvas7_1.Value) * 2 * 65000);
+                Set(Valor2, Value(TextInputCanvas7_2.Value) * 2 * 1600);
+                Set(TotalHoras, Value(TextInputCanvas7_1.Value) * 2 + Value(TextCanvas26.Text));
+                
+                // Calcular los días completos y horas restantes
+                Set(DiasCompletos, Int(TotalHoras / 9));
+                Set(HorasRestantes, Mod(TotalHoras, 9));
+                
+                // Calcular Hospedaje
+                Set(Hospedaje, DiasCompletos * 100000);
+                
+                // Calcular Hospedaje
+                Set(MayorPeriodo, RoundUp(Max(Gallery2_3.AllItems, Value(Label10_30.Text)), 0));
+                
+                // Calcular Alimentacion
+                Set(Alimentacion, 
+                    If(TotalHoras >= 9, DiasCompletos * 80000 + 
+                        If(HorasRestantes >= 5 && HorasRestantes <= 8, 40000, 
+                        If(HorasRestantes >= 1 && HorasRestantes <= 4, 20000, 0)),
+                    If(TotalHoras >= 5 && TotalHoras <= 8, 40000, 
+                    If(TotalHoras >= 1 && TotalHoras <= 4, 20000, 0))
+                    )
+                );
+                
+                // Suma total de desplazamiento
+                Set(TotalDesplazamiento, (Valor1 + Valor2 + Hospedaje + Alimentacion)* (MayorPeriodo));
+                
+                // Mostrar el resultado en Label8 con formato
+                TextCanvas22_4.Text = Text(TotalDesplazamiento, "[$-es-ES]$ #,###");
+                
+                Set(varTextoLabel8, Text(TotalDesplazamiento, "[$-es-ES]$ #.###"));
+            Text: ="Resumen"
+            Width: =120
+            X: =1184
+            Y: =110
+            ZIndex: =8
+
+        Container104_3 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =214
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =241
+            X: =1095
+            Y: =165
+            ZIndex: =9
+
+            Container105_3 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =111
+                Y: =35
+                ZIndex: =1
+
+                TextCanvas22_3 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =30
+                    Text: ="Desplazamiento"
+                    Width: =107
+                    X: =0
+                    Y: =4
+                    ZIndex: =1
+
+            Container105_4 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =31
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =130
+                X: =111
+                Y: =40
+                ZIndex: =2
+
+                TextCanvas22_4 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(247, 116, 38, 1)
+                    Height: =27
+                    Text: =varTextoLabel8
+                    Width: =130
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            Container105_5 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =28
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =130
+                X: =111
+                Y: =6
+                ZIndex: =3
+
+                TextCanvas22_5 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(247, 116, 38, 1)
+                    Height: =26
+                    Text: =MayorPeriodo
+                    Width: =130
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            Container105_6 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =28
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =111
+                Y: =6
+                ZIndex: =4
+
+                TextCanvas22_6 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =30
+                    Text: ="Total Visitas"
+                    Width: =107
+                    X: =0
+                    Y: =4
+                    ZIndex: =1
+
+            Container105_7 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =111
+                Y: =71
+                ZIndex: =5
+
+                TextCanvas22_7 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    Text: ="Servicio"
+                    Width: =107
+                    X: =0
+                    Y: =5
+                    ZIndex: =1
+
+            Container105_8 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =130
+                X: =111
+                Y: =71
+                ZIndex: =6
+
+                TextCanvas22_8 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(247, 116, 38, 1)
+                    Height: =30
+                    Text: |-
+                        ="$ " & Text(
+                            Sum(
+                                Value(TextCanvas26.Text) * 145000
+                            ),
+                            "[$-en-US]#,###"
+                        )
+                    Width: =130
+                    X: =0
+                    Y: =5
+                    ZIndex: =1
+
+        Container106_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =484
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =440
+            X: =491
+            Y: =130
+            ZIndex: =10
+
+            Gallery2_5 As gallery.galleryVertical:
+                BorderThickness: =2
+                DelayItemLoading: =true
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =Parent.Height
+                Items: |+
+                    =Sort(
+                            Filter(
+                                'TEMPARIO DE MANTENIMIENTOS',
+                                Marca.Value = ComboBox2_3.Selected.Results && 'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results && ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
+                            ),
+                            'Tipo de item'.Value,
+                            SortOrder.Ascending
+                        )
+                    
+                    
+                    
+                    
+                    
+                    
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowNavigation: =true
+                TemplateSize: =34
+                Transition: =Transition.Push
+                Width: =407
+                X: =25
+                ZIndex: =1
+
+                Label10_32 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: =ThisItem.Item.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =224
+                    X: =11
+                    Y: =2
+                    ZIndex: =1
+
+                Label10_33 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: =ThisItem.'Cantidad '
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =59
+                    X: =235
+                    ZIndex: =6
+
+                Label10_34 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =If(
+                            ThisItem.'Frecuencia (horas)'.Value = Text(0),
+                            "ERROR",
+                            Trunc(Value(TextInputCanvas3.Value) / ThisItem.'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / ThisItem.'Frecuencia (horas)'.Value)
+                        )
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =59
+                    X: =294
+                    ZIndex: =8
+
+                Label10_35 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |
+                        =(Label10_33.Text) * Value(Label10_34.Text)
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =44
+                    X: =353
+                    ZIndex: =9
 
