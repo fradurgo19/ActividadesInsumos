@@ -262,8 +262,8 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =981
-            X: =225
+            Width: =1016
+            X: =315
             Y: =180
             ZIndex: =3
 
@@ -273,49 +273,12 @@ ProyectorMttos As screen:
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =475
                 Items: |+
-                    =ClearCollect(
-                        CalculosMantenimientoCompuesto,
-                        AddColumns(
-                            FrecuenciasMantenimiento,
-                            Repeticiones,
-                            Switch(
-                                Value(Frecuencia.Text),
-                                1000, 
-                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
-                                2000, 
-                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
-                                4000, 
-                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 4000, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0)
-                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
-                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / (Frecuencia.Text), 0)
-                            )
-                        )
-                    );
-                    
-                    
-                    
-                    Sort(
-                        AddColumns(
-                            Filter(
-                                'TEMPARIO DE MANTENIMIENTOS',
-                                Marca.Value = ComboBox2_3.Selected.Results &&
-                                'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
-                                'Tipo de item'.Value = "Actividad"
-                            ),
-                            Repeticiones,
-                            Lookup(
-                                CalculosMantenimientoCompuesto,
-                                Frecuencia = 'Frecuencia (horas)'.Value,
-                                Repeticiones
-                            )
+                    =Sort(    
+                        Filter(
+                            'TEMPARIO DE MANTENIMIENTOS',
+                            Marca.Value = ComboBox2_3.Selected.Results &&
+                            'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
+                            'Tipo de item'.Value = "Actividad"
                         ),
                         'Frecuencia (horas)'.Value,
                         SortOrder.Descending
@@ -331,7 +294,8 @@ ProyectorMttos As screen:
                 ShowNavigation: =true
                 TemplateSize: =32
                 Transition: =Transition.Push
-                Width: =978
+                Width: =665
+                X: =19
                 ZIndex: =1
 
                 Label10_23 As label:
@@ -429,7 +393,42 @@ ProyectorMttos As screen:
                     Height: =32
                     OnSelect: =Select(Parent)
                     Size: =11
-                    Text: =ThisItem.Repeticiones
+                    Text: |-
+                        =If(
+                            ThisItem.'Frecuencia (horas)'.Value = 250,
+                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
+                            If(
+                                ThisItem.'Frecuencia (horas)'.Value  = 500,
+                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0),
+                                If(
+                                    ThisItem.'Frecuencia (horas)'.Value  = 1000,
+                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
+                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
+                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0),
+                                    If(
+                                        ThisItem.'Frecuencia (horas)'.Value  = 2000,
+                                        RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
+                                        RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
+                                        RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0) + 
+                                        RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0),
+                                        If(
+                                            ThisItem.'Frecuencia (horas)'.Value  = 4000,
+                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
+                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
+                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0) + 
+                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0) + 
+                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 4000, 0),
+                                            If(
+                                                ThisItem.'Frecuencia (horas)'.Value  = 5000,
+                                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
+                                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
+                                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =59
                     X: =524
