@@ -273,30 +273,34 @@ ProyectorMttos As screen:
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =475
                 Items: |+
-                    =
-                    ClearCollect(
+                    =ClearCollect(
                         CalculosMantenimientoCompuesto,
                         AddColumns(
                             FrecuenciasMantenimiento,
                             Repeticiones,
                             Switch(
-                                Frecuencia,
-                                1000, RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 1000, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 500, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 250, 0),
-                                2000, RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 2000, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 1000, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 500, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 250, 0),
-                                4000, RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 4000, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 2000, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 1000, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 500, 0)
-                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 250, 0),
-                                RoundDown((Text(TextInputCanvas3.Text) - Text(TextInputCanvas4.Text)) / Frecuencia, 0)
+                                Frecuencia.Text,  
+                                1000, 
+                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
+                                2000, 
+                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
+                                4000, 
+                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 4000, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0)
+                                    + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
+                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / (Frecuencia.Text), 0)
                             )
                         )
                     );
+                    
+                    
                     
                     Sort(
                         AddColumns(
