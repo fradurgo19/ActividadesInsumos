@@ -27,6 +27,15 @@ ProyectorMttos As screen:
             )
         );
         
+        ClearCollect(
+            ColeccionFluidoRepuestoConCalculos,
+            AddColumns(
+                ColeccionFiltradaFluidoRepuesto,
+                CostoEstimado, Cantidad.Value * 'Frecuencia (horas)'.Value * 1.2, // Ejemplo de cálculo
+                DescripcionCompleta, Marca.Value & " - " & Modelo.Value & " - " & Linea.Value // Concatenación de texto
+            )
+        )
+        
         
 
     Container24_3 As groupContainer.manualLayoutContainer:
