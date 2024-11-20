@@ -88,3 +88,145 @@ ProyectorMttos As screen:
         Y: =63
         ZIndex: =3
 
+        Container99 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =67
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            X: =40
+            Y: =20
+            ZIndex: =1
+
+            Container100 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =67
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =137
+                ZIndex: =1
+
+                TextCanvas13 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    Height: =Parent.Height
+                    Text: ="Periodo  de Trabajo"
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            Container101 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =67
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =363
+                X: =137
+                ZIndex: =2
+
+                Container102 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =30
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =363
+                    ZIndex: =1
+
+                    TextCanvas20 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="Horas Actuales"
+                        Width: =139
+                        X: =194
+                        Y: =0
+                        ZIndex: =1
+
+                    "TextInputCanvas4 As 'Entrada de texto'":
+                        Appearance: ='TextInputCanvas.Appearance'.FilledDarker
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(255, 184, 174, 1)
+                        Height: =30
+                        TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
+                        Width: =163
+                        X: =3
+                        Y: =0
+                        ZIndex: =2
+
+                Container103 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =37
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =363
+                    Y: =30
+                    ZIndex: =2
+
+                    TextCanvas21 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Text: ="Horas Proyectadas"
+                        Width: =132
+                        X: =196
+                        Y: =5
+                        ZIndex: =1
+
+                    "TextInputCanvas3 As 'Entrada de texto'":
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(255, 184, 174, 1)
+                        Height: =32
+                        Width: =162
+                        X: =6
+                        Y: =5
+                        ZIndex: =2
+
+        Container104 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =49
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =308
+            X: =746
+            Y: =20
+            ZIndex: =2
+
+            Container105 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =46
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =147
+                ZIndex: =1
+
+                TextCanvas22 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    Text: |-
+                        ="Cantidad de Equipos:"
+                    Width: =150
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            "TextInputCanvas7 As 'Entrada de texto'":
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(255, 184, 174, 1)
+                Height: =46
+                Width: =161
+                X: =147
+                Y: =0
+                ZIndex: =2
+
