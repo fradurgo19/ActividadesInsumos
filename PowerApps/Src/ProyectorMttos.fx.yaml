@@ -138,6 +138,7 @@ ProyectorMttos As screen:
                     DisplayMode: =DisplayMode.Edit
                     Fill: =
                     Height: =Parent.Height
+                    Size: =12
                     Text: ="Periodo  de Trabajo"
                     Width: =Parent.Width
                     X: =0
@@ -168,6 +169,7 @@ ProyectorMttos As screen:
                     TextCanvas20 As Texto:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
+                        Size: =12
                         Text: ="Horas Actuales"
                         Width: =139
                         X: =121
@@ -199,6 +201,7 @@ ProyectorMttos As screen:
                     TextCanvas21 As Texto:
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
+                        Size: =12
                         Text: ="Horas Proyectadas"
                         Width: =132
                         X: =118
@@ -296,8 +299,8 @@ ProyectorMttos As screen:
                 ShowNavigation: =true
                 TemplateSize: =34
                 Transition: =Transition.Push
-                Width: =407
-                X: =25
+                Width: =430
+                X: =15
                 ZIndex: =1
 
                 Label10_23 As label:
@@ -535,7 +538,7 @@ ProyectorMttos As screen:
 
         Container104_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =28
+            Height: =40
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -547,20 +550,20 @@ ProyectorMttos As screen:
 
             Container105_1 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =26
+                Height: =38
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =202
+                Width: =218
                 ZIndex: =1
 
                 TextCanvas22_1 As Texto:
                     DisplayMode: =DisplayMode.Edit
-                    Height: =26
-                    Size: =10
+                    Height: =37
+                    Size: =12
                     Text: ="Tiempo De Desplazamiento Hrs ( 1 Trayecto)"
-                    Width: =202
+                    Width: =201
                     X: =0
                     Y: =0
                     ZIndex: =1
@@ -569,11 +572,11 @@ ProyectorMttos As screen:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(166, 215, 153, 1)
-                Height: =26
+                Height: =38
                 Placeholder: ="Tiempo"
                 Type: ="Text"
-                Width: =97
-                X: =202
+                Width: =80
+                X: =218
                 Y: =0
                 ZIndex: =2
 
@@ -586,25 +589,25 @@ ProyectorMttos As screen:
             RadiusTopRight: =4
             Width: =305
             X: =1049
-            Y: =55
+            Y: =60
             ZIndex: =7
 
             Container105_2 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =26
+                Height: =30
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =208
+                Width: =218
                 ZIndex: =1
 
                 TextCanvas22_2 As Texto:
                     DisplayMode: =DisplayMode.Edit
                     Height: =26
-                    Size: =10
+                    Size: =12
                     Text: ="Kms Recorridos ( 1 Trayecto)"
-                    Width: =204
+                    Width: =208
                     X: =0
                     Y: =0
                     ZIndex: =1
@@ -613,11 +616,11 @@ ProyectorMttos As screen:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(166, 215, 153, 1)
-                Height: =26
+                Height: =30
                 Placeholder: ="Kms"
                 Type: ="Text"
-                Width: =94
-                X: =208
+                Width: =83
+                X: =218
                 Y: =0
                 ZIndex: =2
 
@@ -809,6 +812,59 @@ ProyectorMttos As screen:
                     Y: =5
                     ZIndex: =1
 
+            Container111 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =51
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =241
+                Y: =162
+                ZIndex: =7
+
+                Container112 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =51
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =122
+                    ZIndex: =1
+
+                    TextCanvas48 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =51
+                        Size: =12
+                        Text: ="TOTAL"
+                        Width: =122
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                Container113 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =51
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =119
+                    X: =122
+                    ZIndex: =2
+
+                    TextCanvas49 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(247, 116, 38, 1)
+                        Height: =51
+                        Text: |
+                            ="$ " & Text(Value(Substitute(varTextoLabel8, "$", "")) + Value(Substitute(TextCanvas22_8.Text, "$", "")), "[$-en-US]#,###")
+                        Width: =119
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
         Container106_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =484
@@ -846,8 +902,7 @@ ProyectorMttos As screen:
                 ShowNavigation: =true
                 TemplateSize: =34
                 Transition: =Transition.Push
-                Width: =407
-                X: =25
+                Width: =432
                 ZIndex: =1
 
                 Label10_32 As label:
@@ -882,7 +937,7 @@ ProyectorMttos As screen:
                     Text: =ThisItem.'Cantidad '
                     VerticalAlign: =VerticalAlign.Top
                     Width: =59
-                    X: =235
+                    X: =250
                     ZIndex: =6
 
                 Label10_34 As label:
@@ -904,7 +959,7 @@ ProyectorMttos As screen:
                         )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =59
-                    X: =294
+                    X: =309
                     ZIndex: =8
 
                 Label10_35 As label:
@@ -922,6 +977,104 @@ ProyectorMttos As screen:
                         =(Label10_33.Text) * Value(Label10_34.Text)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =44
-                    X: =353
+                    X: =368
                     ZIndex: =9
+
+        Container114 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =38
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =445
+            X: =18
+            Y: =92
+            ZIndex: =11
+
+            TextCanvas50 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Actividad"
+                Width: =215
+                X: =40
+                Y: =6
+                ZIndex: =1
+
+            TextCanvas51 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Tiempo"
+                Width: =49
+                X: =255
+                Y: =6
+                ZIndex: =2
+
+            TextCanvas51_1 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Periodo"
+                Width: =49
+                X: =322
+                Y: =6
+                ZIndex: =3
+
+            TextCanvas51_2 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Total"
+                Width: =49
+                X: =384
+                Y: =6
+                ZIndex: =4
+
+        Container114_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =38
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =440
+            X: =491
+            Y: =92
+            ZIndex: =12
+
+            TextCanvas50_1 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Actividad"
+                Width: =215
+                X: =40
+                Y: =6
+                ZIndex: =1
+
+            TextCanvas51_3 As Texto:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="Cantidad"
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                Width: =80
+                X: =241
+                Y: =6
+                ZIndex: =2
+
+            TextCanvas51_4 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Periodo"
+                Width: =49
+                X: =322
+                Y: =6
+                ZIndex: =3
+
+            TextCanvas51_5 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Total"
+                Width: =49
+                X: =384
+                Y: =6
+                ZIndex: =4
 
