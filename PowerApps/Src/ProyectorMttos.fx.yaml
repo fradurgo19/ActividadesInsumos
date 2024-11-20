@@ -119,7 +119,7 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =505
+            Width: =399
             X: =348
             Y: =20
             ZIndex: =1
@@ -162,7 +162,7 @@ ProyectorMttos As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =363
+                    Width: =260
                     ZIndex: =1
 
                     TextCanvas20 As Texto:
@@ -170,17 +170,17 @@ ProyectorMttos As screen:
                         Height: =30
                         Text: ="Horas Actuales"
                         Width: =139
-                        X: =194
+                        X: =121
                         Y: =0
                         ZIndex: =1
 
                     "TextInputCanvas4 As 'Entrada de texto'":
                         Appearance: ='TextInputCanvas.Appearance'.FilledDarker
                         DisplayMode: =DisplayMode.Edit
-                        Fill: =RGBA(255, 184, 174, 1)
+                        Fill: =RGBA(174, 208, 221, 1)
                         Height: =30
                         TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
-                        Width: =163
+                        Width: =116
                         X: =3
                         Y: =0
                         ZIndex: =2
@@ -201,34 +201,34 @@ ProyectorMttos As screen:
                         Height: =32
                         Text: ="Horas Proyectadas"
                         Width: =132
-                        X: =196
+                        X: =118
                         Y: =5
                         ZIndex: =1
 
                     "TextInputCanvas3 As 'Entrada de texto'":
                         DisplayMode: =DisplayMode.Edit
-                        Fill: =RGBA(255, 184, 174, 1)
+                        Fill: =RGBA(174, 208, 221, 1)
                         Height: =32
-                        Width: =162
+                        Width: =112
                         X: =6
                         Y: =5
                         ZIndex: =2
 
         Container104 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =49
+            Height: =28
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =314
-            X: =926
+            Width: =249
+            X: =790
             Y: =20
             ZIndex: =2
 
             Container105 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =46
+                Height: =26
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -238,19 +238,21 @@ ProyectorMttos As screen:
 
                 TextCanvas22 As Texto:
                     DisplayMode: =DisplayMode.Edit
-                    Height: =32
+                    Height: =22
                     Text: |-
                         ="Cantidad de Equipos:"
-                    Width: =150
+                    Width: =143
                     X: =0
                     Y: =0
                     ZIndex: =1
 
             "TextInputCanvas7 As 'Entrada de texto'":
                 DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(255, 184, 174, 1)
-                Height: =46
-                Width: =161
+                Fill: =RGBA(180, 214, 250, 1)
+                Height: =26
+                Placeholder: ="No. Equipos"
+                Type: ="Text"
+                Width: =91
                 X: =147
                 Y: =0
                 ZIndex: =2
@@ -375,7 +377,7 @@ ProyectorMttos As screen:
         Container107 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 184, 174, 1)
-            Height: =94
+            Height: =67
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -387,7 +389,7 @@ ProyectorMttos As screen:
 
             Container108 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =43
+                Height: =31
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -409,7 +411,7 @@ ProyectorMttos As screen:
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     DisplayFields: =["Results"]
                     Font: =Font.'Segoe UI'
-                    Height: =35
+                    Height: =23
                     HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(212, 212, 212, 1)
@@ -433,20 +435,20 @@ ProyectorMttos As screen:
                         =Search(Filter(ForAll(Distinct(TempariosLocal,Marca.Value),{Results:ThisRecord.Value}),Results),ComboBox2_3.SearchText,Results)
                     SelectionFill: =RGBA(105, 121, 126, 1)
                     SelectMultiple: =false
-                    Size: =13
-                    Width: =309
+                    Width: =255
+                    X: =30
                     Y: =5
                     ZIndex: =1
 
             Container109 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =45
+                Height: =33
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =309
-                Y: =43
+                Y: =31
                 ZIndex: =2
 
                 ComboBox2_2 As combobox:
@@ -463,7 +465,7 @@ ProyectorMttos As screen:
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     DisplayFields: =["Results"]
                     Font: =Font.'Segoe UI'
-                    Height: =37
+                    Height: =22
                     HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(212, 212, 212, 1)
@@ -491,8 +493,8 @@ ProyectorMttos As screen:
                     SearchItems: =[]
                     SelectionFill: =RGBA(105, 121, 126, 1)
                     SelectMultiple: =false
-                    Size: =13
-                    Width: =309
+                    Width: =257
+                    X: =30
                     Y: =5
                     ZIndex: =1
 
@@ -531,4 +533,90 @@ ProyectorMttos As screen:
                     X: =0
                     Y: =0
                     ZIndex: =1
+
+        Container104_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =28
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =304
+            X: =1049
+            Y: =20
+            ZIndex: =6
+
+            Container105_1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =26
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =202
+                ZIndex: =1
+
+                TextCanvas22_1 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =26
+                    Size: =10
+                    Text: ="Tiempo De Desplazamiento Hrs ( 1 Trayecto)"
+                    Width: =202
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            "TextInputCanvas7_1 As 'Entrada de texto'":
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(166, 215, 153, 1)
+                Height: =26
+                Placeholder: ="Tiempo"
+                Type: ="Text"
+                Width: =97
+                X: =202
+                Y: =0
+                ZIndex: =2
+
+        Container104_2 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =32
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =305
+            X: =1049
+            Y: =55
+            ZIndex: =7
+
+            Container105_2 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =26
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =208
+                ZIndex: =1
+
+                TextCanvas22_2 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =26
+                    Size: =10
+                    Text: ="Kms Recorridos ( 1 Trayecto)"
+                    Width: =204
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            "TextInputCanvas7_2 As 'Entrada de texto'":
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(166, 215, 153, 1)
+                Height: =26
+                Placeholder: ="Kms"
+                Type: ="Text"
+                Width: =94
+                X: =208
+                Y: =0
+                ZIndex: =2
 
