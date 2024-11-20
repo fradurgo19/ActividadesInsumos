@@ -395,31 +395,31 @@ ProyectorMttos As screen:
                     Size: =11
                     Text: |-
                         =If(
-                            ThisItem.'Frecuencia (horas)'.Value = 250,
+                            ThisItem.'Frecuencia (horas)'.Value = Text(250),
                             RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
                             If(
-                                ThisItem.'Frecuencia (horas)'.Value  = 500,
+                                ThisItem.'Frecuencia (horas)'.Value  = Text(500),
                                 RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0),
                                 If(
-                                    ThisItem.'Frecuencia (horas)'.Value  = 1000,
+                                    ThisItem.'Frecuencia (horas)'.Value  = Text(1000),
                                     RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
                                     RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
                                     RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0),
                                     If(
-                                        ThisItem.'Frecuencia (horas)'.Value  = 2000,
+                                        ThisItem.'Frecuencia (horas)'.Value  = Text(2000),
                                         RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
                                         RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
                                         RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0) + 
                                         RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0),
                                         If(
-                                            ThisItem.'Frecuencia (horas)'.Value  = 4000,
+                                            ThisItem.'Frecuencia (horas)'.Value  = Text(4000),
                                             RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
                                             RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
                                             RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0) + 
                                             RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0) + 
                                             RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 4000, 0),
                                             If(
-                                                ThisItem.'Frecuencia (horas)'.Value  = 5000,
+                                                ThisItem.'Frecuencia (horas)'.Value  = Text(5000),
                                                 RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
                                                 RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
                                                 RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
