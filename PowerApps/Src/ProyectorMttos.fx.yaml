@@ -10,7 +10,7 @@ ProyectorMttos As screen:
             Sort(
                 Filter(
                     'TEMPARIO DE MANTENIMIENTOS',
-                    Marca.Value = ComboBox2_1.Selected.Results && 'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results && ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
+                    Marca.Value = ComboBox2_3.Selected.Results && 'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results && ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
                 ),
                 'Tipo de item'.Value,
                 SortOrder.Ascending
@@ -21,20 +21,44 @@ ProyectorMttos As screen:
             ColeccionFiltradaActividades,
             Filter(
                 'TEMPARIO DE MANTENIMIENTOS',
-                Marca.Value = ComboBox2_1.Selected.Results &&
-                'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                Marca.Value = ComboBox2_3.Selected.Results &&
+                'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
                 'Tipo de item'.Value = "Actividad"
             )
         );
         
+        
         ClearCollect(
-            ColeccionFluidoRepuestoConCalculos,
+            ColFluidoRepuestoConCambios,
             AddColumns(
                 ColeccionFiltradaFluidoRepuesto,
-                CostoEstimado, Cantidad.Value * 'Frecuencia (horas)'.Value * 1.2, // Ejemplo de cálculo
-                DescripcionCompleta, Marca.Value & " - " & Modelo.Value & " - " & Linea.Value // Concatenación de texto
+                CantidadDeCambiosEnElPeriodo,
+                If(
+                    'Frecuencia (horas)'.Value = 0,
+                    "ERROR", 
+                    Trunc(TextInputCanvas3.Value / 'Frecuencia (horas)'.Value) - 
+                    Trunc(TextInputCanvas4.Value / 'Frecuencia (horas)'.Value)
+                )
+            )
+        );
+        
+        ClearCollect(
+            ColeccionFluidoRepuestoConCantidadTotal,
+            AddColumns(
+                ColFluidoRepuestoConCambios,
+                CantidadTotalRequerida,
+                If(
+                    'Frecuencia (horas)'.Value = "ERROR",
+                    Cantidad.Value,
+                    Cantidad.Value * 
+                    Value(CantidadDeCambiosEnElPeriodo) * 
+                    Value(TextInputCanvas7.Value)
+                )
             )
         )
+        
+        
+        
         
         
 
@@ -95,7 +119,8 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            X: =40
+            Width: =505
+            X: =348
             Y: =20
             ZIndex: =1
 
@@ -196,8 +221,8 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =308
-            X: =746
+            Width: =314
+            X: =926
             Y: =20
             ZIndex: =2
 
@@ -229,4 +254,138 @@ ProyectorMttos As screen:
                 X: =147
                 Y: =0
                 ZIndex: =2
+
+        Container106 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =384
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =719
+            X: =310
+            Y: =180
+            ZIndex: =3
+
+        Container107 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =125
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =309
+            X: =25
+            Y: =20
+            ZIndex: =4
+
+            Container108 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =61
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =309
+                ZIndex: =1
+
+                ComboBox2_3 As combobox:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                    ChevronFill: =RGBA(33, 33, 33, 1)
+                    ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                    ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayFields: =["Results"]
+                    Font: =Font.'Segoe UI'
+                    Height: =35
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverColor: =RGBA(51, 51, 51, 1)
+                    HoverFill: =RGBA(212, 212, 212, 1)
+                    InputTextPlaceholder: ="Buscar Marca"
+                    Items: |
+                        =Filter(
+                            ForAll(
+                                Distinct(
+                                    TempariosLocal,
+                                    Marca.Value
+                                ),
+                                {Results: ThisRecord.Value}
+                            ),
+                            Results
+                        )
+                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    SearchFields: =["Results"]
+                    SearchItems: |-
+                        =Search(Filter(ForAll(Distinct(TempariosLocal,Marca.Value),{Results:ThisRecord.Value}),Results),ComboBox2_3.SearchText,Results)
+                    SelectionFill: =RGBA(105, 121, 126, 1)
+                    SelectMultiple: =false
+                    Size: =15
+                    Width: =309
+                    Y: =5
+                    ZIndex: =1
+
+            Container109 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =64
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =309
+                Y: =61
+                ZIndex: =2
+
+                ComboBox2_2 As combobox:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                    ChevronFill: =RGBA(33, 33, 33, 1)
+                    ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                    ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayFields: =["Results"]
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverColor: =RGBA(51, 51, 51, 1)
+                    HoverFill: =RGBA(212, 212, 212, 1)
+                    InputTextPlaceholder: ="Buscar Modelo"
+                    IsSearchable: =false
+                    Items: |-
+                        =Sort(
+                            ForAll(
+                                Distinct(
+                                    Filter(
+                                        TempariosLocal,
+                                        Marca.Value = ComboBox2_3.Selected.Results
+                                    ),
+                                    'Modelo (Modelo0)'.Value
+                                ),
+                                {Results: ThisRecord.Value}
+                            ),
+                            Results
+                        )
+                    NoSelectionText: ="Buscar Modelo"
+                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    SearchFields: =["Results"]
+                    SearchItems: =[]
+                    SelectionFill: =RGBA(105, 121, 126, 1)
+                    SelectMultiple: =false
+                    Size: =15
+                    Width: =309
+                    Y: =24
+                    ZIndex: =1
 
