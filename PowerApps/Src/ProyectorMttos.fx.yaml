@@ -257,14 +257,14 @@ ProyectorMttos As screen:
 
         Container106 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =475
+            Height: =484
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =1016
-            X: =315
-            Y: =180
+            Width: =688
+            X: =645
+            Y: =130
             ZIndex: =3
 
             Gallery2_3 As gallery.galleryVertical:
@@ -294,8 +294,8 @@ ProyectorMttos As screen:
                 ShowNavigation: =true
                 TemplateSize: =32
                 Transition: =Transition.Push
-                Width: =665
-                X: =19
+                Width: =676
+                X: =10
                 ZIndex: =1
 
                 Label10_23 As label:
@@ -395,44 +395,32 @@ ProyectorMttos As screen:
                     Size: =11
                     Text: |-
                         =If(
-                            ThisItem.'Frecuencia (horas)'.Value = Text(250),
-                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0),
-                            If(
-                                ThisItem.'Frecuencia (horas)'.Value  = Text(500),
-                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0),
-                                If(
-                                    ThisItem.'Frecuencia (horas)'.Value  = Text(1000),
-                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
-                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
-                                    RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0),
-                                    If(
-                                        ThisItem.'Frecuencia (horas)'.Value  = Text(2000),
-                                        RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
-                                        RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
-                                        RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0) + 
-                                        RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0),
-                                        If(
-                                            ThisItem.'Frecuencia (horas)'.Value  = Text(4000),
-                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
-                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
-                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0) + 
-                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000, 0) + 
-                                            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 4000, 0),
-                                            If(
-                                                ThisItem.'Frecuencia (horas)'.Value  = Text(5000),
-                                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250, 0) + 
-                                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0) + 
-                                                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
-                                            )
-                                        )
-                                    )
-                                )
-                            )
+                            ThisItem.'Frecuencia (horas)'.Value = Text(0),
+                            "ERROR",
+                            Trunc(Value(TextInputCanvas3.Value) / ThisItem.'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / ThisItem.'Frecuencia (horas)'.Value)
                         )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =59
                     X: =524
                     ZIndex: =8
+
+                Label10_31 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =11
+                    Text: |
+                        =(Label10_24.Text) * Value(Label10_30.Text)
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =59
+                    X: =583
+                    ZIndex: =9
 
         Container107 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -556,5 +544,40 @@ ProyectorMttos As screen:
                     Size: =13
                     Width: =309
                     Y: =5
+                    ZIndex: =1
+
+        Container98 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =45
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =175
+            X: =645
+            Y: =614
+            ZIndex: =5
+
+            Container110 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =45
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =65
+                X: =55
+                ZIndex: =1
+
+                TextCanvas26 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Font: =Font.'Segoe UI'
+                    FontStrikethrough: =false
+                    FontUnderline: =true
+                    Height: =29
+                    Text: =RoundUp(Sum(Gallery2_3.AllItems, Value(Label10_31.Text)), 0)
+                    Width: =44
+                    X: =25
+                    Y: =13
                     ZIndex: =1
 
