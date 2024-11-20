@@ -824,25 +824,25 @@
                 Y: =196
                 ZIndex: =24
 
-            TextCanvas8 As Texto:
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Text: |-
-                    ="Versión: " & App.StudioVersion
-                Width: =182
-                X: =827
-                Y: =30
-                ZIndex: =25
-
             TextCanvas8_1 As Texto:
                 DisplayMode: =DisplayMode.Edit
                 Height: =28
                 Text: |-
                     ="Última actualización: " & Text(LookUp('TEMPARIO DE MANTENIMIENTOS', ID = 12729).Modificado)
                 Width: =304
-                X: =721
-                Y: =310
+                X: =736
+                Y: =10
                 ZIndex: =26
+
+            TextCanvas46 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =98
+                Text: |-
+                    ="Versión: " & App.StudioVersion & ": Se agrega rutinas de Mttos de ejecución unica en toda la vida de la maquina, Ejemplo Primeras 250 horas."
+                Width: =275
+                X: =746
+                Y: =58
+                ZIndex: =27
 
     MaskConfirm As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0

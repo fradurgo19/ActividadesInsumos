@@ -262,8 +262,8 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =688
-            X: =645
+            Width: =432
+            X: =875
             Y: =130
             ZIndex: =3
 
@@ -271,7 +271,7 @@ ProyectorMttos As screen:
                 BorderThickness: =2
                 DelayItemLoading: =true
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =475
+                Height: =Parent.Height
                 Items: |+
                     =Sort(    
                         Filter(
@@ -292,10 +292,10 @@ ProyectorMttos As screen:
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true
-                TemplateSize: =32
+                TemplateSize: =34
                 Transition: =Transition.Push
-                Width: =676
-                X: =10
+                Width: =407
+                X: =25
                 ZIndex: =1
 
                 Label10_23 As label:
@@ -308,45 +308,12 @@ ProyectorMttos As screen:
                     FontWeight: =FontWeight.Bold
                     Height: =32
                     OnSelect: =Select(Parent)
-                    Size: =11
+                    Size: =10
                     Text: =ThisItem.Item.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =224
-                    X: =242
+                    X: =2
                     ZIndex: =1
-
-                Label10_19 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =32
-                    OnSelect: =Select(Parent)
-                    Size: =11
-                    Text: =ThisItem.'Frecuencia (horas)'.Value
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =102
-                    ZIndex: =2
-
-                Label10_21 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =32
-                    OnSelect: =Select(Parent)
-                    Size: =11
-                    Text: =ThisItem.Marca.Value
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =62
-                    X: =102
-                    ZIndex: =5
 
                 Label10_24 As label:
                     BorderThickness: =2
@@ -358,29 +325,12 @@ ProyectorMttos As screen:
                     FontWeight: =FontWeight.Bold
                     Height: =32
                     OnSelect: =Select(Parent)
-                    Size: =11
+                    Size: =10
                     Text: =ThisItem.'Tiempo (horas)'
                     VerticalAlign: =VerticalAlign.Top
                     Width: =59
-                    X: =465
+                    X: =235
                     ZIndex: =6
-
-                Label10_22 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =32
-                    OnSelect: =Select(Parent)
-                    Size: =11
-                    Text: =ThisItem.'Modelo (Modelo0)'.Value
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =78
-                    X: =164
-                    ZIndex: =7
 
                 Label10_30 As label:
                     BorderThickness: =2
@@ -392,7 +342,7 @@ ProyectorMttos As screen:
                     FontWeight: =FontWeight.Bold
                     Height: =32
                     OnSelect: =Select(Parent)
-                    Size: =11
+                    Size: =10
                     Text: |-
                         =If(
                             ThisItem.'Frecuencia (horas)'.Value = Text(0),
@@ -401,7 +351,7 @@ ProyectorMttos As screen:
                         )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =59
-                    X: =524
+                    X: =294
                     ZIndex: =8
 
                 Label10_31 As label:
@@ -414,12 +364,12 @@ ProyectorMttos As screen:
                     FontWeight: =FontWeight.Bold
                     Height: =32
                     OnSelect: =Select(Parent)
-                    Size: =11
+                    Size: =10
                     Text: |
                         =(Label10_24.Text) * Value(Label10_30.Text)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =59
-                    X: =583
+                    X: =353
                     ZIndex: =9
 
         Container107 As groupContainer.manualLayoutContainer:
@@ -553,8 +503,8 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =175
-            X: =645
+            Width: =128
+            X: =1178
             Y: =614
             ZIndex: =5
 
@@ -570,14 +520,15 @@ ProyectorMttos As screen:
                 ZIndex: =1
 
                 TextCanvas26 As Texto:
+                    Align: ='TextCanvas.Align'.Center
                     DisplayMode: =DisplayMode.Edit
                     Font: =Font.'Segoe UI'
                     FontStrikethrough: =false
                     FontUnderline: =true
-                    Height: =29
+                    Height: =40
                     Text: =RoundUp(Sum(Gallery2_3.AllItems, Value(Label10_31.Text)), 0)
-                    Width: =44
-                    X: =25
-                    Y: =13
+                    Width: =65
+                    X: =0
+                    Y: =0
                     ZIndex: =1
 
