@@ -257,7 +257,7 @@ ProyectorMttos As screen:
 
         Container106 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =384
+            Height: =475
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -271,25 +271,61 @@ ProyectorMttos As screen:
                 BorderThickness: =2
                 DelayItemLoading: =true
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =384
+                Height: =475
                 Items: |+
-                    =Filter(
-                        'TEMPARIO DE MANTENIMIENTOS',
-                        Marca.Value = ComboBox2_3.Selected.Results &&
-                        'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
-                        If(
-                            IsBlank(ComboBox3.SelectedItems),
-                            true,
-                            'Frecuencia (horas)'.Value in SelectedFrequencies
-                        ) &&
-                        'Tipo de item'.Value = "Actividad"
+                    =
+                    ClearCollect(
+                        CalculosMantenimientoCompuesto,
+                        AddColumns(
+                            FrecuenciasMantenimiento,
+                            Repeticiones,
+                            Switch(
+                                Frecuencia,
+                                1000, RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 1000, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 500, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 250, 0),
+                                2000, RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 2000, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 1000, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 500, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 250, 0),
+                                4000, RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 4000, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 2000, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 1000, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 500, 0)
+                                       + RoundDown((Text(TextInputCanvas3.Value) - Text(TextInputCanvas4.Value)) / 250, 0),
+                                RoundDown((Text(TextInputCanvas3.Text) - Text(TextInputCanvas4.Text)) / Frecuencia, 0)
+                            )
+                        )
+                    );
+                    
+                    Sort(
+                        AddColumns(
+                            Filter(
+                                'TEMPARIO DE MANTENIMIENTOS',
+                                Marca.Value = ComboBox2_3.Selected.Results &&
+                                'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
+                                'Tipo de item'.Value = "Actividad"
+                            ),
+                            Repeticiones,
+                            Lookup(
+                                CalculosMantenimientoCompuesto,
+                                Frecuencia = 'Frecuencia (horas)'.Value,
+                                Repeticiones
+                            )
+                        ),
+                        'Frecuencia (horas)'.Value,
+                        SortOrder.Descending
                     )
+                    
+                    
+                    
+                    
                     
                     
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true
-                TemplateSize: =44
+                TemplateSize: =32
                 Transition: =Transition.Push
                 Width: =978
                 ZIndex: =1
@@ -302,7 +338,7 @@ ProyectorMttos As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =44
+                    Height: =32
                     OnSelect: =Select(Parent)
                     Size: =11
                     Text: =ThisItem.Item.Value
@@ -319,7 +355,7 @@ ProyectorMttos As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =44
+                    Height: =32
                     OnSelect: =Select(Parent)
                     Size: =11
                     Text: =ThisItem.'Frecuencia (horas)'.Value
@@ -335,7 +371,7 @@ ProyectorMttos As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =44
+                    Height: =32
                     OnSelect: =Select(Parent)
                     Size: =11
                     Text: =ThisItem.Marca.Value
@@ -352,7 +388,7 @@ ProyectorMttos As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =44
+                    Height: =32
                     OnSelect: =Select(Parent)
                     Size: =11
                     Text: =ThisItem.'Tiempo (horas)'
@@ -369,7 +405,7 @@ ProyectorMttos As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =44
+                    Height: =32
                     OnSelect: =Select(Parent)
                     Size: =11
                     Text: =ThisItem.'Modelo (Modelo0)'.Value
@@ -377,6 +413,23 @@ ProyectorMttos As screen:
                     Width: =78
                     X: =164
                     ZIndex: =7
+
+                Label10_30 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =11
+                    Text: =ThisItem.Repeticiones
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =59
+                    X: =524
+                    ZIndex: =8
 
         Container107 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
