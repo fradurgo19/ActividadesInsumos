@@ -2575,6 +2575,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 123,
+                  "charOffset": 159,
+                  "snippet": {
+                    "text": "If(\n        IsBlank(ComboBox3.SelectedItems);\n        true;\n        'Frecuencia (horas)'.Value in SelectedFrequencies\n    )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ProyectorMttos",
+                "type": "ProyectorMttos.Container2_3.Container106.Gallery2_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 152,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ProyectorMttos",
+                "type": "ProyectorMttos.Container2_3.Container106.Gallery2_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 283,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ProyectorMttos",
+                "type": "ProyectorMttos.Container2_3.Container106.Gallery2_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Proyector Mttos'.Menu_11.MenuCard_11.MenuList_11.AccessibleLabel"
                 }
               ],
@@ -8184,6 +8304,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ProyectorMttos",
+                "type": "ProyectorMttos.Container2_3.Container106.Gallery2_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ProyectorMttos",
+                "type": "ProyectorMttos.Container2_3.Container106.Gallery2_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.totalItems"
                 }
               ],
@@ -8976,36 +9156,6 @@
                 "member": "SelectedTipos",
                 "module": "Proyector Mttos",
                 "type": "'Proyector Mttos'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProyectorMttos.SelectedFrequencies"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProyectorMttos.SelectedFrequencies",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "SelectedFrequencies",
-                "module": "ProyectorMttos",
-                "type": "ProyectorMttos"
               }
             }
           ],
@@ -10276,6 +10426,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ProyectorMttos",
+                "type": "ProyectorMttos.Container2_3.Container106.Gallery2_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 16
         }
       ],
       "tool": {

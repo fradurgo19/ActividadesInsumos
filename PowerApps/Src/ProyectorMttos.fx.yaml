@@ -262,26 +262,138 @@ ProyectorMttos As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =719
-            X: =310
+            Width: =981
+            X: =225
             Y: =180
             ZIndex: =3
 
+            Gallery2_3 As gallery.galleryVertical:
+                BorderThickness: =2
+                DelayItemLoading: =true
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =384
+                Items: |+
+                    =Filter(
+                        'TEMPARIO DE MANTENIMIENTOS',
+                        Marca.Value = ComboBox2_3.Selected.Results &&
+                        'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
+                        If(
+                            IsBlank(ComboBox3.SelectedItems),
+                            true,
+                            'Frecuencia (horas)'.Value in SelectedFrequencies
+                        ) &&
+                        'Tipo de item'.Value = "Actividad"
+                    )
+                    
+                    
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowNavigation: =true
+                TemplateSize: =44
+                Transition: =Transition.Push
+                Width: =978
+                ZIndex: =1
+
+                Label10_23 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =11
+                    Text: =ThisItem.Item.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =224
+                    X: =242
+                    ZIndex: =1
+
+                Label10_19 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =11
+                    Text: =ThisItem.'Frecuencia (horas)'.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =102
+                    ZIndex: =2
+
+                Label10_21 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =11
+                    Text: =ThisItem.Marca.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =62
+                    X: =102
+                    ZIndex: =5
+
+                Label10_24 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =11
+                    Text: =ThisItem.'Tiempo (horas)'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =59
+                    X: =465
+                    ZIndex: =6
+
+                Label10_22 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =11
+                    Text: =ThisItem.'Modelo (Modelo0)'.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =78
+                    X: =164
+                    ZIndex: =7
+
         Container107 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =125
+            Fill: =RGBA(255, 184, 174, 1)
+            Height: =94
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =309
-            X: =25
+            Width: =319
+            X: =18
             Y: =20
             ZIndex: =4
 
             Container108 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =61
+                Height: =43
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -327,20 +439,20 @@ ProyectorMttos As screen:
                         =Search(Filter(ForAll(Distinct(TempariosLocal,Marca.Value),{Results:ThisRecord.Value}),Results),ComboBox2_3.SearchText,Results)
                     SelectionFill: =RGBA(105, 121, 126, 1)
                     SelectMultiple: =false
-                    Size: =15
+                    Size: =13
                     Width: =309
                     Y: =5
                     ZIndex: =1
 
             Container109 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =64
+                Height: =45
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =309
-                Y: =61
+                Y: =43
                 ZIndex: =2
 
                 ComboBox2_2 As combobox:
@@ -357,6 +469,7 @@ ProyectorMttos As screen:
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     DisplayFields: =["Results"]
                     Font: =Font.'Segoe UI'
+                    Height: =37
                     HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(212, 212, 212, 1)
@@ -384,8 +497,8 @@ ProyectorMttos As screen:
                     SearchItems: =[]
                     SelectionFill: =RGBA(105, 121, 126, 1)
                     SelectMultiple: =false
-                    Size: =15
+                    Size: =13
                     Width: =309
-                    Y: =24
+                    Y: =5
                     ZIndex: =1
 
