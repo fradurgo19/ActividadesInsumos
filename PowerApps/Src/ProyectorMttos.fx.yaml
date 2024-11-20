@@ -279,7 +279,7 @@ ProyectorMttos As screen:
                             FrecuenciasMantenimiento,
                             Repeticiones,
                             Switch(
-                                Frecuencia.Text,  
+                                Value(Frecuencia.Text),
                                 1000, 
                                     RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000, 0)
                                     + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500, 0)

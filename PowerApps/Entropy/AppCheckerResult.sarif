@@ -2585,7 +2585,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1580,
+                  "charOffset": 1585,
                   "snippet": {
                     "text": ";;"
                   }
@@ -2742,7 +2742,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 160,
+                  "charOffset": 166,
                   "snippet": {
                     "text": ".Text"
                   }
@@ -2782,7 +2782,47 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 1552,
+                  "charOffset": 150,
+                  "snippet": {
+                    "text": "Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ProyectorMttos",
+                "type": "ProyectorMttos.Container2_3.Container106.Gallery2_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProyectorMttos.Container2_3.Container106.Gallery2_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 1557,
                   "snippet": {
                     "text": ".Text"
                   }
@@ -2821,10 +2861,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1580,
+                  "charLength": 1585,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "ClearCollect(\n    CalculosMantenimientoCompuesto;\n    AddColumns(\n        FrecuenciasMantenimiento;\n        Repeticiones;\n        Switch(\n            Frecuencia.Text;  \n            1000; \n                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250; 0);\n            2000; \n                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250; 0);\n            4000; \n                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 4000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250; 0);\n            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / (Frecuencia.Text); 0)\n        )\n    )\n)"
+                    "text": "ClearCollect(\n    CalculosMantenimientoCompuesto;\n    AddColumns(\n        FrecuenciasMantenimiento;\n        Repeticiones;\n        Switch(\n            Value(Frecuencia.Text);\n            1000; \n                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250; 0);\n            2000; \n                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250; 0);\n            4000; \n                RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 4000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 2000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 1000; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 500; 0)\n                + RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / 250; 0);\n            RoundDown((Value(TextInputCanvas3.Value) - Value(TextInputCanvas4.Value)) / (Frecuencia.Text); 0)\n        )\n    )\n)"
                   }
                 }
               },
@@ -2859,7 +2899,7 @@
                 },
                 "region": {
                   "charLength": 139,
-                  "charOffset": 1883,
+                  "charOffset": 1888,
                   "snippet": {
                     "text": "Lookup(\n            CalculosMantenimientoCompuesto;\n            Frecuencia = 'Frecuencia (horas)'.Value;\n            Repeticiones\n        )"
                   }
@@ -2899,7 +2939,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1958,
+                  "charOffset": 1963,
                   "snippet": {
                     "text": "="
                   }
@@ -2940,7 +2980,7 @@
                 },
                 "region": {
                   "charLength": 12,
-                  "charOffset": 2000,
+                  "charOffset": 2005,
                   "snippet": {
                     "text": "Repeticiones"
                   }
@@ -2980,7 +3020,7 @@
                 },
                 "region": {
                   "charLength": 10,
-                  "charOffset": 1596,
+                  "charOffset": 1601,
                   "snippet": {
                     "text": "AddColumns"
                   }
@@ -3020,7 +3060,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1580,
+                  "charOffset": 1585,
                   "snippet": {
                     "text": ";;"
                   }
