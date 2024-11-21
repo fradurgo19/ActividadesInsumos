@@ -187,14 +187,34 @@
                         Y: =0
                         ZIndex: =2
 
+                    Icon7_1 As icon.ZoomIn:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(255, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =20
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.ZoomIn
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =30
+                        X: =91
+                        Y: =5
+                        ZIndex: =3
+
                 Container103 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =37
+                    Height: =35
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =363
+                    Width: =260
                     Y: =30
                     ZIndex: =2
 
@@ -216,6 +236,26 @@
                         X: =6
                         Y: =5
                         ZIndex: =2
+
+                    Icon7_2 As icon.ZoomIn:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(255, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =20
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.ZoomIn
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =30
+                        X: =88
+                        Y: =11
+                        ZIndex: =3
 
         Container104 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -260,6 +300,26 @@
                 Y: =0
                 ZIndex: =2
 
+            Icon7 As icon.ZoomIn:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =20
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.ZoomIn
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =30
+                X: =208
+                Y: =6
+                ZIndex: =3
+
         Container106 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =520
@@ -267,7 +327,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =445
+            Width: =473
             X: =18
             Y: =165
             ZIndex: =3
@@ -278,16 +338,24 @@
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =Parent.Height
                 Items: |+
-                    =Sort(    
-                        Filter(
-                            'TEMPARIO DE MANTENIMIENTOS',
-                            Marca.Value = ComboBox2_3.Selected.Results &&
-                            'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
-                            'Tipo de item'.Value = "Actividad"
+                    =Sort(
+                        AddColumns(
+                            Filter(
+                                'TEMPARIO DE MANTENIMIENTOS',
+                                Marca.Value = ComboBox2_3.Selected.Results &&
+                                'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
+                                'Tipo de item'.Value = "Actividad"
+                            ),
+                            Periodo, If(
+                                'Frecuencia (horas)'.Value = Text(0) || IsBlank('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = "NA",
+                                Blank(),
+                                Trunc(Value(TextInputCanvas3.Value) / 'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / 'Frecuencia (horas)'.Value)
+                            )
                         ),
                         'Frecuencia (horas)'.Value,
                         SortOrder.Descending
                     )
+                    
                     
                     
                     
@@ -299,7 +367,7 @@
                 ShowNavigation: =true
                 TemplateSize: =34
                 Transition: =Transition.Push
-                Width: =430
+                Width: =458
                 X: =15
                 ZIndex: =1
 
@@ -371,7 +439,7 @@
                     OnSelect: =Select(Parent)
                     Size: =10
                     Text: |
-                        =(Label10_24.Text) * Value(Label10_30.Text)
+                        =(Label10_24.Text) * Value(Label10_30.Text)*TextInputCanvas7.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =44
                     X: =353
@@ -534,7 +602,7 @@
                     Text: =RoundUp(Sum(Gallery2_3.AllItems, Value(Label10_31.Text)), 0)
                     Width: =54
                     X: =0
-                    Y: =5
+                    Y: =0
                     ZIndex: =1
 
         Container104_1 As groupContainer.manualLayoutContainer:
@@ -576,10 +644,30 @@
                 Height: =38
                 Placeholder: ="Tiempo"
                 Type: ="Text"
-                Width: =80
-                X: =218
+                Width: =110
+                X: =193
                 Y: =0
                 ZIndex: =2
+
+            Icon7_3 As icon.ZoomIn:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =20
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.ZoomIn
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =30
+                X: =274
+                Y: =9
+                ZIndex: =3
 
         Container104_2 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -620,10 +708,30 @@
                 Height: =30
                 Placeholder: ="Kms"
                 Type: ="Text"
-                Width: =83
-                X: =218
+                Width: =105
+                X: =195
                 Y: =0
                 ZIndex: =2
+
+            Icon7_4 As icon.ZoomIn:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =20
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.ZoomIn
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =30
+                X: =270
+                Y: =10
+                ZIndex: =3
 
         ButtonCanvas7 As Botón:
             BasePaletteColor: =RGBA(156, 220, 79, 1)
@@ -714,6 +822,7 @@
                 ZIndex: =2
 
                 TextCanvas22_4 As Texto:
+                    Align: ='TextCanvas.Align'.Center
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(247, 116, 38, 1)
                     Height: =27
@@ -736,6 +845,7 @@
                 ZIndex: =3
 
                 TextCanvas22_5 As Texto:
+                    Align: ='TextCanvas.Align'.Center
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(247, 116, 38, 1)
                     Height: =26
@@ -798,6 +908,7 @@
                 ZIndex: =6
 
                 TextCanvas22_8 As Texto:
+                    Align: ='TextCanvas.Align'.Center
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(247, 116, 38, 1)
                     Height: =30
@@ -858,6 +969,7 @@
                     ZIndex: =2
 
                     TextCanvas49 As Texto:
+                        Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Fill: =RGBA(247, 116, 38, 1)
                         Height: =51
@@ -875,7 +987,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =440
+            Width: =512
             X: =491
             Y: =165
             ZIndex: =10
@@ -905,7 +1017,7 @@
                 ShowNavigation: =true
                 TemplateSize: =34
                 Transition: =Transition.Push
-                Width: =432
+                Width: =508
                 ZIndex: =1
 
                 Label10_32 As label:
@@ -977,11 +1089,29 @@
                     OnSelect: =Select(Parent)
                     Size: =10
                     Text: |
-                        =(Label10_33.Text) * Value(Label10_34.Text)
+                        =(Label10_33.Text) * Value(Label10_34.Text)* TextInputCanvas7.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =44
-                    X: =368
+                    X: =382
                     ZIndex: =9
+
+                Label10_36 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |
+                        =ThisItem.'Unidad de medida'.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =57
+                    X: =426
+                    ZIndex: =10
 
         Container114 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -991,17 +1121,17 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =445
+            Width: =459
             X: =18
             Y: =130
             ZIndex: =11
 
             TextCanvas50 As Texto:
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
+                Height: =29
                 Text: ="Actividad"
-                Width: =215
-                X: =40
+                Width: =131
+                X: =88
                 Y: =6
                 ZIndex: =1
 
@@ -1032,6 +1162,16 @@
                 Y: =6
                 ZIndex: =4
 
+            ButtonCanvas16 As Botón:
+                BasePaletteColor: =RGBA(141, 229, 250, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: =Sum(Gallery2_3.AllItemsCount)
+                Width: =50
+                X: =18
+                Y: =3
+                ZIndex: =5
+
         Container114_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(174, 208, 221, 1)
@@ -1040,7 +1180,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =428
+            Width: =499
             X: =491
             Y: =130
             ZIndex: =12
@@ -1076,10 +1216,19 @@
 
             TextCanvas51_5 As Texto:
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Text: ="Total"
+                Height: =29
+                Text: ="Unidad"
                 Width: =49
-                X: =384
+                X: =436
                 Y: =6
                 ZIndex: =4
+
+            TextCanvas51_6 As Texto:
+                DisplayMode: =DisplayMode.Edit
+                Height: =29
+                Text: ="Total"
+                Width: =50
+                X: =400
+                Y: =6
+                ZIndex: =5
 
