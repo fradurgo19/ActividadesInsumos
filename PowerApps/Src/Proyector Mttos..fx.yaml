@@ -440,12 +440,28 @@
                     Height: =32
                     OnSelect: =Select(Parent)
                     Size: =10
-                    Text: |
-                        =(Label10_24.Text) * Value(Label10_30.Text)*TextInputCanvas7.Value
+                    Text: =(Label10_24.Text) * Value(Label10_30.Text)*TextInputCanvas7.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =44
                     X: =353
                     ZIndex: =9
+
+                Label10_37 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: =ThisItem.Periodo
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =44
+                    X: =404
+                    ZIndex: =10
 
         Container107 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -573,14 +589,13 @@
 
         Container98 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =45
+            Height: =36
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =false
-            Width: =57
-            X: =395
+            Width: =92
+            X: =1156
             Y: =614
             ZIndex: =5
 
@@ -600,7 +615,7 @@
                     Font: =Font.'Segoe UI'
                     FontStrikethrough: =false
                     FontUnderline: =true
-                    Height: =40
+                    Height: =45
                     Text: =RoundUp(Sum(Gallery2_3.AllItems, Value(Label10_31.Text)), 0)
                     Width: =54
                     X: =0
