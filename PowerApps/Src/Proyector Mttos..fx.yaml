@@ -1,4 +1,4 @@
-ProyectorMttos As screen:
+"'Proyector Mttos.' As screen":
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
@@ -262,14 +262,14 @@ ProyectorMttos As screen:
 
         Container106 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =484
+            Height: =520
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =445
             X: =18
-            Y: =130
+            Y: =165
             ZIndex: =3
 
             Gallery2_3 As gallery.galleryVertical:
@@ -350,7 +350,7 @@ ProyectorMttos As screen:
                     Size: =10
                     Text: |-
                         =If(
-                            ThisItem.'Frecuencia (horas)'.Value = Text(0) || IsBlank(ThisItem.'Frecuencia (horas)'.Value),
+                            ThisItem.'Frecuencia (horas)'.Value = Text(0) || IsBlank(ThisItem.'Frecuencia (horas)'.Value) || ThisItem.'Frecuencia (horas)'.Value = "NA",
                             0,
                             Trunc(Value(TextInputCanvas3.Value) / ThisItem.'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / ThisItem.'Frecuencia (horas)'.Value)
                         )
@@ -870,14 +870,14 @@ ProyectorMttos As screen:
 
         Container106_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =484
+            Height: =520
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =440
             X: =491
-            Y: =130
+            Y: =165
             ZIndex: =10
 
             Gallery2_5 As gallery.galleryVertical:
@@ -986,14 +986,14 @@ ProyectorMttos As screen:
         Container114 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(174, 208, 221, 1)
-            Height: =38
+            Height: =35
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =445
             X: =18
-            Y: =92
+            Y: =130
             ZIndex: =11
 
             TextCanvas50 As Texto:
@@ -1035,14 +1035,14 @@ ProyectorMttos As screen:
         Container114_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(174, 208, 221, 1)
-            Height: =38
+            Height: =35
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =428
             X: =491
-            Y: =92
+            Y: =130
             ZIndex: =12
 
             TextCanvas50_1 As Texto:
