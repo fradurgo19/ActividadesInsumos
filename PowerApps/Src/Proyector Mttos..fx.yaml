@@ -177,10 +177,10 @@
                         ZIndex: =1
 
                     "TextInputCanvas4 As 'Entrada de texto'":
-                        Appearance: ='TextInputCanvas.Appearance'.FilledDarker
+                        Appearance: ='TextInputCanvas.Appearance'.Outline
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
-                        Fill: =RGBA(174, 208, 221, 1)
+                        Fill: =RGBA(255, 255, 0, 1)
                         Height: =30
                         OnChange: =
                         TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
@@ -232,7 +232,7 @@
 
                     "TextInputCanvas3 As 'Entrada de texto'":
                         DisplayMode: =DisplayMode.Edit
-                        Fill: =RGBA(174, 208, 221, 1)
+                        Fill: =RGBA(255, 255, 0, 1)
                         Height: =32
                         Width: =112
                         X: =6
@@ -293,7 +293,7 @@
 
             "TextInputCanvas7 As 'Entrada de texto'":
                 DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(180, 214, 250, 1)
+                Fill: =RGBA(255, 255, 0, 1)
                 Height: =26
                 Placeholder: ="No. Equipos"
                 Type: ="Text"
@@ -329,7 +329,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =473
+            Width: =459
             X: =18
             Y: =165
             ZIndex: =3
@@ -341,23 +341,23 @@
                 Height: =Parent.Height
                 Items: |+
                     =Sort(
-                        AddColumns(
-                            Filter(
+                        Filter(
+                            AddColumns(
                                 'TEMPARIO DE MANTENIMIENTOS',
-                                Marca.Value = ComboBox2_3.Selected.Results &&
-                                'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
-                                'Tipo de item'.Value = "Actividad"
+                                Periodo, If(
+                                    'Frecuencia (horas)'.Value = Text(0) || IsBlank('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = "NA",
+                                    Blank(),
+                                    Trunc(Value(TextInputCanvas3.Value) / 'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / 'Frecuencia (horas)'.Value)
+                                )
                             ),
-                            Periodo, If(
-                                'Frecuencia (horas)'.Value = Text(0) || IsBlank('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = "NA",
-                                Blank(),
-                                Trunc(Value(TextInputCanvas3.Value) / 'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / 'Frecuencia (horas)'.Value)
-                            )
+                            Marca.Value = ComboBox2_3.Selected.Results &&
+                            'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
+                            'Tipo de item'.Value = "Actividad" &&
+                            ('Periodo' <> 0 && !IsBlank('Periodo')) // Filtra sobre la columna calculada Periodo
                         ),
                         'Frecuencia (horas)'.Value,
                         SortOrder.Descending
                     )
-                    
                     
                     
                     
@@ -369,7 +369,7 @@
                 ShowNavigation: =true
                 TemplateSize: =34
                 Transition: =Transition.Push
-                Width: =458
+                Width: =436
                 X: =15
                 ZIndex: =1
 
@@ -445,23 +445,6 @@
                     Width: =44
                     X: =353
                     ZIndex: =9
-
-                Label10_37 As label:
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =32
-                    OnSelect: =Select(Parent)
-                    Size: =10
-                    Text: =ThisItem.Periodo
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =44
-                    X: =404
-                    ZIndex: =10
 
         Container107 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -657,7 +640,7 @@
             "TextInputCanvas7_1 As 'Entrada de texto'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(166, 215, 153, 1)
+                Fill: =RGBA(255, 255, 0, 1)
                 Height: =38
                 OnChange: |
                     =Set(Valor1, Value(TextInputCanvas7_1.Value) * 2 * 65000);
@@ -739,7 +722,7 @@
             "TextInputCanvas7_2 As 'Entrada de texto'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(166, 215, 153, 1)
+                Fill: =RGBA(255, 255, 0, 1)
                 Height: =30
                 OnChange: |
                     =Set(Valor1, Value(TextInputCanvas7_1.Value) * 2 * 65000);
@@ -1052,13 +1035,24 @@
                 Height: =Parent.Height
                 Items: |+
                     =Sort(
-                            Filter(
+                        Filter(
+                            AddColumns(
                                 'TEMPARIO DE MANTENIMIENTOS',
-                                Marca.Value = ComboBox2_3.Selected.Results && 'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results && ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
+                                Periodo, If(
+                                    'Frecuencia (horas)'.Value = Text(0) || IsBlank('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = "NA",
+                                    Blank(),
+                                    Trunc(Value(TextInputCanvas3.Value) / 'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / 'Frecuencia (horas)'.Value)
+                                )
                             ),
-                            'Tipo de item'.Value,
-                            SortOrder.Ascending
-                        )
+                            Marca.Value = ComboBox2_3.Selected.Results &&
+                            'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
+                            ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto") &&
+                            ('Periodo' <> 0 && !IsBlank('Periodo')) // Filtrar por el campo Periodo
+                        ),
+                        'Tipo de item'.Value,
+                        SortOrder.Ascending
+                    )
+                    
                     
                     
                     
@@ -1240,10 +1234,10 @@
 
             TextCanvas50_1 As Texto:
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
+                Height: =29
                 Text: ="Insumos"
-                Width: =215
-                X: =25
+                Width: =173
+                X: =65
                 Y: =6
                 ZIndex: =1
 
@@ -1284,6 +1278,16 @@
                 X: =400
                 Y: =6
                 ZIndex: =5
+
+            ButtonCanvas16_1 As Botón:
+                BasePaletteColor: =RGBA(141, 229, 250, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: =Sum(Gallery2_5.AllItemsCount)
+                Width: =50
+                X: =3
+                Y: =3
+                ZIndex: =6
 
     Icon8 As icon.Undo:
         BorderColor: =RGBA(166, 166, 166, 1)
