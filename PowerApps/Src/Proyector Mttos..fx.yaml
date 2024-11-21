@@ -1285,3 +1285,25 @@
                 Y: =6
                 ZIndex: =5
 
+    Icon8 As icon.Undo:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(255, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =31
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Undo
+        OnSelect: =Reset(ComboBox2_3);Reset(ComboBox2_2);Reset(ComboBox2_2);Reset(TextInputCanvas4);Reset(TextInputCanvas3);Reset(TextInputCanvas7);Reset(TextInputCanvas7_1);Reset(TextInputCanvas7_2)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =57
+        X: =884
+        Y: =128
+        ZIndex: =4
+
