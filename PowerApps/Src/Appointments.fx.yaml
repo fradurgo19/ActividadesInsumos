@@ -827,22 +827,26 @@
 
             TextCanvas8_1 As Texto:
                 DisplayMode: =DisplayMode.Edit
-                Height: =28
+                Height: =33
+                Size: =10
                 Text: |
                     ="Última actualización: " & Text(LookUp('Seguimiento Clientes Equipos Telemetría', ID = Max('Seguimiento Clientes Equipos Telemetría', ID)).Modificado, "[$-es-ES]dd/mm/yyyy")
-                Width: =304
-                X: =736
-                Y: =10
+                Weight: ='TextCanvas.Weight'.Bold
+                Width: =227
+                X: =821
+                Y: =103
                 ZIndex: =26
 
             TextCanvas46 As Texto:
                 DisplayMode: =DisplayMode.Edit
                 Height: =98
+                Size: =11
                 Text: |-
                     ="Versión: " & App.StudioVersion & ": Se agrega rutinas de Mttos de ejecución unica en toda la vida de la maquina, Ejemplo Primeras 250 horas."
+                Weight: ='TextCanvas.Weight'.Bold
                 Width: =275
-                X: =746
-                Y: =58
+                X: =773
+                Y: =5
                 ZIndex: =27
 
     MaskConfirm As fluidGrid.fluidGridWithBlankCard:
