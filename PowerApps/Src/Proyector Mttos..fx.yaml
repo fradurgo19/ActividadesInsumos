@@ -103,13 +103,13 @@
 
     Container2_3 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =705
+        Height: =693
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =1366
-        Y: =63
+        Y: =75
         ZIndex: =3
 
         Container99 As groupContainer.manualLayoutContainer:
@@ -205,6 +205,7 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Click para mostrar datos"
                         Width: =30
                         X: =91
                         Y: =5
@@ -256,6 +257,7 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Click para mostrar datos"
                         Width: =30
                         X: =88
                         Y: =11
@@ -263,7 +265,7 @@
 
         Container104 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =28
+            Height: =40
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -275,7 +277,7 @@
 
             Container105 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =26
+                Height: =40
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -286,7 +288,7 @@
                 TextCanvas22 As Texto:
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(255, 184, 174, 1)
-                    Height: =22
+                    Height: =37
                     Text: |-
                         ="Cantidad de Equipos:"
                     Width: =143
@@ -295,9 +297,10 @@
                     ZIndex: =1
 
             "TextInputCanvas7 As 'Entrada de texto'":
+                Appearance: ='TextInputCanvas.Appearance'.Outline
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(255, 255, 0, 1)
-                Height: =26
+                Height: =40
                 Placeholder: ="No. Equipos"
                 Type: ="Text"
                 Width: =91
@@ -320,6 +323,7 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Click para mostrar datos"
                 Width: =30
                 X: =208
                 Y: =6
@@ -348,7 +352,7 @@
                             AddColumns(
                                 'TEMPARIO DE MANTENIMIENTOS',
                                 Periodo, If(
-                                    'Frecuencia (horas)'.Value = Text(0) || IsBlank('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = "NA",
+                                    !IsNumeric('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = Text(0) || IsBlank('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = "NA",
                                     Blank(),
                                     Trunc(Value(TextInputCanvas3.Value) / 'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / 'Frecuencia (horas)'.Value)
                                 )
@@ -356,11 +360,13 @@
                             Marca.Value = ComboBox2_3.Selected.Results &&
                             'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
                             'Tipo de item'.Value = "Actividad" &&
-                            ('Periodo' <> 0 && !IsBlank('Periodo')) // Filtra sobre la columna calculada Periodo
+                            (Periodo <> 0 && !IsBlank(Periodo)) // Filtra sobre la columna calculada Periodo
                         ),
                         'Frecuencia (horas)'.Value,
                         SortOrder.Descending
                     )
+                    
+                    
                     
                     
                     
@@ -429,7 +435,7 @@
                         )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =59
-                    X: =294
+                    X: =309
                     ZIndex: =8
 
                 Label10_31 As label:
@@ -446,7 +452,7 @@
                     Text: =(Label10_24.Text) * Value(Label10_30.Text)*TextInputCanvas7.Value
                     VerticalAlign: =VerticalAlign.Top
                     Width: =44
-                    X: =353
+                    X: =382
                     ZIndex: =9
 
         Container107 As groupContainer.manualLayoutContainer:
@@ -687,6 +693,7 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Click para mostrar datos"
                 Width: =30
                 X: =274
                 Y: =9
@@ -770,6 +777,7 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Click para mostrar datos"
                 Width: =30
                 X: =270
                 Y: =10
@@ -809,6 +817,10 @@
                 // Suma total de desplazamiento
                 Set(TotalDesplazamiento, (Valor1 + Valor2 + Hospedaje + Alimentacion)* (MayorPeriodo));
                 
+                // Suma total de desplazamiento
+                Set(Desplazamiento, (Valor1 + Valor2 + Hospedaje + Alimentacion));
+                
+                
                 // Mostrar el resultado en Label8 con formato
                 TextCanvas22_4.Text = Text(TotalDesplazamiento, "[$-es-ES]$ #,###");
                 
@@ -833,7 +845,7 @@
 
             Container105_3 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =36
+                Height: =54
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -843,9 +855,11 @@
                 ZIndex: =1
 
                 TextCanvas22_3 As Texto:
+                    Align: ='TextCanvas.Align'.Center
                     DisplayMode: =DisplayMode.Edit
-                    Height: =30
-                    Text: ="Desplazamiento"
+                    Height: =50
+                    Size: =13
+                    Text: ="Total Desplazamiento"
                     Width: =107
                     X: =0
                     Y: =4
@@ -853,7 +867,7 @@
 
             Container105_4 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =31
+                Height: =38
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -909,8 +923,10 @@
                 ZIndex: =4
 
                 TextCanvas22_6 As Texto:
+                    Align: ='TextCanvas.Align'.Center
                     DisplayMode: =DisplayMode.Edit
                     Height: =30
+                    Size: =13
                     Text: ="Total Visitas"
                     Width: =107
                     X: =0
@@ -919,18 +935,19 @@
 
             Container105_7 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =36
+                Height: =31
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =111
-                Y: =71
+                Y: =89
                 ZIndex: =5
 
                 TextCanvas22_7 As Texto:
+                    Align: ='TextCanvas.Align'.Center
                     DisplayMode: =DisplayMode.Edit
-                    Height: =32
+                    Height: =21
                     Text: ="Servicio"
                     Width: =107
                     X: =0
@@ -939,14 +956,14 @@
 
             Container105_8 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =36
+                Height: =31
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =130
                 X: =111
-                Y: =71
+                Y: =89
                 ZIndex: =6
 
                 TextCanvas22_8 As Texto:
@@ -990,6 +1007,7 @@
                     ZIndex: =1
 
                     TextCanvas48 As Texto:
+                        Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =51
                         Size: =12
@@ -1061,7 +1079,7 @@
                             AddColumns(
                                 'TEMPARIO DE MANTENIMIENTOS',
                                 Periodo, If(
-                                    'Frecuencia (horas)'.Value = Text(0) || IsBlank('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = "NA",
+                                    !IsNumeric('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = Text(0) || IsBlank('Frecuencia (horas)'.Value) || 'Frecuencia (horas)'.Value = "NA",
                                     Blank(),
                                     Trunc(Value(TextInputCanvas3.Value) / 'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / 'Frecuencia (horas)'.Value)
                                 )
@@ -1069,7 +1087,7 @@
                             Marca.Value = ComboBox2_3.Selected.Results &&
                             'Modelo (Modelo0)'.Value = ComboBox2_2.Selected.Results &&
                             ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto") &&
-                            ('Periodo' <> 0 && !IsBlank('Periodo')) // Filtrar por el campo Periodo
+                            (Periodo <> 0 && !IsBlank(Periodo)) // Filtrar por el campo Periodo
                         ),
                         'Tipo de item'.Value,
                         SortOrder.Ascending
@@ -1209,26 +1227,17 @@
                 Height: =32
                 Text: ="Tiempo"
                 Width: =49
-                X: =255
-                Y: =6
+                X: =240
+                Y: =3
                 ZIndex: =2
-
-            TextCanvas51_1 As Texto:
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Text: ="Periodo"
-                Width: =49
-                X: =322
-                Y: =6
-                ZIndex: =3
 
             TextCanvas51_2 As Texto:
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Text: ="Total"
                 Width: =49
-                X: =384
-                Y: =6
+                X: =410
+                Y: =3
                 ZIndex: =4
 
             ButtonCanvas16 As Botón:
@@ -1241,6 +1250,17 @@
                 Y: =3
                 ZIndex: =5
 
+            TextCanvas51_7 As Texto:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =26
+                Text: ="Intervenciones"
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                Width: =110
+                X: =294
+                Y: =9
+                ZIndex: =6
+
         Container114_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(174, 208, 221, 1)
@@ -1249,7 +1269,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =499
+            Width: =512
             X: =491
             Y: =130
             ZIndex: =12
@@ -1270,17 +1290,19 @@
                 Text: ="Cantidad"
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Width: =80
-                X: =241
-                Y: =6
+                X: =213
+                Y: =5
                 ZIndex: =2
 
             TextCanvas51_4 As Texto:
+                Align: ='TextCanvas.Align'.Center
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Text: ="Periodo"
-                Width: =49
-                X: =322
-                Y: =6
+                Height: =26
+                Text: ="Intervenciones"
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                Width: =110
+                X: =290
+                Y: =9
                 ZIndex: =3
 
             TextCanvas51_5 As Texto:
@@ -1311,6 +1333,68 @@
                 Y: =3
                 ZIndex: =6
 
+        Container115 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =64
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =229
+            X: =1105
+            Y: =425
+            ZIndex: =13
+
+            Container116 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =64
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =119
+                ZIndex: =1
+
+                TextCanvas8 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =64
+                    Size: =13
+                    Text: ="Desplazamiento Adicional"
+                    Width: =119
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            Container117 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =64
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =110
+                X: =119
+                ZIndex: =2
+
+                TextCanvas52 As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(247, 116, 38, 1)
+                    Height: =64
+                    Text: |-
+                        ="$ " & Text(
+                            If(
+                                IsBlank(TextCanvas26.Text) || Value(TextCanvas26.Text) = 0,
+                                0,
+                                Desplazamiento
+                            ),
+                            "[$-en-US]#,###"
+                        )
+                    Width: =108
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
     Icon8 As icon.Undo:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(255, 0, 0, 1)
@@ -1329,7 +1413,7 @@
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =57
-        X: =884
-        Y: =128
+        X: =1095
+        Y: =185
         ZIndex: =4
 
