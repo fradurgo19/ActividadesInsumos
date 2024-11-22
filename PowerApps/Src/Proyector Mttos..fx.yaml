@@ -376,6 +376,7 @@
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true
+                TemplateFill: =If(ThisItem.IsSelected, Color.CadetBlue, Color.White)
                 TemplateSize: =34
                 Width: =436
                 X: =15
@@ -1101,6 +1102,7 @@
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true
+                TemplateFill: =If(ThisItem.IsSelected, Color.CadetBlue, Color.White)
                 TemplateSize: =34
                 Width: =508
                 ZIndex: =1
