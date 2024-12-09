@@ -431,6 +431,11 @@
                     Height: =41
                     OnSelect: =Navigate(Encuestas,ScreenTransition.Fade)
                     Text: ="Encuestas"
+                    Visible: |
+                        =User().Email = "analista.mantenimiento@partequipos.com" || 
+                        User().Email = "jestrada@partequipos.com" || 
+                        User().Email = "coordinador.sgi@partequipos.com" ||
+                        User().Email = "drave@partequipos.com"
                     Width: =147
                     X: =431
                     Y: =15
@@ -893,10 +898,12 @@
                     TemplatePadding: =0
                     TemplateSize: =90
                     Transition: =Transition.Push
-                    Visible: |-
+                    Visible: |+
                         =User().Email = "analista.mantenimiento@partequipos.com" || 
                         User().Email = "jestrada@partequipos.com" || 
-                        User().Email = "coordinador.sgi@partequipos.com"
+                        User().Email = "coordinador.sgi@partequipos.com" ||
+                        User().Email = "drave@partequipos.com"
+                        
                     Width: =1043
                     ZIndex: =1
 
