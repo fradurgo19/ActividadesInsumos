@@ -334,11 +334,13 @@
         BorderThickness: =0
         Fill: =RGBA(249, 249, 249, 1)
         Height: =768
-        Visible: |-
+        Visible: |+
             =User().Email = "analista.mantenimiento@partequipos.com" || 
             User().Email = "jestrada@partequipos.com" || 
             User().Email = "coordinador.sgi@partequipos.com" ||
+            User().Email = "drave@partequipos.com" ||
             User().Email = "lgarcia@partequipos.com"  
+            
         Width: =1071
         X: =295
         ZIndex: =2
