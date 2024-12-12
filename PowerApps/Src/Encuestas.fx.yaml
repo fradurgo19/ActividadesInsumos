@@ -338,6 +338,7 @@ Encuestas As screen:
                         ButtonCanvas18 As Botón:
                             BasePaletteColor: =RGBA(12, 190, 235, 1)
                             DisplayMode: =DisplayMode.Edit
+                            FontSize: =10
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
@@ -659,11 +660,12 @@ Encuestas As screen:
                         ButtonCanvas17 As Botón:
                             BasePaletteColor: =RGBA(82, 205, 242, 1)
                             DisplayMode: =DisplayMode.Edit
+                            FontSize: =10
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Text: ="Cantidad " & CountRows(Gallery6_2.AllItems)
-                            Width: =60
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =9
