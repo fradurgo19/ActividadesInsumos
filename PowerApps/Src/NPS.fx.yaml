@@ -866,8 +866,8 @@
                         LayoutMinWidth: =96
                         PaddingLeft: =15
                         Size: =12
-                        Text: ="Modifica"
-                        Width: =65
+                        Text: ="Observaciones"
+                        Width: =95
                         X: =0
                         Y: =0
                         ZIndex: =18
@@ -1213,7 +1213,7 @@
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =80
+                            Width: =95
                             ZIndex: =15
 
                             TextCanvas9_8 As Texto:
@@ -1221,12 +1221,13 @@
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =RGBA(214, 221, 224, 1)
                                 FontItalic: =true
                                 Height: =Parent.Height
                                 PaddingLeft: =10
                                 Size: =9
-                                Text: =ThisItem.'Modificado por'.Email
-                                Width: =67
+                                Text: =ThisItem.Observaciones
+                                Width: =91
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
