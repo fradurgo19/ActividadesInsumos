@@ -639,8 +639,8 @@ Screens:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     PaddingLeft: =15
                                     Size: =11
-                                    Text: ="Encuestador"
-                                    Width: =60
+                                    Text: ="Diligencia"
+                                    Width: =65
                               - TextCanvas7_1:
                                   Control: Text@0.0.43
                                   Properties:
@@ -894,7 +894,7 @@ Screens:
                                           LayoutMinWidth: =32
                                           PaddingLeft: =10
                                           Size: =8
-                                          Text: =ThisItem.Diligencia
+                                          Text: =ThisItem.'Modificado por'.DisplayName
                                           Width: =50
                                     - TextCanvas9:
                                         Control: Text@0.0.43
