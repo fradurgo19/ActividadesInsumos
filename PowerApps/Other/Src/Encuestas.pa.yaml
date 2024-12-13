@@ -277,6 +277,13 @@ Screens:
                                           PaddingLeft: =15
                                           Text: ="NPS"
                                           Width: =100
+                                    - TextCanvas7_40:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Comentario"
+                                          Width: =100
                                     - ButtonCanvas18:
                                         Control: Button@0.0.43
                                         Properties:
@@ -419,6 +426,7 @@ Screens:
                                           - TextInputCanvas8:
                                               Control: TextInput@0.0.49
                                               Properties:
+                                                Fill: =RGBA(180, 214, 250, 1)
                                                 FontSize: =9
                                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                                 Value: =ThisItem.Observaciones

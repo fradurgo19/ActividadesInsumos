@@ -273,7 +273,7 @@ Encuestas As screen:
                             Width: =100
                             X: =0
                             Y: =0
-                            ZIndex: =3
+                            ZIndex: =1
 
                         TextCanvas7_15 As Texto:
                             AutoHeight: =false
@@ -288,7 +288,7 @@ Encuestas As screen:
                             Width: =100
                             X: =0
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =2
 
                         TextCanvas7_22 As Texto:
                             AutoHeight: =false
@@ -303,7 +303,7 @@ Encuestas As screen:
                             Width: =80
                             X: =0
                             Y: =0
-                            ZIndex: =5
+                            ZIndex: =3
 
                         TextCanvas7_24 As Texto:
                             AutoHeight: =false
@@ -318,7 +318,7 @@ Encuestas As screen:
                             Width: =100
                             X: =0
                             Y: =0
-                            ZIndex: =6
+                            ZIndex: =4
 
                         TextCanvas7_32 As Texto:
                             AutoHeight: =false
@@ -333,7 +333,22 @@ Encuestas As screen:
                             Width: =100
                             X: =0
                             Y: =0
-                            ZIndex: =7
+                            ZIndex: =5
+
+                        TextCanvas7_40 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =15
+                            Size: =14
+                            Text: ="Comentario"
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
 
                         ButtonCanvas18 As Botón:
                             BasePaletteColor: =RGBA(12, 190, 235, 1)
@@ -346,7 +361,7 @@ Encuestas As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =8
+                            ZIndex: =7
 
                 Container16_1 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
@@ -496,6 +511,7 @@ Encuestas As screen:
                             "TextInputCanvas8 As 'Entrada de texto'":
                                 BasePaletteColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =RGBA(180, 214, 250, 1)
                                 FontSize: =9
                                 Height: =32
                                 LayoutMinHeight: =32
