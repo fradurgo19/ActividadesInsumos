@@ -1,0 +1,1615 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  CPP:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      ImagePosition: =ImagePosition.Stretch
+      LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+      OnVisible: |+
+        =Refresh(TablaDataCpp);
+        ClearCollect(colTablaDataCpp,TablaDataCpp);ClearCollect(colTablaEquivalenciasCpp,TablaEquivalenciasCpp)
+
+
+    Children:
+      - Container24:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Light
+            Height: =59
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1366
+            Y: =4
+          Children:
+            - Arrow1_1:
+                Control: Arrow@2.3.0
+                Variant: BackArrow
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 0)
+                  DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                  Fill: =RGBA(105, 121, 126, 1)
+                  OnSelect: =Navigate('CPP y Manuales',ScreenTransition.Fade )
+                  Width: =47
+                  X: =4
+                  Y: =4
+            - Container25:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =61
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =770
+                  X: =593
+                Children:
+                  - EncabezadoContenedor_2:
+                      Control: CanvasComponent
+                      ComponentName: EncabezadoContenedor
+                      Properties:
+                        Encabezado: =SampleImage
+                        Encabezado1: =Logo
+                        Height: =65
+                        Width: =Parent.Width
+            - Container33:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Fill: =RGBA(152, 242, 17, 1)
+                  Height: =40
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =227
+                  X: =117
+                Children:
+                  - Icon4:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(105, 121, 126, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(255, 255, 0, 1)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Search
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width * 10%
+                  - TextInputCanvas6:
+                      Control: TextInput@0.0.49
+                      Properties:
+                        AccessibleLabel: ="Buscar por Modelo, Marca, Nombre o Ref ."
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Appearance: ='TextInputCanvas.Appearance'.FilledDarker
+                        BasePaletteColor: =RGBA(8, 222, 8, 1)
+                        Font: =Font.'Lato Black'
+                        FontColor: =RGBA(0, 0, 0, 1)
+                        FontSize: =12
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height
+                        LayoutMinHeight: =0
+                        Mode: ='TextInputCanvas.Mode'.Multiline
+                        OnChange: =
+                        Placeholder: ="Buscar por Modelo, Marca, Nombre o Ref "
+                        TriggerOutput: ='TextInputCanvas.TriggerOutput'.FocusOut
+                        Type: ='TextInputCanvas.Type'.Search
+                        Width: |
+                          =200
+            - ButtonCanvas6_2:
+                Control: Button@0.0.43
+                Properties:
+                  BasePaletteColor: =RGBA(249, 83, 109, 1)
+                  Height: =22
+                  OnSelect: =Reset(TextInputCanvas6); Reset(DropMarca1_1);Reset(DropModelo1_1)
+                  Text: ="Reset"
+                  Width: =56
+                  X: =122
+                  Y: =39
+            - ButtonCanvas8:
+                Control: Button@0.0.43
+                Properties:
+                  Appearance: ='ButtonCanvas.Appearance'.Primary
+                  BasePaletteColor: =RGBA(247, 236, 12, 1)
+                  Icon: ="Airplane"
+                  OnSelect: =Navigate(ResumenCPP,ScreenTransition.UnCoverRight )
+                  Text: ="Ir a Resumen"
+                  Width: =136
+                  X: =430
+                  Y: =7
+            - ButtonCanvas4_4:
+                Control: Button@0.0.43
+                Properties:
+                  Appearance: ='ButtonCanvas.Appearance'.Primary
+                  BasePaletteColor: =RGBA(249, 83, 109, 1)
+                  FontSize: =9
+                  Height: =36
+                  OnSelect: |
+                    =ForAll(
+                        GaleriaCPP.AllItems,
+                        RemoveIf(
+                            colAllSelectedItems,
+                            No = ThisRecord.No
+                        );
+                        RemoveIf(
+                            colEquivalenciasSeleccionadas,
+                            RefSAP = ThisRecord.RefSAP
+                        );
+                        RemoveIf(
+                            colConcatenada,
+                            RefSAP = ThisRecord.RefSAP
+                        );
+                    );
+                    Set(
+                        varResetCheckbox,
+                        false
+                    );
+                    UpdateContext({varCheckboxChecked: !Checkbox1.Value});
+                  Text: ="Borrar Todo"
+                  Width: =36
+                  X: =367
+                  Y: =5
+      - Container2:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Light
+            Height: =688
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1230
+            X: =135
+            Y: =80
+          Children:
+            - Container83_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =50
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =155
+                  X: =1072
+                  Y: =235
+                Children:
+                  - Container10_2:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(171, 181, 184, 1)
+                        Height: =49
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =152
+                      Children:
+                        - TextCanvas2_4:
+                            Control: Text@0.0.43
+                            Properties:
+                              Align: ='TextCanvas.Align'.Center
+                              AlignInContainer: =AlignInContainer.Center
+                              FontColor: =RGBA(255, 255, 255, 1)
+                              Size: =12
+                              Text: ="Recomendación"
+                              Weight: ='TextCanvas.Weight'.Semibold
+                              Width: =150
+            - Container5:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Fill: =RGBA(71, 158, 245, 1)
+                  Height: =52
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =817
+                Children:
+                  - Container17_1:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(171, 181, 184, 1)
+                        Height: =52
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =817
+                      Children:
+                        - Container97_14:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Visible: |-
+                                =If(
+                                    CountRows(
+                                        Filter(
+                                            GaleriaCPP.AllItems,
+                                            StartsWith(Nombre, "FILTRO")
+                                        )
+                                    ) > 0,
+                                    false,
+                                    true
+                                )
+                              Width: =100
+                            Children:
+                              - TextCanvas7_12:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =Parent.Height
+                                    PaddingLeft: =15
+                                    Text: ="RefSap"
+                                    Visible: |
+                                      =If(
+                                          CountRows(
+                                              Filter(
+                                                  GaleriaCPP.AllItems,
+                                                  StartsWith(Nombre, "FILTRO")
+                                              )
+                                          ) > 0,
+                                          false,
+                                          true
+                                      )
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =100
+                        - Container97_15:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =50
+                            Children:
+                              - TextCanvas7_16:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    Align: ='TextCanvas.Align'.Start
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =Parent.Height
+                                    PaddingLeft: =15
+                                    Text: ="Q"
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =50
+                        - Container97_11:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =140
+                            Children:
+                              - TextCanvas7_11:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =52
+                                    PaddingLeft: =5
+                                    Text: ="Nombre"
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =140
+                        - Container97_12:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =90
+                            Children:
+                              - DropMarca1_1:
+                                  Control: Classic/ComboBox@2.4.0
+                                  Properties:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    ChevronBackground: =RGBA(171, 181, 184, 1)
+                                    ChevronDisabledBackground: =RGBA(171, 181, 184, 1)
+                                    ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                                    ChevronFill: =RGBA(255, 255, 255, 1)
+                                    ChevronHoverBackground: =RGBA(171, 181, 184, 1)
+                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                    Color: =RGBA(255, 255, 255, 1)
+                                    DisabledBorderColor: =RGBA(171, 181, 184, 1)
+                                    DisabledColor: =RGBA(255, 255, 255, 1)
+                                    DisabledFill: =RGBA(171, 181, 184, 1)
+                                    DisplayFields: =["Value"]
+                                    Fill: =RGBA(171, 181, 184, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =52
+                                    HoverBorderColor: =Color.White
+                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                    HoverFill: =RGBA(171, 181, 184, 1)
+                                    InputTextPlaceholder: ="Marca"
+                                    Items: =Distinct(TablaDataCpp,Marca)
+                                    OnChange: =
+                                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                                    PressedColor: =RGBA(0, 0, 0, 1)
+                                    PressedFill: =RGBA(255, 255, 255, 1)
+                                    SearchFields: =["Value"]
+                                    SelectMultiple: =false
+                                    SelectionColor: =RGBA(255, 255, 255, 1)
+                                    SelectionFill: =RGBA(171, 181, 184, 1)
+                                    Size: =10
+                                    Width: =90
+                        - Container97_13:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =90
+                            Children:
+                              - DropModelo1_1:
+                                  Control: Classic/ComboBox@2.4.0
+                                  Properties:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    ChevronBackground: =RGBA(171, 181, 184, 1)
+                                    ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                                    ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                                    ChevronFill: =RGBA(255, 255, 255, 1)
+                                    ChevronHoverBackground: =RGBA(171, 181, 184, 1)
+                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                    Color: =RGBA(255, 255, 255, 1)
+                                    DisabledBorderColor: =RGBA(171, 181, 184, 1)
+                                    DisabledColor: =RGBA(255, 255, 255, 1)
+                                    DisabledFill: =RGBA(171, 181, 184, 1)
+                                    DisplayFields: =["Value"]
+                                    Fill: =RGBA(171, 181, 184, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =50
+                                    HoverBorderColor: =Color.White
+                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                    HoverFill: =RGBA(171, 181, 184, 1)
+                                    InputTextPlaceholder: ="Modelo"
+                                    Items: |
+                                      =Distinct(Filter(TablaDataCpp, Marca in DropMarca1_1.Selected.Value),Modelo)
+                                    OnChange: =
+                                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                    PressedFill: =RGBA(171, 181, 184, 1)
+                                    SearchFields: =["Value"]
+                                    SelectMultiple: =false
+                                    SelectionColor: =RGBA(255, 255, 255, 1)
+                                    SelectionFill: =RGBA(171, 181, 184, 1)
+                                    Size: =11
+                                    Width: =90
+                        - Container97_10:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =90
+                            Children:
+                              - TextCanvas7_17:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =48
+                                    PaddingLeft: =15
+                                    Text: ="Frecuencia"
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =90
+                        - Container97_9:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =70
+                            Children:
+                              - TextCanvas7_18:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =46
+                                    PaddingLeft: =15
+                                    Text: ="Medida"
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =70
+                        - Container97_16:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =150
+                            Children:
+                              - TextCanvas7_19:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =51
+                                    PaddingLeft: =15
+                                    Text: ="Comentario"
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =95
+                        - Container97_17:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              FillPortions: =0
+                              LayoutMinHeight: =32
+                              LayoutMinWidth: =100
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =90
+                            Children:
+                              - TextCanvas7_23:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =49
+                                    PaddingLeft: =15
+                                    Text: ="Adjuntos"
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =90
+            - Container38:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =636
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =254
+                  X: =817
+                  Y: =52
+                Children:
+                  - Container78:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Height: =636
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =254
+                      Children:
+                        - Gallery13:
+                            Control: Gallery@2.15.0
+                            Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Items: |+
+                                =//AddColumns(Filter(ablaDataCpp; RefSAP = varSelectedItem.RefSAP);DatosEquivalentes; LookUp(TablaEquivalenciasCpp; RefSAP = RefSAP))
+                                colEquivalenciasSeleccionadas
+
+
+                              LayoutMinWidth: =250
+                              TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                              TemplateSize: =40
+                            Children:
+                              - Separator8:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Height: =4
+                                    OnSelect: =Select(Parent)
+                                    Width: =Parent.TemplateWidth
+                                    Y: =Parent.TemplateHeight - Self.Height
+                              - Container81:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =40
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =253
+                                  Children:
+                                    - TextCanvas9_21:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.Stretch
+                                          BorderColor: =RGBA(214, 221, 224, 1)
+                                          BorderStyle: =BorderStyle.Solid
+                                          BorderThickness: =1
+                                          FontItalic: =true
+                                          LayoutMinHeight: =0
+                                          LayoutMinWidth: =32
+                                          PaddingLeft: =10
+                                          Size: =12
+                                          Text: =ThisItem.Equivalencia
+                                          VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                          Weight: ='TextCanvas.Weight'.Semibold
+                                          Width: =150
+                                    - TextCanvas9_22:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.Stretch
+                                          BorderColor: =RGBA(214, 221, 224, 1)
+                                          BorderStyle: =BorderStyle.Solid
+                                          BorderThickness: =1
+                                          FontItalic: =true
+                                          LayoutMinHeight: =0
+                                          LayoutMinWidth: =32
+                                          PaddingLeft: =10
+                                          Size: =12
+                                          Text: =ThisItem.Marca
+                                          VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                          Weight: ='TextCanvas.Weight'.Semibold
+                                          Width: =100
+            - Container82:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =169
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =159
+                  X: =1071
+                  Y: =52
+                Children:
+                  - Container31:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Height: =169
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =159
+                      Children:
+                        - Image21:
+                            Control: Image@2.2.3
+                            Properties:
+                              AlignInContainer: =AlignInContainer.Stretch
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              Fill: =RGBA(255, 255, 255, 1)
+                              FillPortions: =1
+                              FocusedBorderThickness: =4
+                              Height: =If(HoverImage21, 500, 500) // Cambia el tamaño a 300 cuando el cursor esté sobre la imagen
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Image: =GaleriaCPP.Selected.ImagenUrl
+                              OnSelect: =Set(HoverImage21, true)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Width: =If(HoverImage21, 300, 150) // Cambia el tamaño a 300 cuando el cursor esté sobre la imagen
+            - Container83:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =52
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =254
+                  X: =817
+                Children:
+                  - Container10_1:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(171, 181, 184, 1)
+                        Height: =49
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =254
+                      Children:
+                        - TextCanvas2_1:
+                            Control: Text@0.0.43
+                            Properties:
+                              Align: ='TextCanvas.Align'.Center
+                              AlignInContainer: =AlignInContainer.Center
+                              FontColor: =RGBA(255, 255, 255, 1)
+                              Text: ="Equivalencia"
+                              Visible: |
+                                =true
+                              Weight: ='TextCanvas.Weight'.Semibold
+                              Width: =120
+                        - TextCanvas2_3:
+                            Control: Text@0.0.43
+                            Properties:
+                              Align: ='TextCanvas.Align'.Center
+                              AlignInContainer: =AlignInContainer.Center
+                              FontColor: =RGBA(255, 255, 255, 1)
+                              Text: ="Marca"
+                              Weight: ='TextCanvas.Weight'.Semibold
+                              Width: =120
+            - Container85:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =52
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =155
+                  X: =1072
+                Children:
+                  - Container10:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(171, 181, 184, 1)
+                        Height: =52
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =155
+                      Children:
+                        - TextCanvas2:
+                            Control: Text@0.0.43
+                            Properties:
+                              Align: ='TextCanvas.Align'.Center
+                              AlignInContainer: =AlignInContainer.Center
+                              FontColor: =RGBA(255, 255, 255, 1)
+                              Text: ="Imagen de Parte"
+                              Weight: ='TextCanvas.Weight'.Semibold
+                              Width: =Parent.Width
+            - Container86:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =636
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =817
+                  Y: =52
+                Children:
+                  - Container30:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Height: =636
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =817
+                      Children:
+                        - GaleriaCPP:
+                            Control: Gallery@2.15.0
+                            Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                            Properties:
+                              BorderColor: =
+                              BorderThickness: =2
+                              Fill: =RGBA(255, 255, 255, 1)
+                              Height: =Parent.Height
+                              Items: |+
+                                =If(
+                                    IsBlank(DropParte1.SelectedItems) && IsBlank(TextInputCanvas6.Value),
+                                    [ // Tabla ficticia vacía con la misma estructura de datos
+                                        {Nombre: "", Marca: "", Modelo: "", RefSAP: "", Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo: "", ImagenUrl: "", Recomendación: ""}
+                                    ],
+                                    Filter(
+                                        TablaDataCpp,
+                                        (IsBlank(TextInputCanvas6.Value) || TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo) &&
+                                        (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
+                                        (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
+                                        (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
+                                        (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
+                                        (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0) &&
+                                        (IsBlank(DropMarca1_1.Selected.Value) || Marca = DropMarca1_1.Selected.Value) &&
+                                        (IsBlank(DropModelo1_1.Selected.Value) || Modelo = DropModelo1_1.Selected.Value)
+                                    )
+                                )
+
+
+
+
+                              OnSelect: =Set(varSelectedItem, ThisItem)
+                              ShowNavigation: =true
+                              TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                              TemplateSize: =85
+                              Transition: =Transition.Push
+                              Width: =Parent.Width
+                            Children:
+                              - Separator4_1:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(214, 221, 224, 1)
+                                    BorderThickness: =2
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Height: =1
+                                    OnSelect: =Select(Parent)
+                                    Width: =Parent.TemplateWidth
+                                    Y: =Parent.TemplateHeight - Self.Height
+                              - Container87:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =76
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width
+                                  Children:
+                                    - Container97:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Light
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Visible: |-
+                                            =If(
+                                                StartsWith(ThisItem.Nombre, "FILTRO"),
+                                                false,
+                                                true
+                                            )
+                                          Width: =100
+                                        Children:
+                                          - TextCanvas25_3:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: =ThisItem.RefSAP
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Visible: |-
+                                                  =If(
+                                                      StartsWith(ThisItem.Nombre, "FILTRO"),
+                                                      false,
+                                                      true
+                                                  )
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =100
+                                    - Container97_2:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Light
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =50
+                                        Children:
+                                          - TextCanvas25_4:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: =ThisItem.Cantidad
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =50
+                                    - Container97_3:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Semibold
+                                          FillPortions: =0
+                                          LayoutMinHeight: =0
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =140
+                                        Children:
+                                          - TextCanvas25:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Start
+                                                Height: =76
+                                                PaddingLeft: =25
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: =ThisItem.Nombre
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =140
+                                    - Container97_5:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Light
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =90
+                                        Children:
+                                          - TextCanvas25_1:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: =ThisItem.Marca
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =90
+                                    - Container97_4:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Light
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =90
+                                        Children:
+                                          - TextCanvas25_2:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: =ThisItem.Modelo
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =90
+                                    - Container97_1:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Light
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =90
+                                        Children:
+                                          - TextCanvas25_6:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =10
+                                                Text: =ThisItem.Frecuencia
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =90
+                                    - Container97_6:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Light
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =70
+                                        Children:
+                                          - TextCanvas25_5:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =10
+                                                Text: =ThisItem.Medida
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =70
+                                    - Container97_7:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Light
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =150
+                                        Children:
+                                          - TextCanvas25_7:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Start
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =10
+                                                Text: =ThisItem.Comentario
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =95
+                                    - Container97_8:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          DropShadow: =DropShadow.Light
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =90
+                                        Children:
+                                          - TextCanvas25_8:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Start
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =10
+                                                Text: =ThisItem.Adjuntos
+                                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =90
+                              - Checkbox1:
+                                  Control: Classic/CheckBox@2.1.0
+                                  Properties:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    CheckboxBackgroundFill: =RGBA(255, 255, 255, 1)
+                                    CheckboxBorderColor: =App.Theme.Colors.Primary
+                                    CheckboxSize: =30
+                                    CheckmarkFill: =App.Theme.Colors.Primary
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =varCheckboxChecked
+                                    Font: =App.Theme.Font
+                                    Height: =31
+                                    HoverColor: =App.Theme.Colors.Darker30
+                                    OnCheck: |+
+                                      =Collect(colAllSelectedItems, ThisItem);
+                                      Collect(colEquivalenciasSeleccionadas,Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP));
+                                      // Limpia la colección concatenada si ya existe
+                                      Clear(colConcatenada);
+
+                                      ForAll(
+                                          colEquivalenciasSeleccionadas,
+                                          // Guarda el registro correspondiente en una variable temporal
+                                          With(
+                                              {
+                                                  selectedItem: LookUp(colAllSelectedItems, RefSAP = colEquivalenciasSeleccionadas[@RefSAP])
+                                              },
+                                              Collect(
+                                                  colConcatenada,
+                                                  {
+                                                      RefSAP: colEquivalenciasSeleccionadas[@RefSAP],
+                                                      No: colEquivalenciasSeleccionadas[@No],
+                                                      MarcaEquivalencia: colEquivalenciasSeleccionadas[@Marca],
+                                                      Equivalencia: colEquivalenciasSeleccionadas[@Equivalencia],
+                                                      // Utiliza la variable temporal para acceder a los valores de colAllSelectedItems
+                                                      Marca: selectedItem.Marca,
+                                                      Nombre: selectedItem.Nombre,
+                                                      Cantidad: selectedItem.Cantidad,
+                                                      Frecuencia: selectedItem.Frecuencia,
+                                                      Medida: selectedItem.Medida,
+                                                      Comentario: selectedItem.Comentario,
+                                                      Modelo: selectedItem.Modelo,
+                                                      Parte: selectedItem.Parte,
+                                                      Tipo: selectedItem.Tipo,
+                                                      ImagenUrl: selectedItem.ImagenUrl,
+                                                      Recomendación: selectedItem.Recomendación
+                                                  }
+                                              )
+                                          )
+                                      );
+
+
+
+                                      Set(varCheckboxChecked, true);
+
+
+
+
+
+
+
+
+                                    OnSelect: =Select(Parent)
+                                    OnUncheck: |-
+                                      =Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP);
+                                      // Elimina de colConcatenada los registros que coincidan con el RefSAP de ThisItem
+                                      RemoveIf(colConcatenada, RefSAP = ThisItem.RefSAP)
+                                    Text: =
+                                    Width: =28
+                                    X: =4
+                                    Y: =23
+                              - TextCanvas12:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    Align: ='TextCanvas.Align'.Center
+                                    FontItalic: =true
+                                    Height: =12
+                                    Size: =8
+                                    Text: =ThisItem.No
+                                    Width: =34
+                                    X: =12
+                                    Y: =64
+            - Container66:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =218
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =158
+                  X: =1072
+                  Y: =296
+                Children:
+                  - Container91:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =158
+                        Y: =5
+                      Children:
+                        - Gallery11:
+                            Control: Gallery@2.15.0
+                            Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Items: |+
+                                =Filter(TablaDataCpp, No = varSelectedItem.No)
+
+                              LayoutMinHeight: =0
+                              LayoutMinWidth: =120
+                              TemplateSize: =100
+                            Children:
+                              - TextCanvas11:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    Align: ='TextCanvas.Align'.Center
+                                    FontColor: =RGBA(0, 0, 0, 1)
+                                    Height: =89
+                                    Text: |
+                                      =First(Filter(TablaDataCpp, No = varSelectedItem.No)).Recomendación
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =158
+                                    Y: =5
+            - Container65:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =688
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Visible: =HoverImage21
+                  Width: =1229
+                Children:
+                  - Image21_1:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =4
+                        Height: =688
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =GaleriaCPP.Selected.ImagenUrl
+                        OnSelect: =Set(HoverImage21, true);Set(HoverImage21, false)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =HoverImage21
+                        Width: =Parent.Width
+                  - Icon6:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(255, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(255, 0, 0, 1)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =49
+                        HoverBorderColor: =RGBA(255, 191, 0, 1)
+                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.CancelBadge
+                        OnSelect: =Set(HoverImage21, false)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =HoverImage21
+                        Width: =52
+                        X: =1177
+      - Container14:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(171, 181, 184, 1)
+            Height: =688
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =135
+            Y: =80
+          Children:
+            - Container28:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =60
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =115
+                  Y: =100
+                Children:
+                  - DropMarca1:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                        ChevronFill: =RGBA(0, 0, 0, 1)
+                        ChevronHoverBackground: =RGBA(40, 134, 222, 1)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(214, 221, 224, 1)
+                        DisabledFill: =RGBA(71, 158, 245, 1)
+                        DisplayFields: =["Value"]
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        IsSearchable: =false
+                        Items: =Distinct(TablaDataCpp,Marca)
+                        OnChange: =
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(0, 0, 0, 1)
+                        PressedFill: =RGBA(40, 134, 222, 1)
+                        SearchFields: =["Value"]
+                        SelectMultiple: =false
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(215, 58, 60, 1)
+                        Size: =9
+                        Width: =115
+                        Y: =95
+            - Container28_1:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =60
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =115
+                  Y: =203
+                Children:
+                  - DropModelo1:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                        ChevronFill: =RGBA(0, 0, 0, 1)
+                        ChevronHoverBackground: =RGBA(40, 134, 222, 1)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(214, 221, 224, 1)
+                        DisabledFill: =RGBA(71, 158, 245, 1)
+                        DisplayFields: =["Value"]
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        IsSearchable: =false
+                        Items: |
+                          =Distinct(Filter(TablaDataCpp, Marca in DropMarca1.Selected.Value),Modelo)
+                        OnChange: =
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(0, 0, 0, 1)
+                        PressedFill: =RGBA(40, 134, 222, 1)
+                        SearchFields: =["Value"]
+                        SelectMultiple: =false
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(215, 58, 60, 1)
+                        Size: =9
+                        Width: =115
+                        Y: =292
+            - Container28_2:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =60
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =115
+                  Y: =296
+                Children:
+                  - DropParte1:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                        ChevronFill: =RGBA(0, 0, 0, 1)
+                        ChevronHoverBackground: =RGBA(40, 134, 222, 1)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(214, 221, 224, 1)
+                        DisabledFill: =RGBA(71, 158, 245, 1)
+                        DisplayFields: =["Value"]
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        IsSearchable: =false
+                        Items: =Distinct(Filter(TablaDataCpp, Modelo in DropModelo1.Selected.Value),Parte)
+                        OnChange: =
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(0, 0, 0, 1)
+                        PressedFill: =RGBA(40, 134, 222, 1)
+                        SearchFields: =["Value"]
+                        SelectMultiple: =false
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(215, 58, 60, 1)
+                        Size: =9
+                        Width: =115
+                        Y: =331
+            - Container28_3:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =60
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =115
+                  Y: =402
+                Children:
+                  - DropTipo1:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                        ChevronFill: =RGBA(0, 0, 0, 1)
+                        ChevronHoverBackground: =RGBA(40, 134, 222, 1)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(214, 221, 224, 1)
+                        DisabledFill: =RGBA(71, 158, 245, 1)
+                        DisplayFields: =["Value"]
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        IsSearchable: =false
+                        Items: |
+                          =Distinct(Filter(TablaDataCpp, Parte in DropParte1.Selected.Value),Tipo)
+                        OnChange: =
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(0, 0, 0, 1)
+                        PressedFill: =RGBA(40, 134, 222, 1)
+                        SearchFields: =["Value"]
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(215, 58, 60, 1)
+                        Size: =9
+                        Width: =115
+                        Y: =522
+            - TextCanvas6:
+                Control: Text@0.0.43
+                Properties:
+                  Align: ='TextCanvas.Align'.Center
+                  FontColor: =RGBA(255, 255, 255, 1)
+                  Size: =12
+                  Text: ="Menu"
+                  Weight: ='TextCanvas.Weight'.Semibold
+                  Width: =100
+                  Y: =3
+            - TextCanvas6_1:
+                Control: Text@0.0.43
+                Properties:
+                  Align: ='TextCanvas.Align'.Center
+                  FontColor: =RGBA(255, 255, 255, 1)
+                  Height: =33
+                  Size: =12
+                  Text: ="Marca"
+                  Weight: ='TextCanvas.Weight'.Semibold
+                  Width: =115
+                  Y: =67
+            - TextCanvas6_2:
+                Control: Text@0.0.43
+                Properties:
+                  Align: ='TextCanvas.Align'.Center
+                  FontColor: =RGBA(255, 255, 255, 1)
+                  Height: =43
+                  Size: =12
+                  Text: ="Modelo"
+                  Weight: ='TextCanvas.Weight'.Semibold
+                  Width: =115
+                  Y: =160
+            - TextCanvas6_3:
+                Control: Text@0.0.43
+                Properties:
+                  Align: ='TextCanvas.Align'.Center
+                  FontColor: =RGBA(255, 255, 255, 1)
+                  Height: =33
+                  Size: =12
+                  Text: ="Categoría"
+                  Weight: ='TextCanvas.Weight'.Semibold
+                  Width: =115
+                  Y: =263
+            - TextCanvas6_4:
+                Control: Text@0.0.43
+                Properties:
+                  Align: ='TextCanvas.Align'.Center
+                  FontColor: =RGBA(255, 255, 255, 1)
+                  Height: =33
+                  Size: =12
+                  Text: ="Tipo"
+                  Weight: ='TextCanvas.Weight'.Semibold
+                  Width: =115
+                  Y: =357
+            - Icon1:
+                Control: Icon@0.0.7
+                Properties:
+                  Icon: ="AppsList"
+                  Width: =42
+                  X: =58
+                  Y: =3
+            - ButtonCanvas6:
+                Control: Button@0.0.43
+                Properties:
+                  BasePaletteColor: =RGBA(249, 83, 109, 1)
+                  Height: =25
+                  OnSelect: =Reset(DropMarca1);Reset(DropModelo1);Reset(DropParte1);Reset(DropTipo1);Reset(DropFrecuencia1)
+                  Text: ="Reset"
+                  Width: =56
+                  X: =59
+                  Y: =35
+            - ButtonCanvas5_1:
+                Control: Button@0.0.43
+                Properties:
+                  BasePaletteColor: =RGBA(225, 250, 2, 1)
+                  Height: =37
+                  Icon: ="Warning"
+                  OnSelect: =Launch("https://teams.microsoft.com/l/channel/19%3Af661e47534c545eca9225e7a9db41b3a%40thread.tacv2/Aplicativo%20Mantenimiento%2C%20Manuales%20y%20CPP?groupId=31f2e519-640f-4cee-856f-e4ae247c0e5a")
+                  Text: ="Soporte"
+                  Width: =115
+                  Y: =605
+            - TextCanvas6_5:
+                Control: Text@0.0.43
+                Properties:
+                  Align: ='TextCanvas.Align'.Center
+                  FontColor: =RGBA(255, 255, 255, 1)
+                  Height: =33
+                  Size: =12
+                  Text: ="Frecuencia"
+                  Weight: ='TextCanvas.Weight'.Semibold
+                  Width: =115
+                  Y: =464
+            - Container28_4:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =60
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =115
+                  Y: =507
+                Children:
+                  - DropFrecuencia1:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                        ChevronFill: =RGBA(0, 0, 0, 1)
+                        ChevronHoverBackground: =RGBA(40, 134, 222, 1)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(214, 221, 224, 1)
+                        DisabledFill: =RGBA(71, 158, 245, 1)
+                        DisplayFields: =["Value"]
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        IsSearchable: =false
+                        Items: |
+                          =Distinct(Filter(TablaDataCpp, Tipo in DropTipo1.Selected.Value),Frecuencia)
+                        OnChange: =
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(0, 0, 0, 1)
+                        PressedFill: =RGBA(40, 134, 222, 1)
+                        SearchFields: =["Value"]
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(215, 58, 60, 1)
+                        Size: =9
+                        Width: =115
+                        Y: =522

@@ -1,0 +1,173 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Inicio:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    Children:
+      - Container61:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Light
+            Height: =768
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1366
+          Children:
+            - Container62:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =67
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =1366
+                  Y: =6
+                Children:
+                  - Container63:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Height: =67
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1354
+                        X: =12
+                      Children:
+                        - TextCanvas45:
+                            Control: Text@0.0.43
+                            Properties:
+                              Height: =Parent.Height
+                              Size: =18
+                              Text: ="Mantenimiento, CPP, Manuales Y PQRSF"
+                              Weight: ='TextCanvas.Weight'.Bold
+                              Width: |
+                                =300
+                        - EncabezadoContenedor_6:
+                            Control: CanvasComponent
+                            ComponentName: EncabezadoContenedor
+                            Properties:
+                              Encabezado: =SampleImage
+                              Encabezado1: =Logo
+                              Height: =65
+                              Width: =1007
+            - Container64:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =681
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =1366
+                  Y: =73
+                Children:
+                  - Image2:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =681
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =Cargar
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =varCargar
+                        Width: =799
+                        X: =566
+                  - Image8:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =678
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =varCargar
+                        Width: =646
+                        X: =3
+                        Y: =3
+                  - ButtonCanvas3:
+                      Control: Button@0.0.43
+                      Properties:
+                        BasePaletteColor: =RGBA(141, 229, 250, 1)
+                        FontSize: =20
+                        Height: =68
+                        IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                        Text: ="INGRESAR"
+                        Width: =213
+                        X: =566
+                        Y: =587
+                  - Timer1:
+                      Control: Timer@2.1.0
+                      Properties:
+                        AutoStart: =varTiempo
+                        BorderColor: =App.Theme.Colors.Primary
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Duration: =5000
+                        Fill: =App.Theme.Colors.Primary
+                        Font: =App.Theme.Font
+                        Height: =74
+                        HoverBorderColor: =App.Theme.Colors.Darker10
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =App.Theme.Colors.Darker10
+                        OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
+                        PressedBorderColor: =App.Theme.Colors.Darker40
+                        PressedColor: =Self.Color
+                        PressedFill: =App.Theme.Colors.Darker40
+                        Visible: =false
+                        Width: =287
+                        X: =529
+                        Y: =364
+                  - Label1_36:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Bold
+                        Height: =81
+                        Size: =30
+                        Text: ="Bienvenido a la App"
+                        Width: =657
+                        X: =344
+                        Y: =22

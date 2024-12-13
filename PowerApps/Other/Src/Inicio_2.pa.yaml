@@ -1,0 +1,106 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Inicio_2:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    Children:
+      - Container94:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Light
+            Height: =762
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1364
+          Children:
+            - Container95:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =57
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =1364
+                  Y: =5
+                Children:
+                  - BienvenidaFondo_4:
+                      Control: Rectangle@2.3.0
+                      Group: GroupBackground_9
+                      Properties:
+                        BorderColor: =RGBA(51, 51, 51, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderColor: =BienvenidaFondo_4.BorderColor
+                        Height: =57
+                        Width: =1006
+                        X: =321
+                  - ImageLogo_4:
+                      Control: Image@2.2.3
+                      Group: GroupBackground_9
+                      Properties:
+                        BorderColor: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderColor: =ImageLogo_4.BorderColor
+                        Height: =57
+                        Image: =Logo
+                        Width: =204
+                        X: =1155
+                  - Icon2_1:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(105, 121, 126, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =48
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.BackArrow
+                        OnSelect: =Navigate(Appointments,ScreenTransition.Fade )
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =57
+                        X: =45
+            - Container96:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =700
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =1364
+                  Y: =62
+                Children:
+                  - Video2_1:
+                      Control: Video@2.4.1
+                      Properties:
+                        AutoStart: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Fill: =RGBA(105, 121, 126, 1)
+                        Height: =697
+                        Media: ="https://youtu.be/wKTg9hNkLuA"
+                        Width: =1364

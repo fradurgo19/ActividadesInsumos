@@ -1,0 +1,607 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Manuales Partequipos:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      Height: =Max(App.Height, App.DesignHeight)
+      LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+      OnVisible: |
+        =Set(CurrentStep,"7");
+        UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
+        UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
+        UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        Set(varPatch,"Manuales/")
+      Width: =Max(App.Width, App.DesignWidth)
+    Children:
+      - Menu_7:
+          Control: FluidGrid@2.3.0
+          Properties:
+            BorderThickness: =0
+            Height: =768
+            Width: =295
+          Children:
+            - MenuCard_7:
+                Control: DataCard@1.0.2
+                Properties:
+                  Height: |
+                    =Parent.Height-100
+                  Width: =295
+                Children:
+                  - logo_8:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderColor: =logo_8.BorderColor
+                        FocusedBorderThickness: =4
+                        Height: =40
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =Logo
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =155
+                        X: =50
+                        Y: =42
+                  - MenuList_7:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Default: =SelectedMenu
+                        DelayItemLoading: =false
+                        Height: =657-100
+                        Items: =MenuData
+                        LoadingSpinner: =LoadingSpinner.None
+                        OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(NPS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None);"10",Navigate('Proyector Mttos',ScreenTransition.None)))
+                        ShowScrollbar: =false
+                        TemplatePadding: =11
+                        TemplateSize: =40
+                        Width: =248
+                        X: =39
+                        Y: =logo_8.Y + logo_8.Height +32
+                      Children:
+                        - Menu3_7:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu3_7.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.AddDocument
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu3"
+                              Width: =19
+                              Y: =9
+                        - Menu1_7:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu1_7.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Publish
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu1"
+                              Width: =19
+                              Y: =10
+                        - Menu2_7:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu2_7.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.DetailList
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu2"
+                              Width: =19
+                              Y: =10
+                        - Menu4_7:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu4_7.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.PaperClip
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu4"
+                              Width: =19
+                              X: =
+                              Y: =10
+                        - Menu6_8:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu6_8.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Ribbon
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu7"
+                              Width: =19
+                              Y: =10
+                        - MenuName_7:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(0,32,69,1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(166, 166, 166, 1)
+                              FocusedBorderColor: =MenuName_7.BorderColor
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
+                              Height: =21
+                              HoverBorderColor: =MenuName_7.BorderColor
+                              HoverColor: =MenuName_7.Color
+                              HoverFill: =MenuName_7.Fill
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              PressedBorderColor: =MenuName_7.BorderColor
+                              PressedColor: =MenuName_7.Color
+                              PressedFill: =MenuName_7.Fill
+                              Size: =12
+                              Text: =ThisItem.Name
+                              Width: =181
+                              X: =40
+                              Y: =10
+                        - Menu6_9:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu6_9.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.FilterFlat
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu6"
+                              Width: =19
+                              Y: =11
+                        - Menu5_7:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu5_7.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.ListScrollWatchlist
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu5"
+                              Width: |
+                                =19
+                              Y: =12
+                        - Menu6_13:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu6_13.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Warning
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu8"
+                              Width: =19
+                              Y: =9
+                        - Menu9_7:
+                            Control: Icon@0.0.7
+                            Properties:
+                              Height: =23
+                              Icon: ="People"
+                              IconColor: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              Visible: |
+                                =ThisItem.Icon="Menu9"
+                              Width: =19
+                              Y: =5
+      - SendEmailCanvas_2:
+          Control: FluidGrid@2.3.0
+          Properties:
+            BorderThickness: =1
+            Fill: =RGBA(249, 249, 249, 1)
+            Height: =768
+            Width: =1071
+            X: =295
+          Children:
+            - SendEmailCard_2:
+                Control: DataCard@1.0.2
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =Parent.Height
+                  Width: =1071
+                Children:
+                  - Rectangle3_4:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledFill: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(228,233,237,1)
+                        FocusedBorderColor: =Rectangle3_4.BorderColor
+                        FocusedBorderThickness: =4
+                        Height: =2
+                        HoverFill: =RGBA(105, 121, 126, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        Width: =430
+                        X: =
+                        Y: =
+                  - Container9:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Height: =81
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1061
+                      Children:
+                        - Container12:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =60
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              LayoutJustifyContent: =LayoutJustifyContent.Center
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =70
+                            Children:
+                              - Arrow1:
+                                  Control: Arrow@2.3.0
+                                  Variant: BackArrow
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    Fill: =RGBA(105, 121, 126, 1)
+                                    OnSelect: =Navigate('CPP y Manuales',ScreenTransition.Fade )
+                                    X: =428
+                                    Y: =648
+                        - EncabezadoContenedor_9:
+                            Control: CanvasComponent
+                            ComponentName: EncabezadoContenedor
+                            Properties:
+                              Encabezado: =SampleImage
+                              Encabezado1: =Logo
+                              Height: =80
+                              Width: =987
+                              X: =70
+                  - Container27:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Height: =77
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1036
+                        Y: =176
+                      Children:
+                        - Container29:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =77
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =1036
+                            Children:
+                              - TextCanvas1:
+                                  Control: Text@0.0.43
+                                  Properties:
+                                    BorderRadiusBottomLeft: =1
+                                    BorderRadiusBottomRight: =1
+                                    BorderRadiusTopLeft: =1
+                                    BorderRadiusTopRight: =1
+                                    FontColor: =RGBA(9, 33, 98, 1)
+                                    Height: =48
+                                    Size: =15
+                                    Text: ="Busquedad dentro de Carpeta especifica"
+                                    Width: =174
+                                    X: =553
+                                    Y: =280
+                              - TextInputCanvas1:
+                                  Control: TextInput@0.0.49
+                                  Properties:
+                                    BasePaletteColor: =RGBA(5, 102, 178, 1)
+                                    BorderColor: =RGBA(40, 134, 222, 1)
+                                    BorderRadius: =12
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =2
+                                    FontColor: =RGBA(9, 33, 98, 1)
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =48
+                                    X: =174
+                                    Y: =280
+                  - Container32:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Height: =455
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1036
+                        Y: =253
+                      Children:
+                        - Container34:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =Parent.Height
+                              LayoutDirection: =LayoutDirection.Vertical
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =Parent.Width
+                              X: =4
+                              Y: =4
+                            Children:
+                              - Gallery7:
+                                  Control: Gallery@2.15.0
+                                  Variant: BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0
+                                  Properties:
+                                    BorderColor: =RGBA(40, 134, 222, 1)
+                                    BorderThickness: =2
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    FillPortions: =0
+                                    Height: =Parent.Height
+                                    Items: |-
+                                      =Filter(
+                                          Manuales,
+                                          (TextInputCanvas1.Value in Nombre || IsBlank(TextInputCanvas1.Value)) &&
+                                          hiddenFolderPath = varPatch
+                                      )
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =200
+                                    OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
+                                    ShowNavigation: |
+                                      =true
+                                    TemplateSize: =150
+                                    Transition: =Transition.Pop
+                                    Width: |
+                                      =Parent.Width
+                                    WrapCount: =3
+                                    X: =323
+                                    Y: =632
+                                  Children:
+                                    - Image27:
+                                        Control: Image@2.2.3
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 0)
+                                          BorderStyle: =BorderStyle.None
+                                          BorderThickness: =2
+                                          DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                          DisabledFill: =RGBA(0, 0, 0, 0)
+                                          FocusedBorderThickness: =4
+                                          Height: =64
+                                          HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                          HoverFill: =RGBA(0, 0, 0, 0)
+                                          Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Large)
+                                          ImagePosition: =ImagePosition.Fill
+                                          OnSelect: =Select(Parent)
+                                          PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                          PressedFill: =RGBA(0, 0, 0, 0)
+                                          RadiusBottomLeft: =8
+                                          RadiusBottomRight: =8
+                                          RadiusTopLeft: =8
+                                          RadiusTopRight: =8
+                                          Width: =68
+                                          X: =1
+                                          Y: =55
+                                    - Title7:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(50, 49, 48, 1)
+                                          DisabledColor: =RGBA(166, 166, 166, 1)
+                                          Font: =Font.'Segoe UI'
+                                          FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                          Height: =43
+                                          OnSelect: =Select(Parent)
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =14
+                                          Text: =ThisItem.Nombre
+                                          VerticalAlign: =VerticalAlign.Top
+                                          Visible: =false
+                                          Width: =191
+                                          X: =16
+                                          Y: =12
+                                    - Subtitle7:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          Color: =RGBA(51, 51, 51, 1)
+                                          DisabledColor: =RGBA(166, 166, 166, 1)
+                                          Font: =Font.Lato
+                                          FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                          Height: =55
+                                          OnSelect: =Select(Parent)
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =10
+                                          Text: =ThisItem.'Nombre de archivo con extensión'
+                                          Width: =149
+                                          X: =1
+                                    - ButtonCanvas4_2:
+                                        Control: Button@0.0.43
+                                        Properties:
+                                          FontSize: =12
+                                          Height: =29
+                                          OnSelect: =Launch("https://partequipos2.sharepoint.com/sites/servicioposventa/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
+                                          Text: ="Download"
+                                          Visible: =!ThisItem.EsCarpeta
+                                          Width: =65
+                                          X: =85
+                                          Y: =90
+      - Container15:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Light
+            Height: =73
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1036
+            X: =295
+            Y: =100
+          Children:
+            - Container26:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.Light
+                  Height: =73
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =4
+                  RadiusBottomRight: =4
+                  RadiusTopLeft: =4
+                  RadiusTopRight: =4
+                  Width: =1031
+                  X: =4
+                Children:
+                  - Gallery5:
+                      Control: Gallery@2.15.0
+                      Variant: Horizontal
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderThickness: =1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        Items: =Split(Left(varPatch,Len(varPatch)-1),"/")
+                        LayoutMinHeight: =0
+                        TemplateSize: =168
+                        Width: =Parent.Width
+                        X: =369
+                        Y: =629
+                      Children:
+                        - ButtonCanvas2:
+                            Control: Button@0.0.43
+                            Properties:
+                              FontSize: =12
+                              Height: =64
+                              OnSelect: =Set(varPatch,Left(varPatch,Find(ThisItem.Value,varPatch)+Len(ThisItem.Value)))
+                              Text: =ThisItem.Value
+                              Width: =141
+                              X: =5

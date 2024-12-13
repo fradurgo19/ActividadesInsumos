@@ -1,0 +1,1126 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Appointments:
+    Properties:
+      BackgroundImage: ='d7f2d250-84f5-438a-89df-5a619d71b588'
+      Fill: =RGBA(255, 255, 255, 1)
+      Height: =Max(App.Height, App.DesignHeight)
+      LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+      OnVisible: |+
+        ="Generate menu list";
+        ClearCollect(MenuData,
+        {Icon:"Menu1",  Name:"Equipos y Frecuencias", Step:"1"},{Icon:"Menu2",  Name:"Actividades", Step:"2"},{Icon:"Menu3", Name:"Consumibles", Step:"3"},
+        {Icon:"Menu4",  Name:"Claves y Procedimientos", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"CPP y Manuales", Step:"7"},{Icon:"Menu8", Name:"NPS", Step:"8"},{Icon:"Menu9", Name:"Asesores", Step:"9"},{Icon:"Menu10", Name:"Proyector Mttos", Step:"10"});
+        "Set default values";
+        Set(SelectedMenu,First(MenuData));
+        Set(CurrentStep, "1");
+        Set(CurrentDate, Today());
+
+
+        "Discount list";
+        ClearCollect(DiscountList,
+        {DiscountValue:0.1, DisplayName:"10%"},
+        {DiscountValue:0.2, DisplayName:"20%"},
+        {DiscountValue:0.3, DisplayName:"30%"},
+        {DiscountValue:0.4, DisplayName:"40%"});
+
+        ClearCollect(
+            TempariosLocal,
+            'TEMPARIO DE MANTENIMIENTOS'
+        );
+
+
+      Width: =Max(App.Width, App.DesignWidth)
+    Children:
+      - Menu:
+          Control: FluidGrid@2.3.0
+          Properties:
+            BorderThickness: =0
+            Height: =768
+            Width: =307
+          Children:
+            - MenuCard:
+                Control: DataCard@1.0.2
+                Properties:
+                  Height: =630
+                  Width: =307
+                Children:
+                  - logo:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderColor: =logo.BorderColor
+                        FocusedBorderThickness: =4
+                        Height: =40
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =Logo
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =155
+                        X: =50
+                        Y: =42
+                  - MenuList:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Default: =SelectedMenu
+                        DelayItemLoading: =false
+                        Height: |
+                          =657-100
+                        Items: =MenuData
+                        LoadingSpinner: =LoadingSpinner.None
+                        OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(NPS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None);"10",Navigate('Proyector Mttos',ScreenTransition.None)))
+                        ShowScrollbar: =false
+                        TemplatePadding: =11
+                        TemplateSize: =45
+                        Width: =266
+                        X: =39
+                        Y: =logo.Y + logo.Height +32
+                      Children:
+                        - MenuName:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(0,32,69,1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(166, 166, 166, 1)
+                              FocusedBorderColor: =MenuName.BorderColor
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
+                              Height: =22
+                              HoverBorderColor: =MenuName.BorderColor
+                              HoverColor: =MenuName.Color
+                              HoverFill: =MenuName.Fill
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              PressedBorderColor: =MenuName.BorderColor
+                              PressedColor: =MenuName.Color
+                              PressedFill: =MenuName.Fill
+                              Size: =12
+                              Text: =ThisItem.Name
+                              Width: =230
+                              X: =39
+                              Y: =9
+                        - Bar:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              DisabledFill: =RGBA(166, 166, 166, 1)
+                              Fill: =RGBA(144,19,254,1)
+                              FocusedBorderColor: =Bar.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =40
+                              HoverFill: =RGBA(105, 121, 126, 1)
+                              OnSelect: =Select(Parent)
+                              PressedFill: =RGBA(105, 121, 126, 1)
+                              Visible: =ThisItem.Step=CurrentStep
+                              Width: =5
+                              X: =227
+                        - Menu5:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu5.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.DockCheckProperties
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu5"
+                              Width: =19
+                              Y: =10
+                        - Menu1:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu1.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.AddToCalendar
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu1"
+                              Width: =19
+                              Y: =10
+                        - Menu2:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu2.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.DetailList
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu2"
+                              Width: =19
+                              Y: =10
+                        - Menu3:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu3.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.AddDocument
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu3"
+                              Width: =19
+                              X: =
+                              Y: =10
+                        - Menu4:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu4.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.PaperClip
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu4"
+                              Width: =19
+                              X: =
+                              Y: =10
+                        - Menu6:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu6.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Mail
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu6"
+                              Width: |
+                                =19
+                              Y: =10
+                        - Menu7:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu7.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Ribbon
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu7"
+                              Width: |
+                                =19
+                              Y: =12
+                        - Menu8:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu8.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Warning
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu8"
+                              Width: |
+                                =19
+                              Y: =9
+                        - Menu9:
+                            Control: Icon@0.0.7
+                            Properties:
+                              Height: =23
+                              Icon: ="People"
+                              IconColor: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              Visible: |
+                                =ThisItem.Icon="Menu9"
+                              Width: =19
+                              Y: =8
+                        - Menu10:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu10.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Printing3D
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu10"
+                              Width: |
+                                =19
+                              Y: =10
+            - DataCard1:
+                Control: DataCard@1.0.2
+                Variant: BlankCard
+                Properties:
+                  Height: =100
+                  Width: =307
+                  Y: =1
+      - AppointmentList:
+          Control: FluidGrid@2.3.0
+          Properties:
+            BorderThickness: =1
+            Fill: =RGBA(249, 249, 249, 1)
+            Height: =768
+            Width: =1059
+            X: =307
+          Children:
+            - DataCard2:
+                Control: DataCard@1.0.2
+                Variant: BlankCard
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =67
+                  Width: =1059
+                Children:
+                  - Label2:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =63
+                        Size: =20
+                        Text: ="Equipos y Frecuencias"
+                        Width: =1011
+            - DataCard3:
+                Control: DataCard@1.0.2
+                Variant: BlankCard
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =686
+                  Width: =1059
+                  Y: =1
+                Children:
+                  - ComboBox2:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                        ChevronFill: =RGBA(33, 33, 33, 1)
+                        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayFields: =["Results"]
+                        Font: =Font.'Segoe UI'
+                        Height: =30
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(212, 212, 212, 1)
+                        InputTextPlaceholder: ="Buscar Modelo"
+                        IsSearchable: =false
+                        Items: |-
+                          =Sort(
+                              ForAll(
+                                  Distinct(
+                                      Filter(
+                                          TempariosLocal,
+                                          Marca.Value = ComboBox2_1.Selected.Results
+                                      ),
+                                      'Modelo (Modelo0)'.Value
+                                  ),
+                                  {Results: ThisRecord.Value}
+                              ),
+                              Results
+                          )
+                        NoSelectionText: ="Buscar Modelo"
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        SearchFields: =["Results"]
+                        SelectMultiple: =false
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(105, 121, 126, 1)
+                        Size: =15
+                        Width: =359
+                        X: =150
+                        Y: =193
+                  - ComboBox3:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                        ChevronFill: =RGBA(33, 33, 33, 1)
+                        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayFields: =["Results"]
+                        Font: =Font.'Segoe UI'
+                        Height: =56
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(212, 212, 212, 1)
+                        InputTextPlaceholder: ="Buscar Frecuencia Multiple"
+                        IsSearchable: =false
+                        Items: |+
+                          =Sort(
+                              ForAll(
+                                  Distinct(
+                                      Filter(
+                                          TempariosLocal,
+                                          Marca.Value = ComboBox2_1.Selected.Results &&
+                                          'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results
+                                      ),
+                                      'Frecuencia (horas)'.Value
+                                  ),
+                                  {Results: ThisRecord.Value}
+                              ),
+                              Results
+                          )
+
+                        NoSelectionText: ="Buscar Frecuencia Unica 0 SubMultiplo"
+                        OnChange: |-
+                          =UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems})
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        SearchFields: =["Results"]
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(105, 121, 126, 1)
+                        Size: =15
+                        Width: =359
+                        X: =150
+                        Y: =298
+                  - ComboBox5:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                        ChevronFill: =RGBA(33, 33, 33, 1)
+                        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayFields: =["Results"]
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(212, 212, 212, 1)
+                        IsSearchable: =false
+                        Items: |-
+                          =Sort(
+                              ForAll(
+                                  Distinct(
+                                      Filter(
+                                          TempariosLocal,
+                                          Marca.Value = ComboBox2_1.Selected.Results &&
+                                          'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results && 
+                                          'Frecuencia (horas)'.Value = ComboBox3.Selected.Results && 
+                                          'Tipo de item'.Value = ComboBox4.Selected.Results
+                                      ),
+                                      Item.Value
+                                  ),
+                                  {Results: ThisRecord.Value}
+                              ),
+                              Results
+                          )
+                        OnChange: |-
+                          =UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        SearchFields: =["Results"]
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(105, 121, 126, 1)
+                        Visible: =false
+                        X: =470
+                        Y: =156
+                  - Label1:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Size: =18
+                        Text: ="Modelo"
+                        Tooltip: ="Model"
+                        Width: =127
+                        X: =19
+                        Y: =193
+                  - Label1_1:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Size: =18
+                        Text: ="Frecuencia"
+                        Y: =298
+                  - Label1_2:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Text: ="Tipo"
+                        Visible: =false
+                        X: =29
+                        Y: =213
+                  - Label1_3:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Text: ="Consumible o Actividad"
+                        Visible: =false
+                        Width: =325
+                        X: =485
+                        Y: =183
+                  - Icon1_6:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(32, 54, 71, 1)
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =41
+                        Icon: =Icon.Reload
+                        OnSelect: =Reset(ComboBox2);Reset(ComboBox3);Reset(ComboBox4);Reset(ComboBox5);Reset(ComboBox2_1);Reset(ComboBox4_1)
+                        Width: =49
+                        X: =40
+                        Y: =2
+                  - ComboBox2_1:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                        ChevronFill: =RGBA(33, 33, 33, 1)
+                        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayFields: =["Results"]
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(212, 212, 212, 1)
+                        InputTextPlaceholder: ="Buscar Marca"
+                        Items: |
+                          =Filter(
+                              ForAll(
+                                  Distinct(
+                                      TempariosLocal,
+                                      Marca.Value
+                                  ),
+                                  {Results: ThisRecord.Value}
+                              ),
+                              Results
+                          )
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        SearchFields: =["Results"]
+                        SelectMultiple: =false
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(105, 121, 126, 1)
+                        Size: =15
+                        Width: =364
+                        X: =145
+                        Y: =92
+                  - Label1_21:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Size: =18
+                        Text: ="Marca"
+                        Width: =112
+                        X: =19
+                        Y: =92
+                  - ComboBox4:
+                      Control: Classic/ComboBox@2.4.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                        ChevronFill: =RGBA(33, 33, 33, 1)
+                        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayFields: =["Results"]
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(212, 212, 212, 1)
+                        IsSearchable: =false
+                        Items: |+
+                          =Sort(
+                              ForAll(
+                                  Distinct(
+                                      Filter(
+                                          TempariosLocal,
+                                          Marca.Value = ComboBox2_1.Selected.Results &&
+                                          'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                                          'Frecuencia (horas)'.Value = ComboBox3.Selected.Results
+                                      ),
+                                       'Tipo de item'.Value
+                                  ),
+                                  {Results: ThisRecord.Value}
+                              ),
+                              Results
+                          )
+
+                        OnChange: |-
+                          =UpdateContext({SelectedTipos: ComboBox4.SelectedItems})
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        SearchFields: =["Results"]
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(105, 121, 126, 1)
+                        Visible: =false
+                        X: =660
+                        Y: =131
+                  - Label3:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(51, 59, 62, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Size: =15
+                        Text: |-
+                          =Sum(
+                              Filter(
+                                  TempariosLocal,
+                                  ComboBox2_1.Selected.Results = Marca.Value &&
+                                  ComboBox2.Selected.Results = 'Modelo (Modelo0)'.Value &&
+                                  'Frecuencia (horas)'.Value in ComboBox3.SelectedItems && 
+                                  ComboBox4.Selected.Results = 'Tipo de item'.Value
+                              ),
+                              'Tiempo (horas)'
+                          )
+
+
+
+                          //Sum('TEMPARIO DE MANTENIMIENTOS';Tiempo)
+                        Underline: =true
+                        Visible: =false
+                        X: =813
+                        Y: =228
+                  - Button3:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(246, 88, 16, 1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        Font: =Font.'Segoe UI'
+                        Height: =52
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                        OnSelect: =Navigate('CPP y Manuales',ScreenTransition.CoverRight )
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        RadiusBottomLeft: =50
+                        RadiusBottomRight: =50
+                        RadiusTopLeft: =50
+                        RadiusTopRight: =50
+                        Size: =13
+                        Text: ="Manuales de Partequipos"
+                        Width: =167
+                        X: =660
+                        Y: =588
+                  - ButtonCanvas5:
+                      Control: Button@0.0.43
+                      Properties:
+                        BasePaletteColor: =RGBA(225, 250, 2, 1)
+                        Height: =37
+                        Icon: ="Warning"
+                        OnSelect: =Launch("https://teams.microsoft.com/l/channel/19%3Af661e47534c545eca9225e7a9db41b3a%40thread.tacv2/Aplicativo%20Mantenimiento%2C%20Manuales%20y%20CPP?groupId=31f2e519-640f-4cee-856f-e4ae247c0e5a")
+                        Text: ="Soporte"
+                        Width: =129
+                        X: =865
+                        Y: =196
+                  - TextCanvas8_1:
+                      Control: Text@0.0.43
+                      Properties:
+                        Height: =33
+                        Size: =10
+                        Text: |
+                          ="Última actualización: " & Text(LookUp('Seguimiento Clientes Equipos Telemetría', ID = Max('Seguimiento Clientes Equipos Telemetría', ID)).Modificado, "[$-es-ES]dd/mm/yyyy")
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =227
+                        X: =821
+                        Y: =103
+                  - TextCanvas46:
+                      Control: Text@0.0.43
+                      Properties:
+                        Height: =98
+                        Size: =10
+                        Text: |-
+                          ="Versión: " & App.StudioVersion & ": Se agregan rutinas de Mttos Preventivos de ejecución unica en toda la vida de la maquina, Ejemplo: Primeras 250 horas y se agrega Marca Hitachi."
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =275
+                        X: =773
+                        Y: =5
+      - MaskConfirm:
+          Control: FluidGrid@2.3.0
+          Properties:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0.85)
+            Height: =768
+            Visible: =ShowConfirmMask
+            Width: =Parent.Width
+          Children:
+            - ConfirmCard:
+                Control: DataCard@1.0.2
+                Properties:
+                  Height: =Parent.Height - 100
+                  Width: =Parent.Width
+                Children:
+                  - Rectangle4:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(228, 233, 237, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledFill: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(255,255,255,1)
+                        FocusedBorderColor: =Rectangle4.BorderColor
+                        FocusedBorderThickness: =4
+                        Height: =400
+                        HoverFill: =RGBA(105, 121, 126, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        Width: =600
+                        X: =383
+                        Y: =100
+                  - Label14:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(0,32,69,1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderColor: =Label14.BorderColor
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =200
+                        HoverBorderColor: =Label14.BorderColor
+                        HoverColor: =Label14.Color
+                        HoverFill: =Label14.Fill
+                        PressedBorderColor: =Label14.BorderColor
+                        PressedColor: =Label14.Color
+                        PressedFill: =Label14.Fill
+                        Size: =24
+                        Text: |-
+                          ="You have unsaved data.
+
+                          Do you still want to proceed?
+                          "
+                        Width: =Parent.Width
+                        Y: =100
+                  - Button5_1:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderColor: =RGBA(144,19,254,1)
+                        BorderThickness: =0
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(144,19,254,1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        FocusedBorderThickness: =0
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                        OnSelect: =Set(ShowConfirmMask,false)
+                        PressedBorderColor: =Button5_1.BorderColor
+                        PressedColor: =Button5_1.Color
+                        PressedFill: =Button5_1.Fill
+                        RadiusBottomLeft: =20
+                        RadiusBottomRight: =20
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        Size: =10.5
+                        Text: ="No"
+                        Width: =116
+                        X: =Rectangle4.X+140
+                        Y: =Label14.Y+Label14.Height+60
+      - DataTable1:
+          Control: DataGrid@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(51, 51, 51, 1)
+            Font: =Font.'Segoe UI'
+            HeadingColor: =RGBA(255, 255, 255, 1)
+            HeadingFill: =RGBA(105, 121, 126, 1)
+            HeadingFont: =Font.'Segoe UI'
+            Height: =41
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
+            Items: |
+              =Filter(
+                  'TEMPARIO DE MANTENIMIENTOS',
+                  Marca.Value = ComboBox2_1.Selected.Results &&
+                  'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                  If(
+                      IsBlank(ComboBox3.SelectedItems),
+                      true,
+                      'Frecuencia (horas)'.Value in SelectedFrequencies
+                  ) &&
+                  If(
+                      IsBlank(ComboBox4.SelectedItems),
+                      true,
+                      'Tipo de item'.Value in SelectedTipos
+                  ) &&
+                  If(
+                      IsBlank(ComboBox5.SelectedItems),
+                      true,
+                      Item.Value in SelectedItemss
+                  ) &&
+                  If(
+                      IsBlank(ComboBox4.Selected.Results) || IsBlank(ComboBox5.Selected.Results),
+                      true,
+                      'Tipo de item'.Value = ComboBox4.Selected.Results &&
+                      Item.Value = ComboBox5.Selected.Results
+                  )
+              )
+            SelectedColor: =RGBA(51, 51, 51, 1)
+            SelectedFill: =RGBA(105, 121, 126, .2)
+            Visible: =false
+            Width: =953
+            X: =388
+            Y: =724
+      - Image4:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =62
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =configuraciones
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =80
+            X: =1208
+      - Button2:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(245, 214, 37, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =49
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Navigate(Inicio_1,ScreenTransition.CoverRight )
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Size: =13
+            Text: ="Video Youtube Entrenamiento uso de aplicación."
+            Width: =263
+            X: =357
+            Y: =663
+      - Button2_1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =49
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Navigate(Inicio_2,ScreenTransition.UnCoverRight )
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Size: =13
+            Text: ="Video Youtube actualización cálculo de Desplazamiento."
+            Width: =270
+            X: =658
+            Y: =663
+      - Button2_3:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(54, 176, 75, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =49
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Launch("https://forms.office.com/Pages/ResponsePage.aspx?id=BSzLJoLIJkmJHSf6ewS1FlyCMCVNea9LkH_jj-ekW7hUNThHQzBJUjU3QkxTVVpaNEkzNVU5NTdWTC4u")
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Size: =13
+            Text: ="Cuestionario"
+            Width: =187
+            X: =1140
+            Y: =396
+      - Button2_4:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(245, 214, 37, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =32
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Launch("https://drive.google.com/file/d/15kLcbzrUOj02E-C3cWEcwdKHTlQPlfx7/view?usp=sharing")
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Size: =13
+            Text: ="Link Google Drive"
+            Width: =187
+            X: =395
+            Y: =616
+      - Button2_5:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 191, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =31
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Launch("https://drive.google.com/file/d/1ZX5J6kVeOyQLpp41QPGGL2RmRSRD2uVB/view?usp=sharing")
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Size: =13
+            Text: ="Link Google Drive"
+            Width: =187
+            X: =699
+            Y: =617

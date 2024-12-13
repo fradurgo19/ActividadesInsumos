@@ -1,0 +1,1860 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Asesores:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      Height: =Max(App.Height, App.DesignHeight)
+      LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+      OnVisible: |+
+        =Set(CurrentStep,"9");
+        UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
+        UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
+        UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        ClearCollect(colOportunidades, 'Seguimiento Clientes Equipos Telemetría');
+        ClearCollect(
+            colItemsPorMes,
+            AddColumns(
+                GroupBy(
+                    'Seguimiento Clientes Equipos Telemetría',
+                    MesCreado,  // Columna por la que se agrupa
+                    Grupo       // Nombre de la columna para almacenar registros agrupados
+                ),
+                Cantidad,    // Nombre de la nueva columna
+                CountRows(Grupo) // Contar los registros en cada grupo
+            )
+        );
+
+        Set(
+            totalItems,
+            CountRows('Seguimiento Clientes Equipos Telemetría')
+        );
+
+
+
+        ClearCollect(
+            colItemsPorAsesor,
+            AddColumns(
+                GroupBy(
+                    'Seguimiento Clientes Equipos Telemetría',
+                    Correo,  // Columna por la que se agrupa
+                    Grupo       // Nombre de la columna para almacenar registros agrupados
+                ),
+                Cantidad,    // Nombre de la nueva columna
+                CountRows(Grupo) // Contar los registros en cada grupo
+            )
+        );
+
+        ClearCollect(
+            colOportunAsesorCorreo,
+            AddColumns(
+                GroupBy(
+                    'Seguimiento Clientes Equipos Telemetría',
+                    Correo,  // Agrupando por correo
+                    MesCreado, // Agrupando por Mes
+                    OportunidadesPorAsesorCorreo
+                ),
+                Asesor,
+                CountIf(OportunidadesPorAsesorCorreo, 'ASESOR 2'.Value = ThisRecord.'ASESOR 2'.Value),
+                Ganadas,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Ganada"),
+                Perdidas,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Perdida"),
+                Seguimientos,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Seguimiento"),
+                Cotizaciones,
+                CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Cotización")
+            )
+        )
+
+
+
+
+
+
+      Width: =Max(App.Width, App.DesignWidth)
+    Children:
+      - Menu_9:
+          Control: FluidGrid@2.3.0
+          Properties:
+            BorderThickness: =0
+            Height: =768
+            Width: =285
+          Children:
+            - MenuCard_9:
+                Control: DataCard@1.0.2
+                Properties:
+                  Height: |
+                    =Parent.Height-100
+                  Width: =295
+                Children:
+                  - logo_10:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderColor: =logo_10.BorderColor
+                        FocusedBorderThickness: =4
+                        Height: =40
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =Logo
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =155
+                        X: =50
+                        Y: =42
+                  - MenuList_9:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Default: =SelectedMenu
+                        DelayItemLoading: =false
+                        Height: =657-100
+                        Items: =MenuData
+                        LoadingSpinner: =LoadingSpinner.None
+                        OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(NPS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None);"10",Navigate('Proyector Mttos',ScreenTransition.None)))
+                        ShowScrollbar: =false
+                        TemplatePadding: =11
+                        TemplateSize: =40
+                        Width: =247
+                        X: =39
+                        Y: =logo_10.Y + logo_10.Height +32
+                      Children:
+                        - Bar_9:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(101, 128, 187, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              DisabledFill: =RGBA(166, 166, 166, 1)
+                              Fill: =RGBA(144,19,254,1)
+                              FocusedBorderColor: =Bar_9.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =40
+                              HoverFill: =RGBA(105, 121, 126, 1)
+                              OnSelect: =Select(Parent)
+                              PressedFill: =RGBA(105, 121, 126, 1)
+                              Visible: =ThisItem.Step=CurrentStep
+                              Width: =5
+                              X: =211
+                        - Menu8_6:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu8_6.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Warning
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu8"
+                              Width: |
+                                =19
+                              Y: =9
+                        - MenuName_9:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(0,32,69,1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(166, 166, 166, 1)
+                              FocusedBorderColor: =MenuName_9.BorderColor
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =If(ThisItem.Step=CurrentStep,FontWeight.Bold,FontWeight.Normal)
+                              HoverBorderColor: =MenuName_9.BorderColor
+                              HoverColor: =MenuName_9.Color
+                              HoverFill: =MenuName_9.Fill
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              PressedBorderColor: =MenuName_9.BorderColor
+                              PressedColor: =MenuName_9.Color
+                              PressedFill: =MenuName_9.Fill
+                              Size: =12
+                              Text: =ThisItem.Name
+                              Width: =193
+                              X: =31
+                        - Menu5_9:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu5_9.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.DockCheckProperties
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu5"
+                              Width: =19
+                              Y: =10
+                        - Menu1_9:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu1_9.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.AddToCalendar
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu1"
+                              Width: =19
+                              Y: =10
+                        - Menu2_9:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu2_9.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.DetailList
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu2"
+                              Width: =19
+                              Y: =10
+                        - Menu3_9:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu3_9.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.AddDocument
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu3"
+                              Width: =19
+                              X: =
+                              Y: =10
+                        - Menu4_9:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu4_9.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.PaperClip
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu4"
+                              Width: =19
+                              X: =
+                              Y: =10
+                        - Menu9_9:
+                            Control: Icon@0.0.7
+                            Properties:
+                              Height: =23
+                              Icon: ="People"
+                              IconColor: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              Visible: |
+                                =ThisItem.Icon="Menu9"
+                              Width: =19
+                              Y: =8
+                        - Menu6_15:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu6_15.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Mail
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu6"
+                              Width: |
+                                =19
+                              Y: =10
+                        - Menu7_6:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu7_6.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Ribbon
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu7"
+                              Width: |
+                                =19
+                              Y: =10
+                        - Menu10_8:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu10_8.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Printing3D
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu10"
+                              Width: |
+                                =19
+                              Y: =10
+      - SendEmailCanvas_4:
+          Control: FluidGrid@2.3.0
+          Properties:
+            BorderThickness: =0
+            Fill: =RGBA(249, 249, 249, 1)
+            Height: =768
+            Width: =1071
+            X: =295
+          Children:
+            - SendEmailCard_4:
+                Control: DataCard@1.0.2
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =Parent.Height
+                  Width: =1071
+                  X: =
+                  Y: =
+                Children:
+                  - Rectangle3_8:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledFill: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(228,233,237,1)
+                        FocusedBorderColor: =Rectangle3_8.BorderColor
+                        FocusedBorderThickness: =4
+                        Height: =2
+                        HoverFill: =RGBA(105, 121, 126, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        Width: =430
+                        X: =
+                        Y: =
+                  - icon2_4:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(144,19,254,1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderColor: =icon2_4.BorderColor
+                        FocusedBorderThickness: =4
+                        Height: =15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Check
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =
+                        Width: =15
+                        X: =
+                        Y: =
+                  - Rectangle3_9:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledFill: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(228,233,237,1)
+                        FocusedBorderColor: =Rectangle3_9.BorderColor
+                        FocusedBorderThickness: =4
+                        Height: =2
+                        HoverFill: =RGBA(105, 121, 126, 1)
+                        PressedFill: =RGBA(105, 121, 126, 1)
+                        Width: =410
+                        X: =Rectangle3_8.X+Rectangle3_8.Width+74
+                        Y: =
+                  - Container37:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        DropShadow: =DropShadow.Light
+                        Height: =758
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1071
+                        Y: =2
+                      Children:
+                        - Container39:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =169
+                              LayoutAlignItems: =LayoutAlignItems.Stretch
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =248
+                              X: =13
+                              Y: =264
+                            Children:
+                              - Gallery4:
+                                  Control: Gallery@2.15.0
+                                  Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Height: =Parent.Height
+                                    Items: |
+                                      =Sort(
+                                          Filter(
+                                              colItemsPorMes,
+                                              (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value))
+                                          ),
+                                          Cantidad, // Field representing the creation date
+                                          SortOrder.Descending
+                                      )
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =140
+                                    ShowNavigation: =true
+                                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                                    TemplateSize: =35
+                                    Width: =Parent.Width
+                                    X: =40
+                                    Y: =40
+                                  Children:
+                                    - Separator3:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 0)
+                                          Fill: =RGBA(255, 255, 255, 1)
+                                          Height: =8
+                                          OnSelect: =Select(Parent)
+                                          Width: =Parent.TemplateWidth
+                                          Y: =Parent.TemplateHeight - Self.Height
+                                    - Container41:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: AutoLayout
+                                        Properties:
+                                          DropShadow: =DropShadow.Light
+                                          Height: =35
+                                          LayoutAlignItems: =LayoutAlignItems.Stretch
+                                          LayoutDirection: =LayoutDirection.Horizontal
+                                          LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =248
+                                        Children:
+                                          - TextCanvas30:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =20
+                                                Size: =12
+                                                Text: |+
+                                                  =ThisItem.MesCreado
+
+                                          - TextCanvas12_1:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Start
+                                                Size: =12
+                                                Text: =ThisItem.Cantidad
+                                                Width: =50
+                        - Container40:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =319
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =777
+                              X: =277
+                              Y: =155
+                            Children:
+                              - Gallery8:
+                                  Control: Gallery@2.15.0
+                                  Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                                  Properties:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Height: =100
+                                    Items: |
+                                      =Sort(
+                                          Filter(
+                                              'Seguimiento Clientes Equipos Telemetría',
+                                              (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || IsBlank(TextInputCanvas2.Value)) &&
+                                              (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
+                                              ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
+                                              (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
+                                              (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&
+                                              (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) &&
+                                              (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) 
+                                          ),
+                                          MesCreado, // Field representing the creation date
+                                          SortOrder.Descending
+                                      )
+                                    LayoutMinHeight: =0
+                                    ShowNavigation: =true
+                                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                                    TemplateSize: =60
+                                    Transition: =Transition.Push
+                                    X: =40
+                                    Y: =40
+                                  Children:
+                                    - Separator2:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 0)
+                                          Fill: =RGBA(255, 255, 255, 1)
+                                          Height: =3
+                                          OnSelect: =Select(Parent)
+                                          Width: =Parent.TemplateWidth
+                                          Y: =Parent.TemplateHeight - Self.Height
+                                    - Container43:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: AutoLayout
+                                        Properties:
+                                          DropShadow: =DropShadow.Light
+                                          Height: =57
+                                          LayoutDirection: =LayoutDirection.Horizontal
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =777
+                                        Children:
+                                          - TextCanvas33_8:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =10
+                                                Text: =ThisItem.ID
+                                                Width: =25
+                                          - TextCanvas31:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =11
+                                                Text: =ThisItem.'Nombre del cliente'
+                                                Width: =120
+                                          - TextCanvas33_6:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =10
+                                                Text: =ThisItem.'Serie.'
+                                                Width: =40
+                                          - TextCanvas33:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =10
+                                                Text: =ThisItem.Marca
+                                                Width: =50
+                                          - TextCanvas32:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =10
+                                                Text: =ThisItem.Modelo
+                                                Width: =50
+                                          - TextCanvas34_2:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =10
+                                                Text: =ThisItem.Horometro
+                                                Width: =50
+                                          - TextCanvas33_4:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =10
+                                                Text: =ThisItem.'Tipo Mtto'
+                                                Width: =50
+                                          - TextCanvas34:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =11
+                                                Text: =ThisItem.'Fecha Primer Mtto'
+                                                Width: =60
+                                          - TextCanvas34_1:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =11
+                                                Text: =ThisItem.'ASESOR 2'.Value
+                                                Width: =60
+                                          - TextCanvas33_5:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =11
+                                                Text: =ThisItem.'Tipo Oportunidad'.Value
+                                                Width: =40
+                                          - TextCanvas33_1:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =11
+                                                Text: =ThisItem.Estado.Value
+                                                Width: =55
+                                          - TextCanvas33_2:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =11
+                                                Text: =ThisItem.Estado2.Value
+                                                Width: =50
+                                          - TextCanvas33_3:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =11
+                                                Text: =ThisItem.Detalle.Value
+                                                Width: =50
+                                          - TextCanvas33_7:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Height: =Parent.Height
+                                                Size: =11
+                                                Text: =ThisItem.Detalle.Value
+                                                Width: =70
+                        - Container42:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Fill: =RGBA(71, 158, 245, 1)
+                              Height: =45
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =779
+                              X: =277
+                              Y: =108
+                            Children:
+                              - Container44:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Fill: =RGBA(235, 33, 33, 0)
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =778
+                                  Children:
+                                    - TextCanvas35_13:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="ID"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =25
+                                    - TextCanvas35:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Cliente"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =120
+                                    - TextCanvas35_1:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Serie"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =40
+                                    - TextCanvas35_2:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Marca"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =50
+                                    - TextCanvas35_3:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Modelo"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =50
+                                    - TextCanvas35_4:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Horom"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =50
+                                    - TextCanvas35_5:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Tipo Mtto"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =50
+                                    - TextCanvas35_6:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Fecha Mtto"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =60
+                                    - TextCanvas35_7:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Asesor"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =60
+                                    - TextCanvas35_8:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Tipo"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =40
+                                    - TextCanvas35_9:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Estado"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =55
+                                    - TextCanvas35_10:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Tramite"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =50
+                                    - TextCanvas35_11:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Detalle"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =50
+                                    - TextCanvas35_12:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Observación"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =70
+                        - Container45:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Fill: =RGBA(166, 215, 153, 1)
+                              Height: =45
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =244
+                              X: =13
+                              Y: =219
+                            Children:
+                              - Container46:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =36
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =236
+                                    Y: =6
+                                  Children:
+                                    - TextCanvas36:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          Align: ='TextCanvas.Align'.Center
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =5
+                                          Size: =12
+                                          Text: ="Seleccionar Mes"
+                                          Width: =150
+                                    - TextCanvas37:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          Align: ='TextCanvas.Align'.End
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =5
+                                          Size: =12
+                                          Text: ="Cantidad"
+                                          Width: =70
+                        - Container47:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =36
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =777
+                              X: =277
+                              Y: =71
+                            Children:
+                              - Container48:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =36
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    LayoutJustifyContent: =LayoutJustifyContent.End
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =775
+                                  Children:
+                                    - TextInputCanvas2:
+                                        Control: TextInput@0.0.49
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.Stretch
+                                          Placeholder: ="Buscar Cliente o Observa"
+                                          Width: =150
+                                    - ComboboxCanvas5:
+                                        Control: ComboBox@0.0.48
+                                        Properties:
+                                          InputTextPlaceholder: ="Buscar Estado"
+                                          Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
+                                          Width: =130
+                                    - ComboboxCanvas5_1:
+                                        Control: ComboBox@0.0.48
+                                        Properties:
+                                          InputTextPlaceholder: ="Buscar Asesor"
+                                          Items: |
+                                            =["dbeltran@partequipos.com", "gbuenahora@partequipos.com", "sarenas@partequipos.com", "afuentes@partequipos.com", 
+                                            "drodriguez@partequipos.com", "floaiza@partequipos.com", "acuervo@partequipos.com", "rbermudez@partequipos.com", 
+                                            "cleal@partequipos.com", "kosorio@partequipos.com", "dacosta@partequipos.com", "otobon@partequipos.com", 
+                                            "bbernal@partequipos.com", "hvalencia@partequipos.com", "sarias@partequipos.com", "sballestas@partequipos.com", 
+                                            "lorozco@partequipos.com", "Info@partequipos.com", "kjaimes@partequipos.com", "apenagos@partequipos.com", 
+                                            "ebustos@partequipos.com", "jmarin@partequipos.com", "Csanmiguel@partequipos.com", "asantana@partequipos.com", 
+                                            "control.interno@partequipos.com", "marevalo@partequipos.com", "planeador.serviciosbg@partequipos.com", 
+                                            "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
+                                            "fvasquez@partequipos.com", "dcubides@partequipos.com"]
+                                          Width: =140
+                                    - ComboboxCanvas5_3:
+                                        Control: ComboBox@0.0.48
+                                        Properties:
+                                          InputTextPlaceholder: ="Buscar Mes"
+                                          Items: =Distinct(colOportunidades,MesCreado)
+                                          Width: =120
+                                    - ComboboxCanvas5_7:
+                                        Control: ComboBox@0.0.48
+                                        Properties:
+                                          InputTextPlaceholder: ="Buscar Año"
+                                          Items: =Distinct(colOportunidades,Año)
+                                          Width: =120
+                                          X: =40
+                                          Y: =4
+                                    - ButtonCanvas11:
+                                        Control: Button@0.0.43
+                                        Properties:
+                                          BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                          OnSelect: |
+                                            =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Reset(ComboboxCanvas5_3);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery4);Reset(Gallery8);Reset(ComboboxCanvas5_7);Reset(Gallery9_2)
+                                          Text: ="Reset"
+                        - Label2_10:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(51, 51, 51, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(166, 166, 166, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =41
+                              Size: =20
+                              Text: ="Oportunidades"
+                              Width: =204
+                              X: =13
+                              Y: =66
+                        - Container57:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =246
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =777
+                              X: =277
+                              Y: =509
+                            Children:
+                              - Container58:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =246
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =777
+                                  Children:
+                                    - Form1:
+                                        Control: Form@2.4.2
+                                        Layout: Vertical
+                                        Properties:
+                                          BorderColor: =RGBA(166, 166, 166, 1)
+                                          DataSource: ='Seguimiento Clientes Equipos Telemetría'
+                                          Height: =Parent.Height
+                                          Item: =Gallery8.Selected
+                                          LayoutMinHeight: =0
+                                          LayoutMinWidth: =0
+                                          Width: =Parent.Width
+                                          X: =588
+                                          Y: =471
+                                        Children:
+                                          - ASESOR 2_DataCard1:
+                                              Control: TypedDataCard@1.0.6
+                                              Variant: ComboBoxEdit
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="field_29"
+                                                Default: =ThisItem.'ASESOR 2'
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,'ASESOR 2')
+                                                Required: =false
+                                                Update: =DataCardValue21.Selected
+                                                Width: =259
+                                                Y: =1
+                                              Children:
+                                                - DataCardKey21:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: ="Asesor"
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue21:
+                                                    Control: ComboBox@0.0.48
+                                                    Properties:
+                                                      AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                                      DefaultSelectedItems: =[Parent.Default]
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      InputTextPlaceholder: ="Buscar Asesor"
+                                                      Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].'ASESOR 2')
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey21.Y + DataCardKey21.Height + 4
+                                                - ErrorMessage19:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue21.Y + DataCardValue21.Height
+                                                - StarVisible19:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =20
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey21.Y
+                                          - Estado2_DataCard1:
+                                              Control: TypedDataCard@1.0.6
+                                              Variant: ComboBoxEdit
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="Estado2"
+                                                Default: =ThisItem.Estado2
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Estado2)
+                                                Required: =false
+                                                Update: =DataCardValue17.Selected
+                                                Width: =259
+                                                Y: =0
+                                              Children:
+                                                - DataCardKey17:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: ="Tramite"
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue17:
+                                                    Control: ComboBox@0.0.48
+                                                    Properties:
+                                                      AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                                      DefaultSelectedItems: =[Parent.Default]
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      InputTextPlaceholder: ="Buscar Tramite"
+                                                      Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Estado2)
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey17.Y + DataCardKey17.Height + 4
+                                                - ErrorMessage17:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue17.Y + DataCardValue17.Height
+                                                - StarVisible17:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =20
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey17.Y
+                                          - Estado_DataCard1:
+                                              Control: TypedDataCard@1.0.6
+                                              Variant: ComboBoxEdit
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="Estado"
+                                                Default: =ThisItem.Estado
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Estado)
+                                                Height: =60
+                                                Required: =false
+                                                Update: =DataCardValue14.Selected
+                                                Width: =259
+                                                X: =1
+                                                Y: =0
+                                              Children:
+                                                - DataCardKey14:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: =Parent.DisplayName
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue14:
+                                                    Control: ComboBox@0.0.48
+                                                    Properties:
+                                                      AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                                      DefaultSelectedItems: =[Parent.Default]
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      InputTextPlaceholder: ="Buscar Estado"
+                                                      Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Estado)
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey14.Y + DataCardKey14.Height + 4
+                                                - ErrorMessage14:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue14.Y + DataCardValue14.Height
+                                                - StarVisible14:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =20
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey14.Y
+                                          - Detalle_DataCard1:
+                                              Control: TypedDataCard@1.0.6
+                                              Variant: ComboBoxEdit
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="Detalle"
+                                                Default: =ThisItem.Detalle
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Detalle)
+                                                Required: =false
+                                                Update: =DataCardValue15.Selected
+                                                Width: =259
+                                                X: =2
+                                                Y: =0
+                                              Children:
+                                                - DataCardKey15:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: =Parent.DisplayName
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue15:
+                                                    Control: ComboBox@0.0.48
+                                                    Properties:
+                                                      AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                                      DefaultSelectedItems: =[Parent.Default]
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      InputTextPlaceholder: ="Busccar Detalle"
+                                                      Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].Detalle)
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey15.Y + DataCardKey15.Height + 4
+                                                - ErrorMessage15:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue15.Y + DataCardValue15.Height
+                                                - StarVisible15:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =20
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey15.Y
+                                          - Horometro_DataCard1:
+                                              Control: TypedDataCard@1.0.6
+                                              Variant: NumberEdit
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="field_6"
+                                                Default: =ThisItem.Horometro
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Horometro)
+                                                Height: =60
+                                                Required: =false
+                                                Update: =Value(DataCardValue4.Value)
+                                                Width: =259
+                                                X: =1
+                                                Y: =1
+                                              Children:
+                                                - DataCardKey4:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: =Parent.DisplayName
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue4:
+                                                    Control: TextInput@0.0.49
+                                                    Properties:
+                                                      AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Value: =Parent.Default
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                                                - ErrorMessage4:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue4.Y + DataCardValue4.Height
+                                                - StarVisible4:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =30
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey4.Y
+                                          - Tipo Oportunidad_DataCard1:
+                                              Control: TypedDataCard@1.0.6
+                                              Variant: ComboBoxEdit
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="TipoCliente"
+                                                Default: =ThisItem.'Tipo Oportunidad'
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,'Tipo Oportunidad')
+                                                Height: =60
+                                                Required: =false
+                                                Update: =DataCardValue12.Selected
+                                                Width: =259
+                                                X: =2
+                                                Y: =1
+                                              Children:
+                                                - DataCardKey12:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: =Parent.DisplayName
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue12:
+                                                    Control: ComboBox@0.0.48
+                                                    Properties:
+                                                      AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                                      DefaultSelectedItems: =[Parent.Default]
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      FontSize: =14
+                                                      InputTextPlaceholder: ="Tipo Oportunidad"
+                                                      Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].'Tipo Oportunidad')
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey12.Y + DataCardKey12.Height + 4
+                                                - ErrorMessage12:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue12.Y + DataCardValue12.Height
+                                                - StarVisible12:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =20
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey12.Y
+                                          - Observaciones_DataCard1:
+                                              Control: TypedDataCard@1.0.6
+                                              Variant: TextualEdit
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="Observaciones"
+                                                Default: =ThisItem.Observaciones
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
+                                                Height: =61
+                                                MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
+                                                Required: =false
+                                                Update: =DataCardValue13.Value
+                                                Width: =777
+                                                Y: =2
+                                              Children:
+                                                - DataCardKey13:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: =Parent.DisplayName
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue13:
+                                                    Control: TextInput@0.0.49
+                                                    Properties:
+                                                      AccessibleLabel: =Parent.DisplayName
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      FontSize: =14
+                                                      Height: =62
+                                                      Mode: ='TextInputCanvas.Mode'.Multiline
+                                                      Placeholder: ="Escriba aqui las observaciones"
+                                                      Required: =Parent.Required
+                                                      TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+                                                      Type: ='TextInputCanvas.Type'.Text
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Value: =Parent.Default
+                                                      Width: =729
+                                                      X: =24
+                                                      Y: =DataCardKey13.Y + DataCardKey13.Height + 4
+                        - Container59:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =66
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =1053
+                              X: =3
+                            Children:
+                              - Container60:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =66
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =1047
+                                  Children:
+                                    - EncabezadoContenedor_5:
+                                        Control: CanvasComponent
+                                        ComponentName: EncabezadoContenedor
+                                        Properties:
+                                          Encabezado: =SampleImage
+                                          Encabezado1: =Logo
+                                          Height: =65
+                                          Width: =1007
+                        - ButtonCanvas1_4:
+                            Control: Button@0.0.43
+                            Properties:
+                              BasePaletteColor: =RGBA(156, 220, 79, 1)
+                              Height: =39
+                              OnSelect: =Navigate(Jefes,ScreenTransition.UnCoverRight)
+                              Text: ="Jefes"
+                              Visible: |
+                                =User().Email = "analista.mantenimiento@partequipos.com" || 
+                                User().Email = "jestrada@partequipos.com" || 
+                                User().Email = "cceballos@partequipos.com" ||
+                                User().Email = "centrodemonitoreo@partequipos.com"
+                              Width: =80
+                              X: =643
+                              Y: =13
+                        - ButtonCanvas13:
+                            Control: Button@0.0.43
+                            Properties:
+                              BasePaletteColor: =RGBA(156, 220, 79, 1)
+                              Height: =35
+                              Icon: ="Send"
+                              OnSelect: |-
+                                =SubmitForm(Form1);
+                                Notify("Actualización Enviada", NotificationType.Success, 3000)
+                              Text: ="Actualizar"
+                              Width: =150
+                              X: =904
+                              Y: =474
+                        - ButtonCanvas15:
+                            Control: Button@0.0.43
+                            Properties:
+                              OnSelect: =UpdateContext({pop1:false,pop2:false,pop3:false,pop4:true})
+                              Text: ="Gráfica"
+                              X: =382
+                              Y: =16
+                        - Container52_2:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =298
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =248
+                              X: =13
+                              Y: =445
+                            Children:
+                              - Container53_2:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =281
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =248
+                                    X: =8
+                                    Y: =6
+                                  Children:
+                                    - Gallery9_2:
+                                        Control: Gallery@2.15.0
+                                        Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                                        Properties:
+                                          BorderColor: =RGBA(166, 166, 166, 1)
+                                          Height: =Parent.Height
+                                          Items: "=Sort(\n    Filter(\n        colOportunAsesorCorreo,\n        (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&\n        (Correo = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&\n        (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) \n\n        \n    ),\n    MesCreado, // Field representing the creation date\n    SortOrder.Descending\n)"
+                                          LayoutMinHeight: =200
+                                          LayoutMinWidth: =120
+                                          OnSelect: |
+                                            =UpdateContext({
+                                                SelectedCorreo: ThisItem.Correo,
+                                                SelectedMes: ThisItem.MesCreado
+                                            })
+                                          ShowNavigation: =true
+                                          TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                                          TemplateSize: =32
+                                          Transition: =Transition.Push
+                                          Width: =Parent.Width
+                                          X: =40
+                                          Y: =40
+                                        Children:
+                                          - Separator6_2:
+                                              Control: Rectangle@2.3.0
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 0)
+                                                Fill: =RGBA(255, 255, 255, 1)
+                                                Height: =8
+                                                OnSelect: =Select(Parent)
+                                                Width: =Parent.TemplateWidth
+                                                Y: =Parent.TemplateHeight - Self.Height
+                                          - Container54_2:
+                                              Control: GroupContainer@1.3.0
+                                              Variant: AutoLayout
+                                              Properties:
+                                                DropShadow: =DropShadow.Light
+                                                Height: =32
+                                                LayoutDirection: =LayoutDirection.Horizontal
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =250
+                                              Children:
+                                                - TextCanvas44_8:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Start
+                                                      AlignInContainer: =AlignInContainer.Stretch
+                                                      LayoutMinWidth: =30
+                                                      Size: =11
+                                                      Text: =ThisItem.MesCreado
+                                                      VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =60
+                                                - TextCanvas44_9:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      AlignInContainer: =AlignInContainer.Stretch
+                                                      LayoutMinWidth: =150
+                                                      Size: =11
+                                                      Text: =ThisItem.Correo
+                                                      VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =140
+                                                - TextCanvas44_10:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      AlignInContainer: =AlignInContainer.Stretch
+                                                      LayoutMinWidth: =30
+                                                      Size: =13
+                                                      Text: =ThisItem.Asesor
+                                                      VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =50
+                        - Container90:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Light
+                              Height: =131
+                              RadiusBottomLeft: =4
+                              RadiusBottomRight: =4
+                              RadiusTopLeft: =4
+                              RadiusTopRight: =4
+                              Width: =241
+                              X: =16
+                              Y: =77
+                            Children:
+                              - Container39_1:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =91
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =232
+                                    Y: =40
+                                  Children:
+                                    - Gallery4_1:
+                                        Control: Gallery@2.15.0
+                                        Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          BorderColor: =RGBA(166, 166, 166, 1)
+                                          Height: =Parent.Height
+                                          Items: |+
+                                            =Sort(
+                                                Filter(
+                                                    colItemsPorAsesor,
+                                                    (Correo = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value))
+
+                                                ),
+                                                Cantidad, // Field representing the creation date
+                                                SortOrder.Descending
+                                            )
+
+                                          LayoutMinHeight: =0
+                                          LayoutMinWidth: =150
+                                          ShowNavigation: =true
+                                          TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                                          TemplateSize: =30
+                                          Width: =Parent.Width
+                                          X: =40
+                                          Y: =40
+                                        Children:
+                                          - Separator3_1:
+                                              Control: Rectangle@2.3.0
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 0)
+                                                Fill: =RGBA(255, 255, 255, 1)
+                                                Height: =8
+                                                OnSelect: =Select(Parent)
+                                                Width: =Parent.TemplateWidth
+                                                Y: =Parent.TemplateHeight - Self.Height
+                                          - Container41_1:
+                                              Control: GroupContainer@1.3.0
+                                              Variant: AutoLayout
+                                              Properties:
+                                                DropShadow: =DropShadow.Light
+                                                Height: =30
+                                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                                LayoutDirection: =LayoutDirection.Horizontal
+                                                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =232
+                                              Children:
+                                                - TextCanvas30_1:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      FontColor: =RGBA(0, 0, 0, 1)
+                                                      Size: =12
+                                                      Text: |+
+                                                        =ThisItem.Correo
+
+                                                      Width: =180
+                                                - TextCanvas12_2:
+                                                    Control: Text@0.0.43
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Start
+                                                      FontColor: =RGBA(0, 0, 0, 1)
+                                                      Size: =12
+                                                      Text: =ThisItem.Cantidad
+                                                      Width: =40
+                              - Container45_1:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: ManualLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.Light
+                                    Fill: =RGBA(166, 215, 153, 1)
+                                    Height: =40
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =232
+                                  Children:
+                                    - Container46_1:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: AutoLayout
+                                        Properties:
+                                          DropShadow: =DropShadow.Light
+                                          Height: =34
+                                          LayoutDirection: =LayoutDirection.Horizontal
+                                          RadiusBottomLeft: =4
+                                          RadiusBottomRight: =4
+                                          RadiusTopLeft: =4
+                                          RadiusTopRight: =4
+                                          Width: =232
+                                          Y: =6
+                                        Children:
+                                          - TextCanvas36_1:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                FontColor: =RGBA(255, 255, 255, 1)
+                                                Height: =Parent.Height
+                                                PaddingLeft: =5
+                                                Size: =12
+                                                Text: ="Seleccione Asesor"
+                                                Width: =140
+                                          - TextCanvas37_1:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.End
+                                                FontColor: =RGBA(255, 255, 255, 1)
+                                                Height: =Parent.Height
+                                                PaddingLeft: =5
+                                                Size: =12
+                                                Text: ="Cantidad"
+                                                Width: =70
+      - Rectangle2:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =639
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =pop4
+            Width: =785
+            X: =564
+            Y: =112
+      - ColumnChart3:
+          Control: BarChart@2.3.0
+          Group: CompositeColumnChart2
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            GridStyle: =GridStyle.All
+            Height: =596
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =[RGBA(0, 0, 255, 1),RGBA(255,0,0,1), RGBA(255,0,0,1), RGBA(246,199,144,1), RGBA(0,0,255,1), RGBA(255,255,255,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: |-
+              =Filter(
+                  colOportunAsesorCorreo,
+                  (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
+                  (IsBlank(ComboboxCanvas5_1.Selected) || Correo = ComboboxCanvas5_1.Selected.Value)
+              )
+            Items.Labels: =Correo
+            Items.Series1: =Asesor
+            Items.Series2: =Seguimientos
+            Items.Series3: =Ganadas
+            Items.Series4: =Perdidas
+            Items.Series5: =Seguimientos
+            Items.Series6: =Seguimientos
+            Items.Series7: =Seguimientos
+            Items.Series8: =Seguimientos
+            Items.Series9: =Seguimientos
+            NumberOfSeries: =2
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =15
+            Visible: =pop4
+            Width: =785
+            X: =564
+            Y: =112
+      - Icon5:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(255, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =37
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =UpdateContext({pop1:false,pop2:false,pop3:false,pop4:false})
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =pop4
+            Width: =49
+            X: =1300
+            Y: =112
+      - Legend2:
+          Control: Legend@2.1.0
+          Group: CompositeColumnChart2
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(220, 220, 220, 1)
+            Font: =Font.'Segoe UI'
+            Height: =29
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =ColumnChart3.ItemColorSet
+            Items: =ColumnChart3.SeriesLabels
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Visible: =pop4
+            Width: =628
+            X: =575
+            Y: =721
