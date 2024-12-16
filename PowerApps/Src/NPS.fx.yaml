@@ -1172,6 +1172,7 @@
                             ZIndex: =12
 
                         TextCanvas9_15 As Texto:
+                            Align: ='TextCanvas.Align'.End
                             AlignInContainer: =AlignInContainer.Stretch
                             BorderColor: =RGBA(214, 221, 224, 1)
                             BorderStyle: =BorderStyle.Solid
@@ -1183,6 +1184,7 @@
                             PaddingLeft: =10
                             Size: =11
                             Text: =ThisItem.'NPS ¿Qué tan probable es que recomiende el servicio técnico de Partequipos con un compañero conocido, familiar o amigo? '
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
                             Width: =50
                             X: =0
                             Y: =0
@@ -1232,6 +1234,22 @@
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
+
+                    TextCanvas9_16 As Texto:
+                        BorderColor: =RGBA(214, 221, 224, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(166, 215, 153, 1)
+                        FontColor: =RGBA(9, 33, 98, 1)
+                        Height: =32
+                        PaddingLeft: =10
+                        Size: =9
+                        Text: =ThisItem.Encuestado
+                        Width: =50
+                        X: =820
+                        Y: =0
+                        ZIndex: =7
 
             Container20 As groupContainer.manualLayoutContainer:
                 BorderThickness: =1
