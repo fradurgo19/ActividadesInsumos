@@ -276,7 +276,14 @@ Screens:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="NPS"
-                                          Width: =100
+                                          Width: =50
+                                    - TextCanvas7_41:
+                                        Control: Text@0.0.43
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Encuesta"
+                                          Width: =80
                                     - TextCanvas7_40:
                                         Control: Text@0.0.43
                                         Properties:
@@ -318,7 +325,7 @@ Screens:
                                       =Sort(
                                           Filter(
                                               'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                              (TextInputCanvas5_1.Value in Diligencia || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                              (TextInputCanvas5_1.Value in Diligencia || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID ||  TextInputCanvas5_1.Value in Encuestado || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
                                           ),
                                           Modificado,
                                           SortOrder.Descending
@@ -422,7 +429,21 @@ Screens:
                                                 PaddingLeft: =10
                                                 Size: =10
                                                 Text: =ThisItem.TipoCliente
-                                                Width: =100
+                                                Width: =60
+                                          - TextCanvas9_32:
+                                              Control: Text@0.0.43
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.Encuestado
+                                                Width: =60
                                           - TextInputCanvas8:
                                               Control: TextInput@0.0.49
                                               Properties:
