@@ -757,7 +757,7 @@ Screens:
                                 =Sort(
                                     Filter(
                                         'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                        (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || IsBlank(TextInputCanvas5.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
+                                        (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in Encuestado || IsBlank(TextInputCanvas5.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                                     ),
                                     Modificado,
                                     SortOrder.Descending
