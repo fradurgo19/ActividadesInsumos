@@ -5,9 +5,9 @@ Inicio As screen:
             ActividadIniciodeApp, 
             Defaults(ActividadIniciodeApp),
             {
-                UserID: User().Email, 
-                Timestamp: Now(),     
-                AppName: "Mttos-CPP-Manuales-Proyector-Encuestas" 
+                'UserID ': User().Email, 
+                'Timestamp ': DateAdd(Now(), -5, TimeUnit.Hours),     
+                'AppName ': "Mttos-CPP-Manuales-Proyector-Encuestas" 
             }
         )
 
