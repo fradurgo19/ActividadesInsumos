@@ -2,12 +2,12 @@ Inicio As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |
         =Patch(
-            ActividadIniciodeApp, // Nombre de tu tabla
+            ActividadIniciodeApp, 
             Defaults(ActividadIniciodeApp),
             {
-                UserID: User().Email, // Captura el correo del usuario actual
-                Timestamp: Now(),     // Captura la fecha y hora actuales
-                AppName: "Mttos-CPP-Manuales-Proyector-Encuestas" // Nombre de tu app (opcional)
+                UserID: User().Email, 
+                Timestamp: Now(),     
+                AppName: "Mttos-CPP-Manuales-Proyector-Encuestas" 
             }
         )
 
