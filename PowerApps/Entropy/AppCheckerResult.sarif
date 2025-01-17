@@ -1863,10 +1863,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 13,
+                  "charLength": 11,
                   "charOffset": 981,
                   "snippet": {
-                    "text": "Observaciones"
+                    "text": "TipoCliente"
                   }
                 }
               },
@@ -1879,7 +1879,7 @@
           ],
           "message": {
             "arguments": [
-              "Observaciones"
+              "TipoCliente"
             ],
             "id": "issue"
           },
@@ -1904,7 +1904,87 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 995,
+                  "charOffset": 993,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Encuestas",
+                "type": "Encuestas"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Encuestas.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Encuestas.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 1115,
+                  "snippet": {
+                    "text": "TipoCliente"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Encuestas",
+                "type": "Encuestas"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "TipoCliente"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Encuestas.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Encuestas.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 1127,
                   "snippet": {
                     "text": "="
                   }

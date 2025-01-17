@@ -12,7 +12,8 @@ Encuestas As screen:
                 LlamarMasTarde: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR MAS TARDE"  )),
                 LlamarDespues: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR DESPUES"  )),
                 NumeroErrado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "NUMERO ERRADO"  )),
-                Enblanco: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "  "   ))
+                Promotor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Promotor"   )),
+                Detractor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Dectrator"   ))
             }
         )
         
@@ -1028,13 +1029,15 @@ Encuestas As screen:
                 ButtonCanvas18_1 As Botón:
                     BasePaletteColor: =RGBA(141, 229, 250, 1)
                     DisplayMode: =DisplayMode.Edit
-                    FontSize: =12
+                    FontSize: =14
                     Height: =40
-                    Text: |
+                    Text: |+
                         ="Total Encuestas " & CountRows(Gallery6_1.AllItems)  &  "| Encuestas exitosas: " & CantidadRegistros.Encuestado &
-                        " | No Contesta: " & CantidadRegistros.NoEncuestado & " | Llamar despúes: " & CantidadRegistros.LlamarDespues &  " | Numero Errado : " & CantidadRegistros.NumeroErrado & " | Llamar mas tarde: " & CantidadRegistros.LlamarMasTarde
-                    Width: =455
-                    X: =881
+                        " | No Contesta: " & CantidadRegistros.NoEncuestado & " | Llamar despúes: " & CantidadRegistros.LlamarDespues &  " | Numero Errado : " & CantidadRegistros.NumeroErrado & " | Llamar mas tarde: " & CantidadRegistros.LlamarMasTarde & " | Detractor: " & CantidadRegistros.Detractor & " | Promotor: " & CantidadRegistros.Promotor
+                        
+                        
+                    Width: =483
+                    X: =853
                     Y: =60
                     ZIndex: =27
 
