@@ -1000,12 +1000,12 @@ Encuestas As screen:
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(45, 128, 40, 1)
                     FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =34
-                    PaddingLeft: =5
+                    Height: =40
+                    PaddingLeft: =4
                     Size: =14
                     Text: ="SERVICIOS"
                     Width: =109
-                    X: =230
+                    X: =15
                     Y: =60
                     ZIndex: =25
 
@@ -1015,25 +1015,25 @@ Encuestas As screen:
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(71, 158, 245, 1)
                     FontColor: =RGBA(255, 255, 255, 1)
-                    Height: =33
+                    Height: =39
                     PaddingLeft: =5
                     Size: =14
                     Text: ="ENCUENTAS REALIZADAS"
                     Width: =173
-                    X: =914
+                    X: =653
                     Y: =61
                     ZIndex: =26
 
                 ButtonCanvas18_1 As Botón:
-                    BasePaletteColor: =RGBA(12, 190, 235, 1)
+                    BasePaletteColor: =RGBA(141, 229, 250, 1)
                     DisplayMode: =DisplayMode.Edit
-                    FontSize: =10
-                    Height: =34
+                    FontSize: =12
+                    Height: =40
                     Text: |
-                        ="Registros Encuestado: " & CantidadRegistros.Encuestado &
-                        " | No Encuestado: " & CantidadRegistros.NoEncuestado 
-                    Width: =213
-                    X: =1111
+                        ="Total Encuestas " & CountRows(Gallery6_1.AllItems)  &  "| Encuestas exitosas: " & CantidadRegistros.Encuestado &
+                        " | No Contesta: " & CantidadRegistros.NoEncuestado & " | Llamar despúes: " & CantidadRegistros.LlamarDespues & " | Encuestas en Blanco: " & CantidadRegistros.Enblanco
+                    Width: =455
+                    X: =881
                     Y: =60
                     ZIndex: =27
 
