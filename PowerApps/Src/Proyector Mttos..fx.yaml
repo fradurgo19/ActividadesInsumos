@@ -49,8 +49,8 @@
                 CantidadTotalRequerida,
                 If(
                     'Frecuencia (horas)'.Value = "ERROR",
-                    Cantidad.Value,
-                    Cantidad.Value * 
+                    'Unidad de medida'.Value,
+                    'Unidad de medida'.Value * 
                     Value(CantidadDeCambiosEnElPeriodo) * 
                     Value(TextInputCanvas7.Value)
                 )
@@ -1257,7 +1257,7 @@
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 Text: ="Intervenciones"
-                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                VerticalAlign: =VerticalAlign.Top
                 Width: =110
                 X: =294
                 Y: =9
@@ -1290,7 +1290,7 @@
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Text: ="Cantidad"
-                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                VerticalAlign: =VerticalAlign.Middle
                 Width: =80
                 X: =213
                 Y: =5
@@ -1301,7 +1301,7 @@
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 Text: ="Intervenciones"
-                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                VerticalAlign: =VerticalAlign.Top
                 Width: =110
                 X: =290
                 Y: =9

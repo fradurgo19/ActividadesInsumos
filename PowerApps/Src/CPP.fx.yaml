@@ -303,7 +303,7 @@ CPP As screen:
                         PaddingLeft: =15
                         Size: =14
                         Text: ="Q"
-                        VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                        VerticalAlign: =VerticalAlign.Middle
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =50
                         X: =0
@@ -593,7 +593,7 @@ CPP As screen:
                             PaddingLeft: =10
                             Size: =12
                             Text: =ThisItem.Equivalencia
-                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            VerticalAlign: =VerticalAlign.Top
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =150
                             X: =0
@@ -612,7 +612,7 @@ CPP As screen:
                             PaddingLeft: =10
                             Size: =12
                             Text: =ThisItem.Marca
-                            VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                            VerticalAlign: =VerticalAlign.Top
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =100
                             X: =0
@@ -870,7 +870,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: =ThisItem.RefSAP
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Visible: |-
                                     =If(
                                         StartsWith(ThisItem.Nombre, "FILTRO"),
@@ -902,7 +902,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: =ThisItem.Cantidad
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =50
                                 X: =0
@@ -930,7 +930,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: =ThisItem.Nombre
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =140
                                 Wrap: =true
@@ -957,7 +957,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: =ThisItem.Marca
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =90
                                 Wrap: =true
@@ -984,7 +984,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: =ThisItem.Modelo
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =90
                                 X: =0
@@ -1010,7 +1010,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =10
                                 Text: =ThisItem.Frecuencia
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =90
                                 X: =0
@@ -1036,7 +1036,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =10
                                 Text: =ThisItem.Medida
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =70
                                 X: =0
@@ -1062,7 +1062,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =10
                                 Text: =ThisItem.Comentario
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =95
                                 X: =0
@@ -1088,7 +1088,7 @@ CPP As screen:
                                 PaddingTop: =0
                                 Size: =10
                                 Text: =ThisItem.Adjuntos
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =90
                                 X: =0

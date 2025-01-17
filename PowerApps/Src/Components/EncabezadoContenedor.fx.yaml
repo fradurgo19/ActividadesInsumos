@@ -73,7 +73,7 @@ EncabezadoContenedor As CanvasComponent:
                     LayoutMinWidth: =96
                     Size: =20
                     Text: =App.ActiveScreen.Name
-                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                    VerticalAlign: =VerticalAlign.Middle
                     Weight: ='TextCanvas.Weight'.Semibold
                     Width: =180
                     X: =0
@@ -88,7 +88,7 @@ EncabezadoContenedor As CanvasComponent:
                 PaddingLeft: =10
                 Size: =11
                 Text: =User().FullName
-                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                VerticalAlign: =VerticalAlign.Middle
                 Weight: ='TextCanvas.Weight'.Semibold
                 Width: =100
                 X: =0
