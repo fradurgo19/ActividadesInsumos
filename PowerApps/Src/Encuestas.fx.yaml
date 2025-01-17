@@ -3,7 +3,17 @@ Encuestas As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
         =Refresh(TablaDataCpp);
-        ClearCollect(colTablaDataCpp,TablaDataCpp);ClearCollect(colTablaEquivalenciasCpp,TablaEquivalenciasCpp)
+        ClearCollect(colTablaDataCpp,TablaDataCpp);ClearCollect(colTablaEquivalenciasCpp,TablaEquivalenciasCpp);
+        Set(
+            CantidadRegistros,
+            {
+                Encuestado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "ENCUESTADO")),
+                NoEncuestado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "NO CONTESTA"   )),
+                LlamarDespues: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR MAS TARDE" & "LLAMAR DESPUES"   )),
+                Enblanco: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = ""   ))
+            }
+        )
+        
         
         
 
@@ -1013,4 +1023,17 @@ Encuestas As screen:
                     X: =914
                     Y: =61
                     ZIndex: =26
+
+                ButtonCanvas18_1 As Botón:
+                    BasePaletteColor: =RGBA(12, 190, 235, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =10
+                    Height: =34
+                    Text: |
+                        ="Registros Encuestado: " & CantidadRegistros.Encuestado &
+                        " | No Encuestado: " & CantidadRegistros.NoEncuestado 
+                    Width: =213
+                    X: =1111
+                    Y: =60
+                    ZIndex: =27
 
