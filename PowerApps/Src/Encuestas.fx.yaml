@@ -9,11 +9,12 @@ Encuestas As screen:
             {
                 Encuestado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "ENCUESTADO")),
                 NoEncuestado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "NO CONTESTA"   )),
-                LlamarDespues: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR MAS TARDE" & "LLAMAR DESPUES"   )),
-                Enblanco: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = ""   ))
+                LlamarMasTarde: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR MAS TARDE"  )),
+                LlamarDespues: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR DESPUES"  )),
+                NumeroErrado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "NUMERO ERRADO"  )),
+                Enblanco: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "  "   ))
             }
         )
-        
         
         
 
@@ -1031,7 +1032,7 @@ Encuestas As screen:
                     Height: =40
                     Text: |
                         ="Total Encuestas " & CountRows(Gallery6_1.AllItems)  &  "| Encuestas exitosas: " & CantidadRegistros.Encuestado &
-                        " | No Contesta: " & CantidadRegistros.NoEncuestado & " | Llamar despúes: " & CantidadRegistros.LlamarDespues & " | Encuestas en Blanco: " & CantidadRegistros.Enblanco
+                        " | No Contesta: " & CantidadRegistros.NoEncuestado & " | Llamar despúes: " & CantidadRegistros.LlamarDespues &  " | Encuestas en Blanco: " & CantidadRegistros.Enblanco & " | Numero Errado : " & CantidadRegistros.NumeroErrado & " | Llamar mas tarde: " & CantidadRegistros.LlamarMasTarde
                     Width: =455
                     X: =881
                     Y: =60
