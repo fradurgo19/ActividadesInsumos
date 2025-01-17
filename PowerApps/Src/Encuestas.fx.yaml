@@ -13,7 +13,7 @@ Encuestas As screen:
                 LlamarDespues: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR DESPUES"  )),
                 NumeroErrado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "NUMERO ERRADO"  )),
                 Promotor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Promotor"   )),
-                Detractor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Dectrator"   ))
+                Detractor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Detractor"   ))
             }
         )
         
@@ -1029,15 +1029,15 @@ Encuestas As screen:
                 ButtonCanvas18_1 As Botón:
                     BasePaletteColor: =RGBA(141, 229, 250, 1)
                     DisplayMode: =DisplayMode.Edit
-                    FontSize: =14
+                    FontSize: =13
                     Height: =40
                     Text: |+
                         ="Total Encuestas " & CountRows(Gallery6_1.AllItems)  &  "| Encuestas exitosas: " & CantidadRegistros.Encuestado &
                         " | No Contesta: " & CantidadRegistros.NoEncuestado & " | Llamar despúes: " & CantidadRegistros.LlamarDespues &  " | Numero Errado : " & CantidadRegistros.NumeroErrado & " | Llamar mas tarde: " & CantidadRegistros.LlamarMasTarde & " | Detractor: " & CantidadRegistros.Detractor & " | Promotor: " & CantidadRegistros.Promotor
                         
                         
-                    Width: =483
-                    X: =853
+                    Width: =510
+                    X: =826
                     Y: =60
                     ZIndex: =27
 
