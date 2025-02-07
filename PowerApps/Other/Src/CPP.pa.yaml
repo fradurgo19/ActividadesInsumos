@@ -687,7 +687,6 @@ Screens:
                               ShowNavigation: =true
                               TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                               TemplateSize: =85
-                              Transition: =Transition.Push
                               Width: =Parent.Width
                             Children:
                               - Separator4_1:
