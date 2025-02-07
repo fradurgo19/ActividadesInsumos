@@ -1,0 +1,780 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Encuestas:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      ImagePosition: =ImagePosition.Stretch
+      LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+      OnVisible: |+
+        =Refresh(TablaDataCpp);
+        ClearCollect(colTablaDataCpp,TablaDataCpp);ClearCollect(colTablaEquivalenciasCpp,TablaEquivalenciasCpp);
+        Set(
+            CantidadRegistros,
+            {
+                Encuestado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "ENCUESTADO")),
+                NoEncuestado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "NO CONTESTA"   )),
+                LlamarMasTarde: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR MAS TARDE"  )),
+                LlamarDespues: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "LLAMAR DESPUES"  )),
+                NumeroErrado: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', Observaciones = "NUMERO ERRADO"  )),
+                Promotor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Promotor"   )),
+                Detractor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Detractor"   ))
+            }
+        )
+
+
+    Children:
+      - Container24_2:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Height: =59
+            Width: =1366
+            Y: =4
+          Children:
+            - Container25_2:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Height: =59
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  Width: =1015
+                  X: =175
+                Children:
+                  - EncabezadoContenedor_10:
+                      Control: CanvasComponent
+                      ComponentName: EncabezadoContenedor
+                      Properties:
+                        Encabezado: =SampleImage
+                        Encabezado1: =Logo
+                        Height: =65
+                        Width: =Parent.Width
+            - Arrow1_5:
+                Control: Arrow@2.3.0
+                Variant: BackArrow
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 0)
+                  DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                  Fill: =RGBA(105, 121, 126, 1)
+                  OnSelect: =Navigate(NPS,ScreenTransition.Fade )
+                  Width: =47
+                  X: =4
+                  Y: =4
+            - ButtonCanvas7_1:
+                Control: Button@0.0.44
+                Properties:
+                  Align: =Align.Justify
+                  BasePaletteColor: =RGBA(141, 229, 250, 1)
+                  FontSize: =9
+                  Height: =47
+                  Layout: ='ButtonCanvas.Layout'.IconBefore
+                  OnSelect: =Launch("https://forms.office.com/Pages/ResponsePage.aspx?id=BSzLJoLIJkmJHSf6ewS1Fop05q9La99FiWSPodX8cI9UOFBUUTlNV1lRTEdUMkVQVU82SEM1Uk5HOC4u&origin=Invitation&channel=0")
+                  Text: ="Diligencie Encuesta"
+                  Width: =110
+                  X: =1208
+                  Y: =7
+      - Container2_2:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Height: =705
+            Width: =1365
+            Y: =63
+          Children:
+            - SendEmailCanvas_6:
+                Control: FluidGrid@2.3.0
+                Properties:
+                  BorderThickness: =0
+                  Fill: =RGBA(249, 249, 249, 1)
+                  Height: =705
+                  Width: =1351
+                  X: =10
+                Children:
+                  - SendEmailCard_6:
+                      Control: DataCard@1.0.2
+                      Properties:
+                        BorderThickness: =1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =689
+                        Width: =1351
+                      Children:
+                        - Container3_1:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              Height: =45
+                              Width: =1322
+                              X: =15
+                              Y: =2
+                            Children:
+                              - Container13_1:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    Height: =43
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    PaddingBottom: =10
+                                    PaddingLeft: =10
+                                    PaddingRight: =10
+                                    PaddingTop: =10
+                                    Width: =1313
+                                  Children:
+                                    - TextInputCanvas5_1:
+                                        Control: TextInput@0.0.53
+                                        Properties:
+                                          AccessibleLabel: ="Buscar por correo"
+                                          Appearance: ='TextInputCanvas.Appearance'.FilledDarker
+                                          BasePaletteColor: =RGBA(189, 178, 176, 1)
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          BorderStyle: =BorderStyle.None
+                                          BorderThickness: =2
+                                          Placeholder: ="Buscar por Si, No, ID, Correo, Asunto"
+                                          Width: =200
+                                    - ComboboxCanvas2_2:
+                                        Control: ComboBox@0.0.49
+                                        Properties:
+                                          Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
+                                          BasePaletteColor: =RGBA(189, 178, 176, 1)
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          BorderStyle: =BorderStyle.None
+                                          BorderThickness: =2
+                                          InputTextPlaceholder: ="Buscar por Tipo"
+                                          Items: =["Mantenimiento Correctivo", "Mantenimiento Preventivo", "Diagnóstico", "Garantía"]
+                                          Width: =200
+                                    - ComboboxCanvas2_3:
+                                        Control: ComboBox@0.0.49
+                                        Properties:
+                                          Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
+                                          BasePaletteColor: =RGBA(189, 178, 176, 1)
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          BorderStyle: =BorderStyle.None
+                                          BorderThickness: =2
+                                          InputTextPlaceholder: ="Buscar por Estado"
+                                          Items: =["En seguimiento", "Cerrada", "Solucionada"]
+                                          Width: =200
+                                    - DatePickerCanvas2_1:
+                                        Control: DatePicker@0.0.42
+                                        Properties:
+                                          BasePaletteColor: =RGBA(189, 178, 176, 1)
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          BorderStyle: =BorderStyle.None
+                                          BorderThickness: =2
+                                          Placeholder: ="Filtrar por Fecha Inicio"
+                                          Width: =200
+                                    - DatePickerCanvas1_1:
+                                        Control: DatePicker@0.0.42
+                                        Properties:
+                                          Placeholder: ="Filtrar por Fecha Fin"
+                                          Width: =200
+                                    - ButtonCanvas10_1:
+                                        Control: Button@0.0.44
+                                        Properties:
+                                          BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                          OnSelect: =Reset(TextInputCanvas5_1);Reset(ComboboxCanvas2_2);Reset(ComboboxCanvas2_3);Reset(DatePickerCanvas2_1);Reset(DatePickerCanvas1_1)
+                                          Text: ="Reset"
+                        - Container4_1:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              BorderThickness: =2
+                              Height: =42
+                              Width: =683
+                              X: =653
+                              Y: =100
+                            Children:
+                              - ButtonCanvas4_1:
+                                  Control: Button@0.0.44
+                                  Properties:
+                                    Align: =Align.Center
+                                    BasePaletteColor: =Color.LightGray
+                                    BorderColor: =RGBA(9, 33, 98, 1)
+                                    BorderRadiusBottomLeft: =5
+                                    BorderRadiusBottomRight: =5
+                                    BorderRadiusTopLeft: =5
+                                    BorderRadiusTopRight: =5
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =2
+                                    Height: =36
+                                    Text: =
+                                    Width: =683
+                                    Y: =(Parent.Height - Self.Height)/2
+                              - Container17_2:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    Fill: =RGBA(71, 158, 245, 1)
+                                    Height: =39
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    Width: =683
+                                    Y: =3
+                                  Children:
+                                    - TextCanvas7_14:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          LayoutMinWidth: =40
+                                          PaddingLeft: =5
+                                          Text: ="Fecha"
+                                          Width: =100
+                                    - TextCanvas7_15:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Diligencia"
+                                          Width: =100
+                                    - TextCanvas7_22:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          LayoutMinWidth: =60
+                                          PaddingLeft: =15
+                                          Text: ="OTT"
+                                          Width: =80
+                                    - TextCanvas7_24:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Cliente"
+                                          Width: =100
+                                    - TextCanvas7_32:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="NPS"
+                                          Width: =50
+                                    - TextCanvas7_41:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Encuesta"
+                                          Width: =80
+                                    - TextCanvas7_40:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Comentario"
+                                          Width: =100
+                                    - ButtonCanvas18:
+                                        Control: Button@0.0.44
+                                        Properties:
+                                          BasePaletteColor: =RGBA(12, 190, 235, 1)
+                                          FontSize: =10
+                                          Text: ="Cantidad " & CountRows(Gallery6_1.AllItems)
+                                          Width: =70
+                        - Container16_1:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              BorderThickness: =2
+                              Fill: =Color.White
+                              Height: =539
+                              RadiusBottomLeft: =10
+                              RadiusBottomRight: =10
+                              RadiusTopLeft: =10
+                              RadiusTopRight: =10
+                              Width: =684
+                              X: =653
+                              Y: =142
+                            Children:
+                              - Gallery6_1:
+                                  Control: Gallery@2.15.0
+                                  Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                                  Properties:
+                                    BorderColor: =RGBA(139, 154, 159, 1)
+                                    BorderThickness: =2
+                                    Height: =539
+                                    Items: |-
+                                      =Sort(
+                                          Filter(
+                                              'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
+                                              (TextInputCanvas5_1.Value in Diligencia || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID ||  TextInputCanvas5_1.Value in Encuestado || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                          ),
+                                          Modificado,
+                                          SortOrder.Descending
+                                      )
+                                    ShowNavigation: =true
+                                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                                    TemplateSize: =52
+                                    Transition: =Transition.Push
+                                    Width: =Parent.Width
+                                  Children:
+                                    - Separator4_2:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(214, 221, 224, 1)
+                                          BorderThickness: =2
+                                          Fill: =RGBA(255, 255, 255, 1)
+                                          Height: =1
+                                          OnSelect: =Select(Parent)
+                                          Width: =Parent.TemplateWidth
+                                          Y: =Parent.TemplateHeight - Self.Height
+                                    - Container18_1:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: AutoLayout
+                                        Properties:
+                                          Height: =Parent.TemplateHeight
+                                          LayoutAlignItems: =LayoutAlignItems.Stretch
+                                          LayoutDirection: =LayoutDirection.Horizontal
+                                          Width: =Parent.Width
+                                        Children:
+                                          - TextCanvas9_17:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =9
+                                                Text: =ThisItem.Creado
+                                                Width: =100
+                                          - TextCanvas9_18:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =9
+                                                Text: =ThisItem.CorreoDiligencia
+                                                Width: =100
+                                          - TextCanvas9_19:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =9
+                                                Text: =ThisItem.OTT
+                                                Width: =80
+                                          - TextCanvas9_28:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.Cliente
+                                                Width: =100
+                                          - TextCanvas9_30:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.TipoCliente
+                                                Width: =60
+                                          - TextCanvas9_32:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.Encuestado
+                                                Width: =60
+                                          - TextInputCanvas8:
+                                              Control: TextInput@0.0.53
+                                              Properties:
+                                                Fill: =RGBA(180, 214, 250, 1)
+                                                FontSize: =9
+                                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                                Value: =ThisItem.Observaciones
+                                                Width: =120
+                                          - ButtonCanvas19:
+                                              Control: Button@0.0.44
+                                              Properties:
+                                                FontSize: =10
+                                                OnSelect: |-
+                                                  =Patch('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', ThisItem, { Observaciones: TextInputCanvas8.Value})
+                                                Text: ="Actualizar"
+                                                Width: =60
+                        - Container4_2:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              BorderThickness: =2
+                              Height: =42
+                              Width: =630
+                              X: =15
+                              Y: =100
+                            Children:
+                              - ButtonCanvas4_3:
+                                  Control: Button@0.0.44
+                                  Properties:
+                                    Align: =Align.Center
+                                    BasePaletteColor: =Color.LightGray
+                                    BorderColor: =RGBA(9, 33, 98, 1)
+                                    BorderRadiusBottomLeft: =5
+                                    BorderRadiusBottomRight: =5
+                                    BorderRadiusTopLeft: =5
+                                    BorderRadiusTopRight: =5
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =2
+                                    Height: =44
+                                    Text: =
+                                    Width: =572
+                              - Container17_3:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    Fill: =RGBA(45, 128, 40, 1)
+                                    Height: =44
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    Width: =630
+                                  Children:
+                                    - TextCanvas7_25:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =5
+                                          Text: ="OTT"
+                                          Width: =50
+                                    - TextCanvas7_26:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          LayoutMinWidth: =40
+                                          PaddingLeft: =5
+                                          Text: ="Cliente"
+                                          Width: =100
+                                    - TextCanvas7_27:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          LayoutMinWidth: =40
+                                          PaddingLeft: =5
+                                          Text: ="Tipo de Servicio"
+                                          Width: =60
+                                    - TextCanvas7_28:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Fecha"
+                                          Width: =60
+                                    - TextCanvas7_29:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          LayoutMinWidth: =60
+                                          PaddingLeft: =15
+                                          Text: ="Equipo"
+                                          Width: =60
+                                    - TextCanvas7_39:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          LayoutMinWidth: =60
+                                          PaddingLeft: =15
+                                          Text: ="Sede"
+                                          Width: =60
+                                    - TextCanvas7_30:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Telefono"
+                                          Width: =80
+                                    - TextCanvas7_31:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Text: ="Email"
+                                          Width: =70
+                                    - ButtonCanvas17:
+                                        Control: Button@0.0.44
+                                        Properties:
+                                          BasePaletteColor: =RGBA(82, 205, 242, 1)
+                                          FontSize: =10
+                                          Text: ="Cantidad " & CountRows(Gallery6_2.AllItems)
+                                          Width: =70
+                        - Container16_2:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              BorderThickness: =2
+                              Fill: =Color.White
+                              Height: =539
+                              RadiusBottomLeft: =10
+                              RadiusBottomRight: =10
+                              RadiusTopLeft: =10
+                              RadiusTopRight: =10
+                              Width: =630
+                              X: =15
+                              Y: =142
+                            Children:
+                              - Gallery6_2:
+                                  Control: Gallery@2.15.0
+                                  Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+                                  Properties:
+                                    BorderColor: =RGBA(139, 154, 159, 1)
+                                    BorderThickness: =2
+                                    Height: =538
+                                    Items: |-
+                                      =Sort(
+                                          Filter(
+                                              'Oportunidades de encuestas',
+                                              (TextInputCanvas5_1.Value in Email || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) &&
+                                              (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
+                                              (FechadeServicio >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
+                                              (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
+                                              (DateDiff(FechadeServicio, Today()) <= 45)
+                                          ),
+                                          Modificado,
+                                          SortOrder.Descending
+                                      )
+                                    ShowNavigation: =true
+                                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                                    TemplateSize: =52
+                                    Transition: =Transition.Push
+                                    Width: =630
+                                  Children:
+                                    - Separator4_3:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(214, 221, 224, 1)
+                                          BorderThickness: =2
+                                          Fill: =RGBA(255, 255, 255, 1)
+                                          Height: =1
+                                          OnSelect: =Select(Parent)
+                                          Width: =Parent.TemplateWidth
+                                          Y: =Parent.TemplateHeight - Self.Height
+                                    - Container18_2:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: AutoLayout
+                                        Properties:
+                                          Height: =Parent.TemplateHeight
+                                          LayoutAlignItems: =LayoutAlignItems.Stretch
+                                          LayoutDirection: =LayoutDirection.Horizontal
+                                          Width: =Parent.Width
+                                        Children:
+                                          - TextCanvas9_20:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.OTT
+                                                Width: =50
+                                          - TextCanvas9_23:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.Cliente
+                                                Width: =110
+                                          - TextCanvas9_24:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =8
+                                                Text: =ThisItem.TipodeServicio
+                                                Width: =65
+                                          - TextCanvas9_25:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.FechadeServicio
+                                                Width: =60
+                                          - TextCanvas9_31:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =9
+                                                Text: =ThisItem.Equipo
+                                                Width: =60
+                                          - TextCanvas9_26:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.Sede
+                                                Width: =60
+                                          - TextCanvas9_29:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.Telefonodecontacto
+                                                Width: =70
+                                          - TextCanvas9_27:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =10
+                                                Text: =ThisItem.Email
+                                                Width: =70
+                                    - Button6:
+                                        Control: Classic/Button@2.2.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 0)
+                                          Color: =RGBA(255, 255, 255, 1)
+                                          DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                          Fill: |
+                                            =If(
+                                                !IsBlank(LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', OTT = ThisItem.OTT)),
+                                                Color.LimeGreen,  
+                                                Color.OrangeRed   
+                                            )
+                                          FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                                          Font: =Font.'Segoe UI'
+                                          HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                          HoverColor: =RGBA(255, 255, 255, 1)
+                                          HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                                          OnSelect: =Select(Parent)
+                                          PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                                          PressedColor: =RGBA(255, 255, 255, 1)
+                                          PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Size: =8
+                                          Text: |-
+                                            =If(
+                                                !IsBlank(LookUp('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', OTT = ThisItem.OTT)),
+                                                "Ejecutado",
+                                                "No ejecutado"
+                                            )
+                                          Width: =65
+                                          X: =547
+                                          Y: =6
+                        - TextCanvas7_37:
+                            Control: Text@0.0.50
+                            Properties:
+                              Align: ='TextCanvas.Align'.Center
+                              Fill: =RGBA(45, 128, 40, 1)
+                              FontColor: =RGBA(255, 255, 255, 1)
+                              Height: =40
+                              PaddingLeft: =4
+                              Text: ="SERVICIOS"
+                              Width: =109
+                              X: =15
+                              Y: =60
+                        - TextCanvas7_38:
+                            Control: Text@0.0.50
+                            Properties:
+                              Align: ='TextCanvas.Align'.Center
+                              Fill: =RGBA(71, 158, 245, 1)
+                              FontColor: =RGBA(255, 255, 255, 1)
+                              Height: =39
+                              PaddingLeft: =5
+                              Text: ="ENCUENTAS REALIZADAS"
+                              Width: =173
+                              X: =653
+                              Y: =61
+                        - ButtonCanvas18_1:
+                            Control: Button@0.0.44
+                            Properties:
+                              BasePaletteColor: =RGBA(141, 229, 250, 1)
+                              FontSize: =13
+                              Height: =40
+                              Text: |+
+                                ="Total Encuestas " & CountRows(Gallery6_1.AllItems)  &  "| Encuestas exitosas: " & CantidadRegistros.Encuestado &
+                                " | No Contesta: " & CantidadRegistros.NoEncuestado & " | Llamar despúes: " & CantidadRegistros.LlamarDespues &  " | Numero Errado : " & CantidadRegistros.NumeroErrado & " | Llamar mas tarde: " & CantidadRegistros.LlamarMasTarde & " | Detractor: " & CantidadRegistros.Detractor & " | Promotor: " & CantidadRegistros.Promotor
+
+
+                              Width: =510
+                              X: =826
+                              Y: =60
