@@ -524,7 +524,14 @@ Screens:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =49
                                     PaddingLeft: =15
-                                    Text: ="Equivalencia 2"
+                                    Text: |+
+                                      =If(
+                                          CountRows(
+                                              Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
+                                          ) > 0,
+                                          "FLETTGARD",
+                                          "Equivalencia 2" // Puedes cambiar esto según lo que necesites
+                                      )
                                     Visible: |-
                                       =If(
                                           CountRows(
