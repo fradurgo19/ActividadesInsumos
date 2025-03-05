@@ -280,16 +280,7 @@ CPP As screen:
                         Size: =14
                         Text: ="RefSap"
                         Visible: |
-                            =If(
-                                CountRows(
-                                    Filter(
-                                        GaleriaCPP.AllItems,
-                                        StartsWith(Nombre, "FILTRO")
-                                    )
-                                ) > 0,
-                                false,
-                                true
-                            )
+                            =true
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =100
                         X: =0
@@ -1541,7 +1532,7 @@ CPP As screen:
                 SearchItems: =[]
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 SelectMultiple: =false
-                Size: =9
+                Size: =8
                 Width: =115
                 Y: =292
                 ZIndex: =1

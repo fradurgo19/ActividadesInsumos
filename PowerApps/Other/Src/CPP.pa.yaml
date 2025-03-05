@@ -249,16 +249,7 @@ Screens:
                                     PaddingLeft: =15
                                     Text: ="RefSap"
                                     Visible: |
-                                      =If(
-                                          CountRows(
-                                              Filter(
-                                                  GaleriaCPP.AllItems,
-                                                  StartsWith(Nombre, "FILTRO")
-                                              )
-                                          ) > 0,
-                                          false,
-                                          true
-                                      )
+                                      =true
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =100
                         - Container97_15:
@@ -1298,7 +1289,7 @@ Screens:
                         SelectMultiple: =false
                         SelectionColor: =RGBA(255, 255, 255, 1)
                         SelectionFill: =RGBA(215, 58, 60, 1)
-                        Size: =9
+                        Size: =8
                         Width: =115
                         Y: =292
             - Container28_2:
