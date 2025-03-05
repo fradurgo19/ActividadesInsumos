@@ -494,24 +494,6 @@ Screens:
                                     Text: ="Comentario"
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =247
-                        - Container97_17:
-                            Control: GroupContainer@1.3.0
-                            Variant: ManualLayout
-                            Properties:
-                              FillPortions: =0
-                              LayoutMinHeight: =32
-                              LayoutMinWidth: =100
-                              Width: =50
-                            Children:
-                              - TextCanvas7_23:
-                                  Control: Text@0.0.50
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    Height: =49
-                                    PaddingLeft: =15
-                                    Text: ="Adjuntos"
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =50
                         - Container97_18:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -1024,27 +1006,6 @@ Screens:
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =250
-                                    - Container97_8:
-                                        Control: GroupContainer@1.3.0
-                                        Variant: ManualLayout
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.SetByContainer
-                                          FillPortions: =0
-                                          LayoutMinHeight: =32
-                                          LayoutMinWidth: =100
-                                          Width: =50
-                                        Children:
-                                          - TextCanvas25_8:
-                                              Control: Text@0.0.50
-                                              Properties:
-                                                Align: ='TextCanvas.Align'.Start
-                                                Height: =76
-                                                PaddingTop: =0
-                                                Size: =10
-                                                Text: =ThisItem.Adjuntos
-                                                VerticalAlign: =VerticalAlign.Top
-                                                Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =46
                                     - Container97_20:
                                         Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
