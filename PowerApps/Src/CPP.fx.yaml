@@ -257,17 +257,6 @@ CPP As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Visible: |-
-                        =If(
-                            CountRows(
-                                Filter(
-                                    GaleriaCPP.AllItems,
-                                    StartsWith(Nombre, "FILTRO")
-                                )
-                            ) > 0,
-                            false,
-                            true
-                        )
                     Width: =100
                     ZIndex: =1
 
@@ -980,12 +969,7 @@ CPP As screen:
                                 Size: =12
                                 Text: =ThisItem.RefSAP
                                 VerticalAlign: =VerticalAlign.Top
-                                Visible: |-
-                                    =If(
-                                        StartsWith(ThisItem.Nombre, "FILTRO"),
-                                        false,
-                                        true
-                                    )
+                                Visible: =true
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =100
                                 X: =0
