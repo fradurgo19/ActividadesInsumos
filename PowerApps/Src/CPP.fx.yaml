@@ -548,7 +548,7 @@ CPP As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =200
+                    Width: =250
                     ZIndex: =8
 
                     TextCanvas7_19 As Texto:
@@ -597,8 +597,8 @@ CPP As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =117
-                X: =713
+                Width: =105
+                X: =763
                 ZIndex: =2
 
                 TextCanvas7_42 As Texto:
@@ -610,7 +610,7 @@ CPP As screen:
                     Size: =14
                     Text: ="Equivalencia 1"
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =107
+                    Width: =97
                     X: =4
                     Y: =0
                     ZIndex: =1
@@ -633,8 +633,8 @@ CPP As screen:
                         true,
                         false
                     )
-                Width: =113
-                X: =830
+                Width: =107
+                X: =868
                 ZIndex: =3
 
                 TextCanvas7_43 As Texto:
@@ -657,7 +657,7 @@ CPP As screen:
                             false
                         )
                     Weight: ='TextCanvas.Weight'.Semibold
-                    Width: =107
+                    Width: =97
                     X: =4
                     Y: =0
                     ZIndex: =1
@@ -1212,7 +1212,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =200
+                            Width: =250
                             ZIndex: =8
 
                             TextCanvas25_7 As Texto:
@@ -1224,7 +1224,7 @@ CPP As screen:
                                 Text: =ThisItem.Comentario
                                 VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =199
+                                Width: =250
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
@@ -1264,7 +1264,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =90
+                            Width: =107
                             ZIndex: =12
 
                             TextCanvas25_9 As Texto:
@@ -1276,7 +1276,7 @@ CPP As screen:
                                 Text: =ThisItem.EQUIVALENCIA1
                                 VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =90
+                                Width: =100
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
@@ -1290,7 +1290,8 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =90
+                            Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
+                            Width: =107
                             ZIndex: =13
 
                             TextCanvas25_10 As Texto:
@@ -1299,10 +1300,11 @@ CPP As screen:
                                 Height: =76
                                 PaddingTop: =0
                                 Size: =10
-                                Text: =ThisItem.EQUI
+                                Text: =ThisItem.EQUIVALENCIA2
                                 VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =90
+                                Width: =100
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
