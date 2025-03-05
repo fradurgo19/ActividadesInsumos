@@ -551,13 +551,8 @@ ResumenCPP As screen:
                     DelayItemLoading: =true
                     Height: =Parent.Height
                     Items: |+
-                        =Sort(
-                            Distinct(colConcatenada, {No: No , Nombre:Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario,Tipo:Tipo,Recomendación:Recomendación,MarcaEquivalencia:MarcaEquivalencia,EQUIVALENCIA1:EQUIVALENCIA1,EQUIVALENCIA2:EQUIVALENCIA2}),
-                            Value.Cantidad
-                        )
-                        
-                        
-                        
+                        =colAllSelectedItems
+                         
                         
                         
                     Layout: =Layout.Vertical
@@ -600,7 +595,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Value.RefSAP
+                            Text: =ThisItem.RefSAP
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =90
                             X: =0
@@ -613,7 +608,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Value.Cantidad
+                            Text: =ThisItem.Cantidad
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =40
                             X: =0
@@ -627,7 +622,7 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =13
-                            Text: =ThisItem.Value.Nombre
+                            Text: =ThisItem.Nombre
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =150
                             X: =0
@@ -641,7 +636,7 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =9
-                            Text: =ThisItem.Value.No
+                            Text: =ThisItem.No
                             Visible: =false
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =40
@@ -656,7 +651,7 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =10
-                            Text: =ThisItem.Value.Marca
+                            Text: =ThisItem.Marca
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =70
                             X: =0
@@ -670,7 +665,7 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =10
-                            Text: =ThisItem.Value.Modelo
+                            Text: =ThisItem.Modelo
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =70
                             X: =0
@@ -684,7 +679,7 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =10
-                            Text: =ThisItem.Value.Parte
+                            Text: =ThisItem.Parte
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =96
                             X: =0
@@ -698,7 +693,7 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =10
-                            Text: =ThisItem.Value.Tipo
+                            Text: =ThisItem.Tipo
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =90
                             X: =0
@@ -712,7 +707,7 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =12
-                            Text: =ThisItem.Value.Frecuencia
+                            Text: =ThisItem.Frecuencia
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =60
                             X: =0
@@ -725,7 +720,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Value.Medida
+                            Text: =ThisItem.Medida
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =60
                             X: =0
@@ -739,7 +734,7 @@ ResumenCPP As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =13
-                            Text: =ThisItem.Value.Comentario
+                            Text: =ThisItem.Comentario
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =100
                             X: =0
@@ -753,7 +748,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Value.MarcaEquivalencia
+                            Text: =ThisItem.EQUIVALENCIA1
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =90
                             X: =0
@@ -767,7 +762,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Value.EQUIVALENCIA2
+                            Text: =ThisItem.EQUIVALENCIA2
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =90
                             X: =0
@@ -809,7 +804,7 @@ ResumenCPP As screen:
                             LayoutMinWidth: =96
                             PaddingLeft: =20
                             PaddingTop: =
-                            Text: =(ThisItem.Value.Cantidad) * Value(TextInput2.Text)
+                            Text: =(ThisItem.Cantidad) * Value(TextInput2.Text)
                             Width: =40
                             X: =0
                             Y: =0
@@ -829,7 +824,7 @@ ResumenCPP As screen:
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Trash
                             LayoutMinHeight: =40
-                            OnSelect: =RemoveIf(colConcatenada, No = ThisItem.Value.No)
+                            OnSelect: =RemoveIf(colConcatenada, No = ThisItem.No)
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -842,7 +837,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Value.Recomendación
+                            Text: =ThisItem.Recomendación
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =120
                             X: =0
