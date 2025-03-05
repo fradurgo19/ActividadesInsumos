@@ -501,7 +501,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =120
+                              Width: =50
                             Children:
                               - TextCanvas7_23:
                                   Control: Text@0.0.50
@@ -512,6 +512,64 @@ Screens:
                                     Text: ="Adjuntos"
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =116
+                  - Container97_18:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        Height: =52
+                        Width: =117
+                        X: =713
+                      Children:
+                        - TextCanvas7_42:
+                            Control: Text@0.0.50
+                            Properties:
+                              FontColor: =RGBA(255, 255, 255, 1)
+                              Height: =49
+                              PaddingLeft: =15
+                              Text: ="Equivalencia 1"
+                              Weight: ='TextCanvas.Weight'.Semibold
+                              Width: =107
+                              X: =4
+                  - Container97_19:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        Height: =52
+                        Visible: |-
+                          =If(
+                              CountRows(
+                                  Filter(
+                                      GaleriaCPP.AllItems,
+                                      StartsWith(Parte,"MTTO PREVENTIVO")
+                                  )
+                              ) > 0,
+                              true,
+                              false
+                          )
+                        Width: =113
+                        X: =830
+                      Children:
+                        - TextCanvas7_43:
+                            Control: Text@0.0.50
+                            Properties:
+                              FontColor: =RGBA(255, 255, 255, 1)
+                              Height: =49
+                              PaddingLeft: =15
+                              Text: ="Equivalencia 2"
+                              Visible: |-
+                                =If(
+                                    CountRows(
+                                        Filter(
+                                            GaleriaCPP.AllItems,
+                                            StartsWith(Parte,"MTTO PREVENTIVO")
+                                        )
+                                    ) > 0,
+                                    true,
+                                    false
+                                )
+                              Weight: ='TextCanvas.Weight'.Semibold
+                              Width: =107
+                              X: =4
             - Container38:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout
@@ -721,7 +779,7 @@ Screens:
                                 =If(
                                     IsBlank(DropParte1.SelectedItems) && IsBlank(TextInputCanvas6.Value),
                                     [ // Tabla ficticia vacía con la misma estructura de datos
-                                        {Nombre: "", Marca: "", Modelo: "", RefSAP: "", Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo: "", ImagenUrl: "", Recomendación: ""}
+                                        {Nombre: "", Marca: "", Modelo: "", RefSAP: "", Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo: "", ImagenUrl: "", Recomendación: "", EQUIVALENCIA1: "", EQUIVALENCIA2: ""}
                                     ],
                                     Filter(
                                         TablaDataCpp,
@@ -973,7 +1031,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Width: =120
+                                          Width: =50
                                         Children:
                                           - TextCanvas25_8:
                                               Control: Text@0.0.50
@@ -983,6 +1041,48 @@ Screens:
                                                 PaddingTop: =0
                                                 Size: =10
                                                 Text: =ThisItem.Adjuntos
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =46
+                                    - Container97_20:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          Width: =90
+                                        Children:
+                                          - TextCanvas25_9:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Start
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =10
+                                                Text: =ThisItem.EQUIVALENCIA1
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =90
+                                    - Container97_21:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          Width: =90
+                                        Children:
+                                          - TextCanvas25_10:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Start
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =10
+                                                Text: =ThisItem.EQUI
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =90
