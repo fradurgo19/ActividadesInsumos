@@ -394,6 +394,7 @@ Screens:
                                     Height: =48
                                     PaddingLeft: =15
                                     Text: ="Frecuencia"
+                                    VerticalAlign: =VerticalAlign.Middle
                                     Visible: |+
                                       =If(
                                           CountRows(
@@ -485,14 +486,14 @@ Screens:
                             Properties:
                               FillPortions: =0
                               Height: =52
-                              Width: =105
+                              Width: =120
                               X: =763
                             Children:
                               - TextCanvas7_42:
                                   Control: Text@0.0.50
                                   Properties:
                                     FontColor: =RGBA(255, 255, 255, 1)
-                                    Height: =49
+                                    Height: =48
                                     PaddingLeft: =15
                                     Text: |-
                                       =If(
@@ -504,7 +505,7 @@ Screens:
                                       )
                                     VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =97
+                                    Width: =Parent.Width
                                     X: =4
                         - Container97_19:
                             Control: GroupContainer@1.3.0
@@ -539,6 +540,7 @@ Screens:
                                           "FLEETGUARD",
                                           "Equivalencia2" // Puedes cambiar esto según lo que necesites
                                       )
+                                    VerticalAlign: =VerticalAlign.Middle
                                     Visible: |-
                                       =If(
                                           CountRows(
@@ -551,7 +553,7 @@ Screens:
                                           false
                                       )
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =97
+                                    Width: =120
                                     X: =4
             - Container38:
                 Control: GroupContainer@1.3.0
