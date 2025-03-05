@@ -817,16 +817,7 @@ CPP As screen:
                                 (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
                                 (IsBlank(DropFrecuencia1.SelectedItems) || CountIf(DropFrecuencia1.SelectedItems, Frecuencia = Value) > 0) &&
                                 (IsBlank(DropMarca1_1.Selected.Value) || Marca = DropMarca1_1.Selected.Value) &&
-                                (IsBlank(DropModelo1_1.Selected.Value) || Modelo = DropModelo1_1.Selected.Value) &&
-                        
-                                // Filtra registros donde al menos un campo tenga un valor distinto de "0" o ""
-                                !(Nombre = "0" && Marca = "0" && Modelo = "0" && RefSAP = "0" && Cantidad = "0" && 
-                                  Medida = "0" && Frecuencia = "0" && Comentario = "0" && Adjuntos = "0" && No = "0" &&
-                                  Parte = "0" && Tipo = "0" && ImagenUrl = "0" && Recomendación = "0") &&
-                                  
-                                !(Nombre = "" && Marca = "" && Modelo = "" && RefSAP = "" && Cantidad = "" && 
-                                  Medida = "" && Frecuencia = "" && Comentario = "" && Adjuntos = "" && No = "" &&
-                                  Parte = "" && Tipo = "" && ImagenUrl = "" && Recomendación = "")
+                                (IsBlank(DropModelo1_1.Selected.Value) || Modelo = DropModelo1_1.Selected.Value)
                             )
                         )
                         
