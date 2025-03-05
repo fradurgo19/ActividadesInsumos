@@ -9,20 +9,21 @@
 # ************************************************************************************************
 ComponentDefinitions:
   EncabezadoContenedor:
+    DefinitionType: CanvasComponent
     CustomProperties:
       Encabezado:
         PropertyKind: Input
         DisplayName: Encabezado
         Description: Propiedad personalizada
         DataType: Image
+        Default: =SampleImage
       Encabezado1:
         PropertyKind: Input
         DisplayName: Encabezado1
         Description: Propiedad personalizada
         DataType: Image
+        Default: =Logo
     Properties:
-      Encabezado: =SampleImage
-      Encabezado1: =Logo
       Height: =65
       Width: =1007
     Children:
