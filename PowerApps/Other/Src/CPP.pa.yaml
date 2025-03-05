@@ -237,6 +237,7 @@ Screens:
                                     Height: =Parent.Height
                                     PaddingLeft: =15
                                     Text: ="RefSap"
+                                    VerticalAlign: =VerticalAlign.Middle
                                     Visible: |
                                       =true
                                     Weight: ='TextCanvas.Weight'.Semibold
@@ -273,10 +274,12 @@ Screens:
                               - TextCanvas7_11:
                                   Control: Text@0.0.50
                                   Properties:
+                                    Align: ='TextCanvas.Align'.Center
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =52
                                     PaddingLeft: =5
                                     Text: ="Nombre"
+                                    VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =140
                         - Container97_12:
@@ -468,10 +471,12 @@ Screens:
                               - TextCanvas7_19:
                                   Control: Text@0.0.50
                                   Properties:
+                                    Align: ='TextCanvas.Align'.Center
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =51
                                     PaddingLeft: =15
                                     Text: ="Comentario"
+                                    VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =247
                         - Container97_18:
@@ -490,6 +495,7 @@ Screens:
                                     Height: =49
                                     PaddingLeft: =15
                                     Text: ="Equivalencia 1"
+                                    VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =97
                                     X: =4
@@ -790,12 +796,6 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Visible: |-
-                                            =If(
-                                                StartsWith(ThisItem.Nombre, "FILTRO"),
-                                                false,
-                                                true
-                                            )
                                           Width: =100
                                         Children:
                                           - TextCanvas25_3:

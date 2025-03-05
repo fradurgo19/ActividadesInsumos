@@ -268,6 +268,7 @@ CPP As screen:
                         PaddingLeft: =15
                         Size: =14
                         Text: ="RefSap"
+                        VerticalAlign: =VerticalAlign.Middle
                         Visible: |
                             =true
                         Weight: ='TextCanvas.Weight'.Semibold
@@ -315,6 +316,7 @@ CPP As screen:
                     ZIndex: =3
 
                     TextCanvas7_11 As Texto:
+                        Align: ='TextCanvas.Align'.Center
                         AutoHeight: =false
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
@@ -322,6 +324,7 @@ CPP As screen:
                         PaddingLeft: =5
                         Size: =14
                         Text: ="Nombre"
+                        VerticalAlign: =VerticalAlign.Middle
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =140
                         X: =0
@@ -532,6 +535,7 @@ CPP As screen:
                     ZIndex: =8
 
                     TextCanvas7_19 As Texto:
+                        Align: ='TextCanvas.Align'.Center
                         AutoHeight: =false
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
@@ -539,6 +543,7 @@ CPP As screen:
                         PaddingLeft: =15
                         Size: =14
                         Text: ="Comentario"
+                        VerticalAlign: =VerticalAlign.Middle
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =247
                         X: =0
@@ -567,6 +572,7 @@ CPP As screen:
                         PaddingLeft: =15
                         Size: =14
                         Text: ="Equivalencia 1"
+                        VerticalAlign: =VerticalAlign.Middle
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =97
                         X: =4
@@ -952,12 +958,6 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Visible: |-
-                                =If(
-                                    StartsWith(ThisItem.Nombre, "FILTRO"),
-                                    false,
-                                    true
-                                )
                             Width: =100
                             ZIndex: =1
 
