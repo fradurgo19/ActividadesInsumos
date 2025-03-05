@@ -391,6 +391,17 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
+                              Visible: |-
+                                =If(
+                                    CountRows(
+                                        Filter(
+                                            GaleriaCPP.AllItems,
+                                            StartsWith(Parte,"MTTO PREVENTIVO")
+                                        )
+                                    ) > 0,
+                                    true,
+                                    false
+                                )
                               Width: =90
                             Children:
                               - TextCanvas7_17:
@@ -400,6 +411,22 @@ Screens:
                                     Height: =48
                                     PaddingLeft: =15
                                     Text: ="Frecuencia"
+                                    Visible: |+
+                                      =If(
+                                          CountRows(
+                                              Filter(
+                                                  GaleriaCPP.AllItems,
+                                                  Or(
+                                                      Parte = "Equipo Frontal  Bomm Chasis",
+                                                      Parte = "Equipo Frontal Brazo Boom",
+                                                      Parte = "Equipo Frontal Balde"
+                                                  )
+                                              )
+                                          ) > 0,
+                                          true,
+                                          false
+                                      )
+
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =90
                         - Container97_9:
@@ -832,6 +859,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
+                                          Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                                           Width: =90
                                         Children:
                                           - TextCanvas25_6:
@@ -843,6 +871,7 @@ Screens:
                                                 Size: =10
                                                 Text: =ThisItem.Frecuencia
                                                 VerticalAlign: =VerticalAlign.Top
+                                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =90
                                     - Container97_6:
@@ -853,6 +882,16 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
+                                          Visible: |-
+                                            =If(
+                                                Or(
+                                                    ThisItem.Parte = "Equipo Frontal Bomm Chasis",
+                                                    ThisItem.Parte = "Equipo Frontal Brazo Boom",
+                                                    ThisItem.Parte = "Equipo Frontal Balde"
+                                                ),
+                                                true,
+                                                false
+                                            )
                                           Width: =70
                                         Children:
                                           - TextCanvas25_5:
@@ -864,6 +903,16 @@ Screens:
                                                 Size: =10
                                                 Text: =ThisItem.Medida
                                                 VerticalAlign: =VerticalAlign.Top
+                                                Visible: |+
+                                                  =If(
+                                                      Or(
+                                                          ThisItem.Parte = "Equipo Frontal Bomm Chasis",
+                                                          ThisItem.Parte = "Equipo Frontal Brazo Boom",
+                                                          ThisItem.Parte = "Equipo Frontal Balde"
+                                                      ),
+                                                      true,
+                                                      false
+                                                  )
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =70
                                     - Container97_7:
