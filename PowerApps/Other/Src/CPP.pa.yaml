@@ -416,16 +416,15 @@ Screens:
                                           CountRows(
                                               Filter(
                                                   GaleriaCPP.AllItems,
-                                                  Or(
-                                                      Parte = "Equipo Frontal  Bomm Chasis",
-                                                      Parte = "Equipo Frontal Brazo Boom",
-                                                      Parte = "Equipo Frontal Balde"
-                                                  )
+                                                  StartsWith(Parte,"MTTO PREVENTIVO")
                                               )
                                           ) > 0,
                                           true,
                                           false
                                       )
+
+
+
 
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =90
@@ -436,6 +435,21 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
+                              Visible: |-
+                                =If(
+                                    CountRows(
+                                        Filter(
+                                            GaleriaCPP.AllItems,
+                                            Or(
+                                                Parte = "Equipo Frontal  Bomm Chasis",
+                                                Parte = "Equipo Frontal Brazo Boom",
+                                                Parte = "Equipo Frontal Balde"
+                                            )
+                                        )
+                                    ) > 0,
+                                    true,
+                                    false
+                                )
                               Width: =70
                             Children:
                               - TextCanvas7_18:
@@ -445,6 +459,21 @@ Screens:
                                     Height: =46
                                     PaddingLeft: =15
                                     Text: ="Medida"
+                                    Visible: |-
+                                      =If(
+                                          CountRows(
+                                              Filter(
+                                                  GaleriaCPP.AllItems,
+                                                  Or(
+                                                      Parte = "Equipo Frontal  Bomm Chasis",
+                                                      Parte = "Equipo Frontal Brazo Boom",
+                                                      Parte = "Equipo Frontal Balde"
+                                                  )
+                                              )
+                                          ) > 0,
+                                          true,
+                                          false
+                                      )
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =70
                         - Container97_16:
