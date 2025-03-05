@@ -552,7 +552,7 @@ ResumenCPP As screen:
                     Height: =Parent.Height
                     Items: |+
                         =Sort(
-                            Distinct(colConcatenada, {No: No , Nombre:Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario,Tipo:Tipo,Recomendación:Recomendación,MarcaEquivalencia:MarcaEquivalencia,Equivalencia:Equivalencia}),
+                            Distinct(colConcatenada, {No: No , Nombre:Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario,Tipo:Tipo,Recomendación:Recomendación,MarcaEquivalencia:MarcaEquivalencia,EQUIVALENCIA1:EQUIVALENCIA1,EQUIVALENCIA2:EQUIVALENCIA2}),
                             Value.Cantidad
                         )
                         
@@ -767,7 +767,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Text: =ThisItem.Value.Equivalencia
+                            Text: =ThisItem.Value.EQUIVALENCIA2
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =90
                             X: =0

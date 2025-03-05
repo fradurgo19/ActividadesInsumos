@@ -128,10 +128,6 @@ CPP As screen:
                         No = ThisRecord.No
                     );
                     RemoveIf(
-                        colEquivalenciasSeleccionadas,
-                        RefSAP = ThisRecord.RefSAP
-                    );
-                    RemoveIf(
                         colConcatenada,
                         RefSAP = ThisRecord.RefSAP
                     );
@@ -643,105 +639,6 @@ CPP As screen:
                         X: =4
                         Y: =0
                         ZIndex: =1
-
-        Container38 As groupContainer.manualLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Height: =636
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Visible: =false
-            Width: =253
-            X: =817
-            Y: =52
-            ZIndex: =3
-
-            Container78 As groupContainer.horizontalAutoLayoutContainer:
-                DropShadow: =DropShadow.Light
-                Height: =636
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Width: =146
-                ZIndex: =1
-
-                "Gallery13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    DelayItemLoading: =true
-                    Items: |+
-                        =//AddColumns(Filter(ablaDataCpp; RefSAP = varSelectedItem.RefSAP);DatosEquivalentes; LookUp(TablaEquivalenciasCpp; RefSAP = RefSAP))
-                        colEquivalenciasSeleccionadas
-                        
-                        
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =250
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
-                    TemplatePadding: =0
-                    TemplateSize: =40
-                    ZIndex: =1
-
-                    Separator8 As rectangle:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        Height: =4
-                        OnSelect: =Select(Parent)
-                        Width: =Parent.TemplateWidth
-                        Y: =Parent.TemplateHeight - Self.Height
-                        ZIndex: =5
-
-                    Container81 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.Light
-                        Height: =40
-                        LayoutMode: =LayoutMode.Auto
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
-                        Width: =253
-                        ZIndex: =6
-
-                        TextCanvas9_21 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontItalic: =true
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =12
-                            Text: =ThisItem.Equivalencia
-                            VerticalAlign: =VerticalAlign.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =150
-                            X: =0
-                            Y: =0
-                            ZIndex: =2
-
-                        TextCanvas9_22 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontItalic: =true
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =12
-                            Text: =ThisItem.Marca
-                            VerticalAlign: =VerticalAlign.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =100
-                            X: =0
-                            Y: =0
-                            ZIndex: =3
 
         Container82 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -1266,25 +1163,24 @@ CPP As screen:
                         HoverColor: =App.Theme.Colors.Darker30
                         OnCheck: |+
                             =Collect(colAllSelectedItems, ThisItem);
-                            Collect(colEquivalenciasSeleccionadas,Filter(TablaEquivalenciasCpp, RefSAP = ThisItem.RefSAP));
                             // Limpia la colección concatenada si ya existe
                             Clear(colConcatenada);
                             
                             ForAll(
-                                colEquivalenciasSeleccionadas,
+                                Filter(TablaDataCpp, RefSAP = ThisItem.RefSAP),
                                 // Guarda el registro correspondiente en una variable temporal
                                 With(
                                     {
-                                        selectedItem: LookUp(colAllSelectedItems, RefSAP = colEquivalenciasSeleccionadas[@RefSAP])
+                                        selectedItem: LookUp(colAllSelectedItems, RefSAP = ThisItem.RefSAP)
                                     },
                                     Collect(
                                         colConcatenada,
                                         {
-                                            RefSAP: colEquivalenciasSeleccionadas[@RefSAP],
-                                            No: colEquivalenciasSeleccionadas[@No],
-                                            MarcaEquivalencia: colEquivalenciasSeleccionadas[@Marca],
-                                            Equivalencia: colEquivalenciasSeleccionadas[@Equivalencia],
-                                            // Utiliza la variable temporal para acceder a los valores de colAllSelectedItems
+                                            RefSAP: selectedItem.RefSAP,
+                                            No: selectedItem.No,
+                                            MarcaEquivalencia: selectedItem.Marca,
+                                            EQUIVALENCIA1: selectedItem.EQUIVALENCIA1,
+                                            EQUIVALENCIA2: selectedItem.EQUIVALENCIA2,
                                             Marca: selectedItem.Marca,
                                             Nombre: selectedItem.Nombre,
                                             Cantidad: selectedItem.Cantidad,
@@ -1301,20 +1197,14 @@ CPP As screen:
                                 )
                             );
                             
-                            
-                            
                             Set(varCheckboxChecked, true);
-                            
-                            
-                            
-                            
                             
                             
                             
                             
                         OnSelect: =Select(Parent)
                         OnUncheck: |-
-                            =Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);RemoveIf(colEquivalenciasSeleccionadas, RefSAP = ThisItem.RefSAP);
+                            =Remove(colAllSelectedItems,ThisItem);Set(varCheckboxChecked, false);
                             // Elimina de colConcatenada los registros que coincidan con el RefSAP de ThisItem
                             RemoveIf(colConcatenada, RefSAP = ThisItem.RefSAP)
                         Size: =13

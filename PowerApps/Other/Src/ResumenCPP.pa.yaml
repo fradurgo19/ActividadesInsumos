@@ -442,7 +442,7 @@ Screens:
                               Height: =Parent.Height
                               Items: |+
                                 =Sort(
-                                    Distinct(colConcatenada, {No: No , Nombre:Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario,Tipo:Tipo,Recomendación:Recomendación,MarcaEquivalencia:MarcaEquivalencia,Equivalencia:Equivalencia}),
+                                    Distinct(colConcatenada, {No: No , Nombre:Nombre, Marca: Marca, Modelo: Modelo, Parte: Parte, RefSAP: RefSAP, Cantidad:Cantidad, Frecuencia:Frecuencia, Medida:Medida,Comentario:Comentario,Tipo:Tipo,Recomendación:Recomendación,MarcaEquivalencia:MarcaEquivalencia,EQUIVALENCIA1:EQUIVALENCIA1,EQUIVALENCIA2:EQUIVALENCIA2}),
                                     Value.Cantidad
                                 )
 
@@ -588,7 +588,7 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
-                                          Text: =ThisItem.Value.Equivalencia
+                                          Text: =ThisItem.Value.EQUIVALENCIA2
                                           Weight: ='TextCanvas.Weight'.Semibold
                                           Width: =90
                                     - TextInput2:
