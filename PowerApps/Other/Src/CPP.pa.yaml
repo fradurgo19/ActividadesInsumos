@@ -528,7 +528,7 @@ Screens:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =49
                                     PaddingLeft: =15
-                                    Text: |+
+                                    Text: |
                                       =If(
                                           CountRows(
                                               Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
@@ -878,7 +878,7 @@ Screens:
                                                 Size: =10
                                                 Text: =ThisItem.Medida
                                                 VerticalAlign: =VerticalAlign.Top
-                                                Visible: |+
+                                                Visible: |
                                                   =If(
                                                       Or(
                                                           ThisItem.Parte = "Equipo Frontal Bomm Chasis",
