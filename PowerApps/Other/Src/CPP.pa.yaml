@@ -533,7 +533,7 @@ Screens:
                                           CountRows(
                                               Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
                                           ) > 0,
-                                          "FLEETGUARD",
+                                          "STAL",
                                           "Equivalencia2" // Puedes cambiar esto según lo que necesites
                                       )
                                     VerticalAlign: =VerticalAlign.Middle
@@ -1171,6 +1171,7 @@ Screens:
                   - DropModelo1:
                       Control: Classic/ComboBox@2.4.0
                       Properties:
+                        AlignInContainer: =AlignInContainer.Center
                         BorderColor: =RGBA(166, 166, 166, 1)
                         ChevronBackground: =RGBA(255, 255, 255, 1)
                         ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
@@ -1211,6 +1212,7 @@ Screens:
                   - DropParte1:
                       Control: Classic/ComboBox@2.4.0
                       Properties:
+                        AlignInContainer: =AlignInContainer.Center
                         BorderColor: =RGBA(166, 166, 166, 1)
                         ChevronBackground: =RGBA(255, 255, 255, 1)
                         ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
@@ -1228,6 +1230,10 @@ Screens:
                         IsSearchable: =false
                         Items: =Distinct(Filter(TablaDataCpp, Modelo in DropModelo1.Selected.Value),Parte)
                         OnChange: =
+                        PaddingBottom: =1
+                        PaddingLeft: =1
+                        PaddingRight: =1
+                        PaddingTop: =1
                         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         PressedColor: =RGBA(0, 0, 0, 1)
                         PressedFill: =RGBA(40, 134, 222, 1)
@@ -1235,7 +1241,7 @@ Screens:
                         SelectMultiple: =false
                         SelectionColor: =RGBA(255, 255, 255, 1)
                         SelectionFill: =RGBA(215, 58, 60, 1)
-                        Size: =9
+                        Size: =8
                         Width: =115
                         Y: =331
             - Container28_3:
