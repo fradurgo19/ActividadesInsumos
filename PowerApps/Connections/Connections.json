@@ -1,5 +1,8 @@
 {
   "843c10cc-c110-47d9-a24d-fa49c3541ba1": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
     "connectionRef": {
       "displayName": "SharePoint",
       "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
@@ -29,6 +32,9 @@
           },
           "Seguimiento Clientes Equipos Telemetría": {
             "tableName": "ae7cfbd7-d396-4011-9aa5-d5bf2788ef69"
+          },
+          "TEMPARIO DE MANTENIMIENTOS": {
+            "tableName": "48fe5577-206a-4614-97a6-9811485fe0b5"
           }
         }
       }
@@ -39,12 +45,14 @@
       "Seguimiento Clientes Equipos Telemetría",
       "Oportunidades de encuestas",
       "ActividadIniciodeApp",
-      "Manuales_1"
+      "Manuales_1",
+      "TEMPARIO DE MANTENIMIENTOS"
     ],
     "dependencies": {},
     "dependents": [
       "a6f106ef-6900-4c3e-bb70-fa7f3a054838"
     ],
+    "endpoints": [],
     "id": "843c10cc-c110-47d9-a24d-fa49c3541ba1"
   },
   "a6f106ef-6900-4c3e-bb70-fa7f3a054838": {
@@ -126,34 +134,6 @@
     },
     "dependents": [],
     "id": "b235294e-621e-4896-ba41-d9a4779af503"
-  },
-  "b98e2c49-ea9d-4d74-9ddd-b96c684783c8": {
-    "appActions": [
-      "providers/PowerPlatform.Governance/Operations/Read"
-    ],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1685/1.0.1685.3700/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {
-      "https://partequipos2.sharepoint.com/sites/servicioposventa": {
-        "dataSources": {
-          "TEMPARIO DE MANTENIMIENTOS": {
-            "tableName": "48fe5577-206a-4614-97a6-9811485fe0b5"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "TEMPARIO DE MANTENIMIENTOS"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "b98e2c49-ea9d-4d74-9ddd-b96c684783c8"
   },
   "c26b658f-4ce9-4741-a913-41539126ed34": {
     "connectionRef": {
