@@ -429,7 +429,7 @@ Screens:
                                     Height: =Parent.Height
                                     Items: |-
                                       =Filter(
-                                          Manuales,
+                                          Manuales_1,
                                           (TextInputCanvas1.Value in Nombre || IsBlank(TextInputCanvas1.Value)) &&
                                           hiddenFolderPath = varPatch
                                       )

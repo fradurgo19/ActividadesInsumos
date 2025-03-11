@@ -6,6 +6,13 @@
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {
+      "https://partequipos2.sharepoint.com/sites/seguimientocomercial": {
+        "dataSources": {
+          "Manuales_1": {
+            "tableName": "ea585cbe-03fc-44da-a8f0-2f9ab814660a"
+          }
+        }
+      },
       "https://partequipos2.sharepoint.com/sites/servicioposventa": {
         "dataSources": {
           "ActividadIniciodeApp": {
@@ -31,7 +38,8 @@
       "PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)",
       "Seguimiento Clientes Equipos Telemetría",
       "Oportunidades de encuestas",
-      "ActividadIniciodeApp"
+      "ActividadIniciodeApp",
+      "Manuales_1"
     ],
     "dependencies": {},
     "dependents": [
