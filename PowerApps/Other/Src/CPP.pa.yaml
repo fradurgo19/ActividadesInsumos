@@ -224,7 +224,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =100
+                              Width: =Parent.Width/10
                             Children:
                               - TextCanvas7_12:
                                   Control: Text@0.0.50
@@ -246,7 +246,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =50
+                              Width: =Parent.Width/10
                             Children:
                               - TextCanvas7_16:
                                   Control: Text@0.0.50
@@ -267,7 +267,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =140
+                              Width: =Parent.Width/10
                             Children:
                               - TextCanvas7_11:
                                   Control: Text@0.0.50
@@ -288,7 +288,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =90
+                              Width: =Parent.Width/10
                             Children:
                               - DropMarca1_1:
                                   Control: Classic/ComboBox@2.4.0
@@ -330,7 +330,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =90
+                              Width: =Parent.Width/10
                             Children:
                               - DropModelo1_1:
                                   Control: Classic/ComboBox@2.4.0
@@ -384,7 +384,7 @@ Screens:
                                     true,
                                     false
                                 )
-                              Width: =90
+                              Width: =Parent.Width/10
                             Children:
                               - TextCanvas7_17:
                                   Control: Text@0.0.50
@@ -434,7 +434,7 @@ Screens:
                                     true,
                                     false
                                 )
-                              Width: =70
+                              Width: =Parent.Width/10
                             Children:
                               - TextCanvas7_18:
                                   Control: Text@0.0.50
@@ -467,7 +467,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =150
+                              Width: =Parent.Width/10
                             Children:
                               - TextCanvas7_19:
                                   Control: Text@0.0.50
@@ -488,7 +488,7 @@ Screens:
                               AlignInContainer: =AlignInContainer.Start
                               FillPortions: =0
                               Height: =52
-                              Width: =120
+                              Width: =Parent.Width/10
                               X: =763
                             Children:
                               - TextCanvas7_42:
@@ -529,7 +529,7 @@ Screens:
                                     true,
                                     false
                                 )
-                              Width: =120
+                              Width: =Parent.Width/10
                               X: =105
                             Children:
                               - TextCanvas7_43:
@@ -582,7 +582,7 @@ Screens:
                                     true,
                                     false
                                 )
-                              Width: =120
+                              Width: =Parent.Width/10
                               X: =105
                             Children:
                               - TextCanvas7_44:
