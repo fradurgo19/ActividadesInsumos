@@ -452,8 +452,8 @@ ResumenCPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
-                    Text: ="Equivalencia1"
-                    Width: =90
+                    Text: ="Equiva 1"
+                    Width: =60
                     X: =0
                     Y: =0
                     ZIndex: =12
@@ -467,11 +467,26 @@ ResumenCPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
-                    Text: ="Equivalencia2"
-                    Width: =90
+                    Text: ="Equiva 2"
+                    Width: =60
                     X: =0
                     Y: =0
                     ZIndex: =13
+
+                TextCanvas29_16 As Texto:
+                    BorderColor: =RGBA(214, 221, 224, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =1
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingLeft: =3
+                    Text: ="Equiva 3"
+                    Width: =60
+                    X: =0
+                    Y: =0
+                    ZIndex: =14
 
                 TextCanvas29_12 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -486,7 +501,7 @@ ResumenCPP As screen:
                     Width: =60
                     X: =0
                     Y: =0
-                    ZIndex: =14
+                    ZIndex: =15
 
                 TextCanvas29_13 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -501,7 +516,7 @@ ResumenCPP As screen:
                     Width: =40
                     X: =0
                     Y: =0
-                    ZIndex: =15
+                    ZIndex: =16
 
                 TextCanvas29_14 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -516,7 +531,7 @@ ResumenCPP As screen:
                     Width: =50
                     X: =0
                     Y: =0
-                    ZIndex: =16
+                    ZIndex: =17
 
                 TextCanvas29_15 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -531,7 +546,7 @@ ResumenCPP As screen:
                     Width: =110
                     X: =0
                     Y: =0
-                    ZIndex: =17
+                    ZIndex: =18
 
             Container11_1 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -764,10 +779,24 @@ ResumenCPP As screen:
                             LayoutMinWidth: =96
                             Text: =ThisItem.EQUIVALENCIA2
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
+                            Width: =60
                             X: =0
                             Y: =0
                             ZIndex: =13
+
+                        TextCanvas19_5 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Open Sans'
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: =ThisItem.EQUIVALENCIA3
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =60
+                            X: =0
+                            Y: =0
+                            ZIndex: =14
 
                         TextInput2 As text:
                             Align: =Align.Center
@@ -791,7 +820,7 @@ ResumenCPP As screen:
                             Width: =40
                             X: =634
                             Y: =6
-                            ZIndex: =14
+                            ZIndex: =15
 
                         TextCanvas27 As Texto:
                             AlignInContainer: =AlignInContainer.Center
@@ -808,7 +837,7 @@ ResumenCPP As screen:
                             Width: =40
                             X: =0
                             Y: =0
-                            ZIndex: =15
+                            ZIndex: =16
 
                         Icon3 As icon.Trash:
                             AlignInContainer: =AlignInContainer.Center
@@ -829,7 +858,7 @@ ResumenCPP As screen:
                             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)
                             Width: =40
-                            ZIndex: =16
+                            ZIndex: =17
 
                         TextCanvas19_4 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -842,5 +871,5 @@ ResumenCPP As screen:
                             Width: =120
                             X: =0
                             Y: =0
-                            ZIndex: =17
+                            ZIndex: =18
 

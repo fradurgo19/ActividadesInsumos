@@ -372,8 +372,8 @@ Screens:
                               BorderThickness: =1
                               Height: =Parent.Height
                               PaddingLeft: =3
-                              Text: ="Equivalencia1"
-                              Width: =90
+                              Text: ="Equiva 1"
+                              Width: =60
                         - TextCanvas29_7:
                             Control: Text@0.0.50
                             Properties:
@@ -382,8 +382,18 @@ Screens:
                               BorderThickness: =1
                               Height: =Parent.Height
                               PaddingLeft: =3
-                              Text: ="Equivalencia2"
-                              Width: =90
+                              Text: ="Equiva 2"
+                              Width: =60
+                        - TextCanvas29_16:
+                            Control: Text@0.0.50
+                            Properties:
+                              BorderColor: =RGBA(214, 221, 224, 1)
+                              BorderStyle: =BorderStyle.Solid
+                              BorderThickness: =1
+                              Height: =Parent.Height
+                              PaddingLeft: =3
+                              Text: ="Equiva 3"
+                              Width: =60
                         - TextCanvas29_12:
                             Control: Text@0.0.50
                             Properties:
@@ -581,7 +591,16 @@ Screens:
                                           Height: =Parent.Height
                                           Text: =ThisItem.EQUIVALENCIA2
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =90
+                                          Width: =60
+                                    - TextCanvas19_5:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          Align: ='TextCanvas.Align'.Center
+                                          Font: =Font.'Open Sans'
+                                          Height: =Parent.Height
+                                          Text: =ThisItem.EQUIVALENCIA3
+                                          Weight: ='TextCanvas.Weight'.Semibold
+                                          Width: =60
                                     - TextInput2:
                                         Control: Classic/TextInput@2.3.2
                                         Properties:
