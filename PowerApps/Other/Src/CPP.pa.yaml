@@ -651,43 +651,6 @@ Screens:
                               PressedBorderColor: =RGBA(0, 0, 0, 0)
                               PressedFill: =RGBA(0, 0, 0, 0)
                               Width: =If(HoverImage21, 300, 150) // Cambia el tamaño a 300 cuando el cursor esté sobre la imagen
-            - Container83:
-                Control: GroupContainer@1.3.0
-                Variant: ManualLayout
-                Properties:
-                  Height: =52
-                  Width: =15
-                  X: =1055
-                Children:
-                  - Container10_1:
-                      Control: GroupContainer@1.3.0
-                      Variant: AutoLayout
-                      Properties:
-                        Fill: =RGBA(171, 181, 184, 1)
-                        Height: =49
-                        LayoutDirection: =LayoutDirection.Horizontal
-                        Width: =254
-                      Children:
-                        - TextCanvas2_1:
-                            Control: Text@0.0.50
-                            Properties:
-                              Align: ='TextCanvas.Align'.Center
-                              AlignInContainer: =AlignInContainer.Center
-                              FontColor: =RGBA(255, 255, 255, 1)
-                              Text: ="Equivalencia"
-                              Visible: |
-                                =true
-                              Weight: ='TextCanvas.Weight'.Semibold
-                              Width: =120
-                        - TextCanvas2_3:
-                            Control: Text@0.0.50
-                            Properties:
-                              Align: ='TextCanvas.Align'.Center
-                              AlignInContainer: =AlignInContainer.Center
-                              FontColor: =RGBA(255, 255, 255, 1)
-                              Text: ="Marca"
-                              Weight: ='TextCanvas.Weight'.Semibold
-                              Width: =120
             - Container85:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout
@@ -719,7 +682,7 @@ Screens:
                 Variant: ManualLayout
                 Properties:
                   Height: =636
-                  Width: =1070
+                  Width: =1055
                   Y: =52
                 Children:
                   - Container30:
@@ -728,7 +691,7 @@ Screens:
                       Properties:
                         Height: =636
                         LayoutDirection: =LayoutDirection.Horizontal
-                        Width: =1070
+                        Width: =1058
                       Children:
                         - GaleriaCPP:
                             Control: Gallery@2.15.0
