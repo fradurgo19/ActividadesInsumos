@@ -224,7 +224,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/11
                             Children:
                               - TextCanvas7_12:
                                   Control: Text@0.0.50
@@ -246,7 +246,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =Parent.Width/10
+                              Width: =50
                             Children:
                               - TextCanvas7_16:
                                   Control: Text@0.0.50
@@ -267,7 +267,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/8
                             Children:
                               - TextCanvas7_11:
                                   Control: Text@0.0.50
@@ -280,7 +280,7 @@ Screens:
                                     Text: ="Nombre"
                                     VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =140
+                                    Width: =106
                         - Container97_12:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -288,7 +288,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/11
                             Children:
                               - DropMarca1_1:
                                   Control: Classic/ComboBox@2.4.0
@@ -330,7 +330,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/11
                             Children:
                               - DropModelo1_1:
                                   Control: Classic/ComboBox@2.4.0
@@ -434,7 +434,7 @@ Screens:
                                     true,
                                     false
                                 )
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/9
                             Children:
                               - TextCanvas7_18:
                                   Control: Text@0.0.50
@@ -467,7 +467,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/8
                             Children:
                               - TextCanvas7_19:
                                   Control: Text@0.0.50
@@ -480,7 +480,7 @@ Screens:
                                     Text: ="Comentario"
                                     VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =150
+                                    Width: =106
                         - Container97_18:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -488,7 +488,7 @@ Screens:
                               AlignInContainer: =AlignInContainer.Start
                               FillPortions: =0
                               Height: =52
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/9
                               X: =763
                             Children:
                               - TextCanvas7_42:
@@ -529,7 +529,7 @@ Screens:
                                     true,
                                     false
                                 )
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/9
                               X: =105
                             Children:
                               - TextCanvas7_43:
@@ -561,7 +561,7 @@ Screens:
                                           false
                                       )
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =120
+                                    Width: =110
                                     X: =4
                         - Container97_22:
                             Control: GroupContainer@1.3.0
@@ -582,7 +582,7 @@ Screens:
                                     true,
                                     false
                                 )
-                              Width: =Parent.Width/10
+                              Width: =Parent.Width/9
                               X: =105
                             Children:
                               - TextCanvas7_44:
@@ -613,7 +613,7 @@ Screens:
                                           false
                                       )
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =120
+                                    Width: =102
                                     X: =4
             - Container82:
                 Control: GroupContainer@1.3.0
@@ -862,7 +862,7 @@ Screens:
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
                                           Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                                          Width: =90
+                                          Width: =105
                                         Children:
                                           - TextCanvas25_6:
                                               Control: Text@0.0.50
@@ -925,7 +925,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Width: =150
+                                          Width: =130
                                         Children:
                                           - TextCanvas25_7:
                                               Control: Text@0.0.50
