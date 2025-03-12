@@ -438,7 +438,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Comentario"
-                    Width: =120
+                    Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =11
@@ -452,8 +452,8 @@ ResumenCPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
-                    Text: ="Equiva 1"
-                    Width: =60
+                    Text: ="Equiva 1 / Donaldson "
+                    Width: =70
                     X: =0
                     Y: =0
                     ZIndex: =12
@@ -467,8 +467,8 @@ ResumenCPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
-                    Text: ="Equiva 2"
-                    Width: =60
+                    Text: ="Equiva 2 / Stal"
+                    Width: =70
                     X: =0
                     Y: =0
                     ZIndex: =13
@@ -482,8 +482,8 @@ ResumenCPP As screen:
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
-                    Text: ="Equiva 3"
-                    Width: =60
+                    Text: ="Equiva 3 / "
+                    Width: =70
                     X: =0
                     Y: =0
                     ZIndex: =14
@@ -543,7 +543,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Recomendación"
-                    Width: =110
+                    Width: =105
                     X: =0
                     Y: =0
                     ZIndex: =18
@@ -748,7 +748,7 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =13
+                            Size: =9
                             Text: =ThisItem.Comentario
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =100
@@ -765,7 +765,7 @@ ResumenCPP As screen:
                             LayoutMinWidth: =96
                             Text: =ThisItem.EQUIVALENCIA1
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =12
@@ -779,7 +779,7 @@ ResumenCPP As screen:
                             LayoutMinWidth: =96
                             Text: =ThisItem.EQUIVALENCIA2
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =60
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =13
@@ -793,7 +793,7 @@ ResumenCPP As screen:
                             LayoutMinWidth: =96
                             Text: =ThisItem.EQUIVALENCIA3
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =60
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =14
@@ -861,12 +861,14 @@ ResumenCPP As screen:
                             ZIndex: =17
 
                         TextCanvas19_4 As Texto:
+                            Align: ='TextCanvas.Align'.Center
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Text: =ThisItem.Recomendación
+                            VerticalAlign: =VerticalAlign.Top
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =120
                             X: =0
