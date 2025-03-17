@@ -381,7 +381,7 @@ Screens:
                                     BorderRadiusTopLeft: =1
                                     BorderRadiusTopRight: =1
                                     FontColor: =RGBA(9, 33, 98, 1)
-                                    Height: =48
+                                    Height: =70
                                     Size: =15
                                     Text: ="Busquedad dentro de Carpeta especifica"
                                     Width: =174
@@ -397,8 +397,8 @@ Screens:
                                     BorderThickness: =2
                                     FontColor: =RGBA(9, 33, 98, 1)
                                     FontWeight: =FontWeight.Bold
-                                    Height: =48
-                                    X: =174
+                                    Height: =70
+                                    X: =TextCanvas1.X + TextCanvas1.Width
                                     Y: =280
                   - Container32:
                       Control: GroupContainer@1.3.0
