@@ -171,6 +171,7 @@ Screens:
                                   Properties:
                                     Appearance: ='TextInputCanvas.Appearance'.Outline
                                     Fill: =RGBA(255, 255, 0, 1)
+                                    FontSize: =11
                                     Height: =30
                                     OnChange: =
                                     Placeholder: ="Hora Inicial"
@@ -220,6 +221,7 @@ Screens:
                                   Control: TextInput@0.0.53
                                   Properties:
                                     Fill: =RGBA(255, 255, 0, 1)
+                                    FontSize: =11
                                     Placeholder: ="Hora Final"
                                     Width: =112
                                     X: =6
@@ -266,6 +268,7 @@ Screens:
                             Properties:
                               Fill: =RGBA(255, 184, 174, 1)
                               Height: =37
+                              Size: =11
                               Text: ="Cantidad de Equipos:"
                               Width: =143
                   - TextInputCanvas7:
@@ -580,13 +583,14 @@ Screens:
                             Properties:
                               Fill: =RGBA(255, 184, 174, 1)
                               Height: =37
-                              Size: =12
+                              Size: =11
                               Text: ="Tiempo De Desplazamiento Hrs ( 1 Trayecto)"
                               Width: =201
                   - TextInputCanvas7_1:
                       Control: TextInput@0.0.53
                       Properties:
                         Fill: =RGBA(255, 255, 0, 1)
+                        FontSize: =11
                         Height: =38
                         OnChange: |
                           =Set(Valor1, Value(TextInputCanvas7_1.Value) * 2 * 65000);
@@ -658,6 +662,7 @@ Screens:
                       Control: TextInput@0.0.53
                       Properties:
                         Fill: =RGBA(255, 255, 0, 1)
+                        FontSize: =11
                         Height: =30
                         OnChange: |
                           =Set(Valor1, Value(TextInputCanvas7_1.Value) * 2 * 65000);

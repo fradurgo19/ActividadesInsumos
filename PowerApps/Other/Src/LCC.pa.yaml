@@ -219,19 +219,19 @@ Screens:
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =50
-                                                Size: =10
+                                                Size: =9
                                                 Text: =ThisItem.Tarea
-                                                Width: =92
+                                                Width: =99
                                                 X: =69
                                           - TextCanvas47_2:
                                               Control: Text@0.0.50
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =50
-                                                Size: =13
+                                                Size: =11
                                                 Text: =ThisItem.Horometro
                                                 Width: =46
-                                                X: =161
+                                                X: =168
                                           - TextCanvas47_4:
                                               Control: Text@0.0.50
                                               Properties:
@@ -245,7 +245,7 @@ Screens:
                                               Control: Text@0.0.50
                                               Properties:
                                                 Height: =50
-                                                Size: =13
+                                                Size: =12
                                                 Text: =ThisItem.TipodeMaquina
                                                 Width: =69
                                           - TextCanvas47_5:
@@ -299,7 +299,7 @@ Screens:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =Parent.Height
                                     PaddingLeft: =3
-                                    Text: ="Qty  No.Parte"
+                                    Text: ="Qty || Name"
                                     Width: =120
                         - Container88:
                             Control: GroupContainer@1.3.0

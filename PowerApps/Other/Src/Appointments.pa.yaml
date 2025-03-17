@@ -793,9 +793,15 @@ Screens:
                       Control: Text@0.0.50
                       Properties:
                         Height: =33
-                        Size: =10
-                        Text: |
-                          ="Última actualización: " & Text(LookUp('Seguimiento Clientes Equipos Telemetría', ID = Max('Seguimiento Clientes Equipos Telemetría', ID)).Modificado, "[$-es-ES]dd/mm/yyyy")
+                        Size: =9
+                        Text: |+
+                          ="Última actualización: " & Text(
+                              First(
+                                  SortByColumns('Seguimiento Clientes Equipos Telemetría', "Created", "Descending")
+                              ).Creado,
+                              "[$-es-ES]dd/mm/yyyy"
+                          )
+
                         Weight: ='TextCanvas.Weight'.Bold
                         Width: =227
                         X: =774
@@ -804,7 +810,7 @@ Screens:
                       Control: Text@0.0.50
                       Properties:
                         Height: =78
-                        Size: =10
+                        Size: =9
                         Text: |-
                           ="Versión: " & App.StudioVersion & ": Se agregan rutinas de Mttos Preventivos de ejecución unica en toda la vida de la maquina, Ejemplo: Primeras 250 horas y se agrega Marca Hitachi."
                         Weight: ='TextCanvas.Weight'.Bold
