@@ -513,7 +513,7 @@ Screens:
                                         Properties:
                                           FontSize: =12
                                           Height: =29
-                                          OnSelect: =Launch("https://partequipos2.sharepoint.com/sites/servicioposventa/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
+                                          OnSelect: =Launch("https://partequipos2.sharepoint.com/sites/seguimientocomercial/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
                                           Text: ="Download"
                                           Visible: =!ThisItem.EsCarpeta
                                           Width: =65
