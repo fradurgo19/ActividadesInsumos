@@ -292,21 +292,6 @@ ResumenCPP As screen:
                     Y: =0
                     ZIndex: =1
 
-                TextCanvas29_8 As Texto:
-                    BorderColor: =RGBA(214, 221, 224, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    BorderThickness: =1
-                    DisplayMode: =DisplayMode.Edit
-                    Height: =Parent.Height
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    PaddingLeft: =3
-                    Text: ="Q"
-                    Width: =40
-                    X: =0
-                    Y: =0
-                    ZIndex: =2
-
                 TextCanvas29 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
                     BorderStyle: =BorderStyle.Solid
@@ -318,6 +303,21 @@ ResumenCPP As screen:
                     PaddingLeft: =3
                     Text: ="Nombre"
                     Width: =160
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                TextCanvas29_8 As Texto:
+                    BorderColor: =RGBA(214, 221, 224, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =1
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingLeft: =3
+                    Text: ="Q"
+                    Width: =40
                     X: =0
                     Y: =0
                     ZIndex: =3
@@ -620,19 +620,6 @@ ResumenCPP As screen:
                             Y: =0
                             ZIndex: =1
 
-                        TextCanvas23 As Texto:
-                            DisplayMode: =DisplayMode.Edit
-                            Font: =Font.'Open Sans'
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: =ThisItem.Cantidad
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =40
-                            X: =0
-                            Y: =0
-                            ZIndex: =2
-
                         TextCanvas15 As Texto:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
@@ -643,6 +630,19 @@ ResumenCPP As screen:
                             Text: =ThisItem.Nombre
                             Weight: ='TextCanvas.Weight'.Semibold
                             Width: =150
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas23 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Open Sans'
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: =ThisItem.Cantidad
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =40
                             X: =0
                             Y: =0
                             ZIndex: =3

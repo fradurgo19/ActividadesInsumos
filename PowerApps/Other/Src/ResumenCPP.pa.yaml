@@ -265,16 +265,6 @@ Screens:
                               PaddingLeft: =3
                               Text: ="P/N Original"
                               Width: =90
-                        - TextCanvas29_8:
-                            Control: Text@0.0.50
-                            Properties:
-                              BorderColor: =RGBA(214, 221, 224, 1)
-                              BorderStyle: =BorderStyle.Solid
-                              BorderThickness: =1
-                              Height: =Parent.Height
-                              PaddingLeft: =3
-                              Text: ="Q"
-                              Width: =40
                         - TextCanvas29:
                             Control: Text@0.0.50
                             Properties:
@@ -285,6 +275,16 @@ Screens:
                               PaddingLeft: =3
                               Text: ="Nombre"
                               Width: =160
+                        - TextCanvas29_8:
+                            Control: Text@0.0.50
+                            Properties:
+                              BorderColor: =RGBA(214, 221, 224, 1)
+                              BorderStyle: =BorderStyle.Solid
+                              BorderThickness: =1
+                              Height: =Parent.Height
+                              PaddingLeft: =3
+                              Text: ="Q"
+                              Width: =40
                         - TextCanvas28:
                             Control: Text@0.0.50
                             Properties:
@@ -490,14 +490,6 @@ Screens:
                                           Text: =ThisItem.RefSAP
                                           Weight: ='TextCanvas.Weight'.Semibold
                                           Width: =90
-                                    - TextCanvas23:
-                                        Control: Text@0.0.50
-                                        Properties:
-                                          Font: =Font.'Open Sans'
-                                          Height: =Parent.Height
-                                          Text: =ThisItem.Cantidad
-                                          Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =40
                                     - TextCanvas15:
                                         Control: Text@0.0.50
                                         Properties:
@@ -507,6 +499,14 @@ Screens:
                                           Text: =ThisItem.Nombre
                                           Weight: ='TextCanvas.Weight'.Semibold
                                           Width: =150
+                                    - TextCanvas23:
+                                        Control: Text@0.0.50
+                                        Properties:
+                                          Font: =Font.'Open Sans'
+                                          Height: =Parent.Height
+                                          Text: =ThisItem.Cantidad
+                                          Weight: ='TextCanvas.Weight'.Semibold
+                                          Width: =40
                                     - TextCanvas14:
                                         Control: Text@0.0.50
                                         Properties:
