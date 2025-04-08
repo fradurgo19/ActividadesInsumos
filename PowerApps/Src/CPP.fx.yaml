@@ -56,7 +56,7 @@ CPP As screen:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =277
-            X: =Container118.X + Container118.Width + 10
+            X: =ButtonCanvas4_4.X + ButtonCanvas4_4.Width + 50
             ZIndex: =3
 
             ButtonCanvas6_2 As Botón:
@@ -140,8 +140,8 @@ CPP As screen:
             Text: ="Borrar Selección"
             Visible: =true
             Width: =36
-            X: =Container118.X - Container118.Width + 20
-            Y: =0
+            X: =Arrow1_1.X + Arrow1_1.Width + 90
+            Y: =20
             ZIndex: =9
 
         Container118 As groupContainer.manualLayoutContainer:
@@ -152,7 +152,7 @@ CPP As screen:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =120
-            X: =Arrow1_1.X - Arrow1_1.Width + 280
+            X: =Container33.X + Container33.Width + 50
             ZIndex: =10
 
             ButtonCanvas8 As Botón:

@@ -63,7 +63,7 @@ Screens:
                   Height: =54
                   LayoutDirection: =LayoutDirection.Horizontal
                   Width: =277
-                  X: =Container118.X + Container118.Width + 10
+                  X: =ButtonCanvas4_4.X + ButtonCanvas4_4.Width + 50
                 Children:
                   - ButtonCanvas6_2:
                       Control: Button@0.0.44
@@ -140,14 +140,15 @@ Screens:
                     UpdateContext({varCheckboxChecked: !Checkbox1.Value});
                   Text: ="Borrar Selección"
                   Width: =36
-                  X: =Container118.X - Container118.Width + 20
+                  X: =Arrow1_1.X + Arrow1_1.Width + 90
+                  Y: =20
             - Container118:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout
                 Properties:
                   Height: =29
                   Width: =120
-                  X: =Arrow1_1.X - Arrow1_1.Width + 280
+                  X: =Container33.X + Container33.Width + 50
                 Children:
                   - ButtonCanvas8:
                       Control: Button@0.0.44
