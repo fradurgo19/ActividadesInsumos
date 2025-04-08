@@ -62,11 +62,12 @@ CPP As screen:
             ButtonCanvas6_2 As Botón:
                 BasePaletteColor: =RGBA(249, 83, 109, 1)
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =10
                 Height: =Parent.Height
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Reset(TextInputCanvas6); Reset(DropMarca1_1);Reset(DropModelo1_1)
-                Text: ="Limpiar"
+                Text: ="Limpiar Busquedad"
                 Width: =56
                 X: =122
                 Y: =39
@@ -1654,9 +1655,10 @@ CPP As screen:
         ButtonCanvas6 As Botón:
             BasePaletteColor: =RGBA(249, 83, 109, 1)
             DisplayMode: =DisplayMode.Edit
+            FontSize: =9
             Height: =25
             OnSelect: =Reset(DropMarca1);Reset(DropModelo1);Reset(DropParte1);Reset(DropTipo1);Reset(DropFrecuencia1)
-            Text: ="Limpiar"
+            Text: ="Limpiar Busquedad"
             Width: =56
             X: =Container14.X
             Y: =35
