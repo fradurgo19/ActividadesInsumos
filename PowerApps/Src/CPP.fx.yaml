@@ -942,7 +942,7 @@ CPP As screen:
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                            Width: =120
+                            Width: =117
                             ZIndex: =3
 
                             TextCanvas25_10 As Texto:
@@ -970,7 +970,7 @@ CPP As screen:
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                            Width: =120
+                            Width: =117
                             ZIndex: =4
 
                             TextCanvas25_11 As Texto:
@@ -998,7 +998,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =140
+                            Width: =132
                             ZIndex: =5
 
                             TextCanvas25 As Texto:
@@ -1011,7 +1011,7 @@ CPP As screen:
                                 Text: =ThisItem.Nombre
                                 VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =140
+                                Width: =Parent.Width
                                 Wrap: =true
                                 X: =0
                                 Y: =0
