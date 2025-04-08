@@ -425,7 +425,7 @@ Screens:
                               LayoutMinWidth: =100
                               Visible: |+
                                 =If(
-                                    !IsBlank(DropModelo1.Selected.Value),
+                                    IsBlank(DropModelo1.Selected.Value),
                                     true,
                                     false
                                 )
@@ -473,7 +473,7 @@ Screens:
                               LayoutMinWidth: =100
                               Visible: |-
                                 =If(
-                                    !IsBlank(DropModelo1.Selected.Value),
+                                    IsBlank(DropModelo1.Selected.Value),
                                     true,
                                     false
                                 )
@@ -901,7 +901,7 @@ Screens:
                                           LayoutMinWidth: =100
                                           Visible: |+
                                             =If(
-                                                !IsBlank(DropModelo1.Selected.Value),
+                                                IsBlank(DropModelo1.Selected.Value),
                                                 true,
                                                 false
                                             )
@@ -928,7 +928,7 @@ Screens:
                                           LayoutMinWidth: =100
                                           Visible: |+
                                             =If(
-                                                !IsBlank(DropModelo1.Selected.Value),
+                                                IsBlank(DropModelo1.Selected.Value),
                                                 true,
                                                 false
                                             )

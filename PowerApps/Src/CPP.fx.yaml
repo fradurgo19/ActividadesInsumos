@@ -495,7 +495,7 @@ CPP As screen:
                     RadiusTopRight: =4
                     Visible: |
                         =If(
-                            !IsBlank(DropModelo1.Selected.Value),
+                            IsBlank(DropModelo1.Selected.Value),
                             true,
                             false
                         )
@@ -544,7 +544,7 @@ CPP As screen:
                     RadiusTopRight: =4
                     Visible: |-
                         =If(
-                            !IsBlank(DropModelo1.Selected.Value),
+                            IsBlank(DropModelo1.Selected.Value),
                             true,
                             false
                         )
@@ -1055,7 +1055,7 @@ CPP As screen:
                             RadiusTopRight: =4
                             Visible: |
                                 =If(
-                                    !IsBlank(DropModelo1.Selected.Value),
+                                    IsBlank(DropModelo1.Selected.Value),
                                     true,
                                     false
                                 )
@@ -1088,7 +1088,7 @@ CPP As screen:
                             RadiusTopRight: =4
                             Visible: |
                                 =If(
-                                    !IsBlank(DropModelo1.Selected.Value),
+                                    IsBlank(DropModelo1.Selected.Value),
                                     true,
                                     false
                                 )
