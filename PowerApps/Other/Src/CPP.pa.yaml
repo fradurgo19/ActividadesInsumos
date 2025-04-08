@@ -380,7 +380,8 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Width: =Parent.Width/8
+                              Width: |+
+                                =Parent.Width/9
                             Children:
                               - TextCanvas7_11:
                                   Control: Text@0.0.50
@@ -736,7 +737,7 @@ Screens:
                               OnSelect: =Set(varSelectedItem, ThisItem)
                               ShowNavigation: =true
                               TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
-                              TemplateSize: =85
+                              TemplateSize: =84
                               Width: =Parent.Width
                             Children:
                               - Separator4_1:
@@ -855,7 +856,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =100
-                                          Width: =132
+                                          Width: =120
                                         Children:
                                           - TextCanvas25:
                                               Control: Text@0.0.50
@@ -898,7 +899,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Width: =90
+                                          Width: =97
                                         Children:
                                           - TextCanvas25_1:
                                               Control: Text@0.0.50
@@ -919,7 +920,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Width: =90
+                                          Width: =96
                                         Children:
                                           - TextCanvas25_2:
                                               Control: Text@0.0.50
