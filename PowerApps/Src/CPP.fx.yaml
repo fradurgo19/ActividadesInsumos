@@ -263,39 +263,12 @@ CPP As screen:
                         Height: =Parent.Height
                         PaddingLeft: =15
                         Size: =13
-                        Text: ="RefSap"
+                        Text: ="P/N Original"
                         VerticalAlign: =VerticalAlign.Middle
                         Visible: |
                             =true
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =100
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
-                Container97_15 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    FillPortions: =0
-                    LayoutMinWidth: =100
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =50
-                    ZIndex: =2
-
-                    TextCanvas7_16 As Texto:
-                        Align: ='TextCanvas.Align'.Start
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =Parent.Height
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Q"
-                        VerticalAlign: =VerticalAlign.Middle
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =50
                         X: =0
                         Y: =0
                         ZIndex: =1
@@ -309,7 +282,7 @@ CPP As screen:
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =Parent.Width/8
-                    ZIndex: =3
+                    ZIndex: =2
 
                     TextCanvas7_11 As Texto:
                         Align: ='TextCanvas.Align'.Center
@@ -323,6 +296,33 @@ CPP As screen:
                         VerticalAlign: =VerticalAlign.Middle
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =106
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                Container97_15 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =50
+                    ZIndex: =3
+
+                    TextCanvas7_16 As Texto:
+                        Align: ='TextCanvas.Align'.Start
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Q"
+                        VerticalAlign: =VerticalAlign.Middle
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =50
                         X: =0
                         Y: =0
                         ZIndex: =1
@@ -560,7 +560,7 @@ CPP As screen:
                     RadiusTopRight: =4
                     Width: =Parent.Width/9
                     X: =763
-                    ZIndex: =11
+                    ZIndex: =9
 
                     TextCanvas7_42 As Texto:
                         AutoHeight: =false
@@ -574,7 +574,7 @@ CPP As screen:
                                 CountRows(
                                     Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
                                 ) > 0,
-                                "DONALDSON",
+                                "P/N Donaldson",
                                 "Equivalencia1" // Puedes cambiar esto según lo que necesites
                             )
                         VerticalAlign: =VerticalAlign.Middle
@@ -608,7 +608,7 @@ CPP As screen:
                         )
                     Width: =Parent.Width/9
                     X: =105
-                    ZIndex: =12
+                    ZIndex: =10
 
                     TextCanvas7_43 As Texto:
                         Align: ='TextCanvas.Align'.Center
@@ -623,7 +623,7 @@ CPP As screen:
                                 CountRows(
                                     Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
                                 ) > 0,
-                                "STAL",
+                                "P/N Stal",
                                 "Equivalencia2" // Puedes cambiar esto según lo que necesites
                             )
                         VerticalAlign: =VerticalAlign.Middle
@@ -668,7 +668,7 @@ CPP As screen:
                         )
                     Width: =Parent.Width/9
                     X: =105
-                    ZIndex: =13
+                    ZIndex: =11
 
                     TextCanvas7_44 As Texto:
                         AutoHeight: =false
@@ -682,7 +682,7 @@ CPP As screen:
                                 CountRows(
                                     Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
                                 ) > 0,
-                                "FLEETGUARD",
+                                "P/N Fleetguard",
                                 "Equivalencia2" // Puedes cambiar esto según lo que necesites
                             )
                         VerticalAlign: =VerticalAlign.Middle
