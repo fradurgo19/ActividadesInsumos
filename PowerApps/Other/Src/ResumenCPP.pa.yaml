@@ -57,6 +57,7 @@ Screens:
                         ItemHoverFill: =RGBA(212, 212, 212, 1)
                         ItemSpacing: =12
                         Items: = [{Name:Gallery1.Selected.TextCanvas17.Text &".pdf",Value:Substitute(pdfContent,"""","")}]
+                        Items.Name: =Name
                         Items.Value: =Name
                         NoAttachmentsColor: =RGBA(166, 166, 166, 1)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)

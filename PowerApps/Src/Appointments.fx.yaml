@@ -840,12 +840,12 @@
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: =227
                 X: =774
-                Y: =90
+                Y: =TextCanvas46.Y + TextCanvas46.Height + 10
                 ZIndex: =26
 
             TextCanvas46 As Texto:
                 DisplayMode: =DisplayMode.Edit
-                Height: =78
+                Height: =38
                 Size: =9
                 Text: |-
                     ="Versión: " & App.StudioVersion & ": Se actualiza modulo DATACPP, se agrega HITACHI ZX75US."
