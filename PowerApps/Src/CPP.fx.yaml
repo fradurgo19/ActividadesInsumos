@@ -532,7 +532,7 @@ CPP As screen:
                         SelectionFill: =RGBA(171, 181, 184, 1)
                         SelectMultiple: =false
                         Size: =10
-                        Width: =90
+                        Width: =Parent.Width
                         ZIndex: =1
 
                 Container97_13 As groupContainer.manualLayoutContainer:
@@ -581,7 +581,7 @@ CPP As screen:
                         SearchItems: =Search(Distinct(Filter(TablaDataCpp,Marca in DropMarca1_1.Selected.Value),Modelo),DropModelo1_1.SearchText,Value)
                         SelectionFill: =RGBA(171, 181, 184, 1)
                         SelectMultiple: =false
-                        Width: =90
+                        Width: =Parent.Width
                         ZIndex: =1
 
                 Container97_10 As groupContainer.manualLayoutContainer:
