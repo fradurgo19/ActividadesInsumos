@@ -268,6 +268,111 @@ Screens:
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =Parent.Width
                                     X: =4
+                        - Container97_19:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.Start
+                              FillPortions: =0
+                              Height: =52
+                              LayoutMinWidth: =120
+                              Visible: |-
+                                =If(
+                                    CountRows(
+                                        Filter(
+                                            GaleriaCPP.AllItems,
+                                            StartsWith(Parte,"MTTO PREVENTIVO")
+                                        )
+                                    ) > 0,
+                                    true,
+                                    false
+                                )
+                              Width: =Parent.Width/9
+                              X: =105
+                            Children:
+                              - TextCanvas7_43:
+                                  Control: Text@0.0.50
+                                  Properties:
+                                    Align: ='TextCanvas.Align'.Center
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =49
+                                    PaddingLeft: =15
+                                    Size: =13
+                                    Text: |
+                                      =If(
+                                          CountRows(
+                                              Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
+                                          ) > 0,
+                                          "P/N Stal",
+                                          "Equivalencia2" // Puedes cambiar esto según lo que necesites
+                                      )
+                                    VerticalAlign: =VerticalAlign.Middle
+                                    Visible: |-
+                                      =If(
+                                          CountRows(
+                                              Filter(
+                                                  GaleriaCPP.AllItems,
+                                                  StartsWith(Parte,"MTTO PREVENTIVO")
+                                              )
+                                          ) > 0,
+                                          true,
+                                          false
+                                      )
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =110
+                                    X: =4
+                        - Container97_22:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.Start
+                              FillPortions: =0
+                              Height: =52
+                              LayoutMinWidth: =120
+                              Visible: |-
+                                =If(
+                                    CountRows(
+                                        Filter(
+                                            GaleriaCPP.AllItems,
+                                            StartsWith(Parte,"MTTO PREVENTIVO")
+                                        )
+                                    ) > 0,
+                                    true,
+                                    false
+                                )
+                              Width: =Parent.Width/9
+                              X: =105
+                            Children:
+                              - TextCanvas7_44:
+                                  Control: Text@0.0.50
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =49
+                                    PaddingLeft: =15
+                                    Size: =13
+                                    Text: |
+                                      =If(
+                                          CountRows(
+                                              Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
+                                          ) > 0,
+                                          "P/N Fleetguard",
+                                          "Equivalencia2" // Puedes cambiar esto según lo que necesites
+                                      )
+                                    VerticalAlign: =VerticalAlign.Middle
+                                    Visible: |-
+                                      =If(
+                                          CountRows(
+                                              Filter(
+                                                  GaleriaCPP.AllItems,
+                                                  StartsWith(Parte,"MTTO PREVENTIVO")
+                                              )
+                                          ) > 0,
+                                          true,
+                                          false
+                                      )
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =102
+                                    X: =4
                         - Container97_11:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -522,111 +627,6 @@ Screens:
                                     VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =106
-                        - Container97_19:
-                            Control: GroupContainer@1.3.0
-                            Variant: ManualLayout
-                            Properties:
-                              AlignInContainer: =AlignInContainer.Start
-                              FillPortions: =0
-                              Height: =52
-                              LayoutMinWidth: =120
-                              Visible: |-
-                                =If(
-                                    CountRows(
-                                        Filter(
-                                            GaleriaCPP.AllItems,
-                                            StartsWith(Parte,"MTTO PREVENTIVO")
-                                        )
-                                    ) > 0,
-                                    true,
-                                    false
-                                )
-                              Width: =Parent.Width/9
-                              X: =105
-                            Children:
-                              - TextCanvas7_43:
-                                  Control: Text@0.0.50
-                                  Properties:
-                                    Align: ='TextCanvas.Align'.Center
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    Height: =49
-                                    PaddingLeft: =15
-                                    Size: =13
-                                    Text: |
-                                      =If(
-                                          CountRows(
-                                              Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
-                                          ) > 0,
-                                          "P/N Stal",
-                                          "Equivalencia2" // Puedes cambiar esto según lo que necesites
-                                      )
-                                    VerticalAlign: =VerticalAlign.Middle
-                                    Visible: |-
-                                      =If(
-                                          CountRows(
-                                              Filter(
-                                                  GaleriaCPP.AllItems,
-                                                  StartsWith(Parte,"MTTO PREVENTIVO")
-                                              )
-                                          ) > 0,
-                                          true,
-                                          false
-                                      )
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =110
-                                    X: =4
-                        - Container97_22:
-                            Control: GroupContainer@1.3.0
-                            Variant: ManualLayout
-                            Properties:
-                              AlignInContainer: =AlignInContainer.Start
-                              FillPortions: =0
-                              Height: =52
-                              LayoutMinWidth: =120
-                              Visible: |-
-                                =If(
-                                    CountRows(
-                                        Filter(
-                                            GaleriaCPP.AllItems,
-                                            StartsWith(Parte,"MTTO PREVENTIVO")
-                                        )
-                                    ) > 0,
-                                    true,
-                                    false
-                                )
-                              Width: =Parent.Width/9
-                              X: =105
-                            Children:
-                              - TextCanvas7_44:
-                                  Control: Text@0.0.50
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    Height: =49
-                                    PaddingLeft: =15
-                                    Size: =13
-                                    Text: |
-                                      =If(
-                                          CountRows(
-                                              Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
-                                          ) > 0,
-                                          "P/N Fleetguard",
-                                          "Equivalencia2" // Puedes cambiar esto según lo que necesites
-                                      )
-                                    VerticalAlign: =VerticalAlign.Middle
-                                    Visible: |-
-                                      =If(
-                                          CountRows(
-                                              Filter(
-                                                  GaleriaCPP.AllItems,
-                                                  StartsWith(Parte,"MTTO PREVENTIVO")
-                                              )
-                                          ) > 0,
-                                          true,
-                                          false
-                                      )
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =102
-                                    X: =4
             - Container82:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout
@@ -766,7 +766,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Width: =100
+                                          Width: =96
                                         Children:
                                           - TextCanvas25_3:
                                               Control: Text@0.0.50
@@ -787,7 +787,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Width: =120
+                                          Width: =117
                                         Children:
                                           - TextCanvas25_9:
                                               Control: Text@0.0.50
@@ -799,8 +799,8 @@ Screens:
                                                 Text: =ThisItem.EQUIVALENCIA1
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =100
-                                    - Container97_2:
+                                                Width: =Parent.Width
+                                    - Container97_21:
                                         Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
                                         Properties:
@@ -808,19 +808,44 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Width: =50
+                                          Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
+                                          Width: =120
                                         Children:
-                                          - TextCanvas25_4:
+                                          - TextCanvas25_10:
                                               Control: Text@0.0.50
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
                                                 PaddingTop: =0
-                                                Size: =12
-                                                Text: =ThisItem.Cantidad
+                                                Size: =10
+                                                Text: =ThisItem.EQUIVALENCIA2
                                                 VerticalAlign: =VerticalAlign.Top
+                                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                                                 Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =50
+                                                Width: =113
+                                    - Container97_23:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
+                                          Width: =120
+                                        Children:
+                                          - TextCanvas25_11:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =10
+                                                Text: =ThisItem.EQUIVALENCIA3
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =114
                                     - Container97_3:
                                         Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
@@ -844,6 +869,27 @@ Screens:
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =140
+                                    - Container97_2:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          Width: =50
+                                        Children:
+                                          - TextCanvas25_4:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: =ThisItem.Cantidad
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =50
                                     - Container97_5:
                                         Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
@@ -971,52 +1017,6 @@ Screens:
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =150
-                                    - Container97_21:
-                                        Control: GroupContainer@1.3.0
-                                        Variant: ManualLayout
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.SetByContainer
-                                          FillPortions: =0
-                                          LayoutMinHeight: =32
-                                          LayoutMinWidth: =100
-                                          Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                                          Width: =120
-                                        Children:
-                                          - TextCanvas25_10:
-                                              Control: Text@0.0.50
-                                              Properties:
-                                                Align: ='TextCanvas.Align'.Center
-                                                Height: =76
-                                                PaddingTop: =0
-                                                Size: =10
-                                                Text: =ThisItem.EQUIVALENCIA2
-                                                VerticalAlign: =VerticalAlign.Top
-                                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                                                Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =113
-                                    - Container97_23:
-                                        Control: GroupContainer@1.3.0
-                                        Variant: ManualLayout
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.SetByContainer
-                                          FillPortions: =0
-                                          LayoutMinHeight: =32
-                                          LayoutMinWidth: =100
-                                          Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                                          Width: =120
-                                        Children:
-                                          - TextCanvas25_11:
-                                              Control: Text@0.0.50
-                                              Properties:
-                                                Align: ='TextCanvas.Align'.Center
-                                                Height: =76
-                                                PaddingTop: =0
-                                                Size: =10
-                                                Text: =ThisItem.EQUIVALENCIA3
-                                                VerticalAlign: =VerticalAlign.Top
-                                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                                                Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =114
                               - Checkbox1:
                                   Control: Classic/CheckBox@2.1.0
                                   Properties:

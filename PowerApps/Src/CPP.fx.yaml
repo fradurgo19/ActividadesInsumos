@@ -311,292 +311,6 @@ CPP As screen:
                         Y: =0
                         ZIndex: =1
 
-                Container97_11 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    FillPortions: =0
-                    LayoutMinWidth: =100
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =Parent.Width/8
-                    ZIndex: =3
-
-                    TextCanvas7_11 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =52
-                        PaddingLeft: =5
-                        Size: =13
-                        Text: ="Nombre"
-                        VerticalAlign: =VerticalAlign.Middle
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =106
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
-                Container97_15 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    FillPortions: =0
-                    LayoutMinWidth: =100
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =50
-                    ZIndex: =4
-
-                    TextCanvas7_16 As Texto:
-                        Align: ='TextCanvas.Align'.Start
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =Parent.Height
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Q"
-                        VerticalAlign: =VerticalAlign.Middle
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =50
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
-                Container97_12 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    FillPortions: =0
-                    LayoutMinWidth: =100
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Visible: |
-                        =If(
-                            !IsBlank(DropModelo1.Selected.Value),
-                            true,
-                            false
-                        )
-                    Width: =Parent.Width/11
-                    ZIndex: =5
-
-                    DropMarca1_1 As combobox:
-                        BorderColor: =RGBA(166, 166, 166, 1)
-                        ChevronBackground: =RGBA(171, 181, 184, 1)
-                        ChevronDisabledBackground: =RGBA(171, 181, 184, 1)
-                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
-                        ChevronHoverBackground: =RGBA(171, 181, 184, 1)
-                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledBorderColor: =RGBA(171, 181, 184, 1)
-                        DisabledColor: =RGBA(255, 255, 255, 1)
-                        DisabledFill: =RGBA(171, 181, 184, 1)
-                        DisplayFields: =["Value"]
-                        Fill: =RGBA(171, 181, 184, 1)
-                        Font: =Font.'Segoe UI'
-                        Height: =52
-                        HoverBorderColor: =Color.White
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =RGBA(171, 181, 184, 1)
-                        InputTextPlaceholder: ="Marca"
-                        Items: =Distinct(TablaDataCpp,Marca)
-                        OnChange: =
-                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                        PressedColor: =RGBA(0, 0, 0, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        SearchFields: =["Value"]
-                        SearchItems: =Search(Distinct(TablaDataCpp,Marca),DropMarca1_1.SearchText,Value)
-                        SelectionFill: =RGBA(171, 181, 184, 1)
-                        SelectMultiple: =false
-                        Size: =10
-                        Width: =90
-                        ZIndex: =1
-
-                Container97_13 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    FillPortions: =0
-                    LayoutMinWidth: =100
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Visible: |-
-                        =If(
-                            !IsBlank(DropModelo1.Selected.Value),
-                            true,
-                            false
-                        )
-                    Width: =Parent.Width/11
-                    ZIndex: =6
-
-                    DropModelo1_1 As combobox:
-                        BorderColor: =RGBA(166, 166, 166, 1)
-                        ChevronBackground: =RGBA(171, 181, 184, 1)
-                        ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
-                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
-                        ChevronHoverBackground: =RGBA(171, 181, 184, 1)
-                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledBorderColor: =RGBA(171, 181, 184, 1)
-                        DisabledColor: =RGBA(255, 255, 255, 1)
-                        DisabledFill: =RGBA(171, 181, 184, 1)
-                        DisplayFields: =["Value"]
-                        Fill: =RGBA(171, 181, 184, 1)
-                        Font: =Font.'Segoe UI'
-                        Height: =50
-                        HoverBorderColor: =Color.White
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =RGBA(171, 181, 184, 1)
-                        InputTextPlaceholder: ="Modelo"
-                        Items: |
-                            =Distinct(Filter(TablaDataCpp, Marca in DropMarca1_1.Selected.Value),Modelo)
-                        OnChange: =
-                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(171, 181, 184, 1)
-                        SearchFields: =["Value"]
-                        SearchItems: =Search(Distinct(Filter(TablaDataCpp,Marca in DropMarca1_1.Selected.Value),Modelo),DropModelo1_1.SearchText,Value)
-                        SelectionFill: =RGBA(171, 181, 184, 1)
-                        SelectMultiple: =false
-                        Width: =90
-                        ZIndex: =1
-
-                Container97_10 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    FillPortions: =0
-                    LayoutMinWidth: =100
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Visible: |-
-                        =If(
-                            CountRows(
-                                Filter(
-                                    GaleriaCPP.AllItems,
-                                    StartsWith(Parte,"MTTO PREVENTIVO")
-                                )
-                            ) > 0,
-                            true,
-                            false
-                        )
-                    Width: =Parent.Width/10
-                    ZIndex: =7
-
-                    TextCanvas7_17 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =48
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Frecuencia"
-                        VerticalAlign: =VerticalAlign.Middle
-                        Visible: |+
-                            =If(
-                                CountRows(
-                                    Filter(
-                                        GaleriaCPP.AllItems,
-                                        StartsWith(Parte,"MTTO PREVENTIVO")
-                                    )
-                                ) > 0,
-                                true,
-                                false
-                            )
-                            
-                            
-                            
-                            
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =90
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
-                Container97_9 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    FillPortions: =0
-                    LayoutMinWidth: =100
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Visible: |-
-                        =If(
-                            CountRows(
-                                Filter(
-                                    GaleriaCPP.AllItems,
-                                    Or(
-                                        Parte = "Equipo Frontal  Bomm Chasis",
-                                        Parte = "Equipo Frontal Brazo Boom",
-                                        Parte = "Equipo Frontal Balde"
-                                    )
-                                )
-                            ) > 0,
-                            true,
-                            false
-                        )
-                    Width: =Parent.Width/9
-                    ZIndex: =8
-
-                    TextCanvas7_18 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =46
-                        PaddingLeft: =15
-                        Size: =14
-                        Text: ="Medida"
-                        Visible: |-
-                            =If(
-                                CountRows(
-                                    Filter(
-                                        GaleriaCPP.AllItems,
-                                        Or(
-                                            Parte = "Equipo Frontal  Bomm Chasis",
-                                            Parte = "Equipo Frontal Brazo Boom",
-                                            Parte = "Equipo Frontal Balde"
-                                        )
-                                    )
-                                ) > 0,
-                                true,
-                                false
-                            )
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =70
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
-                Container97_16 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    FillPortions: =0
-                    LayoutMinWidth: =100
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =Parent.Width/8
-                    ZIndex: =9
-
-                    TextCanvas7_19 As Texto:
-                        Align: ='TextCanvas.Align'.Center
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =51
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Comentario"
-                        VerticalAlign: =VerticalAlign.Middle
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =106
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
                 Container97_19 As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
                     DropShadow: =DropShadow.Light
@@ -621,7 +335,7 @@ CPP As screen:
                         )
                     Width: =Parent.Width/9
                     X: =105
-                    ZIndex: =10
+                    ZIndex: =3
 
                     TextCanvas7_43 As Texto:
                         Align: ='TextCanvas.Align'.Center
@@ -681,7 +395,7 @@ CPP As screen:
                         )
                     Width: =Parent.Width/9
                     X: =105
-                    ZIndex: =11
+                    ZIndex: =4
 
                     TextCanvas7_44 As Texto:
                         AutoHeight: =false
@@ -713,6 +427,292 @@ CPP As screen:
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =102
                         X: =4
+                        Y: =0
+                        ZIndex: =1
+
+                Container97_11 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width/8
+                    ZIndex: =5
+
+                    TextCanvas7_11 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =52
+                        PaddingLeft: =5
+                        Size: =13
+                        Text: ="Nombre"
+                        VerticalAlign: =VerticalAlign.Middle
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =106
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                Container97_15 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =50
+                    ZIndex: =6
+
+                    TextCanvas7_16 As Texto:
+                        Align: ='TextCanvas.Align'.Start
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Q"
+                        VerticalAlign: =VerticalAlign.Middle
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =50
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                Container97_12 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: |
+                        =If(
+                            !IsBlank(DropModelo1.Selected.Value),
+                            true,
+                            false
+                        )
+                    Width: =Parent.Width/11
+                    ZIndex: =7
+
+                    DropMarca1_1 As combobox:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(171, 181, 184, 1)
+                        ChevronDisabledBackground: =RGBA(171, 181, 184, 1)
+                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                        ChevronHoverBackground: =RGBA(171, 181, 184, 1)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(171, 181, 184, 1)
+                        DisabledColor: =RGBA(255, 255, 255, 1)
+                        DisabledFill: =RGBA(171, 181, 184, 1)
+                        DisplayFields: =["Value"]
+                        Fill: =RGBA(171, 181, 184, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =52
+                        HoverBorderColor: =Color.White
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(171, 181, 184, 1)
+                        InputTextPlaceholder: ="Marca"
+                        Items: =Distinct(TablaDataCpp,Marca)
+                        OnChange: =
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(0, 0, 0, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =Search(Distinct(TablaDataCpp,Marca),DropMarca1_1.SearchText,Value)
+                        SelectionFill: =RGBA(171, 181, 184, 1)
+                        SelectMultiple: =false
+                        Size: =10
+                        Width: =90
+                        ZIndex: =1
+
+                Container97_13 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: |-
+                        =If(
+                            !IsBlank(DropModelo1.Selected.Value),
+                            true,
+                            false
+                        )
+                    Width: =Parent.Width/11
+                    ZIndex: =8
+
+                    DropModelo1_1 As combobox:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(171, 181, 184, 1)
+                        ChevronDisabledBackground: =RGBA(180, 214, 250, 1)
+                        ChevronDisabledFill: =RGBA(214, 221, 224, 1)
+                        ChevronHoverBackground: =RGBA(171, 181, 184, 1)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(171, 181, 184, 1)
+                        DisabledColor: =RGBA(255, 255, 255, 1)
+                        DisabledFill: =RGBA(171, 181, 184, 1)
+                        DisplayFields: =["Value"]
+                        Fill: =RGBA(171, 181, 184, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =50
+                        HoverBorderColor: =Color.White
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(171, 181, 184, 1)
+                        InputTextPlaceholder: ="Modelo"
+                        Items: |
+                            =Distinct(Filter(TablaDataCpp, Marca in DropMarca1_1.Selected.Value),Modelo)
+                        OnChange: =
+                        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(171, 181, 184, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =Search(Distinct(Filter(TablaDataCpp,Marca in DropMarca1_1.Selected.Value),Modelo),DropModelo1_1.SearchText,Value)
+                        SelectionFill: =RGBA(171, 181, 184, 1)
+                        SelectMultiple: =false
+                        Width: =90
+                        ZIndex: =1
+
+                Container97_10 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    GaleriaCPP.AllItems,
+                                    StartsWith(Parte,"MTTO PREVENTIVO")
+                                )
+                            ) > 0,
+                            true,
+                            false
+                        )
+                    Width: =Parent.Width/10
+                    ZIndex: =9
+
+                    TextCanvas7_17 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =48
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Frecuencia"
+                        VerticalAlign: =VerticalAlign.Middle
+                        Visible: |+
+                            =If(
+                                CountRows(
+                                    Filter(
+                                        GaleriaCPP.AllItems,
+                                        StartsWith(Parte,"MTTO PREVENTIVO")
+                                    )
+                                ) > 0,
+                                true,
+                                false
+                            )
+                            
+                            
+                            
+                            
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =90
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                Container97_9 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    GaleriaCPP.AllItems,
+                                    Or(
+                                        Parte = "Equipo Frontal  Bomm Chasis",
+                                        Parte = "Equipo Frontal Brazo Boom",
+                                        Parte = "Equipo Frontal Balde"
+                                    )
+                                )
+                            ) > 0,
+                            true,
+                            false
+                        )
+                    Width: =Parent.Width/9
+                    ZIndex: =10
+
+                    TextCanvas7_18 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =46
+                        PaddingLeft: =15
+                        Size: =14
+                        Text: ="Medida"
+                        Visible: |-
+                            =If(
+                                CountRows(
+                                    Filter(
+                                        GaleriaCPP.AllItems,
+                                        Or(
+                                            Parte = "Equipo Frontal  Bomm Chasis",
+                                            Parte = "Equipo Frontal Brazo Boom",
+                                            Parte = "Equipo Frontal Balde"
+                                        )
+                                    )
+                                ) > 0,
+                                true,
+                                false
+                            )
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =70
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                Container97_16 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width/8
+                    ZIndex: =11
+
+                    TextCanvas7_19 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =51
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Comentario"
+                        VerticalAlign: =VerticalAlign.Middle
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =106
+                        X: =0
                         Y: =0
                         ZIndex: =1
 
@@ -888,7 +888,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =100
+                            Width: =96
                             ZIndex: =1
 
                             TextCanvas25_3 As Texto:
@@ -915,7 +915,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =120
+                            Width: =117
                             ZIndex: =2
 
                             TextCanvas25_9 As Texto:
@@ -927,12 +927,12 @@ CPP As screen:
                                 Text: =ThisItem.EQUIVALENCIA1
                                 VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =100
+                                Width: =Parent.Width
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
-                        Container97_2 As groupContainer.manualLayoutContainer:
+                        Container97_21 As groupContainer.manualLayoutContainer:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
@@ -941,19 +941,49 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =50
+                            Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
+                            Width: =120
                             ZIndex: =3
 
-                            TextCanvas25_4 As Texto:
+                            TextCanvas25_10 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =76
                                 PaddingTop: =0
-                                Size: =12
-                                Text: =ThisItem.Cantidad
+                                Size: =10
+                                Text: =ThisItem.EQUIVALENCIA2
                                 VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                                 Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =50
+                                Width: =113
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        Container97_23 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Light
+                            FillPortions: =0
+                            LayoutMinWidth: =100
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
+                            Width: =120
+                            ZIndex: =4
+
+                            TextCanvas25_11 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =76
+                                PaddingTop: =0
+                                Size: =10
+                                Text: =ThisItem.EQUIVALENCIA3
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =114
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
@@ -969,7 +999,7 @@ CPP As screen:
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             Width: =140
-                            ZIndex: =4
+                            ZIndex: =5
 
                             TextCanvas25 As Texto:
                                 Align: ='TextCanvas.Align'.Start
@@ -987,6 +1017,32 @@ CPP As screen:
                                 Y: =0
                                 ZIndex: =1
 
+                        Container97_2 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Light
+                            FillPortions: =0
+                            LayoutMinWidth: =100
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =50
+                            ZIndex: =6
+
+                            TextCanvas25_4 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =76
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =ThisItem.Cantidad
+                                VerticalAlign: =VerticalAlign.Top
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =50
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
                         Container97_5 As groupContainer.manualLayoutContainer:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
@@ -997,7 +1053,7 @@ CPP As screen:
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             Width: =90
-                            ZIndex: =5
+                            ZIndex: =7
 
                             TextCanvas25_1 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1024,7 +1080,7 @@ CPP As screen:
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             Width: =90
-                            ZIndex: =6
+                            ZIndex: =8
 
                             TextCanvas25_2 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1051,7 +1107,7 @@ CPP As screen:
                             RadiusTopRight: =4
                             Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                             Width: =105
-                            ZIndex: =7
+                            ZIndex: =9
 
                             TextCanvas25_6 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1088,7 +1144,7 @@ CPP As screen:
                                     false
                                 )
                             Width: =70
-                            ZIndex: =8
+                            ZIndex: =10
 
                             TextCanvas25_5 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1124,7 +1180,7 @@ CPP As screen:
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             Width: =130
-                            ZIndex: =9
+                            ZIndex: =11
 
                             TextCanvas25_7 As Texto:
                                 Align: ='TextCanvas.Align'.Start
@@ -1136,62 +1192,6 @@ CPP As screen:
                                 VerticalAlign: =VerticalAlign.Top
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =150
-                                X: =0
-                                Y: =0
-                                ZIndex: =1
-
-                        Container97_21 As groupContainer.manualLayoutContainer:
-                            AlignInContainer: =AlignInContainer.SetByContainer
-                            DropShadow: =DropShadow.Light
-                            FillPortions: =0
-                            LayoutMinWidth: =100
-                            RadiusBottomLeft: =4
-                            RadiusBottomRight: =4
-                            RadiusTopLeft: =4
-                            RadiusTopRight: =4
-                            Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                            Width: =120
-                            ZIndex: =10
-
-                            TextCanvas25_10 As Texto:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =76
-                                PaddingTop: =0
-                                Size: =10
-                                Text: =ThisItem.EQUIVALENCIA2
-                                VerticalAlign: =VerticalAlign.Top
-                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =113
-                                X: =0
-                                Y: =0
-                                ZIndex: =1
-
-                        Container97_23 As groupContainer.manualLayoutContainer:
-                            AlignInContainer: =AlignInContainer.SetByContainer
-                            DropShadow: =DropShadow.Light
-                            FillPortions: =0
-                            LayoutMinWidth: =100
-                            RadiusBottomLeft: =4
-                            RadiusBottomRight: =4
-                            RadiusTopLeft: =4
-                            RadiusTopRight: =4
-                            Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                            Width: =120
-                            ZIndex: =11
-
-                            TextCanvas25_11 As Texto:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =76
-                                PaddingTop: =0
-                                Size: =10
-                                Text: =ThisItem.EQUIVALENCIA3
-                                VerticalAlign: =VerticalAlign.Top
-                                Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =114
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
