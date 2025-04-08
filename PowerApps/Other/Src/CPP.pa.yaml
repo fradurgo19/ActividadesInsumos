@@ -381,7 +381,7 @@ Screens:
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
                               Width: |+
-                                =Parent.Width/9
+                                =Parent.Width/8
                             Children:
                               - TextCanvas7_11:
                                   Control: Text@0.0.50
@@ -856,7 +856,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =100
-                                          Width: =120
+                                          Width: =136
                                         Children:
                                           - TextCanvas25:
                                               Control: Text@0.0.50
@@ -954,7 +954,7 @@ Screens:
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
                                           Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
-                                          Width: =110
+                                          Width: =106
                                         Children:
                                           - TextCanvas25_6:
                                               Control: Text@0.0.50
@@ -1029,7 +1029,7 @@ Screens:
                                                 Text: =ThisItem.Comentario
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =130
+                                                Width: =Parent.Width
                               - Checkbox1:
                                   Control: Classic/CheckBox@2.1.0
                                   Properties:
