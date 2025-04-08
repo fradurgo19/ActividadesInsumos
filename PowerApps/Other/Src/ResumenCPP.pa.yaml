@@ -510,6 +510,7 @@ Screens:
                                     - TextCanvas14:
                                         Control: Text@0.0.50
                                         Properties:
+                                          AlignInContainer: =AlignInContainer.Stretch
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
                                           Size: =9
@@ -517,6 +518,7 @@ Screens:
                                           Visible: =false
                                           Weight: ='TextCanvas.Weight'.Semibold
                                           Width: =40
+                                          Y: =
                                     - TextCanvas16:
                                         Control: Text@0.0.50
                                         Properties:
