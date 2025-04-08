@@ -288,6 +288,12 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
+                              Visible: |+
+                                =If(
+                                    !IsBlank(DropModelo1.Selected.Value),
+                                    true,
+                                    false
+                                )
                               Width: =Parent.Width/11
                             Children:
                               - DropMarca1_1:

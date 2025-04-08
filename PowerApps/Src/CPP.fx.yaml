@@ -335,6 +335,12 @@ CPP As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
+                    Visible: |
+                        =If(
+                            !IsBlank(DropModelo1.Selected.Value),
+                            true,
+                            false
+                        )
                     Width: =Parent.Width/11
                     ZIndex: =4
 
