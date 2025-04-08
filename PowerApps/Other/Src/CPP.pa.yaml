@@ -44,8 +44,8 @@ Screens:
                 Properties:
                   Height: =61
                   LayoutDirection: =LayoutDirection.Horizontal
-                  Width: =770
-                  X: =593
+                  Width: =665
+                  X: =698
                 Children:
                   - EncabezadoContenedor_2:
                       Control: CanvasComponent
@@ -63,27 +63,18 @@ Screens:
                   Height: =54
                   LayoutDirection: =LayoutDirection.Horizontal
                   Width: =277
-                  X: =77
+                  X: =Container118.X + Container118.Width + 10
                 Children:
-                  - Icon4:
-                      Control: Classic/Icon@2.5.0
+                  - ButtonCanvas6_2:
+                      Control: Button@0.0.44
                       Properties:
-                        BorderColor: =RGBA(166, 166, 166, 1)
-                        Color: =RGBA(105, 121, 126, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(220, 220, 220, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        Fill: =RGBA(255, 255, 0, 1)
-                        FocusedBorderThickness: =4
+                        BasePaletteColor: =RGBA(249, 83, 109, 1)
                         Height: =Parent.Height
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Icon: =Icon.Search
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Width: =Parent.Width * 10%
+                        OnSelect: =Reset(TextInputCanvas6); Reset(DropMarca1_1);Reset(DropModelo1_1)
+                        Text: ="Reset"
+                        Width: =56
+                        X: =122
+                        Y: =39
                   - TextInputCanvas6:
                       Control: TextInput@0.0.53
                       Properties:
@@ -104,16 +95,25 @@ Screens:
                         Type: ='TextInputCanvas.Type'.Search
                         Width: |
                           =200
-                  - ButtonCanvas6_2:
-                      Control: Button@0.0.44
+                  - Icon4:
+                      Control: Classic/Icon@2.5.0
                       Properties:
-                        BasePaletteColor: =RGBA(249, 83, 109, 1)
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(105, 121, 126, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(255, 255, 0, 1)
+                        FocusedBorderThickness: =4
                         Height: =Parent.Height
-                        OnSelect: =Reset(TextInputCanvas6); Reset(DropMarca1_1);Reset(DropModelo1_1)
-                        Text: ="Reset"
-                        Width: =56
-                        X: =122
-                        Y: =39
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Search
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width * 10%
             - ButtonCanvas4_4:
                 Control: Button@0.0.44
                 Properties:
@@ -138,28 +138,28 @@ Screens:
                         false
                     );
                     UpdateContext({varCheckboxChecked: !Checkbox1.Value});
-                  Text: ="Borrar Todo"
+                  Text: ="Borrar Selección"
                   Width: =36
-                  X: =367
-                  Y: =5
+                  X: =Container118.X - Container118.Width + 20
             - Container118:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout
                 Properties:
-                  Height: =59
-                  Width: =141
-                  X: =426
+                  Height: =29
+                  Width: =120
+                  X: =Arrow1_1.X - Arrow1_1.Width + 280
                 Children:
                   - ButtonCanvas8:
                       Control: Button@0.0.44
                       Properties:
                         Appearance: ='ButtonCanvas.Appearance'.Primary
                         BasePaletteColor: =RGBA(156, 220, 79, 1)
-                        Height: =58
+                        FontSize: =11
+                        Height: =Parent.Height
                         Icon: ="Airplane"
                         OnSelect: =Navigate(ResumenCPP,ScreenTransition.UnCoverRight )
                         Text: ="Ir a Resumen"
-                        Width: =141
+                        Width: =Parent.Width
                         X: =(Parent.Width - Self.Width)/2
                         Y: =(Parent.Height - Self.Height)/2
       - Container2:
@@ -239,6 +239,35 @@ Screens:
                                       =true
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =100
+                        - Container97_18:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.Start
+                              FillPortions: =0
+                              Height: =52
+                              Width: =Parent.Width/9
+                              X: =763
+                            Children:
+                              - TextCanvas7_42:
+                                  Control: Text@0.0.50
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =48
+                                    PaddingLeft: =15
+                                    Size: =13
+                                    Text: |-
+                                      =If(
+                                          CountRows(
+                                              Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
+                                          ) > 0,
+                                          "P/N Donaldson",
+                                          "Equivalencia1" // Puedes cambiar esto según lo que necesites
+                                      )
+                                    VerticalAlign: =VerticalAlign.Middle
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width
+                                    X: =4
                         - Container97_11:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -336,6 +365,12 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
+                              Visible: |-
+                                =If(
+                                    !IsBlank(DropModelo1.Selected.Value),
+                                    true,
+                                    false
+                                )
                               Width: =Parent.Width/11
                             Children:
                               - DropModelo1_1:
@@ -487,35 +522,6 @@ Screens:
                                     VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =106
-                        - Container97_18:
-                            Control: GroupContainer@1.3.0
-                            Variant: ManualLayout
-                            Properties:
-                              AlignInContainer: =AlignInContainer.Start
-                              FillPortions: =0
-                              Height: =52
-                              Width: =Parent.Width/9
-                              X: =763
-                            Children:
-                              - TextCanvas7_42:
-                                  Control: Text@0.0.50
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    Height: =48
-                                    PaddingLeft: =15
-                                    Size: =13
-                                    Text: |-
-                                      =If(
-                                          CountRows(
-                                              Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
-                                          ) > 0,
-                                          "P/N Donaldson",
-                                          "Equivalencia1" // Puedes cambiar esto según lo que necesites
-                                      )
-                                    VerticalAlign: =VerticalAlign.Middle
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width
-                                    X: =4
                         - Container97_19:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -773,6 +779,27 @@ Screens:
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =100
+                                    - Container97_20:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          Width: =120
+                                        Children:
+                                          - TextCanvas25_9:
+                                              Control: Text@0.0.50
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =10
+                                                Text: =ThisItem.EQUIVALENCIA1
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =100
                                     - Container97_2:
                                         Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
@@ -944,27 +971,6 @@ Screens:
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =150
-                                    - Container97_20:
-                                        Control: GroupContainer@1.3.0
-                                        Variant: ManualLayout
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.SetByContainer
-                                          FillPortions: =0
-                                          LayoutMinHeight: =32
-                                          LayoutMinWidth: =100
-                                          Width: =120
-                                        Children:
-                                          - TextCanvas25_9:
-                                              Control: Text@0.0.50
-                                              Properties:
-                                                Align: ='TextCanvas.Align'.Center
-                                                Height: =76
-                                                PaddingTop: =0
-                                                Size: =10
-                                                Text: =ThisItem.EQUIVALENCIA1
-                                                VerticalAlign: =VerticalAlign.Top
-                                                Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =100
                                     - Container97_21:
                                         Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
