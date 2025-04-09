@@ -565,7 +565,7 @@ Screens:
                                               (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
                                               (DateDiff(FechadeServicio, Today()) <= 45)
                                           ),
-                                          Modificado,
+                                          Creado,
                                           SortOrder.Descending
                                       )
                                     ShowNavigation: =true
