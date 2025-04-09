@@ -721,7 +721,7 @@ Screens:
                                 =If(
                                     IsBlank(DropParte1.SelectedItems) && IsBlank(TextInputCanvas6.Value),
                                     [ // Tabla ficticia vacía con la misma estructura de datos
-                                        {Nombre: "", Marca: "", Modelo: "", RefSAP: "", Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo: "", ImagenUrl: "", Recomendación: "", EQUIVALENCIA1: "", EQUIVALENCIA2: "", EQUIVALENCIA3: ""}
+                                        {Nombre: "", Marca: "", Modelo: "", RefSAP: "",  Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo: "", ImagenUrl: "", Recomendación: "", EQUIVALENCIA1: "", EQUIVALENCIA2: "", EQUIVALENCIA3: ""}
                                     ],
                                     Filter(
                                         TablaDataCpp,
