@@ -786,7 +786,7 @@ Encuestas As screen:
                                     (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
                                     (FechadeServicio >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
                                     (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
-                                    (DateDiff(FechadeServicio, Today()) <= 45)
+                                    (DateDiff(FechadeServicio, Today()) <= 75)
                                 ),
                                 Creado,
                                 SortOrder.Descending

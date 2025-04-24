@@ -6,8 +6,26 @@
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
-App:
-  Properties:
-    OnStart: |
-      =
-    Theme: =PowerAppsTheme
+EditorState:
+  ScreensOrder:
+    - Inicio
+    - Inicio_1
+    - Inicio_2
+    - Appointments
+    - OrderDetails
+    - Products
+    - Attachments
+    - Review
+    - LCC
+    - CPP
+    - Encuestas
+    - ResumenCPP
+    - CPP y Manuales
+    - Manuales Partequipos
+    - NPS
+    - Asesores
+    - Jefes
+    - Proyector Mttos
+    - Proyector Mttos.
+  ComponentDefinitionsOrder:
+    - EncabezadoContenedor

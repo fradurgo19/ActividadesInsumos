@@ -1,9 +1,8 @@
 # ************************************************************************************************
-# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-# Content may be incomplete and subject to change.
-# This file is read-only and should only be used to review changes made within Power Apps Studio.
-# This file isn't used when loading the app. External editing, merging and conflict resolution are
-# not supported.
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
@@ -104,6 +103,8 @@ Screens:
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =689
                         Width: =1351
+                        X: =0
+                        Y: =0
                       Children:
                         - Container3_1:
                             Control: GroupContainer@1.3.0
@@ -563,7 +564,7 @@ Screens:
                                               (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
                                               (FechadeServicio >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
                                               (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
-                                              (DateDiff(FechadeServicio, Today()) <= 45)
+                                              (DateDiff(FechadeServicio, Today()) <= 75)
                                           ),
                                           Creado,
                                           SortOrder.Descending

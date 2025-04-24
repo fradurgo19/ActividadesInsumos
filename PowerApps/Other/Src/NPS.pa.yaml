@@ -1,9 +1,8 @@
 # ************************************************************************************************
-# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-# Content may be incomplete and subject to change.
-# This file is read-only and should only be used to review changes made within Power Apps Studio.
-# This file isn't used when loading the app. External editing, merging and conflict resolution are
-# not supported.
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
@@ -33,6 +32,8 @@ Screens:
                 Properties:
                   Height: =689
                   Width: =302
+                  X: =0
+                  Y: =0
                 Children:
                   - logo_9:
                       Control: Image@2.2.3
@@ -362,6 +363,8 @@ Screens:
                     User().Email = "lgarcia@partequipos.com" ||
                     User().Email = "agentecallcenter@partequipos.com"
                   Width: =1071
+                  X: =0
+                  Y: =0
                 Children:
                   - Rectangle3_6:
                       Control: Rectangle@2.3.0
@@ -1053,7 +1056,7 @@ Screens:
                               Width: =Parent.Width
                             Children:
                               - Form2:
-                                  Control: Form@2.4.2
+                                  Control: Form@2.4.3
                                   Layout: Vertical
                                   Properties:
                                     AcceptsFocus: =true
@@ -1063,11 +1066,72 @@ Screens:
                                     Item: =Gallery6.Selected
                                     LayoutMinHeight: =0
                                     LayoutMinWidth: =0
+                                    NumberOfColumns: =4
                                     X: =40
                                     Y: =40
                                   Children:
+                                    - Respuesta_DataCard1:
+                                        Control: TypedDataCard@1.0.7
+                                        Variant: ComboBoxEdit
+                                        Properties:
+                                          BorderColor: =RGBA(166, 166, 166, 1)
+                                          DataField: ="Respuesta"
+                                          Default: =ThisItem.Respuesta
+                                          DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Respuesta)
+                                          Height: =117
+                                          Required: =false
+                                          Update: =DataCardValue11.Selected
+                                          Width: =260
+                                          X: =0
+                                          Y: =0
+                                        Children:
+                                          - DataCardKey11:
+                                              Control: Text@0.0.50
+                                              MetadataKey: FieldName
+                                              Properties:
+                                                Height: =20
+                                                Size: =12
+                                                Text: ="Estado"
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =85
+                                                Wrap: =false
+                                                X: =24
+                                                Y: =10
+                                          - DataCardValue11:
+                                              Control: ComboBox@0.0.49
+                                              MetadataKey: FieldValue
+                                              Properties:
+                                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                                DefaultSelectedItems: =[Parent.Default]
+                                                DisplayMode: =Parent.DisplayMode
+                                                Height: =70
+                                                Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
+                                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                Width: =Parent.Width - 48
+                                                X: =24
+                                                Y: =DataCardKey11.Y + DataCardKey11.Height + 4
+                                          - ErrorMessage11:
+                                              Control: Text@0.0.50
+                                              MetadataKey: ErrorMessage
+                                              Properties:
+                                                Height: =30
+                                                Text: =Parent.Error
+                                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                Width: =Parent.Width - 48
+                                                X: =24
+                                                Y: =DataCardValue11.Y + DataCardValue11.Height
+                                          - StarVisible11:
+                                              Control: Text@0.0.50
+                                              MetadataKey: FieldRequired
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =20
+                                                Text: ="*"
+                                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                Width: =30
+                                                Y: =DataCardKey11.Y
                                     - Respuesta a Solicitud_DataCard2:
-                                        Control: TypedDataCard@1.0.6
+                                        Control: TypedDataCard@1.0.7
                                         Variant: TextualEdit
                                         Properties:
                                           BorderColor: =RGBA(166, 166, 166, 1)
@@ -1084,6 +1148,7 @@ Screens:
                                         Children:
                                           - DataCardKey23:
                                               Control: Text@0.0.50
+                                              MetadataKey: FieldName
                                               Properties:
                                                 Height: =22
                                                 Size: =12
@@ -1095,6 +1160,7 @@ Screens:
                                                 Y: =10
                                           - DataCardValue23:
                                               Control: TextInput@0.0.53
+                                              MetadataKey: FieldValue
                                               Properties:
                                                 AccessibleLabel: =Parent.DisplayName
                                                 DisplayMode: =Parent.DisplayMode
@@ -1108,6 +1174,7 @@ Screens:
                                                 Y: =DataCardKey23.Y + DataCardKey23.Height + 4
                                           - ErrorMessage23:
                                               Control: Text@0.0.50
+                                              MetadataKey: ErrorMessage
                                               Properties:
                                                 Height: =30
                                                 Text: =Parent.Error
@@ -1117,6 +1184,7 @@ Screens:
                                                 Y: =DataCardValue23.Y + DataCardValue23.Height
                                           - StarVisible23:
                                               Control: Text@0.0.50
+                                              MetadataKey: FieldRequired
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =30
@@ -1124,63 +1192,8 @@ Screens:
                                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                                 Width: =30
                                                 Y: =DataCardKey23.Y
-                                    - Respuesta_DataCard1:
-                                        Control: TypedDataCard@1.0.6
-                                        Variant: ComboBoxEdit
-                                        Properties:
-                                          BorderColor: =RGBA(166, 166, 166, 1)
-                                          DataField: ="Respuesta"
-                                          Default: =ThisItem.Respuesta
-                                          DisplayName: =DataSourceInfo([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'],DataSourceInfo.DisplayName,Respuesta)
-                                          Height: =117
-                                          Required: =false
-                                          Update: =DataCardValue11.Selected
-                                          Width: =260
-                                          Y: =0
-                                        Children:
-                                          - DataCardKey11:
-                                              Control: Text@0.0.50
-                                              Properties:
-                                                Height: =20
-                                                Size: =12
-                                                Text: ="Estado"
-                                                Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =85
-                                                Wrap: =false
-                                                X: =24
-                                                Y: =10
-                                          - DataCardValue11:
-                                              Control: ComboBox@0.0.49
-                                              Properties:
-                                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                                DefaultSelectedItems: =[Parent.Default]
-                                                DisplayMode: =Parent.DisplayMode
-                                                Height: =70
-                                                Items: =Choices([@'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)'].Respuesta)
-                                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                                Width: =Parent.Width - 48
-                                                X: =24
-                                                Y: =DataCardKey11.Y + DataCardKey11.Height + 4
-                                          - ErrorMessage11:
-                                              Control: Text@0.0.50
-                                              Properties:
-                                                Height: =30
-                                                Text: =Parent.Error
-                                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                                Width: =Parent.Width - 48
-                                                X: =24
-                                                Y: =DataCardValue11.Y + DataCardValue11.Height
-                                          - StarVisible11:
-                                              Control: Text@0.0.50
-                                              Properties:
-                                                Align: ='TextCanvas.Align'.Center
-                                                Height: =20
-                                                Text: ="*"
-                                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                                Width: =30
-                                                Y: =DataCardKey11.Y
                                     - Conclusión_DataCard1:
-                                        Control: TypedDataCard@1.0.6
+                                        Control: TypedDataCard@1.0.7
                                         Variant: TextualEdit
                                         Properties:
                                           BorderColor: =RGBA(166, 166, 166, 1)
@@ -1197,6 +1210,7 @@ Screens:
                                         Children:
                                           - DataCardKey18:
                                               Control: Text@0.0.50
+                                              MetadataKey: FieldName
                                               Properties:
                                                 Height: =22
                                                 Size: =12
@@ -1208,6 +1222,7 @@ Screens:
                                                 Y: =10
                                           - DataCardValue18:
                                               Control: TextInput@0.0.53
+                                              MetadataKey: FieldValue
                                               Properties:
                                                 AccessibleLabel: =Parent.DisplayName
                                                 DisplayMode: =Parent.DisplayMode
@@ -1221,6 +1236,7 @@ Screens:
                                                 Y: =DataCardKey18.Y + DataCardKey18.Height + 4
                                           - ErrorMessage18:
                                               Control: Text@0.0.50
+                                              MetadataKey: ErrorMessage
                                               Properties:
                                                 Height: =30
                                                 Text: =Parent.Error
@@ -1230,6 +1246,7 @@ Screens:
                                                 Y: =DataCardValue18.Y + DataCardValue18.Height
                                           - StarVisible18:
                                               Control: Text@0.0.50
+                                              MetadataKey: FieldRequired
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =30
@@ -1238,7 +1255,7 @@ Screens:
                                                 Width: =30
                                                 Y: =DataCardKey18.Y
                                     - Datos adjuntos_DataCard1:
-                                        Control: TypedDataCard@1.0.6
+                                        Control: TypedDataCard@1.0.7
                                         Variant: ClassicAttachmentsEdit
                                         Properties:
                                           BorderColor: =RGBA(166, 166, 166, 1)
@@ -1254,6 +1271,7 @@ Screens:
                                         Children:
                                           - DataCardKey22:
                                               Control: Label@2.5.1
+                                              MetadataKey: FieldName
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -1274,6 +1292,7 @@ Screens:
                                                 Y: =10
                                           - DataCardValue22:
                                               Control: Attachments@2.3.0
+                                              MetadataKey: FieldValue
                                               Properties:
                                                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                                                 BorderStyle: =BorderStyle.None
@@ -1304,6 +1323,7 @@ Screens:
                                                 Y: =DataCardKey22.Y + DataCardKey22.Height + 5
                                           - ErrorMessage22:
                                               Control: Label@2.5.1
+                                              MetadataKey: ErrorMessage
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -1328,6 +1348,7 @@ Screens:
                                                 Y: =DataCardValue22.Y + DataCardValue22.Height
                                           - StarVisible22:
                                               Control: Label@2.5.1
+                                              MetadataKey: FieldRequired
                                               Properties:
                                                 Align: =Align.Center
                                                 BorderColor: =RGBA(0, 0, 0, 0)

@@ -1,9 +1,8 @@
 # ************************************************************************************************
-# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-# Content may be incomplete and subject to change.
-# This file is read-only and should only be used to review changes made within Power Apps Studio.
-# This file isn't used when loading the app. External editing, merging and conflict resolution are
-# not supported.
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
@@ -33,6 +32,7 @@ Screens:
                   Height: =Parent.Height
                   Visible: =false
                   Width: =1071
+                  X: =0
                   Y: =1
                 Children:
                   - ReviewTitle:
@@ -135,6 +135,8 @@ Screens:
                 Properties:
                   Height: =100
                   Width: =1071
+                  X: =0
+                  Y: =0
                 Children:
                   - Label2_5:
                       Control: Label@2.5.1
@@ -178,6 +180,7 @@ Screens:
                   Fill: =RGBA(255, 255, 255, 1)
                   Height: =635
                   Width: =1069
+                  X: =0
                   Y: =2
                 Children:
                   - Label8:
@@ -490,6 +493,8 @@ Screens:
                 Properties:
                   Height: =Parent.Height-100
                   Width: =295
+                  X: =0
+                  Y: =0
                 Children:
                   - logo_5:
                       Control: Image@2.2.3
@@ -802,6 +807,8 @@ Screens:
                 Properties:
                   Height: =Parent.Height - 100
                   Width: =Parent.Width
+                  X: =0
+                  Y: =0
                 Children:
                   - Button4:
                       Control: Classic/Button@2.2.0
