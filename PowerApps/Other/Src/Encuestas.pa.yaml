@@ -240,7 +240,7 @@ Screens:
                                           LayoutMinWidth: =60
                                           PaddingLeft: =15
                                           Text: ="OTT"
-                                          Width: =80
+                                          Width: =50
                                     - TextCanvas7_24:
                                         Control: Text@0.0.50
                                         Properties:
@@ -373,7 +373,7 @@ Screens:
                                                 PaddingLeft: =10
                                                 Size: =9
                                                 Text: =ThisItem.OTT
-                                                Width: =80
+                                                Width: =50
                                           - TextCanvas9_28:
                                               Control: Text@0.0.50
                                               Properties:
@@ -385,9 +385,9 @@ Screens:
                                                 LayoutMinHeight: =0
                                                 LayoutMinWidth: =32
                                                 PaddingLeft: =10
-                                                Size: =10
+                                                Size: =9
                                                 Text: =ThisItem.Cliente
-                                                Width: =100
+                                                Width: =90
                                           - TextCanvas9_30:
                                               Control: Text@0.0.50
                                               Properties:
@@ -415,7 +415,7 @@ Screens:
                                                 PaddingLeft: =10
                                                 Size: =10
                                                 Text: =ThisItem.Encuestado
-                                                Width: =60
+                                                Width: =40
                                           - TextInputCanvas8:
                                               Control: TextInput@0.0.53
                                               Properties:
@@ -423,15 +423,15 @@ Screens:
                                                 FontSize: =8
                                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                                 Value: =ThisItem.Observaciones
-                                                Width: =120
+                                                Width: =200
                                           - ButtonCanvas19:
                                               Control: Button@0.0.44
                                               Properties:
-                                                FontSize: =10
+                                                FontSize: =8
                                                 OnSelect: |-
                                                   =Patch('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', ThisItem, { Observaciones: TextInputCanvas8.Value})
                                                 Text: ="Actualizar"
-                                                Width: =60
+                                                Width: =40
                         - Container4_2:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout

@@ -312,7 +312,7 @@ Encuestas As screen:
                             PaddingLeft: =15
                             Size: =14
                             Text: ="OTT"
-                            Width: =80
+                            Width: =50
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -496,7 +496,7 @@ Encuestas As screen:
                                 PaddingLeft: =10
                                 Size: =9
                                 Text: =ThisItem.OTT
-                                Width: =80
+                                Width: =50
                                 X: =0
                                 Y: =0
                                 ZIndex: =3
@@ -511,9 +511,9 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =10
+                                Size: =9
                                 Text: =ThisItem.Cliente
-                                Width: =100
+                                Width: =90
                                 X: =0
                                 Y: =0
                                 ZIndex: =4
@@ -547,7 +547,7 @@ Encuestas As screen:
                                 PaddingLeft: =10
                                 Size: =10
                                 Text: =ThisItem.Encuestado
-                                Width: =60
+                                Width: =40
                                 X: =0
                                 Y: =0
                                 ZIndex: =6
@@ -562,7 +562,7 @@ Encuestas As screen:
                                 LayoutMinWidth: =320
                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                 Value: =ThisItem.Observaciones
-                                Width: =120
+                                Width: =200
                                 X: =0
                                 Y: =0
                                 ZIndex: =7
@@ -570,14 +570,14 @@ Encuestas As screen:
                             ButtonCanvas19 As Botón:
                                 BasePaletteColor: =
                                 DisplayMode: =DisplayMode.Edit
-                                FontSize: =10
+                                FontSize: =8
                                 Height: =32
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 OnSelect: |-
                                     =Patch('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', ThisItem, { Observaciones: TextInputCanvas8.Value})
                                 Text: ="Actualizar"
-                                Width: =60
+                                Width: =40
                                 X: =0
                                 Y: =0
                                 ZIndex: =8
