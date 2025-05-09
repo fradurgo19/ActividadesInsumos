@@ -302,7 +302,7 @@ Screens:
                                       =Sort(
                                           Filter(
                                               'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                              (TextInputCanvas5_1.Value in Diligencia || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID ||  TextInputCanvas5_1.Value in Encuestado || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                              (TextInputCanvas5_1.Value in Diligencia || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in Descripcion ||  TextInputCanvas5_1.Value in Encuestado || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
                                           ),
                                           Creado,
                                           SortOrder.Descending
@@ -310,7 +310,6 @@ Screens:
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                                     TemplateSize: =52
-                                    Transition: =Transition.Push
                                     Width: =Parent.Width
                                   Children:
                                     - Separator4_2:
@@ -568,7 +567,7 @@ Screens:
                                       =Sort(
                                           Filter(
                                               'Oportunidades de encuestas',
-                                              (TextInputCanvas5_1.Value in Email || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in ID || IsBlank(TextInputCanvas5_1.Value)) &&
+                                              (TextInputCanvas5_1.Value in Email || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in OTT || IsBlank(TextInputCanvas5_1.Value)) &&
                                               (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
                                               (FechadeServicio >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
                                               (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
@@ -580,7 +579,6 @@ Screens:
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                                     TemplateSize: =52
-                                    Transition: =Transition.Push
                                     Width: =630
                                   Children:
                                     - Separator4_3:
