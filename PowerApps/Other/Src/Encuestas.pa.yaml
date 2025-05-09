@@ -67,7 +67,7 @@ Screens:
                   X: =4
                   Y: =4
             - ButtonCanvas7_1:
-                Control: Button@0.0.44
+                Control: Button@0.0.45
                 Properties:
                   Align: =Align.Justify
                   BasePaletteColor: =RGBA(141, 229, 250, 1)
@@ -129,7 +129,7 @@ Screens:
                                     Width: =1313
                                   Children:
                                     - TextInputCanvas5_1:
-                                        Control: TextInput@0.0.53
+                                        Control: TextInput@0.0.54
                                         Properties:
                                           AccessibleLabel: ="Buscar por correo"
                                           Appearance: ='TextInputCanvas.Appearance'.FilledDarker
@@ -140,7 +140,7 @@ Screens:
                                           Placeholder: ="Buscar por Si, No, ID, Correo, Asunto"
                                           Width: =200
                                     - ComboboxCanvas2_2:
-                                        Control: ComboBox@0.0.49
+                                        Control: ComboBox@0.0.51
                                         Properties:
                                           Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
                                           BasePaletteColor: =RGBA(189, 178, 176, 1)
@@ -151,7 +151,7 @@ Screens:
                                           Items: =["Mantenimiento Correctivo", "Mantenimiento Preventivo", "Diagnóstico", "Garantía"]
                                           Width: =200
                                     - ComboboxCanvas2_3:
-                                        Control: ComboBox@0.0.49
+                                        Control: ComboBox@0.0.51
                                         Properties:
                                           Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
                                           BasePaletteColor: =RGBA(189, 178, 176, 1)
@@ -162,7 +162,7 @@ Screens:
                                           Items: =["En seguimiento", "Cerrada", "Solucionada"]
                                           Width: =200
                                     - DatePickerCanvas2_1:
-                                        Control: DatePicker@0.0.42
+                                        Control: DatePicker@0.0.44
                                         Properties:
                                           BasePaletteColor: =RGBA(189, 178, 176, 1)
                                           BorderColor: =RGBA(0, 0, 0, 1)
@@ -171,12 +171,12 @@ Screens:
                                           Placeholder: ="Filtrar por Fecha Inicio"
                                           Width: =200
                                     - DatePickerCanvas1_1:
-                                        Control: DatePicker@0.0.42
+                                        Control: DatePicker@0.0.44
                                         Properties:
                                           Placeholder: ="Filtrar por Fecha Fin"
                                           Width: =200
                                     - ButtonCanvas10_1:
-                                        Control: Button@0.0.44
+                                        Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(249, 83, 109, 1)
                                           OnSelect: =Reset(TextInputCanvas5_1);Reset(ComboboxCanvas2_2);Reset(ComboboxCanvas2_3);Reset(DatePickerCanvas2_1);Reset(DatePickerCanvas1_1)
@@ -192,7 +192,7 @@ Screens:
                               Y: =100
                             Children:
                               - ButtonCanvas4_1:
-                                  Control: Button@0.0.44
+                                  Control: Button@0.0.45
                                   Properties:
                                     Align: =Align.Center
                                     BasePaletteColor: =Color.LightGray
@@ -219,7 +219,7 @@ Screens:
                                     Y: =3
                                   Children:
                                     - TextCanvas7_14:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =40
@@ -227,14 +227,14 @@ Screens:
                                           Text: ="Fecha Encuesta"
                                           Width: =100
                                     - TextCanvas7_15:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="Diligencia"
                                           Width: =100
                                     - TextCanvas7_22:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =60
@@ -242,35 +242,35 @@ Screens:
                                           Text: ="OTT"
                                           Width: =50
                                     - TextCanvas7_24:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="Cliente"
                                           Width: =100
                                     - TextCanvas7_32:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="NPS"
                                           Width: =50
                                     - TextCanvas7_41:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="Encuesta"
                                           Width: =80
                                     - TextCanvas7_40:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="Comentario"
                                           Width: =130
                                     - ButtonCanvas18:
-                                        Control: Button@0.0.44
+                                        Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(12, 190, 235, 1)
                                           FontSize: =10
@@ -333,7 +333,7 @@ Screens:
                                           Width: =Parent.Width
                                         Children:
                                           - TextCanvas9_17:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -347,7 +347,7 @@ Screens:
                                                 Text: =ThisItem.Creado
                                                 Width: =100
                                           - TextCanvas9_18:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -361,7 +361,7 @@ Screens:
                                                 Text: =ThisItem.CorreoDiligencia
                                                 Width: =100
                                           - TextCanvas9_19:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -375,7 +375,7 @@ Screens:
                                                 Text: =ThisItem.OTT
                                                 Width: =50
                                           - TextCanvas9_28:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -389,7 +389,7 @@ Screens:
                                                 Text: =ThisItem.Cliente
                                                 Width: =90
                                           - TextCanvas9_30:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -403,7 +403,7 @@ Screens:
                                                 Text: =ThisItem.TipoCliente
                                                 Width: =60
                                           - TextCanvas9_32:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -417,7 +417,7 @@ Screens:
                                                 Text: =ThisItem.Encuestado
                                                 Width: =40
                                           - TextInputCanvas8:
-                                              Control: TextInput@0.0.53
+                                              Control: TextInput@0.0.54
                                               Properties:
                                                 Fill: =RGBA(180, 214, 250, 1)
                                                 FontSize: =8
@@ -425,7 +425,7 @@ Screens:
                                                 Value: =ThisItem.Observaciones
                                                 Width: =200
                                           - ButtonCanvas19:
-                                              Control: Button@0.0.44
+                                              Control: Button@0.0.45
                                               Properties:
                                                 FontSize: =8
                                                 OnSelect: |-
@@ -443,7 +443,7 @@ Screens:
                               Y: =100
                             Children:
                               - ButtonCanvas4_3:
-                                  Control: Button@0.0.44
+                                  Control: Button@0.0.45
                                   Properties:
                                     Align: =Align.Center
                                     BasePaletteColor: =Color.LightGray
@@ -468,14 +468,14 @@ Screens:
                                     Width: =630
                                   Children:
                                     - TextCanvas7_25:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =5
                                           Text: ="OTT"
                                           Width: =50
                                     - TextCanvas7_26:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =40
@@ -483,7 +483,7 @@ Screens:
                                           Text: ="Cliente"
                                           Width: =100
                                     - TextCanvas7_27:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =40
@@ -491,14 +491,14 @@ Screens:
                                           Text: ="Tipo de Servicio"
                                           Width: =60
                                     - TextCanvas7_28:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="Fecha"
                                           Width: =60
                                     - TextCanvas7_29:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =60
@@ -506,7 +506,7 @@ Screens:
                                           Text: ="Equipo"
                                           Width: =60
                                     - TextCanvas7_39:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =60
@@ -514,21 +514,21 @@ Screens:
                                           Text: ="Sede"
                                           Width: =60
                                     - TextCanvas7_30:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="Telefono"
                                           Width: =80
                                     - TextCanvas7_31:
-                                        Control: Text@0.0.50
+                                        Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
                                           Text: ="Email"
                                           Width: =70
                                     - ButtonCanvas17:
-                                        Control: Button@0.0.44
+                                        Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(82, 205, 242, 1)
                                           FontSize: =10
@@ -595,7 +595,7 @@ Screens:
                                           Width: =Parent.Width
                                         Children:
                                           - TextCanvas9_20:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -609,7 +609,7 @@ Screens:
                                                 Text: =ThisItem.OTT
                                                 Width: =50
                                           - TextCanvas9_23:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -623,7 +623,7 @@ Screens:
                                                 Text: =ThisItem.Cliente
                                                 Width: =110
                                           - TextCanvas9_24:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -637,7 +637,7 @@ Screens:
                                                 Text: =ThisItem.TipodeServicio
                                                 Width: =65
                                           - TextCanvas9_25:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -651,7 +651,7 @@ Screens:
                                                 Text: =ThisItem.FechadeServicio
                                                 Width: =60
                                           - TextCanvas9_31:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -665,7 +665,7 @@ Screens:
                                                 Text: =ThisItem.Equipo
                                                 Width: =60
                                           - TextCanvas9_26:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -679,7 +679,7 @@ Screens:
                                                 Text: =ThisItem.Sede
                                                 Width: =60
                                           - TextCanvas9_29:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -693,7 +693,7 @@ Screens:
                                                 Text: =ThisItem.Telefonodecontacto
                                                 Width: =70
                                           - TextCanvas9_27:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 AlignInContainer: =AlignInContainer.Stretch
                                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -742,7 +742,7 @@ Screens:
                                           X: =547
                                           Y: =6
                         - TextCanvas7_37:
-                            Control: Text@0.0.50
+                            Control: Text@0.0.51
                             Properties:
                               Align: ='TextCanvas.Align'.Center
                               Fill: =RGBA(45, 128, 40, 1)
@@ -754,7 +754,7 @@ Screens:
                               X: =15
                               Y: =60
                         - TextCanvas7_38:
-                            Control: Text@0.0.50
+                            Control: Text@0.0.51
                             Properties:
                               Align: ='TextCanvas.Align'.Center
                               Fill: =RGBA(71, 158, 245, 1)
@@ -766,7 +766,7 @@ Screens:
                               X: =653
                               Y: =61
                         - ButtonCanvas18_1:
-                            Control: Button@0.0.44
+                            Control: Button@0.0.45
                             Properties:
                               BasePaletteColor: =RGBA(141, 229, 250, 1)
                               FontSize: =13

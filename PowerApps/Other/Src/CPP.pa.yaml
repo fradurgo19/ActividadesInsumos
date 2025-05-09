@@ -65,7 +65,7 @@ Screens:
                   X: =ButtonCanvas4_4.X + ButtonCanvas4_4.Width + 50
                 Children:
                   - ButtonCanvas6_2:
-                      Control: Button@0.0.44
+                      Control: Button@0.0.45
                       Properties:
                         BasePaletteColor: =RGBA(249, 83, 109, 1)
                         FontSize: =10
@@ -76,7 +76,7 @@ Screens:
                         X: =122
                         Y: =39
                   - TextInputCanvas6:
-                      Control: TextInput@0.0.53
+                      Control: TextInput@0.0.54
                       Properties:
                         AccessibleLabel: ="Buscar por Modelo, Marca, Nombre o Ref ."
                         AlignInContainer: =AlignInContainer.Stretch
@@ -115,7 +115,7 @@ Screens:
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Width: =Parent.Width * 10%
             - ButtonCanvas4_4:
-                Control: Button@0.0.44
+                Control: Button@0.0.45
                 Properties:
                   Appearance: ='ButtonCanvas.Appearance'.Primary
                   BasePaletteColor: =RGBA(249, 83, 109, 1)
@@ -151,7 +151,7 @@ Screens:
                   X: =Container33.X + Container33.Width + 50
                 Children:
                   - ButtonCanvas8:
-                      Control: Button@0.0.44
+                      Control: Button@0.0.45
                       Properties:
                         Appearance: ='ButtonCanvas.Appearance'.Primary
                         BasePaletteColor: =RGBA(156, 220, 79, 1)
@@ -191,7 +191,7 @@ Screens:
                         Width: =152
                       Children:
                         - TextCanvas2_4:
-                            Control: Text@0.0.50
+                            Control: Text@0.0.51
                             Properties:
                               Align: ='TextCanvas.Align'.Center
                               AlignInContainer: =AlignInContainer.Center
@@ -229,7 +229,7 @@ Screens:
                                 =Parent.Width/8
                             Children:
                               - TextCanvas7_11:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     Align: ='TextCanvas.Align'.Center
                                     FontColor: =RGBA(255, 255, 255, 1)
@@ -250,7 +250,7 @@ Screens:
                               Width: =50
                             Children:
                               - TextCanvas7_16:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     Align: ='TextCanvas.Align'.Start
                                     FontColor: =RGBA(255, 255, 255, 1)
@@ -271,7 +271,7 @@ Screens:
                               Width: =Parent.Width/11
                             Children:
                               - TextCanvas7_12:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =Parent.Height
@@ -294,7 +294,7 @@ Screens:
                               X: =763
                             Children:
                               - TextCanvas7_42:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =48
@@ -335,7 +335,7 @@ Screens:
                               X: =105
                             Children:
                               - TextCanvas7_43:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     Align: ='TextCanvas.Align'.Center
                                     FontColor: =RGBA(255, 255, 255, 1)
@@ -388,7 +388,7 @@ Screens:
                               X: =105
                             Children:
                               - TextCanvas7_44:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =49
@@ -535,7 +535,7 @@ Screens:
                               Width: =Parent.Width/10
                             Children:
                               - TextCanvas7_17:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =48
@@ -585,7 +585,7 @@ Screens:
                               Width: =Parent.Width/9
                             Children:
                               - TextCanvas7_18:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =46
@@ -618,7 +618,7 @@ Screens:
                               Width: =Parent.Width/8
                             Children:
                               - TextCanvas7_19:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     Align: ='TextCanvas.Align'.Center
                                     FontColor: =RGBA(255, 255, 255, 1)
@@ -684,7 +684,7 @@ Screens:
                         Width: =155
                       Children:
                         - TextCanvas2:
-                            Control: Text@0.0.50
+                            Control: Text@0.0.51
                             Properties:
                               Align: ='TextCanvas.Align'.Center
                               AlignInContainer: =AlignInContainer.Center
@@ -772,7 +772,7 @@ Screens:
                                           Width: =136
                                         Children:
                                           - TextCanvas25:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Start
                                                 Height: =76
@@ -794,7 +794,7 @@ Screens:
                                           Width: =50
                                         Children:
                                           - TextCanvas25_4:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -815,7 +815,7 @@ Screens:
                                           Width: =96
                                         Children:
                                           - TextCanvas25_3:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -836,7 +836,7 @@ Screens:
                                           Width: =117
                                         Children:
                                           - TextCanvas25_9:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -858,7 +858,7 @@ Screens:
                                           Width: =118
                                         Children:
                                           - TextCanvas25_10:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -881,7 +881,7 @@ Screens:
                                           Width: =119
                                         Children:
                                           - TextCanvas25_11:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -909,7 +909,7 @@ Screens:
                                           Width: =97
                                         Children:
                                           - TextCanvas25_1:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -936,7 +936,7 @@ Screens:
                                           Width: =96
                                         Children:
                                           - TextCanvas25_2:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -958,7 +958,7 @@ Screens:
                                           Width: =106
                                         Children:
                                           - TextCanvas25_6:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -990,7 +990,7 @@ Screens:
                                           Width: =70
                                         Children:
                                           - TextCanvas25_5:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
@@ -1021,7 +1021,7 @@ Screens:
                                           Width: =140
                                         Children:
                                           - TextCanvas25_7:
-                                              Control: Text@0.0.50
+                                              Control: Text@0.0.51
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Start
                                                 Height: =76
@@ -1087,7 +1087,7 @@ Screens:
                                     Width: =28
                                     Y: =43
                               - TextCanvas12:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     Align: ='TextCanvas.Align'.Center
                                     FontItalic: =true
@@ -1127,7 +1127,7 @@ Screens:
                               TemplateSize: =100
                             Children:
                               - TextCanvas11:
-                                  Control: Text@0.0.50
+                                  Control: Text@0.0.51
                                   Properties:
                                     Align: ='TextCanvas.Align'.Center
                                     FontColor: =RGBA(0, 0, 0, 1)
@@ -1359,7 +1359,7 @@ Screens:
                         Width: =115
                         Y: =522
             - TextCanvas6:
-                Control: Text@0.0.50
+                Control: Text@0.0.51
                 Properties:
                   Align: ='TextCanvas.Align'.Center
                   FontColor: =RGBA(255, 255, 255, 1)
@@ -1369,7 +1369,7 @@ Screens:
                   Width: =100
                   Y: =3
             - TextCanvas6_1:
-                Control: Text@0.0.50
+                Control: Text@0.0.51
                 Properties:
                   Align: ='TextCanvas.Align'.Center
                   FontColor: =RGBA(255, 255, 255, 1)
@@ -1380,7 +1380,7 @@ Screens:
                   Width: =115
                   Y: =67
             - TextCanvas6_2:
-                Control: Text@0.0.50
+                Control: Text@0.0.51
                 Properties:
                   Align: ='TextCanvas.Align'.Center
                   FontColor: =RGBA(255, 255, 255, 1)
@@ -1391,7 +1391,7 @@ Screens:
                   Width: =115
                   Y: =160
             - TextCanvas6_3:
-                Control: Text@0.0.50
+                Control: Text@0.0.51
                 Properties:
                   Align: ='TextCanvas.Align'.Center
                   FontColor: =RGBA(255, 255, 255, 1)
@@ -1402,7 +1402,7 @@ Screens:
                   Width: =115
                   Y: =263
             - TextCanvas6_4:
-                Control: Text@0.0.50
+                Control: Text@0.0.51
                 Properties:
                   Align: ='TextCanvas.Align'.Center
                   FontColor: =RGBA(255, 255, 255, 1)
@@ -1420,7 +1420,7 @@ Screens:
                   X: =58
                   Y: =3
             - ButtonCanvas6:
-                Control: Button@0.0.44
+                Control: Button@0.0.45
                 Properties:
                   BasePaletteColor: =RGBA(249, 83, 109, 1)
                   FontSize: =9
@@ -1431,7 +1431,7 @@ Screens:
                   X: =Container14.X
                   Y: =35
             - ButtonCanvas5_1:
-                Control: Button@0.0.44
+                Control: Button@0.0.45
                 Properties:
                   BasePaletteColor: =RGBA(225, 250, 2, 1)
                   Height: =37
@@ -1441,7 +1441,7 @@ Screens:
                   Width: =115
                   Y: =605
             - TextCanvas6_5:
-                Control: Text@0.0.50
+                Control: Text@0.0.51
                 Properties:
                   Align: ='TextCanvas.Align'.Center
                   FontColor: =RGBA(255, 255, 255, 1)
