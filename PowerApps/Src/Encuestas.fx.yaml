@@ -626,6 +626,34 @@ Encuestas As screen:
                         Width: =630
                         ZIndex: =2
 
+                        TextCanvas7_45 As Texto:
+                            Align: ="Start"
+                            AutoHeight: =false
+                            BorderStyle: =""
+                            ContentLanguage: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =""
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            FontItalic: =false
+                            FontStrikethrough: =false
+                            FontUnderline: =false
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =5
+                            Size: =14
+                            TabIndex: =0
+                            Text: ="🚩"
+                            Tooltip: =""
+                            VerticalAlign: =""
+                            Visible: =true
+                            Weight: ="Regular"
+                            Width: =50
+                            Wrap: =true
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
                         TextCanvas7_25 As Texto:
                             AutoHeight: =false
                             DisplayMode: =DisplayMode.Edit
@@ -636,10 +664,10 @@ Encuestas As screen:
                             PaddingLeft: =5
                             Size: =14
                             Text: ="OTT"
-                            Width: =50
+                            Width: =40
                             X: =0
                             Y: =0
-                            ZIndex: =1
+                            ZIndex: =2
 
                         TextCanvas7_26 As Texto:
                             AutoHeight: =false
@@ -651,10 +679,10 @@ Encuestas As screen:
                             PaddingLeft: =5
                             Size: =14
                             Text: ="Cliente"
-                            Width: =100
+                            Width: =80
                             X: =0
                             Y: =0
-                            ZIndex: =2
+                            ZIndex: =3
 
                         TextCanvas7_27 As Texto:
                             AutoHeight: =false
@@ -669,7 +697,7 @@ Encuestas As screen:
                             Width: =60
                             X: =0
                             Y: =0
-                            ZIndex: =3
+                            ZIndex: =4
 
                         TextCanvas7_28 As Texto:
                             AutoHeight: =false
@@ -684,7 +712,7 @@ Encuestas As screen:
                             Width: =60
                             X: =0
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =5
 
                         TextCanvas7_29 As Texto:
                             AutoHeight: =false
@@ -699,7 +727,7 @@ Encuestas As screen:
                             Width: =60
                             X: =0
                             Y: =0
-                            ZIndex: =5
+                            ZIndex: =6
 
                         TextCanvas7_39 As Texto:
                             AutoHeight: =false
@@ -714,7 +742,7 @@ Encuestas As screen:
                             Width: =60
                             X: =0
                             Y: =0
-                            ZIndex: =6
+                            ZIndex: =7
 
                         TextCanvas7_30 As Texto:
                             AutoHeight: =false
@@ -729,7 +757,7 @@ Encuestas As screen:
                             Width: =80
                             X: =0
                             Y: =0
-                            ZIndex: =7
+                            ZIndex: =8
 
                         TextCanvas7_31 As Texto:
                             AutoHeight: =false
@@ -744,7 +772,7 @@ Encuestas As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =8
+                            ZIndex: =9
 
                         ButtonCanvas17 As Botón:
                             BasePaletteColor: =RGBA(82, 205, 242, 1)
@@ -757,7 +785,7 @@ Encuestas As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =9
+                            ZIndex: =10
 
                 Container16_2 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
@@ -788,7 +816,7 @@ Encuestas As screen:
                                     (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
                                     (DateDiff(FechadeServicio, Today()) <= 75)
                                 ),
-                                Creado,
+                                FechadeServicio,
                                 SortOrder.Descending
                             )
                         Layout: =Layout.Vertical
@@ -823,6 +851,35 @@ Encuestas As screen:
                             Width: =Parent.Width
                             ZIndex: =6
 
+                            Toggle1 As Alternancia:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =35
+                                Label: =
+                                LabelPosition: ='Toggle.LabelPosition'.Above
+                                LayoutMinHeight: =35
+                                LayoutMinWidth: =35
+                                OnCheck: |
+                                    =Patch(
+                                        'Oportunidades de encuestas',
+                                        ThisItem,
+                                        {
+                                            Efectiva: true
+                                        }
+                                    )
+                                OnUncheck: |-
+                                    =Patch(
+                                        'Oportunidades de encuestas',
+                                        ThisItem,
+                                        {
+                                            Efectiva: false
+                                        }
+                                    )
+                                Width: =50
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
                             TextCanvas9_20 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(214, 221, 224, 1)
@@ -833,12 +890,12 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =10
+                                Size: =9
                                 Text: =ThisItem.OTT
-                                Width: =50
+                                Width: =40
                                 X: =0
                                 Y: =0
-                                ZIndex: =1
+                                ZIndex: =2
 
                             TextCanvas9_23 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -850,12 +907,12 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =10
+                                Size: =9
                                 Text: =ThisItem.Cliente
-                                Width: =110
+                                Width: =90
                                 X: =0
                                 Y: =0
-                                ZIndex: =2
+                                ZIndex: =3
 
                             TextCanvas9_24 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -872,7 +929,7 @@ Encuestas As screen:
                                 Width: =65
                                 X: =0
                                 Y: =0
-                                ZIndex: =3
+                                ZIndex: =4
 
                             TextCanvas9_25 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -889,7 +946,7 @@ Encuestas As screen:
                                 Width: =60
                                 X: =0
                                 Y: =0
-                                ZIndex: =4
+                                ZIndex: =5
 
                             TextCanvas9_31 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -906,7 +963,7 @@ Encuestas As screen:
                                 Width: =60
                                 X: =0
                                 Y: =0
-                                ZIndex: =5
+                                ZIndex: =6
 
                             TextCanvas9_26 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -923,7 +980,7 @@ Encuestas As screen:
                                 Width: =60
                                 X: =0
                                 Y: =0
-                                ZIndex: =6
+                                ZIndex: =7
 
                             TextCanvas9_29 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -940,7 +997,7 @@ Encuestas As screen:
                                 Width: =70
                                 X: =0
                                 Y: =0
-                                ZIndex: =7
+                                ZIndex: =8
 
                             TextCanvas9_27 As Texto:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -957,7 +1014,7 @@ Encuestas As screen:
                                 Width: =70
                                 X: =0
                                 Y: =0
-                                ZIndex: =8
+                                ZIndex: =9
 
                         Button6 As button:
                             BorderColor: =RGBA(0, 0, 0, 0)
@@ -992,7 +1049,7 @@ Encuestas As screen:
                                     "No ejecutado"
                                 )
                             Width: =65
-                            X: =547
+                            X: =565
                             Y: =6
                             ZIndex: =7
 
