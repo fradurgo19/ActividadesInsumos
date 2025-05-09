@@ -895,7 +895,7 @@ Encuestas As screen:
                                     
                                     
                                     Set(varCheckboxChecked, true)
-                                OnSelect: =Select(Parent)
+                                OnSelect: =
                                 OnUncheck: |-
                                     =Patch(
                                         'Oportunidades de encuestas',
@@ -905,7 +905,7 @@ Encuestas As screen:
                                         }
                                     );
                                     
-                                    Set(varCheckboxChecked, true)
+                                    Set(varCheckboxChecked, false)
                                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                                 PressedColor: =RGBA(51, 51, 51, 1)
                                 PressedFill: =RGBA(0, 0, 0, 0)
