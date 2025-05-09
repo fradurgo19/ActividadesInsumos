@@ -26,7 +26,10 @@ Screens:
                 Promotor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Promotor"   )),
                 Detractor: CountRows(Filter('PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)', TipoCliente = "Detractor"   ))
             }
-        )
+        );
+
+
+
 
 
     Children:
@@ -637,27 +640,20 @@ Screens:
                                                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                                                 HoverColor: =RGBA(51, 51, 51, 1)
                                                 HoverFill: =RGBA(0, 0, 0, 0)
-                                                OnCheck: |-
+                                                OnCheck: |+
                                                   =Patch(
                                                       'Oportunidades de encuestas',
                                                       ThisItem,
-                                                      {
-                                                          Efectiva: true
-                                                      }
+                                                      { Efectiva: true }
                                                   );
-
-
                                                   Set(varCheckboxChecked, true)
-                                                OnSelect: =
-                                                OnUncheck: |-
+                                                OnSelect: =Set(varCheckboxChecked, ThisItem.Efectiva)
+                                                OnUncheck: |+
                                                   =Patch(
                                                       'Oportunidades de encuestas',
                                                       ThisItem,
-                                                      {
-                                                          Efectiva: false
-                                                      }
+                                                      { Efectiva: false }
                                                   );
-
                                                   Set(varCheckboxChecked, false)
                                                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                                                 PressedColor: =RGBA(51, 51, 51, 1)
