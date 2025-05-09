@@ -1,43 +1,58 @@
 {
-  "Name": "PowerApps_CoreControls_Toggle",
+  "Name": "PowerApps_CoreControls_CheckboxCanvas",
   "PcfConversions": [
+    {
+      "Action": [
+        {
+          "Name": "Value",
+          "NewName": "Checked",
+          "Type": "rename"
+        }
+      ],
+      "From": "0.0.6",
+      "To": "0.0.7"
+    },
     {
       "Action": [
         {
           "Name": "OnChange",
           "Type": "remove"
-        }
-      ],
-      "From": "1.0.8",
-      "To": "1.0.9"
-    },
-    {
-      "Action": [
+        },
         {
-          "Name": "BaseColor",
+          "Name": "OnSelect",
           "Type": "add"
         },
         {
-          "Name": "FontSize",
+          "Name": "OnCheck",
+          "Type": "add"
+        },
+        {
+          "Name": "OnUncheck",
           "Type": "add"
         }
       ],
-      "From": "1.0.10",
-      "To": "1.0.11"
+      "From": "0.0.12",
+      "To": "0.0.13"
     },
     {
       "Action": [
-        {
-          "Name": "BaseColor",
-          "Type": "remove"
-        },
         {
           "Name": "BasePaletteColor",
           "Type": "add"
         }
       ],
-      "From": "1.0.13",
-      "To": "1.0.14"
+      "From": "0.0.13",
+      "To": "0.0.14"
+    },
+    {
+      "Action": [
+        {
+          "Name": "FontSize",
+          "Type": "add"
+        }
+      ],
+      "From": "0.0.15",
+      "To": "0.0.16"
     },
     {
       "Action": [
@@ -66,19 +81,19 @@
           "Type": "add"
         }
       ],
-      "From": "1.0.19",
-      "To": "1.0.20"
+      "From": "0.0.19",
+      "To": "0.0.20"
     },
     {
       "Action": [
         {
-          "Name": "ToggleSize",
+          "Name": "CheckboxSize",
           "Type": "add"
         }
       ],
-      "From": "1.0.32",
-      "To": "1.0.33"
+      "From": "0.0.22",
+      "To": "0.0.23"
     }
   ],
-  "Version": "1.1.5"
+  "Version": "0.0.29"
 }

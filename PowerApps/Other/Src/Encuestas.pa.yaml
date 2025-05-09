@@ -601,14 +601,19 @@ Screens:
                                           LayoutDirection: =LayoutDirection.Horizontal
                                           Width: =Parent.Width
                                         Children:
-                                          - Toggle1:
-                                              Control: Toggle@1.1.5
+                                          - CheckboxCanvas1:
+                                              Control: CheckBox@0.0.29
                                               Properties:
-                                                AlignInContainer: =AlignInContainer.Stretch
                                                 Label: =
-                                                LabelPosition: ='Toggle.LabelPosition'.Above
-                                                LayoutMinWidth: =35
                                                 OnCheck: |+
+                                                  =Patch(
+                                                      'Oportunidades de encuestas',
+                                                      ThisItem,
+                                                      {
+                                                          Efectiva: true
+                                                      }
+                                                  )
+                                                OnSelect: |+
                                                   =Patch(
                                                       'Oportunidades de encuestas',
                                                       ThisItem,
@@ -624,7 +629,7 @@ Screens:
                                                           Efectiva: false
                                                       }
                                                   )
-                                                Width: =50
+                                                Width: =40
                                           - TextCanvas9_20:
                                               Control: Text@0.0.51
                                               Properties:

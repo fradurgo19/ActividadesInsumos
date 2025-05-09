@@ -27,6 +27,19 @@
         "Type": 53,
         "WizardStep": null
       },
+      "CheckboxSize": {
+        "EnabledForFlyout": false,
+        "HelperUI": null,
+        "Hidden": false,
+        "PropertyGroupName": "",
+        "PropertyKind": 1,
+        "SectionIndex": 3,
+        "SectionName": null,
+        "SectionType": "StyleAndThemeSection",
+        "ShowInCanvasInlineActionBar": false,
+        "Type": 0,
+        "WizardStep": null
+      },
       "Checked": {
         "EnabledForFlyout": false,
         "HelperUI": null,
@@ -170,32 +183,6 @@
         "Type": 0,
         "WizardStep": null
       },
-      "LabelPosition": {
-        "EnabledForFlyout": false,
-        "HelperUI": null,
-        "Hidden": false,
-        "PropertyGroupName": "",
-        "PropertyKind": 1,
-        "SectionIndex": 2,
-        "SectionName": null,
-        "SectionType": "SizeAndPositioningSection",
-        "ShowInCanvasInlineActionBar": false,
-        "Type": 0,
-        "WizardStep": null
-      },
-      "ToggleSize": {
-        "EnabledForFlyout": false,
-        "HelperUI": null,
-        "Hidden": false,
-        "PropertyGroupName": "",
-        "PropertyKind": 1,
-        "SectionIndex": 3,
-        "SectionName": null,
-        "SectionType": "StyleAndThemeSection",
-        "ShowInCanvasInlineActionBar": false,
-        "Type": 0,
-        "WizardStep": null
-      },
       "Visible": {
         "EnabledForFlyout": false,
         "HelperUI": null,
@@ -260,9 +247,9 @@
       "PfxDefaultValue": null
     }
   ],
-  "ControlConstructor": "Toggle",
+  "ControlConstructor": "CheckboxCanvas",
   "ControlNamespace": "PowerApps.CoreControls",
-  "DisplayNameKey": "Toggle_Display_Key",
+  "DisplayNameKey": "CheckboxCanvas",
   "Events": [
     {
       "Description": "OnCheck",
@@ -340,7 +327,7 @@
     },
     {
       "Category": "design",
-      "DefaultValue": "113",
+      "DefaultValue": "160",
       "Description": "",
       "DescriptionResourceString": "",
       "DisplayName": "Width",
@@ -359,16 +346,16 @@
       "ParentDataSetName": "",
       "PassThroughProperty": "",
       "PfxDefaultValue": null,
-      "PhoneDefaultValue": "113",
+      "PhoneDefaultValue": "160",
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 2,
       "Usage": 2,
-      "WebDefaultValue": "113"
+      "WebDefaultValue": "160"
     },
     {
       "Category": "design",
-      "DefaultValue": "35",
+      "DefaultValue": "32",
       "Description": "",
       "DescriptionResourceString": "",
       "DisplayName": "Height",
@@ -387,12 +374,12 @@
       "ParentDataSetName": "",
       "PassThroughProperty": "",
       "PfxDefaultValue": null,
-      "PhoneDefaultValue": "35",
+      "PhoneDefaultValue": "32",
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 2,
       "Usage": 2,
-      "WebDefaultValue": "35"
+      "WebDefaultValue": "32"
     },
     {
       "Category": "design",
@@ -451,71 +438,15 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Alternancia",
+  "Name": "Casilla",
   "Properties": [
     {
       "Category": "data",
       "DefaultValue": "",
-      "Description": "Para establecer el estado de activación del control de alternancia",
-      "DescriptionResourceString": "Toggle_Checked_Desc_Key",
-      "DisplayName": "Activado",
-      "DisplayNameResourceString": "Toggle_Checked_Display_Key",
-      "EnumValues": [],
-      "HelperUI": null,
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": true,
-      "IsResettableToManifestDefault": false,
-      "Name": "Checked",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 20,
-      "Usage": 2,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "Label",
-      "Description": "Etiqueta de alternancia",
-      "DescriptionResourceString": "Toggle_Label_Desc_Key",
-      "DisplayName": "Etiqueta",
-      "DisplayNameResourceString": "Toggle_Label_Display_Key",
-      "EnumValues": [],
-      "HelperUI": null,
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "IsResettableToManifestDefault": false,
-      "Name": "Label",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 6,
-      "Usage": 0,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "",
-      "Description": "Etiqueta de accesibilidad para el componente de alternancia",
-      "DescriptionResourceString": "Toggle_AccessibleLabel_Desc_Key",
-      "DisplayName": "Etiqueta de accesibilidad",
-      "DisplayNameResourceString": "Toggle_AccessibleLabel_Display_Key",
+      "Description": "Etiqueta para los lectores de pantalla.",
+      "DescriptionResourceString": "CheckboxCanvas_AccessibleLabel_Desc",
+      "DisplayName": "Etiqueta accesible",
+      "DisplayNameResourceString": "CheckboxCanvas_AccessibleLabel",
       "EnumValues": [],
       "HelperUI": null,
       "Hidden": false,
@@ -539,53 +470,59 @@
     },
     {
       "Category": "data",
-      "DefaultValue": "After",
-      "Description": "Defina la posición de la etiqueta alrededor del control de alternancia",
-      "DescriptionResourceString": "Toggle_LabelPosition_Desc_Key",
-      "DisplayName": "Posición de la etiqueta",
-      "DisplayNameResourceString": "Toggle_LabelPosition_Display_Key",
-      "EnumValues": [
-        {
-          "Description": "Delante",
-          "DisplayName": "Delante",
-          "IsDefaultValue": false,
-          "Name": "Before",
-          "Value": "Before"
-        },
-        {
-          "Description": "Detrás",
-          "DisplayName": "Detrás",
-          "IsDefaultValue": true,
-          "Name": "After",
-          "Value": "After"
-        },
-        {
-          "Description": "Encima",
-          "DisplayName": "Encima",
-          "IsDefaultValue": false,
-          "Name": "Above",
-          "Value": "Above"
-        }
-      ],
+      "DefaultValue": "false",
+      "Description": "Indica si la casilla está activada.",
+      "DescriptionResourceString": "CheckboxCanvas_Checked_Desc",
+      "DisplayName": "Activado",
+      "DisplayNameResourceString": "CheckboxCanvas_Checked",
+      "EnumValues": [],
       "HelperUI": null,
       "Hidden": false,
       "IsDataSourceProperty": false,
       "IsLinkableToParentTheme": false,
       "IsPrimaryBehavioral": false,
       "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
+      "IsPrimaryOutput": true,
+      "IsResettable": true,
       "IsResettableToManifestDefault": false,
-      "Name": "LabelPosition",
+      "Name": "Checked",
       "ParentDataSetName": "",
       "PassThroughProperty": "",
       "PfxDefaultValue": "",
-      "PhoneDefaultValue": "After",
+      "PhoneDefaultValue": "",
       "Required": false,
       "ShouldAutoBind": false,
-      "Type": 1,
+      "Type": 20,
+      "Usage": 2,
+      "WebDefaultValue": ""
+    },
+    {
+      "Category": "data",
+      "DefaultValue": "Casilla",
+      "Description": "Finalidad de la casilla.",
+      "DescriptionResourceString": "CheckboxCanvas_Label_Desc",
+      "DisplayName": "Etiqueta",
+      "DisplayNameResourceString": "CheckboxCanvas_Label",
+      "EnumValues": [],
+      "HelperUI": null,
+      "Hidden": false,
+      "IsDataSourceProperty": false,
+      "IsLinkableToParentTheme": false,
+      "IsPrimaryBehavioral": false,
+      "IsPrimaryInput": true,
+      "IsPrimaryOutput": false,
+      "IsResettable": false,
+      "IsResettableToManifestDefault": false,
+      "Name": "Label",
+      "ParentDataSetName": "",
+      "PassThroughProperty": "",
+      "PfxDefaultValue": "",
+      "PhoneDefaultValue": "",
+      "Required": false,
+      "ShouldAutoBind": false,
+      "Type": 6,
       "Usage": 0,
-      "WebDefaultValue": "After"
+      "WebDefaultValue": ""
     },
     {
       "Category": "data",
@@ -812,6 +749,34 @@
       "WebDefaultValue": ""
     },
     {
+      "Category": "data",
+      "DefaultValue": "16",
+      "Description": "El tamaño en píxeles de la casilla.",
+      "DescriptionResourceString": "CheckboxSize_Description",
+      "DisplayName": "Tamaño de la casilla",
+      "DisplayNameResourceString": "CheckboxSize",
+      "EnumValues": [],
+      "HelperUI": null,
+      "Hidden": false,
+      "IsDataSourceProperty": false,
+      "IsLinkableToParentTheme": true,
+      "IsPrimaryBehavioral": false,
+      "IsPrimaryInput": false,
+      "IsPrimaryOutput": false,
+      "IsResettable": false,
+      "IsResettableToManifestDefault": true,
+      "Name": "CheckboxSize",
+      "ParentDataSetName": "",
+      "PassThroughProperty": "",
+      "PfxDefaultValue": "",
+      "PhoneDefaultValue": "",
+      "Required": false,
+      "ShouldAutoBind": false,
+      "Type": 16,
+      "Usage": 0,
+      "WebDefaultValue": ""
+    },
+    {
       "Category": "design",
       "DefaultValue": "",
       "Description": "NA",
@@ -864,34 +829,6 @@
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 6,
-      "Usage": 0,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "40",
-      "Description": "El tamaño en píxeles del control de alternancia.",
-      "DescriptionResourceString": "ToggleSize_Description",
-      "DisplayName": "Tamaño del control de alternancia",
-      "DisplayNameResourceString": "ToggleSize",
-      "EnumValues": [],
-      "HelperUI": null,
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsLinkableToParentTheme": true,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "IsResettableToManifestDefault": true,
-      "Name": "ToggleSize",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PfxDefaultValue": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 16,
       "Usage": 0,
       "WebDefaultValue": ""
     },
@@ -978,357 +915,357 @@
       "IsControlSpecific": false,
       "LoadingOrder": 8,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.Toggle\",\"CustomControlId\":\"PowerApps.CoreControls.Toggle\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/common/js/container.js\",\"LoadOrder\":5,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"Checked\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"Label\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Label\"},\"AccessibleLabel\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"LabelPosition\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"After\"},\"BasePaletteColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Font\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontWeight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontItalic\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontUnderline\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontStrikethrough\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"ToggleSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"40\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":{\"OnCheck\":{\"EventName\":\"OnCheck\"},\"OnUncheck\":{\"EventName\":\"OnUncheck\"}},\"CommonEvents\":{\"OnSelect\":{\"EventName\":\"OnSelect\"}},\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
+      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.CheckboxCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.CheckboxCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/common/js/container.js\",\"LoadOrder\":5,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"AccessibleLabel\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Checked\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Label\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Casilla\"},\"BasePaletteColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Font\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontColor\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontWeight\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"FontItalic\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontUnderline\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"FontStrikethrough\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"CheckboxSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"16\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":{\"OnCheck\":{\"EventName\":\"OnCheck\"},\"OnUncheck\":{\"EventName\":\"OnUncheck\"}},\"CommonEvents\":{\"OnSelect\":{\"EventName\":\"OnSelect\"}},\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
       "Type": 3
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestPropertyTypes\",\"Data\":{\"Properties\":[{\"Name\":\"Checked\",\"Type\":\"TwoOptions\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Label\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"AccessibleLabel\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"LabelPosition\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"BasePaletteColor\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"ColorPalette\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Font\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"Font\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontSize\",\"Type\":\"Whole_None\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontColor\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"FontColor\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontWeight\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"FontWeight\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontItalic\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Italics\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontUnderline\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Underline\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontStrikethrough\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Strikethrough\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"TabIndex\",\"Type\":\"Whole_None\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Tooltip\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"ToggleSize\",\"Type\":\"Whole_None\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"PCFTeamsTheme\",\"Type\":\"String\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"X\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Y\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Width\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Height\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Visible\",\"Type\":\"Boolean\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"DisplayMode\",\"Type\":\"DisplayMode\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true}]}}",
+      "Path": "{\"Id\":\"ManifestPropertyTypes\",\"Data\":{\"Properties\":[{\"Name\":\"AccessibleLabel\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Checked\",\"Type\":\"TwoOptions\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Label\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":true,\"IsIncluded\":false},{\"Name\":\"BasePaletteColor\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"ColorPalette\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Font\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"Font\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontSize\",\"Type\":\"Whole_None\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontColor\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"FontColor\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontWeight\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"FontWeight\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontItalic\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Italics\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontUnderline\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Underline\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"FontStrikethrough\",\"Type\":\"TwoOptions\",\"ComplexType\":\"Strikethrough\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"CheckboxSize\",\"Type\":\"Whole_None\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"TabIndex\",\"Type\":\"Whole_None\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Tooltip\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"PCFTeamsTheme\",\"Type\":\"String\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"X\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Y\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Width\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Height\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Visible\",\"Type\":\"Boolean\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"DisplayMode\",\"Type\":\"DisplayMode\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true}]}}",
       "Type": 3
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 10,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"1.1.5\",\"IsFirstParty\":true}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.29\",\"IsFirstParty\":true}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 11,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/bundle.js",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/CheckboxCanvas.js",
       "Type": 0
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1033.resx",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1033.resx",
       "Type": 2
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1025.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1025.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1026.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1026.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1027.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1027.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1028.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1028.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1029.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1029.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1030.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1030.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1031.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1031.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1032.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1032.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1033.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1033.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1035.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1035.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1036.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1036.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1037.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1037.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1038.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1038.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1040.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1040.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1041.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1041.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1042.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1042.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1043.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1043.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1044.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1044.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1045.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1045.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1046.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1046.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1048.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1048.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1049.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1049.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1050.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1050.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1051.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1051.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1053.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1053.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1054.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1054.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1055.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1055.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1057.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1057.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1058.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1058.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1060.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1060.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1061.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1061.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1062.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1062.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1063.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1063.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1066.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1066.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1069.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1069.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1081.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1081.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1086.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1086.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1087.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1087.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.1110.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.1110.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.2052.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.2052.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.2070.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.2070.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.2074.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.2074.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.3076.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.3076.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.3082.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.3082.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Toggle/strings/Toggle2.3098.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_CheckboxCanvas/strings/CheckboxCanvas.3098.json",
       "Type": 5
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Toggle_Display_Key\":\"Alternancia\",\"Toggle_Desc_Key\":\"Permite a los usuarios visualizar el control de alternancia\",\"Toggle_Label_Display_Key\":\"Etiqueta\",\"Toggle_Label_Desc_Key\":\"Etiqueta de alternancia\",\"Toggle_AccessibleLabel_Display_Key\":\"Etiqueta de accesibilidad\",\"Toggle_AccessibleLabel_Desc_Key\":\"Etiqueta de accesibilidad para el componente de alternancia\",\"Toggle_LabelPosition_Display_Key\":\"Posición de la etiqueta\",\"Toggle_LabelPosition_Desc_Key\":\"Defina la posición de la etiqueta alrededor del control de alternancia\",\"Toggle_LabelPosition_Before\":\"Delante\",\"Toggle_LabelPosition_After\":\"Detrás\",\"Toggle_LabelPosition_Above\":\"Encima\",\"Toggle_Checked_Display_Key\":\"Activado\",\"Toggle_Checked_Desc_Key\":\"Para establecer el estado de activación del control de alternancia\",\"Base_Palette_Color\":\"Paleta de colores\",\"Base_Palette_Color_description\":\"Elija una paleta de colores que sea diferente del tema.\",\"Font_Size\":\"Tamaño de fuente\",\"Font_Size_description\":\"Establezca el tamaño de fuente para el texto mostrado.\",\"Font\":\"Fuente\",\"Font_description\":\"El nombre de la familia de fuentes en la que aparece el texto\",\"Font_Color\":\"Color de fuente\",\"Font_Color_description\":\"El color del texto del control\",\"Font_Weight\":\"Espesor de la fuente\",\"Font_Weight_description\":\"El grosor del texto de un control\",\"Italic\":\"Cursiva\",\"Underline\":\"Subrayado\",\"Strikethrough\":\"Tachado\",\"ToggleSize\":\"Tamaño del control de alternancia\",\"ToggleSize_Description\":\"El tamaño en píxeles del control de alternancia.\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"CheckboxCanvas\":\"Casilla\",\"CheckboxCanvas_AccessibleLabel\":\"Etiqueta accesible\",\"CheckboxCanvas_AccessibleLabel_Desc\":\"Etiqueta para los lectores de pantalla.\",\"CheckboxCanvas_Checked\":\"Activado\",\"CheckboxCanvas_Checked_Desc\":\"Indica si la casilla está activada.\",\"CheckboxCanvas_Desc\":\"Cambie entre dos opciones que se excluyen mutuamente.\",\"CheckboxCanvas_Label\":\"Etiqueta\",\"CheckboxCanvas_Label_Desc\":\"Finalidad de la casilla.\",\"CheckboxCanvas_OnCheck\":\"OnCheck\",\"CheckboxCanvas_OnUncheck\":\"OnUncheck\",\"Base_Palette_Color\":\"Paleta de colores\",\"Base_Palette_Color_description\":\"Elija una paleta de colores que sea diferente del tema.\",\"Font_Size\":\"Tamaño de fuente\",\"Font_Size_description\":\"Establezca el tamaño de fuente para el texto mostrado.\",\"Font\":\"Fuente\",\"Font_description\":\"El nombre de la familia de fuentes en la que aparece el texto\",\"Font_Color\":\"Color de fuente\",\"Font_Color_description\":\"El color del texto del control\",\"Font_Weight\":\"Espesor de la fuente\",\"Font_Weight_description\":\"El grosor del texto de un control\",\"Italic\":\"Cursiva\",\"Underline\":\"Subrayado\",\"Strikethrough\":\"Tachado\",\"CheckboxSize\":\"Tamaño de la casilla\",\"CheckboxSize_Description\":\"El tamaño en píxeles de la casilla.\"}}}",
       "Type": 3
     },
     {
@@ -1337,13 +1274,6 @@
       "ModifiedPath": "",
       "Path": "/PCF/fluentui-react.js",
       "Type": 0
-    },
-    {
-      "IsControlSpecific": false,
-      "LoadingOrder": 0,
-      "ModifiedPath": "",
-      "Path": "React/16.8.6/16.14.0",
-      "Type": 4
     },
     {
       "IsControlSpecific": false,
@@ -1358,5 +1288,5 @@
     "supportResettableProperties": "true",
     "supportSetFocus": "true"
   },
-  "Version": "1.1.5"
+  "Version": "0.0.29"
 }

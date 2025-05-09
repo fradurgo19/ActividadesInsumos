@@ -851,15 +851,21 @@ Encuestas As screen:
                             Width: =Parent.Width
                             ZIndex: =6
 
-                            Toggle1 As Alternancia:
-                                AlignInContainer: =AlignInContainer.Stretch
+                            CheckboxCanvas1 As Casilla:
                                 DisplayMode: =DisplayMode.Edit
-                                Height: =35
+                                Height: =32
                                 Label: =
-                                LabelPosition: ='Toggle.LabelPosition'.Above
-                                LayoutMinHeight: =35
-                                LayoutMinWidth: =35
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
                                 OnCheck: |
+                                    =Patch(
+                                        'Oportunidades de encuestas',
+                                        ThisItem,
+                                        {
+                                            Efectiva: true
+                                        }
+                                    )
+                                OnSelect: |
                                     =Patch(
                                         'Oportunidades de encuestas',
                                         ThisItem,
@@ -875,7 +881,7 @@ Encuestas As screen:
                                             Efectiva: false
                                         }
                                     )
-                                Width: =50
+                                Width: =40
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
