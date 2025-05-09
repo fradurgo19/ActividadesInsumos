@@ -619,23 +619,51 @@ Screens:
                                           LayoutDirection: =LayoutDirection.Horizontal
                                           Width: =Parent.Width
                                         Children:
-                                          - CheckboxCanvas1:
-                                              Control: CheckBox@0.0.29
+                                          - Checkbox2:
+                                              Control: Classic/CheckBox@2.1.0
                                               Properties:
-                                                Checked: =ThisItem.Efectiva
-                                                Label: =
-                                                OnCheck: |+
-                                                  =
-                                                OnSelect: |+
+                                                BorderColor: =RGBA(0, 0, 0, 0)
+                                                BorderStyle: =BorderStyle.None
+                                                BorderThickness: =2
+                                                CheckboxBorderColor: =RGBA(102, 102, 102, 1)
+                                                CheckboxSize: =30
+                                                CheckmarkFill: =RGBA(105, 121, 126, 1)
+                                                Color: =RGBA(51, 51, 51, 1)
+                                                Default: =varCheckboxChecked
+                                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FocusedBorderThickness: =4
+                                                Font: =Font.'Segoe UI'
+                                                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                                HoverColor: =RGBA(51, 51, 51, 1)
+                                                HoverFill: =RGBA(0, 0, 0, 0)
+                                                OnCheck: |-
                                                   =Patch(
                                                       'Oportunidades de encuestas',
                                                       ThisItem,
                                                       {
-                                                          Efectiva: !ThisItem.Efectiva
+                                                          Efectiva: true
                                                       }
-                                                  )
-                                                OnUncheck: =
-                                                Width: =40
+                                                  );
+
+
+                                                  Set(varCheckboxChecked, true)
+                                                OnSelect: =
+                                                OnUncheck: |-
+                                                  =Patch(
+                                                      'Oportunidades de encuestas',
+                                                      ThisItem,
+                                                      {
+                                                          Efectiva: false
+                                                      }
+                                                  );
+
+                                                  Set(varCheckboxChecked, true)
+                                                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                                PressedColor: =RGBA(51, 51, 51, 1)
+                                                PressedFill: =RGBA(0, 0, 0, 0)
+                                                Text: =
+                                                Width: =35
                                           - TextCanvas9_20:
                                               Control: Text@0.0.51
                                               Properties:
