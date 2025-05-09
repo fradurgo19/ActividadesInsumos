@@ -625,29 +625,16 @@ Screens:
                                                 Checked: =ThisItem.Efectiva
                                                 Label: =
                                                 OnCheck: |+
-                                                  =If(
-                                                      !ThisItem.Efectiva,  // Si no está efectiva aún
-                                                      Patch(
-                                                          'Oportunidades de encuestas',
-                                                          ThisItem,
-                                                          {
-                                                              Efectiva: true
-                                                          }
-                                                      )
+                                                  =
+                                                OnSelect: |+
+                                                  =Patch(
+                                                      'Oportunidades de encuestas',
+                                                      ThisItem,
+                                                      {
+                                                          Efectiva: !ThisItem.Efectiva
+                                                      }
                                                   )
-
-                                                OnSelect: =
-                                                OnUncheck: |-
-                                                  =If(
-                                                      !ThisItem.Efectiva,  // Si no está efectiva aún
-                                                      Patch(
-                                                          'Oportunidades de encuestas',
-                                                          ThisItem,
-                                                          {
-                                                              Efectiva: false
-                                                          }
-                                                      )
-                                                  )
+                                                OnUncheck: =
                                                 Width: =40
                                           - TextCanvas9_20:
                                               Control: Text@0.0.51

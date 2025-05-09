@@ -875,30 +875,17 @@ Encuestas As screen:
                                 Label: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =160
-                                OnCheck: |+
-                                    =If(
-                                        !ThisItem.Efectiva,  // Si no está efectiva aún
-                                        Patch(
-                                            'Oportunidades de encuestas',
-                                            ThisItem,
-                                            {
-                                                Efectiva: true
-                                            }
-                                        )
+                                OnCheck: |
+                                    =
+                                OnSelect: |
+                                    =Patch(
+                                        'Oportunidades de encuestas',
+                                        ThisItem,
+                                        {
+                                            Efectiva: !ThisItem.Efectiva
+                                        }
                                     )
-                                    
-                                OnSelect: =
-                                OnUncheck: |-
-                                    =If(
-                                        !ThisItem.Efectiva,  // Si no está efectiva aún
-                                        Patch(
-                                            'Oportunidades de encuestas',
-                                            ThisItem,
-                                            {
-                                                Efectiva: false
-                                            }
-                                        )
-                                    )
+                                OnUncheck: =
                                 Width: =40
                                 X: =0
                                 Y: =0
