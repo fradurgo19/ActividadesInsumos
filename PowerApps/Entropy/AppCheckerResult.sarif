@@ -2385,7 +2385,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 319,
+                  "charOffset": 313,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2425,7 +2425,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 429,
+                  "charOffset": 421,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2465,7 +2465,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 539,
+                  "charOffset": 531,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2489,6 +2489,87 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Encuestas.Container2_2.SendEmailCanvas_6.SendEmailCard_6.Container16_2.Gallery6_2.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Encuestas.Container2_2.SendEmailCanvas_6.SendEmailCard_6.Container16_2.Gallery6_2.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 641,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Encuestas",
+                "type": "Encuestas.Container2_2.SendEmailCanvas_6.SendEmailCard_6.Container16_2.Gallery6_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Encuestas.Container2_2.SendEmailCanvas_6.SendEmailCard_6.Container16_1.Gallery6_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Encuestas.Container2_2.SendEmailCanvas_6.SendEmailCard_6.Container16_1.Gallery6_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 489,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Encuestas",
+                "type": "Encuestas.Container2_2.SendEmailCanvas_6.SendEmailCard_6.Container16_1.Gallery6_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Boolean"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -9405,6 +9486,36 @@
               },
               "properties": {
                 "member": "varResetCheckbox",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varCheckboxChecked"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varCheckboxChecked",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varCheckboxChecked",
                 "module": "App",
                 "type": "App"
               }

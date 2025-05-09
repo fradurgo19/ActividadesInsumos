@@ -145,14 +145,15 @@ Screens:
                                     - Icon9:
                                         Control: Classic/Icon@2.5.0
                                         Properties:
+                                          AutoDisableOnSelect: =false
                                           BorderColor: =RGBA(166, 166, 166, 1)
-                                          Color: =RGBA(215, 58, 60, 1)
-                                          DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                          Color: =RGBA(255, 255, 255, 1)
+                                          DisabledBorderColor: =RGBA(255, 255, 0, 1)
                                           DisabledColor: =RGBA(122, 138, 143, 1)
                                           DisabledFill: =RGBA(0, 0, 0, 0)
-                                          Fill: =RGBA(214, 221, 224, 1)
+                                          Fill: =RGBA(215, 58, 60, 1)
                                           FocusedBorderThickness: =4
-                                          HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                          HoverBorderColor: =RGBA(255, 255, 0, 1)
                                           HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                                           HoverFill: =RGBA(0, 0, 0, 0)
                                           Icon: =Icon.Search
@@ -181,7 +182,7 @@ Screens:
                                           BorderStyle: =BorderStyle.None
                                           BorderThickness: =2
                                           InputTextPlaceholder: ="Buscar por Estado"
-                                          Items: =["En seguimiento", "Cerrada", "Solucionada"]
+                                          Items: =Distinct('Oportunidades de encuestas',Efectiva)
                                           Width: =200
                                     - DatePickerCanvas2_1:
                                         Control: DatePicker@0.0.44
@@ -590,6 +591,7 @@ Screens:
                                           Filter(
                                               'Oportunidades de encuestas',
                                               (TextInputCanvas5_1.Value in Email || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in OTT || IsBlank(TextInputCanvas5_1.Value)) &&
+                                              (Efectiva = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) &&
                                               (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
                                               (FechadeServicio >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
                                               (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
@@ -628,11 +630,12 @@ Screens:
                                                 BorderColor: =RGBA(0, 0, 0, 0)
                                                 BorderStyle: =BorderStyle.None
                                                 BorderThickness: =2
-                                                CheckboxBorderColor: =RGBA(102, 102, 102, 1)
+                                                CheckboxBackgroundFill: =RGBA(214, 221, 224, 1)
+                                                CheckboxBorderColor: =RGBA(152, 208, 70, 1)
                                                 CheckboxSize: =30
-                                                CheckmarkFill: =RGBA(105, 121, 126, 1)
+                                                CheckmarkFill: =RGBA(255, 0, 0, 1)
                                                 Color: =RGBA(51, 51, 51, 1)
-                                                Default: =varCheckboxChecked
+                                                Default: =ThisItem.Efectiva
                                                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                                 FocusedBorderThickness: =4
@@ -640,25 +643,27 @@ Screens:
                                                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                                                 HoverColor: =RGBA(51, 51, 51, 1)
                                                 HoverFill: =RGBA(0, 0, 0, 0)
+                                                LayoutMinHeight: =35
                                                 OnCheck: |+
                                                   =Patch(
                                                       'Oportunidades de encuestas',
                                                       ThisItem,
                                                       { Efectiva: true }
-                                                  );
-                                                  Set(varCheckboxChecked, true)
+                                                  )
+
                                                 OnSelect: =Set(varCheckboxChecked, ThisItem.Efectiva)
                                                 OnUncheck: |+
                                                   =Patch(
                                                       'Oportunidades de encuestas',
                                                       ThisItem,
                                                       { Efectiva: false }
-                                                  );
-                                                  Set(varCheckboxChecked, false)
+                                                  )
+
                                                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                                                 PressedColor: =RGBA(51, 51, 51, 1)
                                                 PressedFill: =RGBA(0, 0, 0, 0)
                                                 Text: =
+                                                VerticalAlign: =VerticalAlign.Top
                                                 Width: =35
                                           - TextCanvas9_20:
                                               Control: Text@0.0.51
