@@ -139,6 +139,25 @@ Screens:
                                           BorderThickness: =2
                                           Placeholder: ="Buscar por OTT"
                                           Width: =200
+                                    - Icon9:
+                                        Control: Classic/Icon@2.5.0
+                                        Properties:
+                                          BorderColor: =RGBA(166, 166, 166, 1)
+                                          Color: =RGBA(215, 58, 60, 1)
+                                          DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                          DisabledColor: =RGBA(122, 138, 143, 1)
+                                          DisabledFill: =RGBA(0, 0, 0, 0)
+                                          Fill: =RGBA(214, 221, 224, 1)
+                                          FocusedBorderThickness: =4
+                                          HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                          HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                                          HoverFill: =RGBA(0, 0, 0, 0)
+                                          Icon: =Icon.Search
+                                          LayoutMinHeight: =30
+                                          PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                          PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                                          PressedFill: =RGBA(0, 0, 0, 0)
+                                          Width: =30
                                     - ComboboxCanvas2_2:
                                         Control: ComboBox@0.0.51
                                         Properties:
@@ -562,7 +581,7 @@ Screens:
                                   Properties:
                                     BorderColor: =RGBA(139, 154, 159, 1)
                                     BorderThickness: =2
-                                    Height: =538
+                                    Height: =500
                                     Items: |-
                                       =Sort(
                                           Filter(
@@ -578,7 +597,7 @@ Screens:
                                       )
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
-                                    TemplateSize: =52
+                                    TemplateSize: =46
                                     Width: =630
                                   Children:
                                     - Separator4_3:
@@ -603,23 +622,31 @@ Screens:
                                           - CheckboxCanvas1:
                                               Control: CheckBox@0.0.29
                                               Properties:
+                                                Checked: =ThisItem.Efectiva
                                                 Label: =
                                                 OnCheck: |+
-                                                  =Patch(
-                                                      'Oportunidades de encuestas',
-                                                      ThisItem,
-                                                      {
-                                                          Efectiva: true
-                                                      }
+                                                  =If(
+                                                      !ThisItem.Efectiva,  // Si no está efectiva aún
+                                                      Patch(
+                                                          'Oportunidades de encuestas',
+                                                          ThisItem,
+                                                          {
+                                                              Efectiva: true
+                                                          }
+                                                      )
                                                   )
+
                                                 OnSelect: =
                                                 OnUncheck: |-
-                                                  =Patch(
-                                                      'Oportunidades de encuestas',
-                                                      ThisItem,
-                                                      {
-                                                          Efectiva: false
-                                                      }
+                                                  =If(
+                                                      !ThisItem.Efectiva,  // Si no está efectiva aún
+                                                      Patch(
+                                                          'Oportunidades de encuestas',
+                                                          ThisItem,
+                                                          {
+                                                              Efectiva: false
+                                                          }
+                                                      )
                                                   )
                                                 Width: =40
                                           - TextCanvas9_20:
@@ -733,7 +760,7 @@ Screens:
                                                 PaddingLeft: =10
                                                 Size: =9
                                                 Text: =ThisItem.Email
-                                                Width: =60
+                                                Width: =70
                                     - Button6:
                                         Control: Classic/Button@2.2.0
                                         Properties:

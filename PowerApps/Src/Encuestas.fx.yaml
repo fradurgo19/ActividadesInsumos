@@ -149,6 +149,25 @@ Encuestas As screen:
                             Y: =0
                             ZIndex: =1
 
+                        Icon9 As icon.Search:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(215, 58, 60, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(122, 138, 143, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Fill: =RGBA(214, 221, 224, 1)
+                            FocusedBorderThickness: =4
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Search
+                            LayoutMinHeight: =30
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =30
+                            ZIndex: =2
+
                         "ComboboxCanvas2_2 As 'Cuadro combinado'.pcfdataset":
                             Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
                             BasePaletteColor: =RGBA(189, 178, 176, 1)
@@ -166,7 +185,7 @@ Encuestas As screen:
                             Width: =200
                             X: =0
                             Y: =0
-                            ZIndex: =2
+                            ZIndex: =3
 
                         "ComboboxCanvas2_3 As 'Cuadro combinado'.pcfdataset":
                             Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
@@ -185,7 +204,7 @@ Encuestas As screen:
                             Width: =200
                             X: =0
                             Y: =0
-                            ZIndex: =3
+                            ZIndex: =4
 
                         "DatePickerCanvas2_1 As 'Selector de fecha'":
                             BasePaletteColor: =RGBA(189, 178, 176, 1)
@@ -200,7 +219,7 @@ Encuestas As screen:
                             Width: =200
                             X: =0
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =5
 
                         "DatePickerCanvas1_1 As 'Selector de fecha'":
                             BasePaletteColor: =
@@ -212,7 +231,7 @@ Encuestas As screen:
                             Width: =200
                             X: =0
                             Y: =0
-                            ZIndex: =5
+                            ZIndex: =6
 
                         ButtonCanvas10_1 As Botón:
                             BasePaletteColor: =RGBA(249, 83, 109, 1)
@@ -225,7 +244,7 @@ Encuestas As screen:
                             Width: =96
                             X: =0
                             Y: =0
-                            ZIndex: =6
+                            ZIndex: =7
 
                 Container4_1 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
@@ -804,7 +823,7 @@ Encuestas As screen:
                         BorderColor: =RGBA(139, 154, 159, 1)
                         BorderThickness: =2
                         DelayItemLoading: =true
-                        Height: =538
+                        Height: =500
                         Items: |-
                             =Sort(
                                 Filter(
@@ -823,7 +842,7 @@ Encuestas As screen:
                         ShowNavigation: =true
                         TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                         TemplatePadding: =0
-                        TemplateSize: =52
+                        TemplateSize: =46
                         Width: =630
                         ZIndex: =1
 
@@ -850,27 +869,35 @@ Encuestas As screen:
                             ZIndex: =6
 
                             CheckboxCanvas1 As Casilla:
+                                Checked: =ThisItem.Efectiva
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =32
                                 Label: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =160
-                                OnCheck: |
-                                    =Patch(
-                                        'Oportunidades de encuestas',
-                                        ThisItem,
-                                        {
-                                            Efectiva: true
-                                        }
+                                OnCheck: |+
+                                    =If(
+                                        !ThisItem.Efectiva,  // Si no está efectiva aún
+                                        Patch(
+                                            'Oportunidades de encuestas',
+                                            ThisItem,
+                                            {
+                                                Efectiva: true
+                                            }
+                                        )
                                     )
+                                    
                                 OnSelect: =
                                 OnUncheck: |-
-                                    =Patch(
-                                        'Oportunidades de encuestas',
-                                        ThisItem,
-                                        {
-                                            Efectiva: false
-                                        }
+                                    =If(
+                                        !ThisItem.Efectiva,  // Si no está efectiva aún
+                                        Patch(
+                                            'Oportunidades de encuestas',
+                                            ThisItem,
+                                            {
+                                                Efectiva: false
+                                            }
+                                        )
                                     )
                                 Width: =40
                                 X: =0
@@ -1008,7 +1035,7 @@ Encuestas As screen:
                                 PaddingLeft: =10
                                 Size: =9
                                 Text: =ThisItem.Email
-                                Width: =60
+                                Width: =70
                                 X: =0
                                 Y: =0
                                 ZIndex: =9
