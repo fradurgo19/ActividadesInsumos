@@ -895,7 +895,7 @@ Encuestas As screen:
                                     
                                     
                                     Set(varCheckboxChecked, true)
-                                OnSelect: =
+                                OnSelect: =Select(Parent)
                                 OnUncheck: |-
                                     =Patch(
                                         'Oportunidades de encuestas',
