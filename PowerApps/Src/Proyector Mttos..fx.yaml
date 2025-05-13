@@ -1402,6 +1402,63 @@
                     Y: =0
                     ZIndex: =1
 
+        ButtonCanvas5_6 As Botón:
+            AcceptsFocus: =true
+            AccessibleLabel: =""
+            Align: =""
+            Appearance: ="Primary"
+            BasePaletteColor: =RGBA(156, 220, 79, 1)
+            BorderStyle: =""
+            ContentLanguage: =""
+            DisplayMode: =DisplayMode.Edit
+            Font: =""
+            FontItalic: =false
+            FontSize: =0
+            FontStrikethrough: =false
+            FontUnderline: =false
+            FontWeight: =""
+            Height: =43
+            Icon: ="DocumentAdd"
+            IconRotation: =0
+            IconStyle: ="Outline"
+            Layout: ="Icon before"
+            OnSelect: |
+                =Clear(colgalrecord);
+                ForAll(Gallery2_5.AllItems As GalItems,
+                    Collect(colgalrecord,
+                        {
+                            INSUMO: GalItems.Label10_32.Text,           
+                            CANTIDAD: GalItems.Label10_33.Text,
+                            INTERVENCIONES:GalItems.Label10_34.Text,
+                            TOTAL: GalItems.Label10_35.Text,
+                            UNIDAD: GalItems.Label10_36.Text
+                        }
+                    )
+                );
+                
+                
+                Set(varcsvFile, JSON(colgalrecord));
+                
+                Set(
+                    dowloadurl,
+                    ExportExcel.Run(
+                        varcsvFile,
+                        $"Descarga Procedimientos Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
+                    ).dowloadlink
+                );
+                Launch(dowloadurl);
+                
+                Notify("Documento Descargado", NotificationType.Success, 3000)
+            TabIndex: =0
+            Text: ="EXPORTAR A CSV"
+            Tooltip: =""
+            VerticalAlign: =""
+            Visible: =true
+            Width: =123
+            X: =1158
+            Y: =545
+            ZIndex: =14
+
     Icon8 As icon.Undo:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(255, 0, 0, 1)
