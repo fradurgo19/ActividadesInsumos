@@ -793,7 +793,7 @@
         ButtonCanvas7 As Botón:
             BasePaletteColor: =RGBA(156, 220, 79, 1)
             DisplayMode: =DisplayMode.Edit
-            Height: =32
+            Height: =43
             Icon: ="Money"
             OnSelect: |-
                 =// Calcular las variables basadas en las entradas del usuario
@@ -832,8 +832,8 @@
                 TextCanvas22_4.Text = Text(TotalDesplazamiento, "[$-es-ES]$ #,###");
                 
                 Set(varTextoLabel81, Text(TotalDesplazamiento, "[$-es-ES]$ #.###"));
-            Text: ="Resumen"
-            Width: =120
+            Text: ="Calcule Valor"
+            Width: =136
             X: =1184
             Y: =110
             ZIndex: =8
