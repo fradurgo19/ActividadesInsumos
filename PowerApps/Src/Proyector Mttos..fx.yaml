@@ -1443,7 +1443,7 @@
                     dowloadurl,
                     ExportExcel.Run(
                         varcsvFile,
-                        $"Descarga INSUMOS PROYECTO MTTOS Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
+                        $"Descarga INSUMOS PROYECTOR DE MTTOS Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
                     ).dowloadlink
                 );
                 Launch(dowloadurl);
