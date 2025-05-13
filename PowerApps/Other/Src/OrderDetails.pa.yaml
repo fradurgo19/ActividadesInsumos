@@ -343,6 +343,7 @@ Screens:
                       Control: Button@0.0.45
                       Properties:
                         BasePaletteColor: =RGBA(5, 102, 178, 1)
+                        Height: =43
                         Icon: ="DocumentAdd"
                         OnSelect: |
                           =Clear(colgalrecord);
@@ -360,17 +361,20 @@ Screens:
 
                           Set(varcsvFile, JSON(colgalrecord));
 
-                          Set(dowloadurl,
-                          ExportExcel.Run(
-                              varcsvFile,
-                              $"{User().FullName}{Now()}.csv"
-                          ).dowloadlink);
+                          Set(
+                              dowloadurl,
+                              ExportExcel.Run(
+                                  varcsvFile,
+                                  $"Descarga Actividad Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
+                              ).dowloadlink
+                          );
                           Launch(dowloadurl);
 
                           Notify("Documento Descargado", NotificationType.Success, 3000)
-                        Text: ="CSV"
-                        X: =668
-                        Y: =69
+                        Text: ="EXPORTAR CSV"
+                        Width: =123
+                        X: =918
+                        Y: =88
       - Menu_1:
           Control: FluidGrid@2.3.0
           Properties:
