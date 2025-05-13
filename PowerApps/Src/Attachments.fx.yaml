@@ -379,6 +379,67 @@
                     Y: =135
                     ZIndex: =12
 
+            ButtonCanvas5_4 As Botón:
+                AcceptsFocus: =true
+                AccessibleLabel: =""
+                Align: =""
+                Appearance: ="Primary"
+                BasePaletteColor: =RGBA(156, 220, 79, 1)
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontSize: =0
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
+                Height: =43
+                Icon: ="DocumentAdd"
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                OnSelect: |
+                    =Clear(colgalrecord);
+                    ForAll(Gallery2.AllItems As GalItems,
+                        Collect(colgalrecord,
+                            {
+                                INSUMO: GalItems.Label10.Text,           
+                                CANTIDAD: GalItems.Label10_2.Text,
+                                REFERENCIAGENUINA:GalItems.Label10_4.Text,
+                                REFERENCIASAPENI: GalItems.Label10_3.Text,
+                                REFERENCIASAPDISPEL: GalItems.Label10_16.Text,
+                                REFERENCIASAPORIGINAL: GalItems.Label10_18.Text,
+                                REFERENCIASAPSTALL: GalItems.Label10_5.Text,
+                                REFERENCIASAPDONALDSON: GalItems.Label10_6.Text,
+                                REFERENCIASAPFLEETGUARD: GalItems.Label10_7.Text
+                            }
+                        )
+                    );
+                    
+                    
+                    Set(varcsvFile, JSON(colgalrecord));
+                    
+                    Set(
+                        dowloadurl,
+                        ExportExcel.Run(
+                            varcsvFile,
+                            $"Descarga Consumibles Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
+                        ).dowloadlink
+                    );
+                    Launch(dowloadurl);
+                    
+                    Notify("Documento Descargado", NotificationType.Success, 3000)
+                TabIndex: =0
+                Text: ="EXPORTAR A CSV"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Width: =123
+                X: =16
+                Y: =92
+                ZIndex: =20
+
             Group2_4 As group:
                 Height: =5
                 Width: =5
