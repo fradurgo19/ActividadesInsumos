@@ -50,49 +50,9 @@
     ],
     "dependencies": {},
     "dependents": [
-      "a6f106ef-6900-4c3e-bb70-fa7f3a054838"
+      "ec660cb5-6b5e-4272-9626-da3bb9314518"
     ],
     "id": "843c10cc-c110-47d9-a24d-fa49c3541ba1"
-  },
-  "a6f106ef-6900-4c3e-bb70-fa7f3a054838": {
-    "connectionRef": {
-      "displayName": "Flujos lógicos",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1719/1.0.1719.3955/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "843c10cc-c110-47d9-a24d-fa49c3541ba1": {
-          "value": "shared_sharepointonline"
-        },
-        "workflowDisplayName": {
-          "value": "ExportExcel"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "f7c74483-c425-4ece-bc73-b8c585e61d37"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "843c10cc-c110-47d9-a24d-fa49c3541ba1"
-        },
-        "workflowDisplayName": {
-          "value": "ExportExcel"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "f7c74483-c425-4ece-bc73-b8c585e61d37"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "ExportExcel"
-    ],
-    "dependencies": {
-      "shared_sharepointonline": "843c10cc-c110-47d9-a24d-fa49c3541ba1"
-    },
-    "dependents": [],
-    "id": "a6f106ef-6900-4c3e-bb70-fa7f3a054838"
   },
   "b235294e-621e-4896-ba41-d9a4779af503": {
     "connectionRef": {
@@ -161,5 +121,39 @@
       "b235294e-621e-4896-ba41-d9a4779af503"
     ],
     "id": "d72154ae-dfa8-497f-97e1-3ed208bd878f"
+  },
+  "ec660cb5-6b5e-4272-9626-da3bb9314518": {
+    "connectionRef": {
+      "displayName": "Flujos lógicos",
+      "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1745/1.0.1745.4169/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "ExportExcel"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "f7c74483-c425-4ece-bc73-b8c585e61d37"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "ExportExcel"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "f7c74483-c425-4ece-bc73-b8c585e61d37"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ExportExcel"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "843c10cc-c110-47d9-a24d-fa49c3541ba1"
+    },
+    "dependents": [],
+    "id": "ec660cb5-6b5e-4272-9626-da3bb9314518"
   }
 }

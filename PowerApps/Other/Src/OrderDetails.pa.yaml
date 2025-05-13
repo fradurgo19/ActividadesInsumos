@@ -339,6 +339,38 @@ Screens:
                               VerticalAlign: =VerticalAlign.Top
                               Width: =162
                               X: =239
+                  - ButtonCanvas5_2:
+                      Control: Button@0.0.45
+                      Properties:
+                        BasePaletteColor: =RGBA(5, 102, 178, 1)
+                        Icon: ="DocumentAdd"
+                        OnSelect: |
+                          =Clear(colgalrecord);
+                          ForAll(Gallery2_2.AllItems As GalItems,
+                              Collect(colgalrecord,
+                                  {
+                                      HORAS: GalItems.Label10_10.Text,           
+                                      MARCAS: GalItems.Label10_20.Text,
+                                      MODELO: GalItems.Label10_13.Text,
+                                      ACTIVIDAD: GalItems.Label10_17.Text
+                                  }
+                              )
+                          );
+
+
+                          Set(varcsvFile, JSON(colgalrecord));
+
+                          Set(dowloadurl,
+                          ExportExcel.Run(
+                              varcsvFile,
+                              $"{User().FullName}{Now()}.csv"
+                          ).dowloadlink);
+                          Launch(dowloadurl);
+
+                          Notify("Documento Descargado", NotificationType.Success, 3000)
+                        Text: ="CSV"
+                        X: =668
+                        Y: =69
       - Menu_1:
           Control: FluidGrid@2.3.0
           Properties:

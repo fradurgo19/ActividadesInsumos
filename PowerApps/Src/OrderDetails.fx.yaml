@@ -344,6 +344,60 @@
                     X: =239
                     ZIndex: =7
 
+            ButtonCanvas5_2 As Botón:
+                AcceptsFocus: =true
+                AccessibleLabel: =""
+                Align: =""
+                Appearance: ="Primary"
+                BasePaletteColor: =RGBA(5, 102, 178, 1)
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontSize: =0
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
+                Height: =32
+                Icon: ="DocumentAdd"
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                OnSelect: |
+                    =Clear(colgalrecord);
+                    ForAll(Gallery2_2.AllItems As GalItems,
+                        Collect(colgalrecord,
+                            {
+                                HORAS: GalItems.Label10_10.Text,           
+                                MARCAS: GalItems.Label10_20.Text,
+                                MODELO: GalItems.Label10_13.Text,
+                                ACTIVIDAD: GalItems.Label10_17.Text
+                            }
+                        )
+                    );
+                    
+                    
+                    Set(varcsvFile, JSON(colgalrecord));
+                    
+                    Set(dowloadurl,
+                    ExportExcel.Run(
+                        varcsvFile,
+                        $"{User().FullName}{Now()}.csv"
+                    ).dowloadlink);
+                    Launch(dowloadurl);
+                    
+                    Notify("Documento Descargado", NotificationType.Success, 3000)
+                TabIndex: =0
+                Text: ="CSV"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Width: =96
+                X: =668
+                Y: =69
+                ZIndex: =30
+
     Menu_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
