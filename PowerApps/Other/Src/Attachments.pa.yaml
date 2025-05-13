@@ -279,7 +279,7 @@ Screens:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         BorderThickness: =2
                         Fill: =RGBA(255, 255, 255, 1)
-                        Height: =222
+                        Height: =228
                         Items: |+
                           =Filter(
                               'TEMPARIO DE MANTENIMIENTOS',
@@ -298,7 +298,7 @@ Screens:
                         Transition: =Transition.Push
                         Width: =998
                         X: =3
-                        Y: =445
+                        Y: =500
                       Children:
                         - Label10_25:
                             Control: Label@2.5.1
@@ -389,12 +389,12 @@ Screens:
                         DisabledFill: =RGBA(166, 166, 166, 1)
                         Fill: =RGBA(105, 121, 126, 1)
                         FocusedBorderThickness: =4
-                        Height: =42
+                        Height: =53
                         HoverFill: =RGBA(105, 121, 126, 1)
                         PressedFill: =RGBA(105, 121, 126, 1)
                         Width: =998
                         X: =3
-                        Y: =403
+                        Y: =447
                   - Label11_23:
                       Control: Label@2.5.1
                       Group: Group2_4
@@ -407,11 +407,11 @@ Screens:
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
-                        Height: =42
+                        Height: =53
                         Text: ="Insumo"
                         Width: =172
                         X: =3
-                        Y: =403
+                        Y: =447
                   - Label11_24:
                       Control: Label@2.5.1
                       Group: Group2_4
@@ -424,11 +424,11 @@ Screens:
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
-                        Height: =42
+                        Height: =53
                         Text: ="Procedimiento"
                         Width: =400
                         X: =175
-                        Y: =403
+                        Y: =447
                   - Label11_25:
                       Control: Label@2.5.1
                       Group: Group2_4
@@ -441,11 +441,11 @@ Screens:
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
-                        Height: =42
+                        Height: =53
                         Text: ="Marca"
                         Width: =149
                         X: =575
-                        Y: =403
+                        Y: =447
                   - Label11_26:
                       Control: Label@2.5.1
                       Group: Group2_4
@@ -458,11 +458,11 @@ Screens:
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
-                        Height: =42
+                        Height: =53
                         Text: ="Linea"
                         Width: =163
                         X: =725
-                        Y: =403
+                        Y: =447
                   - Label11_27:
                       Control: Label@2.5.1
                       Group: Group2_4
@@ -475,11 +475,11 @@ Screens:
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
-                        Height: =42
+                        Height: =53
                         Text: ="Modelo"
                         Width: =115
                         X: =886
-                        Y: =403
+                        Y: =447
                   - ButtonCanvas5_4:
                       Control: Button@0.0.45
                       Properties:
@@ -488,18 +488,13 @@ Screens:
                         Icon: ="DocumentAdd"
                         OnSelect: |
                           =Clear(colgalrecord);
-                          ForAll(Gallery2.AllItems As GalItems,
+                          ForAll(Gallery2_1.AllItems As GalItems,
                               Collect(colgalrecord,
                                   {
-                                      INSUMO: GalItems.Label10.Text,           
-                                      CANTIDAD: GalItems.Label10_2.Text,
-                                      REFERENCIAGENUINA:GalItems.Label10_4.Text,
-                                      REFERENCIASAPENI: GalItems.Label10_3.Text,
-                                      REFERENCIASAPDISPEL: GalItems.Label10_16.Text,
-                                      REFERENCIASAPORIGINAL: GalItems.Label10_18.Text,
-                                      REFERENCIASAPSTALL: GalItems.Label10_5.Text,
-                                      REFERENCIASAPDONALDSON: GalItems.Label10_6.Text,
-                                      REFERENCIASAPFLEETGUARD: GalItems.Label10_7.Text
+                                      INSUMO: GalItems.Label10_12.Text,           
+                                      HORAS: GalItems.Label10_8.Text,
+                                      AVISOSCLAVES:GalItems.Label10_15.Text,
+                                      MARCA: GalItems.Label10_9.Text
                                   }
                               )
                           );
@@ -511,7 +506,7 @@ Screens:
                               dowloadurl,
                               ExportExcel.Run(
                                   varcsvFile,
-                                  $"Descarga Consumibles Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
+                                  $"Descarga Avisos Claves Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
                               ).dowloadlink
                           );
                           Launch(dowloadurl);
@@ -519,8 +514,44 @@ Screens:
                           Notify("Documento Descargado", NotificationType.Success, 3000)
                         Text: ="EXPORTAR A CSV"
                         Width: =123
-                        X: =16
+                        X: =3
                         Y: =92
+                  - ButtonCanvas5_5:
+                      Control: Button@0.0.45
+                      Properties:
+                        BasePaletteColor: =RGBA(156, 220, 79, 1)
+                        Height: =43
+                        Icon: ="DocumentAdd"
+                        OnSelect: |
+                          =Clear(colgalrecord);
+                          ForAll(Gallery2_4.AllItems As GalItems,
+                              Collect(colgalrecord,
+                                  {
+                                      INSUMO: GalItems.Label10_25.Text,           
+                                      HORAS: GalItems.Label10_26.Text,
+                                      AVISOSCLAVES:GalItems.Label10_27.Text,
+                                      MARCA: GalItems.Label10_28.Text
+                                  }
+                              )
+                          );
+
+
+                          Set(varcsvFile, JSON(colgalrecord));
+
+                          Set(
+                              dowloadurl,
+                              ExportExcel.Run(
+                                  varcsvFile,
+                                  $"Descarga Procedimientos Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
+                              ).dowloadlink
+                          );
+                          Launch(dowloadurl);
+
+                          Notify("Documento Descargado", NotificationType.Success, 3000)
+                        Text: ="EXPORTAR A CSV"
+                        Width: =123
+                        X: =4
+                        Y: =404
       - Menu_3:
           Control: FluidGrid@2.3.0
           Properties:

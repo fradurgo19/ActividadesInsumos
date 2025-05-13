@@ -186,7 +186,7 @@
                 BorderThickness: =2
                 DelayItemLoading: =true
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =222
+                Height: =228
                 Items: |+
                     =Filter(
                         'TEMPARIO DE MANTENIMIENTOS',
@@ -207,7 +207,7 @@
                 Transition: =Transition.Push
                 Width: =998
                 X: =3
-                Y: =445
+                Y: =500
                 ZIndex: =13
 
                 Label10_25 As label:
@@ -401,18 +401,13 @@
                 Layout: ="Icon before"
                 OnSelect: |
                     =Clear(colgalrecord);
-                    ForAll(Gallery2.AllItems As GalItems,
+                    ForAll(Gallery2_1.AllItems As GalItems,
                         Collect(colgalrecord,
                             {
-                                INSUMO: GalItems.Label10.Text,           
-                                CANTIDAD: GalItems.Label10_2.Text,
-                                REFERENCIAGENUINA:GalItems.Label10_4.Text,
-                                REFERENCIASAPENI: GalItems.Label10_3.Text,
-                                REFERENCIASAPDISPEL: GalItems.Label10_16.Text,
-                                REFERENCIASAPORIGINAL: GalItems.Label10_18.Text,
-                                REFERENCIASAPSTALL: GalItems.Label10_5.Text,
-                                REFERENCIASAPDONALDSON: GalItems.Label10_6.Text,
-                                REFERENCIASAPFLEETGUARD: GalItems.Label10_7.Text
+                                INSUMO: GalItems.Label10_12.Text,           
+                                HORAS: GalItems.Label10_8.Text,
+                                AVISOSCLAVES:GalItems.Label10_15.Text,
+                                MARCA: GalItems.Label10_9.Text
                             }
                         )
                     );
@@ -424,7 +419,7 @@
                         dowloadurl,
                         ExportExcel.Run(
                             varcsvFile,
-                            $"Descarga Consumibles Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
+                            $"Descarga Avisos Claves Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
                         ).dowloadlink
                     );
                     Launch(dowloadurl);
@@ -436,7 +431,7 @@
                 VerticalAlign: =""
                 Visible: =true
                 Width: =123
-                X: =16
+                X: =3
                 Y: =92
                 ZIndex: =20
 
@@ -454,12 +449,12 @@
                     DisabledFill: =RGBA(166, 166, 166, 1)
                     Fill: =RGBA(105, 121, 126, 1)
                     FocusedBorderThickness: =4
-                    Height: =42
+                    Height: =53
                     HoverFill: =RGBA(105, 121, 126, 1)
                     PressedFill: =RGBA(105, 121, 126, 1)
                     Width: =998
                     X: =3
-                    Y: =403
+                    Y: =447
                     ZIndex: =14
 
                 Label11_23 As label:
@@ -471,12 +466,12 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =53
                     Size: =13
                     Text: ="Insumo"
                     Width: =172
                     X: =3
-                    Y: =403
+                    Y: =447
                     ZIndex: =15
 
                 Label11_24 As label:
@@ -488,12 +483,12 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =53
                     Size: =13
                     Text: ="Procedimiento"
                     Width: =400
                     X: =175
-                    Y: =403
+                    Y: =447
                     ZIndex: =16
 
                 Label11_25 As label:
@@ -505,12 +500,12 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =53
                     Size: =13
                     Text: ="Marca"
                     Width: =149
                     X: =575
-                    Y: =403
+                    Y: =447
                     ZIndex: =17
 
                 Label11_26 As label:
@@ -522,12 +517,12 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =53
                     Size: =13
                     Text: ="Linea"
                     Width: =163
                     X: =725
-                    Y: =403
+                    Y: =447
                     ZIndex: =18
 
                 Label11_27 As label:
@@ -539,13 +534,69 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =42
+                    Height: =53
                     Size: =13
                     Text: ="Modelo"
                     Width: =115
                     X: =886
-                    Y: =403
+                    Y: =447
                     ZIndex: =19
+
+            ButtonCanvas5_5 As Botón:
+                AcceptsFocus: =true
+                AccessibleLabel: =""
+                Align: =""
+                Appearance: ="Primary"
+                BasePaletteColor: =RGBA(156, 220, 79, 1)
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontSize: =0
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
+                Height: =43
+                Icon: ="DocumentAdd"
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                OnSelect: |
+                    =Clear(colgalrecord);
+                    ForAll(Gallery2_4.AllItems As GalItems,
+                        Collect(colgalrecord,
+                            {
+                                INSUMO: GalItems.Label10_25.Text,           
+                                HORAS: GalItems.Label10_26.Text,
+                                AVISOSCLAVES:GalItems.Label10_27.Text,
+                                MARCA: GalItems.Label10_28.Text
+                            }
+                        )
+                    );
+                    
+                    
+                    Set(varcsvFile, JSON(colgalrecord));
+                    
+                    Set(
+                        dowloadurl,
+                        ExportExcel.Run(
+                            varcsvFile,
+                            $"Descarga Procedimientos Mtto Preventivo {Text(Today(), "[$-en-US]yyyy-mm-dd")}.csv"
+                        ).dowloadlink
+                    );
+                    Launch(dowloadurl);
+                    
+                    Notify("Documento Descargado", NotificationType.Success, 3000)
+                TabIndex: =0
+                Text: ="EXPORTAR A CSV"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Width: =123
+                X: =4
+                Y: =404
+                ZIndex: =21
 
     Menu_3 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
