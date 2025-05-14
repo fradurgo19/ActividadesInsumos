@@ -464,21 +464,6 @@ Screens:
                               X: =15
                               Y: =100
                             Children:
-                              - ButtonCanvas4_3:
-                                  Control: Button@0.0.45
-                                  Properties:
-                                    Align: =Align.Center
-                                    BasePaletteColor: =Color.LightGray
-                                    BorderColor: =RGBA(9, 33, 98, 1)
-                                    BorderRadiusBottomLeft: =5
-                                    BorderRadiusBottomRight: =5
-                                    BorderRadiusTopLeft: =5
-                                    BorderRadiusTopRight: =5
-                                    BorderStyle: =BorderStyle.Solid
-                                    BorderThickness: =2
-                                    Height: =44
-                                    Text: =
-                                    Width: =572
                               - Container17_3:
                                   Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
@@ -502,6 +487,7 @@ Screens:
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =5
+                                          Size: =12
                                           Text: ="OTT"
                                           Width: =40
                                     - TextCanvas7_26:
@@ -510,6 +496,7 @@ Screens:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =40
                                           PaddingLeft: =5
+                                          Size: =12
                                           Text: ="Cliente"
                                           Width: =80
                                     - TextCanvas7_27:
@@ -518,6 +505,7 @@ Screens:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =40
                                           PaddingLeft: =5
+                                          Size: =12
                                           Text: ="Tipo de Servicio"
                                           Width: =60
                                     - TextCanvas7_28:
@@ -525,14 +513,16 @@ Screens:
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
+                                          Size: =10
                                           Text: ="Fecha"
-                                          Width: =60
+                                          Width: =40
                                     - TextCanvas7_29:
                                         Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =60
                                           PaddingLeft: =15
+                                          Size: =12
                                           Text: ="Equipo"
                                           Width: =60
                                     - TextCanvas7_39:
@@ -541,13 +531,15 @@ Screens:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           LayoutMinWidth: =60
                                           PaddingLeft: =15
+                                          Size: =12
                                           Text: ="Sede"
-                                          Width: =60
+                                          Width: =40
                                     - TextCanvas7_30:
                                         Control: Text@0.0.51
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
+                                          Size: =12
                                           Text: ="Telefono"
                                           Width: =80
                                     - TextCanvas7_31:
@@ -555,13 +547,22 @@ Screens:
                                         Properties:
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           PaddingLeft: =15
+                                          Size: =12
                                           Text: ="Email"
                                           Width: =70
+                                    - TextCanvas7_46:
+                                        Control: Text@0.0.51
+                                        Properties:
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          PaddingLeft: =15
+                                          Size: =12
+                                          Text: ="Nit"
+                                          Width: =40
                                     - ButtonCanvas17:
                                         Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(82, 205, 242, 1)
-                                          FontSize: =10
+                                          FontSize: =11
                                           Text: ="Cantidad " & CountRows(Gallery6_2.AllItems)
                                           Width: =70
                         - Container16_2:
@@ -718,9 +719,9 @@ Screens:
                                                 LayoutMinHeight: =0
                                                 LayoutMinWidth: =32
                                                 PaddingLeft: =10
-                                                Size: =10
+                                                Size: =9
                                                 Text: =ThisItem.FechadeServicio
-                                                Width: =60
+                                                Width: =40
                                           - TextCanvas9_31:
                                               Control: Text@0.0.51
                                               Properties:
@@ -746,9 +747,9 @@ Screens:
                                                 LayoutMinHeight: =0
                                                 LayoutMinWidth: =32
                                                 PaddingLeft: =10
-                                                Size: =10
+                                                Size: =8
                                                 Text: =ThisItem.Sede
-                                                Width: =60
+                                                Width: =40
                                           - TextCanvas9_29:
                                               Control: Text@0.0.51
                                               Properties:
@@ -777,6 +778,20 @@ Screens:
                                                 Size: =9
                                                 Text: =ThisItem.Email
                                                 Width: =70
+                                          - TextCanvas9_33:
+                                              Control: Text@0.0.51
+                                              Properties:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(214, 221, 224, 1)
+                                                BorderStyle: =BorderStyle.Solid
+                                                BorderThickness: =1
+                                                FontItalic: =true
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =32
+                                                PaddingLeft: =10
+                                                Size: =9
+                                                Text: =ThisItem.Nit
+                                                Width: =50
                                     - Button6:
                                         Control: Classic/Button@2.2.0
                                         Properties:

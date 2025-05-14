@@ -617,24 +617,6 @@ Encuestas As screen:
                     Y: =100
                     ZIndex: =23
 
-                    ButtonCanvas4_3 As Botón:
-                        Align: =Align.Center
-                        BasePaletteColor: =Color.LightGray
-                        BorderColor: =RGBA(9, 33, 98, 1)
-                        BorderRadiusBottomLeft: =5
-                        BorderRadiusBottomRight: =5
-                        BorderRadiusTopLeft: =5
-                        BorderRadiusTopRight: =5
-                        BorderStyle: =BorderStyle.Solid
-                        BorderThickness: =2
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =44
-                        Text: =
-                        Width: =572
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
                     Container17_3 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
                         Fill: =RGBA(45, 128, 40, 1)
@@ -684,7 +666,7 @@ Encuestas As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =5
-                            Size: =14
+                            Size: =12
                             Text: ="OTT"
                             Width: =40
                             X: =0
@@ -699,7 +681,7 @@ Encuestas As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =40
                             PaddingLeft: =5
-                            Size: =14
+                            Size: =12
                             Text: ="Cliente"
                             Width: =80
                             X: =0
@@ -714,7 +696,7 @@ Encuestas As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =40
                             PaddingLeft: =5
-                            Size: =14
+                            Size: =12
                             Text: ="Tipo de Servicio"
                             Width: =60
                             X: =0
@@ -729,9 +711,9 @@ Encuestas As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
-                            Size: =14
+                            Size: =10
                             Text: ="Fecha"
-                            Width: =60
+                            Width: =40
                             X: =0
                             Y: =0
                             ZIndex: =5
@@ -744,7 +726,7 @@ Encuestas As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =60
                             PaddingLeft: =15
-                            Size: =14
+                            Size: =12
                             Text: ="Equipo"
                             Width: =60
                             X: =0
@@ -759,9 +741,9 @@ Encuestas As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =60
                             PaddingLeft: =15
-                            Size: =14
+                            Size: =12
                             Text: ="Sede"
-                            Width: =60
+                            Width: =40
                             X: =0
                             Y: =0
                             ZIndex: =7
@@ -774,7 +756,7 @@ Encuestas As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
-                            Size: =14
+                            Size: =12
                             Text: ="Telefono"
                             Width: =80
                             X: =0
@@ -789,17 +771,45 @@ Encuestas As screen:
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
-                            Size: =14
+                            Size: =12
                             Text: ="Email"
                             Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =9
 
+                        TextCanvas7_46 As Texto:
+                            Align: ="Start"
+                            AutoHeight: =false
+                            BorderStyle: =""
+                            ContentLanguage: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =""
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            FontItalic: =false
+                            FontStrikethrough: =false
+                            FontUnderline: =false
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =15
+                            Size: =12
+                            TabIndex: =0
+                            Text: ="Nit"
+                            Tooltip: =""
+                            VerticalAlign: =""
+                            Visible: =true
+                            Weight: ="Regular"
+                            Width: =40
+                            Wrap: =true
+                            X: =0
+                            Y: =0
+                            ZIndex: =10
+
                         ButtonCanvas17 As Botón:
                             BasePaletteColor: =RGBA(82, 205, 242, 1)
                             DisplayMode: =DisplayMode.Edit
-                            FontSize: =10
+                            FontSize: =11
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
@@ -807,7 +817,7 @@ Encuestas As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =10
+                            ZIndex: =11
 
                 Container16_2 As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
@@ -976,9 +986,9 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =10
+                                Size: =9
                                 Text: =ThisItem.FechadeServicio
-                                Width: =60
+                                Width: =40
                                 X: =0
                                 Y: =0
                                 ZIndex: =5
@@ -1010,9 +1020,9 @@ Encuestas As screen:
                                 Height: =32
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
-                                Size: =10
+                                Size: =8
                                 Text: =ThisItem.Sede
-                                Width: =60
+                                Width: =40
                                 X: =0
                                 Y: =0
                                 ZIndex: =7
@@ -1050,6 +1060,35 @@ Encuestas As screen:
                                 X: =0
                                 Y: =0
                                 ZIndex: =9
+
+                            TextCanvas9_33 As Texto:
+                                Align: ="Start"
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =false
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ContentLanguage: =""
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontItalic: =true
+                                FontStrikethrough: =false
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinWidth: =32
+                                PaddingLeft: =10
+                                Size: =9
+                                TabIndex: =0
+                                Text: =ThisItem.Nit
+                                Tooltip: =""
+                                VerticalAlign: =""
+                                Visible: =true
+                                Weight: ="Regular"
+                                Width: =50
+                                Wrap: =true
+                                X: =0
+                                Y: =0
+                                ZIndex: =10
 
                         Button6 As button:
                             BorderColor: =RGBA(0, 0, 0, 0)
