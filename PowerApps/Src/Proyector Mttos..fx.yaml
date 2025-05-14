@@ -1207,6 +1207,26 @@
                     X: =426
                     ZIndex: =10
 
+                Label10_37 As label:
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =32
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |
+                        =ThisItem.'Referencia Genuina'
+                    VerticalAlign: =VerticalAlign.Top
+                    Visible: =false
+                    Width: =57
+                    X: =441
+                    Y: =2
+                    ZIndex: =11
+
         Container114 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(174, 208, 221, 1)
@@ -1431,7 +1451,8 @@
                             CANTIDAD: GalItems.Label10_33.Text,
                             INTERVENCIONES:GalItems.Label10_34.Text,
                             TOTAL: GalItems.Label10_35.Text,
-                            UNIDAD: GalItems.Label10_36.Text
+                            UNIDAD: GalItems.Label10_36.Text,
+                            REFERENCIAGENUINA: Label10_37.Text
                         }
                     )
                 );
