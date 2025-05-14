@@ -136,10 +136,10 @@ Screens:
                                         Properties:
                                           AccessibleLabel: ="Buscar por OTT"
                                           Appearance: ='TextInputCanvas.Appearance'.FilledDarker
-                                          BasePaletteColor: =RGBA(189, 178, 176, 1)
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           BorderStyle: =BorderStyle.None
                                           BorderThickness: =2
+                                          FontSize: =11
                                           Placeholder: ="Buscar por OTT"
                                           Width: =200
                                     - Icon9:
@@ -166,10 +166,10 @@ Screens:
                                         Control: ComboBox@0.0.51
                                         Properties:
                                           Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
-                                          BasePaletteColor: =RGBA(189, 178, 176, 1)
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           BorderStyle: =BorderStyle.None
                                           BorderThickness: =2
+                                          FontSize: =11
                                           InputTextPlaceholder: ="Buscar por Tipo"
                                           Items: =["Mantenimiento Correctivo", "Mantenimiento Preventivo", "Diagnóstico", "Garantía"]
                                           Width: =200
@@ -177,31 +177,33 @@ Screens:
                                         Control: ComboBox@0.0.51
                                         Properties:
                                           Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
-                                          BasePaletteColor: =RGBA(189, 178, 176, 1)
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           BorderStyle: =BorderStyle.None
                                           BorderThickness: =2
+                                          FontSize: =11
                                           InputTextPlaceholder: ="Buscar por Estado"
                                           Items: =Distinct('Oportunidades de encuestas',Efectiva)
                                           Width: =200
                                     - DatePickerCanvas2_1:
                                         Control: DatePicker@0.0.44
                                         Properties:
-                                          BasePaletteColor: =RGBA(189, 178, 176, 1)
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           BorderStyle: =BorderStyle.None
                                           BorderThickness: =2
+                                          FontSize: =11
                                           Placeholder: ="Filtrar por Fecha Inicio"
                                           Width: =200
                                     - DatePickerCanvas1_1:
                                         Control: DatePicker@0.0.44
                                         Properties:
+                                          FontSize: =11
                                           Placeholder: ="Filtrar por Fecha Fin"
                                           Width: =200
                                     - ButtonCanvas10_1:
                                         Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                          FontSize: =11
                                           OnSelect: =Reset(TextInputCanvas5_1);Reset(ComboboxCanvas2_2);Reset(ComboboxCanvas2_3);Reset(DatePickerCanvas2_1);Reset(DatePickerCanvas1_1)
                                           Text: ="Reset"
                         - Container4_1:
@@ -452,7 +454,7 @@ Screens:
                                                 FontSize: =8
                                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                                 Value: =ThisItem.Observaciones
-                                                Width: =200
+                                                Width: =210
                                           - ButtonCanvas19:
                                               Control: Button@0.0.45
                                               Properties:
