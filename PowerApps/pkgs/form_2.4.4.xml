@@ -1,4 +1,4 @@
-<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/form" name="form" jsClass="AppMagic.Controls.Form.FormControl" version="2.4.3" styleable="true" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
+<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/form" name="form" jsClass="AppMagic.Controls.Form.FormControl" version="2.4.4" styleable="true" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
   <author name="Microsoft AppMagic" />
   <license type="text/html"><![CDATA[<p>TODO:  Need license text here.</p>]]></license>
   <description><![CDATA[Form
@@ -62,6 +62,9 @@
       <appMagic:category>data</appMagic:category>
       <appMagic:displayName>##formProperties_Updates_DisplayName##</appMagic:displayName>
       <appMagic:referencesNestedControls />
+      <appMagic:nonRuleDependents>
+        <appMagic:nonRuleDependent name="Update" type="ImplicitChild" />
+      </appMagic:nonRuleDependents>
     </property>
     <property name="LastSubmit" localizedName="##formProperties_LastSubmit##" datatype="Object" direction="out" isTypeInferredFromPrimaryInput="true">
       <appMagic:category>data</appMagic:category>
@@ -243,6 +246,9 @@
     <!-- Removing hideInRecordingMode property attribute -->
   </appMagic:conversion>
   <appMagic:conversion from="2.4.2" to="2.4.3">
+    <!-- Adding non-rule-dependencies -->
+  </appMagic:conversion>
+  <appMagic:conversion from="2.4.3" to="2.4.4">
     <!-- Adding non-rule-dependencies -->
   </appMagic:conversion>
 </widget>

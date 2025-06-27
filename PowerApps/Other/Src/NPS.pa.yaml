@@ -515,7 +515,7 @@ Screens:
                                     Items: =["En seguimiento", "Cerrada", "Solucionada"]
                                     Width: =190
                               - DatePickerCanvas2:
-                                  Control: DatePicker@0.0.44
+                                  Control: DatePicker@0.0.46
                                   Properties:
                                     BasePaletteColor: =RGBA(189, 178, 176, 1)
                                     BorderColor: =RGBA(0, 0, 0, 1)
@@ -524,7 +524,7 @@ Screens:
                                     Placeholder: ="Filtrar por Fecha Inicio"
                                     Width: =190
                               - DatePickerCanvas1:
-                                  Control: DatePicker@0.0.44
+                                  Control: DatePicker@0.0.46
                                   Properties:
                                     Placeholder: ="Filtrar por Fecha Fin"
                                     Width: =190
@@ -1056,7 +1056,7 @@ Screens:
                               Width: =Parent.Width
                             Children:
                               - Form2:
-                                  Control: Form@2.4.3
+                                  Control: Form@2.4.4
                                   Layout: Vertical
                                   Properties:
                                     AcceptsFocus: =true

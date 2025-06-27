@@ -844,7 +844,7 @@ Encuestas As screen:
                         BorderThickness: =2
                         DelayItemLoading: =true
                         Height: =525
-                        Items: |-
+                        Items: |+
                             =Sort(
                                 Filter(
                                     'Oportunidades de encuestas',
@@ -853,11 +853,13 @@ Encuestas As screen:
                                     (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
                                     (FechadeServicio >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
                                     (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
-                                    (DateDiff(FechadeServicio, Today()) <= 75)
+                                    (Month(FechadeServicio) = Month(DateAdd(Today(), -1, "Months")) && Year(FechadeServicio) = Year(DateAdd(Today(), -1, "Months")))
                                 ),
                                 FechadeServicio,
                                 SortOrder.Descending
                             )
+                            
+                            
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
                         ShowNavigation: =true

@@ -185,7 +185,7 @@ Screens:
                                           Items: =Distinct('Oportunidades de encuestas',Efectiva)
                                           Width: =200
                                     - DatePickerCanvas2_1:
-                                        Control: DatePicker@0.0.44
+                                        Control: DatePicker@0.0.46
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           BorderStyle: =BorderStyle.None
@@ -194,7 +194,7 @@ Screens:
                                           Placeholder: ="Filtrar por Fecha Inicio"
                                           Width: =200
                                     - DatePickerCanvas1_1:
-                                        Control: DatePicker@0.0.44
+                                        Control: DatePicker@0.0.46
                                         Properties:
                                           FontSize: =11
                                           Placeholder: ="Filtrar por Fecha Fin"
@@ -596,7 +596,7 @@ Screens:
                                     BorderColor: =RGBA(139, 154, 159, 1)
                                     BorderThickness: =2
                                     Height: =525
-                                    Items: |-
+                                    Items: |+
                                       =Sort(
                                           Filter(
                                               'Oportunidades de encuestas',
@@ -605,11 +605,13 @@ Screens:
                                               (TipodeServicio = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) &&
                                               (FechadeServicio >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) &&
                                               (FechadeServicio <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate)) &&
-                                              (DateDiff(FechadeServicio, Today()) <= 75)
+                                              (Month(FechadeServicio) = Month(DateAdd(Today(), -1, "Months")) && Year(FechadeServicio) = Year(DateAdd(Today(), -1, "Months")))
                                           ),
                                           FechadeServicio,
                                           SortOrder.Descending
                                       )
+
+
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                                     TemplateSize: =46
