@@ -720,7 +720,7 @@ Screens:
                                 =If(
                                     IsBlank(DropParte1.SelectedItems) && IsBlank(TextInputCanvas6.Value),
                                     [ // Tabla ficticia vacía con la misma estructura de datos
-                                        {Nombre: "", Marca: "", Modelo: "", RefSAP: "",  Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo: "", ImagenUrl: "", Recomendación: "", EQUIVALENCIA1: "", EQUIVALENCIA2: "", EQUIVALENCIA3: ""}
+                                        {Nombre: "", Marca: "", Modelo: "", RefSAP: "",  Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo: "", ImagenUrl: "", Recomendación: "", EQUIVALENCIA1: "", EQUIVALENCIA2: "", EQUIVALENCIA3: "", REFERENCIACATALOGO: ""}
                                     ],
                                     Filter(
                                         TablaDataCpp,
@@ -778,10 +778,10 @@ Screens:
                                                 Height: =76
                                                 PaddingLeft: =25
                                                 PaddingTop: =0
-                                                Size: =11
+                                                Size: =10
                                                 Text: =ThisItem.Nombre
                                                 VerticalAlign: =VerticalAlign.Top
-                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Weight: ='TextCanvas.Weight'.Bold
                                                 Width: =Parent.Width
                                     - Container97_2:
                                         Control: GroupContainer@1.3.0
@@ -799,7 +799,7 @@ Screens:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
                                                 PaddingTop: =0
-                                                Size: =12
+                                                Size: =11
                                                 Text: =ThisItem.Cantidad
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -820,7 +820,7 @@ Screens:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
                                                 PaddingTop: =0
-                                                Size: =12
+                                                Size: =11
                                                 Text: =ThisItem.RefSAP
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -841,7 +841,7 @@ Screens:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
                                                 PaddingTop: =0
-                                                Size: =10
+                                                Size: =11
                                                 Text: =ThisItem.EQUIVALENCIA1
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -863,7 +863,7 @@ Screens:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
                                                 PaddingTop: =0
-                                                Size: =10
+                                                Size: =11
                                                 Text: =ThisItem.EQUIVALENCIA2
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
@@ -886,7 +886,7 @@ Screens:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
                                                 PaddingTop: =0
-                                                Size: =10
+                                                Size: =11
                                                 Text: =ThisItem.EQUIVALENCIA3
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
@@ -963,7 +963,7 @@ Screens:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
                                                 PaddingTop: =0
-                                                Size: =10
+                                                Size: =11
                                                 Text: =ThisItem.Frecuencia
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
@@ -1026,7 +1026,7 @@ Screens:
                                                 Align: ='TextCanvas.Align'.Start
                                                 Height: =76
                                                 PaddingTop: =0
-                                                Size: =8
+                                                Size: =10
                                                 Text: =ThisItem.Comentario
                                                 VerticalAlign: =VerticalAlign.Top
                                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -1222,7 +1222,12 @@ Screens:
                         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         IsSearchable: =false
-                        Items: =Distinct(TablaDataCpp,Marca)
+                        Items: |+
+                          =Distinct(
+                              Filter(TablaDataCpp, Marca <> "0" && !IsBlank(Marca)),
+                              Marca
+                          )
+
                         OnChange: =
                         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         PressedColor: =RGBA(0, 0, 0, 1)
