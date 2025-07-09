@@ -256,7 +256,7 @@ CPP As screen:
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: |
-                        =Parent.Width/8
+                        =Parent.Width/6
                     ZIndex: =1
 
                     TextCanvas7_11 As Texto:
@@ -891,7 +891,7 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =136
+                            Width: =180
                             ZIndex: =1
 
                             TextCanvas25 As Texto:
@@ -1276,13 +1276,13 @@ CPP As screen:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         FontItalic: =true
-                        Height: =19
+                        Height: =18
                         Size: =10
                         Text: =ThisItem.No
                         Weight: ='TextCanvas.Weight'.Bold
-                        Width: =24
-                        X: =28
-                        Y: =55
+                        Width: =36
+                        X: =39
+                        Y: =58
                         ZIndex: =21
 
         Container66 As groupContainer.manualLayoutContainer:
@@ -1661,10 +1661,10 @@ CPP As screen:
             BasePaletteColor: =RGBA(249, 83, 109, 1)
             DisplayMode: =DisplayMode.Edit
             FontSize: =9
-            Height: =25
+            Height: =21
             OnSelect: =Reset(DropMarca1);Reset(DropModelo1);Reset(DropParte1);Reset(DropTipo1);Reset(DropFrecuencia1)
-            Text: ="Limpiar Busquedad"
-            Width: =56
+            Text: ="Limpiar"
+            Width: =58
             X: =Container14.X
             Y: =35
             ZIndex: =11
