@@ -1425,17 +1425,6 @@ Screens:
                   Width: =42
                   X: =58
                   Y: =3
-            - ButtonCanvas6:
-                Control: Button@0.0.45
-                Properties:
-                  BasePaletteColor: =RGBA(249, 83, 109, 1)
-                  FontSize: =9
-                  Height: =21
-                  OnSelect: =Reset(DropMarca1);Reset(DropModelo1);Reset(DropParte1);Reset(DropTipo1);Reset(DropFrecuencia1)
-                  Text: ="Limpiar"
-                  Width: =58
-                  X: =Container14.X
-                  Y: =35
             - ButtonCanvas5_1:
                 Control: Button@0.0.45
                 Properties:
@@ -1496,3 +1485,22 @@ Screens:
                         Size: =8
                         Width: =115
                         Y: =522
+            - Container38:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =32
+                  Width: =135
+                  Y: =35
+                Children:
+                  - ButtonCanvas6:
+                      Control: Button@0.0.45
+                      Properties:
+                        BasePaletteColor: =RGBA(249, 83, 109, 1)
+                        FontSize: =9
+                        Height: =22
+                        OnSelect: =Reset(DropMarca1);Reset(DropModelo1);Reset(DropParte1);Reset(DropTipo1);Reset(DropFrecuencia1)
+                        Text: ="Borrar Filtros"
+                        Width: =102
+                        X: =Container14.X
+                        Y: =4

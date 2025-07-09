@@ -1657,18 +1657,6 @@ CPP As screen:
             Y: =3
             ZIndex: =10
 
-        ButtonCanvas6 As Botón:
-            BasePaletteColor: =RGBA(249, 83, 109, 1)
-            DisplayMode: =DisplayMode.Edit
-            FontSize: =9
-            Height: =21
-            OnSelect: =Reset(DropMarca1);Reset(DropModelo1);Reset(DropParte1);Reset(DropTipo1);Reset(DropFrecuencia1)
-            Text: ="Limpiar"
-            Width: =58
-            X: =Container14.X
-            Y: =35
-            ZIndex: =11
-
         ButtonCanvas5_1 As Botón:
             BasePaletteColor: =RGBA(225, 250, 2, 1)
             DisplayMode: =DisplayMode.Edit
@@ -1736,5 +1724,47 @@ CPP As screen:
                 Size: =8
                 Width: =115
                 Y: =522
+                ZIndex: =1
+
+        Container38 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =32
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =135
+            Y: =35
+            ZIndex: =15
+
+            ButtonCanvas6 As Botón:
+                AcceptsFocus: =true
+                AccessibleLabel: =""
+                Align: =""
+                Appearance: ="Primary"
+                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontSize: =9
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
+                Height: =22
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                OnSelect: =Reset(DropMarca1);Reset(DropModelo1);Reset(DropParte1);Reset(DropTipo1);Reset(DropFrecuencia1)
+                TabIndex: =0
+                Text: ="Borrar Filtros"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Width: =102
+                X: =Container14.X
+                Y: =4
                 ZIndex: =1
 
