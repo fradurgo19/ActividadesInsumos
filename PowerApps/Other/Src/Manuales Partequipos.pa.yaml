@@ -434,7 +434,7 @@ Screens:
                                           hiddenFolderPath = varPatch
                                           ),
                                           "Title",
-                                          SortOrder.Ascending
+                                          SortOrder.Descending
                                       )
 
                                     OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
