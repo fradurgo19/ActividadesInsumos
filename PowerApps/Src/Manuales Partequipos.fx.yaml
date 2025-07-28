@@ -467,6 +467,7 @@
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
+                        ShowNavigation: =true
                         TemplatePadding: =0
                         TemplateSize: =60
                         X: =40
