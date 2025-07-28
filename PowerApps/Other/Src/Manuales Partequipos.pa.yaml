@@ -421,35 +421,28 @@ Screens:
                               X: =4
                               Y: =4
                             Children:
-                              - Gallery7:
+                              - Gallery14:
                                   Control: Gallery@2.15.0
-                                  Variant: BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0
+                                  Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
                                   Properties:
-                                    BorderColor: =RGBA(40, 134, 222, 1)
-                                    BorderThickness: =2
-                                    Fill: =RGBA(255, 255, 255, 1)
-                                    FillPortions: =0
-                                    Height: =Parent.Height
-                                    Items: |-
-                                      =Filter(
-                                          Manuales_1,
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Items: |+
+                                      =SortByColumns(
+                                          Filter(
+                                              Manuales_1,
                                           (TextInputCanvas1.Value in Nombre || IsBlank(TextInputCanvas1.Value)) &&
                                           hiddenFolderPath = varPatch
+                                          ),
+                                          "Title",
+                                          SortOrder.Ascending
                                       )
-                                    LayoutMinHeight: =0
-                                    LayoutMinWidth: =200
+
                                     OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
-                                    ShowNavigation: |
-                                      =true
-                                    TemplateSize: =150
-                                    Transition: =Transition.Pop
-                                    Width: |
-                                      =Parent.Width
-                                    WrapCount: =3
-                                    X: =323
-                                    Y: =632
+                                    TemplateSize: =60
+                                    X: =40
+                                    Y: =40
                                   Children:
-                                    - Image27:
+                                    - Image5:
                                         Control: Image@2.2.3
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 0)
@@ -458,11 +451,10 @@ Screens:
                                           DisabledBorderColor: =RGBA(0, 0, 0, 0)
                                           DisabledFill: =RGBA(0, 0, 0, 0)
                                           FocusedBorderThickness: =4
-                                          Height: =64
+                                          Height: =72
                                           HoverBorderColor: =RGBA(0, 0, 0, 0)
                                           HoverFill: =RGBA(0, 0, 0, 0)
                                           Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Large)
-                                          ImagePosition: =ImagePosition.Fill
                                           OnSelect: =Select(Parent)
                                           PressedBorderColor: =RGBA(0, 0, 0, 0)
                                           PressedFill: =RGBA(0, 0, 0, 0)
@@ -470,17 +462,17 @@ Screens:
                                           RadiusBottomRight: =8
                                           RadiusTopLeft: =8
                                           RadiusTopRight: =8
-                                          Width: =68
-                                          X: =1
-                                          Y: =55
-                                    - Title7:
+                                          Width: =72
+                                          X: =16
+                                          Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                    - Title2:
                                         Control: Label@2.5.1
                                         Properties:
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           Color: =RGBA(50, 49, 48, 1)
                                           Font: =Font.'Segoe UI'
                                           FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                          Height: =43
+                                          Height: =25
                                           OnSelect: =Select(Parent)
                                           PaddingBottom: =0
                                           PaddingLeft: =0
@@ -489,39 +481,49 @@ Screens:
                                           Size: =14
                                           Text: =ThisItem.Nombre
                                           VerticalAlign: =VerticalAlign.Top
-                                          Visible: =false
-                                          Width: =191
-                                          X: =16
-                                          Y: =12
-                                    - Subtitle7:
+                                          Width: =352
+                                          X: =103
+                                          Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+                                    - Subtitle2:
                                         Control: Label@2.5.1
                                         Properties:
-                                          Align: =Align.Center
                                           BorderColor: =RGBA(0, 0, 0, 1)
                                           Color: =RGBA(51, 51, 51, 1)
-                                          Font: =Font.Lato
+                                          Font: =Font.'Segoe UI'
                                           FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                          Height: =55
+                                          Height: =Self.Size * 1.8
                                           OnSelect: =Select(Parent)
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
                                           PaddingTop: =0
-                                          Size: =10
+                                          Size: =12
                                           Text: =ThisItem.'Nombre de archivo con extensión'
-                                          Width: =149
-                                          X: =1
-                                    - ButtonCanvas4_2:
+                                          VerticalAlign: =VerticalAlign.Top
+                                          Width: =Title2.Width
+                                          X: =Title2.X
+                                          Y: =Title2.Y + Title2.Height
+                                    - Separator8:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(255, 255, 255, 1)
+                                          BorderThickness: =1
+                                          Fill: =RGBA(214, 221, 224, 1)
+                                          Height: =4
+                                          OnSelect: =Select(Parent)
+                                          Width: =Parent.TemplateWidth
+                                          Y: =Parent.TemplateHeight - Self.Height
+                                    - ButtonCanvas4_3:
                                         Control: Button@0.0.45
                                         Properties:
                                           FontSize: =12
                                           Height: =29
-                                          OnSelect: =Launch("https://partequipos2.sharepoint.com/sites/seguimientocomercial/" & EncodeUrl(Gallery7.Selected.'Ruta de acceso completa'))
+                                          OnSelect: =Launch("https://partequipos2.sharepoint.com/sites/seguimientocomercial/" & EncodeUrl(Gallery14.Selected.'Ruta de acceso completa'))
                                           Text: ="Download"
                                           Visible: =!ThisItem.EsCarpeta
                                           Width: =65
-                                          X: =85
-                                          Y: =90
+                                          X: =533
+                                          Y: =15
       - Container15:
           Control: GroupContainer@1.3.0
           Variant: ManualLayout
