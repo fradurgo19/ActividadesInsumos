@@ -474,7 +474,7 @@ Screens:
                                           Color: =RGBA(50, 49, 48, 1)
                                           Font: =Font.'Segoe UI'
                                           FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                                          Height: =25
+                                          Height: =24
                                           OnSelect: =Select(Parent)
                                           PaddingBottom: =0
                                           PaddingLeft: =0
@@ -482,7 +482,7 @@ Screens:
                                           PaddingTop: =0
                                           Text: =ThisItem.Nombre
                                           VerticalAlign: =VerticalAlign.Top
-                                          Width: =352
+                                          Width: =507
                                           X: =102
                                           Y: =15
                                     - Separator8:
@@ -504,8 +504,8 @@ Screens:
                                           Text: ="Download"
                                           Visible: =!ThisItem.EsCarpeta
                                           Width: =65
-                                          X: =533
-                                          Y: =15
+                                          X: =622
+                                          Y: =10
       - Container15:
           Control: GroupContainer@1.3.0
           Variant: ManualLayout
