@@ -458,8 +458,8 @@
                                 (TextInputCanvas1.Value in Nombre || IsBlank(TextInputCanvas1.Value)) &&
                                 hiddenFolderPath = varPatch
                                 ),
-                                "Title",
-                                SortOrder.Descending
+                                "{Name}",
+                                SortOrder.Ascending
                             )
                             
                         Layout: =Layout.Vertical

@@ -433,8 +433,8 @@ Screens:
                                           (TextInputCanvas1.Value in Nombre || IsBlank(TextInputCanvas1.Value)) &&
                                           hiddenFolderPath = varPatch
                                           ),
-                                          "Title",
-                                          SortOrder.Descending
+                                          "{Name}",
+                                          SortOrder.Ascending
                                       )
 
                                     OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
