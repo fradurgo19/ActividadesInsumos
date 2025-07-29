@@ -468,6 +468,7 @@
                         LoadingSpinner: =LoadingSpinner.Data
                         OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
                         ShowNavigation: =true
+                        TemplateFill: =If(ThisItem.IsSelected, Color.LightBlue, Color.White)
                         TemplatePadding: =0
                         TemplateSize: =50
                         X: =40
