@@ -469,7 +469,7 @@
                         OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
                         ShowNavigation: =true
                         TemplatePadding: =0
-                        TemplateSize: =60
+                        TemplateSize: =50
                         X: =40
                         Y: =40
                         ZIndex: =2
@@ -481,10 +481,11 @@
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledFill: =RGBA(0, 0, 0, 0)
                             FocusedBorderThickness: =4
-                            Height: =50
+                            Height: =40
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Image: =If(ThisItem.EsCarpeta, Carpeta, ThisItem.Thumbnail.Large)
+                            ImagePosition: =ImagePosition.Center
                             OnSelect: =Select(Parent)
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -508,6 +509,7 @@
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
+                            Size: =13
                             Text: =ThisItem.Nombre
                             VerticalAlign: =VerticalAlign.Top
                             Width: =352
