@@ -17,7 +17,7 @@ Screens:
         ="Generate menu list";
         ClearCollect(MenuData,
         {Icon:"Menu1",  Name:"Equipos y Frecuencias", Step:"1"},{Icon:"Menu2",  Name:"Actividades", Step:"2"},{Icon:"Menu3", Name:"Consumibles", Step:"3"},
-        {Icon:"Menu4",  Name:"Claves y Procedimientos", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"CPP y Manuales", Step:"7"},{Icon:"Menu8", Name:"NPS", Step:"8"},{Icon:"Menu9", Name:"Asesores", Step:"9"},{Icon:"Menu10", Name:"Proyector Mttos", Step:"10"});
+        {Icon:"Menu4",  Name:"Claves y Procedimientos", Step:"4"},{Icon:"Menu5", Name:"Desplazamiento", Step:"5"},{Icon:"Menu6", Name:"LCC", Step:"6"},{Icon:"Menu7", Name:"Manuales", Step:"7"},{Icon:"Menu8", Name:"NPS", Step:"8"},{Icon:"Menu9", Name:"Asesores", Step:"9"},{Icon:"Menu10", Name:"Proyector Mttos", Step:"10"},{Icon:"Menu11", Name:"CPP", Step:"11"});
         "Set default values";
         Set(SelectedMenu,First(MenuData));
         Set(CurrentStep, "1");
@@ -49,7 +49,7 @@ Screens:
             - MenuCard:
                 Control: DataCard@1.0.2
                 Properties:
-                  Height: =630
+                  Height: =757
                   Width: =307
                   X: =0
                   Y: =0
@@ -80,11 +80,10 @@ Screens:
                         BorderColor: =RGBA(166, 166, 166, 1)
                         Default: =SelectedMenu
                         DelayItemLoading: =false
-                        Height: |
-                          =657-100
+                        Height: =641
                         Items: =MenuData
                         LoadingSpinner: =LoadingSpinner.None
-                        OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(NPS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None);"10",Navigate('Proyector Mttos',ScreenTransition.None)))
+                        OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(NPS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None),"10",Navigate('Proyector Mttos',ScreenTransition.None);"11",Navigate('CPP',ScreenTransition.None)))
                         ShowScrollbar: =false
                         TemplatePadding: =11
                         TemplateSize: =45
@@ -352,14 +351,29 @@ Screens:
                               Width: |
                                 =19
                               Y: =10
-            - DataCard1:
-                Control: DataCard@1.0.2
-                Variant: BlankCard
-                Properties:
-                  Height: =100
-                  Width: =307
-                  X: =0
-                  Y: =1
+                        - Menu11:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(166, 166, 166, 1)
+                              Color: =If(ThisItem.Step=CurrentStep, RGBA(144,19,254,1), RGBA(0,32,69,1))
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(220, 220, 220, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderColor: =Menu11.BorderColor
+                              FocusedBorderThickness: =4
+                              Height: =19
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Printing3D
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =ThisItem.Icon="Menu11"
+                              Width: |
+                                =19
+                              Y: =10
       - AppointmentList:
           Control: FluidGrid@2.3.0
           Properties:
