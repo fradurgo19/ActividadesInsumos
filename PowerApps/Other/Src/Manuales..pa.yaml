@@ -7,7 +7,7 @@
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
 Screens:
-  CPP y Manuales:
+  Manuales.:
     Properties:
       Fill: =RGBA(255, 255, 255, 1)
       Height: =Max(App.Height, App.DesignHeight)
@@ -63,7 +63,7 @@ Screens:
                         Height: =657-100
                         Items: =MenuData
                         LoadingSpinner: =LoadingSpinner.None
-                        OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('CPP y Manuales',ScreenTransition.None),"8",Navigate(NPS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None),"10",Navigate('Proyector Mttos',ScreenTransition.None);"11",Navigate('CPP y Manuales_1',ScreenTransition.None)))
+                        OnSelect: =If(ThisItem.Step<>CurrentStep,Switch(ThisItem.Step,"1",Navigate(Appointments,ScreenTransition.None),"2",Navigate(OrderDetails,ScreenTransition.None),"3",Navigate(Products,ScreenTransition.None),"4",Navigate(Attachments,ScreenTransition.None),"5",Navigate(Review,ScreenTransition.None),"6",Navigate(LCC,ScreenTransition.None),"7",Navigate('Manuales.',ScreenTransition.None),"8",Navigate(NPS,ScreenTransition.None),"9",Navigate(Asesores,ScreenTransition.None),"10",Navigate('Proyector Mttos',ScreenTransition.None);"11",Navigate('CPP.',ScreenTransition.None)))
                         ShowScrollbar: =false
                         TemplatePadding: =11
                         TemplateSize: =40
@@ -463,7 +463,7 @@ Screens:
                                     BorderColor: =RGBA(0, 0, 0, 0)
                                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                                     Fill: =RGBA(105, 121, 126, 1)
-                                    OnSelect: =Navigate('CPP y Manuales',ScreenTransition.Fade )
+                                    OnSelect: =Navigate('Manuales.',ScreenTransition.Fade )
                                     X: =11
                                     Y: =15
                         - Container70:
@@ -482,5 +482,5 @@ Screens:
                                     OnSelect: =Navigate('Manuales Partequipos',ScreenTransition.Fade )
                                     Text: ="Manuales"
                                     Width: =165
-                                    X: =629
-                                    Y: =54
+                                    X: =205
+                                    Y: =95
