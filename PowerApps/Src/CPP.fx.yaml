@@ -341,7 +341,7 @@ CPP As screen:
                         Y: =0
                         ZIndex: =1
 
-                Container97_14 As groupContainer.manualLayoutContainer:
+                Container97_24 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
                     LayoutMinWidth: =100
@@ -351,6 +351,44 @@ CPP As screen:
                     RadiusTopRight: =4
                     Width: =Parent.Width/11
                     ZIndex: =4
+
+                    TextCanvas7_48 As Texto:
+                        Align: ="Start"
+                        AutoHeight: =false
+                        BorderStyle: =""
+                        ContentLanguage: =""
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =""
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        FontItalic: =false
+                        FontStrikethrough: =false
+                        FontUnderline: =false
+                        Height: =Parent.Height
+                        PaddingLeft: =15
+                        Size: =13
+                        TabIndex: =0
+                        Text: ="P/N SAP"
+                        Tooltip: =""
+                        VerticalAlign: =VerticalAlign.Middle
+                        Visible: |
+                            =true
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =100
+                        Wrap: =true
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                Container97_14 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutMinWidth: =100
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width/11
+                    ZIndex: =5
 
                     TextCanvas7_12 As Texto:
                         AutoHeight: =false
@@ -382,7 +420,7 @@ CPP As screen:
                     RadiusTopRight: =4
                     Width: =Parent.Width/9
                     X: =763
-                    ZIndex: =5
+                    ZIndex: =6
 
                     TextCanvas7_42 As Texto:
                         AutoHeight: =false
@@ -430,7 +468,7 @@ CPP As screen:
                         )
                     Width: =Parent.Width/9
                     X: =105
-                    ZIndex: =6
+                    ZIndex: =7
 
                     TextCanvas7_43 As Texto:
                         Align: ='TextCanvas.Align'.Center
@@ -490,7 +528,7 @@ CPP As screen:
                         )
                     Width: =Parent.Width/9
                     X: =105
-                    ZIndex: =7
+                    ZIndex: =8
 
                     TextCanvas7_44 As Texto:
                         AutoHeight: =false
@@ -540,7 +578,7 @@ CPP As screen:
                             false
                         )
                     Width: =Parent.Width/11
-                    ZIndex: =8
+                    ZIndex: =9
 
                     DropMarca1_1 As combobox:
                         BorderColor: =RGBA(166, 166, 166, 1)
@@ -589,7 +627,7 @@ CPP As screen:
                             false
                         )
                     Width: =Parent.Width/11
-                    ZIndex: =9
+                    ZIndex: =10
 
                     DropModelo1_1 As combobox:
                         BorderColor: =RGBA(166, 166, 166, 1)
@@ -643,7 +681,7 @@ CPP As screen:
                             false
                         )
                     Width: =Parent.Width/10
-                    ZIndex: =10
+                    ZIndex: =11
 
                     TextCanvas7_17 As Texto:
                         AutoHeight: =false
@@ -699,7 +737,7 @@ CPP As screen:
                             false
                         )
                     Width: =Parent.Width/9
-                    ZIndex: =11
+                    ZIndex: =12
 
                     TextCanvas7_18 As Texto:
                         AutoHeight: =false
@@ -739,7 +777,7 @@ CPP As screen:
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =Parent.Width/7
-                    ZIndex: =12
+                    ZIndex: =13
 
                     TextCanvas7_19 As Texto:
                         Align: ='TextCanvas.Align'.Center
@@ -1013,7 +1051,7 @@ CPP As screen:
                                 Y: =0
                                 ZIndex: =1
 
-                        Container97 As groupContainer.manualLayoutContainer:
+                        Container97_25 As groupContainer.manualLayoutContainer:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
@@ -1024,6 +1062,43 @@ CPP As screen:
                             RadiusTopRight: =4
                             Width: =96
                             ZIndex: =4
+
+                            TextCanvas25_12 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AutoHeight: =false
+                                BorderStyle: =""
+                                ContentLanguage: =""
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontItalic: =false
+                                FontStrikethrough: =false
+                                FontUnderline: =false
+                                Height: =76
+                                PaddingTop: =0
+                                Size: =11
+                                TabIndex: =0
+                                Text: =ThisItem.RefSAP
+                                Tooltip: =""
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =true
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =100
+                                Wrap: =true
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        Container97 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Light
+                            FillPortions: =0
+                            LayoutMinWidth: =100
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =96
+                            ZIndex: =5
 
                             TextCanvas25_3 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1050,7 +1125,7 @@ CPP As screen:
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             Width: =117
-                            ZIndex: =5
+                            ZIndex: =6
 
                             TextCanvas25_9 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1077,7 +1152,7 @@ CPP As screen:
                             RadiusTopRight: =4
                             Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                             Width: =118
-                            ZIndex: =6
+                            ZIndex: =7
 
                             TextCanvas25_10 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1105,7 +1180,7 @@ CPP As screen:
                             RadiusTopRight: =4
                             Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                             Width: =119
-                            ZIndex: =7
+                            ZIndex: =8
 
                             TextCanvas25_11 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1138,7 +1213,7 @@ CPP As screen:
                                     false
                                 )
                             Width: =97
-                            ZIndex: =8
+                            ZIndex: =9
 
                             TextCanvas25_1 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1171,7 +1246,7 @@ CPP As screen:
                                     false
                                 )
                             Width: =96
-                            ZIndex: =9
+                            ZIndex: =10
 
                             TextCanvas25_2 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1198,7 +1273,7 @@ CPP As screen:
                             RadiusTopRight: =4
                             Visible: =ThisItem.Parte = "MTTO PREVENTIVO"
                             Width: =106
-                            ZIndex: =10
+                            ZIndex: =11
 
                             TextCanvas25_6 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1235,7 +1310,7 @@ CPP As screen:
                                     false
                                 )
                             Width: =70
-                            ZIndex: =11
+                            ZIndex: =12
 
                             TextCanvas25_5 As Texto:
                                 Align: ='TextCanvas.Align'.Center
@@ -1271,7 +1346,7 @@ CPP As screen:
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             Width: =140
-                            ZIndex: =12
+                            ZIndex: =13
 
                             TextCanvas25_7 As Texto:
                                 Align: ='TextCanvas.Align'.Center
