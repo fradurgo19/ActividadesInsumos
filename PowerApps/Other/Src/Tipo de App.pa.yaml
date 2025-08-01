@@ -52,7 +52,7 @@ Screens:
                             Properties:
                               Height: =Parent.Height
                               Size: =18
-                              Text: ="Mantenimiento, CPP, Manuales Y PQRSF"
+                              Text: ="Servicio o CPP"
                               Weight: ='TextCanvas.Weight'.Bold
                               Width: |
                                 =300
@@ -87,7 +87,7 @@ Screens:
                         Image: =Cargar
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =varCargar
+                        Visible: =varCargar || varCargar1
                         Width: =799
                         X: =566
                   - Image8_1:
@@ -105,7 +105,7 @@ Screens:
                         Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =varCargar
+                        Visible: =varCargar || varCargar1
                         Width: =646
                         X: =3
                         Y: =3
@@ -119,7 +119,7 @@ Screens:
                         OnSelect: =Set(varCargar, true);Set(varTiempo, true)
                         Text: ="SERVICIO"
                         Width: =213
-                        X: =131
+                        X: =167
                         Y: =327
                   - Timer1_1:
                       Control: Timer@2.1.0
@@ -152,8 +152,21 @@ Screens:
                         FontSize: =20
                         Height: =68
                         IconStyle: ='ButtonCanvas.IconStyle'.Filled
-                        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                        OnSelect: =Set(varCargar1, true);Set(varTiempo1, true)
                         Text: ="CPP"
                         Width: =213
                         X: =945
                         Y: =327
+                  - Timer1_2:
+                      Control: Timer@2.1.0
+                      Properties:
+                        AutoStart: =varTiempo1
+                        Color: =RGBA(255, 255, 255, 1)
+                        Duration: =5000
+                        Height: =74
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        OnTimerEnd: =Set(varCargar1,false);Navigate(CPP,ScreenTransition.Fade)
+                        Visible: =false
+                        Width: =287
+                        X: =549
+                        Y: =384

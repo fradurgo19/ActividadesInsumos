@@ -61,7 +61,7 @@
                     LayoutMinWidth: =96
                     Size: =18
                     TabIndex: =0
-                    Text: ="Mantenimiento, CPP, Manuales Y PQRSF"
+                    Text: ="Servicio o CPP"
                     Tooltip: =""
                     VerticalAlign: =""
                     Visible: =true
@@ -106,7 +106,7 @@
                 Image: =Cargar
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Visible: =varCargar
+                Visible: =varCargar || varCargar1
                 Width: =799
                 X: =566
                 ZIndex: =1
@@ -124,7 +124,7 @@
                 Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Visible: =varCargar
+                Visible: =varCargar || varCargar1
                 Width: =646
                 X: =3
                 Y: =3
@@ -157,7 +157,7 @@
                 VerticalAlign: =""
                 Visible: =true
                 Width: =213
-                X: =131
+                X: =167
                 Y: =327
                 ZIndex: =3
 
@@ -219,7 +219,7 @@
                 IconRotation: =0
                 IconStyle: ='ButtonCanvas.IconStyle'.Filled
                 Layout: ="Icon before"
-                OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                OnSelect: =Set(varCargar1, true);Set(varTiempo1, true)
                 TabIndex: =0
                 Text: ="CPP"
                 Tooltip: =""
@@ -229,4 +229,27 @@
                 X: =945
                 Y: =327
                 ZIndex: =6
+
+            Timer1_2 As timer:
+                AutoStart: =varTiempo1
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Duration: =5000
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                Height: =74
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                OnTimerEnd: =Set(varCargar1,false);Navigate(CPP,ScreenTransition.Fade)
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Visible: =false
+                Width: =287
+                X: =549
+                Y: =384
+                ZIndex: =7
 
