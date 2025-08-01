@@ -805,7 +805,7 @@ Screens:
                               TemplateFill: |+
                                 =If(
                                     ThisItem.RefSAP = Text(0),
-                                        Color.Yellow,
+                                        Color.LightYellow,
                                     ThisItem.IsSelected,
                                         Color.LightGreen,
                                     Color.White
