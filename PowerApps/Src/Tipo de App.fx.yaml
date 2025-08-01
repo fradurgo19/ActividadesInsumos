@@ -1,0 +1,232 @@
+"'Tipo de App' As screen":
+    ContentLanguage: =""
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    OnVisible: |
+        =Patch(
+            ActividadIniciodeApp, 
+            Defaults(ActividadIniciodeApp),
+            {
+                'UserID ': User().Email, 
+                'Timestamp ': DateAdd(Now(), -5, TimeUnit.Hours),     
+                'AppName ': "Mttos-CPP-Manuales-Proyector-Encuestas" 
+            }
+        )
+
+    Container61_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        ZIndex: =1
+
+        Container62_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =67
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1366
+            Y: =6
+            ZIndex: =1
+
+            Container63_1 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =67
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1354
+                X: =12
+                ZIndex: =1
+
+                TextCanvas45_1 As Texto:
+                    Align: ="Start"
+                    AutoHeight: =false
+                    BorderStyle: =""
+                    ContentLanguage: =""
+                    DisplayMode: =DisplayMode.Edit
+                    Font: =""
+                    FontItalic: =false
+                    FontStrikethrough: =false
+                    FontUnderline: =false
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =18
+                    TabIndex: =0
+                    Text: ="Mantenimiento, CPP, Manuales Y PQRSF"
+                    Tooltip: =""
+                    VerticalAlign: =""
+                    Visible: =true
+                    Weight: ='TextCanvas.Weight'.Bold
+                    Width: |
+                        =300
+                    Wrap: =true
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                EncabezadoContenedor_14 As EncabezadoContenedor:
+                    ChildTabPriority: =true
+                    ContentLanguage: =""
+                    EnableChildFocus: =true
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    Visible: =true
+                    ZIndex: =2
+
+        Container64_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =681
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =1366
+            Y: =73
+            ZIndex: =2
+
+            Image2_1 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =681
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =Cargar
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =varCargar
+                Width: =799
+                X: =566
+                ZIndex: =1
+
+            Image8_1 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =678
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =varCargar
+                Width: =646
+                X: =3
+                Y: =3
+                ZIndex: =2
+
+            ButtonCanvas3_1 As Botón:
+                AcceptsFocus: =true
+                AccessibleLabel: =""
+                Align: =""
+                Appearance: ="Primary"
+                BasePaletteColor: =RGBA(141, 229, 250, 1)
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontSize: =20
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
+                Height: =68
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                Layout: ="Icon before"
+                OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                TabIndex: =0
+                Text: ="SERVICIO"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Width: =213
+                X: =131
+                Y: =327
+                ZIndex: =3
+
+            Timer1_1 As timer:
+                AutoStart: =varTiempo
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Duration: =5000
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                Height: =74
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Visible: =false
+                Width: =287
+                X: =529
+                Y: =364
+                ZIndex: =4
+
+            Label1_37 As label:
+                Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Bold
+                Height: =81
+                Size: =30
+                Text: ="Bienvenido a la App"
+                Width: =657
+                X: =344
+                Y: =22
+                ZIndex: =5
+
+            ButtonCanvas3_2 As Botón:
+                AcceptsFocus: =true
+                AccessibleLabel: =""
+                Align: =""
+                Appearance: ="Primary"
+                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontSize: =20
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
+                Height: =68
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                Layout: ="Icon before"
+                OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                TabIndex: =0
+                Text: ="CPP"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Width: =213
+                X: =945
+                Y: =327
+                ZIndex: =6
+

@@ -145,7 +145,7 @@ Inicio As screen:
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
-                OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
+                OnTimerEnd: =Set(varCargar,false);Navigate('Tipo de App',ScreenTransition.Fade)
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40

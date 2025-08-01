@@ -1,0 +1,159 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Tipo de App:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+      OnVisible: |
+        =Patch(
+            ActividadIniciodeApp, 
+            Defaults(ActividadIniciodeApp),
+            {
+                'UserID ': User().Email, 
+                'Timestamp ': DateAdd(Now(), -5, TimeUnit.Hours),     
+                'AppName ': "Mttos-CPP-Manuales-Proyector-Encuestas" 
+            }
+        )
+    Children:
+      - Container61_1:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Height: =768
+            Width: =1366
+          Children:
+            - Container62_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =67
+                  Width: =1366
+                  Y: =6
+                Children:
+                  - Container63_1:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Height: =67
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        Width: =1354
+                        X: =12
+                      Children:
+                        - TextCanvas45_1:
+                            Control: Text@0.0.51
+                            Properties:
+                              Height: =Parent.Height
+                              Size: =18
+                              Text: ="Mantenimiento, CPP, Manuales Y PQRSF"
+                              Weight: ='TextCanvas.Weight'.Bold
+                              Width: |
+                                =300
+                        - EncabezadoContenedor_14:
+                            Control: CanvasComponent
+                            ComponentName: EncabezadoContenedor
+                            Properties:
+                              Encabezado: =SampleImage
+                              Encabezado1: =Logo
+                              Height: =65
+                              Width: =1007
+            - Container64_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =681
+                  Width: =1366
+                  Y: =73
+                Children:
+                  - Image2_1:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =681
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =Cargar
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =varCargar
+                        Width: =799
+                        X: =566
+                  - Image8_1:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =678
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =varCargar
+                        Width: =646
+                        X: =3
+                        Y: =3
+                  - ButtonCanvas3_1:
+                      Control: Button@0.0.45
+                      Properties:
+                        BasePaletteColor: =RGBA(141, 229, 250, 1)
+                        FontSize: =20
+                        Height: =68
+                        IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                        Text: ="SERVICIO"
+                        Width: =213
+                        X: =131
+                        Y: =327
+                  - Timer1_1:
+                      Control: Timer@2.1.0
+                      Properties:
+                        AutoStart: =varTiempo
+                        Color: =RGBA(255, 255, 255, 1)
+                        Duration: =5000
+                        Height: =74
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
+                        Visible: =false
+                        Width: =287
+                        X: =529
+                        Y: =364
+                  - Label1_37:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        FontWeight: =FontWeight.Bold
+                        Height: =81
+                        Size: =30
+                        Text: ="Bienvenido a la App"
+                        Width: =657
+                        X: =344
+                        Y: =22
+                  - ButtonCanvas3_2:
+                      Control: Button@0.0.45
+                      Properties:
+                        BasePaletteColor: =RGBA(249, 83, 109, 1)
+                        FontSize: =20
+                        Height: =68
+                        IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                        Text: ="CPP"
+                        Width: =213
+                        X: =945
+                        Y: =327

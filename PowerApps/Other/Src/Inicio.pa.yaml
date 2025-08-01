@@ -129,7 +129,7 @@ Screens:
                         Duration: =5000
                         Height: =74
                         HoverColor: =RGBA(255, 255, 255, 1)
-                        OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
+                        OnTimerEnd: =Set(varCargar,false);Navigate('Tipo de App',ScreenTransition.Fade)
                         Visible: =false
                         Width: =287
                         X: =529
