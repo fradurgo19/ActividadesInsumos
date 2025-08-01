@@ -215,7 +215,8 @@ ResumenCPP As screen:
                     ForAll(Gallery1.AllItems As GalItems,
                         Collect(colgalrecord,
                             {
-                                RefSAP:  GalItems.TextCanvas19.Text,           
+                                RefOriginal:  GalItems.TextCanvas19.Text,
+                                RefSAP: GalItems.TextCanvas19_4.Text,           
                                 Q: GalItems.TextCanvas23.Text,
                                 Nombre: GalItems.TextCanvas15.Text,
                                 No: GalItems.TextCanvas14.Text,
@@ -228,8 +229,8 @@ ResumenCPP As screen:
                                 Comentario: GalItems.TextCanvas24_2.Text,
                                 Equivalencia: GalItems.TextCanvas19_2.Text,
                                 Solicita: GalItems.TextInput2.Text,
-                                Total: GalItems.TextCanvas27.Text,
-                                Recomendación: GalItems.TextCanvas19_4.Text
+                                Total: GalItems.TextCanvas27.Text
+                                
                             }
                         )
                     );
@@ -277,6 +278,21 @@ ResumenCPP As screen:
                 X: =4
                 ZIndex: =4
 
+                TextCanvas29_15 As Texto:
+                    BorderColor: =RGBA(214, 221, 224, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =1
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingLeft: =3
+                    Text: ="P/N SAP"
+                    Width: =90
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
                 TextCanvas29_4 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
                     BorderStyle: =BorderStyle.Solid
@@ -290,7 +306,7 @@ ResumenCPP As screen:
                     Width: =90
                     X: =0
                     Y: =0
-                    ZIndex: =1
+                    ZIndex: =2
 
                 TextCanvas29 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -305,7 +321,7 @@ ResumenCPP As screen:
                     Width: =160
                     X: =0
                     Y: =0
-                    ZIndex: =2
+                    ZIndex: =3
 
                 TextCanvas29_8 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -320,7 +336,7 @@ ResumenCPP As screen:
                     Width: =40
                     X: =0
                     Y: =0
-                    ZIndex: =3
+                    ZIndex: =4
 
                 TextCanvas28 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -336,7 +352,7 @@ ResumenCPP As screen:
                     Width: =40
                     X: =0
                     Y: =0
-                    ZIndex: =4
+                    ZIndex: =5
 
                 TextCanvas29_1 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -351,7 +367,7 @@ ResumenCPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =5
+                    ZIndex: =6
 
                 TextCanvas29_2 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -366,7 +382,7 @@ ResumenCPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =6
+                    ZIndex: =7
 
                 TextCanvas29_3 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -381,7 +397,7 @@ ResumenCPP As screen:
                     Width: =96
                     X: =0
                     Y: =0
-                    ZIndex: =7
+                    ZIndex: =8
 
                 TextCanvas29_5 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -396,7 +412,7 @@ ResumenCPP As screen:
                     Width: =90
                     X: =0
                     Y: =0
-                    ZIndex: =8
+                    ZIndex: =9
 
                 TextCanvas29_9 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -411,7 +427,7 @@ ResumenCPP As screen:
                     Width: =80
                     X: =0
                     Y: =0
-                    ZIndex: =9
+                    ZIndex: =10
 
                 TextCanvas29_10 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -426,7 +442,7 @@ ResumenCPP As screen:
                     Width: =60
                     X: =0
                     Y: =0
-                    ZIndex: =10
+                    ZIndex: =11
 
                 TextCanvas29_11 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -441,7 +457,7 @@ ResumenCPP As screen:
                     Width: =100
                     X: =0
                     Y: =0
-                    ZIndex: =11
+                    ZIndex: =12
 
                 TextCanvas29_6 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -457,7 +473,7 @@ ResumenCPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =12
+                    ZIndex: =13
 
                 TextCanvas29_7 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -473,7 +489,7 @@ ResumenCPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =13
+                    ZIndex: =14
 
                 TextCanvas29_16 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -489,7 +505,7 @@ ResumenCPP As screen:
                     Width: =70
                     X: =0
                     Y: =0
-                    ZIndex: =14
+                    ZIndex: =15
 
                 TextCanvas29_12 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -504,7 +520,7 @@ ResumenCPP As screen:
                     Width: =60
                     X: =0
                     Y: =0
-                    ZIndex: =15
+                    ZIndex: =16
 
                 TextCanvas29_13 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -519,7 +535,7 @@ ResumenCPP As screen:
                     Width: =40
                     X: =0
                     Y: =0
-                    ZIndex: =16
+                    ZIndex: =17
 
                 TextCanvas29_14 As Texto:
                     BorderColor: =RGBA(214, 221, 224, 1)
@@ -532,21 +548,6 @@ ResumenCPP As screen:
                     PaddingLeft: =3
                     Text: ="Borrar"
                     Width: =50
-                    X: =0
-                    Y: =0
-                    ZIndex: =17
-
-                TextCanvas29_15 As Texto:
-                    BorderColor: =RGBA(214, 221, 224, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    BorderThickness: =1
-                    DisplayMode: =DisplayMode.Edit
-                    Height: =Parent.Height
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    PaddingLeft: =3
-                    Text: ="Recomendación"
-                    Width: =105
                     X: =0
                     Y: =0
                     ZIndex: =18
@@ -607,6 +608,21 @@ ResumenCPP As screen:
                         Width: =1325
                         ZIndex: =6
 
+                        TextCanvas19_4 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Open Sans'
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: =ThisItem.RefSAP
+                            VerticalAlign: =VerticalAlign.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =90
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
                         TextCanvas19 As Texto:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
@@ -615,10 +631,10 @@ ResumenCPP As screen:
                             LayoutMinWidth: =96
                             Text: =ThisItem.REFERENCIACATALOGOORIGINAL
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
+                            Width: =80
                             X: =0
                             Y: =0
-                            ZIndex: =1
+                            ZIndex: =2
 
                         TextCanvas15 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -632,7 +648,7 @@ ResumenCPP As screen:
                             Width: =150
                             X: =0
                             Y: =0
-                            ZIndex: =2
+                            ZIndex: =3
 
                         TextCanvas23 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -645,7 +661,7 @@ ResumenCPP As screen:
                             Width: =40
                             X: =0
                             Y: =0
-                            ZIndex: =3
+                            ZIndex: =4
 
                         TextCanvas14 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -661,7 +677,7 @@ ResumenCPP As screen:
                             Width: =40
                             X: =0
                             Y: =
-                            ZIndex: =4
+                            ZIndex: =5
 
                         TextCanvas16 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -672,10 +688,10 @@ ResumenCPP As screen:
                             Size: =10
                             Text: =ThisItem.Marca
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =65
                             X: =0
                             Y: =0
-                            ZIndex: =5
+                            ZIndex: =6
 
                         TextCanvas17 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -686,10 +702,10 @@ ResumenCPP As screen:
                             Size: =10
                             Text: =ThisItem.Modelo
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =60
                             X: =0
                             Y: =0
-                            ZIndex: =6
+                            ZIndex: =7
 
                         TextCanvas18 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -703,7 +719,7 @@ ResumenCPP As screen:
                             Width: =96
                             X: =0
                             Y: =0
-                            ZIndex: =7
+                            ZIndex: =8
 
                         TextCanvas19_1 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -717,7 +733,7 @@ ResumenCPP As screen:
                             Width: =90
                             X: =0
                             Y: =0
-                            ZIndex: =8
+                            ZIndex: =9
 
                         TextCanvas24 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -731,7 +747,7 @@ ResumenCPP As screen:
                             Width: =60
                             X: =0
                             Y: =0
-                            ZIndex: =9
+                            ZIndex: =10
 
                         TextCanvas24_1 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -744,7 +760,7 @@ ResumenCPP As screen:
                             Width: =60
                             X: =0
                             Y: =0
-                            ZIndex: =10
+                            ZIndex: =11
 
                         TextCanvas24_2 As Texto:
                             DisplayMode: =DisplayMode.Edit
@@ -755,10 +771,10 @@ ResumenCPP As screen:
                             Size: =9
                             Text: =ThisItem.Comentario
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =100
+                            Width: =90
                             X: =0
                             Y: =0
-                            ZIndex: =11
+                            ZIndex: =12
 
                         TextCanvas19_2 As Texto:
                             Align: ='TextCanvas.Align'.Center
@@ -772,7 +788,7 @@ ResumenCPP As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =12
+                            ZIndex: =13
 
                         TextCanvas19_3 As Texto:
                             Align: ='TextCanvas.Align'.Center
@@ -786,7 +802,7 @@ ResumenCPP As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =13
+                            ZIndex: =14
 
                         TextCanvas19_5 As Texto:
                             Align: ='TextCanvas.Align'.Center
@@ -800,7 +816,7 @@ ResumenCPP As screen:
                             Width: =70
                             X: =0
                             Y: =0
-                            ZIndex: =14
+                            ZIndex: =15
 
                         TextInput2 As text:
                             Align: =Align.Center
@@ -824,7 +840,7 @@ ResumenCPP As screen:
                             Width: =40
                             X: =634
                             Y: =6
-                            ZIndex: =15
+                            ZIndex: =16
 
                         TextCanvas27 As Texto:
                             AlignInContainer: =AlignInContainer.Center
@@ -841,7 +857,7 @@ ResumenCPP As screen:
                             Width: =40
                             X: =0
                             Y: =0
-                            ZIndex: =16
+                            ZIndex: =17
 
                         Icon3 As icon.Trash:
                             AlignInContainer: =AlignInContainer.Center
@@ -862,20 +878,5 @@ ResumenCPP As screen:
                             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)
                             Width: =40
-                            ZIndex: =17
-
-                        TextCanvas19_4 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            DisplayMode: =DisplayMode.Edit
-                            Font: =Font.'Open Sans'
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: =ThisItem.Recomendación
-                            VerticalAlign: =VerticalAlign.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =120
-                            X: =0
-                            Y: =0
                             ZIndex: =18
 

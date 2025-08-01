@@ -196,43 +196,7 @@ Screens:
                       Properties:
                         BasePaletteColor: =RGBA(8, 222, 8, 1)
                         Icon: ="DocumentBulletList"
-                        OnSelect: |+
-                          =Clear(colgalrecord);
-                          ForAll(Gallery1.AllItems As GalItems,
-                              Collect(colgalrecord,
-                                  {
-                                      RefSAP:  GalItems.TextCanvas19.Text,           
-                                      Q: GalItems.TextCanvas23.Text,
-                                      Nombre: GalItems.TextCanvas15.Text,
-                                      No: GalItems.TextCanvas14.Text,
-                                      Marca: GalItems.TextCanvas16.Text,
-                                      Modelo: GalItems.TextCanvas17.Text,
-                                      Parte: GalItems.TextCanvas18.Text,
-                                      Tipo: GalItems.TextCanvas19_1.Text,
-                                      Frecuencia: GalItems.TextCanvas24.Text,
-                                      Medida: GalItems.TextCanvas24_1.Text,
-                                      Comentario: GalItems.TextCanvas24_2.Text,
-                                      Equivalencia: GalItems.TextCanvas19_2.Text,
-                                      Solicita: GalItems.TextInput2.Text,
-                                      Total: GalItems.TextCanvas27.Text,
-                                      Recomendación: GalItems.TextCanvas19_4.Text
-                                  }
-                              )
-                          );
-
-
-                          Set(varcsvFile, JSON(colgalrecord));
-
-                          Set(dowloadurl,
-                          ExportExcel.Run(
-                              varcsvFile,
-                              $"{User().FullName}{Now()}.csv"
-                          ).dowloadlink);
-                          Launch(dowloadurl);
-
-                          Notify("Documento enviado", NotificationType.Success, 3000)
-
-
+                        OnSelect: "=Clear(colgalrecord);\nForAll(Gallery1.AllItems As GalItems,\n    Collect(colgalrecord,\n        {\n            RefOriginal:  GalItems.TextCanvas19.Text,\n            RefSAP: GalItems.TextCanvas19_4.Text,           \n            Q: GalItems.TextCanvas23.Text,\n            Nombre: GalItems.TextCanvas15.Text,\n            No: GalItems.TextCanvas14.Text,\n            Marca: GalItems.TextCanvas16.Text,\n            Modelo: GalItems.TextCanvas17.Text,\n            Parte: GalItems.TextCanvas18.Text,\n            Tipo: GalItems.TextCanvas19_1.Text,\n            Frecuencia: GalItems.TextCanvas24.Text,\n            Medida: GalItems.TextCanvas24_1.Text,\n            Comentario: GalItems.TextCanvas24_2.Text,\n            Equivalencia: GalItems.TextCanvas19_2.Text,\n            Solicita: GalItems.TextInput2.Text,\n            Total: GalItems.TextCanvas27.Text\n            \n        }\n    )\n);\n\n\nSet(varcsvFile, JSON(colgalrecord));\n\nSet(dowloadurl,\nExportExcel.Run(\n    varcsvFile,\n    $\"{User().FullName}{Now()}.csv\"\n).dowloadlink);\nLaunch(dowloadurl);\n\nNotify(\"Documento enviado\", NotificationType.Success, 3000)\n\n\n"
                         Text: ="CSV"
                         X: =132
                         Y: =4
@@ -254,6 +218,16 @@ Screens:
                         Width: =1325
                         X: =4
                       Children:
+                        - TextCanvas29_15:
+                            Control: Text@0.0.51
+                            Properties:
+                              BorderColor: =RGBA(214, 221, 224, 1)
+                              BorderStyle: =BorderStyle.Solid
+                              BorderThickness: =1
+                              Height: =Parent.Height
+                              PaddingLeft: =3
+                              Text: ="P/N SAP"
+                              Width: =90
                         - TextCanvas29_4:
                             Control: Text@0.0.51
                             Properties:
@@ -427,16 +401,6 @@ Screens:
                               PaddingLeft: =3
                               Text: ="Borrar"
                               Width: =50
-                        - TextCanvas29_15:
-                            Control: Text@0.0.51
-                            Properties:
-                              BorderColor: =RGBA(214, 221, 224, 1)
-                              BorderStyle: =BorderStyle.Solid
-                              BorderThickness: =1
-                              Height: =Parent.Height
-                              PaddingLeft: =3
-                              Text: ="Recomendación"
-                              Width: =105
                   - Container11_1:
                       Control: GroupContainer@1.3.0
                       Variant: AutoLayout
@@ -481,6 +445,16 @@ Screens:
                                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                                     Width: =1325
                                   Children:
+                                    - TextCanvas19_4:
+                                        Control: Text@0.0.51
+                                        Properties:
+                                          Align: ='TextCanvas.Align'.Center
+                                          Font: =Font.'Open Sans'
+                                          Height: =Parent.Height
+                                          Text: =ThisItem.RefSAP
+                                          VerticalAlign: =VerticalAlign.Top
+                                          Weight: ='TextCanvas.Weight'.Semibold
+                                          Width: =90
                                     - TextCanvas19:
                                         Control: Text@0.0.51
                                         Properties:
@@ -488,7 +462,7 @@ Screens:
                                           Height: =Parent.Height
                                           Text: =ThisItem.REFERENCIACATALOGOORIGINAL
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =90
+                                          Width: =80
                                     - TextCanvas15:
                                         Control: Text@0.0.51
                                         Properties:
@@ -526,7 +500,7 @@ Screens:
                                           Size: =10
                                           Text: =ThisItem.Marca
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =70
+                                          Width: =65
                                     - TextCanvas17:
                                         Control: Text@0.0.51
                                         Properties:
@@ -535,7 +509,7 @@ Screens:
                                           Size: =10
                                           Text: =ThisItem.Modelo
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =70
+                                          Width: =60
                                     - TextCanvas18:
                                         Control: Text@0.0.51
                                         Properties:
@@ -578,7 +552,7 @@ Screens:
                                           Size: =9
                                           Text: =ThisItem.Comentario
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =100
+                                          Width: =90
                                     - TextCanvas19_2:
                                         Control: Text@0.0.51
                                         Properties:
@@ -650,13 +624,3 @@ Screens:
                                           PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                                           PressedFill: =RGBA(0, 0, 0, 0)
                                           Width: =40
-                                    - TextCanvas19_4:
-                                        Control: Text@0.0.51
-                                        Properties:
-                                          Align: ='TextCanvas.Align'.Center
-                                          Font: =Font.'Open Sans'
-                                          Height: =Parent.Height
-                                          Text: =ThisItem.Recomendación
-                                          VerticalAlign: =VerticalAlign.Top
-                                          Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =120
