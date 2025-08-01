@@ -227,7 +227,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="P/N SAP"
-                              Width: =90
+                              Width: =Parent.Width/17
                         - TextCanvas29_4:
                             Control: Text@0.0.51
                             Properties:
@@ -237,7 +237,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="P/N Original"
-                              Width: =90
+                              Width: =Parent.Width/17
                         - TextCanvas29:
                             Control: Text@0.0.51
                             Properties:
@@ -247,7 +247,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Nombre"
-                              Width: =160
+                              Width: =Parent.Width/17
                         - TextCanvas29_8:
                             Control: Text@0.0.51
                             Properties:
@@ -257,7 +257,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Q"
-                              Width: =40
+                              Width: =Parent.Width/17
                         - TextCanvas28:
                             Control: Text@0.0.51
                             Properties:
@@ -278,7 +278,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Marca"
-                              Width: =70
+                              Width: =Parent.Width/17
                         - TextCanvas29_2:
                             Control: Text@0.0.51
                             Properties:
@@ -288,7 +288,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Modelo"
-                              Width: =70
+                              Width: =Parent.Width/17
                         - TextCanvas29_3:
                             Control: Text@0.0.51
                             Properties:
@@ -298,6 +298,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Parte"
+                              Width: =Parent.Width/17
                         - TextCanvas29_5:
                             Control: Text@0.0.51
                             Properties:
@@ -307,7 +308,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Tipo"
-                              Width: =90
+                              Width: =Parent.Width/17
                         - TextCanvas29_9:
                             Control: Text@0.0.51
                             Properties:
@@ -317,7 +318,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Frecuencia"
-                              Width: =80
+                              Width: =Parent.Width/17
                         - TextCanvas29_10:
                             Control: Text@0.0.51
                             Properties:
@@ -327,7 +328,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Medida"
-                              Width: =60
+                              Width: =Parent.Width/17
                         - TextCanvas29_11:
                             Control: Text@0.0.51
                             Properties:
@@ -337,7 +338,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Comentario"
-                              Width: =100
+                              Width: =Parent.Width/17
                         - TextCanvas29_6:
                             Control: Text@0.0.51
                             Properties:
@@ -348,7 +349,7 @@ Screens:
                               PaddingLeft: =3
                               Size: =11
                               Text: ="Equiva 1 / Donaldson "
-                              Width: =70
+                              Width: =Parent.Width/17
                         - TextCanvas29_7:
                             Control: Text@0.0.51
                             Properties:
@@ -359,7 +360,7 @@ Screens:
                               PaddingLeft: =3
                               Size: =11
                               Text: ="Equiva 2 / Stal"
-                              Width: =70
+                              Width: =Parent.Width/17
                         - TextCanvas29_16:
                             Control: Text@0.0.51
                             Properties:
@@ -370,7 +371,7 @@ Screens:
                               PaddingLeft: =3
                               Size: =11
                               Text: ="Equiva 3 / Fleetguard"
-                              Width: =70
+                              Width: =Parent.Width/17
                         - TextCanvas29_12:
                             Control: Text@0.0.51
                             Properties:
@@ -380,7 +381,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Solicita"
-                              Width: =60
+                              Width: =Parent.Width/17
                         - TextCanvas29_13:
                             Control: Text@0.0.51
                             Properties:
@@ -390,7 +391,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Total"
-                              Width: =40
+                              Width: =Parent.Width/17
                         - TextCanvas29_14:
                             Control: Text@0.0.51
                             Properties:
@@ -400,7 +401,7 @@ Screens:
                               Height: =Parent.Height
                               PaddingLeft: =3
                               Text: ="Borrar"
-                              Width: =50
+                              Width: =Parent.Width/17
                   - Container11_1:
                       Control: GroupContainer@1.3.0
                       Variant: AutoLayout
@@ -445,141 +446,159 @@ Screens:
                                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                                     Width: =1325
                                   Children:
+                                    - TextCanvas14:
+                                        Control: Text@0.0.51
+                                        Properties:
+                                          Align: ='TextCanvas.Align'.End
+                                          AlignInContainer: =AlignInContainer.End
+                                          Font: =Font.'Open Sans'
+                                          Height: =Parent.Height
+                                          Size: =9
+                                          Text: =ThisItem.No
+                                          VerticalAlign: =VerticalAlign.Bottom
+                                          Visible: =false
+                                          Weight: ='TextCanvas.Weight'.Semibold
+                                          Width: =20
+                                          Y: =
                                     - TextCanvas19_4:
                                         Control: Text@0.0.51
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
+                                          Size: =11
                                           Text: =ThisItem.RefSAP
                                           VerticalAlign: =VerticalAlign.Top
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =90
+                                          Width: =Parent.Width/17
+                                          X: =TextCanvas29_15.X
                                     - TextCanvas19:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
+                                          Size: =11
                                           Text: =ThisItem.REFERENCIACATALOGOORIGINAL
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =80
+                                          Width: =Parent.Width/17
+                                          X: =TextCanvas29_4.X
                                     - TextCanvas15:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
-                                          Size: =13
+                                          Size: =11
                                           Text: =ThisItem.Nombre
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =150
+                                          Width: =Parent.Width/17
+                                          X: =TextCanvas29.X
                                     - TextCanvas23:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
+                                          Size: =11
                                           Text: =ThisItem.Cantidad
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =40
-                                    - TextCanvas14:
-                                        Control: Text@0.0.51
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.Stretch
-                                          Font: =Font.'Open Sans'
-                                          Height: =Parent.Height
-                                          Size: =9
-                                          Text: =ThisItem.No
-                                          Visible: =false
-                                          Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =40
-                                          Y: =
+                                          Width: =Parent.Width/17
+                                          X: =TextCanvas29_8.X
                                     - TextCanvas16:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
-                                          Size: =10
+                                          Size: =11
                                           Text: =ThisItem.Marca
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =65
+                                          Width: =Parent.Width/17
+                                          X: =TextCanvas29_1.X
                                     - TextCanvas17:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
-                                          Size: =10
+                                          Size: =11
                                           Text: =ThisItem.Modelo
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =60
+                                          Width: =Parent.Width/17
+                                          X: =TextCanvas29_2.X
                                     - TextCanvas18:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
-                                          Size: =10
+                                          Size: =11
                                           Text: =ThisItem.Parte
                                           Weight: ='TextCanvas.Weight'.Semibold
+                                          Width: =Parent.Width/17
+                                          X: =TextCanvas29_3.X
                                     - TextCanvas19_1:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
-                                          Size: =10
+                                          Size: =11
                                           Text: =ThisItem.Tipo
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =90
+                                          Width: =Parent.Width/17
                                     - TextCanvas24:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
-                                          Size: =12
+                                          Size: =11
                                           Text: =ThisItem.Frecuencia
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =60
+                                          Width: =Parent.Width/17
                                     - TextCanvas24_1:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
+                                          Size: =11
                                           Text: =ThisItem.Medida
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =60
+                                          Width: =Parent.Width/17
                                     - TextCanvas24_2:
                                         Control: Text@0.0.51
                                         Properties:
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
-                                          Size: =9
+                                          Size: =11
                                           Text: =ThisItem.Comentario
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =90
+                                          Width: =Parent.Width/17
+                                          X: =TextCanvas29_11.X
                                     - TextCanvas19_2:
                                         Control: Text@0.0.51
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
+                                          Size: =11
                                           Text: =ThisItem.EQUIVALENCIA1
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =70
+                                          Width: =Parent.Width/17
                                     - TextCanvas19_3:
                                         Control: Text@0.0.51
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
+                                          Size: =11
                                           Text: =ThisItem.EQUIVALENCIA2
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =70
+                                          Width: =Parent.Width/17
                                     - TextCanvas19_5:
                                         Control: Text@0.0.51
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
                                           Font: =Font.'Open Sans'
                                           Height: =Parent.Height
+                                          Size: =11
                                           Text: =ThisItem.EQUIVALENCIA3
                                           Weight: ='TextCanvas.Weight'.Semibold
-                                          Width: =70
+                                          Width: =Parent.Width/17
                                     - TextInput2:
                                         Control: Classic/TextInput@2.3.2
                                         Properties:
@@ -589,8 +608,8 @@ Screens:
                                           Height: =28
                                           HintText: ="1"
                                           OnSelect: =
-                                          Size: =11
-                                          Width: =40
+                                          Size: =12
+                                          Width: =Parent.Width/17
                                           X: =634
                                           Y: =6
                                     - TextCanvas27:
@@ -601,8 +620,9 @@ Screens:
                                           BorderStyle: =BorderStyle.Solid
                                           BorderThickness: =1
                                           PaddingLeft: =20
+                                          Size: =12
                                           Text: =(ThisItem.Cantidad) * Value(TextInput2.Text)
-                                          Width: =40
+                                          Width: =Parent.Width/17
                                     - Icon3:
                                         Control: Classic/Icon@2.5.0
                                         Properties:
@@ -619,8 +639,8 @@ Screens:
                                           HoverFill: =RGBA(0, 0, 0, 0)
                                           Icon: =Icon.Trash
                                           LayoutMinHeight: =40
-                                          OnSelect: =RemoveIf(colConcatenada, No = ThisItem.No)
+                                          OnSelect: =RemoveIf(colAllSelectedItems, No = ThisItem.No)
                                           PressedBorderColor: =RGBA(0, 0, 0, 0)
                                           PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                                           PressedFill: =RGBA(0, 0, 0, 0)
-                                          Width: =40
+                                          Width: =Parent.Width/17

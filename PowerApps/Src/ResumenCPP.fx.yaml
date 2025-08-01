@@ -288,7 +288,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="P/N SAP"
-                    Width: =90
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =1
@@ -303,7 +303,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="P/N Original"
-                    Width: =90
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =2
@@ -318,7 +318,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Nombre"
-                    Width: =160
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =3
@@ -333,7 +333,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Q"
-                    Width: =40
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =4
@@ -364,7 +364,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Marca"
-                    Width: =70
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =6
@@ -379,7 +379,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Modelo"
-                    Width: =70
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =7
@@ -394,7 +394,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Parte"
-                    Width: =96
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =8
@@ -409,7 +409,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Tipo"
-                    Width: =90
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =9
@@ -424,7 +424,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Frecuencia"
-                    Width: =80
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =10
@@ -439,7 +439,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Medida"
-                    Width: =60
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =11
@@ -454,7 +454,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Comentario"
-                    Width: =100
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =12
@@ -470,7 +470,7 @@ ResumenCPP As screen:
                     PaddingLeft: =3
                     Size: =11
                     Text: ="Equiva 1 / Donaldson "
-                    Width: =70
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =13
@@ -486,7 +486,7 @@ ResumenCPP As screen:
                     PaddingLeft: =3
                     Size: =11
                     Text: ="Equiva 2 / Stal"
-                    Width: =70
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =14
@@ -502,7 +502,7 @@ ResumenCPP As screen:
                     PaddingLeft: =3
                     Size: =11
                     Text: ="Equiva 3 / Fleetguard"
-                    Width: =70
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =15
@@ -517,7 +517,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Solicita"
-                    Width: =60
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =16
@@ -532,7 +532,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Total"
-                    Width: =40
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =17
@@ -547,7 +547,7 @@ ResumenCPP As screen:
                     LayoutMinWidth: =96
                     PaddingLeft: =3
                     Text: ="Borrar"
-                    Width: =50
+                    Width: =Parent.Width/17
                     X: =0
                     Y: =0
                     ZIndex: =18
@@ -608,63 +608,9 @@ ResumenCPP As screen:
                         Width: =1325
                         ZIndex: =6
 
-                        TextCanvas19_4 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            DisplayMode: =DisplayMode.Edit
-                            Font: =Font.'Open Sans'
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: =ThisItem.RefSAP
-                            VerticalAlign: =VerticalAlign.Top
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
-                            X: =0
-                            Y: =0
-                            ZIndex: =1
-
-                        TextCanvas19 As Texto:
-                            DisplayMode: =DisplayMode.Edit
-                            Font: =Font.'Open Sans'
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: =ThisItem.REFERENCIACATALOGOORIGINAL
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =80
-                            X: =0
-                            Y: =0
-                            ZIndex: =2
-
-                        TextCanvas15 As Texto:
-                            DisplayMode: =DisplayMode.Edit
-                            Font: =Font.'Open Sans'
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Size: =13
-                            Text: =ThisItem.Nombre
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =150
-                            X: =0
-                            Y: =0
-                            ZIndex: =3
-
-                        TextCanvas23 As Texto:
-                            DisplayMode: =DisplayMode.Edit
-                            Font: =Font.'Open Sans'
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            Text: =ThisItem.Cantidad
-                            Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =40
-                            X: =0
-                            Y: =0
-                            ZIndex: =4
-
                         TextCanvas14 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
+                            Align: ='TextCanvas.Align'.End
+                            AlignInContainer: =AlignInContainer.End
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
@@ -672,11 +618,70 @@ ResumenCPP As screen:
                             LayoutMinWidth: =96
                             Size: =9
                             Text: =ThisItem.No
+                            VerticalAlign: =VerticalAlign.Bottom
                             Visible: =false
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =40
+                            Width: =20
                             X: =0
                             Y: =
+                            ZIndex: =1
+
+                        TextCanvas19_4 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Open Sans'
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: =ThisItem.RefSAP
+                            VerticalAlign: =VerticalAlign.Top
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =Parent.Width/17
+                            X: =TextCanvas29_15.X
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas19 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Open Sans'
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: =ThisItem.REFERENCIACATALOGOORIGINAL
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =Parent.Width/17
+                            X: =TextCanvas29_4.X
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas15 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Open Sans'
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: =ThisItem.Nombre
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =Parent.Width/17
+                            X: =TextCanvas29.X
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas23 As Texto:
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Open Sans'
+                            Height: =Parent.Height
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =11
+                            Text: =ThisItem.Cantidad
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =Parent.Width/17
+                            X: =TextCanvas29_8.X
+                            Y: =0
                             ZIndex: =5
 
                         TextCanvas16 As Texto:
@@ -685,11 +690,11 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =10
+                            Size: =11
                             Text: =ThisItem.Marca
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =65
-                            X: =0
+                            Width: =Parent.Width/17
+                            X: =TextCanvas29_1.X
                             Y: =0
                             ZIndex: =6
 
@@ -699,11 +704,11 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =10
+                            Size: =11
                             Text: =ThisItem.Modelo
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =60
-                            X: =0
+                            Width: =Parent.Width/17
+                            X: =TextCanvas29_2.X
                             Y: =0
                             ZIndex: =7
 
@@ -713,11 +718,11 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =10
+                            Size: =11
                             Text: =ThisItem.Parte
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =96
-                            X: =0
+                            Width: =Parent.Width/17
+                            X: =TextCanvas29_3.X
                             Y: =0
                             ZIndex: =8
 
@@ -727,10 +732,10 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =10
+                            Size: =11
                             Text: =ThisItem.Tipo
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
+                            Width: =Parent.Width/17
                             X: =0
                             Y: =0
                             ZIndex: =9
@@ -741,10 +746,10 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =12
+                            Size: =11
                             Text: =ThisItem.Frecuencia
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =60
+                            Width: =Parent.Width/17
                             X: =0
                             Y: =0
                             ZIndex: =10
@@ -755,9 +760,10 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =11
                             Text: =ThisItem.Medida
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =60
+                            Width: =Parent.Width/17
                             X: =0
                             Y: =0
                             ZIndex: =11
@@ -768,11 +774,11 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =9
+                            Size: =11
                             Text: =ThisItem.Comentario
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =90
-                            X: =0
+                            Width: =Parent.Width/17
+                            X: =TextCanvas29_11.X
                             Y: =0
                             ZIndex: =12
 
@@ -783,9 +789,10 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =11
                             Text: =ThisItem.EQUIVALENCIA1
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =Parent.Width/17
                             X: =0
                             Y: =0
                             ZIndex: =13
@@ -797,9 +804,10 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =11
                             Text: =ThisItem.EQUIVALENCIA2
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =Parent.Width/17
                             X: =0
                             Y: =0
                             ZIndex: =14
@@ -811,9 +819,10 @@ ResumenCPP As screen:
                             Height: =Parent.Height
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
+                            Size: =11
                             Text: =ThisItem.EQUIVALENCIA3
                             Weight: ='TextCanvas.Weight'.Semibold
-                            Width: =70
+                            Width: =Parent.Width/17
                             X: =0
                             Y: =0
                             ZIndex: =15
@@ -836,8 +845,8 @@ ResumenCPP As screen:
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =App.Theme.Colors.Lighter70
                             OnSelect: =
-                            Size: =11
-                            Width: =40
+                            Size: =12
+                            Width: =Parent.Width/17
                             X: =634
                             Y: =6
                             ZIndex: =16
@@ -853,8 +862,9 @@ ResumenCPP As screen:
                             LayoutMinWidth: =96
                             PaddingLeft: =20
                             PaddingTop: =
+                            Size: =12
                             Text: =(ThisItem.Cantidad) * Value(TextInput2.Text)
-                            Width: =40
+                            Width: =Parent.Width/17
                             X: =0
                             Y: =0
                             ZIndex: =17
@@ -873,10 +883,10 @@ ResumenCPP As screen:
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Trash
                             LayoutMinHeight: =40
-                            OnSelect: =RemoveIf(colConcatenada, No = ThisItem.No)
+                            OnSelect: =RemoveIf(colAllSelectedItems, No = ThisItem.No)
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)
-                            Width: =40
+                            Width: =Parent.Width/17
                             ZIndex: =18
 
