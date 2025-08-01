@@ -349,6 +349,17 @@ CPP As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
+                    Visible: |
+                        =If(
+                            CountRows(
+                                Filter(
+                                    GaleriaCPP.AllItems,
+                                    StartsWith(Parte,"MTTO PREVENTIVO")
+                                )
+                            ) = 0,
+                            true,
+                            false
+                        )
                     Width: =Parent.Width/11
                     ZIndex: =4
 
@@ -371,7 +382,16 @@ CPP As screen:
                         Tooltip: =""
                         VerticalAlign: =VerticalAlign.Middle
                         Visible: |
-                            =true
+                            =If(
+                                CountRows(
+                                    Filter(
+                                        GaleriaCPP.AllItems,
+                                        StartsWith(Parte,"MTTO PREVENTIVO")
+                                    )
+                                ) = 0,
+                                true,
+                                false
+                            )
                         Weight: ='TextCanvas.Weight'.Semibold
                         Width: =100
                         Wrap: =true
@@ -483,7 +503,7 @@ CPP As screen:
                                 CountRows(
                                     Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
                                 ) > 0,
-                                "P/N Stal",
+                                "P/N Fleetguard",
                                 "Equivalencia2" // Puedes cambiar esto según lo que necesites
                             )
                         VerticalAlign: =VerticalAlign.Middle
@@ -542,8 +562,8 @@ CPP As screen:
                                 CountRows(
                                     Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
                                 ) > 0,
-                                "P/N Fleetguard",
-                                "Equivalencia2" // Puedes cambiar esto según lo que necesites
+                                "P/N Stal",
+                                "Equivalencia3" // Puedes cambiar esto según lo que necesites
                             )
                         VerticalAlign: =VerticalAlign.Middle
                         Visible: |-
@@ -1060,6 +1080,8 @@ CPP As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
+                            Visible: |
+                                =ThisItem.Parte <> "MTTO PREVENTIVO"
                             Width: =96
                             ZIndex: =4
 
@@ -1080,7 +1102,7 @@ CPP As screen:
                                 Text: =ThisItem.RefSAP
                                 Tooltip: =""
                                 VerticalAlign: =VerticalAlign.Top
-                                Visible: =true
+                                Visible: =ThisItem.Parte <> "MTTO PREVENTIVO"
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =100
                                 Wrap: =true

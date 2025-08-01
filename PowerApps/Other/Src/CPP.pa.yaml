@@ -290,6 +290,17 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
+                              Visible: |+
+                                =If(
+                                    CountRows(
+                                        Filter(
+                                            GaleriaCPP.AllItems,
+                                            StartsWith(Parte,"MTTO PREVENTIVO")
+                                        )
+                                    ) = 0,
+                                    true,
+                                    false
+                                )
                               Width: =Parent.Width/11
                             Children:
                               - TextCanvas7_48:
@@ -302,7 +313,16 @@ Screens:
                                     Text: ="P/N SAP"
                                     VerticalAlign: =VerticalAlign.Middle
                                     Visible: |
-                                      =true
+                                      =If(
+                                          CountRows(
+                                              Filter(
+                                                  GaleriaCPP.AllItems,
+                                                  StartsWith(Parte,"MTTO PREVENTIVO")
+                                              )
+                                          ) = 0,
+                                          true,
+                                          false
+                                      )
                                     Weight: ='TextCanvas.Weight'.Semibold
                                     Width: =100
                         - Container97_14:
@@ -391,7 +411,7 @@ Screens:
                                           CountRows(
                                               Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
                                           ) > 0,
-                                          "P/N Stal",
+                                          "P/N Fleetguard",
                                           "Equivalencia2" // Puedes cambiar esto según lo que necesites
                                       )
                                     VerticalAlign: =VerticalAlign.Middle
@@ -443,8 +463,8 @@ Screens:
                                           CountRows(
                                               Filter(GaleriaCPP.AllItems, StartsWith(Parte, "MTTO PREVENTIVO"))
                                           ) > 0,
-                                          "P/N Fleetguard",
-                                          "Equivalencia2" // Puedes cambiar esto según lo que necesites
+                                          "P/N Stal",
+                                          "Equivalencia3" // Puedes cambiar esto según lo que necesites
                                       )
                                     VerticalAlign: =VerticalAlign.Middle
                                     Visible: |-
@@ -878,6 +898,8 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
+                                          Visible: |+
+                                            =ThisItem.Parte <> "MTTO PREVENTIVO"
                                           Width: =96
                                         Children:
                                           - TextCanvas25_12:
@@ -889,6 +911,7 @@ Screens:
                                                 Size: =11
                                                 Text: =ThisItem.RefSAP
                                                 VerticalAlign: =VerticalAlign.Top
+                                                Visible: =ThisItem.Parte <> "MTTO PREVENTIVO"
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =100
                                     - Container97:
