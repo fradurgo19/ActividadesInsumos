@@ -72,43 +72,6 @@ Screens:
                   Width: =1366
                   Y: =73
                 Children:
-                  - Image2_1:
-                      Control: Image@2.2.3
-                      Properties:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =681
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Image: =Cargar
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =varCargar || varCargar1
-                        Width: =799
-                        X: =566
-                  - Image8_1:
-                      Control: Image@2.2.3
-                      Properties:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =678
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Image: ='d7f2d250-84f5-438a-89df-5a619d71b588'
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =varCargar || varCargar1
-                        Width: =646
-                        X: =3
-                        Y: =3
                   - ButtonCanvas3_1:
                       Control: Button@0.0.45
                       Properties:
@@ -116,24 +79,11 @@ Screens:
                         FontSize: =20
                         Height: =68
                         IconStyle: ='ButtonCanvas.IconStyle'.Filled
-                        OnSelect: =Set(varCargar, true);Set(varTiempo, true)
+                        OnSelect: =Navigate(Appointments,ScreenTransition.Fade)
                         Text: ="SERVICIO"
                         Width: =213
                         X: =167
                         Y: =327
-                  - Timer1_1:
-                      Control: Timer@2.1.0
-                      Properties:
-                        AutoStart: =varTiempo
-                        Color: =RGBA(255, 255, 255, 1)
-                        Duration: =5000
-                        Height: =74
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        OnTimerEnd: =Set(varCargar,false);Navigate(Appointments,ScreenTransition.Fade)
-                        Visible: =false
-                        Width: =287
-                        X: =529
-                        Y: =364
                   - Label1_37:
                       Control: Label@2.5.1
                       Properties:
@@ -152,21 +102,8 @@ Screens:
                         FontSize: =20
                         Height: =68
                         IconStyle: ='ButtonCanvas.IconStyle'.Filled
-                        OnSelect: =Set(varCargar1, true);Set(varTiempo1, true)
+                        OnSelect: =Navigate(CPP,ScreenTransition.Fade)
                         Text: ="CPP"
                         Width: =213
                         X: =945
                         Y: =327
-                  - Timer1_2:
-                      Control: Timer@2.1.0
-                      Properties:
-                        AutoStart: =varTiempo1
-                        Color: =RGBA(255, 255, 255, 1)
-                        Duration: =5000
-                        Height: =74
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        OnTimerEnd: =Set(varCargar1,false);Navigate(CPP,ScreenTransition.Fade)
-                        Visible: =false
-                        Width: =287
-                        X: =549
-                        Y: =384
