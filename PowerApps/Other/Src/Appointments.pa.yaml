@@ -409,6 +409,26 @@ Screens:
                         Size: =20
                         Text: ="Equipos y Frecuencias"
                         Width: =1011
+                  - Icon10:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(105, 121, 126, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =4
+                        Height: =50
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Home
+                        OnSelect: =Navigate('Tipo de App',ScreenTransition.Fade)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =50
             - DataCard3:
                 Control: DataCard@1.0.2
                 Variant: BlankCard
@@ -633,8 +653,8 @@ Screens:
                         Icon: =Icon.Reload
                         OnSelect: =Reset(ComboBox2);Reset(ComboBox3);Reset(ComboBox4);Reset(ComboBox5);Reset(ComboBox2_1);Reset(ComboBox4_1)
                         Width: =49
-                        X: =40
-                        Y: =2
+                        X: =560
+                        Y: =90
                   - ComboBox2_1:
                       Control: Classic/ComboBox@2.4.0
                       Properties:

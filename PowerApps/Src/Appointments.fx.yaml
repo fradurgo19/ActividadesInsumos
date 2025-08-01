@@ -411,6 +411,25 @@
                 Width: =1011
                 ZIndex: =1
 
+            Icon10 As icon.Home:
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(255, 255, 255, 1)
+                FocusedBorderThickness: =4
+                Height: =50
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =Navigate('Tipo de App',ScreenTransition.Fade)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =50
+                ZIndex: =2
+
         DataCard3 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -648,8 +667,8 @@
                 Icon: =Icon.Reload
                 OnSelect: =Reset(ComboBox2);Reset(ComboBox3);Reset(ComboBox4);Reset(ComboBox5);Reset(ComboBox2_1);Reset(ComboBox4_1)
                 Width: =49
-                X: =40
-                Y: =2
+                X: =560
+                Y: =90
                 ZIndex: =18
 
             ComboBox2_1 As combobox:
