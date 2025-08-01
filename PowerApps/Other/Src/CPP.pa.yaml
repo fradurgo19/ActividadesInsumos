@@ -218,6 +218,28 @@ Screens:
                         LayoutDirection: =LayoutDirection.Horizontal
                         Width: =1061
                       Children:
+                        - Container97_17:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              FillPortions: =0
+                              Height: =52
+                              LayoutMinHeight: =32
+                              Width: =50
+                              X: =127
+                            Children:
+                              - TextCanvas7_23:
+                                  Control: Text@0.0.51
+                                  Properties:
+                                    Align: ='TextCanvas.Align'.Start
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =52
+                                    PaddingLeft: =15
+                                    Size: =13
+                                    Text: ="Item"
+                                    VerticalAlign: =VerticalAlign.Middle
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =50
                         - Container97_11:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -239,7 +261,7 @@ Screens:
                                     Text: ="Nombre"
                                     VerticalAlign: =VerticalAlign.Middle
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =106
+                                    Width: =Parent.Width
                         - Container97_15:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -761,6 +783,27 @@ Screens:
                                     LayoutDirection: =LayoutDirection.Horizontal
                                     Width: =1071
                                   Children:
+                                    - Container97_8:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.SetByContainer
+                                          FillPortions: =0
+                                          LayoutMinHeight: =32
+                                          LayoutMinWidth: =100
+                                          Width: =50
+                                        Children:
+                                          - TextCanvas25_8:
+                                              Control: Text@0.0.51
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                Height: =76
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: =ThisItem.No
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =50
                                     - Container97_3:
                                         Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
@@ -1087,18 +1130,6 @@ Screens:
                                     Text: =
                                     Width: =28
                                     Y: =43
-                              - TextCanvas12:
-                                  Control: Text@0.0.51
-                                  Properties:
-                                    Align: ='TextCanvas.Align'.Center
-                                    FontItalic: =true
-                                    Height: =18
-                                    Size: =10
-                                    Text: =ThisItem.No
-                                    Weight: ='TextCanvas.Weight'.Bold
-                                    Width: =36
-                                    X: =49
-                                    Y: =56
             - Container66:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout
