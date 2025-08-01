@@ -951,7 +951,14 @@ CPP As screen:
                     LoadingSpinner: =LoadingSpinner.Data
                     OnSelect: =Set(varSelectedItem, ThisItem)
                     ShowNavigation: =true
-                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                    TemplateFill: |
+                        =If(
+                            ThisItem.RefSAP = Text(0),
+                                Color.Yellow,
+                            ThisItem.IsSelected,
+                                Color.LightGreen,
+                            Color.White
+                        )
                     TemplatePadding: =0
                     TemplateSize: =84
                     Width: =Parent.Width
@@ -1443,7 +1450,7 @@ CPP As screen:
                         Size: =13
                         Text: =
                         Width: =28
-                        Y: =43
+                        Y: =38
                         ZIndex: =20
 
         Container66 As groupContainer.manualLayoutContainer:

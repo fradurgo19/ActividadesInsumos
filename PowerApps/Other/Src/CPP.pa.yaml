@@ -802,7 +802,14 @@ Screens:
 
                               OnSelect: =Set(varSelectedItem, ThisItem)
                               ShowNavigation: =true
-                              TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
+                              TemplateFill: |+
+                                =If(
+                                    ThisItem.RefSAP = Text(0),
+                                        Color.Yellow,
+                                    ThisItem.IsSelected,
+                                        Color.LightGreen,
+                                    Color.White
+                                )
                               TemplateSize: =84
                               Width: =Parent.Width
                             Children:
@@ -1195,7 +1202,7 @@ Screens:
                                       RemoveIf(colConcatenada, RefSAP = ThisItem.RefSAP)
                                     Text: =
                                     Width: =28
-                                    Y: =43
+                                    Y: =38
             - Container66:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout
