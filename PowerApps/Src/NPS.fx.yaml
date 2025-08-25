@@ -794,7 +794,7 @@
                         PaddingLeft: =15
                         Size: =12
                         Text: ="Observaciones"
-                        Width: =95
+                        Width: =100
                         X: =0
                         Y: =0
                         ZIndex: =11
@@ -848,7 +848,6 @@
                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                     TemplatePadding: =0
                     TemplateSize: =90
-                    Transition: =Transition.Push
                     Visible: |
                         =User().Email = "analista.mantenimiento@partequipos.com" || 
                         User().Email = "jestrada@partequipos.com" || 
@@ -1063,7 +1062,7 @@
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =95
+                            Width: =100
                             ZIndex: =15
 
                             TextCanvas9_8 As Texto:
@@ -1071,13 +1070,14 @@
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
-                                Fill: =RGBA(180, 214, 250, 1)
+                                Fill: =RGBA(255, 255, 0, 1)
                                 FontItalic: =true
                                 Height: =Parent.Height
                                 PaddingLeft: =10
                                 Size: =9
                                 Text: =ThisItem.Observaciones
-                                Width: =91
+                                Weight: ='TextCanvas.Weight'.Bold
+                                Width: =100
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
@@ -1186,7 +1186,7 @@
                                 Height: =22
                                 Size: =12
                                 Text: =Parent.DisplayName
-                                Weight: ='TextCanvas.Weight'.Semibold
+                                Weight: ='TextCanvas.Weight'.Bold
                                 Width: =Parent.Width - 48
                                 Wrap: =false
                                 X: =24
@@ -1196,12 +1196,12 @@
                             "DataCardValue23 As 'Entrada de texto'":
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
-                                Height: =148
+                                Height: =161
                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                 Required: =Parent.Required
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Value: =Parent.Default
-                                Width: =Parent.Width - 48
+                                Width: =220
                                 X: =24
                                 Y: =DataCardKey23.Y + DataCardKey23.Height + 4
                                 ZIndex: =2
@@ -1250,7 +1250,7 @@
                                 Height: =20
                                 Size: =12
                                 Text: ="Estado"
-                                Weight: ='TextCanvas.Weight'.Semibold
+                                Weight: ='TextCanvas.Weight'.Bold
                                 Width: =85
                                 Wrap: =false
                                 X: =24
@@ -1315,7 +1315,7 @@
                                 Height: =22
                                 Size: =12
                                 Text: =Parent.DisplayName
-                                Weight: ='TextCanvas.Weight'.Semibold
+                                Weight: ='TextCanvas.Weight'.Bold
                                 Width: =Parent.Width - 48
                                 Wrap: =false
                                 X: =24
@@ -1383,7 +1383,7 @@
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 FocusedBorderThickness: =4
                                 Font: =Font.'Segoe UI'
-                                FontWeight: =FontWeight.Semibold
+                                FontWeight: =FontWeight.Bold
                                 Height: =34
                                 PaddingLeft: =0
                                 Size: =12

@@ -690,7 +690,7 @@ Screens:
                                     PaddingLeft: =15
                                     Size: =12
                                     Text: ="Observaciones"
-                                    Width: =95
+                                    Width: =100
                               - TextCanvas7_20:
                                   Control: Text@0.0.51
                                   Properties:
@@ -733,7 +733,6 @@ Screens:
                               ShowNavigation: =true
                               TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                               TemplateSize: =90
-                              Transition: =Transition.Push
                               Visible: |
                                 =User().Email = "analista.mantenimiento@partequipos.com" || 
                                 User().Email = "jestrada@partequipos.com" || 
@@ -903,7 +902,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =50
                                           LayoutMinWidth: =32
-                                          Width: =95
+                                          Width: =100
                                         Children:
                                           - TextCanvas9_8:
                                               Control: Text@0.0.51
@@ -911,13 +910,14 @@ Screens:
                                                 BorderColor: =RGBA(214, 221, 224, 1)
                                                 BorderStyle: =BorderStyle.Solid
                                                 BorderThickness: =1
-                                                Fill: =RGBA(180, 214, 250, 1)
+                                                Fill: =RGBA(255, 255, 0, 1)
                                                 FontItalic: =true
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9
                                                 Text: =ThisItem.Observaciones
-                                                Width: =91
+                                                Weight: ='TextCanvas.Weight'.Bold
+                                                Width: =100
                                     - TextCanvas4:
                                         Control: Text@0.0.51
                                         Properties:
@@ -1000,7 +1000,7 @@ Screens:
                                                 Height: =20
                                                 Size: =12
                                                 Text: ="Estado"
-                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Weight: ='TextCanvas.Weight'.Bold
                                                 Width: =85
                                                 Wrap: =false
                                                 X: =24
@@ -1061,7 +1061,7 @@ Screens:
                                                 Height: =22
                                                 Size: =12
                                                 Text: =Parent.DisplayName
-                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Weight: ='TextCanvas.Weight'.Bold
                                                 Width: =Parent.Width - 48
                                                 Wrap: =false
                                                 X: =24
@@ -1072,12 +1072,12 @@ Screens:
                                               Properties:
                                                 AccessibleLabel: =Parent.DisplayName
                                                 DisplayMode: =Parent.DisplayMode
-                                                Height: =148
+                                                Height: =161
                                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                                 Required: =Parent.Required
                                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                                 Value: =Parent.Default
-                                                Width: =Parent.Width - 48
+                                                Width: =220
                                                 X: =24
                                                 Y: =DataCardKey23.Y + DataCardKey23.Height + 4
                                           - ErrorMessage23:
@@ -1123,7 +1123,7 @@ Screens:
                                                 Height: =22
                                                 Size: =12
                                                 Text: =Parent.DisplayName
-                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Weight: ='TextCanvas.Weight'.Bold
                                                 Width: =Parent.Width - 48
                                                 Wrap: =false
                                                 X: =24
@@ -1189,7 +1189,7 @@ Screens:
                                                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                                                 FocusedBorderThickness: =4
                                                 Font: =Font.'Segoe UI'
-                                                FontWeight: =FontWeight.Semibold
+                                                FontWeight: =FontWeight.Bold
                                                 Height: =34
                                                 PaddingLeft: =0
                                                 Size: =12
