@@ -290,7 +290,7 @@ Screens:
                               FillPortions: =0
                               LayoutMinHeight: =32
                               LayoutMinWidth: =100
-                              Visible: |+
+                              Visible: |
                                 =If(
                                     CountRows(
                                         Filter(
@@ -802,7 +802,7 @@ Screens:
 
                               OnSelect: =Set(varSelectedItem, ThisItem)
                               ShowNavigation: =true
-                              TemplateFill: |+
+                              TemplateFill: |
                                 =If(
                                     ThisItem.RefSAP = Text(0),
                                         Color.LightYellow,
@@ -905,7 +905,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =32
                                           LayoutMinWidth: =100
-                                          Visible: |+
+                                          Visible: |
                                             =ThisItem.Parte <> "MTTO PREVENTIVO"
                                           Width: =96
                                         Children:

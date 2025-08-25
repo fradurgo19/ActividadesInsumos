@@ -530,7 +530,7 @@
                     ZIndex: =1
 
                     "TextInputCanvas5 As 'Entrada de texto'":
-                        AccessibleLabel: ="Buscar por correo"
+                        AccessibleLabel: ="Buscar por OTT"
                         Appearance: ='TextInputCanvas.Appearance'.FilledDarker
                         BasePaletteColor: =RGBA(189, 178, 176, 1)
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -540,7 +540,7 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        Placeholder: ="Buscar ID, Correo, Asunto"
+                        Placeholder: ="Buscar OTT"
                         Width: =180
                         X: =0
                         Y: =0
@@ -946,7 +946,7 @@
                         =Sort(
                             Filter(
                                 'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in Encuestado || IsBlank(TextInputCanvas5.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
+                                (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in OTT || IsBlank(TextInputCanvas5.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                             ),
                             Modificado,
                             SortOrder.Descending
@@ -1033,7 +1033,7 @@
                                 Height: =Parent.Height
                                 PaddingLeft: =10
                                 Size: =8
-                                Text: =ThisItem.Creado
+                                Text: =ThisItem.Modificado
                                 Width: =60
                                 Wrap: =true
                                 X: =61
