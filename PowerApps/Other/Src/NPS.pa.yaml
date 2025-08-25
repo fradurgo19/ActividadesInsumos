@@ -604,14 +604,6 @@ Screens:
                               LayoutDirection: =LayoutDirection.Horizontal
                               Width: =Parent.Width
                             Children:
-                              - TextCanvas7_20:
-                                  Control: Text@0.0.51
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    PaddingLeft: =5
-                                    Size: =12
-                                    Text: ="ID"
-                                    Width: =30
                               - TextCanvas7:
                                   Control: Text@0.0.51
                                   Properties:
@@ -620,7 +612,7 @@ Screens:
                                     PaddingLeft: =5
                                     Size: =12
                                     Text: ="Tipo"
-                                    Width: =35
+                                    Width: =100
                               - TextCanvas7_9:
                                   Control: Text@0.0.51
                                   Properties:
@@ -629,15 +621,7 @@ Screens:
                                     PaddingLeft: =5
                                     Size: =12
                                     Text: ="Fecha"
-                                    Width: =50
-                              - TextCanvas7_2:
-                                  Control: Text@0.0.51
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    PaddingLeft: =15
-                                    Size: =12
-                                    Text: ="Servicio"
-                                    Width: =70
+                                    Width: =100
                               - TextCanvas7_3:
                                   Control: Text@0.0.51
                                   Properties:
@@ -646,7 +630,7 @@ Screens:
                                     PaddingLeft: =15
                                     Size: =12
                                     Text: ="Cliente"
-                                    Width: =70
+                                    Width: =100
                               - TextCanvas7_4:
                                   Control: Text@0.0.51
                                   Properties:
@@ -662,7 +646,7 @@ Screens:
                                     PaddingLeft: =15
                                     Size: =11
                                     Text: ="Diligencia"
-                                    Width: =65
+                                    Width: =100
                               - TextCanvas7_1:
                                   Control: Text@0.0.51
                                   Properties:
@@ -671,16 +655,7 @@ Screens:
                                     PaddingLeft: =5
                                     Size: =11
                                     Text: ="Estado"
-                                    Width: =65
-                              - TextCanvas7_6:
-                                  Control: Text@0.0.51
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    LayoutMinWidth: =40
-                                    PaddingLeft: =5
-                                    Size: =11
-                                    Text: ="Estado"
-                                    Width: =65
+                                    Width: =100
                               - TextCanvas7_13:
                                   Control: Text@0.0.51
                                   Properties:
@@ -689,7 +664,7 @@ Screens:
                                     PaddingLeft: =5
                                     Size: =11
                                     Text: ="Respuesta"
-                                    Width: =70
+                                    Width: =100
                               - TextCanvas7_21:
                                   Control: Text@0.0.51
                                   Properties:
@@ -698,34 +673,7 @@ Screens:
                                     PaddingLeft: =5
                                     Size: =11
                                     Text: ="Concluye"
-                                    Width: =70
-                              - TextCanvas7_33:
-                                  Control: Text@0.0.51
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    LayoutMinWidth: =40
-                                    PaddingLeft: =5
-                                    Size: =11
-                                    Text: ="Tiempo Cotización"
-                                    Width: =65
-                              - TextCanvas7_34:
-                                  Control: Text@0.0.51
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    LayoutMinWidth: =40
-                                    PaddingLeft: =5
-                                    Size: =11
-                                    Text: ="Atención Técnica"
-                                    Width: =65
-                              - TextCanvas7_36:
-                                  Control: Text@0.0.51
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    LayoutMinWidth: =40
-                                    PaddingLeft: =5
-                                    Size: =11
-                                    Text: ="Valor"
-                                    Width: =50
+                                    Width: =100
                               - TextCanvas7_35:
                                   Control: Text@0.0.51
                                   Properties:
@@ -735,15 +683,6 @@ Screens:
                                     Size: =11
                                     Text: ="NPS"
                                     Width: =50
-                              - TextCanvas7_8:
-                                  Control: Text@0.0.51
-                                  Properties:
-                                    FontColor: =RGBA(255, 255, 255, 1)
-                                    LayoutMinWidth: =100
-                                    PaddingLeft: =15
-                                    Size: =11
-                                    Text: ="Respuesta NPS"
-                                    Width: =80
                               - TextCanvas7_7:
                                   Control: Text@0.0.51
                                   Properties:
@@ -752,6 +691,14 @@ Screens:
                                     Size: =12
                                     Text: ="Observaciones"
                                     Width: =95
+                              - TextCanvas7_20:
+                                  Control: Text@0.0.51
+                                  Properties:
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    PaddingLeft: =5
+                                    Size: =12
+                                    Text: ="ID"
+                                    Width: =30
                   - Container16:
                       Control: GroupContainer@1.3.0
                       Variant: ManualLayout
@@ -778,7 +725,7 @@ Screens:
                                 =Sort(
                                     Filter(
                                         'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                        (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in OTT || IsBlank(TextInputCanvas5.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
+                                        (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in OTT || IsBlank(TextInputCanvas5.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Modificado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Modificado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                                     ),
                                     Modificado,
                                     SortOrder.Descending
@@ -821,7 +768,7 @@ Screens:
                                           FillPortions: =0
                                           LayoutMinHeight: =50
                                           LayoutMinWidth: =32
-                                          Width: =120
+                                          Width: =200
                                         Children:
                                           - TextCanvas9_7:
                                               Control: Text@0.0.51
@@ -831,18 +778,10 @@ Screens:
                                                 BorderThickness: =1
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
-                                                Size: =8
+                                                Size: =10
                                                 Text: =ThisItem.Servicio.Value
-                                                Width: =61
-                                          - TextCanvas4:
-                                              Control: Text@0.0.51
-                                              Properties:
-                                                Align: ='TextCanvas.Align'.Center
-                                                Height: =28
-                                                Size: =8
-                                                Text: =ThisItem.ID
-                                                Width: =32
-                                                X: =29
+                                                Weight: ='TextCanvas.Weight'.Bold
+                                                Width: =100
                                           - TextCanvas9_9:
                                               Control: Text@0.0.51
                                               Properties:
@@ -851,23 +790,11 @@ Screens:
                                                 BorderThickness: =1
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
-                                                Size: =8
+                                                Size: =10
                                                 Text: =ThisItem.Modificado
-                                                Width: =60
-                                                X: =61
-                                    - TextCanvas9_1:
-                                        Control: Text@0.0.51
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.Stretch
-                                          BorderColor: =RGBA(214, 221, 224, 1)
-                                          BorderStyle: =BorderStyle.Solid
-                                          BorderThickness: =1
-                                          LayoutMinHeight: =0
-                                          LayoutMinWidth: =32
-                                          PaddingLeft: =10
-                                          Size: =8
-                                          Text: =ThisItem.Servicio.Value
-                                          Width: =70
+                                                Weight: ='TextCanvas.Weight'.Bold
+                                                Width: =100
+                                                X: =100
                                     - TextCanvas9_2:
                                         Control: Text@0.0.51
                                         Properties:
@@ -878,9 +805,10 @@ Screens:
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =32
                                           PaddingLeft: =10
-                                          Size: =8
+                                          Size: =10
                                           Text: =ThisItem.Cliente
-                                          Width: =70
+                                          Weight: ='TextCanvas.Weight'.Bold
+                                          Width: =100
                                     - TextCanvas9_3:
                                         Control: Text@0.0.51
                                         Properties:
@@ -891,8 +819,9 @@ Screens:
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =32
                                           PaddingLeft: =10
-                                          Size: =8
+                                          Size: =10
                                           Text: =ThisItem.OTT
+                                          Weight: ='TextCanvas.Weight'.Bold
                                           Width: =50
                                     - TextCanvas9_4:
                                         Control: Text@0.0.51
@@ -904,9 +833,10 @@ Screens:
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =32
                                           PaddingLeft: =10
-                                          Size: =8
+                                          Size: =9
                                           Text: =ThisItem.'Modificado por'.DisplayName
-                                          Width: =50
+                                          Weight: ='TextCanvas.Weight'.Medium
+                                          Width: =100
                                     - TextCanvas9:
                                         Control: Text@0.0.51
                                         Properties:
@@ -917,22 +847,10 @@ Screens:
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =20
                                           PaddingLeft: =10
-                                          Size: =8
+                                          Size: =10
                                           Text: =ThisItem.Respuesta.Value
-                                          Width: =70
-                                    - TextCanvas9_5:
-                                        Control: Text@0.0.51
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.Stretch
-                                          BorderColor: =RGBA(214, 221, 224, 1)
-                                          BorderStyle: =BorderStyle.Solid
-                                          BorderThickness: =1
-                                          LayoutMinHeight: =0
-                                          LayoutMinWidth: =20
-                                          PaddingLeft: =10
-                                          Size: =8
-                                          Text: =ThisItem.Respuesta.Value
-                                          Width: =70
+                                          Weight: ='TextCanvas.Weight'.Bold
+                                          Width: =100
                                     - TextCanvas9_6:
                                         Control: Text@0.0.51
                                         Properties:
@@ -944,9 +862,9 @@ Screens:
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =32
                                           PaddingLeft: =10
-                                          Size: =8
+                                          Size: =9
                                           Text: =ThisItem.'Respuesta a Solicitud'
-                                          Width: =70
+                                          Width: =100
                                     - TextCanvas9_10:
                                         Control: Text@0.0.51
                                         Properties:
@@ -958,51 +876,9 @@ Screens:
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =32
                                           PaddingLeft: =10
-                                          Size: =11
+                                          Size: =10
                                           Text: =ThisItem.Conclusión
-                                          Width: =70
-                                    - TextCanvas9_11:
-                                        Control: Text@0.0.51
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.Stretch
-                                          BorderColor: =RGBA(214, 221, 224, 1)
-                                          BorderStyle: =BorderStyle.Solid
-                                          BorderThickness: =1
-                                          FontItalic: =true
-                                          LayoutMinHeight: =0
-                                          LayoutMinWidth: =32
-                                          PaddingLeft: =10
-                                          Size: =11
-                                          Text: =ThisItem.'¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value
-                                          Width: =65
-                                    - TextCanvas9_12:
-                                        Control: Text@0.0.51
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.Stretch
-                                          BorderColor: =RGBA(214, 221, 224, 1)
-                                          BorderStyle: =BorderStyle.Solid
-                                          BorderThickness: =1
-                                          FontItalic: =true
-                                          LayoutMinHeight: =0
-                                          LayoutMinWidth: =32
-                                          PaddingLeft: =10
-                                          Size: =11
-                                          Text: =ThisItem.'¿Como califica la atención prestada por el personal técnico? De 1 a 5 donde 1 es muy mala y 5 excelente'.Value
-                                          Width: =65
-                                    - TextCanvas9_13:
-                                        Control: Text@0.0.51
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.Stretch
-                                          BorderColor: =RGBA(214, 221, 224, 1)
-                                          BorderStyle: =BorderStyle.Solid
-                                          BorderThickness: =1
-                                          FontItalic: =true
-                                          LayoutMinHeight: =0
-                                          LayoutMinWidth: =32
-                                          PaddingLeft: =10
-                                          Size: =11
-                                          Text: =ThisItem.'Considera que el valor del servicio fue:'.Value
-                                          Width: =50
+                                          Width: =100
                                     - TextCanvas9_15:
                                         Control: Text@0.0.51
                                         Properties:
@@ -1015,24 +891,10 @@ Screens:
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =32
                                           PaddingLeft: =10
-                                          Size: =11
+                                          Size: =10
                                           Text: =ThisItem.'NPS ¿Qué tan probable es que recomiende el servicio técnico de Partequipos con un compañero conocido, familiar o amigo? '
                                           VerticalAlign: =VerticalAlign.Bottom
                                           Width: =50
-                                    - TextCanvas9_14:
-                                        Control: Text@0.0.51
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.Stretch
-                                          BorderColor: =RGBA(214, 221, 224, 1)
-                                          BorderStyle: =BorderStyle.Solid
-                                          BorderThickness: =1
-                                          FontItalic: =true
-                                          LayoutMinHeight: =0
-                                          LayoutMinWidth: =32
-                                          PaddingLeft: =10
-                                          Size: =11
-                                          Text: =ThisItem.'¿Qué te hace elegir esta puntuación?'
-                                          Width: =80
                                     - Container19_1:
                                         Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
@@ -1056,6 +918,16 @@ Screens:
                                                 Size: =9
                                                 Text: =ThisItem.Observaciones
                                                 Width: =91
+                                    - TextCanvas4:
+                                        Control: Text@0.0.51
+                                        Properties:
+                                          Align: ='TextCanvas.Align'.Center
+                                          Height: =28
+                                          Size: =10
+                                          Text: =ThisItem.ID
+                                          Weight: ='TextCanvas.Weight'.Bold
+                                          Width: =40
+                                          Y: =62
                               - TextCanvas9_16:
                                   Control: Text@0.0.51
                                   Properties:
@@ -1064,11 +936,13 @@ Screens:
                                     BorderThickness: =1
                                     Fill: =RGBA(255, 184, 174, 1)
                                     FontColor: =RGBA(9, 33, 98, 1)
+                                    Height: =25
                                     PaddingLeft: =10
                                     Size: =9
                                     Text: =ThisItem.Encuestado
-                                    Width: =50
-                                    X: =820
+                                    Width: =53
+                                    X: =976
+                                    Y: =32
                   - Container20:
                       Control: GroupContainer@1.3.0
                       Variant: ManualLayout

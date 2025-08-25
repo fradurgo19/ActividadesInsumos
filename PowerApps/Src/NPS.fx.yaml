@@ -649,21 +649,6 @@
                     Width: =Parent.Width
                     ZIndex: =2
 
-                    TextCanvas7_20 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =96
-                        PaddingLeft: =5
-                        Size: =12
-                        Text: ="ID"
-                        Width: =30
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
                     TextCanvas7 As Texto:
                         AutoHeight: =false
                         DisplayMode: =DisplayMode.Edit
@@ -674,10 +659,10 @@
                         PaddingLeft: =5
                         Size: =12
                         Text: ="Tipo"
-                        Width: =35
+                        Width: =100
                         X: =0
                         Y: =0
-                        ZIndex: =2
+                        ZIndex: =1
 
                     TextCanvas7_9 As Texto:
                         AutoHeight: =false
@@ -689,25 +674,10 @@
                         PaddingLeft: =5
                         Size: =12
                         Text: ="Fecha"
-                        Width: =50
+                        Width: =100
                         X: =0
                         Y: =0
-                        ZIndex: =3
-
-                    TextCanvas7_2 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =96
-                        PaddingLeft: =15
-                        Size: =12
-                        Text: ="Servicio"
-                        Width: =70
-                        X: =0
-                        Y: =0
-                        ZIndex: =4
+                        ZIndex: =2
 
                     TextCanvas7_3 As Texto:
                         AutoHeight: =false
@@ -719,10 +689,10 @@
                         PaddingLeft: =15
                         Size: =12
                         Text: ="Cliente"
-                        Width: =70
+                        Width: =100
                         X: =0
                         Y: =0
-                        ZIndex: =5
+                        ZIndex: =3
 
                     TextCanvas7_4 As Texto:
                         AutoHeight: =false
@@ -737,7 +707,7 @@
                         Width: =50
                         X: =0
                         Y: =0
-                        ZIndex: =6
+                        ZIndex: =4
 
                     TextCanvas7_5 As Texto:
                         AutoHeight: =false
@@ -749,10 +719,10 @@
                         PaddingLeft: =15
                         Size: =11
                         Text: ="Diligencia"
-                        Width: =65
+                        Width: =100
                         X: =0
                         Y: =0
-                        ZIndex: =7
+                        ZIndex: =5
 
                     TextCanvas7_1 As Texto:
                         AutoHeight: =false
@@ -764,25 +734,10 @@
                         PaddingLeft: =5
                         Size: =11
                         Text: ="Estado"
-                        Width: =65
+                        Width: =100
                         X: =0
                         Y: =0
-                        ZIndex: =8
-
-                    TextCanvas7_6 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =40
-                        PaddingLeft: =5
-                        Size: =11
-                        Text: ="Estado"
-                        Width: =65
-                        X: =0
-                        Y: =0
-                        ZIndex: =9
+                        ZIndex: =6
 
                     TextCanvas7_13 As Texto:
                         AutoHeight: =false
@@ -794,10 +749,10 @@
                         PaddingLeft: =5
                         Size: =11
                         Text: ="Respuesta"
-                        Width: =70
+                        Width: =100
                         X: =0
                         Y: =0
-                        ZIndex: =10
+                        ZIndex: =7
 
                     TextCanvas7_21 As Texto:
                         AutoHeight: =false
@@ -809,55 +764,10 @@
                         PaddingLeft: =5
                         Size: =11
                         Text: ="Concluye"
-                        Width: =70
+                        Width: =100
                         X: =0
                         Y: =0
-                        ZIndex: =11
-
-                    TextCanvas7_33 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =40
-                        PaddingLeft: =5
-                        Size: =11
-                        Text: ="Tiempo Cotización"
-                        Width: =65
-                        X: =0
-                        Y: =0
-                        ZIndex: =12
-
-                    TextCanvas7_34 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =40
-                        PaddingLeft: =5
-                        Size: =11
-                        Text: ="Atención Técnica"
-                        Width: =65
-                        X: =0
-                        Y: =0
-                        ZIndex: =13
-
-                    TextCanvas7_36 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =40
-                        PaddingLeft: =5
-                        Size: =11
-                        Text: ="Valor"
-                        Width: =50
-                        X: =0
-                        Y: =0
-                        ZIndex: =14
+                        ZIndex: =8
 
                     TextCanvas7_35 As Texto:
                         AutoHeight: =false
@@ -872,22 +782,7 @@
                         Width: =50
                         X: =0
                         Y: =0
-                        ZIndex: =15
-
-                    TextCanvas7_8 As Texto:
-                        AutoHeight: =false
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 255, 255, 1)
-                        Height: =32
-                        LayoutMinHeight: =32
-                        LayoutMinWidth: =100
-                        PaddingLeft: =15
-                        Size: =11
-                        Text: ="Respuesta NPS"
-                        Width: =80
-                        X: =0
-                        Y: =0
-                        ZIndex: =16
+                        ZIndex: =9
 
                     TextCanvas7_7 As Texto:
                         AutoHeight: =false
@@ -902,7 +797,22 @@
                         Width: =95
                         X: =0
                         Y: =0
-                        ZIndex: =18
+                        ZIndex: =11
+
+                    TextCanvas7_20 As Texto:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =5
+                        Size: =12
+                        Text: ="ID"
+                        Width: =30
+                        X: =0
+                        Y: =0
+                        ZIndex: =12
 
             Container16 As groupContainer.manualLayoutContainer:
                 BorderThickness: =2
@@ -927,7 +837,7 @@
                         =Sort(
                             Filter(
                                 'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in OTT || IsBlank(TextInputCanvas5.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
+                                (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in OTT || IsBlank(TextInputCanvas5.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Modificado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Modificado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                             ),
                             Modificado,
                             SortOrder.Descending
@@ -978,7 +888,7 @@
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =120
+                            Width: =200
                             ZIndex: =1
 
                             TextCanvas9_7 As Texto:
@@ -988,54 +898,40 @@
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =Parent.Height
                                 PaddingLeft: =10
-                                Size: =8
+                                Size: =10
                                 Text: =ThisItem.Servicio.Value
-                                Width: =61
+                                Weight: ='TextCanvas.Weight'.Bold
+                                Width: =100
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
-                            TextCanvas4 As Texto:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =28
-                                Size: =8
-                                Text: =ThisItem.ID
-                                Width: =32
-                                X: =29
-                                Y: =0
-                                ZIndex: =2
-
                             TextCanvas9_9 As Texto:
+                                Align: ="Start"
+                                AutoHeight: =false
                                 BorderColor: =RGBA(214, 221, 224, 1)
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
+                                ContentLanguage: =""
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontItalic: =false
+                                FontStrikethrough: =false
+                                FontUnderline: =false
                                 Height: =Parent.Height
                                 PaddingLeft: =10
-                                Size: =8
+                                Size: =10
+                                TabIndex: =0
                                 Text: =ThisItem.Modificado
-                                Width: =60
+                                Tooltip: =""
+                                VerticalAlign: =""
+                                Visible: =true
+                                Weight: ='TextCanvas.Weight'.Bold
+                                Width: =100
                                 Wrap: =true
-                                X: =61
+                                X: =100
                                 Y: =0
-                                ZIndex: =3
-
-                        TextCanvas9_1 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =8
-                            Text: =ThisItem.Servicio.Value
-                            Width: =70
-                            X: =0
-                            Y: =0
-                            ZIndex: =2
+                                ZIndex: =5
 
                         TextCanvas9_2 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -1046,9 +942,10 @@
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
-                            Size: =8
+                            Size: =10
                             Text: =ThisItem.Cliente
-                            Width: =70
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -1062,8 +959,9 @@
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
-                            Size: =8
+                            Size: =10
                             Text: =ThisItem.OTT
+                            Weight: ='TextCanvas.Weight'.Bold
                             Width: =50
                             X: =0
                             Y: =0
@@ -1078,9 +976,10 @@
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
-                            Size: =8
+                            Size: =9
                             Text: =ThisItem.'Modificado por'.DisplayName
-                            Width: =50
+                            Weight: ='TextCanvas.Weight'.Medium
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =5
@@ -1094,28 +993,13 @@
                             Height: =32
                             LayoutMinWidth: =20
                             PaddingLeft: =10
-                            Size: =8
+                            Size: =10
                             Text: =ThisItem.Respuesta.Value
-                            Width: =70
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =6
-
-                        TextCanvas9_5 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            LayoutMinWidth: =20
-                            PaddingLeft: =10
-                            Size: =8
-                            Text: =ThisItem.Respuesta.Value
-                            Width: =70
-                            X: =0
-                            Y: =0
-                            ZIndex: =7
 
                         TextCanvas9_6 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -1127,9 +1011,9 @@
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
-                            Size: =8
+                            Size: =9
                             Text: =ThisItem.'Respuesta a Solicitud'
-                            Width: =70
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =8
@@ -1144,64 +1028,12 @@
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
-                            Size: =11
+                            Size: =10
                             Text: =ThisItem.Conclusión
-                            Width: =70
+                            Width: =100
                             X: =0
                             Y: =0
                             ZIndex: =9
-
-                        TextCanvas9_11 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontItalic: =true
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =11
-                            Text: =ThisItem.'¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value
-                            Width: =65
-                            X: =0
-                            Y: =0
-                            ZIndex: =10
-
-                        TextCanvas9_12 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontItalic: =true
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =11
-                            Text: =ThisItem.'¿Como califica la atención prestada por el personal técnico? De 1 a 5 donde 1 es muy mala y 5 excelente'.Value
-                            Width: =65
-                            X: =0
-                            Y: =0
-                            ZIndex: =11
-
-                        TextCanvas9_13 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontItalic: =true
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =11
-                            Text: |-
-                                =ThisItem.'Considera que el valor del servicio fue:'.Value
-                            Width: =50
-                            X: =0
-                            Y: =0
-                            ZIndex: =12
 
                         TextCanvas9_15 As Texto:
                             Align: ='TextCanvas.Align'.End
@@ -1214,30 +1046,13 @@
                             Height: =32
                             LayoutMinWidth: =32
                             PaddingLeft: =10
-                            Size: =11
+                            Size: =10
                             Text: =ThisItem.'NPS ¿Qué tan probable es que recomiende el servicio técnico de Partequipos con un compañero conocido, familiar o amigo? '
                             VerticalAlign: =VerticalAlign.Bottom
                             Width: =50
                             X: =0
                             Y: =0
                             ZIndex: =13
-
-                        TextCanvas9_14 As Texto:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
-                            BorderStyle: =BorderStyle.Solid
-                            BorderThickness: =1
-                            DisplayMode: =DisplayMode.Edit
-                            FontItalic: =true
-                            Height: =32
-                            LayoutMinWidth: =32
-                            PaddingLeft: =10
-                            Size: =11
-                            Text: =ThisItem.'¿Qué te hace elegir esta puntuación?'
-                            Width: =80
-                            X: =0
-                            Y: =0
-                            ZIndex: =14
 
                         Container19_1 As groupContainer.manualLayoutContainer:
                             DropShadow: =DropShadow.Light
@@ -1267,6 +1082,32 @@
                                 Y: =0
                                 ZIndex: =1
 
+                        TextCanvas4 As Texto:
+                            Align: ='TextCanvas.Align'.Center
+                            AutoHeight: =false
+                            BorderStyle: =""
+                            ContentLanguage: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =""
+                            FontItalic: =false
+                            FontStrikethrough: =false
+                            FontUnderline: =false
+                            Height: =28
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =10
+                            TabIndex: =0
+                            Text: =ThisItem.ID
+                            Tooltip: =""
+                            VerticalAlign: =""
+                            Visible: =true
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =40
+                            Wrap: =true
+                            X: =0
+                            Y: =62
+                            ZIndex: =16
+
                     TextCanvas9_16 As Texto:
                         BorderColor: =RGBA(214, 221, 224, 1)
                         BorderStyle: =BorderStyle.Solid
@@ -1274,13 +1115,13 @@
                         DisplayMode: =DisplayMode.Edit
                         Fill: =RGBA(255, 184, 174, 1)
                         FontColor: =RGBA(9, 33, 98, 1)
-                        Height: =32
+                        Height: =25
                         PaddingLeft: =10
                         Size: =9
                         Text: =ThisItem.Encuestado
-                        Width: =50
-                        X: =820
-                        Y: =0
+                        Width: =53
+                        X: =976
+                        Y: =32
                         ZIndex: =7
 
             Container20 As groupContainer.manualLayoutContainer:
