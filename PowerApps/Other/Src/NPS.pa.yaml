@@ -537,17 +537,6 @@ Screens:
                                     BorderThickness: =2
                                     Placeholder: ="Buscar OTT"
                                     Width: =180
-                              - ComboboxCanvas2:
-                                  Control: ComboBox@0.0.51
-                                  Properties:
-                                    Appearance: ='ComboboxCanvas.Appearance'.FilledDarker
-                                    BasePaletteColor: =RGBA(189, 178, 176, 1)
-                                    BorderColor: =RGBA(0, 0, 0, 1)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    InputTextPlaceholder: ="Buscar por Tipo"
-                                    Items: =["Petición", "Queja", "Reclamo", "Sugerencia", "Felicitación"]
-                                    Width: =190
                               - ComboboxCanvas2_1:
                                   Control: ComboBox@0.0.51
                                   Properties:
@@ -577,7 +566,7 @@ Screens:
                                   Control: Button@0.0.45
                                   Properties:
                                     BasePaletteColor: =RGBA(249, 83, 109, 1)
-                                    OnSelect: =Reset(TextInputCanvas5);Reset(ComboboxCanvas2);Reset(ComboboxCanvas2_1);Reset(DatePickerCanvas2);Reset(DatePickerCanvas1)
+                                    OnSelect: =Reset(TextInputCanvas5);Reset(ComboboxCanvas2_1);Reset(DatePickerCanvas2);Reset(DatePickerCanvas1)
                                     Text: ="Reset"
                   - Container4:
                       Control: GroupContainer@1.3.0
@@ -789,7 +778,7 @@ Screens:
                                 =Sort(
                                     Filter(
                                         'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                        (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in OTT || IsBlank(TextInputCanvas5.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2.Selected.Value || IsBlank(ComboboxCanvas2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
+                                        (TextInputCanvas5.Value in Diligencia || TextInputCanvas5.Value in Cliente || TextInputCanvas5.Value in ID || TextInputCanvas5.Value in OTT || IsBlank(TextInputCanvas5.Value)) && (Respuesta.Value = ComboboxCanvas2_1.Selected.Value || IsBlank(ComboboxCanvas2_1.Selected.Value)) && (Creado >= DatePickerCanvas2.SelectedDate || IsBlank(DatePickerCanvas2.SelectedDate)) && (Creado <= DatePickerCanvas1.SelectedDate || IsBlank(DatePickerCanvas1.SelectedDate))
                                     ),
                                     Modificado,
                                     SortOrder.Descending
