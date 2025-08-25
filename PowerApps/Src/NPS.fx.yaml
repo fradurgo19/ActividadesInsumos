@@ -651,6 +651,9 @@
 
                     TextCanvas7 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
@@ -659,6 +662,7 @@
                         PaddingLeft: =5
                         Size: =12
                         Text: ="Tipo"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =100
                         X: =0
                         Y: =0
@@ -666,6 +670,9 @@
 
                     TextCanvas7_9 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
@@ -674,6 +681,7 @@
                         PaddingLeft: =5
                         Size: =12
                         Text: ="Fecha"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =50
                         X: =0
                         Y: =0
@@ -681,6 +689,9 @@
 
                     TextCanvas7_3 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
@@ -689,6 +700,7 @@
                         PaddingLeft: =15
                         Size: =12
                         Text: ="Cliente"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =100
                         X: =0
                         Y: =0
@@ -696,6 +708,9 @@
 
                     TextCanvas7_4 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
@@ -704,6 +719,7 @@
                         PaddingLeft: =15
                         Size: =12
                         Text: ="OTT"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =50
                         X: =0
                         Y: =0
@@ -711,14 +727,18 @@
 
                     TextCanvas7_5 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         PaddingLeft: =15
-                        Size: =11
+                        Size: =12
                         Text: ="Diligencia"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =100
                         X: =0
                         Y: =0
@@ -726,14 +746,18 @@
 
                     TextCanvas7_1 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =40
                         PaddingLeft: =5
-                        Size: =11
+                        Size: =12
                         Text: ="Estado"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =100
                         X: =0
                         Y: =0
@@ -741,14 +765,18 @@
 
                     TextCanvas7_13 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =40
                         PaddingLeft: =5
-                        Size: =11
+                        Size: =12
                         Text: ="Respuesta"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =100
                         X: =0
                         Y: =0
@@ -756,14 +784,18 @@
 
                     TextCanvas7_21 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =40
                         PaddingLeft: =5
-                        Size: =11
+                        Size: =12
                         Text: ="Concluye"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =150
                         X: =0
                         Y: =0
@@ -771,14 +803,18 @@
 
                     TextCanvas7_35 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =40
                         PaddingLeft: =5
-                        Size: =11
+                        Size: =12
                         Text: ="NPS"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =50
                         X: =0
                         Y: =0
@@ -786,6 +822,9 @@
 
                     TextCanvas7_7 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
@@ -794,13 +833,17 @@
                         PaddingLeft: =15
                         Size: =12
                         Text: ="Observaciones"
-                        Width: =100
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =105
                         X: =0
                         Y: =0
                         ZIndex: =11
 
                     TextCanvas7_20 As Texto:
                         AutoHeight: =false
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
@@ -809,6 +852,7 @@
                         PaddingLeft: =5
                         Size: =12
                         Text: ="ID"
+                        Weight: ='TextCanvas.Weight'.Bold
                         Width: =30
                         X: =0
                         Y: =0
@@ -868,6 +912,7 @@
                         ZIndex: =5
 
                     Container18 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderThickness: =1
                         DropShadow: =DropShadow.Light
                         Height: =Parent.TemplateHeight
                         LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -908,7 +953,7 @@
                             TextCanvas9_9 As Texto:
                                 Align: ="Start"
                                 AutoHeight: =false
-                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderColor: =RGBA(0, 0, 0, 1)
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 ContentLanguage: =""
@@ -934,7 +979,7 @@
 
                         TextCanvas9_2 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
@@ -951,7 +996,7 @@
 
                         TextCanvas9_3 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
@@ -968,7 +1013,7 @@
 
                         TextCanvas9_4 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
@@ -985,7 +1030,7 @@
 
                         TextCanvas9 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
@@ -1002,7 +1047,7 @@
 
                         TextCanvas9_6 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
@@ -1019,7 +1064,7 @@
 
                         TextCanvas9_10 As Texto:
                             AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
@@ -1037,7 +1082,7 @@
                         TextCanvas9_15 As Texto:
                             Align: ='TextCanvas.Align'.End
                             AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(214, 221, 224, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
@@ -1085,7 +1130,9 @@
                         TextCanvas4 As Texto:
                             Align: ='TextCanvas.Align'.Center
                             AutoHeight: =false
-                            BorderStyle: =""
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
                             ContentLanguage: =""
                             DisplayMode: =DisplayMode.Edit
                             Font: =""
@@ -1507,9 +1554,10 @@
                         Height: =Parent.Height
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
-                        Size: =16
-                        Text: ="Respuesta y Conclusión"
-                        Width: =350
+                        Size: =14
+                        Text: ="Agregue su Respuesta y Conclusión a la gestión de la Encuesta"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =450
                         X: =0
                         Y: =0
                         ZIndex: =1
