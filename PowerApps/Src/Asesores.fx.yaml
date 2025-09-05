@@ -548,15 +548,15 @@
                                          
                                         (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                         ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                        (Creado >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&
-                                        (Creado <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) &&
+                                        ('Fecha Primer Mtto' >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&
+                                        ('Fecha Primer Mtto' <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) &&
                                         (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
                                     )
                                 },
                                 
                                 Sort(
                                     BaseDatos,
-                                    'Fecha Primer Mtto',
+                                    Creado,
                                     SortOrder.Descending
                                 )
                             )
@@ -1021,28 +1021,49 @@
                         Width: =775
                         ZIndex: =1
 
+                        Icon11 As icon.Search:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =32
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Search
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =40
+                            ZIndex: =1
+
                         "FechaInicio As 'Selector de fecha'":
                             BasePaletteColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Format: ='DatePickerCanvas.Format'.Short
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Placeholder: ="FechaInicio"
-                            Width: =150
-                            X: =0
-                            Y: =0
-                            ZIndex: =1
-
-                        "FechaFin As 'Selector de fecha'":
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =320
-                            Placeholder: ="FechaFin"
+                            Visible: =false
                             Width: =150
                             X: =0
                             Y: =0
                             ZIndex: =2
+
+                        "FechaFin As 'Selector de fecha'":
+                            DisplayMode: =DisplayMode.Edit
+                            Format: ='DatePickerCanvas.Format'.Short
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Placeholder: ="FechaFin"
+                            Visible: =false
+                            Width: =150
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
 
                         "TextInputCanvas2 As 'Entrada de texto'":
                             AlignInContainer: =AlignInContainer.Stretch
@@ -1052,10 +1073,10 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Placeholder: ="Buscar ID"
-                            Width: =100
+                            Width: =200
                             X: =0
                             Y: =0
-                            ZIndex: =3
+                            ZIndex: =4
 
                         "ComboboxCanvas5 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1066,10 +1087,10 @@
                             LayoutMinWidth: =320
                             Required: =false
                             TriggerOutput: ="Keypress"
-                            Width: =140
+                            Width: =200
                             X: =0
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =5
 
                         "ComboboxCanvas5_1 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1089,10 +1110,10 @@
                             LayoutMinWidth: =320
                             Required: =false
                             TriggerOutput: ="Keypress"
-                            Width: =140
+                            Width: =200
                             X: =0
                             Y: =0
-                            ZIndex: =5
+                            ZIndex: =6
 
                         ButtonCanvas11 As Botón:
                             BasePaletteColor: =RGBA(249, 83, 109, 1)
@@ -1106,7 +1127,7 @@
                             Width: =96
                             X: =0
                             Y: =0
-                            ZIndex: =6
+                            ZIndex: =7
 
                 Label2_10 As label:
                     Align: =Align.Center

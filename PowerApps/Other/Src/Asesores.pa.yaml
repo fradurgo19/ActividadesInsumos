@@ -528,7 +528,7 @@ Screens:
                                   Properties:
                                     BorderColor: =RGBA(166, 166, 166, 1)
                                     Height: =100
-                                    Items: "=With(\n    {\n        BaseDatos: Filter(\n            'Seguimiento Clientes Equipos Telemetría',\n            (IsBlank(TextInputCanvas2.Value) || \n             Text(TextInputCanvas2.Value) in Text(Observaciones) || \n             Text(TextInputCanvas2.Value) in Text('Nombre del cliente') || \n             Text(TextInputCanvas2.Value) in Text(ID)) &&\n             \n            (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&\n            ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&\n            (Creado >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&\n            (Creado <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) &&\n            (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) \n        )\n    },\n    \n    Sort(\n        BaseDatos,\n        'Fecha Primer Mtto',\n        SortOrder.Descending\n    )\n)\n"
+                                    Items: "=With(\n    {\n        BaseDatos: Filter(\n            'Seguimiento Clientes Equipos Telemetría',\n            (IsBlank(TextInputCanvas2.Value) || \n             Text(TextInputCanvas2.Value) in Text(Observaciones) || \n             Text(TextInputCanvas2.Value) in Text('Nombre del cliente') || \n             Text(TextInputCanvas2.Value) in Text(ID)) &&\n             \n            (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&\n            ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&\n            ('Fecha Primer Mtto' >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&\n            ('Fecha Primer Mtto' <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) &&\n            (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) \n        )\n    },\n    \n    Sort(\n        BaseDatos,\n        Creado,\n        SortOrder.Descending\n    )\n)\n"
                                     LayoutMinHeight: =0
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
@@ -830,28 +830,50 @@ Screens:
                                     LayoutJustifyContent: =LayoutJustifyContent.End
                                     Width: =775
                                   Children:
+                                    - Icon11:
+                                        Control: Classic/Icon@2.5.0
+                                        Properties:
+                                          BorderColor: =RGBA(166, 166, 166, 1)
+                                          Color: =RGBA(0, 0, 0, 1)
+                                          DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                          DisabledColor: =RGBA(220, 220, 220, 1)
+                                          DisabledFill: =RGBA(0, 0, 0, 0)
+                                          FocusedBorderThickness: =4
+                                          Height: =32
+                                          HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                          HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                                          HoverFill: =RGBA(0, 0, 0, 0)
+                                          Icon: =Icon.Search
+                                          PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                          PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                                          PressedFill: =RGBA(0, 0, 0, 0)
+                                          Width: =40
                                     - FechaInicio:
                                         Control: DatePicker@0.0.46
                                         Properties:
+                                          Format: ='DatePickerCanvas.Format'.Short
                                           Placeholder: ="FechaInicio"
+                                          Visible: =false
                                           Width: =150
                                     - FechaFin:
                                         Control: DatePicker@0.0.46
                                         Properties:
+                                          Format: ='DatePickerCanvas.Format'.Short
                                           Placeholder: ="FechaFin"
+                                          Visible: =false
                                           Width: =150
                                     - TextInputCanvas2:
                                         Control: TextInput@0.0.54
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Stretch
                                           Placeholder: ="Buscar ID"
-                                          Width: =100
+                                          Width: =200
                                     - ComboboxCanvas5:
                                         Control: ComboBox@0.0.51
                                         Properties:
                                           InputTextPlaceholder: ="Buscar Estado"
                                           Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
-                                          Width: =140
+                                          Width: =200
                                     - ComboboxCanvas5_1:
                                         Control: ComboBox@0.0.51
                                         Properties:
@@ -866,7 +888,7 @@ Screens:
                                             "control.interno@partequipos.com", "marevalo@partequipos.com", "planeador.serviciosbg@partequipos.com", 
                                             "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                                             "fvasquez@partequipos.com", "dcubides@partequipos.com"]
-                                          Width: =140
+                                          Width: =200
                                     - ButtonCanvas11:
                                         Control: Button@0.0.45
                                         Properties:
