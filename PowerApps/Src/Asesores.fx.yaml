@@ -543,7 +543,8 @@
                                     (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&
                                     (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                     ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                 
+                                    (Creado >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&
+                                    (Creado <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) &&
                                     (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
                                 ),
                                 MesCreado, // Field representing the creation date
@@ -1013,21 +1014,28 @@
                         Width: =775
                         ZIndex: =1
 
-                        DatePicker1 As datepicker:
-                            BorderColor: =RGBA(166, 166, 166, 1)
-                            CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                            Color: =RGBA(51, 51, 51, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            Font: =Font.'Segoe UI'
-                            HoverDateFill: =RGBA(200, 200, 200, 1)
-                            IconBackground: =RGBA(105, 121, 126, 1)
-                            PaddingTop: =5
-                            SelectedDateFill: =RGBA(105, 121, 126, 1)
-                            Size: =13
-                            Width: =120
+                        "FechaInicio As 'Selector de fecha'":
+                            BasePaletteColor: =
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Placeholder: ="FechaInicio"
+                            Width: =150
+                            X: =0
+                            Y: =0
                             ZIndex: =1
+
+                        "FechaFin As 'Selector de fecha'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Placeholder: ="FechaFin"
+                            Width: =150
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
 
                         "TextInputCanvas2 As 'Entrada de texto'":
                             AlignInContainer: =AlignInContainer.Stretch
@@ -1040,7 +1048,7 @@
                             Width: =100
                             X: =0
                             Y: =0
-                            ZIndex: =2
+                            ZIndex: =3
 
                         "ComboboxCanvas5 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1051,10 +1059,10 @@
                             LayoutMinWidth: =320
                             Required: =false
                             TriggerOutput: ="Keypress"
-                            Width: =100
+                            Width: =140
                             X: =0
                             Y: =0
-                            ZIndex: =3
+                            ZIndex: =4
 
                         "ComboboxCanvas5_1 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1074,10 +1082,10 @@
                             LayoutMinWidth: =320
                             Required: =false
                             TriggerOutput: ="Keypress"
-                            Width: =100
+                            Width: =140
                             X: =0
                             Y: =0
-                            ZIndex: =4
+                            ZIndex: =5
 
                         ButtonCanvas11 As Botón:
                             BasePaletteColor: =RGBA(249, 83, 109, 1)
@@ -1086,7 +1094,7 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             OnSelect: |
-                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);
+                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);Reset(FechaInicio);Reset(FechaFin)
                             Text: ="Reset"
                             Width: =96
                             X: =0

@@ -528,7 +528,23 @@ Screens:
                                   Properties:
                                     BorderColor: =RGBA(166, 166, 166, 1)
                                     Height: =100
-                                    Items: "=Sort(\n    Filter(\n        'Seguimiento Clientes Equipos Telemetría',\n        (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&\n        (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&\n        ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&\n     \n        (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) \n    ),\n    MesCreado, // Field representing the creation date\n    SortOrder.Descending\n)\n\n\n//    (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&"
+                                    Items: |-
+                                      =Sort(
+                                          Filter(
+                                              'Seguimiento Clientes Equipos Telemetría',
+                                              (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&
+                                              (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
+                                              ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
+                                              (Creado >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&
+                                              (Creado <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) &&
+                                              (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
+                                          ),
+                                          MesCreado, // Field representing the creation date
+                                          SortOrder.Descending
+                                      )
+
+
+                                      //    (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&
                                     LayoutMinHeight: =0
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
@@ -830,18 +846,16 @@ Screens:
                                     LayoutJustifyContent: =LayoutJustifyContent.End
                                     Width: =775
                                   Children:
-                                    - DatePicker1:
-                                        Control: Classic/DatePicker@2.6.0
+                                    - FechaInicio:
+                                        Control: DatePicker@0.0.46
                                         Properties:
-                                          BorderColor: =RGBA(166, 166, 166, 1)
-                                          Color: =RGBA(51, 51, 51, 1)
-                                          DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                          Font: =Font.'Segoe UI'
-                                          IconBackground: =RGBA(105, 121, 126, 1)
-                                          IconFill: =RGBA(255, 255, 255, 1)
-                                          PaddingTop: =5
-                                          Size: =13
-                                          Width: =120
+                                          Placeholder: ="FechaInicio"
+                                          Width: =150
+                                    - FechaFin:
+                                        Control: DatePicker@0.0.46
+                                        Properties:
+                                          Placeholder: ="FechaFin"
+                                          Width: =150
                                     - TextInputCanvas2:
                                         Control: TextInput@0.0.54
                                         Properties:
@@ -853,7 +867,7 @@ Screens:
                                         Properties:
                                           InputTextPlaceholder: ="Buscar Estado"
                                           Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
-                                          Width: =100
+                                          Width: =140
                                     - ComboboxCanvas5_1:
                                         Control: ComboBox@0.0.51
                                         Properties:
@@ -868,13 +882,13 @@ Screens:
                                             "control.interno@partequipos.com", "marevalo@partequipos.com", "planeador.serviciosbg@partequipos.com", 
                                             "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                                             "fvasquez@partequipos.com", "dcubides@partequipos.com"]
-                                          Width: =100
+                                          Width: =140
                                     - ButtonCanvas11:
                                         Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(249, 83, 109, 1)
                                           OnSelect: |
-                                            =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);
+                                            =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);Reset(FechaInicio);Reset(FechaFin)
                                           Text: ="Reset"
                         - Label2_10:
                             Control: Label@2.5.1
