@@ -986,61 +986,6 @@
                             Y: =0
                             ZIndex: =14
 
-                Container45 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    Fill: =RGBA(166, 215, 153, 1)
-                    Height: =45
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =244
-                    X: =13
-                    Y: =219
-                    ZIndex: =6
-
-                    Container46 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.Light
-                        Height: =36
-                        LayoutMode: =LayoutMode.Auto
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
-                        Width: =236
-                        Y: =6
-                        ZIndex: =1
-
-                        TextCanvas36 As Texto:
-                            Align: ='TextCanvas.Align'.Center
-                            DisplayMode: =DisplayMode.Edit
-                            FontColor: =RGBA(255, 255, 255, 1)
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            PaddingLeft: =5
-                            Size: =12
-                            Text: ="Seleccionar Mes"
-                            Width: =150
-                            X: =0
-                            Y: =0
-                            ZIndex: =1
-
-                        TextCanvas37 As Texto:
-                            Align: ='TextCanvas.Align'.End
-                            DisplayMode: =DisplayMode.Edit
-                            FontColor: =RGBA(255, 255, 255, 1)
-                            Height: =Parent.Height
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =96
-                            PaddingLeft: =5
-                            Size: =12
-                            Text: ="Cantidad"
-                            Width: =70
-                            X: =0
-                            Y: =0
-                            ZIndex: =2
-
                 Container47 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =36
@@ -1065,6 +1010,22 @@
                         Width: =775
                         ZIndex: =1
 
+                        DatePicker1 As datepicker:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverDateFill: =RGBA(200, 200, 200, 1)
+                            IconBackground: =RGBA(105, 121, 126, 1)
+                            PaddingTop: =5
+                            SelectedDateFill: =RGBA(105, 121, 126, 1)
+                            Size: =13
+                            Width: =120
+                            ZIndex: =1
+
                         "TextInputCanvas2 As 'Entrada de texto'":
                             AlignInContainer: =AlignInContainer.Stretch
                             BasePaletteColor: =
@@ -1073,10 +1034,10 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Placeholder: ="Buscar ID"
-                            Width: =150
+                            Width: =100
                             X: =0
                             Y: =0
-                            ZIndex: =1
+                            ZIndex: =2
 
                         "ComboboxCanvas5 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1087,10 +1048,10 @@
                             LayoutMinWidth: =320
                             Required: =false
                             TriggerOutput: ="Keypress"
-                            Width: =130
+                            Width: =100
                             X: =0
                             Y: =0
-                            ZIndex: =2
+                            ZIndex: =3
 
                         "ComboboxCanvas5_1 As 'Cuadro combinado'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
@@ -1110,25 +1071,10 @@
                             LayoutMinWidth: =320
                             Required: =false
                             TriggerOutput: ="Keypress"
-                            Width: =140
+                            Width: =100
                             X: =0
                             Y: =0
-                            ZIndex: =3
-
-                        "ComboboxCanvas5_7 As 'Cuadro combinado'.pcfdataset":
-                            BasePaletteColor: =
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            InputTextPlaceholder: ="Buscar Año"
-                            Items: =Distinct(colOportunidades,Año)
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =320
-                            Required: =false
-                            TriggerOutput: ="Keypress"
-                            Width: =120
-                            X: =40
-                            Y: =4
-                            ZIndex: =5
+                            ZIndex: =4
 
                         ButtonCanvas11 As Botón:
                             BasePaletteColor: =RGBA(249, 83, 109, 1)
@@ -1137,7 +1083,7 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             OnSelect: |
-                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);Reset(ComboboxCanvas5_7);
+                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);
                             Text: ="Reset"
                             Width: =96
                             X: =0
@@ -1698,7 +1644,7 @@
 
                 Container90 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =131
+                    Height: =678
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -1710,7 +1656,7 @@
 
                     Container39_1 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =91
+                        Height: =636
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMode: =LayoutMode.Auto
