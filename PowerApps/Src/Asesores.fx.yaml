@@ -1,7 +1,7 @@
 "Asesores As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Height: =Max(App.Height, App.DesignHeight)
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |-
+    OnVisible: |+
         =Set(CurrentStep,"9");
         Set(PageNumber, 1);
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
@@ -9,7 +9,6 @@
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
         // Paso 1: Limpiar la colección
         Clear(colOportunidades);
-        
         
         ForAll(
             ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -24,12 +23,6 @@
             )
         );
         
-        
-        
-        
-        
-        
-        
         ClearCollect(
             colItemsPorMes,
             AddColumns(
@@ -42,12 +35,6 @@
                 CountRows(Grupo) // Contar los registros en cada grupo
             )
         );
-        
-        Set(
-            totalItems,
-            CountRows('Seguimiento Clientes Equipos Telemetría')
-        );
-        
         
         
         ClearCollect(
@@ -62,6 +49,7 @@
                 CountRows(Grupo) // Contar los registros en cada grupo
             )
         );
+        
         
         ClearCollect(
             colOportunAsesorCorreo,
@@ -83,7 +71,13 @@
                 Cotizaciones,
                 CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Cotización")
             )
+        );
+        
+        Set(
+            totalItems,
+            CountRows('Seguimiento Clientes Equipos Telemetría')
         )
+        
     Orientation: =If(Asesores.Width < Asesores.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Asesores.Width)
     Width: =Max(App.Width, App.DesignWidth)
@@ -526,8 +520,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =777
-                    X: =277
+                    Width: =1039
+                    X: =14
                     Y: =155
                     ZIndex: =4
 
@@ -548,8 +542,8 @@
                                         (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                         ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
                                         ('Fecha Primer Mtto' >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&
-                                        ('Fecha Primer Mtto' <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) &&
-                                        (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
+                                        ('Fecha Primer Mtto' <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) 
+                                       
                                     )
                                 },
                                 
@@ -589,7 +583,7 @@
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
-                            Width: =777
+                            Width: =1028
                             ZIndex: =6
 
                             TextCanvas33_8 As Texto:
@@ -597,165 +591,218 @@
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =10
+                                Size: =11
                                 Text: =ThisItem.ID
-                                Width: =25
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =40
                                 X: =0
                                 Y: =0
                                 ZIndex: =1
 
                             TextCanvas31 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.'Nombre del cliente'
+                                Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =120
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
 
                             TextCanvas33_6 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =10
+                                Size: =11
                                 Text: =ThisItem.'Serie.'
-                                Width: =40
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =70
                                 X: =0
                                 Y: =0
                                 ZIndex: =3
 
                             TextCanvas33 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =10
+                                Size: =11
                                 Text: =ThisItem.Marca
-                                Width: =50
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =60
                                 X: =0
                                 Y: =0
                                 ZIndex: =4
 
                             TextCanvas32 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =10
+                                Size: =11
                                 Text: =ThisItem.Modelo
-                                Width: =50
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =70
                                 X: =0
                                 Y: =0
                                 ZIndex: =5
 
                             TextCanvas34_2 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =10
+                                Size: =11
                                 Text: =ThisItem.Horometro
+                                Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =50
                                 X: =0
                                 Y: =0
                                 ZIndex: =6
 
                             TextCanvas33_4 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =10
+                                Size: =11
                                 Text: =ThisItem.'Tipo Mtto'
+                                Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =50
                                 X: =0
                                 Y: =0
                                 ZIndex: =7
 
                             TextCanvas34 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.'Fecha Primer Mtto'
-                                Width: =60
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =80
                                 X: =0
                                 Y: =0
                                 ZIndex: =8
 
                             TextCanvas34_1 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.'ASESOR 2'.Value
-                                Width: =60
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =80
                                 X: =0
                                 Y: =0
                                 ZIndex: =9
 
                             TextCanvas33_5 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.'Tipo Oportunidad'.Value
-                                Width: =40
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =60
                                 X: =0
                                 Y: =0
                                 ZIndex: =10
 
                             TextCanvas33_1 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.Estado.Value
-                                Width: =55
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =70
                                 X: =0
                                 Y: =0
                                 ZIndex: =11
 
                             TextCanvas33_2 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.Estado2.Value
-                                Width: =50
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =70
                                 X: =0
                                 Y: =0
                                 ZIndex: =12
 
                             TextCanvas33_3 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.Detalle.Value
-                                Width: =50
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =60
                                 X: =0
                                 Y: =0
                                 ZIndex: =13
 
                             TextCanvas33_7 As Texto:
+                                Align: ='TextCanvas.Align'.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
+                                Font: =Font.Lato
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =11
                                 Text: =ThisItem.Detalle.Value
-                                Width: =70
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =90
                                 X: =0
                                 Y: =0
                                 ZIndex: =14
@@ -768,8 +815,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =779
-                    X: =277
+                    Width: =1042
+                    X: =14
                     Y: =108
                     ZIndex: =5
 
@@ -783,7 +830,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =778
+                        Width: =1025
                         ZIndex: =1
 
                         TextCanvas35_13 As Texto:
@@ -796,7 +843,7 @@
                             Size: =12
                             Text: ="ID"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =25
+                            Width: =40
                             X: =0
                             Y: =0
                             ZIndex: =1
@@ -826,7 +873,7 @@
                             Size: =12
                             Text: ="Serie"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =40
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =3
@@ -841,7 +888,7 @@
                             Size: =12
                             Text: ="Marca"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =50
+                            Width: =60
                             X: =0
                             Y: =0
                             ZIndex: =4
@@ -856,7 +903,7 @@
                             Size: =12
                             Text: ="Modelo"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =50
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =5
@@ -901,7 +948,7 @@
                             Size: =12
                             Text: ="Fecha Mtto"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =60
+                            Width: =80
                             X: =0
                             Y: =0
                             ZIndex: =8
@@ -916,7 +963,7 @@
                             Size: =12
                             Text: ="Asesor"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =60
+                            Width: =80
                             X: =0
                             Y: =0
                             ZIndex: =9
@@ -931,7 +978,7 @@
                             Size: =12
                             Text: ="Tipo"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =40
+                            Width: =60
                             X: =0
                             Y: =0
                             ZIndex: =10
@@ -946,7 +993,7 @@
                             Size: =12
                             Text: ="Estado"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =55
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =11
@@ -961,7 +1008,7 @@
                             Size: =12
                             Text: ="Tramite"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =50
+                            Width: =70
                             X: =0
                             Y: =0
                             ZIndex: =12
@@ -976,7 +1023,7 @@
                             Size: =12
                             Text: ="Detalle"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =50
+                            Width: =60
                             X: =0
                             Y: =0
                             ZIndex: =13
@@ -991,7 +1038,7 @@
                             Size: =12
                             Text: ="Observación"
                             Weight: ='TextCanvas.Weight'.Regular
-                            Width: =70
+                            Width: =90
                             X: =0
                             Y: =0
                             ZIndex: =14
@@ -1003,8 +1050,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =777
-                    X: =277
+                    Width: =1051
+                    X: =3
                     Y: =71
                     ZIndex: =7
 
@@ -1017,7 +1064,8 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =775
+                        Width: =763
+                        X: =10
                         ZIndex: =1
 
                         Icon11 As icon.Search:
@@ -1121,32 +1169,12 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             OnSelect: |
-                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);Reset(FechaInicio);Reset(FechaFin)
+                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery8);Reset(FechaInicio);Reset(FechaFin)
                             Text: ="Reset"
                             Width: =96
                             X: =0
                             Y: =0
                             ZIndex: =7
-
-                Label2_10 As label:
-                    Align: =Align.Center
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(255, 255, 255, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =41
-                    Size: =20
-                    Text: ="Oportunidades"
-                    Width: =204
-                    X: =13
-                    Y: =66
-                    ZIndex: =8
 
                 Container57 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
@@ -1155,8 +1183,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =777
-                    X: =277
+                    Width: =1040
+                    X: =14
                     Y: =509
                     ZIndex: =9
 
@@ -1168,7 +1196,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =777
+                        Width: =1040
                         ZIndex: =1
 
                         Form1 As form.PowerApps_CoreControls_Form:
@@ -1179,6 +1207,7 @@
                             Item: =Gallery8.Selected
                             LayoutMinHeight: =0
                             LayoutMinWidth: =0
+                            NumberOfColumns: =4
                             UseFluentV9Cards: =true
                             Width: =Parent.Width
                             X: =588
@@ -1196,9 +1225,9 @@
                                 Height: =70
                                 Required: =false
                                 Update: =DataCardValue21.Selected
-                                Width: =259
-                                X: =0
-                                Y: =1
+                                Width: =260
+                                X: =3
+                                Y: =0
                                 ZIndex: =1
 
                                 DataCardKey21 As Texto:
@@ -1260,7 +1289,7 @@
                                 Height: =70
                                 Required: =false
                                 Update: =DataCardValue17.Selected
-                                Width: =259
+                                Width: =260
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
@@ -1324,7 +1353,7 @@
                                 Height: =60
                                 Required: =false
                                 Update: =DataCardValue14.Selected
-                                Width: =259
+                                Width: =260
                                 X: =1
                                 Y: =0
                                 ZIndex: =2
@@ -1388,7 +1417,7 @@
                                 Height: =70
                                 Required: =false
                                 Update: =DataCardValue15.Selected
-                                Width: =259
+                                Width: =260
                                 X: =2
                                 Y: =0
                                 ZIndex: =2
@@ -1452,8 +1481,8 @@
                                 Height: =60
                                 Required: =false
                                 Update: =Value(DataCardValue4.Value)
-                                Width: =259
-                                X: =1
+                                Width: =260
+                                X: =0
                                 Y: =1
                                 ZIndex: =2
 
@@ -1512,8 +1541,8 @@
                                 Height: =60
                                 Required: =false
                                 Update: =DataCardValue12.Selected
-                                Width: =259
-                                X: =2
+                                Width: =260
+                                X: =1
                                 Y: =1
                                 ZIndex: =2
 
@@ -1579,9 +1608,9 @@
                                 MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
                                 Required: =false
                                 Update: =DataCardValue13.Value
-                                Width: =777
-                                X: =0
-                                Y: =2
+                                Width: =260
+                                X: =2
+                                Y: =1
                                 ZIndex: =2
 
                                 DataCardKey13 As Texto:
@@ -1679,164 +1708,6 @@
                     X: =382
                     Y: =16
                     ZIndex: =15
-
-                Container90 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    Height: =678
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =241
-                    X: =16
-                    Y: =77
-                    ZIndex: =17
-
-                    Container39_1 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.Light
-                        Height: =636
-                        LayoutAlignItems: =LayoutAlignItems.Stretch
-                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                        LayoutMode: =LayoutMode.Auto
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
-                        Width: =232
-                        Y: =40
-                        ZIndex: =1
-
-                        "Gallery4_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                            AlignInContainer: =AlignInContainer.SetByContainer
-                            BorderColor: =RGBA(166, 166, 166, 1)
-                            DelayItemLoading: =true
-                            Height: =Parent.Height
-                            Items: |+
-                                =Sort(
-                                    Filter(
-                                        colItemsPorAsesor,
-                                        (Correo = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value))
-                                
-                                    ),
-                                    Cantidad, // Field representing the creation date
-                                    SortOrder.Descending
-                                )
-                                
-                            Layout: =Layout.Vertical
-                            LayoutMinHeight: =0
-                            LayoutMinWidth: =150
-                            LoadingSpinner: =LoadingSpinner.Data
-                            ShowNavigation: =true
-                            TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
-                            TemplatePadding: =0
-                            TemplateSize: =30
-                            Width: =Parent.Width
-                            X: =40
-                            Y: =40
-                            ZIndex: =1
-
-                            Separator3_1 As rectangle:
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                Fill: =RGBA(255, 255, 255, 1)
-                                Height: =8
-                                OnSelect: =Select(Parent)
-                                Width: =Parent.TemplateWidth
-                                Y: =Parent.TemplateHeight - Self.Height
-                                ZIndex: =5
-
-                            Container41_1 As groupContainer.horizontalAutoLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                Height: =30
-                                LayoutAlignItems: =LayoutAlignItems.Stretch
-                                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                                LayoutMode: =LayoutMode.Auto
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
-                                Width: =232
-                                ZIndex: =6
-
-                                TextCanvas30_1 As Texto:
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(0, 0, 0, 1)
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Size: =12
-                                    Text: |+
-                                        =ThisItem.Correo
-                                        
-                                    Width: =180
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =1
-
-                                TextCanvas12_2 As Texto:
-                                    Align: ='TextCanvas.Align'.Start
-                                    DisplayMode: =DisplayMode.Edit
-                                    FontColor: =RGBA(0, 0, 0, 1)
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =96
-                                    Size: =12
-                                    Text: =ThisItem.Cantidad
-                                    Width: =40
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =3
-
-                    Container45_1 As groupContainer.manualLayoutContainer:
-                        DropShadow: =DropShadow.Light
-                        Fill: =RGBA(166, 215, 153, 1)
-                        Height: =40
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
-                        Width: =232
-                        ZIndex: =2
-
-                        Container46_1 As groupContainer.horizontalAutoLayoutContainer:
-                            DropShadow: =DropShadow.Light
-                            Height: =34
-                            LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =4
-                            RadiusBottomRight: =4
-                            RadiusTopLeft: =4
-                            RadiusTopRight: =4
-                            Width: =232
-                            Y: =6
-                            ZIndex: =1
-
-                            TextCanvas36_1 As Texto:
-                                DisplayMode: =DisplayMode.Edit
-                                FontColor: =RGBA(255, 255, 255, 1)
-                                Height: =Parent.Height
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                PaddingLeft: =5
-                                Size: =12
-                                Text: ="Seleccione Asesor"
-                                Width: =140
-                                X: =0
-                                Y: =0
-                                ZIndex: =1
-
-                            TextCanvas37_1 As Texto:
-                                Align: ='TextCanvas.Align'.End
-                                DisplayMode: =DisplayMode.Edit
-                                FontColor: =RGBA(255, 255, 255, 1)
-                                Height: =Parent.Height
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                PaddingLeft: =5
-                                Size: =12
-                                Text: ="Cantidad"
-                                Width: =70
-                                X: =0
-                                Y: =0
-                                ZIndex: =2
 
             Icon10_8 As icon:
                 Color: =RGBA(105, 121, 126, 1)
