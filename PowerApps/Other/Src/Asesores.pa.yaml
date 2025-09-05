@@ -509,7 +509,7 @@ Screens:
                             Control: GroupContainer@1.3.0
                             Variant: AutoLayout
                             Properties:
-                              Height: =319
+                              Height: =385
                               LayoutDirection: =LayoutDirection.Horizontal
                               Width: =1039
                               X: =14
@@ -571,6 +571,7 @@ Screens:
                                           - TextCanvas33_8:
                                               Control: Text@0.0.51
                                               Properties:
+                                                Align: ='TextCanvas.Align'.Center
                                                 Height: =Parent.Height
                                                 Size: =11
                                                 Text: =ThisItem.ID
@@ -1018,16 +1019,16 @@ Screens:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
                             Properties:
-                              Height: =246
+                              Height: =178
                               Width: =1040
                               X: =14
-                              Y: =509
+                              Y: =575
                             Children:
                               - Container58:
                                   Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
                                   Properties:
-                                    Height: =246
+                                    Height: =178
                                     LayoutDirection: =LayoutDirection.Horizontal
                                     Width: =1040
                                   Children:
@@ -1491,8 +1492,8 @@ Screens:
                                 Notify("Actualización Enviada", NotificationType.Success, 3000)
                               Text: ="Actualizar"
                               Width: =150
-                              X: =904
-                              Y: =474
+                              X: =903
+                              Y: =540
                         - ButtonCanvas15:
                             Control: Button@0.0.45
                             Properties:

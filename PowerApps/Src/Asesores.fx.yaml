@@ -514,7 +514,7 @@
 
                 Container40 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =319
+                    Height: =385
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -585,6 +585,7 @@
                             ZIndex: =6
 
                             TextCanvas33_8 As Texto:
+                                Align: ='TextCanvas.Align'.Center
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =Parent.Height
                                 LayoutMinHeight: =32
@@ -1215,19 +1216,19 @@
 
                 Container57 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =246
+                    Height: =178
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =1040
                     X: =14
-                    Y: =509
+                    Y: =575
                     ZIndex: =9
 
                     Container58 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =246
+                        Height: =178
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -1731,8 +1732,8 @@
                         Notify("Actualización Enviada", NotificationType.Success, 3000)
                     Text: ="Actualizar"
                     Width: =150
-                    X: =904
-                    Y: =474
+                    X: =903
+                    Y: =540
                     ZIndex: =14
 
                 ButtonCanvas15 As Botón:
