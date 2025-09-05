@@ -14,7 +14,7 @@
             colOportunidades,
             FirstN(
                 Filter('Seguimiento Clientes Equipos Telemetría', true),
-                PageNumber * 2000
+                PageNumber * 1000
             )
         );
         
