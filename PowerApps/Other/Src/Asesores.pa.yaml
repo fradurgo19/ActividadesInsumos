@@ -594,7 +594,7 @@ Screens:
                                               (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) &&
                                               (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) 
                                           ),
-                                          MesCreado, // Field representing the creation date
+                                          Modificado, // Field representing the creation date
                                           SortOrder.Descending
                                       )
                                     LayoutMinHeight: =0
