@@ -559,8 +559,7 @@
                         ShowNavigation: =true
                         TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
                         TemplatePadding: =0
-                        TemplateSize: =60
-                        Transition: =Transition.Push
+                        TemplateSize: =50
                         X: =40
                         Y: =40
                         ZIndex: =1
@@ -576,7 +575,7 @@
 
                         Container43 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.Light
-                            Height: =57
+                            Height: =50
                             LayoutMode: =LayoutMode.Auto
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1137,6 +1136,7 @@
                             ZIndex: =3
 
                         "ComboboxCanvas5_1 As 'Cuadro combinado'.pcfdataset":
+                            AccessibleLabel: ="Asesor"
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             InputTextPlaceholder: ="Buscar Asesor"
@@ -1168,13 +1168,15 @@
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
                             Height: =32
                             HoverDateFill: =RGBA(200, 200, 200, 1)
                             IconBackground: =RGBA(105, 121, 126, 1)
                             PaddingTop: =5
                             SelectedDateFill: =RGBA(105, 121, 126, 1)
-                            Size: =8
-                            Width: =120
+                            Size: =9
+                            Tooltip: ="Fecha Primer Mtto"
+                            Width: =150
                             ZIndex: =5
 
                         FechaFin As datepicker:
@@ -1186,13 +1188,15 @@
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
                             Height: =32
                             HoverDateFill: =RGBA(200, 200, 200, 1)
                             IconBackground: =RGBA(105, 121, 126, 1)
                             PaddingTop: =5
                             SelectedDateFill: =RGBA(105, 121, 126, 1)
-                            Size: =8
-                            Width: =120
+                            Size: =9
+                            Tooltip: ="Fecha Primer Mtto"
+                            Width: =150
                             ZIndex: =6
 
                         ButtonCanvas11 As Botón:
