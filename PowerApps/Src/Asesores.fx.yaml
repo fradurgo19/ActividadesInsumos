@@ -3,6 +3,7 @@
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |-
         =Set(CurrentStep,"9");
+        Set(PageNumber, 1);
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
@@ -11,11 +12,12 @@
         
         ClearCollect(
             colOportunidades,
-            Filter(
-                'Seguimiento Clientes Equipos Telemetría',
-                Creado >= DateAdd(Today(),  Month(-6)
+            FirstN(
+                Filter('Seguimiento Clientes Equipos Telemetría', true),
+                PageNumber * 2000
             )
         );
+        
         
         
         

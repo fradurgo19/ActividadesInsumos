@@ -1064,9 +1064,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charOffset": 2144,
+                  "charLength": 4,
+                  "charOffset": 390,
                   "snippet": {
-                    "text": ""
+                    "text": "true"
                   }
                 }
               },
@@ -1078,16 +1079,12 @@
             }
           ],
           "message": {
-            "arguments": [
-              "Eof",
-              "ParenClose"
-            ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleId": "app-WarnLiteralPredicate",
           "ruleIndex": 3
         },
         {
@@ -1105,7 +1102,7 @@
                 },
                 "region": {
                   "charLength": 52,
-                  "charOffset": 922,
+                  "charOffset": 938,
                   "snippet": {
                     "text": "CountRows('Seguimiento Clientes Equipos Telemetría')"
                   }
@@ -11015,6 +11012,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Asesores.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Asesores.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Asesores",
+                "type": "Asesores"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App"
                 }
               ],
@@ -12571,18 +12598,15 @@
               }
             },
             {
-              "id": "app-ErrExpectedFound-Ex-Fnd",
+              "id": "app-WarnLiteralPredicate",
               "messageStrings": {
                 "issue": {
-                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
+                  "text": "Warning: This predicate is a literal value and does not reference the input table."
                 }
               },
               "properties": {
                 "componentType": "app",
-                "howToFix": [
-                  "Remove or replace the unexpected characters with an expected character."
-                ],
-                "level": "High",
+                "level": "Medium",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
