@@ -10,11 +10,17 @@
         // Paso 1: Limpiar la colección
         Clear(colOportunidades);
         
-        ClearCollect(
-            colOportunidades,
-            FirstN(
-                Filter('Seguimiento Clientes Equipos Telemetría', true),
-                PageNumber * 1000
+        
+        ForAll(
+            ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            With(
+                {
+                    registrosMes: Filter(
+                        'Seguimiento Clientes Equipos Telemetría',
+                        Month(Creado) = Value && Year(Creado) = 2025
+                    )
+                },
+                Collect(colOportunidades, registrosMes)
             )
         );
         
@@ -513,98 +519,6 @@
                 Y: =2
                 ZIndex: =20
 
-                Container39 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    Height: =169
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                    LayoutMode: =LayoutMode.Auto
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =248
-                    X: =13
-                    Y: =264
-                    ZIndex: =2
-
-                    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        BorderColor: =RGBA(166, 166, 166, 1)
-                        DelayItemLoading: =true
-                        Height: =Parent.Height
-                        Items: |
-                            =Sort(
-                                Filter(
-                                    colItemsPorMes,
-                                    (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value))
-                                ),
-                                Cantidad, // Field representing the creation date
-                                SortOrder.Descending
-                            )
-                        Layout: =Layout.Vertical
-                        LayoutMinHeight: =0
-                        LayoutMinWidth: =140
-                        LoadingSpinner: =LoadingSpinner.Data
-                        ShowNavigation: =true
-                        TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
-                        TemplatePadding: =0
-                        TemplateSize: =35
-                        Width: =Parent.Width
-                        X: =40
-                        Y: =40
-                        ZIndex: =1
-
-                        Separator3 As rectangle:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            Fill: =RGBA(255, 255, 255, 1)
-                            Height: =8
-                            OnSelect: =Select(Parent)
-                            Width: =Parent.TemplateWidth
-                            Y: =Parent.TemplateHeight - Self.Height
-                            ZIndex: =5
-
-                        Container41 As groupContainer.horizontalAutoLayoutContainer:
-                            DropShadow: =DropShadow.Light
-                            Height: =35
-                            LayoutAlignItems: =LayoutAlignItems.Stretch
-                            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                            LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =4
-                            RadiusBottomRight: =4
-                            RadiusTopLeft: =4
-                            RadiusTopRight: =4
-                            Width: =248
-                            ZIndex: =6
-
-                            TextCanvas30 As Texto:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =20
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                Size: =12
-                                Text: |+
-                                    =ThisItem.MesCreado
-                                    
-                                Width: =96
-                                X: =0
-                                Y: =0
-                                ZIndex: =1
-
-                            TextCanvas12_1 As Texto:
-                                Align: ='TextCanvas.Align'.Start
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =32
-                                LayoutMinHeight: =32
-                                LayoutMinWidth: =96
-                                Size: =12
-                                Text: =ThisItem.Cantidad
-                                Width: =50
-                                X: =0
-                                Y: =0
-                                ZIndex: =3
-
                 Container40 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =319
@@ -629,10 +543,8 @@
                                     (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&
                                     (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                     ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                    (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
                                     (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&
-                                    (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) &&
-                                    (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) 
+                                    (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
                                 ),
                                 MesCreado, // Field representing the creation date
                                 SortOrder.Descending
@@ -1203,20 +1115,6 @@
                             Y: =0
                             ZIndex: =3
 
-                        "ComboboxCanvas5_3 As 'Cuadro combinado'.pcfdataset":
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            InputTextPlaceholder: ="Buscar Mes"
-                            Items: =Distinct(colOportunidades,MesCreado)
-                            LayoutMinHeight: =32
-                            LayoutMinWidth: =320
-                            Required: =false
-                            TriggerOutput: ="Keypress"
-                            Width: =120
-                            X: =0
-                            Y: =0
-                            ZIndex: =4
-
                         "ComboboxCanvas5_7 As 'Cuadro combinado'.pcfdataset":
                             BasePaletteColor: =
                             DisplayMode: =DisplayMode.Edit
@@ -1239,7 +1137,7 @@
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             OnSelect: |
-                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Reset(ComboboxCanvas5_3);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery4);Reset(Gallery8);Reset(ComboboxCanvas5_7);Reset(Gallery9_2)
+                                =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);Reset(ComboboxCanvas5_7);
                             Text: ="Reset"
                             Width: =96
                             X: =0
@@ -1798,134 +1696,6 @@
                     Y: =16
                     ZIndex: =15
 
-                Container52_2 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    Height: =298
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =248
-                    X: =13
-                    Y: =445
-                    ZIndex: =16
-
-                    Container53_2 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.Light
-                        Height: =281
-                        LayoutMode: =LayoutMode.Auto
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
-                        Width: =248
-                        X: =8
-                        Y: =6
-                        ZIndex: =1
-
-                        "Gallery9_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                            BorderColor: =RGBA(166, 166, 166, 1)
-                            DelayItemLoading: =true
-                            Height: =Parent.Height
-                            Items: |-
-                                =Sort(
-                                    Filter(
-                                        colOportunAsesorCorreo,
-                                        (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
-                                        (Correo = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                        (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) 
-                                
-                                        
-                                    ),
-                                    MesCreado, // Field representing the creation date
-                                    SortOrder.Descending
-                                )
-                            Layout: =Layout.Vertical
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =120
-                            LoadingSpinner: =LoadingSpinner.Data
-                            OnSelect: |
-                                =UpdateContext({
-                                    SelectedCorreo: ThisItem.Correo,
-                                    SelectedMes: ThisItem.MesCreado
-                                })
-                            ShowNavigation: =true
-                            TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
-                            TemplatePadding: =0
-                            TemplateSize: =32
-                            Transition: =Transition.Push
-                            Width: =Parent.Width
-                            X: =40
-                            Y: =40
-                            ZIndex: =1
-
-                            Separator6_2 As rectangle:
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                Fill: =RGBA(255, 255, 255, 1)
-                                Height: =8
-                                OnSelect: =Select(Parent)
-                                Width: =Parent.TemplateWidth
-                                Y: =Parent.TemplateHeight - Self.Height
-                                ZIndex: =5
-
-                            Container54_2 As groupContainer.horizontalAutoLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                Height: =32
-                                LayoutMode: =LayoutMode.Auto
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
-                                Width: =250
-                                ZIndex: =6
-
-                                TextCanvas44_8 As Texto:
-                                    Align: ='TextCanvas.Align'.Start
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =30
-                                    Size: =11
-                                    Text: =ThisItem.MesCreado
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =60
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =1
-
-                                TextCanvas44_9 As Texto:
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =150
-                                    Size: =11
-                                    Text: =ThisItem.Correo
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =140
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =2
-
-                                TextCanvas44_10 As Texto:
-                                    Align: ='TextCanvas.Align'.Center
-                                    AlignInContainer: =AlignInContainer.Stretch
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =32
-                                    LayoutMinHeight: =32
-                                    LayoutMinWidth: =30
-                                    Size: =13
-                                    Text: =ThisItem.Asesor
-                                    VerticalAlign: =VerticalAlign.Top
-                                    Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =50
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =3
-
                 Container90 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =131
@@ -2165,7 +1935,6 @@
             Items: |-
                 =Filter(
                     colOportunAsesorCorreo,
-                    (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
                     (IsBlank(ComboboxCanvas5_1.Selected) || Correo = ComboboxCanvas5_1.Selected.Value)
                 )
             NumberOfSeries: =2

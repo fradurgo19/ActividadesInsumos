@@ -21,11 +21,17 @@ Screens:
         // Paso 1: Limpiar la colección
         Clear(colOportunidades);
 
-        ClearCollect(
-            colOportunidades,
-            FirstN(
-                Filter('Seguimiento Clientes Equipos Telemetría', true),
-                PageNumber * 1000
+
+        ForAll(
+            ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            With(
+                {
+                    registrosMes: Filter(
+                        'Seguimiento Clientes Equipos Telemetría',
+                        Month(Creado) = Value && Year(Creado) = 2025
+                    )
+                },
+                Collect(colOportunidades, registrosMes)
             )
         );
 
@@ -506,78 +512,6 @@ Screens:
                         Width: =1071
                         Y: =2
                       Children:
-                        - Container39:
-                            Control: GroupContainer@1.3.0
-                            Variant: AutoLayout
-                            Properties:
-                              Height: =169
-                              LayoutAlignItems: =LayoutAlignItems.Stretch
-                              LayoutDirection: =LayoutDirection.Horizontal
-                              LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                              Width: =248
-                              X: =13
-                              Y: =264
-                            Children:
-                              - Gallery4:
-                                  Control: Gallery@2.15.0
-                                  Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
-                                  Properties:
-                                    AlignInContainer: =AlignInContainer.SetByContainer
-                                    BorderColor: =RGBA(166, 166, 166, 1)
-                                    Height: =Parent.Height
-                                    Items: |
-                                      =Sort(
-                                          Filter(
-                                              colItemsPorMes,
-                                              (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value))
-                                          ),
-                                          Cantidad, // Field representing the creation date
-                                          SortOrder.Descending
-                                      )
-                                    LayoutMinHeight: =0
-                                    LayoutMinWidth: =140
-                                    ShowNavigation: =true
-                                    TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
-                                    TemplateSize: =35
-                                    Width: =Parent.Width
-                                    X: =40
-                                    Y: =40
-                                  Children:
-                                    - Separator3:
-                                        Control: Rectangle@2.3.0
-                                        Properties:
-                                          BorderColor: =RGBA(0, 0, 0, 0)
-                                          Fill: =RGBA(255, 255, 255, 1)
-                                          Height: =8
-                                          OnSelect: =Select(Parent)
-                                          Width: =Parent.TemplateWidth
-                                          Y: =Parent.TemplateHeight - Self.Height
-                                    - Container41:
-                                        Control: GroupContainer@1.3.0
-                                        Variant: AutoLayout
-                                        Properties:
-                                          Height: =35
-                                          LayoutAlignItems: =LayoutAlignItems.Stretch
-                                          LayoutDirection: =LayoutDirection.Horizontal
-                                          LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                                          Width: =248
-                                        Children:
-                                          - TextCanvas30:
-                                              Control: Text@0.0.51
-                                              Properties:
-                                                Align: ='TextCanvas.Align'.Center
-                                                Height: =20
-                                                Size: =12
-                                                Text: |+
-                                                  =ThisItem.MesCreado
-
-                                          - TextCanvas12_1:
-                                              Control: Text@0.0.51
-                                              Properties:
-                                                Align: ='TextCanvas.Align'.Start
-                                                Size: =12
-                                                Text: =ThisItem.Cantidad
-                                                Width: =50
                         - Container40:
                             Control: GroupContainer@1.3.0
                             Variant: AutoLayout
@@ -601,10 +535,8 @@ Screens:
                                               (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&
                                               (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                               ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                              (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
                                               (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&
-                                              (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) &&
-                                              (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) 
+                                              (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
                                           ),
                                           MesCreado, // Field representing the creation date
                                           SortOrder.Descending
@@ -976,12 +908,6 @@ Screens:
                                             "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                                             "fvasquez@partequipos.com", "dcubides@partequipos.com"]
                                           Width: =140
-                                    - ComboboxCanvas5_3:
-                                        Control: ComboBox@0.0.51
-                                        Properties:
-                                          InputTextPlaceholder: ="Buscar Mes"
-                                          Items: =Distinct(colOportunidades,MesCreado)
-                                          Width: =120
                                     - ComboboxCanvas5_7:
                                         Control: ComboBox@0.0.51
                                         Properties:
@@ -995,7 +921,7 @@ Screens:
                                         Properties:
                                           BasePaletteColor: =RGBA(249, 83, 109, 1)
                                           OnSelect: |
-                                            =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Reset(ComboboxCanvas5_3);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery4);Reset(Gallery8);Reset(ComboboxCanvas5_7);Reset(Gallery9_2)
+                                            =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery4_1);Reset(Gallery8);Reset(ComboboxCanvas5_7);
                                           Text: ="Reset"
                         - Label2_10:
                             Control: Label@2.5.1
@@ -1501,96 +1427,6 @@ Screens:
                               Text: ="Gráfica"
                               X: =382
                               Y: =16
-                        - Container52_2:
-                            Control: GroupContainer@1.3.0
-                            Variant: ManualLayout
-                            Properties:
-                              Height: =298
-                              Width: =248
-                              X: =13
-                              Y: =445
-                            Children:
-                              - Container53_2:
-                                  Control: GroupContainer@1.3.0
-                                  Variant: AutoLayout
-                                  Properties:
-                                    Height: =281
-                                    LayoutDirection: =LayoutDirection.Horizontal
-                                    Width: =248
-                                    X: =8
-                                    Y: =6
-                                  Children:
-                                    - Gallery9_2:
-                                        Control: Gallery@2.15.0
-                                        Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
-                                        Properties:
-                                          BorderColor: =RGBA(166, 166, 166, 1)
-                                          Height: =Parent.Height
-                                          Items: "=Sort(\n    Filter(\n        colOportunAsesorCorreo,\n        (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&\n        (Correo = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&\n        (IsBlank(Gallery4.Selected.MesCreado) || Gallery4.Selected.MesCreado = MesCreado) \n\n        \n    ),\n    MesCreado, // Field representing the creation date\n    SortOrder.Descending\n)"
-                                          LayoutMinHeight: =200
-                                          LayoutMinWidth: =120
-                                          OnSelect: |
-                                            =UpdateContext({
-                                                SelectedCorreo: ThisItem.Correo,
-                                                SelectedMes: ThisItem.MesCreado
-                                            })
-                                          ShowNavigation: =true
-                                          TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
-                                          TemplateSize: =32
-                                          Transition: =Transition.Push
-                                          Width: =Parent.Width
-                                          X: =40
-                                          Y: =40
-                                        Children:
-                                          - Separator6_2:
-                                              Control: Rectangle@2.3.0
-                                              Properties:
-                                                BorderColor: =RGBA(0, 0, 0, 0)
-                                                Fill: =RGBA(255, 255, 255, 1)
-                                                Height: =8
-                                                OnSelect: =Select(Parent)
-                                                Width: =Parent.TemplateWidth
-                                                Y: =Parent.TemplateHeight - Self.Height
-                                          - Container54_2:
-                                              Control: GroupContainer@1.3.0
-                                              Variant: AutoLayout
-                                              Properties:
-                                                Height: =32
-                                                LayoutDirection: =LayoutDirection.Horizontal
-                                                Width: =250
-                                              Children:
-                                                - TextCanvas44_8:
-                                                    Control: Text@0.0.51
-                                                    Properties:
-                                                      Align: ='TextCanvas.Align'.Start
-                                                      AlignInContainer: =AlignInContainer.Stretch
-                                                      LayoutMinWidth: =30
-                                                      Size: =11
-                                                      Text: =ThisItem.MesCreado
-                                                      VerticalAlign: =VerticalAlign.Top
-                                                      Weight: ='TextCanvas.Weight'.Semibold
-                                                      Width: =60
-                                                - TextCanvas44_9:
-                                                    Control: Text@0.0.51
-                                                    Properties:
-                                                      AlignInContainer: =AlignInContainer.Stretch
-                                                      LayoutMinWidth: =150
-                                                      Size: =11
-                                                      Text: =ThisItem.Correo
-                                                      VerticalAlign: =VerticalAlign.Top
-                                                      Weight: ='TextCanvas.Weight'.Semibold
-                                                      Width: =140
-                                                - TextCanvas44_10:
-                                                    Control: Text@0.0.51
-                                                    Properties:
-                                                      Align: ='TextCanvas.Align'.Center
-                                                      AlignInContainer: =AlignInContainer.Stretch
-                                                      LayoutMinWidth: =30
-                                                      Size: =13
-                                                      Text: =ThisItem.Asesor
-                                                      VerticalAlign: =VerticalAlign.Top
-                                                      Weight: ='TextCanvas.Weight'.Semibold
-                                                      Width: =50
                         - Container90:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -1765,7 +1601,6 @@ Screens:
             Items: |-
               =Filter(
                   colOportunAsesorCorreo,
-                  (MesCreado = ComboboxCanvas5_3.Selected.Value || IsBlank(ComboboxCanvas5_3.Selected.Value)) &&
                   (IsBlank(ComboboxCanvas5_1.Selected) || Correo = ComboboxCanvas5_1.Selected.Value)
               )
             Items.Labels: =Correo
