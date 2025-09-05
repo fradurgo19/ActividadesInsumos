@@ -12,11 +12,27 @@ Screens:
       Fill: =RGBA(255, 255, 255, 1)
       Height: =Max(App.Height, App.DesignHeight)
       LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-      OnVisible: |+
+      OnVisible: |-
         =Set(CurrentStep,"9");
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
         UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        // Paso 1: Limpiar la colección
+        Clear(colOportunidades);
+
+        ClearCollect(
+            colOportunidades,
+            Filter(
+                'Seguimiento Clientes Equipos Telemetría',
+                Creado >= DateAdd(Today(),  Month(-6)
+            )
+        );
+
+
+
+
+
+
         ClearCollect(colOportunidades, 'Seguimiento Clientes Equipos Telemetría');
         ClearCollect(
             colItemsPorMes,
@@ -72,12 +88,6 @@ Screens:
                 CountIf(OportunidadesPorAsesorCorreo, Estado.Value = "Cotización")
             )
         )
-
-
-
-
-
-
       Width: =Max(App.Width, App.DesignWidth)
     Children:
       - Menu_9:
