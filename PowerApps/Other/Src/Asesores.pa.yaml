@@ -521,7 +521,29 @@ Screens:
                                   Properties:
                                     BorderColor: =RGBA(166, 166, 166, 1)
                                     Height: =100
-                                    Items: "=With(\n    {\n        BaseDatos: Filter(\n            'Seguimiento Clientes Equipos Telemetría',\n            (IsBlank(TextInputCanvas2.Value) || \n             Text(TextInputCanvas2.Value) in Text(Observaciones) || \n             Text(TextInputCanvas2.Value) in Text('Nombre del cliente') || \n             Text(TextInputCanvas2.Value) in Text(ID)) &&\n             \n            (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&\n            ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&\n            ('Fecha Primer Mtto' >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&\n            ('Fecha Primer Mtto' <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate)) \n           \n        )\n    },\n    \n    Sort(\n        BaseDatos,\n        Creado,\n        SortOrder.Descending\n    )\n)\n"
+                                    Items: |-
+                                      =
+
+                                      With(
+                                          {
+                                              BaseDatos: Filter(
+                                                  'Seguimiento Clientes Equipos Telemetría',
+                                                  (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
+                                                  ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
+                                                  (Creado >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&
+                                                  (Creado <= FechaFin.SelectedDate || IsBlank(FechaFin.SelectedDate))
+                                              )
+                                          },
+                                          Sort(
+                                              Filter(
+                                                  BaseDatos,
+                                                  IsBlank(Buscar.Text) || 
+                                                  StartsWith(ID, Buscar.Text) 
+                                              ),
+                                              'Fecha Primer Mtto',
+                                              SortOrder.Descending
+                                          )
+                                      )
                                     LayoutMinHeight: =0
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
@@ -888,7 +910,7 @@ Screens:
                                     Height: =36
                                     LayoutDirection: =LayoutDirection.Horizontal
                                     LayoutJustifyContent: =LayoutJustifyContent.End
-                                    Width: =763
+                                    Width: =1034
                                     X: =10
                                   Children:
                                     - Icon11:
@@ -909,26 +931,29 @@ Screens:
                                           PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                                           PressedFill: =RGBA(0, 0, 0, 0)
                                           Width: =40
-                                    - FechaInicio:
-                                        Control: DatePicker@0.0.46
+                                    - Buscar:
+                                        Control: Classic/TextInput@2.3.2
                                         Properties:
-                                          Format: ='DatePickerCanvas.Format'.Short
-                                          Placeholder: ="FechaInicio"
-                                          Visible: =false
-                                          Width: =150
-                                    - FechaFin:
-                                        Control: DatePicker@0.0.46
-                                        Properties:
-                                          Format: ='DatePickerCanvas.Format'.Short
-                                          Placeholder: ="FechaFin"
-                                          Visible: =false
-                                          Width: =150
-                                    - TextInputCanvas2:
-                                        Control: TextInput@0.0.54
-                                        Properties:
-                                          AlignInContainer: =AlignInContainer.Stretch
-                                          Placeholder: ="Buscar ID"
-                                          Width: =200
+                                          BorderColor: =RGBA(189, 49, 51, 1)
+                                          Color: =RGBA(47, 41, 43, 1)
+                                          Default: =
+                                          DisabledBorderColor: =RGBA(159, 167, 165, 1)
+                                          DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                                          DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+                                          Font: =Font.'Open Sans'
+                                          Height: =32
+                                          HintText: ="Buscar por ID"
+                                          HoverBorderColor: =RGBA(101, 128, 187, 1)
+                                          HoverColor: =RGBA(47, 41, 43, 1)
+                                          HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+                                          PaddingBottom: =10
+                                          PaddingLeft: =10
+                                          PaddingRight: =10
+                                          PaddingTop: =10
+                                          Size: =10
+                                          Width: =120
+                                          X: =179
+                                          Y: =117
                                     - ComboboxCanvas5:
                                         Control: ComboBox@0.0.51
                                         Properties:
@@ -950,12 +975,40 @@ Screens:
                                             "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                                             "fvasquez@partequipos.com", "dcubides@partequipos.com"]
                                           Width: =200
+                                    - FechaInicio:
+                                        Control: Classic/DatePicker@2.6.0
+                                        Properties:
+                                          BorderColor: =RGBA(166, 166, 166, 1)
+                                          Color: =RGBA(51, 51, 51, 1)
+                                          DefaultDate: =DateAdd(Today(), -Day(Today()) - 30)
+                                          DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =32
+                                          IconBackground: =RGBA(105, 121, 126, 1)
+                                          IconFill: =RGBA(255, 255, 255, 1)
+                                          PaddingTop: =5
+                                          Size: =8
+                                          Width: =120
+                                    - FechaFin:
+                                        Control: Classic/DatePicker@2.6.0
+                                        Properties:
+                                          BorderColor: =RGBA(166, 166, 166, 1)
+                                          Color: =RGBA(51, 51, 51, 1)
+                                          DefaultDate: =DateAdd(Today(), 30)
+                                          DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =32
+                                          IconBackground: =RGBA(105, 121, 126, 1)
+                                          IconFill: =RGBA(255, 255, 255, 1)
+                                          PaddingTop: =5
+                                          Size: =8
+                                          Width: =120
                                     - ButtonCanvas11:
                                         Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(249, 83, 109, 1)
                                           OnSelect: |
-                                            =Reset(TextInputCanvas2);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery8);Reset(FechaInicio);Reset(FechaFin)
+                                            =Reset(Buscar);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery8);Reset(FechaInicio);Reset(FechaFin)
                                           Text: ="Reset"
                         - Container57:
                             Control: GroupContainer@1.3.0
