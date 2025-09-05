@@ -541,7 +541,11 @@
                                 {
                                     BaseDatos: Filter(
                                         'Seguimiento Clientes Equipos Telemetría',
-                                        (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&
+                                        (IsBlank(TextInputCanvas2.Value) || 
+                                         Text(TextInputCanvas2.Value) in Text(Observaciones) || 
+                                         Text(TextInputCanvas2.Value) in Text('Nombre del cliente') || 
+                                         Text(TextInputCanvas2.Value) in Text(ID)) &&
+                                         
                                         (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                         ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
                                         (Creado >= FechaInicio.SelectedDate || IsBlank(FechaInicio.SelectedDate)) &&
@@ -549,14 +553,10 @@
                                         (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
                                     )
                                 },
+                                
                                 Sort(
-                                    Filter(
-                                        BaseDatos,
-                                        IsBlank(TextInputCanvas2.Value) || 
-                                        StartsWith(ID, TextInputCanvas2.Value) || 
-                                        StartsWith(Observaciones, TextInputCanvas2.Value)
-                                    ),
-                                    Creado,
+                                    BaseDatos,
+                                    'Fecha Primer Mtto',
                                     SortOrder.Descending
                                 )
                             )
