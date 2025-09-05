@@ -528,19 +528,7 @@ Screens:
                                   Properties:
                                     BorderColor: =RGBA(166, 166, 166, 1)
                                     Height: =100
-                                    Items: |
-                                      =Sort(
-                                          Filter(
-                                              'Seguimiento Clientes Equipos Telemetría',
-                                              (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&
-                                              (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
-                                              ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                              (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&
-                                              (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
-                                          ),
-                                          MesCreado, // Field representing the creation date
-                                          SortOrder.Descending
-                                      )
+                                    Items: "=Sort(\n    Filter(\n        'Seguimiento Clientes Equipos Telemetría',\n        (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&\n        (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&\n        ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&\n     \n        (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) \n    ),\n    MesCreado, // Field representing the creation date\n    SortOrder.Descending\n)\n\n\n//    (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&"
                                     LayoutMinHeight: =0
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)

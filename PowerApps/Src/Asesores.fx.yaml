@@ -536,19 +536,22 @@
                         BorderColor: =RGBA(166, 166, 166, 1)
                         DelayItemLoading: =true
                         Height: =100
-                        Items: |
+                        Items: |-
                             =Sort(
                                 Filter(
                                     'Seguimiento Clientes Equipos Telemetría',
                                     (TextInputCanvas2.Value in Observaciones || TextInputCanvas2.Value in 'Nombre del cliente' || TextInputCanvas2.Value in ID|| IsBlank(TextInputCanvas2.Value)) &&
                                     (Estado.Value = ComboboxCanvas5.Selected.Value || IsBlank(ComboboxCanvas5.Selected.Value)) &&
                                     ('ASESOR 2'.Value = ComboboxCanvas5_1.Selected.Value || IsBlank(ComboboxCanvas5_1.Selected.Value)) &&
-                                    (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&
+                                 
                                     (IsBlank(Gallery4_1.Selected.Correo) || Gallery4_1.Selected.Correo = Correo) 
                                 ),
                                 MesCreado, // Field representing the creation date
                                 SortOrder.Descending
                             )
+                            
+                            
+                            //    (Año = ComboboxCanvas5_7.Selected.Value || IsBlank(ComboboxCanvas5_7.Selected.Value)) &&
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =0
                         LayoutMinWidth: =320
