@@ -1024,11 +1024,11 @@ Screens:
                               OnSelect: =Select(Parent)
                               Size: =10
                               Text: |-
-                                =If(
-                                    ThisItem.'Frecuencia (horas)'.Value = Text(0) || IsBlank(ThisItem.'Frecuencia (horas)'.Value),
-                                    0,
-                                    Trunc(Value(TextInputCanvas3.Value) / ThisItem.'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / ThisItem.'Frecuencia (horas)'.Value)
-                                )
+                                =    If(
+                                        ThisItem.'Frecuencia (horas)'.Value = Text(0) || IsBlank(ThisItem.'Frecuencia (horas)'.Value),
+                                        0,
+                                        Trunc(Value(TextInputCanvas3.Value) / ThisItem.'Frecuencia (horas)'.Value) - Trunc(Value(TextInputCanvas4.Value) / ThisItem.'Frecuencia (horas)'.Value)
+                                    )
                               VerticalAlign: =VerticalAlign.Top
                               Width: =73
                               X: =309
