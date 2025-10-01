@@ -509,7 +509,7 @@ Screens:
                             Control: GroupContainer@1.3.0
                             Variant: AutoLayout
                             Properties:
-                              Height: =385
+                              Height: =311
                               LayoutDirection: =LayoutDirection.Horizontal
                               Width: =1039
                               X: =14
@@ -584,10 +584,10 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =9
                                                 Text: =ThisItem.'Nombre del cliente'
                                                 Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =140
+                                                Width: =100
                                           - TextCanvas33_6:
                                               Control: Text@0.0.51
                                               Properties:
@@ -595,7 +595,7 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =9
                                                 Text: =ThisItem.'Serie.'
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =70
@@ -606,7 +606,7 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =9
                                                 Text: =ThisItem.Marca
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =60
@@ -617,7 +617,7 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =9
                                                 Text: =ThisItem.Modelo
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =70
@@ -628,7 +628,7 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =9
                                                 Text: =ThisItem.Horometro
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =50
@@ -639,7 +639,7 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =9
                                                 Text: =ThisItem.'Tipo Mtto'
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =50
@@ -650,7 +650,7 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =9
                                                 Text: =ThisItem.'Fecha Primer Mtto'
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =80
@@ -661,7 +661,7 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =9
                                                 Text: =ThisItem.'ASESOR 2'.Value
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =80
@@ -672,8 +672,8 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
-                                                Text: =ThisItem.'Tipo Oportunidad'.Value
+                                                Size: =10
+                                                Text: =ThisItem.Estado2.Value
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =60
                                           - TextCanvas33_1:
@@ -683,7 +683,7 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
+                                                Size: =10
                                                 Text: =ThisItem.Estado.Value
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =70
@@ -694,8 +694,8 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
-                                                Text: =ThisItem.Estado2.Value
+                                                Size: =10
+                                                Text: =ThisItem.Detalle.Value
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =70
                                           - TextCanvas33_3:
@@ -705,8 +705,8 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
-                                                Text: =ThisItem.Detalle.Value
+                                                Size: =10
+                                                Text: =ThisItem.ClienteCompra.Value
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =60
                                           - TextCanvas33_7:
@@ -716,10 +716,21 @@ Screens:
                                                 AlignInContainer: =AlignInContainer.Start
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
-                                                Size: =11
-                                                Text: =ThisItem.Detalle.Value
+                                                Size: =10
+                                                Text: =ThisItem.QueCompra.Value
                                                 Weight: ='TextCanvas.Weight'.Semibold
-                                                Width: =90
+                                                Width: =70
+                                          - TextCanvas33_9:
+                                              Control: Text@0.0.51
+                                              Properties:
+                                                Align: ='TextCanvas.Align'.Center
+                                                AlignInContainer: =AlignInContainer.Start
+                                                Font: =Font.Lato
+                                                Height: =Parent.Height
+                                                Size: =10
+                                                Text: =ThisItem.Factura
+                                                Weight: ='TextCanvas.Weight'.Semibold
+                                                Width: =70
                         - Container42:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -761,7 +772,7 @@ Screens:
                                           Size: =12
                                           Text: ="Cliente"
                                           Weight: ='TextCanvas.Weight'.Regular
-                                          Width: =140
+                                          Width: =90
                                     - TextCanvas35_1:
                                         Control: Text@0.0.51
                                         Properties:
@@ -869,7 +880,7 @@ Screens:
                                           Height: =Parent.Height
                                           PaddingLeft: =2
                                           Size: =12
-                                          Text: ="Tramite"
+                                          Text: ="Detalle"
                                           Weight: ='TextCanvas.Weight'.Regular
                                           Width: =70
                                     - TextCanvas35_11:
@@ -880,7 +891,7 @@ Screens:
                                           Height: =Parent.Height
                                           PaddingLeft: =2
                                           Size: =12
-                                          Text: ="Detalle"
+                                          Text: ="Compra"
                                           Weight: ='TextCanvas.Weight'.Regular
                                           Width: =60
                                     - TextCanvas35_12:
@@ -891,9 +902,20 @@ Screens:
                                           Height: =Parent.Height
                                           PaddingLeft: =2
                                           Size: =12
-                                          Text: ="Observación"
+                                          Text: ="Que?"
                                           Weight: ='TextCanvas.Weight'.Regular
-                                          Width: =90
+                                          Width: =70
+                                    - TextCanvas35_14:
+                                        Control: Text@0.0.51
+                                        Properties:
+                                          Align: ='TextCanvas.Align'.Center
+                                          FontColor: =RGBA(255, 255, 255, 1)
+                                          Height: =Parent.Height
+                                          PaddingLeft: =2
+                                          Size: =12
+                                          Text: ="Factura"
+                                          Weight: ='TextCanvas.Weight'.Regular
+                                          Width: =70
                         - Container47:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
@@ -1019,16 +1041,16 @@ Screens:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout
                             Properties:
-                              Height: =178
+                              Height: =242
                               Width: =1040
                               X: =14
-                              Y: =575
+                              Y: =510
                             Children:
                               - Container58:
                                   Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
                                   Properties:
-                                    Height: =178
+                                    Height: =241
                                     LayoutDirection: =LayoutDirection.Horizontal
                                     Width: =1040
                                   Children:
@@ -1055,6 +1077,7 @@ Screens:
                                                 DataField: ="Estado2"
                                                 Default: =ThisItem.Estado2
                                                 DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Estado2)
+                                                Height: =50
                                                 Required: =false
                                                 Update: =DataCardValue17.Selected
                                                 Width: =260
@@ -1066,7 +1089,7 @@ Screens:
                                                     MetadataKey: FieldName
                                                     Properties:
                                                       Height: =22
-                                                      Text: ="Tramite"
+                                                      Text: ="Tipo"
                                                       Weight: ='TextCanvas.Weight'.Semibold
                                                       Width: =Parent.Width - 48
                                                       Wrap: =false
@@ -1113,7 +1136,7 @@ Screens:
                                                 DataField: ="Estado"
                                                 Default: =ThisItem.Estado
                                                 DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Estado)
-                                                Height: =60
+                                                Height: =50
                                                 Required: =false
                                                 Update: =DataCardValue14.Selected
                                                 Width: =260
@@ -1172,6 +1195,7 @@ Screens:
                                                 DataField: ="Detalle"
                                                 Default: =ThisItem.Detalle
                                                 DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Detalle)
+                                                Height: =50
                                                 Required: =false
                                                 Update: =DataCardValue15.Selected
                                                 Width: =260
@@ -1230,6 +1254,7 @@ Screens:
                                                 DataField: ="field_29"
                                                 Default: =ThisItem.'ASESOR 2'
                                                 DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,'ASESOR 2')
+                                                Height: =50
                                                 Required: =false
                                                 Update: =DataCardValue21.Selected
                                                 Width: =260
@@ -1288,7 +1313,7 @@ Screens:
                                                 DataField: ="field_6"
                                                 Default: =ThisItem.Horometro
                                                 DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Horometro)
-                                                Height: =60
+                                                Height: =50
                                                 Required: =false
                                                 Update: =Value(DataCardValue4.Value)
                                                 Width: =260
@@ -1337,6 +1362,186 @@ Screens:
                                                       Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                                       Width: =30
                                                       Y: =DataCardKey4.Y
+                                          - ClienteCompra_DataCard1:
+                                              Control: TypedDataCard@1.0.7
+                                              Variant: ComboBoxEdit
+                                              IsLocked: true
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="ClienteCompra"
+                                                Default: =ThisItem.ClienteCompra
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,ClienteCompra)
+                                                Height: =50
+                                                Required: =false
+                                                Update: =DataCardValue5.Selected
+                                                Width: =260
+                                                X: =1
+                                                Y: =1
+                                              Children:
+                                                - DataCardKey5:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: FieldName
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: =Parent.DisplayName
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue5:
+                                                    Control: ComboBox@0.0.51
+                                                    MetadataKey: FieldValue
+                                                    Properties:
+                                                      AccessibleLabel: =Parent.DisplayName
+                                                      DefaultSelectedItems: =[Parent.Default]
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].ClienteCompra)
+                                                      Required: =Parent.Required
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey5.Y + DataCardKey5.Height + 4
+                                                - ErrorMessage5:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: ErrorMessage
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue5.Y + DataCardValue5.Height
+                                                - StarVisible5:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: FieldRequired
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =20
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey5.Y
+                                          - QueCompra_DataCard1:
+                                              Control: TypedDataCard@1.0.7
+                                              Variant: ComboBoxEdit
+                                              IsLocked: true
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="QueCompra"
+                                                Default: =ThisItem.QueCompra
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,QueCompra)
+                                                Height: =50
+                                                Required: =false
+                                                Update: =DataCardValue2.Selected
+                                                Width: =260
+                                                X: =2
+                                                Y: =1
+                                              Children:
+                                                - DataCardKey2:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: FieldName
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: =Parent.DisplayName
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue2:
+                                                    Control: ComboBox@0.0.51
+                                                    MetadataKey: FieldValue
+                                                    Properties:
+                                                      AccessibleLabel: =Parent.DisplayName
+                                                      DefaultSelectedItems: =[Parent.Default]
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].QueCompra)
+                                                      Required: =Parent.Required
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                                                - ErrorMessage2:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: ErrorMessage
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue2.Y + DataCardValue2.Height
+                                                - StarVisible2:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: FieldRequired
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =20
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey2.Y
+                                          - Factura_DataCard1:
+                                              Control: TypedDataCard@1.0.7
+                                              Variant: TextualEdit
+                                              IsLocked: true
+                                              Properties:
+                                                BorderColor: =RGBA(166, 166, 166, 1)
+                                                DataField: ="Factura"
+                                                Default: =ThisItem.Factura
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Factura)
+                                                MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Factura)
+                                                Required: =false
+                                                Update: =DataCardValue3.Value
+                                                Width: =260
+                                                X: =3
+                                                Y: =1
+                                              Children:
+                                                - DataCardKey3:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: FieldName
+                                                    Properties:
+                                                      Height: =22
+                                                      Text: =Parent.DisplayName
+                                                      Weight: ='TextCanvas.Weight'.Semibold
+                                                      Width: =Parent.Width - 48
+                                                      Wrap: =false
+                                                      X: =24
+                                                      Y: =10
+                                                - DataCardValue3:
+                                                    Control: TextInput@0.0.54
+                                                    MetadataKey: FieldValue
+                                                    Properties:
+                                                      AccessibleLabel: =Parent.DisplayName
+                                                      DisplayMode: =Parent.DisplayMode
+                                                      Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                                      Required: =Parent.Required
+                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Value: =Parent.Default
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardKey3.Y + DataCardKey3.Height + 4
+                                                - ErrorMessage3:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: ErrorMessage
+                                                    Properties:
+                                                      Height: =30
+                                                      Text: =Parent.Error
+                                                      Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =Parent.Width - 48
+                                                      X: =24
+                                                      Y: =DataCardValue3.Y + DataCardValue3.Height
+                                                - StarVisible3:
+                                                    Control: Text@0.0.51
+                                                    MetadataKey: FieldRequired
+                                                    Properties:
+                                                      Align: ='TextCanvas.Align'.Center
+                                                      Height: =30
+                                                      Text: ="*"
+                                                      Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                      Width: =30
+                                                      Y: =DataCardKey3.Y
                                           - Observaciones_DataCard1:
                                               Control: TypedDataCard@1.0.7
                                               Variant: TextualEdit
@@ -1346,12 +1551,13 @@ Screens:
                                                 DataField: ="Observaciones"
                                                 Default: =ThisItem.Observaciones
                                                 DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
+                                                Height: =50
                                                 MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
                                                 Required: =false
                                                 Update: =DataCardValue1.Value
                                                 Width: =260
-                                                X: =1
-                                                Y: =1
+                                                X: =0
+                                                Y: =2
                                               Children:
                                                 - DataCardKey1:
                                                     Control: Text@0.0.51
@@ -1447,8 +1653,8 @@ Screens:
                                 Notify("Actualización Enviada", NotificationType.Success, 3000)
                               Text: ="Actualizar"
                               Width: =150
-                              X: =903
-                              Y: =540
+                              X: =881
+                              Y: =475
                         - ButtonCanvas15:
                             Control: Button@0.0.45
                             Properties:
