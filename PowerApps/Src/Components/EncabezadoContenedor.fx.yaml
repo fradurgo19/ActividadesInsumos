@@ -34,6 +34,8 @@ EncabezadoContenedor As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: =EncabezadoContenedor.Encabezado1
+            LayoutMaxHeight: =
+            LayoutMaxWidth: =
             LayoutMinHeight: =0
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -44,6 +46,8 @@ EncabezadoContenedor As CanvasComponent:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMaxHeight: =
+            LayoutMaxWidth: =
             LayoutMinHeight: =0
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -56,6 +60,8 @@ EncabezadoContenedor As CanvasComponent:
             Container8 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinHeight: =0
                 LayoutMinWidth: =20
                 LayoutMode: =LayoutMode.Auto
@@ -70,6 +76,8 @@ EncabezadoContenedor As CanvasComponent:
                     DisplayMode: =DisplayMode.Edit
                     Font: =Font.'Open Sans'
                     Height: =32
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =96
                     Size: =20
                     Text: =App.ActiveScreen.Name
@@ -84,6 +92,8 @@ EncabezadoContenedor As CanvasComponent:
                 AlignInContainer: =AlignInContainer.Stretch
                 DisplayMode: =DisplayMode.Edit
                 Height: =0
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinWidth: =96
                 PaddingLeft: =10
                 Size: =11
@@ -106,6 +116,8 @@ EncabezadoContenedor As CanvasComponent:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: =User().Image
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinHeight: =0
                 PaddingLeft: =10
                 PaddingRight: =10

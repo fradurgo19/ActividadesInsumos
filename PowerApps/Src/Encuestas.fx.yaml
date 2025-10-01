@@ -46,6 +46,8 @@ Encuestas As screen:
             ZIndex: =5
 
             EncabezadoContenedor_10 As EncabezadoContenedor:
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinHeight: =640
                 LayoutMinWidth: =640
                 Width: =Parent.Width
@@ -145,6 +147,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =11
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Placeholder: ="Buscar por OTT"
@@ -166,6 +170,8 @@ Encuestas As screen:
                             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Search
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =30
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -184,6 +190,8 @@ Encuestas As screen:
                             Height: =32
                             InputTextPlaceholder: ="Buscar por Tipo"
                             Items: =["Mantenimiento Correctivo", "Mantenimiento Preventivo", "Diagnóstico", "Garantía"]
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Required: =false
@@ -204,6 +212,8 @@ Encuestas As screen:
                             Height: =32
                             InputTextPlaceholder: ="Buscar por Estado"
                             Items: =Distinct('Oportunidades de encuestas',Efectiva)
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Required: =false
@@ -221,6 +231,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =11
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Placeholder: ="Filtrar por Fecha Inicio"
@@ -234,6 +246,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =11
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =320
                             Placeholder: ="Filtrar por Fecha Fin"
@@ -247,6 +261,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =11
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             OnSelect: =Reset(TextInputCanvas5_1);Reset(ComboboxCanvas2_2);Reset(ComboboxCanvas2_3);Reset(DatePickerCanvas2_1);Reset(DatePickerCanvas1_1)
@@ -306,6 +322,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =40
                             PaddingLeft: =5
@@ -321,6 +339,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -336,6 +356,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =60
                             PaddingLeft: =15
@@ -351,6 +373,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -366,6 +390,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -381,6 +407,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -396,6 +424,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -411,6 +441,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =10
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Text: ="Cantidad " & CountRows(Gallery6_1.AllItems)
@@ -486,6 +518,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -503,6 +537,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -520,6 +556,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -537,6 +575,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -554,6 +594,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =10
@@ -571,6 +613,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =10
@@ -586,6 +630,8 @@ Encuestas As screen:
                                 Fill: =RGBA(180, 214, 250, 1)
                                 FontSize: =8
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =320
                                 Mode: ='TextInputCanvas.Mode'.Multiline
@@ -600,6 +646,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontSize: =8
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 OnSelect: |-
@@ -648,6 +696,8 @@ Encuestas As screen:
                             FontStrikethrough: =false
                             FontUnderline: =false
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =5
@@ -669,6 +719,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =5
@@ -684,6 +736,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =40
                             PaddingLeft: =5
@@ -699,6 +753,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =40
                             PaddingLeft: =5
@@ -714,6 +770,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -729,6 +787,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =60
                             PaddingLeft: =15
@@ -744,6 +804,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =60
                             PaddingLeft: =15
@@ -759,6 +821,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -774,6 +838,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -796,6 +862,8 @@ Encuestas As screen:
                             FontStrikethrough: =false
                             FontUnderline: =false
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =15
@@ -817,6 +885,8 @@ Encuestas As screen:
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =11
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Text: ="Cantidad " & CountRows(Gallery6_2.AllItems)
@@ -908,6 +978,8 @@ Encuestas As screen:
                                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                                 HoverColor: =RGBA(51, 51, 51, 1)
                                 HoverFill: =RGBA(0, 0, 0, 0)
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinHeight: =35
                                 OnCheck: |+
                                     =Patch(
@@ -941,6 +1013,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -958,6 +1032,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -975,6 +1051,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =8
@@ -992,6 +1070,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -1009,6 +1089,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -1026,6 +1108,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =8
@@ -1043,6 +1127,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =10
@@ -1060,6 +1146,8 @@ Encuestas As screen:
                                 DisplayMode: =DisplayMode.Edit
                                 FontItalic: =true
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9
@@ -1083,6 +1171,8 @@ Encuestas As screen:
                                 FontStrikethrough: =false
                                 FontUnderline: =false
                                 Height: =32
+                                LayoutMaxHeight: =
+                                LayoutMaxWidth: =
                                 LayoutMinWidth: =32
                                 PaddingLeft: =10
                                 Size: =9

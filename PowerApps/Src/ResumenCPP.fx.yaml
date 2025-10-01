@@ -32,6 +32,8 @@ ResumenCPP As screen:
             TextCanvas10 As Texto:
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 Text: ="Descargar"
@@ -61,6 +63,8 @@ ResumenCPP As screen:
                 Items: |-
                     = [{Name:Gallery1.Selected.TextCanvas17.Text &".pdf",Value:Substitute(pdfContent,"""","")}]
                 ItemSpacing: =12
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 NoAttachmentsColor: =RGBA(166, 166, 166, 1)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -95,6 +99,8 @@ ResumenCPP As screen:
                 ZIndex: =2
 
                 EncabezadoContenedor_3 As EncabezadoContenedor:
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =640
                     LayoutMinWidth: =640
                     Width: =Parent.Width
@@ -285,6 +291,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -301,6 +309,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -317,6 +327,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -333,6 +345,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -348,6 +362,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -365,6 +381,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -381,6 +399,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -397,6 +417,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -413,6 +435,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -429,6 +453,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -445,6 +471,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -461,6 +489,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -477,6 +507,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -494,6 +526,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -511,6 +545,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -528,6 +564,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -544,6 +582,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -560,6 +600,8 @@ ResumenCPP As screen:
                     BorderThickness: =1
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingLeft: =3
@@ -592,6 +634,8 @@ ResumenCPP As screen:
                         
                         
                     Layout: =Layout.Vertical
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =0
                     LayoutMinWidth: =0
                     LoadingSpinner: =LoadingSpinner.Data
@@ -631,6 +675,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =9
@@ -648,6 +694,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -664,6 +712,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -679,6 +729,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -694,6 +746,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -709,6 +763,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -724,6 +780,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -739,6 +797,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -754,6 +814,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -769,6 +831,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -784,6 +848,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -799,6 +865,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -814,6 +882,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -829,6 +899,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -844,6 +916,8 @@ ResumenCPP As screen:
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Open Sans'
                             Height: =Parent.Height
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             Size: =11
@@ -871,6 +945,8 @@ ResumenCPP As screen:
                             HoverBorderColor: =App.Theme.Colors.Darker40
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =App.Theme.Colors.Lighter70
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             OnSelect: =
                             Size: =12
                             Width: =Parent.Width/17
@@ -885,6 +961,8 @@ ResumenCPP As screen:
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
                             PaddingLeft: =20
@@ -909,6 +987,8 @@ ResumenCPP As screen:
                             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Trash
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =40
                             OnSelect: =RemoveIf(colAllSelectedItems, No = ThisItem.No)
                             PressedBorderColor: =RGBA(0, 0, 0, 0)

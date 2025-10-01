@@ -41,6 +41,8 @@ CPP As screen:
             ZIndex: =2
 
             EncabezadoContenedor_2 As EncabezadoContenedor:
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinHeight: =640
                 LayoutMinWidth: =640
                 Width: =Parent.Width
@@ -64,6 +66,8 @@ CPP As screen:
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =10
                 Height: =Parent.Height
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Reset(TextInputCanvas6); Reset(DropMarca1_1);Reset(DropModelo1_1)
@@ -84,6 +88,8 @@ CPP As screen:
                 FontSize: =10
                 FontWeight: =FontWeight.Bold
                 Height: =Parent.Height
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinWidth: =320
                 Mode: ='TextInputCanvas.Mode'.Multiline
                 OnChange: =
@@ -109,6 +115,8 @@ CPP As screen:
                 HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Search
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -212,6 +220,8 @@ CPP As screen:
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingTop: =
@@ -251,6 +261,8 @@ CPP As screen:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
                     Height: =52
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =250
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -289,6 +301,8 @@ CPP As screen:
                 Container97_11 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -317,6 +331,8 @@ CPP As screen:
                 Container97_15 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -344,6 +360,8 @@ CPP As screen:
                 Container97_24 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -402,6 +420,8 @@ CPP As screen:
                 Container97_14 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -432,6 +452,8 @@ CPP As screen:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
                     Height: =52
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     RadiusBottomLeft: =4
@@ -469,6 +491,8 @@ CPP As screen:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
                     Height: =52
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =100
                     LayoutMinWidth: =120
                     RadiusBottomLeft: =4
@@ -529,6 +553,8 @@ CPP As screen:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
                     Height: =52
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =100
                     LayoutMinWidth: =120
                     RadiusBottomLeft: =4
@@ -586,6 +612,8 @@ CPP As screen:
                 Container97_12 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -635,6 +663,8 @@ CPP As screen:
                 Container97_13 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -684,6 +714,8 @@ CPP As screen:
                 Container97_10 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -736,6 +768,8 @@ CPP As screen:
                 Container97_9 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -791,6 +825,8 @@ CPP As screen:
                 Container97_16 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinWidth: =100
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -853,6 +889,8 @@ CPP As screen:
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Image: =GaleriaCPP.Selected.ImagenUrl
                     ImagePosition: =ImagePosition.Stretch
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     OnSelect: =Set(HoverImage21, true)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -888,6 +926,8 @@ CPP As screen:
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =RGBA(255, 255, 255, 1)
                     Height: =32
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     PaddingTop: =
@@ -946,6 +986,8 @@ CPP As screen:
                         )
                         
                     Layout: =Layout.Vertical
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
@@ -990,6 +1032,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1027,6 +1071,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Semibold
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinHeight: =0
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
@@ -1056,6 +1102,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1082,6 +1130,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1121,6 +1171,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1148,6 +1200,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1174,6 +1228,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1202,6 +1258,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1230,6 +1288,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1263,6 +1323,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1295,6 +1357,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1323,6 +1387,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1369,6 +1435,8 @@ CPP As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             DropShadow: =DropShadow.Light
                             FillPortions: =0
+                            LayoutMaxHeight: =
+                            LayoutMaxWidth: =
                             LayoutMinWidth: =100
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
@@ -1483,6 +1551,8 @@ CPP As screen:
                         =Filter(TablaDataCpp, No = varSelectedItem.No)
                         
                     Layout: =Layout.Vertical
+                    LayoutMaxHeight: =
+                    LayoutMaxWidth: =
                     LayoutMinHeight: =0
                     LayoutMinWidth: =120
                     LoadingSpinner: =LoadingSpinner.Data
@@ -1603,6 +1673,8 @@ CPP As screen:
                         Marca
                     )
                     
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 OnChange: =
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(0, 0, 0, 1)
@@ -1648,6 +1720,8 @@ CPP As screen:
                 IsSearchable: =false
                 Items: |
                     =Distinct(Filter(TablaDataCpp, Marca in DropMarca1.Selected.Value),Modelo)
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 OnChange: =
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(0, 0, 0, 1)
@@ -1692,6 +1766,8 @@ CPP As screen:
                 HoverFill: =RGBA(255, 255, 255, 1)
                 IsSearchable: =false
                 Items: =Distinct(Filter(TablaDataCpp, Modelo in DropModelo1.Selected.Value),Parte)
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 OnChange: =
                 PaddingBottom: =1
                 PaddingLeft: =1
@@ -1740,6 +1816,8 @@ CPP As screen:
                 IsSearchable: =false
                 Items: |
                     =Distinct(Filter(TablaDataCpp, Parte in DropParte1.Selected.Value),Tipo)
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 OnChange: =
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(0, 0, 0, 1)
@@ -1883,6 +1961,8 @@ CPP As screen:
                 IsSearchable: =false
                 Items: |
                     =Distinct(Filter(TablaDataCpp, Tipo in DropTipo1.Selected.Value),Frecuencia)
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 OnChange: =
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(0, 0, 0, 1)

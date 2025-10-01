@@ -1337,22 +1337,23 @@ Screens:
                                                       Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                                       Width: =30
                                                       Y: =DataCardKey4.Y
-                                          - Tipo Oportunidad_DataCard1:
+                                          - Observaciones_DataCard1:
                                               Control: TypedDataCard@1.0.7
-                                              Variant: ComboBoxEdit
+                                              Variant: TextualEdit
+                                              IsLocked: true
                                               Properties:
                                                 BorderColor: =RGBA(166, 166, 166, 1)
-                                                DataField: ="TipoCliente"
-                                                Default: =ThisItem.'Tipo Oportunidad'
-                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,'Tipo Oportunidad')
-                                                Height: =60
+                                                DataField: ="Observaciones"
+                                                Default: =ThisItem.Observaciones
+                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
+                                                MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
                                                 Required: =false
-                                                Update: =DataCardValue12.Selected
+                                                Update: =DataCardValue1.Value
                                                 Width: =260
                                                 X: =1
                                                 Y: =1
                                               Children:
-                                                - DataCardKey12:
+                                                - DataCardKey1:
                                                     Control: Text@0.0.51
                                                     MetadataKey: FieldName
                                                     Properties:
@@ -1363,21 +1364,20 @@ Screens:
                                                       Wrap: =false
                                                       X: =24
                                                       Y: =10
-                                                - DataCardValue12:
-                                                    Control: ComboBox@0.0.51
+                                                - DataCardValue1:
+                                                    Control: TextInput@0.0.54
                                                     MetadataKey: FieldValue
                                                     Properties:
-                                                      AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obligatorio.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                                      DefaultSelectedItems: =[Parent.Default]
+                                                      AccessibleLabel: =Parent.DisplayName
                                                       DisplayMode: =Parent.DisplayMode
-                                                      FontSize: =14
-                                                      InputTextPlaceholder: ="Tipo Oportunidad"
-                                                      Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].'Tipo Oportunidad')
+                                                      Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                                      Required: =Parent.Required
                                                       ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                                      Value: =Parent.Default
                                                       Width: =Parent.Width - 48
                                                       X: =24
-                                                      Y: =DataCardKey12.Y + DataCardKey12.Height + 4
-                                                - ErrorMessage12:
+                                                      Y: =DataCardKey1.Y + DataCardKey1.Height + 4
+                                                - ErrorMessage1:
                                                     Control: Text@0.0.51
                                                     MetadataKey: ErrorMessage
                                                     Properties:
@@ -1386,62 +1386,17 @@ Screens:
                                                       Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
                                                       Width: =Parent.Width - 48
                                                       X: =24
-                                                      Y: =DataCardValue12.Y + DataCardValue12.Height
-                                                - StarVisible12:
+                                                      Y: =DataCardValue1.Y + DataCardValue1.Height
+                                                - StarVisible1:
                                                     Control: Text@0.0.51
                                                     MetadataKey: FieldRequired
                                                     Properties:
                                                       Align: ='TextCanvas.Align'.Center
-                                                      Height: =20
+                                                      Height: =30
                                                       Text: ="*"
                                                       Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                                                       Width: =30
-                                                      Y: =DataCardKey12.Y
-                                          - Observaciones_DataCard1:
-                                              Control: TypedDataCard@1.0.7
-                                              Variant: TextualEdit
-                                              Properties:
-                                                BorderColor: =RGBA(166, 166, 166, 1)
-                                                DataField: ="Observaciones"
-                                                Default: =ThisItem.Observaciones
-                                                DisplayName: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'],DataSourceInfo.DisplayName,Observaciones)
-                                                Height: =61
-                                                MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
-                                                Required: =false
-                                                Update: =DataCardValue13.Value
-                                                Width: =260
-                                                X: =2
-                                                Y: =1
-                                              Children:
-                                                - DataCardKey13:
-                                                    Control: Text@0.0.51
-                                                    MetadataKey: FieldName
-                                                    Properties:
-                                                      Height: =22
-                                                      Text: =Parent.DisplayName
-                                                      Weight: ='TextCanvas.Weight'.Semibold
-                                                      Width: =Parent.Width - 48
-                                                      Wrap: =false
-                                                      X: =24
-                                                      Y: =10
-                                                - DataCardValue13:
-                                                    Control: TextInput@0.0.54
-                                                    MetadataKey: FieldValue
-                                                    Properties:
-                                                      AccessibleLabel: =Parent.DisplayName
-                                                      DisplayMode: =Parent.DisplayMode
-                                                      FontSize: =14
-                                                      Height: =62
-                                                      Mode: ='TextInputCanvas.Mode'.Multiline
-                                                      Placeholder: ="Escriba aqui las observaciones"
-                                                      Required: =Parent.Required
-                                                      TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
-                                                      Type: ='TextInputCanvas.Type'.Text
-                                                      ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                                      Value: =Parent.Default
-                                                      Width: =729
-                                                      X: =24
-                                                      Y: =DataCardKey13.Y + DataCardKey13.Height + 4
+                                                      Y: =DataCardKey1.Y
                         - Container59:
                             Control: GroupContainer@1.3.0
                             Variant: ManualLayout

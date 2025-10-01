@@ -355,6 +355,8 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         Fill: =RGBA(105, 121, 126, 1)
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         OnSelect: =Navigate('Manuales.',ScreenTransition.Fade )
                         X: =428
                         Y: =648
@@ -396,6 +398,8 @@
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(9, 33, 98, 1)
                         Height: =70
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         Size: =15
@@ -415,6 +419,8 @@
                         FontColor: =RGBA(9, 33, 98, 1)
                         FontWeight: =FontWeight.Bold
                         Height: =70
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         Width: =320
@@ -463,6 +469,8 @@
                             )
                             
                         Layout: =Layout.Vertical
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
@@ -589,6 +597,8 @@
                 FillPortions: =0
                 Height: =Parent.Height
                 Items: =Split(Left(varPatch,Len(varPatch)-1),"/")
+                LayoutMaxHeight: =
+                LayoutMaxWidth: =
                 LayoutMinHeight: =0
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
