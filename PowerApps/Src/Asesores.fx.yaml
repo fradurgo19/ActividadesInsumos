@@ -514,7 +514,7 @@
 
                 Container40 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =311
+                    Height: =376
                     LayoutMode: =LayoutMode.Auto
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -588,12 +588,19 @@
 
                             TextCanvas33_8 As Texto:
                                 Align: ='TextCanvas.Align'.Center
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =Parent.Height
                                 LayoutMaxHeight: =
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
                                 Size: =11
                                 Text: =ThisItem.ID
                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -605,6 +612,9 @@
                             TextCanvas31 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -612,7 +622,11 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =9
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                Size: =10
                                 Text: =ThisItem.'Nombre del cliente'
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =100
@@ -623,6 +637,9 @@
                             TextCanvas33_6 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -630,7 +647,11 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =9
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                Size: =10
                                 Text: =ThisItem.'Serie.'
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =70
@@ -641,6 +662,9 @@
                             TextCanvas33 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -648,7 +672,11 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =9
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                Size: =10
                                 Text: =ThisItem.Marca
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =60
@@ -659,6 +687,9 @@
                             TextCanvas32 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -666,7 +697,11 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =9
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                Size: =10
                                 Text: =ThisItem.Modelo
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =70
@@ -677,6 +712,9 @@
                             TextCanvas34_2 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -684,7 +722,11 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =9
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                Size: =10
                                 Text: =ThisItem.Horometro
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =50
@@ -695,6 +737,9 @@
                             TextCanvas33_4 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -702,7 +747,11 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =9
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                Size: =10
                                 Text: =ThisItem.'Tipo Mtto'
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =50
@@ -713,6 +762,9 @@
                             TextCanvas34 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -720,7 +772,11 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =9
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                Size: =10
                                 Text: =ThisItem.'Fecha Primer Mtto'
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =80
@@ -731,6 +787,9 @@
                             TextCanvas34_1 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -738,7 +797,11 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
-                                Size: =9
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                Size: =10
                                 Text: =ThisItem.'ASESOR 2'.Value
                                 Weight: ='TextCanvas.Weight'.Semibold
                                 Width: =80
@@ -749,6 +812,9 @@
                             TextCanvas33_5 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -756,6 +822,10 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
                                 Size: =10
                                 Text: =ThisItem.Estado2.Value
                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -767,6 +837,9 @@
                             TextCanvas33_1 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -774,6 +847,10 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
                                 Size: =10
                                 Text: =ThisItem.Estado.Value
                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -785,6 +862,9 @@
                             TextCanvas33_2 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -792,6 +872,10 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
                                 Size: =10
                                 Text: =ThisItem.Detalle.Value
                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -803,6 +887,9 @@
                             TextCanvas33_3 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -810,6 +897,10 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
                                 Size: =10
                                 Text: =ThisItem.ClienteCompra.Value
                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -821,6 +912,9 @@
                             TextCanvas33_7 As Texto:
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
                                 Height: =Parent.Height
@@ -828,6 +922,10 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
                                 Size: =10
                                 Text: =ThisItem.QueCompra.Value
                                 Weight: ='TextCanvas.Weight'.Semibold
@@ -840,7 +938,9 @@
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
                                 AutoHeight: =false
-                                BorderStyle: =""
+                                BorderColor: =RGBA(214, 221, 224, 1)
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
                                 ContentLanguage: =""
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.Lato
@@ -852,6 +952,10 @@
                                 LayoutMaxWidth: =
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
                                 Size: =10
                                 TabIndex: =0
                                 Text: =ThisItem.Factura
@@ -1347,19 +1451,19 @@
 
                 Container57 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Height: =242
+                    Height: =175
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =1040
                     X: =14
-                    Y: =510
+                    Y: =577
                     ZIndex: =9
 
                     Container58 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =241
+                        Height: =175
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -1378,7 +1482,6 @@
                             LayoutMaxWidth: =
                             LayoutMinHeight: =0
                             LayoutMinWidth: =0
-                            NumberOfColumns: =4
                             UseFluentV9Cards: =true
                             Width: =Parent.Width
                             X: =588
@@ -1396,9 +1499,9 @@
                                 Height: =50
                                 Required: =false
                                 Update: =DataCardValue2.Selected
-                                Width: =260
-                                X: =2
-                                Y: =1
+                                Width: =346
+                                X: =0
+                                Y: =2
                                 ZIndex: =1
 
                                 DataCardKey2 As Texto:
@@ -1406,10 +1509,10 @@
                                     Height: =22
                                     Text: =Parent.DisplayName
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue2.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue2 As 'Cuadro combinado'.pcfdataset":
@@ -1420,9 +1523,9 @@
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].QueCompra)
                                     Required: =Parent.Required
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                                    Width: =(Parent.Width - 48) * 0.4
+                                    X: =DataCardKey2.X + DataCardKey2.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage2 As Texto:
@@ -1459,8 +1562,8 @@
                                 MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Observaciones)
                                 Required: =false
                                 Update: =DataCardValue1.Value
-                                Width: =260
-                                X: =0
+                                Width: =346
+                                X: =2
                                 Y: =2
                                 ZIndex: =1
 
@@ -1469,23 +1572,24 @@
                                     Height: =22
                                     Text: =Parent.DisplayName
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue1.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue1 As 'Entrada de texto'":
                                     AccessibleLabel: =Parent.DisplayName
                                     DisplayMode: =Parent.DisplayMode
-                                    Height: =32
+                                    FontSize: =10
+                                    Height: =47
                                     Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                                     Required: =Parent.Required
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Value: =Parent.Default
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey1.Y + DataCardKey1.Height + 4
+                                    Width: =178
+                                    X: =DataCardKey1.X + DataCardKey1.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage1 As Texto:
@@ -1522,9 +1626,9 @@
                                 MaxLength: =DataSourceInfo([@'Seguimiento Clientes Equipos Telemetría'], DataSourceInfo.MaxLength, Factura)
                                 Required: =false
                                 Update: =DataCardValue3.Value
-                                Width: =260
-                                X: =3
-                                Y: =1
+                                Width: =346
+                                X: =1
+                                Y: =2
                                 ZIndex: =1
 
                                 DataCardKey3 As Texto:
@@ -1532,23 +1636,24 @@
                                     Height: =22
                                     Text: =Parent.DisplayName
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue3.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue3 As 'Entrada de texto'":
                                     AccessibleLabel: =Parent.DisplayName
                                     DisplayMode: =Parent.DisplayMode
-                                    Height: =32
+                                    FontSize: =10
+                                    Height: =49
                                     Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                                     Required: =Parent.Required
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Value: =Parent.Default
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey3.Y + DataCardKey3.Height + 4
+                                    Width: =178
+                                    X: =DataCardKey3.X + DataCardKey3.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage3 As Texto:
@@ -1584,8 +1689,8 @@
                                 Height: =50
                                 Required: =false
                                 Update: =DataCardValue5.Selected
-                                Width: =260
-                                X: =1
+                                Width: =346
+                                X: =2
                                 Y: =1
                                 ZIndex: =1
 
@@ -1594,10 +1699,10 @@
                                     Height: =22
                                     Text: =Parent.DisplayName
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue5.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue5 As 'Cuadro combinado'.pcfdataset":
@@ -1608,9 +1713,9 @@
                                     Items: =Choices([@'Seguimiento Clientes Equipos Telemetría'].ClienteCompra)
                                     Required: =Parent.Required
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey5.Y + DataCardKey5.Height + 4
+                                    Width: =(Parent.Width - 48) * 0.4
+                                    X: =DataCardKey5.X + DataCardKey5.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage5 As Texto:
@@ -1646,9 +1751,9 @@
                                 Height: =50
                                 Required: =false
                                 Update: =DataCardValue21.Selected
-                                Width: =260
-                                X: =3
-                                Y: =0
+                                Width: =346
+                                X: =0
+                                Y: =1
                                 ZIndex: =1
 
                                 DataCardKey21 As Texto:
@@ -1656,10 +1761,10 @@
                                     Height: =22
                                     Text: ="Asesor"
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue21.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue21 As 'Cuadro combinado'.pcfdataset":
@@ -1672,9 +1777,9 @@
                                     Required: =false
                                     TriggerOutput: ="Keypress"
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey21.Y + DataCardKey21.Height + 4
+                                    Width: =(Parent.Width - 48) * 0.4
+                                    X: =DataCardKey21.X + DataCardKey21.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage19 As Texto:
@@ -1710,7 +1815,7 @@
                                 Height: =50
                                 Required: =false
                                 Update: =DataCardValue17.Selected
-                                Width: =260
+                                Width: =346
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
@@ -1720,10 +1825,10 @@
                                     Height: =22
                                     Text: ="Tipo"
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue17.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue17 As 'Cuadro combinado'.pcfdataset":
@@ -1736,9 +1841,9 @@
                                     Required: =false
                                     TriggerOutput: ="Keypress"
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey17.Y + DataCardKey17.Height + 4
+                                    Width: =(Parent.Width - 48) * 0.4
+                                    X: =DataCardKey17.X + DataCardKey17.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage17 As Texto:
@@ -1774,7 +1879,7 @@
                                 Height: =50
                                 Required: =false
                                 Update: =DataCardValue14.Selected
-                                Width: =260
+                                Width: =346
                                 X: =1
                                 Y: =0
                                 ZIndex: =2
@@ -1784,10 +1889,10 @@
                                     Height: =22
                                     Text: =Parent.DisplayName
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue14.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue14 As 'Cuadro combinado'.pcfdataset":
@@ -1800,9 +1905,9 @@
                                     Required: =false
                                     TriggerOutput: ="Keypress"
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey14.Y + DataCardKey14.Height + 4
+                                    Width: =(Parent.Width - 48) * 0.4
+                                    X: =DataCardKey14.X + DataCardKey14.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage14 As Texto:
@@ -1838,7 +1943,7 @@
                                 Height: =50
                                 Required: =false
                                 Update: =DataCardValue15.Selected
-                                Width: =260
+                                Width: =346
                                 X: =2
                                 Y: =0
                                 ZIndex: =2
@@ -1848,10 +1953,10 @@
                                     Height: =22
                                     Text: =Parent.DisplayName
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue15.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue15 As 'Cuadro combinado'.pcfdataset":
@@ -1864,9 +1969,9 @@
                                     Required: =false
                                     TriggerOutput: ="Keypress"
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey15.Y + DataCardKey15.Height + 4
+                                    Width: =(Parent.Width - 48) * 0.4
+                                    X: =DataCardKey15.X + DataCardKey15.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage15 As Texto:
@@ -1902,8 +2007,8 @@
                                 Height: =50
                                 Required: =false
                                 Update: =Value(DataCardValue4.Value)
-                                Width: =260
-                                X: =0
+                                Width: =346
+                                X: =1
                                 Y: =1
                                 ZIndex: =2
 
@@ -1912,10 +2017,10 @@
                                     Height: =22
                                     Text: =Parent.DisplayName
                                     Weight: ='TextCanvas.Weight'.Semibold
-                                    Width: =Parent.Width - 48
+                                    Width: =(Parent.Width - 48) * 0.4
                                     Wrap: =false
                                     X: =24
-                                    Y: =10
+                                    Y: =4 + (DataCardValue4.Height / 2) - (Self.Height / 2)
                                     ZIndex: =1
 
                                 "DataCardValue4 As 'Entrada de texto'":
@@ -1924,9 +2029,9 @@
                                     Height: =32
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                     Value: =Parent.Default
-                                    Width: =Parent.Width - 48
-                                    X: =24
-                                    Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                                    Width: =(Parent.Width - 48) * 0.4
+                                    X: =DataCardKey4.X + DataCardKey4.Width
+                                    Y: =10
                                     ZIndex: =2
 
                                 ErrorMessage4 As Texto:
@@ -2005,8 +2110,8 @@
                         Notify("Actualización Enviada", NotificationType.Success, 3000)
                     Text: ="Actualizar"
                     Width: =150
-                    X: =881
-                    Y: =475
+                    X: =903
+                    Y: =531
                     ZIndex: =14
 
                 ButtonCanvas15 As Botón:
