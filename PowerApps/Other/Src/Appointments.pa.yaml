@@ -31,11 +31,89 @@ Screens:
         {DiscountValue:0.3, DisplayName:"30%"},
         {DiscountValue:0.4, DisplayName:"40%"});
 
+        // Lote 1 - Primeros 2000
         ClearCollect(
             TempariosLocal,
-            'TEMPARIO DE MANTENIMIENTOS'
+            FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)
         );
 
+        // Lote 2 - Registros 2001-4000
+        Collect(
+            TempariosLocal,
+            FirstN(
+                Filter(
+                    'TEMPARIO DE MANTENIMIENTOS',
+                    ID > Last(TempariosLocal).ID
+                ),
+                2000
+            )
+        )
+
+        /* Inicializar
+        Set(varCargando; true);;
+        Set(varLote; 1);;
+
+        // Lote 1
+        ClearCollect(
+            TempariosLocal;
+            FirstN('TEMPARIO DE MANTENIMIENTOS'; 2000)
+        );;
+        Set(varLote; 2);;
+
+        // Lote 2
+        Collect(
+            TempariosLocal;
+            FirstN(
+                Filter(
+                    'TEMPARIO DE MANTENIMIENTOS';
+                    ID > Last(TempariosLocal).ID
+                );
+                2000
+            )
+        );;
+
+        /*Set(varLote; 3);;
+
+         Lote 3
+        Collect(
+            TempariosLocal;
+            FirstN(
+                Filter(
+                    'TEMPARIO DE MANTENIMIENTOS',
+                    ID > Last(TempariosLocal).ID
+                ),
+                2000
+            )
+        );
+        Set(varLote, 4);
+
+        // Lote 4
+        Collect(
+            TempariosLocal,
+            FirstN(
+                Filter(
+                    'TEMPARIO DE MANTENIMIENTOS',
+                    ID > Last(TempariosLocal).ID
+                ),
+                2000
+            )
+        );
+        Set(varLote, 5);
+
+        // Lote 5
+        Collect(
+            TempariosLocal,
+            FirstN(
+                Filter(
+                    'TEMPARIO DE MANTENIMIENTOS',
+                    ID > Last(TempariosLocal).ID
+                ),
+                2000
+            )
+        );
+
+        // Finalizar
+        Set(varCargando; false)*/
 
       Width: =Max(App.Width, App.DesignWidth)
     Children:
@@ -460,18 +538,38 @@ Screens:
                         InputTextPlaceholder: ="Buscar Modelo"
                         IsSearchable: =false
                         Items: |-
-                          =Sort(
+                          =/*Sort(
                               ForAll(
                                   Distinct(
                                       Filter(
-                                          TempariosLocal,
+                                          TempariosLocal;
                                           Marca.Value = ComboBox2_1.Selected.Results
-                                      ),
+                                      );
                                       'Modelo (Modelo0)'.Value
-                                  ),
+                                  );
                                   {Results: ThisRecord.Value}
-                              ),
+                              );
                               Results
+                          )*/
+
+                          With(
+                              {
+                                  BaseDatos: Filter(
+                                      TempariosLocal,
+                                      Marca.Value = ComboBox2_1.Selected.Results
+                                  )
+                              },
+                              Sort(
+                                  ForAll(
+                                      Distinct(
+                                          BaseDatos,
+                                          'Modelo (Modelo0)'.Value
+                                      ),
+                                      {Results: ThisRecord.Value}
+                                  ),
+                                  Results,
+                                  SortOrder.Ascending
+                              )
                           )
                         NoSelectionText: ="Buscar Modelo"
                         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -673,16 +771,54 @@ Screens:
                         HoverColor: =RGBA(51, 51, 51, 1)
                         HoverFill: =RGBA(212, 212, 212, 1)
                         InputTextPlaceholder: ="Buscar Marca"
-                        Items: |
-                          =Filter(
+                        Items: |-
+                          =/*Filter(
                               ForAll(
                                   Distinct(
-                                      TempariosLocal,
+                                      TempariosLocal;
                                       Marca.Value
-                                  ),
+                                  );
                                   {Results: ThisRecord.Value}
-                              ),
+                              );
                               Results
+                          )*/
+
+
+                          /*With(
+                              {
+                                  BaseDatos: TempariosLocal
+                              };
+                              Filter(
+                                  ForAll(
+                                      Distinct(
+                                          BaseDatos;
+                                          Marca.Value
+                                      );
+                                      {Results: ThisRecord.Value}
+                                  );
+                                  Results
+                              )
+                          )*/
+
+                          With(
+                              {
+                                  BaseDatos: Filter(
+                                      TempariosLocal,
+                                      // Aquí van tus condiciones de filtro si las necesitas
+                                      true
+                                  )
+                              },
+                              Sort(
+                                  ForAll(
+                                      Distinct(
+                                          BaseDatos,
+                                          Marca.Value
+                                      ),
+                                      {Results: ThisRecord.Value}
+                                  ),
+                                  Results,
+                                  SortOrder.Descending
+                              )
                           )
                         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         PressedColor: =RGBA(255, 255, 255, 1)
