@@ -83,16 +83,33 @@ Screens:
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =205
                         Items: |+
-                          =Filter(
-                              'TEMPARIO DE MANTENIMIENTOS',
+                          =/*Filter(
+                              'TEMPARIO DE MANTENIMIENTOS';
                               Marca.Value = ComboBox2_1.Selected.Results &&
                               'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
                               If(
-                                  IsBlank(ComboBox3.SelectedItems),
-                                  true,
+                                  IsBlank(ComboBox3.SelectedItems);
+                                  true;
                                   'Frecuencia (horas)'.Value in SelectedFrequencies
                               ) &&
                               'Tipo de item'.Value = "Observacion"
+                          )*/
+
+                          With(
+                              {
+                                  BaseDatos: Filter(
+                                      TempariosLocal,
+                                      Marca.Value = ComboBox2_1.Selected.Results &&
+                                      'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                                      If(
+                                          IsBlank(ComboBox3.SelectedItems),
+                                          true,
+                                          'Frecuencia (horas)'.Value in SelectedFrequencies
+                                      ) &&
+                                      'Tipo de item'.Value = "Observacion"
+                                  )
+                              },
+                              BaseDatos
                           )
 
 
@@ -280,8 +297,20 @@ Screens:
                         BorderThickness: =2
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =228
-                        Items: |+
-                          =Filter(
+                        Items: |-
+                          =/*Filter(
+                              'TEMPARIO DE MANTENIMIENTOS';
+                              Marca.Value = ComboBox2_1.Selected.Results &&
+                              'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                              If(
+                                  IsBlank(ComboBox3.SelectedItems);
+                                  true;
+                                  'Frecuencia (horas)'.Value in SelectedFrequencies
+                              ) &&
+                              'Tipo de item'.Value = "Procedimiento"
+                          )*/
+
+                          Filter(
                               'TEMPARIO DE MANTENIMIENTOS',
                               Marca.Value = ComboBox2_1.Selected.Results &&
                               'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
@@ -292,7 +321,6 @@ Screens:
                               ) &&
                               'Tipo de item'.Value = "Procedimiento"
                           )
-
                         ShowNavigation: =true
                         TemplateSize: =52
                         Transition: =Transition.Push

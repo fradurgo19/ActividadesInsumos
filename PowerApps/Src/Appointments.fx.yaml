@@ -26,17 +26,14 @@
             FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)
         );
         
-        // Lote 2 - Registros 2001-4000
+        // Lote 2 - Resto de registros
         Collect(
             TempariosLocal,
-            FirstN(
-                Filter(
-                    'TEMPARIO DE MANTENIMIENTOS',
-                    ID > Last(TempariosLocal).ID
-                ),
-                2000
+            Filter(
+                'TEMPARIO DE MANTENIMIENTOS',
+                Created > Last(FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)).Created
             )
-        )
+        );
         
         /* Inicializar
         Set(varCargando; true);;
@@ -538,7 +535,6 @@
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
                 InputTextPlaceholder: ="Buscar Modelo"
-                IsSearchable: =false
                 Items: |-
                     =/*Sort(
                         ForAll(
@@ -608,22 +604,44 @@
                 HoverFill: =RGBA(212, 212, 212, 1)
                 InputTextPlaceholder: ="Buscar Frecuencia Multiple"
                 IsSearchable: =false
-                Items: |+
-                    =Sort(
+                Items: |-
+                    =/*Sort(
                         ForAll(
                             Distinct(
                                 Filter(
-                                    TempariosLocal,
+                                    TempariosLocal;
                                     Marca.Value = ComboBox2_1.Selected.Results &&
                                     'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results
-                                ),
+                                );
                                 'Frecuencia (horas)'.Value
-                            ),
+                            );
                             {Results: ThisRecord.Value}
-                        ),
+                        );
                         Results
-                    )
+                    )*/
                     
+                    
+                    
+                    With(
+                        {
+                            BaseDatos: Filter(
+                                TempariosLocal,
+                                Marca.Value = ComboBox2_1.Selected.Results &&
+                                'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results
+                            )
+                        },
+                        Sort(
+                            ForAll(
+                                Distinct(
+                                    BaseDatos,
+                                    'Frecuencia (horas)'.Value
+                                ),
+                                {Results: ThisRecord.Value}
+                            ),
+                            Results,
+                            SortOrder.Ascending
+                        )
+                    )
                 NoSelectionText: ="Buscar Frecuencia Unica 0 SubMultiplo"
                 OnChange: |-
                     =UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems})
@@ -631,7 +649,8 @@
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
                 SearchFields: =["Results"]
-                SearchItems: =[]
+                SearchItems: |-
+                    =Search(With({BaseDatos:Filter(TempariosLocal,Marca.Value=ComboBox2_1.Selected.Results&&'Modelo (Modelo0)'.Value=ComboBox2.Selected.Results)},Sort(ForAll(Distinct(BaseDatos,'Frecuencia (horas)'.Value),{Results:ThisRecord.Value}),Results,SortOrder.Ascending)),ComboBox3.SearchText,Results)
                 SelectionFill: =RGBA(105, 121, 126, 1)
                 Size: =15
                 Width: =359
@@ -1015,7 +1034,7 @@
                 Height: =38
                 Size: =9
                 Text: |-
-                    ="Versión: " & App.StudioVersion & ": Se Independizan las FUNCIONES."
+                    ="Versión: " & App.StudioVersion & ": Se Agregan 580SN,580SV,856H Tier 4,SR210B,SR240B,ZX120-6 / ZX135US-6,ZX200LC-6,ZX200X-5B / ZX225US-5B,ZX350LCN-6N,ZX40U-5B y ZX75US-5B / ZX75USK-5B"
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: =275
                 X: =773

@@ -6,7 +6,22 @@
         =Set(CurrentStep,"2");
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
         UpdateContext({SelectedTipos: ComboBox4.SelectedItems});
-        UpdateContext({SelectedItemss: ComboBox5.SelectedItems})
+        UpdateContext({SelectedItemss: ComboBox5.SelectedItems});
+        
+        // Lote 1 - Primeros 2000
+        ClearCollect(
+            TempariosLocal,
+            FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)
+        );
+        
+        // Lote 2 - Resto de registros
+        Collect(
+            TempariosLocal,
+            Filter(
+                'TEMPARIO DE MANTENIMIENTOS',
+                Created > Last(FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)).Created
+            )
+        );
     Orientation: =If(OrderDetails.Width < OrderDetails.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= OrderDetails.Width)
     Width: =Max(App.Width, App.DesignWidth)
@@ -68,7 +83,7 @@
                 Text: |-
                     =Sum(
                         Filter(
-                            'TEMPARIO DE MANTENIMIENTOS',
+                            'TempariosLocal',
                             ComboBox2_1.Selected.Results = Marca.Value &&
                             ComboBox2.Selected.Results = 'Modelo (Modelo0)'.Value &&
                             'Frecuencia (horas)'.Value in ComboBox3.SelectedItems && 
@@ -196,7 +211,7 @@
                     ="$" & Text(
                         Sum(
                             Filter(
-                                'TEMPARIO DE MANTENIMIENTOS',
+                                'TempariosLocal',
                                 ComboBox2_1.Selected.Results = Marca.Value &&
                                 ComboBox2.Selected.Results = 'Modelo (Modelo0)'.Value &&
                                 'Frecuencia (horas)'.Value in ComboBox3.SelectedItems && 
@@ -237,20 +252,36 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =398
-                Items: |+
-                    =Filter(
-                        'TEMPARIO DE MANTENIMIENTOS',
+                Items: |-
+                    =/*Filter(
+                        'TEMPARIO DE MANTENIMIENTOS';
                         Marca.Value = ComboBox2_1.Selected.Results &&
                         'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
                         If(
-                            IsBlank(ComboBox3.SelectedItems),
-                            true,
+                            IsBlank(ComboBox3.SelectedItems);
+                            true;
                             'Frecuencia (horas)'.Value in SelectedFrequencies
                         ) &&
                         'Tipo de item'.Value = "Actividad"
+                    )*/
+                    
+                    
+                    With(
+                        {
+                            BaseDatos: Filter(
+                                TempariosLocal,
+                                Marca.Value = ComboBox2_1.Selected.Results &&
+                                'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                                If(
+                                    IsBlank(ComboBox3.SelectedItems),
+                                    true,
+                                    'Frecuencia (horas)'.Value in SelectedFrequencies
+                                ) &&
+                                'Tipo de item'.Value = "Actividad"
+                            )
+                        },
+                        BaseDatos
                     )
-                    
-                    
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowNavigation: =true

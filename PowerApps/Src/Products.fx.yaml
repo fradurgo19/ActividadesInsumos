@@ -3,9 +3,19 @@
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |
         =Set(CurrentStep,"3");
+        // Lote 1 - Primeros 2000
         ClearCollect(
             TempariosLocal,
-            'TEMPARIO DE MANTENIMIENTOS'
+            FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)
+        );
+        
+        // Lote 2 - Resto de registros
+        Collect(
+            TempariosLocal,
+            Filter(
+                'TEMPARIO DE MANTENIMIENTOS',
+                Created > Last(FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)).Created
+            )
         );
         
         UpdateContext({SelectedFrequencies: ComboBox3.SelectedItems});
@@ -526,24 +536,43 @@
         DelayItemLoading: =true
         Fill: =RGBA(255, 255, 255, 1)
         Height: =586
-        Items: |+
-            =Sort(
+        Items: |
+            =/*Sort(
                 Filter(
-                    'TEMPARIO DE MANTENIMIENTOS',
+                    'TEMPARIO DE MANTENIMIENTOS';
                     Marca.Value = ComboBox2_1.Selected.Results &&
                     'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
                     If(
-                        IsBlank(ComboBox3.SelectedItems),
-                        true,
+                        IsBlank(ComboBox3.SelectedItems);
+                        true;
                         'Frecuencia (horas)'.Value in SelectedFrequencies
                     ) &&
                     ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
-                ),
-                'Tipo de item'.Value,
+                );
+                'Tipo de item'.Value;
                 SortOrder.Ascending
+            )*/
+            
+            With(
+                {
+                    BaseDatos: Filter(
+                        TempariosLocal,
+                        Marca.Value = ComboBox2_1.Selected.Results &&
+                        'Modelo (Modelo0)'.Value = ComboBox2.Selected.Results &&
+                        If(
+                            IsBlank(ComboBox3.SelectedItems),
+                            true,
+                            'Frecuencia (horas)'.Value in SelectedFrequencies
+                        ) &&
+                        ('Tipo de item'.Value = "Fluido" || 'Tipo de item'.Value = "Repuesto")
+                    )
+                },
+                Sort(
+                    BaseDatos,
+                    'Tipo de item'.Value,
+                    SortOrder.Ascending
+                )
             )
-            
-            
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowNavigation: =true
