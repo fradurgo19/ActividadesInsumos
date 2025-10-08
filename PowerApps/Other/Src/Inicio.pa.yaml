@@ -64,6 +64,16 @@ Screens:
                               Encabezado1: =Logo
                               Height: =65
                               Width: =1007
+                  - TextCanvas46_1:
+                      Control: Text@0.0.51
+                      Properties:
+                        Size: =9
+                        Text: |-
+                          ="Versión: " & App.StudioVersion & ": Se Agregan 580SN,580SV,856H Tier 4,SR210B,SR240B,ZX120-6 / ZX135US-6,ZX200LC-6,ZX200X-5B / ZX225US-5B,ZX350LCN-6N,ZX40U-5B y ZX75US-5B / ZX75USK-5B"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =518
+                        X: =650
+                        Y: =35
             - Container64:
                 Control: GroupContainer@1.3.0
                 Variant: ManualLayout

@@ -985,7 +985,7 @@ Screens:
                   - TextCanvas8_1:
                       Control: Text@0.0.51
                       Properties:
-                        Height: =33
+                        Height: =37
                         Size: =9
                         Text: |+
                           ="Última actualización: " & Text(
@@ -996,8 +996,8 @@ Screens:
                           )
 
                         Weight: ='TextCanvas.Weight'.Bold
-                        Width: =227
-                        X: =774
+                        Width: =286
+                        X: =715
                         Y: =TextCanvas46.Y + TextCanvas46.Height + 10
                   - TextCanvas46:
                       Control: Text@0.0.51
@@ -1007,8 +1007,8 @@ Screens:
                         Text: |-
                           ="Versión: " & App.StudioVersion & ": Se Agregan 580SN,580SV,856H Tier 4,SR210B,SR240B,ZX120-6 / ZX135US-6,ZX200LC-6,ZX200X-5B / ZX225US-5B,ZX350LCN-6N,ZX40U-5B y ZX75US-5B / ZX75USK-5B"
                         Weight: ='TextCanvas.Weight'.Bold
-                        Width: =275
-                        X: =773
+                        Width: =332
+                        X: =715
                         Y: =5
       - MaskConfirm:
           Control: FluidGrid@2.3.0

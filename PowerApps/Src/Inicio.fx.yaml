@@ -66,7 +66,32 @@ Inicio As screen:
                     LayoutMaxWidth: =
                     LayoutMinHeight: =640
                     LayoutMinWidth: =640
-                    ZIndex: =2
+                    ZIndex: =3
+
+            TextCanvas46_1 As Texto:
+                Align: ="Start"
+                AutoHeight: =false
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
+                Height: =32
+                Size: =9
+                TabIndex: =0
+                Text: |-
+                    ="Versión: " & App.StudioVersion & ": Se Agregan 580SN,580SV,856H Tier 4,SR210B,SR240B,ZX120-6 / ZX135US-6,ZX200LC-6,ZX200X-5B / ZX225US-5B,ZX350LCN-6N,ZX40U-5B y ZX75US-5B / ZX75USK-5B"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Weight: ='TextCanvas.Weight'.Bold
+                Width: =518
+                Wrap: =true
+                X: =650
+                Y: =35
+                ZIndex: =2
 
         Container64 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
