@@ -986,6 +986,10 @@ Screens:
                       Control: Text@0.0.51
                       Properties:
                         Height: =37
+                        PaddingBottom: =1
+                        PaddingLeft: =1
+                        PaddingRight: =1
+                        PaddingTop: =1
                         Size: =9
                         Text: |+
                           ="Última actualización: " & Text(
@@ -996,20 +1000,24 @@ Screens:
                           )
 
                         Weight: ='TextCanvas.Weight'.Bold
-                        Width: =286
-                        X: =715
-                        Y: =TextCanvas46.Y + TextCanvas46.Height + 10
+                        Width: =191
+                        X: =845
+                        Y: =649
                   - TextCanvas46:
                       Control: Text@0.0.51
                       Properties:
-                        Height: =38
+                        Height: =91
+                        PaddingBottom: =1
+                        PaddingLeft: =1
+                        PaddingRight: =1
+                        PaddingTop: =1
                         Size: =9
                         Text: |-
                           ="Versión: " & App.StudioVersion & ": Se Agregan 580SN,580SV,856H Tier 4,SR210B,SR240B,ZX120-6 / ZX135US-6,ZX200LC-6,ZX200X-5B / ZX225US-5B,ZX350LCN-6N,ZX40U-5B y ZX75US-5B / ZX75USK-5B"
                         Weight: ='TextCanvas.Weight'.Bold
-                        Width: =332
-                        X: =715
-                        Y: =5
+                        Width: =191
+                        X: =845
+                        Y: =549
       - MaskConfirm:
           Control: FluidGrid@2.3.0
           Properties:

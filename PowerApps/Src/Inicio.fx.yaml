@@ -68,31 +68,6 @@ Inicio As screen:
                     LayoutMinWidth: =640
                     ZIndex: =3
 
-            TextCanvas46_1 As Texto:
-                Align: ="Start"
-                AutoHeight: =false
-                BorderStyle: =""
-                ContentLanguage: =""
-                DisplayMode: =DisplayMode.Edit
-                Font: =""
-                FontItalic: =false
-                FontStrikethrough: =false
-                FontUnderline: =false
-                Height: =32
-                Size: =9
-                TabIndex: =0
-                Text: |-
-                    ="Versión: " & App.StudioVersion & ": Se Agregan 580SN,580SV,856H Tier 4,SR210B,SR240B,ZX120-6 / ZX135US-6,ZX200LC-6,ZX200X-5B / ZX225US-5B,ZX350LCN-6N,ZX40U-5B y ZX75US-5B / ZX75USK-5B"
-                Tooltip: =""
-                VerticalAlign: =""
-                Visible: =true
-                Weight: ='TextCanvas.Weight'.Bold
-                Width: =518
-                Wrap: =true
-                X: =650
-                Y: =35
-                ZIndex: =2
-
         Container64 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =681
@@ -198,4 +173,60 @@ Inicio As screen:
                 X: =344
                 Y: =22
                 ZIndex: =5
+
+            TextCanvas8_2 As Texto:
+                Align: ="Start"
+                AutoHeight: =false
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
+                Height: =28
+                Size: =9
+                TabIndex: =0
+                Text: |+
+                    ="Última actualización: " & Text(
+                        First(
+                            SortByColumns('Seguimiento Clientes Equipos Telemetría', "Created", "Descending")
+                        ).Creado,
+                        "[$-es-ES]dd/mm/yyyy"
+                    )
+                    
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Weight: ='TextCanvas.Weight'.Bold
+                Width: =286
+                Wrap: =true
+                X: =1055
+                Y: =555
+                ZIndex: =6
+
+            TextCanvas46_1 As Texto:
+                Align: ="Start"
+                AutoHeight: =false
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontItalic: =false
+                FontStrikethrough: =false
+                FontUnderline: =false
+                Height: =53
+                Size: =9
+                TabIndex: =0
+                Text: |-
+                    ="Versión: " & App.StudioVersion & ": Se Agregan 580SN,580SV,856H Tier 4,SR210B,SR240B,ZX120-6 / ZX135US-6,ZX200LC-6,ZX200X-5B / ZX225US-5B,ZX350LCN-6N,ZX40U-5B y ZX75US-5B / ZX75USK-5B"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Weight: ='TextCanvas.Weight'.Bold
+                Width: =311
+                Wrap: =true
+                X: =1054
+                Y: =602
+                ZIndex: =7
 
