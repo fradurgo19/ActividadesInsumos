@@ -89,7 +89,7 @@ Screens:
                         Text: |-
                           =Sum(
                               Filter(
-                                  'TempariosLocal',
+                                  TempariosLocal,
                                   ComboBox2_1.Selected.Results = Marca.Value &&
                                   ComboBox2.Selected.Results = 'Modelo (Modelo0)'.Value &&
                                   'Frecuencia (horas)'.Value in ComboBox3.SelectedItems && 
@@ -210,7 +210,7 @@ Screens:
                           ="$" & Text(
                               Sum(
                                   Filter(
-                                      'TempariosLocal',
+                                      TempariosLocal,
                                       ComboBox2_1.Selected.Results = Marca.Value &&
                                       ComboBox2.Selected.Results = 'Modelo (Modelo0)'.Value &&
                                       'Frecuencia (horas)'.Value in ComboBox3.SelectedItems && 
