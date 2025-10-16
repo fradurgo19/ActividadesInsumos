@@ -1375,7 +1375,17 @@ Screens:
                         HoverFill: =RGBA(255, 255, 255, 1)
                         IsSearchable: =false
                         Items: |
-                          =Distinct(Filter(TablaDataCpp, Marca in DropMarca1.Selected.Value),Modelo)
+                          =/*Distinct(Filter(TablaDataCpp; Marca in DropMarca1.Selected.Value);Modelo)*/
+
+
+                          Sort(
+                              Distinct(
+                                  Filter(TablaDataCpp, Marca in DropMarca1.Selected.Value),
+                                  Modelo
+                              ),
+                              Value,
+                              SortOrder.Ascending
+                          )
                         OnChange: =
                         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         PressedColor: =RGBA(0, 0, 0, 1)
@@ -1415,7 +1425,19 @@ Screens:
                         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         IsSearchable: =false
-                        Items: =Distinct(Filter(TablaDataCpp, Modelo in DropModelo1.Selected.Value),Parte)
+                        Items: |+
+                          =/*Distinct(Filter(TablaDataCpp; Modelo in DropModelo1.Selected.Value);Parte)*/
+
+
+                          Sort(
+                              Distinct(
+                                  Filter(TablaDataCpp, Modelo in DropModelo1.Selected.Value),
+                                  Parte
+                              ),
+                              Value,
+                              SortOrder.Ascending
+                          )
+
                         OnChange: =
                         PaddingBottom: =1
                         PaddingLeft: =1

@@ -1719,7 +1719,17 @@ CPP As screen:
                 HoverFill: =RGBA(255, 255, 255, 1)
                 IsSearchable: =false
                 Items: |
-                    =Distinct(Filter(TablaDataCpp, Marca in DropMarca1.Selected.Value),Modelo)
+                    =/*Distinct(Filter(TablaDataCpp; Marca in DropMarca1.Selected.Value);Modelo)*/
+                    
+                    
+                    Sort(
+                        Distinct(
+                            Filter(TablaDataCpp, Marca in DropMarca1.Selected.Value),
+                            Modelo
+                        ),
+                        Value,
+                        SortOrder.Ascending
+                    )
                 LayoutMaxHeight: =
                 LayoutMaxWidth: =
                 OnChange: =
@@ -1727,7 +1737,7 @@ CPP As screen:
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
                 SearchFields: =["Value"]
-                SearchItems: =[]
+                SearchItems: =Search(Sort(Distinct(Filter(TablaDataCpp,Marca in DropMarca1.Selected.Value),Modelo),Value,SortOrder.Ascending),DropModelo1.SearchText,Value)
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 SelectMultiple: =false
                 Size: =8
@@ -1765,7 +1775,19 @@ CPP As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 IsSearchable: =false
-                Items: =Distinct(Filter(TablaDataCpp, Modelo in DropModelo1.Selected.Value),Parte)
+                Items: |+
+                    =/*Distinct(Filter(TablaDataCpp; Modelo in DropModelo1.Selected.Value);Parte)*/
+                    
+                    
+                    Sort(
+                        Distinct(
+                            Filter(TablaDataCpp, Modelo in DropModelo1.Selected.Value),
+                            Parte
+                        ),
+                        Value,
+                        SortOrder.Ascending
+                    )
+                    
                 LayoutMaxHeight: =
                 LayoutMaxWidth: =
                 OnChange: =
@@ -1777,7 +1799,7 @@ CPP As screen:
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
                 SearchFields: =["Value"]
-                SearchItems: =[]
+                SearchItems: =Search(Sort(Distinct(Filter(TablaDataCpp,Modelo in DropModelo1.Selected.Value),Parte),Value,SortOrder.Ascending),DropParte1.SearchText,Value)
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 SelectMultiple: =false
                 Size: =8
