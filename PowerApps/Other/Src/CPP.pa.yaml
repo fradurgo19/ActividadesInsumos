@@ -847,7 +847,7 @@ Screens:
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Center
                                                 Height: =76
-                                                PaddingTop: =0
+                                                PaddingTop: =10
                                                 Size: =11
                                                 Text: =ThisItem.No
                                                 VerticalAlign: =VerticalAlign.Top
@@ -869,7 +869,9 @@ Screens:
                                               Properties:
                                                 Align: ='TextCanvas.Align'.Start
                                                 Height: =76
-                                                PaddingLeft: =20
+                                                PaddingBottom: =5
+                                                PaddingLeft: =10
+                                                PaddingRight: =5
                                                 PaddingTop: =5
                                                 Size: =11
                                                 Text: =ThisItem.Nombre
