@@ -46,7 +46,10 @@ Inicio As screen:
                 ZIndex: =1
 
                 TextCanvas45 As Texto:
+                    BorderColor: =
                     DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =
                     Height: =Parent.Height
                     LayoutMaxHeight: =
                     LayoutMaxWidth: =
@@ -119,6 +122,7 @@ Inicio As screen:
             ButtonCanvas3 As Botón:
                 Align: =""
                 BasePaletteColor: =RGBA(141, 229, 250, 1)
+                BorderColor: =
                 BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -177,10 +181,13 @@ Inicio As screen:
             TextCanvas8_2 As Texto:
                 Align: ="Start"
                 AutoHeight: =false
+                BorderColor: =
                 BorderStyle: =""
                 ContentLanguage: =""
                 DisplayMode: =DisplayMode.Edit
+                Fill: =
                 Font: =""
+                FontColor: =
                 FontItalic: =false
                 FontStrikethrough: =false
                 FontUnderline: =false
@@ -208,10 +215,13 @@ Inicio As screen:
             TextCanvas46_1 As Texto:
                 Align: ="Start"
                 AutoHeight: =false
+                BorderColor: =
                 BorderStyle: =""
                 ContentLanguage: =""
                 DisplayMode: =DisplayMode.Edit
+                Fill: =
                 Font: =""
+                FontColor: =
                 FontItalic: =false
                 FontStrikethrough: =false
                 FontUnderline: =false

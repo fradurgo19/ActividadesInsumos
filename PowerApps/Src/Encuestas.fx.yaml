@@ -66,7 +66,9 @@ Encuestas As screen:
         ButtonCanvas7_1 As Botón:
             Align: =Align.Justify
             BasePaletteColor: =RGBA(141, 229, 250, 1)
+            BorderColor: =
             DisplayMode: =DisplayMode.Edit
+            FontColor: =
             FontSize: =9
             Height: =47
             Layout: ='ButtonCanvas.Layout'.IconBefore
@@ -145,6 +147,8 @@ Encuestas As screen:
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             FontSize: =11
                             Height: =32
                             LayoutMaxHeight: =
@@ -229,6 +233,8 @@ Encuestas As screen:
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             FontSize: =11
                             Height: =32
                             LayoutMaxHeight: =
@@ -243,7 +249,10 @@ Encuestas As screen:
 
                         "DatePickerCanvas1_1 As 'Selector de fecha'":
                             BasePaletteColor: =
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             FontSize: =11
                             Height: =32
                             LayoutMaxHeight: =
@@ -258,7 +267,9 @@ Encuestas As screen:
 
                         ButtonCanvas10_1 As Botón:
                             BasePaletteColor: =RGBA(249, 83, 109, 1)
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            FontColor: =
                             FontSize: =11
                             Height: =32
                             LayoutMaxHeight: =
@@ -296,6 +307,7 @@ Encuestas As screen:
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =2
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =
                         Height: =36
                         Text: =
                         Width: =683
@@ -319,7 +331,9 @@ Encuestas As screen:
 
                         TextCanvas7_14 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -336,7 +350,9 @@ Encuestas As screen:
 
                         TextCanvas7_15 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -353,7 +369,9 @@ Encuestas As screen:
 
                         TextCanvas7_22 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -370,7 +388,9 @@ Encuestas As screen:
 
                         TextCanvas7_24 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -387,7 +407,9 @@ Encuestas As screen:
 
                         TextCanvas7_32 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -404,7 +426,9 @@ Encuestas As screen:
 
                         TextCanvas7_41 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -421,7 +445,9 @@ Encuestas As screen:
 
                         TextCanvas7_40 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -438,7 +464,9 @@ Encuestas As screen:
 
                         ButtonCanvas18 As Botón:
                             BasePaletteColor: =RGBA(12, 190, 235, 1)
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            FontColor: =
                             FontSize: =10
                             Height: =32
                             LayoutMaxHeight: =
@@ -474,7 +502,7 @@ Encuestas As screen:
                             =Sort(
                                 Filter(
                                     'PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)',
-                                    (TextInputCanvas5_1.Value in Diligencia || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in Descripcion ||  TextInputCanvas5_1.Value in Encuestado || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
+                                    (TextInputCanvas5_1.Value in Diligencia || TextInputCanvas5_1.Value in Cliente || TextInputCanvas5_1.Value in OTT ||  TextInputCanvas5_1.Value in Encuestado || IsBlank(TextInputCanvas5_1.Value)) && ('¿Cómo calificaría el tiempo de respuesta de su solicitud de cotización?'.Value = ComboboxCanvas2_2.Selected.Value || IsBlank(ComboboxCanvas2_2.Selected.Value)) && (Respuesta.Value = ComboboxCanvas2_3.Selected.Value || IsBlank(ComboboxCanvas2_3.Selected.Value)) && (Creado >= DatePickerCanvas2_1.SelectedDate || IsBlank(DatePickerCanvas2_1.SelectedDate)) && (Creado <= DatePickerCanvas1_1.SelectedDate || IsBlank(DatePickerCanvas1_1.SelectedDate))
                                 ),
                                 Creado,
                                 SortOrder.Descending
@@ -516,6 +544,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -535,6 +565,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -554,6 +586,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -573,6 +607,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -592,6 +628,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -611,6 +649,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -626,8 +666,10 @@ Encuestas As screen:
 
                             "TextInputCanvas8 As 'Entrada de texto'":
                                 BasePaletteColor: =
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
                                 Fill: =RGBA(180, 214, 250, 1)
+                                FontColor: =
                                 FontSize: =8
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -643,7 +685,9 @@ Encuestas As screen:
 
                             ButtonCanvas19 As Botón:
                                 BasePaletteColor: =
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                FontColor: =
                                 FontSize: =8
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -687,9 +731,11 @@ Encuestas As screen:
                         TextCanvas7_45 As Texto:
                             Align: ="Start"
                             AutoHeight: =false
+                            BorderColor: =
                             BorderStyle: =""
                             ContentLanguage: =""
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             Font: =""
                             FontColor: =RGBA(255, 255, 255, 1)
                             FontItalic: =false
@@ -716,7 +762,9 @@ Encuestas As screen:
 
                         TextCanvas7_25 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -733,7 +781,9 @@ Encuestas As screen:
 
                         TextCanvas7_26 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -750,7 +800,9 @@ Encuestas As screen:
 
                         TextCanvas7_27 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -767,7 +819,9 @@ Encuestas As screen:
 
                         TextCanvas7_28 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -784,7 +838,9 @@ Encuestas As screen:
 
                         TextCanvas7_29 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -801,7 +857,9 @@ Encuestas As screen:
 
                         TextCanvas7_39 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -818,7 +876,9 @@ Encuestas As screen:
 
                         TextCanvas7_30 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -835,7 +895,9 @@ Encuestas As screen:
 
                         TextCanvas7_31 As Texto:
                             AutoHeight: =false
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             FontColor: =RGBA(255, 255, 255, 1)
                             Height: =32
                             LayoutMaxHeight: =
@@ -853,9 +915,11 @@ Encuestas As screen:
                         TextCanvas7_46 As Texto:
                             Align: ="Start"
                             AutoHeight: =false
+                            BorderColor: =
                             BorderStyle: =""
                             ContentLanguage: =""
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             Font: =""
                             FontColor: =RGBA(255, 255, 255, 1)
                             FontItalic: =false
@@ -882,7 +946,9 @@ Encuestas As screen:
 
                         ButtonCanvas17 As Botón:
                             BasePaletteColor: =RGBA(82, 205, 242, 1)
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            FontColor: =
                             FontSize: =11
                             Height: =32
                             LayoutMaxHeight: =
@@ -1011,6 +1077,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -1030,6 +1098,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -1049,6 +1119,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -1068,6 +1140,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -1087,6 +1161,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -1106,6 +1182,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -1125,6 +1203,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -1144,6 +1224,8 @@ Encuestas As screen:
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =32
                                 LayoutMaxHeight: =
@@ -1166,7 +1248,9 @@ Encuestas As screen:
                                 BorderThickness: =1
                                 ContentLanguage: =""
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
                                 Font: =""
+                                FontColor: =
                                 FontItalic: =true
                                 FontStrikethrough: =false
                                 FontUnderline: =false
@@ -1228,6 +1312,7 @@ Encuestas As screen:
                 TextCanvas7_37 As Texto:
                     Align: ='TextCanvas.Align'.Center
                     AutoHeight: =false
+                    BorderColor: =
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(45, 128, 40, 1)
                     FontColor: =RGBA(255, 255, 255, 1)
@@ -1243,6 +1328,7 @@ Encuestas As screen:
                 TextCanvas7_38 As Texto:
                     Align: ='TextCanvas.Align'.Center
                     AutoHeight: =false
+                    BorderColor: =
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(71, 158, 245, 1)
                     FontColor: =RGBA(255, 255, 255, 1)
@@ -1257,7 +1343,9 @@ Encuestas As screen:
 
                 ButtonCanvas18_1 As Botón:
                     BasePaletteColor: =RGBA(141, 229, 250, 1)
+                    BorderColor: =
                     DisplayMode: =DisplayMode.Edit
+                    FontColor: =
                     FontSize: =13
                     Height: =40
                     Text: |+
@@ -1273,6 +1361,7 @@ Encuestas As screen:
                 TextCanvas7_47 As Texto:
                     Align: ='TextCanvas.Align'.Center
                     AutoHeight: =false
+                    BorderColor: =
                     BorderStyle: =""
                     ContentLanguage: =""
                     DisplayMode: =DisplayMode.Edit

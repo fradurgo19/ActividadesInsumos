@@ -464,7 +464,9 @@
 
                 ButtonCanvas1_2 As Botón:
                     BasePaletteColor: =RGBA(227, 106, 244, 1)
+                    BorderColor: =
                     DisplayMode: =DisplayMode.Edit
+                    FontColor: =
                     Height: =41
                     OnSelect: =Navigate(Encuestas,ScreenTransition.Fade)
                     Text: ="Encuestas"
@@ -537,6 +539,8 @@
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =32
                         LayoutMaxHeight: =
                         LayoutMaxWidth: =
@@ -575,6 +579,8 @@
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =32
                         LayoutMaxHeight: =
                         LayoutMaxWidth: =
@@ -588,7 +594,10 @@
 
                     "DatePickerCanvas1 As 'Selector de fecha'":
                         BasePaletteColor: =
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =32
                         LayoutMaxHeight: =
                         LayoutMaxWidth: =
@@ -602,7 +611,9 @@
 
                     ButtonCanvas10 As Botón:
                         BasePaletteColor: =RGBA(249, 83, 109, 1)
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =
                         Height: =32
                         LayoutMaxHeight: =
                         LayoutMaxWidth: =
@@ -639,6 +650,7 @@
                     BorderStyle: =BorderStyle.Solid
                     BorderThickness: =2
                     DisplayMode: =DisplayMode.Edit
+                    FontColor: =
                     Height: =48
                     Text: =
                     Width: =975
@@ -665,6 +677,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -686,6 +699,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -707,6 +721,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -728,6 +743,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -749,6 +765,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -770,6 +787,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -791,6 +809,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -812,6 +831,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -833,6 +853,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -854,6 +875,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -875,6 +897,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =32
                         LayoutMaxHeight: =
@@ -974,6 +997,8 @@
                                 BorderStyle: =BorderStyle.Solid
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =Parent.Height
                                 PaddingLeft: =10
                                 Size: =10
@@ -992,7 +1017,9 @@
                                 BorderThickness: =1
                                 ContentLanguage: =""
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
                                 Font: =""
+                                FontColor: =
                                 FontItalic: =false
                                 FontStrikethrough: =false
                                 FontUnderline: =false
@@ -1017,6 +1044,8 @@
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =32
                             LayoutMaxHeight: =
                             LayoutMaxWidth: =
@@ -1036,6 +1065,8 @@
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =32
                             LayoutMaxHeight: =
                             LayoutMaxWidth: =
@@ -1055,6 +1086,8 @@
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =32
                             LayoutMaxHeight: =
                             LayoutMaxWidth: =
@@ -1074,6 +1107,8 @@
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =32
                             LayoutMaxHeight: =
                             LayoutMaxWidth: =
@@ -1093,6 +1128,8 @@
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             FontItalic: =true
                             Height: =32
                             LayoutMaxHeight: =
@@ -1112,6 +1149,8 @@
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             FontItalic: =true
                             Height: =32
                             LayoutMaxHeight: =
@@ -1132,6 +1171,8 @@
                             BorderStyle: =BorderStyle.Solid
                             BorderThickness: =1
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             FontItalic: =true
                             Height: =32
                             LayoutMaxHeight: =
@@ -1166,6 +1207,7 @@
                                 BorderThickness: =1
                                 DisplayMode: =DisplayMode.Edit
                                 Fill: =RGBA(255, 255, 0, 1)
+                                FontColor: =
                                 FontItalic: =true
                                 Height: =Parent.Height
                                 PaddingLeft: =10
@@ -1185,7 +1227,9 @@
                             BorderThickness: =1
                             ContentLanguage: =""
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
                             Font: =""
+                            FontColor: =
                             FontItalic: =false
                             FontStrikethrough: =false
                             FontUnderline: =false
@@ -1283,7 +1327,10 @@
                             ZIndex: =1
 
                             DataCardKey23 As Texto:
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =22
                                 Size: =12
                                 Text: =Parent.DisplayName
@@ -1296,7 +1343,11 @@
 
                             "DataCardValue23 As 'Entrada de texto'":
                                 AccessibleLabel: =Parent.DisplayName
+                                BasePaletteColor: =
+                                BorderColor: =
                                 DisplayMode: =Parent.DisplayMode
+                                Fill: =
+                                FontColor: =
                                 Height: =161
                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                 Required: =Parent.Required
@@ -1308,7 +1359,10 @@
                                 ZIndex: =2
 
                             ErrorMessage23 As Texto:
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =30
                                 Text: =Parent.Error
                                 Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -1320,7 +1374,10 @@
 
                             StarVisible23 As Texto:
                                 Align: ='TextCanvas.Align'.Center
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =30
                                 Text: ="*"
                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -1347,7 +1404,10 @@
                             ZIndex: =4
 
                             DataCardKey11 As Texto:
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =20
                                 Size: =12
                                 Text: ="Estado"
@@ -1373,7 +1433,10 @@
                                 ZIndex: =2
 
                             ErrorMessage11 As Texto:
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =30
                                 Text: =Parent.Error
                                 Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -1385,7 +1448,10 @@
 
                             StarVisible11 As Texto:
                                 Align: ='TextCanvas.Align'.Center
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =20
                                 Text: ="*"
                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -1412,7 +1478,10 @@
                             ZIndex: =4
 
                             DataCardKey18 As Texto:
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =22
                                 Size: =12
                                 Text: =Parent.DisplayName
@@ -1425,7 +1494,11 @@
 
                             "DataCardValue18 As 'Entrada de texto'":
                                 AccessibleLabel: =Parent.DisplayName
+                                BasePaletteColor: =
+                                BorderColor: =
                                 DisplayMode: =Parent.DisplayMode
+                                Fill: =
+                                FontColor: =
                                 Height: =157
                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                 Required: =Parent.Required
@@ -1437,7 +1510,10 @@
                                 ZIndex: =2
 
                             ErrorMessage18 As Texto:
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =30
                                 Text: =Parent.Error
                                 Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -1449,7 +1525,10 @@
 
                             StarVisible18 As Texto:
                                 Align: ='TextCanvas.Align'.Center
+                                BorderColor: =
                                 DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
                                 Height: =30
                                 Text: ="*"
                                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -1603,7 +1682,9 @@
 
                     TextCanvas13_1 As Texto:
                         AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(255, 255, 255, 1)
                         Height: =Parent.Height
                         LayoutMaxHeight: =
@@ -1621,7 +1702,9 @@
                     ButtonCanvas6_1 As Botón:
                         Appearance: ='ButtonCanvas.Appearance'.Primary
                         BasePaletteColor: =RGBA(8, 222, 8, 1)
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =
                         Height: =Parent.Height
                         Layout: ='ButtonCanvas.Layout'.IconBefore
                         LayoutMaxHeight: =

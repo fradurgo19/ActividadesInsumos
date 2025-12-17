@@ -407,7 +407,10 @@
                         "InvariantPropertyName": "Size",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
-                      }
+                      },
+                      "FontColor",
+                      "Fill",
+                      "BorderColor"
                     ],
                     "ControlUniqueId": "9",
                     "DynamicProperties": [
@@ -529,6 +532,24 @@
                         "Category": "Data",
                         "InvariantScript": "20",
                         "Property": "Size",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Data",
+                        "InvariantScript": "",
+                        "Property": "FontColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Data",
+                        "InvariantScript": "",
+                        "Property": "Fill",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Data",
+                        "InvariantScript": "",
+                        "Property": "BorderColor",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -936,7 +957,10 @@
                     "InvariantPropertyName": "PaddingLeft",
                     "IsLockable": false,
                     "NameMapSourceSchema": "?"
-                  }
+                  },
+                  "FontColor",
+                  "Fill",
+                  "BorderColor"
                 ],
                 "ControlUniqueId": "10",
                 "DynamicProperties": [
@@ -1058,6 +1082,24 @@
                     "Category": "Data",
                     "InvariantScript": "10",
                     "Property": "PaddingLeft",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Category": "Data",
+                    "InvariantScript": "",
+                    "Property": "FontColor",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Category": "Data",
+                    "InvariantScript": "",
+                    "Property": "Fill",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Category": "Data",
+                    "InvariantScript": "",
+                    "Property": "BorderColor",
                     "RuleProviderType": "Unknown"
                   },
                   {
@@ -2088,7 +2130,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638962326718316140",
+    "LastModifiedTimestamp": "639016034428712840",
     "Name": "EncabezadoContenedor",
     "Rules": [
       {
@@ -2158,7 +2200,7 @@
       "Name": "Encabezado",
       "PropertyDataTypeKey": "Image",
       "Tooltip": "Propiedad personalizada",
-      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.347\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -2167,7 +2209,7 @@
       "Name": "Encabezado1",
       "PropertyDataTypeKey": "Image",
       "Tooltip": "Propiedad personalizada",
-      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.347\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -2178,7 +2220,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638962326718316140",
+  "LastModifiedTimestamp": "639016034428712840",
   "Name": "1f135cd22ace4f2d929d205827ff0c0d",
   "OverridableProperties": {},
   "Version": "1.0"

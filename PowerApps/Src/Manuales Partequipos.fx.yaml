@@ -391,11 +391,13 @@
                     ZIndex: =1
 
                     TextCanvas1 As Texto:
+                        BorderColor: =
                         BorderRadiusBottomLeft: =1
                         BorderRadiusBottomRight: =1
                         BorderRadiusTopLeft: =1
                         BorderRadiusTopRight: =1
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(9, 33, 98, 1)
                         Height: =70
                         LayoutMaxHeight: =
@@ -416,6 +418,7 @@
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =2
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
                         FontColor: =RGBA(9, 33, 98, 1)
                         FontWeight: =FontWeight.Bold
                         Height: =70
@@ -540,10 +543,13 @@
                             AccessibleLabel: =""
                             Align: =""
                             Appearance: ="Primary"
+                            BasePaletteColor: =
+                            BorderColor: =
                             BorderStyle: =""
                             ContentLanguage: =""
                             DisplayMode: =DisplayMode.Edit
                             Font: =""
+                            FontColor: =
                             FontItalic: =false
                             FontSize: =12
                             FontStrikethrough: =false
@@ -609,7 +615,10 @@
                 ZIndex: =1
 
                 ButtonCanvas2 As Botón:
+                    BasePaletteColor: =
+                    BorderColor: =
                     DisplayMode: =DisplayMode.Edit
+                    FontColor: =
                     FontSize: =12
                     Height: =64
                     OnSelect: =Set(varPatch,Left(varPatch,Find(ThisItem.Value,varPatch)+Len(ThisItem.Value)))
