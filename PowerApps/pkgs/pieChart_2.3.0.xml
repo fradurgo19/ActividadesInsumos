@@ -1,4 +1,4 @@
-<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/pieChart" name="pieChart" jsClass="AppMagic.Controls.PieChart" styleable="true" version="2.2.0" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
+<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/pieChart" name="pieChart" jsClass="AppMagic.Controls.PieChart" styleable="true" version="2.3.0" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
   <author name="Microsoft AppMagic" />
   <license type="text/html"><![CDATA[<p>TODO:  Need license text here.</p>]]></license>
   <description><![CDATA[PieChart
@@ -33,6 +33,7 @@
         <div data-bind="foreach: interactiveItems">
           <button data-bind="
             text: label,
+            attr: { 'aria-label': ariaLabel },
             click: $parent.selectItem,
             disable: $parent.viewState.displayMode() !== AppMagic.Constants.DisplayMode.Edit
           ">
@@ -231,5 +232,8 @@
   </appMagic:conversion>
   <appMagic:conversion from="2.1.0" to="2.2.0">
     <appMagic:conversionAction type="add" name="ContentLanguage" />
+  </appMagic:conversion>
+  <appMagic:conversion from="2.2.0" to="2.3.0">
+    <appMagic:conversionAction type="add" name="AccessibleLabel" />
   </appMagic:conversion>
 </widget>

@@ -383,7 +383,7 @@ Screens:
                   Y: =
                 Children:
                   - Container49:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         BorderThickness: =1
@@ -392,7 +392,7 @@ Screens:
                         Y: =2
                       Children:
                         - Container50:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =79
@@ -400,7 +400,7 @@ Screens:
                               X: =4
                             Children:
                               - Container51:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =79
@@ -415,6 +415,8 @@ Screens:
                                           Encabezado: =SampleImage
                                           Encabezado1: =Logo
                                           Height: =65
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =1007
                               - Arrow1_3:
                                   Control: Arrow@2.3.0
@@ -427,7 +429,7 @@ Screens:
                                     X: =5
                                     Y: =14
                         - Container52:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =263
@@ -436,7 +438,7 @@ Screens:
                               Y: =106
                             Children:
                               - Container53:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =263
@@ -452,6 +454,8 @@ Screens:
                                           BorderColor: =RGBA(166, 166, 166, 1)
                                           Height: =Parent.Height
                                           Items: "=Sort(\n    Filter(\n        colOportunAsesorMes,\n        (MesCreado = ComboboxCanvas5_5.Selected.Value || IsBlank(ComboboxCanvas5_5.Selected.Value)) &&\n        (A_x00f1_o = ComboboxCanvas5_8.Selected.Value || IsBlank(ComboboxCanvas5_8.Selected.Value))\n        \n    ),\n    MesCreado, // Field representing the creation date\n    SortOrder.Descending\n)"
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =0
                                           OnSelect: |-
@@ -464,7 +468,7 @@ Screens:
                                           Width: =Parent.Width
                                         Children:
                                           - Container54:
-                                              Control: GroupContainer@1.3.0
+                                              Control: GroupContainer@1.5.0
                                               Variant: AutoLayout
                                               Properties:
                                                 Height: =20
@@ -476,6 +480,8 @@ Screens:
                                                     Control: Text@0.0.51
                                                     Properties:
                                                       Align: ='TextCanvas.Align'.Start
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =11
                                                       Text: =ThisItem.MesCreado
                                                       VerticalAlign: =VerticalAlign.Middle
@@ -486,6 +492,8 @@ Screens:
                                                     Properties:
                                                       Align: ='TextCanvas.Align'.Start
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: =ThisItem.Asesor
                                                       VerticalAlign: =VerticalAlign.Middle
@@ -497,6 +505,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Start
                                                       FontColor: =RGBA(52, 152, 47, 1)
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: =ThisItem.Ganadas
                                                       VerticalAlign: =VerticalAlign.Middle
@@ -508,6 +518,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Start
                                                       FontColor: =RGBA(52, 152, 47, 1)
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: |+
                                                         =Text(
@@ -530,6 +542,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Start
                                                       FontColor: =RGBA(240, 98, 15, 1)
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: =ThisItem.Perdidas
                                                       VerticalAlign: =VerticalAlign.Middle
@@ -541,6 +555,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Start
                                                       FontColor: =RGBA(240, 98, 15, 1)
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: |
                                                         =Text(
@@ -560,6 +576,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Start
                                                       FontColor: =RGBA(255, 191, 0, 1)
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: =ThisItem.Seguimientos
                                                       VerticalAlign: =VerticalAlign.Middle
@@ -572,6 +590,8 @@ Screens:
                                                       AlignInContainer: =AlignInContainer.Center
                                                       FontColor: =RGBA(255, 191, 0, 1)
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: |
                                                         =Text(
@@ -590,6 +610,8 @@ Screens:
                                                     Properties:
                                                       Align: ='TextCanvas.Align'.Start
                                                       FontColor: =RGBA(40, 134, 222, 1)
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: =ThisItem.Cotizaciones
                                                       VerticalAlign: =VerticalAlign.Middle
@@ -601,6 +623,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Start
                                                       FontColor: =RGBA(40, 134, 222, 1)
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: |
                                                         =Text(
@@ -620,6 +644,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Center
                                                       FontColor: =RGBA(109, 49, 162, 1)
                                                       Height: =20
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       Size: =12
                                                       Text: |+
                                                         =Text(
@@ -638,7 +664,7 @@ Screens:
                                                       Weight: ='TextCanvas.Weight'.Bold
                                                       Width: =60
                         - Container55:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =27
@@ -647,7 +673,7 @@ Screens:
                               Y: =79
                             Children:
                               - Container56:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =25
@@ -658,6 +684,8 @@ Screens:
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Mes"
                                           Weight: ='TextCanvas.Weight'.Bold
@@ -667,6 +695,8 @@ Screens:
                                         Properties:
                                           Align: ='TextCanvas.Align'.Start
                                           AlignInContainer: =AlignInContainer.Stretch
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Cantidad"
                                           VerticalAlign: =VerticalAlign.Middle
@@ -678,6 +708,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(52, 152, 47, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Ganadas"
                                           Weight: ='TextCanvas.Weight'.Bold
@@ -688,6 +720,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(240, 98, 15, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Perdidas"
                                           VerticalAlign: =VerticalAlign.Middle
@@ -699,6 +733,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(255, 191, 0, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Seguimiento"
                                           Weight: ='TextCanvas.Weight'.Bold
@@ -709,6 +745,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(71, 158, 245, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Cotizaciones"
                                           Weight: ='TextCanvas.Weight'.Bold
@@ -719,12 +757,14 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(109, 49, 162, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Gestión"
                                           Weight: ='TextCanvas.Weight'.Bold
                                           Width: =60
                         - Container52_1:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =576
@@ -733,7 +773,7 @@ Screens:
                               Y: =172
                             Children:
                               - Container53_1:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =563
@@ -748,6 +788,8 @@ Screens:
                                           BorderColor: =RGBA(166, 166, 166, 1)
                                           Height: =Parent.Height
                                           Items: "=Sort(\n    Filter(\n        colOportunAsesorCorreo,\n        (MesCreado = ComboboxCanvas5_5.Selected.Value || IsBlank(ComboboxCanvas5_5.Selected.Value)) &&\n        (A_x00f1_o = ComboboxCanvas5_8.Selected.Value || IsBlank(ComboboxCanvas5_8.Selected.Value)) &&\n        (Correo = ComboboxCanvas5_6.Selected.Value || IsBlank(ComboboxCanvas5_6.Selected.Value)) &&\n        (IsBlank(Gallery9.Selected.MesCreado) || Gallery9.Selected.MesCreado = MesCreado) \n\n        \n    ),\n    MesCreado, // Field representing the creation date\n    SortOrder.Descending\n)"
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =200
                                           OnSelect: |
                                             =UpdateContext({
@@ -772,7 +814,7 @@ Screens:
                                                 Width: =Parent.TemplateWidth
                                                 Y: =Parent.TemplateHeight - Self.Height
                                           - Container54_1:
-                                              Control: GroupContainer@1.3.0
+                                              Control: GroupContainer@1.5.0
                                               Variant: AutoLayout
                                               Properties:
                                                 Height: =32
@@ -784,6 +826,8 @@ Screens:
                                                     Properties:
                                                       Align: ='TextCanvas.Align'.Start
                                                       AlignInContainer: =AlignInContainer.Stretch
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       LayoutMinWidth: =30
                                                       Size: =12
                                                       Text: =ThisItem.MesCreado
@@ -794,6 +838,8 @@ Screens:
                                                     Control: Text@0.0.51
                                                     Properties:
                                                       AlignInContainer: =AlignInContainer.Stretch
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       LayoutMinWidth: =150
                                                       Size: =11
                                                       Text: =ThisItem.Correo
@@ -805,6 +851,8 @@ Screens:
                                                     Properties:
                                                       Align: ='TextCanvas.Align'.Center
                                                       AlignInContainer: =AlignInContainer.Stretch
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       LayoutMinWidth: =30
                                                       Size: =16
                                                       Text: =ThisItem.Asesor
@@ -817,6 +865,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Center
                                                       AlignInContainer: =AlignInContainer.Stretch
                                                       FontColor: =RGBA(52, 152, 47, 1)
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       LayoutMinWidth: =30
                                                       Size: =16
                                                       Text: =ThisItem.Ganadas
@@ -829,6 +879,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Center
                                                       AlignInContainer: =AlignInContainer.Stretch
                                                       FontColor: =RGBA(240, 98, 15, 1)
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       LayoutMinWidth: =30
                                                       Size: =16
                                                       Text: =ThisItem.Perdidas
@@ -841,6 +893,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Center
                                                       AlignInContainer: =AlignInContainer.Stretch
                                                       FontColor: =RGBA(255, 191, 0, 1)
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       LayoutMinWidth: =30
                                                       Size: =16
                                                       Text: =ThisItem.Seguimientos
@@ -853,6 +907,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Center
                                                       AlignInContainer: =AlignInContainer.Stretch
                                                       FontColor: =RGBA(40, 134, 222, 1)
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       LayoutMinWidth: =30
                                                       Size: =16
                                                       Text: =ThisItem.Cotizaciones
@@ -865,6 +921,8 @@ Screens:
                                                       Align: ='TextCanvas.Align'.Start
                                                       AlignInContainer: =AlignInContainer.Stretch
                                                       FontColor: =RGBA(109, 49, 162, 1)
+                                                      LayoutMaxHeight: =
+                                                      LayoutMaxWidth: =
                                                       LayoutMinWidth: =30
                                                       Size: =16
                                                       Text: |
@@ -881,7 +939,7 @@ Screens:
                                                       Weight: ='TextCanvas.Weight'.Semibold
                                                       Width: =50
                         - Container55_1:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =43
@@ -890,7 +948,7 @@ Screens:
                               Y: =79
                             Children:
                               - Container56_1:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =39
@@ -902,6 +960,8 @@ Screens:
                                         Properties:
                                           InputTextPlaceholder: ="Buscar Año"
                                           Items: =Distinct(colOportunidades,Año)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =120
                                           X: =40
                                           Y: =4
@@ -910,6 +970,8 @@ Screens:
                                         Properties:
                                           InputTextPlaceholder: ="Buscar Mes"
                                           Items: =Distinct(colOportunidades,MesCreado)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =120
                                     - ComboboxCanvas5_6:
                                         Control: ComboBox@0.0.51
@@ -926,15 +988,19 @@ Screens:
                                             "control.interno@partequipos.com", "marevalo@partequipos.com", "planeador.serviciosbg@partequipos.com", 
                                             "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                                             "fvasquez@partequipos.com", "dcubides@partequipos.com"]
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =140
                                     - ButtonCanvas12:
                                         Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           OnSelect: =Reset(ComboboxCanvas5_5);Reset(ComboboxCanvas5_6);Reset(ComboboxCanvas5_8)
                                           Text: ="Reset"
                         - Container55_2:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Fill: =RGBA(255, 255, 255, 1)
@@ -943,7 +1009,7 @@ Screens:
                               Y: =133
                             Children:
                               - Container56_2:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =36
@@ -955,6 +1021,8 @@ Screens:
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Mes"
                                           Weight: ='TextCanvas.Weight'.Bold
@@ -964,6 +1032,8 @@ Screens:
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Asesor"
                                           Weight: ='TextCanvas.Weight'.Bold
@@ -973,6 +1043,8 @@ Screens:
                                         Properties:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Cantidad"
                                           Weight: ='TextCanvas.Weight'.Bold
@@ -983,6 +1055,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(52, 152, 47, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Size: =10
                                           Text: ="Ganadas"
                                           Weight: ='TextCanvas.Weight'.Bold
@@ -993,6 +1067,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(240, 98, 15, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingTop: =5
                                           Size: =10
                                           Text: ="Perdidas"
@@ -1005,6 +1081,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(255, 191, 0, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingTop: =5
                                           Size: =10
                                           Text: ="Seguimiento"
@@ -1016,6 +1094,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(40, 134, 222, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingTop: =5
                                           Size: =10
                                           Text: ="Cotizado"
@@ -1027,13 +1107,15 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           AlignInContainer: =AlignInContainer.Stretch
                                           FontColor: =RGBA(109, 49, 162, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingTop: =5
                                           Size: =10
                                           Text: ="Gestión"
                                           Weight: ='TextCanvas.Weight'.Bold
                                           Width: =60
                         - PieChart1:
-                            Control: PieChart@2.2.0
+                            Control: PieChart@2.3.0
                             Properties:
                               BorderColor: =RGBA(0, 0, 0, 0)
                               BorderStyle: =BorderStyle.None

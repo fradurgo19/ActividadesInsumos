@@ -13,14 +13,14 @@ Screens:
       LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     Children:
       - Container94:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.5.0
           Variant: ManualLayout
           Properties:
             Height: =762
             Width: =1364
           Children:
             - Container95:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =57
@@ -68,7 +68,7 @@ Screens:
                         Width: =57
                         X: =45
             - Container96:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =700
@@ -76,7 +76,7 @@ Screens:
                   Y: =62
                 Children:
                   - Video2_1:
-                      Control: Video@2.4.1
+                      Control: Video@2.4.2
                       Properties:
                         AutoStart: =true
                         BorderColor: =RGBA(0, 0, 0, 0)

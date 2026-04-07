@@ -407,7 +407,7 @@ Screens:
                         X: =
                         Y: =
                   - Container67_1:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         BorderThickness: =1
@@ -415,7 +415,7 @@ Screens:
                         Width: =1071
                       Children:
                         - Container68_1:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =81
@@ -424,7 +424,7 @@ Screens:
                               Y: =3
                             Children:
                               - Container69_1:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =Parent.Height
@@ -439,6 +439,8 @@ Screens:
                                           Encabezado: =SampleImage
                                           Encabezado1: =Logo
                                           Height: =65
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =1007
                               - Icon10_9:
                                   Control: Classic/Icon@2.5.0
@@ -463,7 +465,7 @@ Screens:
                                     X: =5
                                     Y: =5
                         - Container70_1:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =680

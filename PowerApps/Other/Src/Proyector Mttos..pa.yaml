@@ -74,7 +74,7 @@ Screens:
 
     Children:
       - Container24_3:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.5.0
           Variant: ManualLayout
           Properties:
             Height: =59
@@ -82,7 +82,7 @@ Screens:
             Y: =4
           Children:
             - Container25_3:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: AutoLayout
                 Properties:
                   Height: =59
@@ -97,6 +97,8 @@ Screens:
                         Encabezado: =SampleImage
                         Encabezado1: =Logo
                         Height: =65
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         Width: =Parent.Width
             - Arrow1_7:
                 Control: Arrow@2.3.0
@@ -110,7 +112,7 @@ Screens:
                   X: =4
                   Y: =4
       - Container2_3:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.5.0
           Variant: ManualLayout
           Properties:
             Height: =693
@@ -118,7 +120,7 @@ Screens:
             Y: =75
           Children:
             - Container99:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =67
@@ -127,7 +129,7 @@ Screens:
                   Y: =20
                 Children:
                   - Container100:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =67
@@ -142,7 +144,7 @@ Screens:
                               Text: ="Periodo  de Trabajo"
                               Width: =Parent.Width
                   - Container101:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =67
@@ -150,7 +152,7 @@ Screens:
                         X: =137
                       Children:
                         - Container102:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =30
@@ -199,7 +201,7 @@ Screens:
                                     X: =91
                                     Y: =5
                         - Container103:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =35
@@ -247,7 +249,7 @@ Screens:
                                     X: =88
                                     Y: =11
             - Container104:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =40
@@ -256,7 +258,7 @@ Screens:
                   Y: =20
                 Children:
                   - Container105:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =40
@@ -301,7 +303,7 @@ Screens:
                         X: =218
                         Y: =11
             - Container106:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =520
@@ -424,7 +426,7 @@ Screens:
                               Width: =44
                               X: =382
             - Container107:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Fill: =RGBA(255, 184, 174, 1)
@@ -434,7 +436,7 @@ Screens:
                   Y: =20
                 Children:
                   - Container108:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =31
@@ -482,7 +484,7 @@ Screens:
                               X: =30
                               Y: =5
                   - Container109:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =33
@@ -536,7 +538,7 @@ Screens:
                               X: =30
                               Y: =5
             - Container98:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =36
@@ -546,7 +548,7 @@ Screens:
                   Y: =614
                 Children:
                   - Container110:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =45
@@ -562,7 +564,7 @@ Screens:
                               Text: =RoundUp(Sum(Gallery2_3.AllItems, Value(Label10_31.Text)), 0)
                               Width: =54
             - Container104_1:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =40
@@ -571,7 +573,7 @@ Screens:
                   Y: =20
                 Children:
                   - Container105_1:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =38
@@ -634,7 +636,7 @@ Screens:
                         X: =274
                         Y: =9
             - Container104_2:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =32
@@ -643,7 +645,7 @@ Screens:
                   Y: =60
                 Children:
                   - Container105_2:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =30
@@ -753,7 +755,7 @@ Screens:
                   X: =1184
                   Y: =110
             - Container104_3:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =214
@@ -762,7 +764,7 @@ Screens:
                   Y: =165
                 Children:
                   - Container105_3:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =54
@@ -779,7 +781,7 @@ Screens:
                               Width: =107
                               Y: =4
                   - Container105_4:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =38
@@ -796,7 +798,7 @@ Screens:
                               Text: =Text(varTextoLabel81)
                               Width: =130
                   - Container105_5:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =28
@@ -813,7 +815,7 @@ Screens:
                               Text: =MayorPeriodo
                               Width: =130
                   - Container105_6:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =28
@@ -830,7 +832,7 @@ Screens:
                               Width: =107
                               Y: =4
                   - Container105_7:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =31
@@ -846,7 +848,7 @@ Screens:
                               Width: =107
                               Y: =5
                   - Container105_8:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =31
@@ -872,7 +874,7 @@ Screens:
                               Width: =130
                               Y: =5
                   - Container111:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =51
@@ -880,7 +882,7 @@ Screens:
                         Y: =162
                       Children:
                         - Container112:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =51
@@ -895,7 +897,7 @@ Screens:
                                     Text: ="TOTAL"
                                     Width: =122
                         - Container113:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =51
@@ -928,7 +930,7 @@ Screens:
 
                                     Width: =119
             - Container106_1:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =520
@@ -1089,7 +1091,7 @@ Screens:
                               X: =441
                               Y: =2
             - Container114:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Fill: =RGBA(174, 208, 221, 1)
@@ -1139,7 +1141,7 @@ Screens:
                         X: =294
                         Y: =9
             - Container114_1:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Fill: =RGBA(174, 208, 221, 1)
@@ -1201,7 +1203,7 @@ Screens:
                         X: =3
                         Y: =3
             - Container115:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =64
@@ -1210,7 +1212,7 @@ Screens:
                   Y: =425
                 Children:
                   - Container116:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =64
@@ -1224,7 +1226,7 @@ Screens:
                               Text: ="Desplazamiento Adicional"
                               Width: =119
                   - Container117:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =64

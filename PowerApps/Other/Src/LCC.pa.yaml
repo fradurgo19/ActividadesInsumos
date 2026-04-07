@@ -126,7 +126,7 @@ Screens:
                         X: =
                         Y: =
                   - Container71:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         BorderThickness: =1
@@ -134,14 +134,14 @@ Screens:
                         Width: =1066
                       Children:
                         - Container72:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =80
                               Width: =1066
                             Children:
                               - Container73:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =80
@@ -156,6 +156,8 @@ Screens:
                                           Encabezado: =SampleImage
                                           Encabezado1: =Logo
                                           Height: =65
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =1007
                               - Icon10_5:
                                   Control: Classic/Icon@2.5.0
@@ -178,7 +180,7 @@ Screens:
                                     PressedFill: =RGBA(0, 0, 0, 0)
                                     Width: =50
                         - Container74:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =607
@@ -187,7 +189,7 @@ Screens:
                               Y: =149
                             Children:
                               - Container75:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =609
@@ -215,6 +217,8 @@ Screens:
 
 
 
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           OnSelect: |
                                             =Set(varSelectedHorometroG3, Gallery3.Selected.Horometro);Set(varSelectedtipoG3, Gallery3.Selected.TipodeMaquina)
                                           ShowNavigation: =true
@@ -277,7 +281,7 @@ Screens:
                                                 Width: =78
                                                 X: =242
                         - Container5_3:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: AutoLayout
                             Properties:
                               Fill: =RGBA(255, 191, 0, 1)
@@ -295,6 +299,8 @@ Screens:
                                     BorderThickness: =1
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =Parent.Height
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     PaddingLeft: =3
                                     Text: ="Tipo"
                                     Width: =80
@@ -306,6 +312,8 @@ Screens:
                                     BorderThickness: =1
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =Parent.Height
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     PaddingLeft: =3
                                     Text: ="Parte-Horometro"
                                     Width: =130
@@ -317,11 +325,13 @@ Screens:
                                     BorderThickness: =1
                                     FontColor: =RGBA(255, 255, 255, 1)
                                     Height: =Parent.Height
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     PaddingLeft: =3
                                     Text: ="Qty || Name"
                                     Width: =120
                         - Container88:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =264
@@ -330,7 +340,7 @@ Screens:
                               Y: =476
                             Children:
                               - Container5_5:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Fill: =RGBA(255, 191, 0, 1)
@@ -348,12 +358,14 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Size: =16
                                           Text: ="Horas Actuales"
                                           Width: =Parent.Width
                               - Container80:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =223
@@ -362,7 +374,7 @@ Screens:
                                     Y: =39
                                   Children:
                                     - ColumnChart2:
-                                        Control: BarChart@2.3.0
+                                        Control: BarChart@2.4.0
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Stretch
                                           BorderColor: =RGBA(0, 0, 0, 0)
@@ -392,6 +404,8 @@ Screens:
                                           Items.Series8: =PromedioHoras
                                           Items.Series9: =PromedioHoras
                                           ItemsGap: =20
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =0
                                           OnSelect: =
                                           PaddingLeft: =5
@@ -406,7 +420,7 @@ Screens:
                                           Y: =30
                                           YLabelAngle: =45
                         - Container89:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =337
@@ -415,7 +429,7 @@ Screens:
                               Y: =126
                             Children:
                               - Container5_4:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Fill: =RGBA(255, 191, 0, 1)
@@ -433,12 +447,14 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Size: =16
                                           Text: ="Cliente , Horometro, Promedio Horas y Contacto."
                                           Width: =Parent.Width
                               - Container5_6:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Fill: =RGBA(255, 255, 255, 1)
@@ -457,6 +473,8 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(0, 0, 0, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Text: ="Cliente"
                                           Width: =140
@@ -469,6 +487,8 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(0, 0, 0, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Text: ="Serie"
                                           Width: =80
@@ -481,6 +501,8 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(0, 0, 0, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Text: ="Tipo"
                                           Width: =70
@@ -493,6 +515,8 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(0, 0, 0, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Text: ="Modelo"
                                           Width: =60
@@ -505,6 +529,8 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(0, 0, 0, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Text: ="Horom"
                                           Width: =60
@@ -518,6 +544,8 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(0, 0, 0, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Text: ="X_Horas"
                                           VerticalAlign: =VerticalAlign.Middle
@@ -531,11 +559,13 @@ Screens:
                                           BorderThickness: =1
                                           FontColor: =RGBA(0, 0, 0, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =3
                                           Text: ="Contacto"
                                           Width: =220
                               - Container76:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: ManualLayout
                                   Properties:
                                     Height: =315
@@ -544,7 +574,7 @@ Screens:
                                     Y: =60
                                   Children:
                                     - Container77:
-                                        Control: GroupContainer@1.3.0
+                                        Control: GroupContainer@1.5.0
                                         Variant: AutoLayout
                                         Properties:
                                           Height: =272
@@ -572,6 +602,8 @@ Screens:
                                                       (IsBlank(varSelectedHorometroG3) || Abs(Horometro - varSelectedHorometroG3) <= 1000)
                                                   )
 
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 LayoutMinHeight: =200
                                                 LayoutMinWidth: =400
                                                 OnSelect: =Set(varSelectedHorometro, Gallery10.Selected.Horometro);Set(varSelectedtipo, Gallery10.Selected.TipoDeMaquina)
@@ -592,7 +624,7 @@ Screens:
                                                       Width: =Parent.TemplateWidth
                                                       Y: =Parent.TemplateHeight - Self.Height
                                                 - Container79:
-                                                    Control: GroupContainer@1.3.0
+                                                    Control: GroupContainer@1.5.0
                                                     Variant: AutoLayout
                                                     Properties:
                                                       Height: =46
@@ -604,6 +636,8 @@ Screens:
                                                           Properties:
                                                             Align: ='TextCanvas.Align'.Start
                                                             Height: =Parent.Height
+                                                            LayoutMaxHeight: =
+                                                            LayoutMaxWidth: =
                                                             Size: =12
                                                             Text: =ThisItem.Cliente
                                                             Width: =140
@@ -613,6 +647,8 @@ Screens:
                                                           Control: Text@0.0.51
                                                           Properties:
                                                             Height: =Parent.Height
+                                                            LayoutMaxHeight: =
+                                                            LayoutMaxWidth: =
                                                             Size: =12
                                                             Text: =ThisItem.field_4
                                                             Width: =80
@@ -622,6 +658,8 @@ Screens:
                                                           Properties:
                                                             Align: ='TextCanvas.Align'.Center
                                                             Height: =Parent.Height
+                                                            LayoutMaxHeight: =
+                                                            LayoutMaxWidth: =
                                                             Size: =12
                                                             Text: =ThisItem.TipoDeMaquina
                                                             Width: =75
@@ -631,6 +669,8 @@ Screens:
                                                           Properties:
                                                             Align: ='TextCanvas.Align'.Center
                                                             Height: =Parent.Height
+                                                            LayoutMaxHeight: =
+                                                            LayoutMaxWidth: =
                                                             Size: =12
                                                             Text: =ThisItem.Modelo
                                                             Width: =60
@@ -641,6 +681,8 @@ Screens:
                                                           Properties:
                                                             Align: ='TextCanvas.Align'.Center
                                                             Height: =Parent.Height
+                                                            LayoutMaxHeight: =
+                                                            LayoutMaxWidth: =
                                                             Size: =12
                                                             Text: =ThisItem.Horometro
                                                             Width: =60
@@ -650,6 +692,8 @@ Screens:
                                                           Properties:
                                                             Align: ='TextCanvas.Align'.Center
                                                             Height: =Parent.Height
+                                                            LayoutMaxHeight: =
+                                                            LayoutMaxWidth: =
                                                             Size: =12
                                                             Text: =ThisItem.PromedioHoras
                                                             Width: =60
@@ -658,6 +702,8 @@ Screens:
                                                           Control: Text@0.0.51
                                                           Properties:
                                                             Height: =Parent.Height
+                                                            LayoutMaxHeight: =
+                                                            LayoutMaxWidth: =
                                                             Size: =12
                                                             Text: =ThisItem.Email
                                                             Width: =105
@@ -666,6 +712,8 @@ Screens:
                                                           Control: Text@0.0.51
                                                           Properties:
                                                             Height: =Parent.Height
+                                                            LayoutMaxHeight: =
+                                                            LayoutMaxWidth: =
                                                             Size: =12
                                                             Text: =ThisItem.Telefono
                                                             Width: =105

@@ -498,7 +498,7 @@ Screens:
                         X: =Rectangle3_8.X+Rectangle3_8.Width+74
                         Y: =
                   - Container37:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =758
@@ -506,7 +506,7 @@ Screens:
                         Y: =2
                       Children:
                         - Container40:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: AutoLayout
                             Properties:
                               Height: =376
@@ -544,6 +544,8 @@ Screens:
                                               SortOrder.Descending
                                           )
                                       )
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinHeight: =0
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightGreen, Color.White)
@@ -561,7 +563,7 @@ Screens:
                                           Width: =Parent.TemplateWidth
                                           Y: =Parent.TemplateHeight - Self.Height
                                     - Container43:
-                                        Control: GroupContainer@1.3.0
+                                        Control: GroupContainer@1.5.0
                                         Variant: AutoLayout
                                         Properties:
                                           Height: =50
@@ -576,6 +578,8 @@ Screens:
                                                 BorderStyle: =BorderStyle.Solid
                                                 BorderThickness: =1
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -594,6 +598,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -612,6 +618,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -630,6 +638,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -648,6 +658,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -666,6 +678,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -684,6 +698,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -702,6 +718,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -720,6 +738,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -738,6 +758,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -756,6 +778,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -774,6 +798,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -792,6 +818,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -810,6 +838,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -828,6 +858,8 @@ Screens:
                                                 BorderThickness: =1
                                                 Font: =Font.Lato
                                                 Height: =Parent.Height
+                                                LayoutMaxHeight: =
+                                                LayoutMaxWidth: =
                                                 PaddingBottom: =1
                                                 PaddingLeft: =1
                                                 PaddingRight: =1
@@ -837,7 +869,7 @@ Screens:
                                                 Weight: ='TextCanvas.Weight'.Semibold
                                                 Width: =70
                         - Container42:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Fill: =RGBA(71, 158, 245, 1)
@@ -847,7 +879,7 @@ Screens:
                               Y: =108
                             Children:
                               - Container44:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Fill: =RGBA(235, 33, 33, 0)
@@ -862,6 +894,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="ID"
@@ -873,6 +907,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Cliente"
@@ -884,6 +920,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Serie"
@@ -895,6 +933,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Marca"
@@ -906,6 +946,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Modelo"
@@ -917,6 +959,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Horom"
@@ -928,6 +972,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Tipo Mtto"
@@ -939,6 +985,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Fecha Mtto"
@@ -950,6 +998,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Asesor"
@@ -961,6 +1011,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Tipo"
@@ -972,6 +1024,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Estado"
@@ -983,6 +1037,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Detalle"
@@ -994,6 +1050,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Compra"
@@ -1005,6 +1063,8 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Que?"
@@ -1016,13 +1076,15 @@ Screens:
                                           Align: ='TextCanvas.Align'.Center
                                           FontColor: =RGBA(255, 255, 255, 1)
                                           Height: =Parent.Height
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingLeft: =2
                                           Size: =12
                                           Text: ="Factura"
                                           Weight: ='TextCanvas.Weight'.Regular
                                           Width: =70
                         - Container47:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =36
@@ -1031,7 +1093,7 @@ Screens:
                               Y: =71
                             Children:
                               - Container48:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =36
@@ -1054,6 +1116,8 @@ Screens:
                                           HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                                           HoverFill: =RGBA(0, 0, 0, 0)
                                           Icon: =Icon.Search
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PressedBorderColor: =RGBA(0, 0, 0, 0)
                                           PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                                           PressedFill: =RGBA(0, 0, 0, 0)
@@ -1073,6 +1137,8 @@ Screens:
                                           HoverBorderColor: =RGBA(101, 128, 187, 1)
                                           HoverColor: =RGBA(47, 41, 43, 1)
                                           HoverFill: =ColorFade(RGBA(190, 202, 226, 1), 30%)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =10
                                           PaddingLeft: =10
                                           PaddingRight: =10
@@ -1086,6 +1152,8 @@ Screens:
                                         Properties:
                                           InputTextPlaceholder: ="Buscar Estado"
                                           Items: =["Ganada", "Perdida", "Seguimiento","Cotización"]
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =200
                                     - ComboboxCanvas5_1:
                                         Control: ComboBox@0.0.51
@@ -1102,6 +1170,8 @@ Screens:
                                             "control.interno@partequipos.com", "marevalo@partequipos.com", "planeador.serviciosbg@partequipos.com", 
                                             "jpinzon@partequipos.com", "crojas@partequipos.com", "denciso@partequipos.com", "drojas@partequipos.com", 
                                             "fvasquez@partequipos.com", "dcubides@partequipos.com"]
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =200
                                     - FechaInicio:
                                         Control: Classic/DatePicker@2.6.0
@@ -1115,6 +1185,8 @@ Screens:
                                           Height: =32
                                           IconBackground: =RGBA(105, 121, 126, 1)
                                           IconFill: =RGBA(255, 255, 255, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingTop: =5
                                           Size: =9
                                           Tooltip: ="Fecha Primer Mtto"
@@ -1131,6 +1203,8 @@ Screens:
                                           Height: =32
                                           IconBackground: =RGBA(105, 121, 126, 1)
                                           IconFill: =RGBA(255, 255, 255, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingTop: =5
                                           Size: =9
                                           Tooltip: ="Fecha Primer Mtto"
@@ -1139,11 +1213,13 @@ Screens:
                                         Control: Button@0.0.45
                                         Properties:
                                           BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           OnSelect: |
                                             =Reset(Buscar);Reset(ComboboxCanvas5);Reset(ComboboxCanvas5_1);Refresh('Seguimiento Clientes Equipos Telemetría');Reset(Gallery8);Reset(FechaInicio);Reset(FechaFin)
                                           Text: ="Reset"
                         - Container57:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =175
@@ -1152,7 +1228,7 @@ Screens:
                               Y: =577
                             Children:
                               - Container58:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =175
@@ -1167,6 +1243,8 @@ Screens:
                                           DataSource: ='Seguimiento Clientes Equipos Telemetría'
                                           Height: =Parent.Height
                                           Item: =Gallery8.Selected
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =0
                                           LayoutMinWidth: =0
                                           Width: =Parent.Width
@@ -1712,7 +1790,7 @@ Screens:
                                                       Width: =30
                                                       Y: =DataCardKey1.Y
                         - Container59:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: ManualLayout
                             Properties:
                               Height: =66
@@ -1720,7 +1798,7 @@ Screens:
                               X: =3
                             Children:
                               - Container60:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.5.0
                                   Variant: AutoLayout
                                   Properties:
                                     Height: =66
@@ -1734,6 +1812,8 @@ Screens:
                                           Encabezado: =SampleImage
                                           Encabezado1: =Logo
                                           Height: =65
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           Width: =1007
                         - ButtonCanvas1_4:
                             Control: Button@0.0.45
@@ -1809,7 +1889,7 @@ Screens:
             X: =564
             Y: =112
       - ColumnChart3:
-          Control: BarChart@2.3.0
+          Control: BarChart@2.4.0
           Group: CompositeColumnChart2
           Properties:
             BorderColor: =RGBA(0, 0, 0, 0)

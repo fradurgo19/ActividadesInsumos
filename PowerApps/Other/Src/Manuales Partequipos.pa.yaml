@@ -325,14 +325,14 @@ Screens:
                         X: =
                         Y: =
                   - Container9:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =81
                         Width: =1061
                       Children:
                         - Container12:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: AutoLayout
                             Properties:
                               Height: =80
@@ -348,6 +348,8 @@ Screens:
                                     BorderColor: =RGBA(0, 0, 0, 0)
                                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                                     Fill: =RGBA(105, 121, 126, 1)
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     OnSelect: =Navigate('Manuales.',ScreenTransition.Fade )
                                     X: =428
                                     Y: =648
@@ -361,7 +363,7 @@ Screens:
                               Width: =987
                               X: =70
                   - Container27:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =77
@@ -369,7 +371,7 @@ Screens:
                         Y: =176
                       Children:
                         - Container29:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: AutoLayout
                             Properties:
                               Height: =77
@@ -385,6 +387,8 @@ Screens:
                                     BorderRadiusTopRight: =1
                                     FontColor: =RGBA(9, 33, 98, 1)
                                     Height: =70
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     Size: =15
                                     Text: ="Busquedad dentro de Carpeta especifica"
                                     Width: =174
@@ -401,10 +405,12 @@ Screens:
                                     FontColor: =RGBA(9, 33, 98, 1)
                                     FontWeight: =FontWeight.Bold
                                     Height: =70
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     X: =TextCanvas1.X + TextCanvas1.Width
                                     Y: =280
                   - Container32:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: ManualLayout
                       Properties:
                         Height: =455
@@ -412,7 +418,7 @@ Screens:
                         Y: =253
                       Children:
                         - Container34:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.5.0
                             Variant: AutoLayout
                             Properties:
                               Height: =Parent.Height
@@ -437,6 +443,8 @@ Screens:
                                           SortOrder.Ascending
                                       )
 
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     OnSelect: =If(ThisItem.EsCarpeta,Set(varPatch,ThisItem.'Ruta de acceso a la carpeta'&ThisItem.Nombre&"/"))
                                     ShowNavigation: =true
                                     TemplateFill: =If(ThisItem.IsSelected, Color.LightSkyBlue, Color.White)
@@ -507,7 +515,7 @@ Screens:
                                           X: =622
                                           Y: =10
       - Container15:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.5.0
           Variant: ManualLayout
           Properties:
             Height: =73
@@ -516,7 +524,7 @@ Screens:
             Y: =100
           Children:
             - Container26:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: AutoLayout
                 Properties:
                   Height: =73
@@ -534,6 +542,8 @@ Screens:
                         FillPortions: =0
                         Height: =Parent.Height
                         Items: =Split(Left(varPatch,Len(varPatch)-1),"/")
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         LayoutMinHeight: =0
                         TemplateSize: =168
                         Width: =Parent.Width

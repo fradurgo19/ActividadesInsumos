@@ -13,6 +13,10 @@ EncabezadoContenedor As CanvasComponent:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutGridColumnMinWidth: =0
+        LayoutGridColumns: =6
+        LayoutGridRowMinHeight: =0
+        LayoutGridRows: =6
         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
         PaddingLeft: =30
@@ -45,6 +49,10 @@ EncabezadoContenedor As CanvasComponent:
         Container7 As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
+            LayoutGridColumnMinWidth: =0
+            LayoutGridColumns: =6
+            LayoutGridRowMinHeight: =0
+            LayoutGridRows: =6
             LayoutJustifyContent: =LayoutJustifyContent.End
             LayoutMaxHeight: =
             LayoutMaxWidth: =
@@ -60,6 +68,10 @@ EncabezadoContenedor As CanvasComponent:
             Container8 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutGridColumnMinWidth: =0
+                LayoutGridColumns: =6
+                LayoutGridRowMinHeight: =0
+                LayoutGridRows: =6
                 LayoutMaxHeight: =
                 LayoutMaxWidth: =
                 LayoutMinHeight: =0

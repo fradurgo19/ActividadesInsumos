@@ -1,4 +1,4 @@
-<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/videoPlayback" name="videoPlayback" jsClass="AppMagic.Controls.Playback.VideoPlayback" authoringjsClass="AppMagic.Controls.Playback.AuthoringVideoPlayback" version="2.4.1" styleable="true" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
+<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/videoPlayback" name="videoPlayback" jsClass="AppMagic.Controls.Playback.VideoPlayback" authoringjsClass="AppMagic.Controls.Playback.AuthoringVideoPlayback" version="2.4.2" styleable="true" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
   <author name="Microsoft AppMagic" />
   <license type="text/html"><![CDATA[<p>TODO:  Need license text here.</p>]]></license>
   <description><![CDATA[VIDEOPLAYBACK
@@ -488,5 +488,8 @@
   </appMagic:conversion>
   <appMagic:conversion from="2.4.0" to="2.4.1">
     <!-- Fixed slider CSS appearance -->
+  </appMagic:conversion>
+  <appMagic:conversion from="2.4.1" to="2.4.2">
+    <!-- Version bump to 2.4.2 for metadata consistency -->
   </appMagic:conversion>
 </widget>

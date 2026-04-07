@@ -23,14 +23,14 @@ Screens:
         )
     Children:
       - Container61:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.5.0
           Variant: ManualLayout
           Properties:
             Height: =768
             Width: =1366
           Children:
             - Container62:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =67
@@ -38,7 +38,7 @@ Screens:
                   Y: =6
                 Children:
                   - Container63:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.5.0
                       Variant: AutoLayout
                       Properties:
                         Height: =67
@@ -51,6 +51,8 @@ Screens:
                             Control: Text@0.0.51
                             Properties:
                               Height: =Parent.Height
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               Size: =18
                               Text: ="Servicio o CPP"
                               Weight: ='TextCanvas.Weight'.Bold
@@ -63,9 +65,11 @@ Screens:
                               Encabezado: =SampleImage
                               Encabezado1: =Logo
                               Height: =65
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               Width: =1007
             - Container64:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
                   Height: =681
