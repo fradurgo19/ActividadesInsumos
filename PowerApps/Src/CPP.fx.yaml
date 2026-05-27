@@ -1119,7 +1119,7 @@ CPP As screen:
                                 {Nombre: "", Marca: "", Modelo: "", RefSAP: "",  Cantidad: "", Medida: "", Frecuencia: "", Comentario: "", Adjuntos: "", No: "", Parte: "", Tipo: "", ImagenUrl: "", Recomendación: "", EQUIVALENCIA1: "", EQUIVALENCIA2: "", EQUIVALENCIA3: "", REFERENCIACATALOGOORIGINAL: ""}
                             ],
                             Filter(
-                                TablaDataCpp,
+                                TablaDataCpp,                                                        
                                 (IsBlank(TextInputCanvas6.Value) || TextInputCanvas6.Value in RefSAP || TextInputCanvas6.Value in Nombre || TextInputCanvas6.Value in Parte || TextInputCanvas6.Value in Marca || TextInputCanvas6.Value in Modelo) &&
                                 (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
                                 (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
