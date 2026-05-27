@@ -21,9 +21,6 @@
           "ActividadIniciodeApp": {
             "tableName": "91e84348-3c3c-4bcc-9d8d-665e7665a744"
           },
-          "Manuales": {
-            "tableName": "f49e66fb-5682-4c66-9f9d-0c8bdcacbadc"
-          },
           "Oportunidades de encuestas": {
             "tableName": "7318d2f6-2faf-4219-9733-b20812ab6ffe"
           },
@@ -40,7 +37,6 @@
       }
     },
     "dataSources": [
-      "Manuales",
       "PETICIONES, QUEJAS, RECLAMOS, SUGERENCIAS Y FELICITACIÓN (PQRS)",
       "Seguimiento Clientes Equipos Telemetría",
       "Oportunidades de encuestas",
@@ -79,9 +75,6 @@
         "dataSources": {
           "TablaDataCpp": {
             "tableName": "TablaDataCpp"
-          },
-          "TablaDataCpp_1": {
-            "tableName": "TablaDataCpp"
           }
         }
       }
@@ -89,8 +82,7 @@
     "dataSources": [
       "TablaEquivalenciasCpp",
       "TablaLCC",
-      "TablaDataCpp",
-      "TablaDataCpp_1"
+      "TablaDataCpp"
     ],
     "dependencies": {
       "fileSource": "d72154ae-dfa8-497f-97e1-3ed208bd878f"
