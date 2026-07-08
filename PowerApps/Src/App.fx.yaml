@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: =
+    OnStart: =Set(varCargandoCpp, false);
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

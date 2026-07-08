@@ -2,8 +2,10 @@ CPP As screen:
     ImagePosition: =ImagePosition.Stretch
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
-        =//Refresh(TablaDataCppLocal);;
-        //ClearCollect(TablaDataCppLocal;TablaDataCpp);;ClearCollect(colTablaEquivalenciasCpp;TablaEquivalenciasCpp);;
+        =If(
+            CountRows(TablaDataCppLocal) = 0,
+            Select(BtnCargarCatalogo)
+        )
         
         
 
@@ -219,7 +221,7 @@ CPP As screen:
             Y: =32
             ZIndex: =21
 
-            ButtonCanvas8_1 As Botón:
+            BtnCargarCatalogo As Botón:
                 AcceptsFocus: =true
                 AccessibleLabel: =""
                 Align: =""
@@ -292,7 +294,9 @@ CPP As screen:
 
             Text1 As modernText:
                 Fill: =RGBA(255, 0, 0, 1)
+                FontWeight: =FontWeight.Bold
                 Height: =24
+                Size: =8
                 Text: ="Cargando catálogo, espere..."
                 Visible: =varCargandoCpp
                 Width: =130
@@ -2045,7 +2049,11 @@ CPP As screen:
                     
                 LayoutMaxHeight: =
                 LayoutMaxWidth: =
-                OnChange: =
+                OnChange: |-
+                    =Reset(DropModelo1);
+                    Reset(DropParte1);
+                    Reset(DropTipo1);
+                    Reset(DropFrecuencia1)
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
@@ -2109,7 +2117,10 @@ CPP As screen:
                     )
                 LayoutMaxHeight: =
                 LayoutMaxWidth: =
-                OnChange: =
+                OnChange: |-
+                    =Reset(DropParte1);
+                    Reset(DropTipo1);
+                    Reset(DropFrecuencia1)
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
@@ -2162,7 +2173,12 @@ CPP As screen:
                     
                     Sort(
                         Distinct(
-                            Filter(TablaDataCpp, Modelo in DropModelo1.Selected.Value),
+                            Filter(
+                                TablaDataCppLocal,
+                                (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
+                                (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
+                                !IsBlank(Parte) && Parte <> "0"
+                            ),
                             Parte
                         ),
                         Value,
@@ -2180,7 +2196,7 @@ CPP As screen:
                 PressedColor: =RGBA(0, 0, 0, 1)
                 PressedFill: =RGBA(40, 134, 222, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Sort(Distinct(Filter(TablaDataCpp,Modelo in DropModelo1.Selected.Value),Parte),Value,SortOrder.Ascending),DropParte1.SearchText,Value)
+                SearchItems: =Search(Sort(Distinct(Filter(TablaDataCppLocal,(IsBlank(DropMarca1.SelectedItems)||CountIf(DropMarca1.SelectedItems,Marca=Value)>0)&&(IsBlank(DropModelo1.SelectedItems)||CountIf(DropModelo1.SelectedItems,Modelo=Value)>0)&&!IsBlank(Parte)&&Parte<>"0"),Parte),Value,SortOrder.Ascending),DropParte1.SearchText,Value)
                 SelectionFill: =RGBA(215, 58, 60, 1)
                 SelectMultiple: =false
                 Size: =8
@@ -2222,7 +2238,20 @@ CPP As screen:
                 HoverFill: =RGBA(255, 255, 255, 1)
                 IsSearchable: =false
                 Items: |
-                    =Distinct(Filter(TablaDataCpp, Parte in DropParte1.Selected.Value),Tipo)
+                    =Sort(
+                        Distinct(
+                            Filter(
+                                TablaDataCppLocal,
+                                (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
+                                (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
+                                (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
+                                !IsBlank(Tipo) && Tipo <> "0"
+                            ),
+                            Tipo
+                        ),
+                        Value,
+                        SortOrder.Ascending
+                    )
                 LayoutMaxHeight: =
                 LayoutMaxWidth: =
                 OnChange: =
@@ -2386,7 +2415,21 @@ CPP As screen:
                 HoverFill: =RGBA(255, 255, 255, 1)
                 IsSearchable: =false
                 Items: |
-                    =Distinct(Filter(TablaDataCpp, Tipo in DropTipo1.Selected.Value),Frecuencia)
+                    =Sort(
+                        Distinct(
+                            Filter(
+                                TablaDataCppLocal,
+                                (IsBlank(DropMarca1.SelectedItems) || CountIf(DropMarca1.SelectedItems, Marca = Value) > 0) &&
+                                (IsBlank(DropModelo1.SelectedItems) || CountIf(DropModelo1.SelectedItems, Modelo = Value) > 0) &&
+                                (IsBlank(DropParte1.SelectedItems) || CountIf(DropParte1.SelectedItems, Parte = Value) > 0) &&
+                                (IsBlank(DropTipo1.SelectedItems) || CountIf(DropTipo1.SelectedItems, Tipo = Value) > 0) &&
+                                !IsBlank(Frecuencia) && Frecuencia <> "0"
+                            ),
+                            Frecuencia
+                        ),
+                        Value,
+                        SortOrder.Ascending
+                    )
                 LayoutMaxHeight: =
                 LayoutMaxWidth: =
                 OnChange: =
