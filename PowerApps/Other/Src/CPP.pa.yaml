@@ -12,48 +12,11 @@ Screens:
       Fill: =RGBA(255, 255, 255, 1)
       ImagePosition: =ImagePosition.Stretch
       LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-      OnVisible: |-
-        =Refresh(TablaDataCpp);
-        ClearCollect(colTablaDataCpp,TablaDataCpp);ClearCollect(colTablaEquivalenciasCpp,TablaEquivalenciasCpp);
+      OnVisible: |+
+        =//Refresh(TablaDataCppLocal);;
+        //ClearCollect(TablaDataCppLocal;TablaDataCpp);;ClearCollect(colTablaEquivalenciasCpp;TablaEquivalenciasCpp);;
 
-        Set(varCargandoCpp, true);
 
-        Set(varTablaJson, Flujo_Cargar_TablaDataCpp.Run().tabla);
-
-        ClearCollect(
-            TablaDataCppLocal,
-            ForAll(
-                ParseJSON(varTablaJson) As R,
-                {
-                    No: Text(R.No),
-                    RefSAP: Text(R.RefSAP),
-                    Marca: Text(R.Marca),
-                    Nombre: Text(R.Nombre),
-                    Cantidad: Text(R.Cantidad),
-                    Frecuencia: Text(R.Frecuencia),
-                    Medida: Text(R.Medida),
-                    Comentario: Text(R.Comentario),
-                    Modelo: Text(R.Modelo),
-                    Parte: Text(R.Parte),
-                    Tipo: Text(R.Tipo),
-                    ImagenUrl: Text(R.ImagenUrl),
-                    Recomendación: Text(R.'Recomendación'),
-                    Adjuntos: Text(R.Adjuntos),
-                    EQUIVALENCIA1: Text(R.EQUIVALENCIA1),
-                    EQUIVALENCIA2: Text(R.EQUIVALENCIA2),
-                    EQUIVALENCIA3: Text(R.EQUIVALENCIA3),
-                    REFERENCIACATALOGOORIGINAL: Text(R.REFERENCIACATALOGOORIGINAL)
-                }
-            )
-        );
-
-        Set(varCargandoCpp, false);
-
-        Notify(
-            "Catálogo cargado: " & CountRows(TablaDataCppLocal) & " registros",
-            NotificationType.Success,
-            3000
-        );
     Children:
       - Container24:
           Control: GroupContainer@1.5.0
@@ -191,8 +154,8 @@ Screens:
                 Control: GroupContainer@1.5.0
                 Variant: ManualLayout
                 Properties:
-                  Height: =29
-                  Width: =120
+                  Height: =20
+                  Width: =132
                   X: =Container33.X + Container33.Width + 50
                 Children:
                   - ButtonCanvas8:
@@ -208,6 +171,66 @@ Screens:
                         Width: =Parent.Width
                         X: =(Parent.Width - Self.Width)/2
                         Y: =(Parent.Height - Self.Height)/2
+            - Container118_1:
+                Control: GroupContainer@1.5.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =24
+                  Width: |+
+                    =130
+                  X: =Container33.X + Container33.Width + 60
+                  Y: =32
+                Children:
+                  - ButtonCanvas8_1:
+                      Control: Button@0.0.45
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Primary
+                        BasePaletteColor: =RGBA(227, 106, 244, 1)
+                        FontSize: =11
+                        Height: =24
+                        Icon: ="ArrowClockwise"
+                        IconStyle: ='ButtonCanvas.IconStyle'.Outline
+                        OnSelect: |-
+                          =Set(varCargandoCpp, true);
+
+                          Set(varTablaJson, Flujo_Cargar_TablaDataCpp.Run().tabla);
+
+                          ClearCollect(
+                              TablaDataCppLocal,
+                              ForAll(
+                                  ParseJSON(varTablaJson) As R,
+                                  {
+                                      No: Text(R.No),
+                                      RefSAP: Text(R.RefSAP),
+                                      Marca: Text(R.Marca),
+                                      Nombre: Text(R.Nombre),
+                                      Cantidad: Text(R.Cantidad),
+                                      Frecuencia: Text(R.Frecuencia),
+                                      Medida: Text(R.Medida),
+                                      Comentario: Text(R.Comentario),
+                                      Modelo: Text(R.Modelo),
+                                      Parte: Text(R.Parte),
+                                      Tipo: Text(R.Tipo),
+                                      ImagenUrl: Text(R.ImagenUrl),
+                                      Recomendación: Text(R.'Recomendación'),
+                                      Adjuntos: Text(R.Adjuntos),
+                                      EQUIVALENCIA1: Text(R.EQUIVALENCIA1),
+                                      EQUIVALENCIA2: Text(R.EQUIVALENCIA2),
+                                      EQUIVALENCIA3: Text(R.EQUIVALENCIA3),
+                                      REFERENCIACATALOGOORIGINAL: Text(R.REFERENCIACATALOGOORIGINAL)
+                                  }
+                              )
+                          );
+
+                          Set(varCargandoCpp, false);
+
+                          Notify(
+                              "Catálogo cargado: " & CountRows(TablaDataCppLocal) & " registros",
+                              NotificationType.Success,
+                              3000
+                          );
+                        Text: ="Cargar Catalogo"
+                        Width: =130
       - Container2:
           Control: GroupContainer@1.5.0
           Variant: ManualLayout
