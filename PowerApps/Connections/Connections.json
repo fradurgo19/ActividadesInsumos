@@ -1,4 +1,52 @@
 {
+  "5eb4c244-dc45-4745-9bb1-e7df474ecb6e": {
+    "connectionRef": {
+      "displayName": "Excel Online (Empresas)",
+      "iconUri": "https://static.powerapps.com/resource/ppcr/releases/v1.0.1819/1.0.1819.4798/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "752320a8-17ff-40aa-8b31-f3ab9b324c49"
+    ],
+    "id": "5eb4c244-dc45-4745-9bb1-e7df474ecb6e"
+  },
+  "752320a8-17ff-40aa-8b31-f3ab9b324c49": {
+    "connectionRef": {
+      "displayName": "Flujos lógicos",
+      "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1774/1.0.1774.4397/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "Flujo_Cargar_TablaDataCpp"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "406d08e8-a7aa-4e5c-b70a-7245ba6a39fa"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "Flujo_Cargar_TablaDataCpp"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "406d08e8-a7aa-4e5c-b70a-7245ba6a39fa"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Flujo_Cargar_TablaDataCpp"
+    ],
+    "dependencies": {
+      "shared_excelonlinebusiness": "5eb4c244-dc45-4745-9bb1-e7df474ecb6e"
+    },
+    "dependents": [],
+    "id": "752320a8-17ff-40aa-8b31-f3ab9b324c49"
+  },
   "843c10cc-c110-47d9-a24d-fa49c3541ba1": {
     "appActions": [
       "providers/PowerPlatform.Governance/Operations/Read"
@@ -75,6 +123,9 @@
         "dataSources": {
           "TablaDataCpp": {
             "tableName": "TablaDataCpp"
+          },
+          "TablaDataCpp_1": {
+            "tableName": "TablaDataCpp"
           }
         }
       }
@@ -82,7 +133,8 @@
     "dataSources": [
       "TablaEquivalenciasCpp",
       "TablaLCC",
-      "TablaDataCpp"
+      "TablaDataCpp",
+      "TablaDataCpp_1"
     ],
     "dependencies": {
       "fileSource": "d72154ae-dfa8-497f-97e1-3ed208bd878f"

@@ -11,7 +11,7 @@ Screens:
     Properties:
       Fill: =RGBA(255, 255, 255, 1)
       LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-      OnVisible: |
+      OnVisible: |+
         =Patch(
             ActividadIniciodeApp, 
             Defaults(ActividadIniciodeApp),
@@ -20,7 +20,8 @@ Screens:
                 'Timestamp ': DateAdd(Now(), -5, TimeUnit.Hours),     
                 'AppName ': "Mttos-CPP-Manuales-Proyector-Encuestas" 
             }
-        )
+        );
+
     Children:
       - Container61:
           Control: GroupContainer@1.5.0

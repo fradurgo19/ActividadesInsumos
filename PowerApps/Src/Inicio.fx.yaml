@@ -1,6 +1,6 @@
 Inicio As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
+    OnVisible: |+
         =Patch(
             ActividadIniciodeApp, 
             Defaults(ActividadIniciodeApp),
@@ -9,7 +9,8 @@ Inicio As screen:
                 'Timestamp ': DateAdd(Now(), -5, TimeUnit.Hours),     
                 'AppName ': "Mttos-CPP-Manuales-Proyector-Encuestas" 
             }
-        )
+        );
+        
 
     Container61 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
