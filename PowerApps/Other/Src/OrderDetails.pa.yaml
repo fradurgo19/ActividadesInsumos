@@ -29,7 +29,7 @@ Screens:
             TempariosLocal,
             Filter(
                 'TEMPARIO DE MANTENIMIENTOS',
-                Created > Last(FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)).Created
+                Creado > Last(FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)).Creado
             )
         );
       Width: =Max(App.Width, App.DesignWidth)

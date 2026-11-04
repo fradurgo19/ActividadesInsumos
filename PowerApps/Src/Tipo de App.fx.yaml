@@ -138,7 +138,8 @@
                 IconRotation: =0
                 IconStyle: ='ButtonCanvas.IconStyle'.Filled
                 Layout: ="Icon before"
-                OnSelect: =Navigate(Appointments,ScreenTransition.Fade)
+                OnSelect: |-
+                    =Launch("https://postventa-inteligente.vercel.app/login")
                 TabIndex: =0
                 Text: ="SERVICIO Y MANUALES"
                 Tooltip: =""

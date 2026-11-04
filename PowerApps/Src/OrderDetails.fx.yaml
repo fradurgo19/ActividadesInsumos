@@ -19,7 +19,7 @@
             TempariosLocal,
             Filter(
                 'TEMPARIO DE MANTENIMIENTOS',
-                Created > Last(FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)).Created
+                Creado > Last(FirstN('TEMPARIO DE MANTENIMIENTOS', 2000)).Creado
             )
         );
     Orientation: =If(OrderDetails.Width < OrderDetails.Height, Layout.Vertical, Layout.Horizontal)
