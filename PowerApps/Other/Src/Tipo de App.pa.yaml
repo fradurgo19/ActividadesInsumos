@@ -86,7 +86,7 @@ Screens:
                         OnSelect: =Launch("https://postventa-inteligente.vercel.app/login")
                         Text: ="SERVICIO"
                         Width: =213
-                        X: =167
+                        X: =69
                         Y: =327
                   - Label1_37:
                       Control: Label@2.5.1
@@ -109,7 +109,7 @@ Screens:
                         OnSelect: =Navigate(CPP,ScreenTransition.Fade)
                         Text: ="CPP"
                         Width: =213
-                        X: =945
+                        X: =1047
                         Y: =327
                   - ButtonCanvas3_3:
                       Control: Button@0.0.45
@@ -121,5 +121,17 @@ Screens:
                         OnSelect: =Navigate('Manuales Partequipos',ScreenTransition.Fade)
                         Text: ="MANUALES"
                         Width: =213
-                        X: =556
+                        X: =368
+                        Y: =327
+                  - ButtonCanvas3_4:
+                      Control: Button@0.0.45
+                      Properties:
+                        BasePaletteColor: =RGBA(168, 110, 235, 1)
+                        FontSize: =20
+                        Height: =68
+                        IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                        OnSelect: =Navigate('NPS',ScreenTransition.Fade)
+                        Text: ="ENCUESTAS"
+                        Width: =213
+                        X: =689
                         Y: =327

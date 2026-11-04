@@ -146,7 +146,7 @@
                 VerticalAlign: =""
                 Visible: =true
                 Width: =213
-                X: =167
+                X: =69
                 Y: =327
                 ZIndex: =3
 
@@ -194,7 +194,7 @@
                 VerticalAlign: =""
                 Visible: =true
                 Width: =213
-                X: =945
+                X: =1047
                 Y: =327
                 ZIndex: =6
 
@@ -227,7 +227,40 @@
                 VerticalAlign: =""
                 Visible: =true
                 Width: =213
-                X: =556
+                X: =368
                 Y: =327
                 ZIndex: =7
+
+            ButtonCanvas3_4 As Botón:
+                AcceptsFocus: =true
+                AccessibleLabel: =""
+                Align: =""
+                Appearance: ="Primary"
+                BasePaletteColor: =RGBA(168, 110, 235, 1)
+                BorderColor: =
+                BorderStyle: =""
+                ContentLanguage: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =""
+                FontColor: =
+                FontItalic: =false
+                FontSize: =20
+                FontStrikethrough: =false
+                FontUnderline: =false
+                FontWeight: =""
+                Height: =68
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                Layout: ="Icon before"
+                OnSelect: =Navigate('NPS',ScreenTransition.Fade)
+                TabIndex: =0
+                Text: ="ENCUESTAS"
+                Tooltip: =""
+                VerticalAlign: =""
+                Visible: =true
+                Width: =213
+                X: =689
+                Y: =327
+                ZIndex: =8
 
