@@ -111,3 +111,15 @@ Screens:
                         Width: =213
                         X: =945
                         Y: =327
+                  - ButtonCanvas3_3:
+                      Control: Button@0.0.45
+                      Properties:
+                        BasePaletteColor: =RGBA(5, 102, 178, 1)
+                        FontSize: =20
+                        Height: =68
+                        IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                        OnSelect: =Navigate('Manuales Partequipos',ScreenTransition.Fade)
+                        Text: ="MANUALES"
+                        Width: =213
+                        X: =531
+                        Y: =327
